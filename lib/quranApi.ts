@@ -42,37 +42,46 @@ export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
     }
 
     try {
-        // Validation: If on server, we might strictly need absolute URL.
-        // But getQuranPage is primarily for Client Component use (ReadingClient).
-        // If called from Server Component (e.g. metadata), it might fail relative URL.
-
-        let url = `${API_BASE_URL}/page/${pageNumber}`;
+        let json;
         if (typeof window === 'undefined') {
-            // Server-side fallback (if needed, though ReadingClient wraps it in useQuery)
-            // Typically we shouldn't fetch internal API from server component if possible, 
-            // but if we do, it needs http://localhost:3000
-            url = `http://localhost:3000${url}`;
+            // Server-side: Read directly from filesystem to avoid HTTP loopback issues on Vercel
+            const path = (await import('path')).default;
+            const fs = (await import('fs')).default;
+
+            const filePath = path.join(process.cwd(), 'data', 'quran-data.json');
+
+            // Allow this to throw if file missing, caught by catch block
+            const fileContent = fs.readFileSync(filePath, 'utf-8');
+            const allPagesData = JSON.parse(fileContent);
+            const rawPageData = allPagesData[pageNumber];
+
+            if (!rawPageData) {
+                throw new Error(`Page ${pageNumber} not found in local data`);
+            }
+
+            // Construct JSON to match API response structure expected by processing logic
+            json = {
+                data: {
+                    ayahs: rawPageData,
+                    number: pageNumber
+                }
+            };
+        } else {
+            // Client-side: Fetch via API
+            let url = `${API_BASE_URL}/page/${pageNumber}`;
+            const response = await fetch(url, {
+                cache: 'no-store'
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Failed to fetch Quran page from local API: ${response.status} ${errorText}`);
+            }
+
+            json = await response.json();
         }
 
-        // Fetch from our internal API which serves the local JSON
-        const response = await fetch(url, {
-            cache: 'no-store' // Ensure fresh data, avoid heavy caching issues
-        });
-
-        if (!response.ok) {
-            const errorText = await response.text();
-            throw new Error(`Failed to fetch Quran page from local API: ${response.status} ${errorText}`);
-        }
-
-        const json = await response.json();
-
-        // The API returns { data: { number: p, ayahs: [...] } }
-        // Our components expect QuranPageData structure directly.
-        // The downloaded JSON 'ayahs' already have text and translation merged if I did it right in download script.
-        // Let's verify download script logic. 
-        // Yes: "text": ayah.text, "translation": frAyah.text.
-
-        // Map the flat local JSON structure to the rich Ayah interface expected by components
+        // Process JSON (Common Logic)
         const ayahs: Ayah[] = json.data.ayahs.map((raw: any) => {
             const isBismillah = (text: string) => text.startsWith("بِسْمِ ٱللَّهِ");
 
