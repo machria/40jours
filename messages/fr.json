@@ -1,0 +1,17 @@
+{
+    "HomePage": {
+        "title": "Coran 40 Jours",
+        "subtitle": "Complétez la lecture du Coran en 40 jours",
+        "startBtn": "Commencer le Défi",
+        "continueBtn": "Continuer (Jour {day})"
+    },
+    "Navigation": {
+        "home": "Accueil",
+        "names": "99 Noms",
+        "profile": "Profil"
+    },
+    "Common": {
+        "loading": "Chargement...",
+        "error": "Une erreur est survenue"
+    }
+}

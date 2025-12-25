@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FDFBF7; /* Cream light */
+  --foreground: #1A1A1A;
+  
+  --primary: #10B981; /* Emerald */
+  --primary-foreground: #FFFFFF;
+  
+  --accent: #D4AF37; /* Gold */
+  --accent-foreground: #FFFFFF;
+  
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  
+  --radius: 0.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0F172A; /* Dark Slate */
+  --foreground: #FDFBF7;
+  
+  --primary: #10B981;
+  --primary-foreground: #FFFFFF;
+  
+  --accent: #D4AF37;
+  --accent-foreground: #FFFFFF;
+  
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8;
+  
+  --card: #1E293B;
+  --card-foreground: #FDFBF7;
+  
+  --border: #334155;
+  --input: #334155;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.kufi-font {
+  font-family: var(--font-kufi), serif;
 }

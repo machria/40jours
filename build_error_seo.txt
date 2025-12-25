@@ -1,0 +1,36 @@
+
+> islam@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./app/jour/[id]/page.tsx:14:23
+Ecmascript file had an error
+  12 | import { Metadata } from 'next';
+  13 |
+> 14 | export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+     |                       ^^^^^^^^^^^^^^^^
+  15 |     const { id } = await params;
+  16 |     const dayId = parseInt(id);
+  17 |     const dayPlan = plan40jours.find(d => d.jour === dayId);
+
+You are attempting to export "generateMetadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/jour/[id]/page.tsx [Client Component Browser]
+    ./app/jour/[id]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/jour/[id]/page.tsx [Client Component SSR]
+    ./app/jour/[id]/page.tsx [Server Component]
+
+
+    at <unknown> (./app/jour/[id]/page.tsx:14:23)

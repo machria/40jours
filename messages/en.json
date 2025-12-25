@@ -1,0 +1,17 @@
+{
+    "HomePage": {
+        "title": "Quran 40 Days",
+        "subtitle": "Complete the Quran reading in 40 days",
+        "startBtn": "Start Challenge",
+        "continueBtn": "Continue (Day {day})"
+    },
+    "Navigation": {
+        "home": "Home",
+        "names": "99 Names",
+        "profile": "Profile"
+    },
+    "Common": {
+        "loading": "Loading...",
+        "error": "An error occurred"
+    }
+}
