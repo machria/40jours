@@ -72,24 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto mb-12">
-        <Link href="/hadith" className="block group">
-          <div className="bg-card border hover:border-primary/50 transition-all rounded-2xl p-6 md:p-8 shadow-sm group-hover:shadow-md flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <span className="text-2xl">📚</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold font-kufi text-foreground group-hover:text-primary transition-colors">Hadiths Authentiques</h3>
-                <p className="text-muted-foreground">Sahih Al-Bukhari et Sahih Muslim en français</p>
-              </div>
-            </div>
-            <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-1">
-              &rarr;
-            </div>
-          </div>
-        </Link>
-      </section>
+
 
       <section className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-bold mb-6 font-kufi flex items-center gap-2">
