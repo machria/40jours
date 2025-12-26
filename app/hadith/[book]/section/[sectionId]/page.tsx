@@ -92,15 +92,26 @@ export default async function SectionPage({ params }: PageProps) {
                                 {hadith.text}
                             </p>
                         </div>
-                        {hadith.grades && hadith.grades.length > 0 && (
-                            <div className="mt-4 pt-4 border-t text-sm text-muted-foreground">
-                                {hadith.grades.map((g, i) => (
-                                    <span key={i} className="mr-4">
-                                        {g.name}: <span className={g.grade === 'Sahih' ? 'text-green-600 font-semibold' : ''}>{g.grade}</span>
+                        <div className="mt-4 pt-4 border-t text-sm text-muted-foreground flex flex-wrap gap-2">
+                            {hadith.grades && hadith.grades.length > 0 ? (
+                                hadith.grades.map((g, i) => (
+                                    <span key={i} className="bg-muted px-2 py-1 rounded">
+                                        {g.name}: <span className={
+                                            g.grade.toLowerCase().includes('sahih') ? 'text-green-600 font-bold' :
+                                                g.grade.toLowerCase().includes('hasan') ? 'text-emerald-500 font-bold' :
+                                                    g.grade.toLowerCase().includes('daif') || g.grade.toLowerCase().includes('weak') ? 'text-orange-500 font-bold' :
+                                                        ''
+                                        }>{g.grade}</span>
                                     </span>
-                                ))}
-                            </div>
-                        )}
+                                ))
+                            ) : (
+                                (book === 'bukhari' || book === 'muslim') && (
+                                    <span className="bg-muted px-2 py-1 rounded">
+                                        Degré: <span className="text-green-600 font-bold">Sahih</span>
+                                    </span>
+                                )
+                            )}
+                        </div>
                     </div>
                 ))}
             </div>
