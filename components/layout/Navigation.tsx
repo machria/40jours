@@ -15,7 +15,8 @@ const navItems = [
     { href: '/coran', label: 'Sourates', icon: BookOpen },
     { href: '/juz', label: 'Juz (30j)', icon: MapIcon }, // Import MapIcon if needed or use another
     { href: '/search', label: 'Recherche', icon: Search },
-    { href: '/99-noms', label: '99 Noms', icon: Menu }, // Maybe another icon
+    { href: '/99-noms', label: '99 Noms', icon: Menu },
+    { href: '/hadith', label: 'Hadith', icon: BookOpen },
     { href: '/dashboard', label: 'Profil', icon: User },
 ];
 
