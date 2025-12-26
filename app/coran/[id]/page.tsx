@@ -106,7 +106,7 @@ function getSurahMeta(surahId: number) {
 // I will create a Client Wrapper component that takes `ayahs` and `meta` as props.
 // That wrapper will handle the Quiz toggle.
 
-import SurahPageClient from '@/components/reading/SurahPageClient';
+import SurahPageClient from '../../../components/reading/SurahPageClient';
 
 export default async function SurahPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
