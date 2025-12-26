@@ -1,7 +1,8 @@
 import { plan40jours, ReadingDay } from "@/data/plan40jours";
 import { notFound } from "next/navigation";
 import TafsirFullClient from "./TafsirFullClient";
-import { Ayah, getQuranPage, getTafsir } from "@/lib/quranApi";
+import { Ayah, getQuranPage } from "@/lib/quranApi";
+import { getTafsirBatch } from "@/app/actions/tafsir";
 
 // Generate static params for all 40 days
 export function generateStaticParams() {
@@ -26,7 +27,6 @@ async function getFullDayTafsir(day: ReadingDay): Promise<TafsirGroup[]> {
     const end = day.endPage;
 
     // 1. Fetch ALL pages in parallel (Local JSON is fast)
-    // Since it's local file access via API route (or simulated), it's fast.
     const pagePromises = [];
     for (let p = start; p <= end; p++) {
         pagePromises.push(getQuranPage(p));
@@ -34,25 +34,22 @@ async function getFullDayTafsir(day: ReadingDay): Promise<TafsirGroup[]> {
     const pages = await Promise.all(pagePromises);
     const allAyahs = pages.flatMap(p => p.ayahs);
 
-    // 2. Fetch Tafsirs in Parallel
-    // We can be aggressive here on Server
-    const totalAyahs = allAyahs.length;
-    // We map all to promises. Direct translation function uses chunks, it's safe.
-    // However, thousands of translations might be too much for the free Endpoint all at once?
-    // Let's do batches of 10 to be safe but faster than 5.
-    const BATCH_SIZE = 10;
-    const tafsirResults: { ay: Ayah, content: string }[] = [];
+    // 2. Fetch Tafsir locally in one go
+    // Prepare the list of requested Ayahs
+    const requestedAyahs = allAyahs.map(ay => ({ surah: ay.surahNumber, ayah: ay.numberInSurah }));
 
-    for (let i = 0; i < totalAyahs; i += BATCH_SIZE) {
-        const batch = allAyahs.slice(i, i + BATCH_SIZE);
-        const promises = batch.map(async (ay) => {
-            // This now calls translateText directly without HTTP
-            const content = await getTafsir(ay.surahNumber, ay.numberInSurah) || "Tafsir non disponible.";
-            return { ay, content };
-        });
-        const results = await Promise.all(promises);
-        tafsirResults.push(...results);
-    }
+    // Call server action
+    const tafsirs = await getTafsirBatch(requestedAyahs);
+
+    // Map results back to ayahs
+    // Create lookup map
+    const tafsirMap = new Map<string, string>();
+    tafsirs.forEach(t => tafsirMap.set(`${t.surah}:${t.ayah}`, t.tafsir));
+
+    const tafsirResults = allAyahs.map(ay => ({
+        ay,
+        content: tafsirMap.get(`${ay.surahNumber}:${ay.numberInSurah}`) || "Tafsir non disponible."
+    }));
 
     // 3. Deduplicate
     const groups: TafsirGroup[] = [];

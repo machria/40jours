@@ -78,3 +78,14 @@ body {
 .kufi-font {
   font-family: var(--font-kufi), serif;
 }
+
+/* Hafs Tajwid Colors */
+.tajwid-red {
+  color: #DC2626; /* Red-600 */
+}
+.tajwid-green {
+  color: #16A34A; /* Green-600 */
+}
+.tajwid-blue {
+  color: #2563EB; /* Blue-600 */
+}

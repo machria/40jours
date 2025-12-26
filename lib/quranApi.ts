@@ -29,7 +29,7 @@ export interface QuranPageData {
     surahs: string[]; // List of surah names on this page
 }
 
-// Cache to avoid refetching
+// Cache to avoid refetching (Touched to force refresh)
 const quranCache: { [key: number]: QuranPageData } = {};
 // Using unknown for safe casting
 const tafsirCache: { [key: string]: unknown } = {};

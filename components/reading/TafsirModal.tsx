@@ -2,7 +2,9 @@
 
 import { X, BookOpen } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { getTafsir } from '@/lib/quranApi';
+import { getLocalTafsir } from '@/app/actions/tafsir';
+import { TajwidText } from '@/components/TajwidText';
+import ReactMarkdown from 'react-markdown';
 
 interface TafsirModalProps {
     isOpen: boolean;
@@ -10,19 +12,16 @@ interface TafsirModalProps {
     surahNumber: number;
     ayahNumber: number;
     ayahText: string;
+    translation?: string;
 }
 
-export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, ayahText }: TafsirModalProps) {
-    const { data: tafsirData, isLoading } = useQuery({
+export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, ayahText, translation }: TafsirModalProps) {
+    const { data: tafsirContent, isLoading } = useQuery({
         queryKey: ['tafsir', surahNumber, ayahNumber],
-        queryFn: () => getTafsir(surahNumber, ayahNumber),
+        queryFn: () => getLocalTafsir(surahNumber, ayahNumber),
         enabled: isOpen && !!surahNumber && !!ayahNumber,
         staleTime: Infinity
     });
-
-    const content = tafsirData
-        ? (typeof tafsirData === 'string' ? tafsirData : JSON.stringify(tafsirData, null, 2))
-        : null;
 
     if (!isOpen) return null;
 
@@ -34,7 +33,7 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                 <div className="p-4 border-b flex items-center justify-between bg-muted/30">
                     <div className="flex items-center gap-2">
                         <BookOpen className="w-5 h-5 text-accent" />
-                        <h3 className="font-bold text-lg font-kufi">Tafsir Mokhtasar (Français)</h3>
+                        <h3 className="font-bold text-lg font-kufi">Tafsir Ibn Kathir (Français)</h3>
                     </div>
                     <button
                         onClick={onClose}
@@ -47,7 +46,12 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                 {/* Content */}
                 <div className="flex-1 overflow-y-auto p-6 space-y-6">
                     <div className="bg-muted/20 p-4 rounded-lg border-r-4 border-primary">
-                        <p className="font-kufi text-xl text-right dir-rtl leading-loose">{ayahText}</p>
+                        <TajwidText text={ayahText} className="font-kufi text-xl text-right dir-rtl leading-loose block" />
+                        {translation && (
+                            <p className="text-base text-muted-foreground mt-3 font-serif border-t border-border/50 pt-2">
+                                {translation}
+                            </p>
+                        )}
                         <p className="text-xs text-muted-foreground mt-2">Sourate {surahNumber}, Verset {ayahNumber}</p>
                     </div>
 
@@ -59,8 +63,12 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                                 <div className="h-4 bg-muted rounded w-5/6"></div>
                             </div>
                         ) : (
-                            <div className="text-sm md:text-base leading-relaxed whitespace-pre-wrap">
-                                {content || "Aucune explication trouvée."}
+                            <div className="text-sm md:text-base leading-relaxed">
+                                {tafsirContent ? (
+                                    <ReactMarkdown>{tafsirContent}</ReactMarkdown>
+                                ) : (
+                                    "Aucune explication trouvée pour ce verset."
+                                )}
                             </div>
                         )}
                     </div>
@@ -68,7 +76,7 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
 
                 {/* Footer */}
                 <div className="p-4 border-t bg-muted/10 text-center text-xs text-muted-foreground">
-                    Source: Tafsir Ibn Kathir
+                    Source: Tafsir Ibn Kathir (Adapté)
                 </div>
 
             </div>

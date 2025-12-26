@@ -71,7 +71,19 @@ export default function NamesPage() {
                 </div>
             </header>
 
-            <main className="flex-1 flex flex-col items-center justify-center p-4 overflow-hidden w-full max-w-lg mx-auto">
+            <main className="flex-1 flex flex-col items-center justify-start py-8 px-4 overflow-y-auto w-full max-w-lg mx-auto space-y-6">
+                <div className="text-center space-y-4 bg-emerald-50/50 dark:bg-emerald-900/10 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-800/30">
+                    <p className="font-kufi text-xl text-emerald-800 dark:text-emerald-400">
+                        Au nom d&apos;Allah, le Tout Miséricordieux, le Très Miséricordieux
+                    </p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                        D&apos;après Abou Houreira (qu&apos;Allah l&apos;agrée), le Prophète (que la prière d&apos;Allah et Son salut soient sur lui) a dit: <br />
+                        <span className="font-medium text-foreground italic">« Certes Allah a quatre vingt dix neuf noms, cent moins un, celui qui les dénombre rentre dans le paradis »</span>.
+                    </p>
+                    <p className="text-xs text-muted-foreground/60">
+                        (Rapporté par Boukhari dans son Sahih n°2736 et Mouslim dans son Sahih n°2677)
+                    </p>
+                </div>
                 <AnimatePresence mode="wait">
                     {mode === 'learn' ? (
                         <motion.div

@@ -6,6 +6,7 @@ import { ChevronLeft, List, Grid, BookOpen, Play } from 'lucide-react';
 import { ReadingDay } from '@/data/plan40jours';
 import { Ayah } from '@/lib/quranApi';
 import { motion } from 'framer-motion';
+import { TajwidText } from '@/components/TajwidText';
 
 export interface TafsirGroup {
     ayahs: Ayah[];
@@ -77,8 +78,13 @@ export default function TafsirFullClient({ day, initialGroups }: { day: ReadingD
                                             </div>
                                         </div>
                                         <div className="text-right w-full">
-                                            <p className="text-2xl font-kufi leading-loose text-foreground">{ayah.text}</p>
+                                            <TajwidText text={ayah.text} className="text-2xl font-kufi leading-loose text-foreground" />
                                         </div>
+                                        {ayah.translation && (
+                                            <div className="text-left w-full mt-2">
+                                                <p className="text-muted-foreground/90 font-serif text-lg leading-relaxed">{ayah.translation}</p>
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                                 {viewMode === 'aggregated' && group.ayahs.length > 1 && (

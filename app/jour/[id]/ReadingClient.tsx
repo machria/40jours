@@ -3,10 +3,11 @@
 import { plan40jours } from '@/data/plan40jours';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Play, Pause, CheckCircle, BookOpen } from 'lucide-react';
+import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search } from 'lucide-react';
 import { useQueries } from '@tanstack/react-query';
 import { getQuranPage, QuranPageData } from '@/lib/quranApi';
 import TafsirModal from '@/components/reading/TafsirModal';
+import { TajwidText } from '@/components/TajwidText';
 import confetti from 'canvas-confetti';
 
 interface ReadingClientProps {
@@ -30,9 +31,14 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         surahNumber: number;
         ayahNumber: number;
         text: string;
+        translation?: string;
     }>({ isOpen: false, surahNumber: 0, ayahNumber: 0, text: '' });
 
     const startPage = dayPlan?.startPage || 1;
+    // ... (skip unchanged lines if possible, but replace_file_content needs contiguous block. Accessing separate chunks efficiently via multi_replace might be better or just 2 edits).
+    // Let's use multi_replace for unrelated chunks if possible, or sequential replace.
+    // The file is small enough for 3 disjoint edits via multi_replace.
+
     const endPage = dayPlan?.endPage || 1;
     const pagesToFetch = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
 
@@ -160,8 +166,8 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         return <div className="p-8 text-center">Plan non trouvé pour le jour {dayId}</div>;
     }
 
-    const openTafsir = (surah: number, ayah: number, text: string) => {
-        setTafsirState({ isOpen: true, surahNumber: surah, ayahNumber: ayah, text });
+    const openTafsir = (surah: number, ayah: number, text: string, translation: string) => {
+        setTafsirState({ isOpen: true, surahNumber: surah, ayahNumber: ayah, text, translation });
     };
 
     const SkeletonPage = ({ idx }: { idx: number }) => (
@@ -189,9 +195,14 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         <div className="min-h-screen bg-background pb-24">
             {/* Sticky Header */}
             <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b p-4 flex items-center justify-between shadow-sm">
-                <Link href="/" className="p-2 hover:bg-muted rounded-full">
-                    <ChevronLeft className="w-6 h-6" />
-                </Link>
+                <div className="flex items-center gap-2">
+                    <Link href="/" className="p-2 hover:bg-muted rounded-full">
+                        <ChevronLeft className="w-6 h-6" />
+                    </Link>
+                    <Link href="/search" className="p-2 hover:bg-muted rounded-full" title="Recherche">
+                        <Search className="w-5 h-5 text-muted-foreground" />
+                    </Link>
+                </div>
                 <div className="text-center">
                     <h1 className="text-lg font-bold font-kufi text-primary">Jour {dayId}</h1>
                     <div className="flex items-center gap-2 justify-center">
@@ -239,7 +250,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                         {/* Arabic */}
                                         <div className="w-full">
                                             <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
-                                                {ayah.text}
+                                                <TajwidText text={ayah.text} className="inline" />
                                                 <span className="mr-2 inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle">
                                                     {ayah.numberInSurah}
                                                 </span>
@@ -266,7 +277,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                                 </button>
 
                                                 <button
-                                                    onClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text)}
+                                                    onClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
                                                     className="flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent/80 border border-accent/20 hover:bg-accent/5 px-3 py-1.5 rounded-full"
                                                 >
                                                     <BookOpen className="w-3 h-3" />
@@ -328,6 +339,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 surahNumber={tafsirState.surahNumber}
                 ayahNumber={tafsirState.ayahNumber}
                 ayahText={tafsirState.text}
+                translation={tafsirState.translation}
             />
         </div>
     );
