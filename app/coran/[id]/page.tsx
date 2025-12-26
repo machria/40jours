@@ -43,10 +43,36 @@ function getSurahData(surahId: number) {
             ayahs.push(...matches);
         });
 
-        // Sort by ayah number just in case
-        ayahs.sort((a, b) => a.ayah - b.ayah);
+        // Deduplicate based on ayah number (handle verses spanning pages)
+        const uniqueAyahsMap = new Map();
+        ayahs.forEach((a) => {
+            if (!uniqueAyahsMap.has(a.ayah)) {
+                // Ensure numberInSurah exists for components that need it
+                if (!a.numberInSurah) a.numberInSurah = a.ayah;
+                uniqueAyahsMap.set(a.ayah, a);
+            }
+        });
 
-        return ayahs;
+        const uniqueAyahs = Array.from(uniqueAyahsMap.values());
+
+        // Sort by ayah number
+        uniqueAyahs.sort((a, b) => a.ayah - b.ayah);
+
+        return uniqueAyahs;
+    } catch (e) {
+        console.error(e);
+        return [];
+    }
+}
+
+function getPhoneticData(surahId: number) {
+    try {
+        const p = path.join(process.cwd(), 'data', 'quran-transliteration.json');
+        if (!fs.existsSync(p)) return [];
+        const file = fs.readFileSync(p, 'utf-8');
+        const data = JSON.parse(file);
+        // data.quran is the array
+        return data.quran.filter((a: any) => a.chapter === surahId);
     } catch (e) {
         console.error(e);
         return [];
@@ -64,6 +90,24 @@ function getSurahMeta(surahId: number) {
     }
 }
 
+
+
+// ... (keep getSurahData etc)
+
+// We need to make this a Client Component to manage state (Quiz Open/Close)
+// But currently it's a Server Component (`export default async function`).
+// To use state, we normally need "use client".
+// OPTION: Keep the page Server, and make a wrapper "SurahClientPage" that has the state.
+// OR: Just make the whole page "use client" and fetch data via useEffect or passed Props?
+// Valid pattern: Server Page passes data to Client Component.
+// Let's refactor: Move the main UI to a `SurahPageClient.tsx` and call it from here.
+
+// Wait, re-reading the file... it is `export default async function`.
+// I will create a Client Wrapper component that takes `ayahs` and `meta` as props.
+// That wrapper will handle the Quiz toggle.
+
+import SurahPageClient from '@/components/reading/SurahPageClient';
+
 export default async function SurahPage({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const surahId = parseInt(id);
@@ -74,39 +118,24 @@ export default async function SurahPage({ params }: { params: Promise<{ id: stri
 
     const ayahs = getSurahData(surahId);
     const meta = getSurahMeta(surahId);
+    const phonetics = getPhoneticData(surahId);
+
+    // Merge phonetic data
+    if (phonetics.length > 0) {
+        ayahs.forEach(ayah => {
+            // Find matching phonetic verse
+            // Note: ayah.ayah is the verse number in surah
+            const p = phonetics.find((ph: any) => ph.verse === ayah.ayah);
+            if (p) {
+                ayah.phonetic = p.text;
+            }
+        });
+    }
 
     if (!ayahs.length) notFound();
 
     return (
-        <div className="min-h-screen bg-background">
-            {/* Header */}
-            <header className="sticky top-0 z-20 bg-background/95 backdrop-blur border-b p-4 shadow-sm">
-                <div className="max-w-4xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                        <Link href="/coran" className="p-2 hover:bg-muted rounded-full">
-                            <ChevronLeft className="w-6 h-6" />
-                        </Link>
-                        <div>
-                            <h1 className="text-lg font-bold">Sourate {meta?.englishName}</h1>
-                            <p className="text-xs text-muted-foreground">{meta?.englishNameTranslation} • {meta?.revelationType === 'Meccan' ? 'Mecquoise' : 'Médinoise'}</p>
-                        </div>
-                    </div>
-                    <div className="font-kufi text-xl font-bold text-primary">
-                        {meta?.name}
-                    </div>
-                </div>
-            </header>
-
-            <main className="max-w-4xl mx-auto p-4 md:p-8 space-y-6">
-                {/* Bismillah (skip for Surah 1 and 9 usually, but checking text) */}
-                {surahId !== 1 && surahId !== 9 && (
-                    <div className="text-center py-8 font-kufi text-2xl text-primary/80">
-                        بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-                    </div>
-                )}
-
-                <SurahViewer ayahs={ayahs} surahId={surahId} />
-            </main>
-        </div>
+        <SurahPageClient ayahs={ayahs} meta={meta} surahId={surahId} />
     );
 }
+
