@@ -12,6 +12,7 @@ export default function NamesPage() {
 
     // Quiz State
     const [quizQuestion, setQuizQuestion] = useState<AllahName | null>(null);
+    const [questionType, setQuestionType] = useState<'arabe' | 'transliteration' | 'francais'>('arabe');
     const [options, setOptions] = useState<AllahName[]>([]);
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
@@ -27,6 +28,11 @@ export default function NamesPage() {
         const randomIndex = Math.floor(Math.random() * namesOfAllah.length);
         const question = namesOfAllah[randomIndex];
         setQuizQuestion(question);
+
+        // Randomize question type
+        const types: ('arabe' | 'transliteration' | 'francais')[] = ['arabe', 'transliteration', 'francais'];
+        setQuestionType(types[Math.floor(Math.random() * types.length)]);
+
         setSelectedOption(null);
         setIsCorrect(null);
 
@@ -37,10 +43,10 @@ export default function NamesPage() {
         setOptions(allOptions.sort(() => 0.5 - Math.random()));
     };
 
-    const handleAnswer = (transliteration: string) => {
+    const handleAnswer = (answer: string) => {
         if (selectedOption) return; // Prevent double guess
-        setSelectedOption(transliteration);
-        const correct = transliteration === quizQuestion?.transliteration;
+        setSelectedOption(answer);
+        const correct = answer === quizQuestion?.transliteration;
         setIsCorrect(correct);
         if (correct) setScore(s => s + 1);
 
@@ -161,9 +167,22 @@ export default function NamesPage() {
                                         </button>
                                     </div>
 
-                                    <div className="bg-card border rounded-2xl p-8 text-center space-y-4 shadow-sm">
-                                        <p className="text-sm text-muted-foreground">Quel est ce nom ?</p>
-                                        <h2 className="text-6xl font-kufi text-primary">{quizQuestion.arabe}</h2>
+                                    <div className="bg-card border rounded-2xl p-8 text-center space-y-4 shadow-sm min-h-[200px] flex flex-col items-center justify-center">
+                                        <p className="text-sm text-muted-foreground uppercase tracking-widest">
+                                            {questionType === 'arabe' && "Quel est ce nom ?"}
+                                            {questionType === 'transliteration' && "Comment s'écrit ce nom en arabe ?"}
+                                            {questionType === 'francais' && "Quel nom signifie :"}
+                                        </p>
+
+                                        {questionType === 'arabe' && (
+                                            <h2 className="text-6xl font-kufi text-primary">{quizQuestion.arabe}</h2>
+                                        )}
+                                        {questionType === 'transliteration' && (
+                                            <h2 className="text-4xl font-bold text-foreground">{quizQuestion.transliteration}</h2>
+                                        )}
+                                        {questionType === 'francais' && (
+                                            <h2 className="text-2xl font-medium text-accent italic">&quot;{quizQuestion.francais}&quot;</h2>
+                                        )}
                                     </div>
 
                                     <div className="grid gap-3">
@@ -187,8 +206,15 @@ export default function NamesPage() {
                                                     className={`w-full p-4 rounded-xl border text-left flex items-center justify-between transition-all ${style}`}
                                                 >
                                                     <div>
-                                                        <span className="font-bold block">{opt.transliteration}</span>
-                                                        <span className="text-xs text-muted-foreground">{opt.francais}</span>
+                                                        {/* If question is Transliteration, show Arabic in options, otherwise show Transliteration */}
+                                                        {questionType === 'transliteration' ? (
+                                                            <span className="font-kufi text-2xl block text-right w-full">{opt.arabe}</span>
+                                                        ) : (
+                                                            <>
+                                                                <span className="font-bold block">{opt.transliteration}</span>
+                                                                {questionType !== 'francais' && <span className="text-xs text-muted-foreground">{opt.francais}</span>}
+                                                            </>
+                                                        )}
                                                     </div>
                                                     {selectedOption && isCorrectAnswer && <Check className="w-5 h-5 text-green-600" />}
                                                     {selectedOption && isSelected && !isCorrectAnswer && <X className="w-5 h-5 text-red-600" />}
