@@ -30,6 +30,27 @@ export default function Home() {
       </section>
 
       <section className="max-w-4xl mx-auto mb-12">
+        <div className="bg-card border rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
+          <h2 className="text-xl md:text-2xl font-bold font-kufi text-primary flex items-center gap-2">
+            <span className="text-2xl">⏳</span> Pourquoi un programme sur 40 jours ?
+          </h2>
+          <div className="space-y-3 text-muted-foreground leading-relaxed">
+            <p>
+              Ce programme est conçu comme une étape intermédiaire idéale pour <strong>s&apos;habituer à lire le Coran quotidiennement</strong>. L&apos;objectif est de vous entraîner progressivement pour, à terme, être capable de le clôturer en 30 jours (une pratique courante notamment pendant le Ramadan).
+            </p>
+            <p className="p-4 bg-muted/50 rounded-lg border-l-4 border-accent text-sm md:text-base">
+              <span className="font-semibold block text-foreground mb-1">💡 Note sur le Hadith des 40 jours :</span>
+              Il existe un hadith rapportant qu&apos;il ne faut pas lire le Coran en plus de 40 jours. Il est important de savoir que ce hadith est considéré comme <strong>shadh (isolé/irrégulier)</strong> par les savants du hadith. Il n&apos;y a donc pas d&apos;interdiction formelle à mettre plus de temps, mais se fixer un objectif de 40 jours reste une excellente discipline spirituelle.
+            </p>
+            <div className="flex items-center gap-2 pt-2 text-foreground font-medium">
+              <span className="bg-primary/10 p-2 rounded-md">⏱️</span>
+              <span>Estimation quotidienne : <span className="text-primary">35 à 45 minutes</span> de lecture.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto mb-12">
         <div className="bg-muted/30 border border-border/50 rounded-2xl p-6 md:p-8 space-y-6">
           <div className="flex items-start gap-4">
             <div className="bg-primary/10 p-3 rounded-full hidden md:block">
