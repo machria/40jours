@@ -3,7 +3,7 @@
 import { getAllJuz } from '@/lib/juzData';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { BookOpen, PlayCircle, Map as MapIcon } from 'lucide-react';
+import { BookOpen, PlayCircle, Map as MapIcon, Clock } from 'lucide-react';
 
 export default function JuzListPage() {
     const juzList = getAllJuz();
@@ -71,9 +71,14 @@ export default function JuzListPage() {
                                 </div>
                             </div>
                         </div>
+
+                        <div className="flex items-center gap-1 text-xs text-emerald-600/80 dark:text-emerald-400/80 mt-3 pt-2 border-t border-gray-100 dark:border-gray-700 font-medium">
+                            <Clock size={14} />
+                            <span>~45-55 min</span>
+                        </div>
                     </Link>
                 ))}
             </div>
-        </div>
+        </div >
     );
 }

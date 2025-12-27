@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Play, BookOpen, Pause, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Play, BookOpen, Pause, ArrowLeft, ArrowRight, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
@@ -145,7 +145,13 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                         </Link>
                     ) : <div />}
 
-                    <h1 className="text-xl font-bold text-center text-emerald-800 dark:text-emerald-300">Juz {juzId}</h1>
+                    <div className="flex flex-col items-center">
+                        <h1 className="text-xl font-bold text-center text-emerald-800 dark:text-emerald-300">Juz {juzId}</h1>
+                        <div className="flex items-center gap-1 text-xs text-emerald-600/70 dark:text-emerald-400/70">
+                            <Clock size={12} />
+                            <span>~45-55 min</span>
+                        </div>
+                    </div>
 
                     {juzId < 30 ? (
                         <Link href={`/juz/${juzId + 1}`} className="flex items-center gap-1 text-sm text-emerald-700 dark:text-emerald-400 hover:underline">
