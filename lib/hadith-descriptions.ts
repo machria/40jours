@@ -30,5 +30,10 @@ export const BOOK_DESCRIPTIONS: Record<CollectionName, { title: string; descript
         title: "Muwatta Malik",
         description: "Compilé par l'Imam Malik ibn Anas (mort en 179 H), l'Imam de Médine. C'est l'un des tout premiers ouvrages de hadith et de fiqh jamais écrits.",
         importance: "Fondement de l'école Malikite, ce livre n'est pas seulement un recueil de hadiths mais aussi un livre de jurisprudence (Fiqh) basé sur la pratique des gens de Médine ('Amal Ahl al-Madina). L'Imam Shafi'i a dit à son sujet (avant l'écriture des deux Sahihs) : 'Il n'y a pas de livre sur terre, après le Livre d'Allah, plus authentique que le Muwatta de Malik'."
+    },
+    tirmidhi: {
+        title: "Jami' At-Tirmidhi",
+        description: "Compilé par l'Imam Abu 'Isa at-Tirmidhi (mort en 279 H). Ce recueil, aussi appelé 'Sunan Tirmidhi', est unique par son approche pédagogique du hadith et du fiqh.",
+        importance: "Il se distingue par la classification systématique de la fiabilité des hadiths (introduisant le terme 'Hasan') et l'exposition des avis juridiques des compagnons et des imams. C'est un outil indispensable pour l'étudiant en sciences islamiques pour comprendre les divergences."
     }
 };
