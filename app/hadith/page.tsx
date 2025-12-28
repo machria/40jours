@@ -14,9 +14,43 @@ export default function HadithPage() {
             <header className="mb-8 text-center space-y-2">
                 <h1 className="text-4xl md:text-5xl font-bold font-kufi text-primary">Hadiths</h1>
                 <p className="text-muted-foreground text-lg">
-                    Recueils authentiques du Prophète (ﷺ)
+                    L'héritage prophétique (La Sunna)
                 </p>
             </header>
+
+            <section className="max-w-4xl mx-auto mb-10 bg-card border rounded-3xl p-6 md:p-8 shadow-sm">
+                <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                        <span className="text-4xl">📜</span>
+                        <div className="space-y-2">
+                            <h2 className="text-xl font-bold text-primary font-kufi">Pourquoi les Hadiths sont-ils nécessaires ?</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Le Coran est la parole d'Allah, et les Hadiths (la Sunna) sont son <strong>explication pratique</strong>.
+                                Sans les Hadiths, nous ne saurions pas comment prier (le nombre de rakat, les gestes), comment payer la Zakat, ou comment faire le Hajj.
+                                Allah dit : <em>"Obéissez à Allah et obéissez au Messager"</em> (Coran 4:59). Les deux sont indissociables.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="border-t pt-6 flex items-start gap-4">
+                        <span className="text-4xl">💎</span>
+                        <div className="space-y-3">
+                            <h2 className="text-xl font-bold text-primary font-kufi">La Méthode de Vérification (L'Isnad)</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Pour garantir l'authenticité des textes, les savants ont établi un système de vérification méthodique : <strong>l'Isnad</strong> (la chaîne de transmission).
+                            </p>
+                            <ul className="list-disc list-inside text-sm space-y-2 text-muted-foreground ml-1">
+                                <li>Chaque parole a été transmise de maître à élève jusqu'au Prophète (ﷺ).</li>
+                                <li>Les savants ont analysé la vie de <strong>chaque rapporteur</strong> (plus de 100 000 biographies) : sa mémoire, son honnêteté, ses voyages.</li>
+                                <li>Si un rapporteur avait menti une seule fois dans sa vie, même pour une blague, ses hadiths étaient rejetés.</li>
+                            </ul>
+                            <p className="text-muted-foreground leading-relaxed">
+                                C'est grâce à ce filtre ultra-sélectif que nous avons aujourd'hui les recueils <strong>Sahih</strong> (Authentiques), purifiés de toute invention ou erreur humaine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
                 {collections.map((collection) => (
