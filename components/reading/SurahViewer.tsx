@@ -33,13 +33,23 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
     // Audio State
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playingAyah, setPlayingAyah] = useState<string | null>(null); // "surah:ayah"
+    const [isPlayingSequence, setIsPlayingSequence] = useState(false);
 
-    const playAudio = (surah: number, ayah: number) => {
+    const scrollToAyah = (ayahNumber: number) => {
+        const element = document.getElementById(`ayah-${ayahNumber}`);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
+
+    const playAudio = (surah: number, ayah: number, autoContinue = false) => {
         const key = `${surah}:${ayah}`;
 
-        if (playingAyah === key && audioRef.current) {
+        // If clicking the same ayah that is playing
+        if (playingAyah === key && audioRef.current && !autoContinue) {
             audioRef.current.pause();
             setPlayingAyah(null);
+            setIsPlayingSequence(false);
             return;
         }
 
@@ -54,17 +64,54 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
         const audio = new Audio(url);
         audioRef.current = audio;
 
+        // Auto-scroll to the playing ayah
+        if (viewMode === 'list') {
+            scrollToAyah(ayah);
+        }
+
         audio.play().catch(e => {
             console.error("Audio error", e);
-            alert("Audio non disponible pour ce verset.");
+            // If auto-playing and fail (e.g. missing file), try next? 
+            // Better to stop to avoid infinite loop of errors
             setPlayingAyah(null);
+            setIsPlayingSequence(false);
         });
 
         setPlayingAyah(key);
 
         audio.onended = () => {
-            setPlayingAyah(null);
+            if (autoContinue) {
+                // Find next ayah index
+                const currentIndex = ayahs.findIndex(a => a.surah === surah && a.ayah === ayah);
+                if (currentIndex !== -1 && currentIndex < ayahs.length - 1) {
+                    const nextAyah = ayahs[currentIndex + 1];
+                    playAudio(nextAyah.surah, nextAyah.ayah, true);
+                } else {
+                    // End of surah
+                    setPlayingAyah(null);
+                    setIsPlayingSequence(false);
+                }
+            } else {
+                setPlayingAyah(null);
+                setIsPlayingSequence(false);
+            }
         };
+    };
+
+    const togglePlaySequence = () => {
+        if (isPlayingSequence) {
+            // Stop
+            if (audioRef.current) audioRef.current.pause();
+            setPlayingAyah(null);
+            setIsPlayingSequence(false);
+        } else {
+            // Start from beginning or current?
+            // Start from first ayah
+            if (ayahs.length > 0) {
+                setIsPlayingSequence(true);
+                playAudio(ayahs[0].surah, ayahs[0].ayah, true);
+            }
+        }
     };
 
     const openTafsir = (surah: number, ayah: number, text: string, translation: string) => {
@@ -75,28 +122,40 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
 
     return (
         <>
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-muted/30 p-2 rounded-lg gap-2">
-                <Link
-                    href={`/coran/${surahId}/tafsir`}
-                    className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-accent hover:bg-accent/10 transition-colors w-full sm:w-auto justification-center"
-                >
-                    <BookOpen className="w-4 h-4" />
-                    Voir Tafsir Complet
-                </Link>
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-muted/30 p-2 rounded-lg gap-2 sticky top-[73px] z-10 backdrop-blur-md">
+                <div className="flex gap-2 w-full sm:w-auto">
+                    <button
+                        onClick={togglePlaySequence}
+                        className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 rounded-md text-sm font-bold transition-all shadow-sm ${isPlayingSequence ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
+                    >
+                        {isPlayingSequence ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
+                        {isPlayingSequence ? "Pause" : "Tout écouter"}
+                    </button>
+                </div>
 
-                <div className="flex bg-background rounded-md p-1 shadow-sm w-full sm:w-auto">
-                    <button
-                        onClick={() => setViewMode('list')}
-                        className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'list' ? 'bg-primary text-primary-foreground shadow' : 'text-muted-foreground hover:text-foreground'}`}
+                <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
+                    <Link
+                        href={`/coran/${surahId}/tafsir`}
+                        className="flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium text-accent hover:bg-accent/10 transition-colors whitespace-nowrap"
                     >
-                        Liste
-                    </button>
-                    <button
-                        onClick={() => setViewMode('mushaf')}
-                        className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'mushaf' ? 'bg-primary text-primary-foreground shadow' : 'text-muted-foreground hover:text-foreground'}`}
-                    >
-                        Mushaf
-                    </button>
+                        <BookOpen className="w-4 h-4" />
+                        Tafsir Complet
+                    </Link>
+
+                    <div className="flex bg-background rounded-md p-1 shadow-sm shrink-0">
+                        <button
+                            onClick={() => setViewMode('list')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'list' ? 'bg-muted text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+                        >
+                            Liste
+                        </button>
+                        <button
+                            onClick={() => setViewMode('mushaf')}
+                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === 'mushaf' ? 'bg-muted text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
+                        >
+                            Mushaf
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -105,9 +164,9 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                     <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                         {ayahs.map((ayah, i) => (
                             <span key={ayah.id}
-                                className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${playingAyah === `${ayah.surah}:${ayah.ayah}` ? 'bg-primary/10' : ''}`}
+                                className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${playingAyah === `${ayah.surah}:${ayah.ayah}` ? 'bg-primary/20 text-primary' : ''}`}
                                 onClick={() => {
-                                    playAudio(ayah.surah, ayah.ayah);
+                                    playAudio(ayah.surah, ayah.ayah, false);
                                 }}
                             >
                                 <TajwidText text={ayah.text} className="inline" />
@@ -127,15 +186,15 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                             <div
                                 key={ayah.id}
                                 id={`ayah-${ayah.ayah}`}
-                                className={`scroll-mt-24 bg-card border rounded-xl p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-primary/20 bg-primary/5' : ''}`}
+                                className={`scroll-mt-32 bg-card border rounded-xl p-6 transition-all duration-500 ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
                             >
                                 <div className="flex items-center justify-between mb-4 border-b pb-4 border-border/50">
-                                    <span className="text-xs font-mono text-muted-foreground bg-muted px-2 py-1 rounded">
+                                    <span className={`text-xs font-mono px-2 py-1 rounded transition-colors ${isPlaying ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
                                         {ayah.surah}:{ayah.ayah}
                                     </span>
                                     <div className="flex gap-2">
                                         <button
-                                            onClick={() => playAudio(ayah.surah, ayah.ayah)}
+                                            onClick={() => playAudio(ayah.surah, ayah.ayah, false)}
                                             className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying
                                                 ? 'text-primary bg-primary/10'
                                                 : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'

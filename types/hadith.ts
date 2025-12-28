@@ -29,4 +29,4 @@ export interface HadithCollection {
     hadiths: Hadith[];
 }
 
-export type CollectionName = 'bukhari' | 'muslim' | 'abudawud' | 'ibnmajah' | 'nasai' | 'malik';
+export type CollectionName = 'bukhari' | 'muslim' | 'abudawud' | 'ibnmajah' | 'nasai' | 'malik' | 'tirmidhi';

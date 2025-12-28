@@ -359,5 +359,6 @@ export const SECTION_TRANSLATIONS: Record<CollectionName, Record<string, string>
         "59": "La Science",
         "60": "L'Invocation de l'Opprimé",
         "61": "Les Noms du Prophète"
-    }
+    },
+    tirmidhi: {}
 };

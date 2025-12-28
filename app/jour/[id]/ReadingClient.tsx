@@ -292,6 +292,33 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                     )
                 })}
 
+                {/* Surah Links Section */}
+                {allPagesLoaded && (
+                    <div className="bg-card/50 border rounded-2xl p-6 mb-8 space-y-4">
+                        <h3 className="font-bold flex items-center gap-2 text-primary">
+                            <BookOpen className="w-5 h-5" />
+                            Lire la sourate complète
+                        </h3>
+                        <div className="grid gap-3 sm:grid-cols-2">
+                            {Array.from(new Set(results.flatMap(r => r.data?.ayahs.map(a => JSON.stringify({ number: a.surahNumber, name: a.surah.englishName })) || [])))
+                                .map(s => JSON.parse(s) as { number: number, name: string })
+                                .sort((a, b) => a.number - b.number)
+                                .map(surah => (
+                                    <Link
+                                        key={surah.number}
+                                        href={`/coran/${surah.number}`}
+                                        className="flex items-center justify-between p-4 bg-background border rounded-xl hover:bg-accent/5 hover:border-accent/20 transition-all group"
+                                    >
+                                        <span className="font-medium text-sm">Sourate {surah.name}</span>
+                                        <span className="text-xs text-muted-foreground group-hover:text-accent flex items-center gap-1">
+                                            Lire <ChevronLeft className="w-4 h-4 rotate-180" />
+                                        </span>
+                                    </Link>
+                                ))}
+                        </div>
+                    </div>
+                )}
+
                 {/* End of Day Navigation */}
                 {allPagesLoaded && (
                     <div className="flex justify-center py-8">

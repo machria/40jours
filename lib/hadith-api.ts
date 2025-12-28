@@ -12,6 +12,7 @@ const COLLECTIONS: Partial<Record<CollectionName, string>> = {
     ibnmajah: 'fra-ibnmajah.json',
     nasai: 'fra-nasai.json',
     malik: 'fra-malik.json',
+    tirmidhi: 'fra-tirmidhi.json',
 };
 
 // Simple in-memory cache
@@ -77,5 +78,6 @@ export function getCollectionsList() {
         { id: 'ibnmajah', name: 'Sunan Ibn Majah' },
         { id: 'nasai', name: 'Sunan an-Nasai' },
         { id: 'malik', name: 'Muwatta Malik' },
+        { id: 'tirmidhi', name: 'Jami At-Tirmidhi' },
     ];
 }

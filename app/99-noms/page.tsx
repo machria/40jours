@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, HelpCircle, Trophy, ChevronRight, RefreshCw, Check, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { namesOfAllah, AllahName } from '@/data/names';
+import { getHighScore, saveHighScore } from '@/app/actions/quiz';
 
 export default function NamesPage() {
     const [mode, setMode] = useState<'learn' | 'quiz'>('learn');
@@ -17,6 +18,13 @@ export default function NamesPage() {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
     const [score, setScore] = useState(0);
+    const [highScore, setHighScore] = useState(0);
+
+    useEffect(() => {
+        getHighScore('99-names').then(data => {
+            if (data.highScore) setHighScore(data.highScore);
+        });
+    }, []);
 
     const startQuiz = () => {
         setMode('quiz');
@@ -48,7 +56,17 @@ export default function NamesPage() {
         setSelectedOption(answer);
         const correct = answer === quizQuestion?.transliteration;
         setIsCorrect(correct);
-        if (correct) setScore(s => s + 1);
+        setIsCorrect(correct);
+        if (correct) {
+            const newScore = score + 1;
+            setScore(newScore);
+            if (newScore > highScore) {
+                setHighScore(newScore);
+                saveHighScore('99-names', newScore);
+            }
+        } else {
+            setScore(0);
+        }
 
         // Auto next after delay if correct
         if (correct) {
@@ -161,7 +179,10 @@ export default function NamesPage() {
                             ) : (
                                 <div className="space-y-6">
                                     <div className="flex justify-between items-center text-sm font-medium">
-                                        <span>Score: {score}</span>
+                                        <div className="flex gap-4">
+                                            <span>Score: <span className="text-primary">{score}</span></span>
+                                            <span className="text-muted-foreground">Meilleur: {highScore}</span>
+                                        </div>
                                         <button onClick={nextQuestion} className="text-muted-foreground hover:text-primary flex items-center gap-1">
                                             <RefreshCw className="w-4 h-4" /> Passer
                                         </button>

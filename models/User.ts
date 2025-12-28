@@ -10,6 +10,7 @@ export interface IUser extends Document {
     dailyProgress: Map<string, boolean>; // Changed to Map
     streak: number;
     lastReadDate: Date;
+    quizScores: Map<string, number>;
 }
 
 const UserSchema: Schema = new Schema(
@@ -21,6 +22,7 @@ const UserSchema: Schema = new Schema(
         dailyProgress: { type: Map, of: Boolean, default: {} },
         streak: { type: Number, default: 0 },
         lastReadDate: { type: Date },
+        quizScores: { type: Map, of: Number, default: {} },
     },
     { timestamps: true }
 );

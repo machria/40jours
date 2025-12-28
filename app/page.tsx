@@ -2,6 +2,7 @@
 
 import { plan40jours } from '@/data/plan40jours';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
 
@@ -65,28 +66,38 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
-                  <span className="w-4 h-4 rounded-full bg-red-600 shadow-sm shrink-0"></span>
-                  <div className="text-sm">
-                    <span className="font-bold text-red-600 block">Rouge</span>
-                    <span className="text-muted-foreground">Prolongation (Madd)</span>
+              <div className="flex gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1">
+                  <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
+                    <span className="w-4 h-4 rounded-full bg-red-600 shadow-sm shrink-0"></span>
+                    <div className="text-sm">
+                      <span className="font-bold text-red-600 block">Rouge</span>
+                      <span className="text-muted-foreground">Prolongation (Madd)</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
+                    <span className="w-4 h-4 rounded-full bg-green-600 shadow-sm shrink-0"></span>
+                    <div className="text-sm">
+                      <span className="font-bold text-green-600 block">Vert</span>
+                      <span className="text-muted-foreground">Nasalisation (Ghunna)</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
+                    <span className="w-4 h-4 rounded-full bg-blue-600 shadow-sm shrink-0"></span>
+                    <div className="text-sm">
+                      <span className="font-bold text-blue-600 block">Bleu</span>
+                      <span className="text-muted-foreground">Emphase / Qalqala</span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
-                  <span className="w-4 h-4 rounded-full bg-green-600 shadow-sm shrink-0"></span>
-                  <div className="text-sm">
-                    <span className="font-bold text-green-600 block">Vert</span>
-                    <span className="text-muted-foreground">Nasalisation (Ghunna)</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 bg-card p-3 rounded-lg border shadow-sm">
-                  <span className="w-4 h-4 rounded-full bg-blue-600 shadow-sm shrink-0"></span>
-                  <div className="text-sm">
-                    <span className="font-bold text-blue-600 block">Bleu</span>
-                    <span className="text-muted-foreground">Emphase / Qalqala</span>
-                  </div>
-                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-border/50">
+                <Link href="/tajwid" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
+                  <span className="bg-primary/10 p-1.5 rounded-full">🎓</span>
+                  Apprendre le Tajwid Simplifié (Sourate An-Nasr)
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </div>
           </div>
