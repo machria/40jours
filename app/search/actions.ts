@@ -79,49 +79,27 @@ export async function searchQuran(query: string) {
     if (!query || query.length < 2) return [];
 
     const index = getIndex();
-    const isArabic = /[\u0600-\u06FF]/.test(query);
-    const normalizedQuery = isArabic ? normalizeArabic(query) : normalizeFrench(query);
+    const isArabic = /[\u0600-\u06FF]/.test(query); // Determine language based on first char usually, or regex match
+
+    // Multi-word support: Split query into terms
+    const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
+    const terms = rawTerms.map(t => isArabic ? normalizeArabic(t) : normalizeFrench(t));
 
     const results = index.filter(item => {
         if (isArabic) {
-            return item.an.includes(normalizedQuery);
+            // Check if ALL terms are present in Arabic text
+            return terms.every(term => item.an.includes(term));
         } else {
-            return item.fn.includes(normalizedQuery) || item.tn.includes(normalizedQuery);
+            // Exclude Tafsir from main Quran search
+            // Check if ALL terms are present in French text
+            return terms.every(term => item.fn.includes(term));
         }
     });
 
     // Limit results
     const topResults = results.slice(0, 50);
 
-    // Hydrate with real text
-    const fullData = getQuranData();
-    // quran-data is organized by page... this is painful for random access.
-    // We need a map.
-    // Optimization: Build a Map once.
-    // For now, iterate pages is O(604). Fine-ish.
-
-    // Actually, creating a map once is better.
-    // But for MVP, let's just find them.
-
     const hydratedResults = topResults.map(item => {
-        // Find existing text
-        // Optimization: We know S:A.
-        // We can't easily find it in quran-data without iterating.
-        // But we can filter quickly.
-        let foundAyah: any = null;
-
-        // This is slow O(N*M).
-        // Better: quranData should be flattened or indexed by S:A.
-        // Let's lazy load a lookup map.
-
-        // MVP: Just return the metadata, let Client fetch the text or use its own cache?
-        // Client has no cache usually.
-        // Server side lookup map is best.
-
-        // For now, assume we find it.
-        // Let's build a static Map in module scope if possible.
-        // (Skipping for brevity implementation, will just return basic info)
-
         return {
             surah: item.s,
             ayah: item.a,
@@ -130,6 +108,34 @@ export async function searchQuran(query: string) {
     });
 
     return hydratedResults;
+}
+
+export async function searchTafsir(query: string) {
+    if (!query || query.length < 2) return [];
+
+    const index = getIndex();
+
+    // Multi-word support
+    const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
+    const terms = rawTerms.map(t => normalizeFrench(t));
+
+    const results = index.filter(item => {
+        if (!item.tn) return false;
+        // Check if ALL terms are present in Tafsir text
+        return terms.every(term => item.tn.includes(term));
+    });
+
+    // Limit results
+    const topResults = results.slice(0, 50);
+
+    // Hydrate with Tafsir Snippet (requires loading Tafsir data)
+    // For now, we return metadata, client might need to fetch text?
+    // Or we load Tafsir data here.
+    return topResults.map(item => ({
+        surah: item.s,
+        ayah: item.a,
+        key: `${item.s}:${item.a}`
+    }));
 }
 
 // Helper to get text for specific results (Batch fetch)

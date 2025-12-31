@@ -3,6 +3,7 @@
 import { useEffect, useState, use } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Copy, Share2 } from 'lucide-react';
+import { TajwidText } from '@/components/TajwidText';
 
 type Hadith = {
     id: number;
@@ -107,7 +108,7 @@ export default function HisnDetailPage({ params }: { params: Promise<{ id: strin
                             {/* Arabic Text */}
                             <div className="text-right" dir="rtl">
                                 <p className="text-2xl md:text-3xl leading-relaxed md:leading-loose font-arabic text-primary/90">
-                                    {hadith.arabic}
+                                    <TajwidText text={hadith.arabic} />
                                 </p>
                             </div>
 

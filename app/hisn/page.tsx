@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Search } from 'lucide-react';
+import Link from 'next/link';
+import { Search, Trophy } from 'lucide-react';
 import HisnCard from '@/components/hisn/HisnCard';
 
 type HisnCategorySummary = {
@@ -60,10 +61,21 @@ export default function HisnPage() {
     return (
         <div className="container py-8 px-4 md:px-6 space-y-8">
             <div className="flex flex-col gap-4">
-                <h1 className="text-3xl font-bold tracking-tight">Citadelle du Musulman</h1>
-                <p className="text-muted-foreground text-lg">
-                    Recueil d&apos;invocations et d&apos;évocations tirées du Coran et de la Sunna
-                </p>
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <h1 className="text-3xl font-bold tracking-tight">Citadelle du Musulman</h1>
+                        <p className="text-muted-foreground text-lg mt-1">
+                            Recueil d&apos;invocations et d&apos;évocations
+                        </p>
+                    </div>
+                    <Link
+                        href="/hisn/quiz"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-semibold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105"
+                    >
+                        <Trophy className="w-5 h-5" />
+                        Quiz Infini
+                    </Link>
+                </div>
             </div>
 
             {/* Search Bar */}
