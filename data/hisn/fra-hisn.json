@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Que dire avant de faire les ablutions",
+        "title": "Invocations du matin au réveil",
         "hadiths": [
             {
                 "id": 1,
@@ -48,7 +48,7 @@
     },
     {
         "id": 3,
-        "title": "Invocation lors de l'enfilage de nouveaux vêtements",
+        "title": "Invocation en mettant un vêtement neuf",
         "hadiths": [
             {
                 "id": 6,
@@ -61,7 +61,7 @@
     },
     {
         "id": 4,
-        "title": "Invocations pour quelqu'un qui a mis de nouveaux vêtements",
+        "title": "Invocation pour celui qui met un vêtement neuf",
         "hadiths": [
             {
                 "id": 7,
@@ -81,7 +81,7 @@
     },
     {
         "id": 5,
-        "title": "Que dire en se déshabillant",
+        "title": "Ce que l'on dit en se déshabillant",
         "hadiths": [
             {
                 "id": 9,
@@ -94,7 +94,7 @@
     },
     {
         "id": 6,
-        "title": "Que dire après avoir terminé les ablutions",
+        "title": "Invocation en entrant aux toilettes",
         "hadiths": [
             {
                 "id": 10,
@@ -107,7 +107,7 @@
     },
     {
         "id": 7,
-        "title": "Que dire avant de faire les ablutions",
+        "title": "Invocation en sortant des toilettes",
         "hadiths": [
             {
                 "id": 11,
@@ -120,7 +120,7 @@
     },
     {
         "id": 8,
-        "title": "Que dire après avoir terminé les ablutions",
+        "title": "Invocation avant les ablutions",
         "hadiths": [
             {
                 "id": 12,
@@ -133,7 +133,7 @@
     },
     {
         "id": 9,
-        "title": "Que dire en quittant la maison",
+        "title": "Invocation après les ablutions",
         "hadiths": [
             {
                 "id": 13,
@@ -160,7 +160,7 @@
     },
     {
         "id": 10,
-        "title": "Que dire en quittant la maison",
+        "title": "Invocation en sortant de la maison",
         "hadiths": [
             {
                 "id": 16,
@@ -180,7 +180,7 @@
     },
     {
         "id": 11,
-        "title": "Que dire en entrant dans la maison",
+        "title": "Invocation en entrant dans la maison",
         "hadiths": [
             {
                 "id": 18,
@@ -193,7 +193,7 @@
     },
     {
         "id": 12,
-        "title": "Invocation pour aller à la mosquée",
+        "title": "Invocation en allant à la mosquée",
         "hadiths": [
             {
                 "id": 19,
@@ -206,7 +206,7 @@
     },
     {
         "id": 13,
-        "title": "Invocation pour entrer dans la mosquée",
+        "title": "Invocation en entrant à la mosquée",
         "hadiths": [
             {
                 "id": 20,
@@ -219,7 +219,7 @@
     },
     {
         "id": 14,
-        "title": "Invocation pour quitter la mosquée",
+        "title": "Invocation en sortant de la mosquée",
         "hadiths": [
             {
                 "id": 21,
@@ -232,7 +232,7 @@
     },
     {
         "id": 15,
-        "title": "Que dire en entendant l'Athan (appel à la prière)",
+        "title": "Invocations de l'appel à la prière (Adhan)",
         "hadiths": [
             {
                 "id": 22,
@@ -273,7 +273,7 @@
     },
     {
         "id": 16,
-        "title": "Invocations pour le début de la prière",
+        "title": "Invocations de l'ouverture de la prière (Istiftah)",
         "hadiths": [
             {
                 "id": 27,
@@ -321,7 +321,7 @@
     },
     {
         "id": 17,
-        "title": "Invocations pendant le Ruki' (s'incliner en prière)",
+        "title": "Invocations de l'inclinaison (Ruku')",
         "hadiths": [
             {
                 "id": 33,
@@ -362,7 +362,7 @@
     },
     {
         "id": 18,
-        "title": "Invocations pour sortir du Ruki'",
+        "title": "Invocations en se redressant de l'inclinaison",
         "hadiths": [
             {
                 "id": 38,
@@ -389,7 +389,7 @@
     },
     {
         "id": 19,
-        "title": "Invocations pendant le Soujoud",
+        "title": "Invocations de la prosternation (Sujud)",
         "hadiths": [
             {
                 "id": 41,
@@ -444,7 +444,7 @@
     },
     {
         "id": 20,
-        "title": "« Il faut ensuite envoyer des prières sur le Prophète (sal-Allahu 'alayhe wa sallam) après avoir répondu à l'appel du mu.adhdhin ».",
+        "title": "Invocations entre les deux prosternations",
         "hadiths": [
             {
                 "id": 48,
@@ -464,7 +464,7 @@
     },
     {
         "id": 21,
-        "title": "Supplications pour se prosterner en raison de la récitation du Coran",
+        "title": "Invocations de la prosternation de la récitation (Tilawah)",
         "hadiths": [
             {
                 "id": 50,
@@ -484,7 +484,7 @@
     },
     {
         "id": 22,
-        "title": "Invocation pour At-Tashahhud (assis en prière)",
+        "title": "Le Tachahoud",
         "hadiths": [
             {
                 "id": 52,
@@ -497,7 +497,7 @@
     },
     {
         "id": 23,
-        "title": "Comment réciter des bénédictions sur le Prophète après le Tashahhud",
+        "title": "La prière sur le Prophète après le Tachahoud",
         "hadiths": [
             {
                 "id": 53,
@@ -517,7 +517,7 @@
     },
     {
         "id": 24,
-        "title": "Invocations après le Tash-ahhud final et avant de terminer la prière",
+        "title": "Invocations après le dernier Tachahoud et avant le salut",
         "hadiths": [
             {
                 "id": 55,
@@ -600,7 +600,7 @@
     },
     {
         "id": 25,
-        "title": "Que dire après avoir terminé la prière",
+        "title": "Invocations après la prière",
         "hadiths": [
             {
                 "id": 66,
@@ -662,7 +662,7 @@
     },
     {
         "id": 26,
-        "title": "Istikharah (recherchant le conseil d'Allah)",
+        "title": "Prière de consultation (Istikhara)",
         "hadiths": [
             {
                 "id": 74,
@@ -675,7 +675,7 @@
     },
     {
         "id": 27,
-        "title": "Invocation pour sortir des toilettes",
+        "title": "Invocations du matin et du soir",
         "hadiths": [
             {
                 "id": 75,
@@ -849,7 +849,7 @@
     },
     {
         "id": 28,
-        "title": "Que dire avant de faire les ablutions",
+        "title": "Invocations avant de dormir",
         "hadiths": [
             {
                 "id": 99,
@@ -946,7 +946,7 @@
     },
     {
         "id": 29,
-        "title": "Invocation pour dire si tu bouges dans la nuit",
+        "title": "Invocation quand on se retourne la nuit",
         "hadiths": [
             {
                 "id": 112,
@@ -959,7 +959,7 @@
     },
     {
         "id": 30,
-        "title": "Que dire si vous avez peur de vous endormir ou si vous vous sentez seul et déprimé",
+        "title": "Invocation en cas d'insomnie ou de peur panique",
         "hadiths": [
             {
                 "id": 113,
@@ -972,7 +972,7 @@
     },
     {
         "id": 31,
-        "title": "Que faire si vous faites un mauvais rêve ou un cauchemar",
+        "title": "Invocation en cas de mauvais rêve",
         "hadiths": [
             {
                 "id": 114,
@@ -992,7 +992,7 @@
     },
     {
         "id": 32,
-        "title": "Invocations pour Qunut dans la prière du Witr",
+        "title": "Invocation du Qounout (Witr)",
         "hadiths": [
             {
                 "id": 116,
@@ -1019,7 +1019,7 @@
     },
     {
         "id": 33,
-        "title": "Que dire immédiatement après la prière du Witr",
+        "title": "Invocation après le salut du Witr",
         "hadiths": [
             {
                 "id": 119,
@@ -1032,7 +1032,7 @@
     },
     {
         "id": 34,
-        "title": "Invocations en période d'inquiétude et de chagrin",
+        "title": "Invocation en cas de souci et de tristesse",
         "hadiths": [
             {
                 "id": 120,
@@ -1052,7 +1052,7 @@
     },
     {
         "id": 35,
-        "title": "Invocations pour l'angoisse",
+        "title": "Invocation en cas d'affliction",
         "hadiths": [
             {
                 "id": 122,
@@ -1086,7 +1086,7 @@
     },
     {
         "id": 36,
-        "title": "Invocations lorsque vous rencontrez un adversaire ou un dirigeant puissant.",
+        "title": "Invocation en rencontrant l'ennemi ou des autorités",
         "hadiths": [
             {
                 "id": 126,
@@ -1113,7 +1113,7 @@
     },
     {
         "id": 37,
-        "title": "Invocations contre l'oppression des dirigeants",
+        "title": "Invocation de celui qui craint l'injustice d'un dirigeant",
         "hadiths": [
             {
                 "id": 129,
@@ -1133,7 +1133,7 @@
     },
     {
         "id": 38,
-        "title": "Invocation contre un ennemi",
+        "title": "Invocation contre l'ennemi",
         "hadiths": [
             {
                 "id": 131,
@@ -1146,7 +1146,7 @@
     },
     {
         "id": 39,
-        "title": "Que dire si vous craignez que les autres vous fassent du mal",
+        "title": "Invocation de celui qui craint un groupe de gens",
         "hadiths": [
             {
                 "id": 132,
@@ -1159,7 +1159,7 @@
     },
     {
         "id": 40,
-        "title": "Invocations pour si vous êtes frappé dans votre foi",
+        "title": "Invocation de celui qui doute dans sa foi",
         "hadiths": [
             {
                 "id": 133,
@@ -1186,7 +1186,7 @@
     },
     {
         "id": 41,
-        "title": "Invocations pour la liquidation d'une dette",
+        "title": "Invocation pour s'acquitter de ses dettes",
         "hadiths": [
             {
                 "id": 136,
@@ -1206,7 +1206,7 @@
     },
     {
         "id": 42,
-        "title": "Invocation contre les distractions de Satan lors de la prière et de la récitation du Coran",
+        "title": "Invocation contre le doute pendant la prière ou la récitation",
         "hadiths": [
             {
                 "id": 138,
@@ -1219,7 +1219,7 @@
     },
     {
         "id": 43,
-        "title": "Invocation lorsque vous trouvez que quelque chose devient difficile pour vous",
+        "title": "Invocation de celui qui rencontre une difficulté",
         "hadiths": [
             {
                 "id": 139,
@@ -1232,7 +1232,7 @@
     },
     {
         "id": 44,
-        "title": "Que dire et faire si vous commettez un péché",
+        "title": "Ce que dit et fait celui qui a commis un péché",
         "hadiths": [
             {
                 "id": 140,
@@ -1245,7 +1245,7 @@
     },
     {
         "id": 45,
-        "title": "Invocations contre le Diable et ses incitations",
+        "title": "Invocation pour chasser le diable et ses tentations",
         "hadiths": [
             {
                 "id": 141,
@@ -1272,7 +1272,7 @@
     },
     {
         "id": 46,
-        "title": "Invocation lorsque quelque chose que vous n'aimez pas se produit ou lorsque vous ne parvenez pas à réaliser ce que vous essayez de faire",
+        "title": "Invocation quand une chose désagréable arrive ou qu'on n'obtient pas ce que l'on veut",
         "hadiths": [
             {
                 "id": 144,
@@ -1285,7 +1285,7 @@
     },
     {
         "id": 47,
-        "title": "Félicitations aux nouveaux parents et comment ils doivent réagir",
+        "title": "Félicitations pour une naissance et réponse aux félicitations",
         "hadiths": [
             {
                 "id": 145,
@@ -1298,7 +1298,7 @@
     },
     {
         "id": 48,
-        "title": "Comment demander la protection d'Allah pour les enfants",
+        "title": "Invocation de protection pour les enfants",
         "hadiths": [
             {
                 "id": 146,
@@ -1311,7 +1311,7 @@
     },
     {
         "id": 49,
-        "title": "Invocations pour visiter les malades",
+        "title": "Invocation en visitant un malade",
         "hadiths": [
             {
                 "id": 147,
@@ -1331,7 +1331,7 @@
     },
     {
         "id": 50,
-        "title": "La récompense pour la visite aux malades",
+        "title": "Le mérite de visiter un malade",
         "hadiths": [
             {
                 "id": 149,
@@ -1344,7 +1344,7 @@
     },
     {
         "id": 51,
-        "title": "Invocations du terminal ill",
+        "title": "Invocation du malade qui désespère de vivre",
         "hadiths": [
             {
                 "id": 150,
@@ -1371,7 +1371,7 @@
     },
     {
         "id": 52,
-        "title": "Quoi encourager la personne mourante à dire",
+        "title": "Incitation du mourant à prononcer la Chahada",
         "hadiths": [
             {
                 "id": 153,
@@ -1384,7 +1384,7 @@
     },
     {
         "id": 53,
-        "title": "Invocation en cas de tragédie",
+        "title": "Invocation de celui qui a subi un malheur",
         "hadiths": [
             {
                 "id": 154,
@@ -1397,7 +1397,7 @@
     },
     {
         "id": 54,
-        "title": "Invocation pour fermer les yeux des morts",
+        "title": "Invocation en fermant les yeux du mort",
         "hadiths": [
             {
                 "id": 155,
@@ -1410,7 +1410,7 @@
     },
     {
         "id": 55,
-        "title": "Invocations pour les morts dans la prière funéraire",
+        "title": "Invocations prière mortuaire (Janaza)",
         "hadiths": [
             {
                 "id": 156,
@@ -1444,7 +1444,7 @@
     },
     {
         "id": 56,
-        "title": "Invocations pour un enfant dans la prière funéraire",
+        "title": "Invocation prière mortuaire pour un enfant",
         "hadiths": [
             {
                 "id": 160,
@@ -1464,7 +1464,7 @@
     },
     {
         "id": 57,
-        "title": "Invocation pour les personnes endeuillées",
+        "title": "Invocation de condoléances",
         "hadiths": [
             {
                 "id": 162,
@@ -1477,7 +1477,7 @@
     },
     {
         "id": 58,
-        "title": "Invocation à réciter lors de la mise du mort dans sa tombe",
+        "title": "Invocation en plaçant le mort dans la tombe",
         "hadiths": [
             {
                 "id": 163,
@@ -1490,7 +1490,7 @@
     },
     {
         "id": 59,
-        "title": "Invocation à réciter après l'enterrement du mort",
+        "title": "Invocation après l'enterrement",
         "hadiths": [
             {
                 "id": 164,
@@ -1503,7 +1503,7 @@
     },
     {
         "id": 60,
-        "title": "Invocation pour visiter les tombes",
+        "title": "Invocation en visitant les tombes",
         "hadiths": [
             {
                 "id": 165,
@@ -1516,7 +1516,7 @@
     },
     {
         "id": 61,
-        "title": "Invocations quand le vent souffle",
+        "title": "Invocation lorsque le vent souffle",
         "hadiths": [
             {
                 "id": 166,
@@ -1536,7 +1536,7 @@
     },
     {
         "id": 62,
-        "title": "Invocation quand il tonne",
+        "title": "Invocation lorsque le tonnerre gronde",
         "hadiths": [
             {
                 "id": 168,
@@ -1549,7 +1549,7 @@
     },
     {
         "id": 63,
-        "title": "Quelques invocations pour la pluie",
+        "title": "Invocations pour la demande de pluie (Istisqa)",
         "hadiths": [
             {
                 "id": 169,
@@ -1589,7 +1589,7 @@
     },
     {
         "id": 65,
-        "title": "Supplication après la pluie",
+        "title": "Invocation après la pluie",
         "hadiths": [
             {
                 "id": 173,
@@ -1602,7 +1602,7 @@
     },
     {
         "id": 66,
-        "title": "Invocation pour la retenue de la pluie",
+        "title": "Invocation pour demander l'arrêt de la pluie",
         "hadiths": [
             {
                 "id": 174,
@@ -1615,7 +1615,7 @@
     },
     {
         "id": 67,
-        "title": "Invocation pour observer la nouvelle lune",
+        "title": "Invocation à la vue du croissant de lune",
         "hadiths": [
             {
                 "id": 175,
@@ -1628,7 +1628,7 @@
     },
     {
         "id": 68,
-        "title": "Invocations pour rompre le jeûne",
+        "title": "Invocation à la rupture du jeûne",
         "hadiths": [
             {
                 "id": 176,
@@ -1648,7 +1648,7 @@
     },
     {
         "id": 69,
-        "title": "Invocations avant de manger",
+        "title": "Invocation avant le repas",
         "hadiths": [
             {
                 "id": 178,
@@ -1668,7 +1668,7 @@
     },
     {
         "id": 70,
-        "title": "Invocations après avoir mangé",
+        "title": "Invocation après le repas",
         "hadiths": [
             {
                 "id": 180,
@@ -1688,7 +1688,7 @@
     },
     {
         "id": 71,
-        "title": "Invocation d'un convive pour son hôte",
+        "title": "Invocation de l'invité pour son hôte",
         "hadiths": [
             {
                 "id": 182,
@@ -1701,7 +1701,7 @@
     },
     {
         "id": 72,
-        "title": "Invocation pour quelqu'un qui vous donne à boire ou vous en offre",
+        "title": "Invocation pour celui qui nous offre à boire",
         "hadiths": [
             {
                 "id": 183,
@@ -1714,7 +1714,7 @@
     },
     {
         "id": 73,
-        "title": "Invocation pour une famille qui vous invite à rompre le jeûne avec elle",
+        "title": "Invocation pour la famille chez qui on rompt le jeûne",
         "hadiths": [
             {
                 "id": 184,
@@ -1727,7 +1727,7 @@
     },
     {
         "id": 74,
-        "title": "Invocation pour quelqu'un qui vous propose de la nourriture pendant que vous jeûnez et que vous refusez",
+        "title": "Invocation du jeûneur lorsqu'on lui présente à manger et qu'il ne rompt pas son jeûne",
         "hadiths": [
             {
                 "id": 185,
@@ -1740,7 +1740,7 @@
     },
     {
         "id": 75,
-        "title": "Que dire lorsque vous jeûnez et que quelqu'un est impoli avec vous",
+        "title": "Ce que doit dire le jeûneur si on l'insulte",
         "hadiths": [
             {
                 "id": 186,
@@ -1753,7 +1753,7 @@
     },
     {
         "id": 76,
-        "title": "Invocation lorsque vous voyez les premières dates de la saison",
+        "title": "Invocation à la vue des premiers fruits",
         "hadiths": [
             {
                 "id": 187,
@@ -1766,7 +1766,7 @@
     },
     {
         "id": 77,
-        "title": "Invocation pour éternuer",
+        "title": "Invocation en cas d'éternuement",
         "hadiths": [
             {
                 "id": 188,
@@ -1779,7 +1779,7 @@
     },
     {
         "id": 78,
-        "title": "Que dire au mécréant s'il éternue et loue Allah",
+        "title": "Ce qu'on dit au mécréant lorsqu'il éternue et loue Allah",
         "hadiths": [
             {
                 "id": 189,
@@ -1792,7 +1792,7 @@
     },
     {
         "id": 79,
-        "title": "Invocation pour le marié",
+        "title": "Invocation du marié",
         "hadiths": [
             {
                 "id": 190,
@@ -1805,7 +1805,7 @@
     },
     {
         "id": 80,
-        "title": "La supplication du marié la nuit de noces ou lors de l’achat d’un animal",
+        "title": "Invocation de l'époux la nuit de noces ou à l'achat d'une monture",
         "hadiths": [
             {
                 "id": 191,
@@ -1818,7 +1818,7 @@
     },
     {
         "id": 81,
-        "title": "Invocation à réciter avant le rapport sexuel",
+        "title": "Invocation avant les rapports intimes",
         "hadiths": [
             {
                 "id": 192,
@@ -1831,7 +1831,7 @@
     },
     {
         "id": 82,
-        "title": "Invocation à la colère",
+        "title": "Invocation contre la colère",
         "hadiths": [
             {
                 "id": 193,
@@ -1844,7 +1844,7 @@
     },
     {
         "id": 83,
-        "title": "Que dire si vous voyez quelqu'un affligé par le malheur",
+        "title": "Invocation en voyant une personne éprouvée",
         "hadiths": [
             {
                 "id": 194,
@@ -1857,7 +1857,7 @@
     },
     {
         "id": 84,
-        "title": "Que dire en étant assis dans une assemblée",
+        "title": "Invocation dans une assemblée",
         "hadiths": [
             {
                 "id": 195,
@@ -1870,7 +1870,7 @@
     },
     {
         "id": 85,
-        "title": "L'expiation de l'Assemblée - Kaffaratul-Majlis",
+        "title": "Invocation de clôture de l'assemblée (Kaffaratul-Majlis)",
         "hadiths": [
             {
                 "id": 196,
@@ -1883,7 +1883,7 @@
     },
     {
         "id": 86,
-        "title": "vocation pour quelqu'un qui dit : Qu'Allah te pardonne",
+        "title": "Invocation pour celui qui dit : \"Qu'Allah te pardonne\"",
         "hadiths": [
             {
                 "id": 197,
@@ -1896,7 +1896,7 @@
     },
     {
         "id": 87,
-        "title": "Invocation pour quelqu'un qui vous fait du bien",
+        "title": "Invocation pour celui qui vous a fait un bienfait",
         "hadiths": [
             {
                 "id": 198,
@@ -1909,7 +1909,7 @@
     },
     {
         "id": 88,
-        "title": "Invocation pour la protection d'Allah contre le faux Messie",
+        "title": "Protection contre l'Antéchrist (Dajjal)",
         "hadiths": [
             {
                 "id": 199,
@@ -1922,7 +1922,7 @@
     },
     {
         "id": 89,
-        "title": "Invocation pour quelqu'un qui te dit je t'aime pour l'amour d'Allah",
+        "title": "Invocation pour celui qui dit : \"Je t'aime en Allah\"",
         "hadiths": [
             {
                 "id": 200,
@@ -1935,7 +1935,7 @@
     },
     {
         "id": 90,
-        "title": "Invocation pour quelqu'un qui vous offre une part de sa richesse",
+        "title": "Invocation pour celui qui vous propose son argent",
         "hadiths": [
             {
                 "id": 201,
@@ -1948,7 +1948,7 @@
     },
     {
         "id": 91,
-        "title": "Invocation (à réception du prêt) pour quelqu'un qui vous prête de l'argent",
+        "title": "Invocation de celui qui rembourse une dette",
         "hadiths": [
             {
                 "id": 202,
@@ -1961,7 +1961,7 @@
     },
     {
         "id": 92,
-        "title": "Invocation par peur du Shirk",
+        "title": "Invocation contre le polythéisme (Shirk)",
         "hadiths": [
             {
                 "id": 203,
@@ -1974,7 +1974,7 @@
     },
     {
         "id": 93,
-        "title": "Invocation pour quelqu'un qui vous dit : Qu'Allah vous bénisse",
+        "title": "Invocation pour celui qui dit : \"Barak Allahu Fik\"",
         "hadiths": [
             {
                 "id": 204,
@@ -1987,7 +1987,7 @@
     },
     {
         "id": 94,
-        "title": "Invocation contre le mauvais présage",
+        "title": "Invocation contre la superstition",
         "hadiths": [
             {
                 "id": 205,
@@ -2000,7 +2000,7 @@
     },
     {
         "id": 95,
-        "title": "Invocation pour monter dans un véhicule ou sur un animal",
+        "title": "Invocation en montant sur une monture ou un véhicule",
         "hadiths": [
             {
                 "id": 206,
@@ -2013,7 +2013,7 @@
     },
     {
         "id": 96,
-        "title": "Invocation pour voyager",
+        "title": "Invocation du voyage",
         "hadiths": [
             {
                 "id": 207,
@@ -2026,7 +2026,7 @@
     },
     {
         "id": 97,
-        "title": "Invocation pour entrer dans une ville",
+        "title": "Invocation en entrant dans un village ou une ville",
         "hadiths": [
             {
                 "id": 208,
@@ -2039,7 +2039,7 @@
     },
     {
         "id": 98,
-        "title": "Invocation pour entrer sur un marché",
+        "title": "Invocation en entrant au marché",
         "hadiths": [
             {
                 "id": 209,
@@ -2052,7 +2052,7 @@
     },
     {
         "id": 99,
-        "title": "Invocation lorsque votre véhicule ou votre monture commence à échouer",
+        "title": "Invocation lorsque la monture trébuche",
         "hadiths": [
             {
                 "id": 210,
@@ -2065,7 +2065,7 @@
     },
     {
         "id": 100,
-        "title": "L'invocation du voyageur pour celle qu'il laisse derrière lui",
+        "title": "Invocation du voyageur pour ceux qu'il laisse",
         "hadiths": [
             {
                 "id": 211,
@@ -2078,7 +2078,7 @@
     },
     {
         "id": 101,
-        "title": "Les invocations du résident pour le voyageur",
+        "title": "Invocation du résident pour le voyageur",
         "hadiths": [
             {
                 "id": 212,
@@ -2098,7 +2098,7 @@
     },
     {
         "id": 102,
-        "title": "Glorifier et magnifier Allah pendant le voyage",
+        "title": "Le Takbir et le Tasbih au cours du voyage",
         "hadiths": [
             {
                 "id": 214,
@@ -2111,7 +2111,7 @@
     },
     {
         "id": 103,
-        "title": "L'invocation du voyageur à l'aube",
+        "title": "Invocation du voyageur au petit matin",
         "hadiths": [
             {
                 "id": 215,
@@ -2124,7 +2124,7 @@
     },
     {
         "id": 104,
-        "title": "Invocation pour une escale (arrêt en cours de route) sur le trajet",
+        "title": "Invocation lors d'une escale en voyage",
         "hadiths": [
             {
                 "id": 216,
@@ -2137,7 +2137,7 @@
     },
     {
         "id": 105,
-        "title": "Que dire au retour d'un voyage",
+        "title": "Invocation au retour de voyage",
         "hadiths": [
             {
                 "id": 217,
@@ -2150,7 +2150,7 @@
     },
     {
         "id": 106,
-        "title": "Que dire s'il arrive quelque chose qui vous plaise ou vous déplaise",
+        "title": "Ce que l'on dit lorsqu'on reçoit une nouvelle plaisante ou déplaisante",
         "hadiths": [
             {
                 "id": 218,
@@ -2163,7 +2163,7 @@
     },
     {
         "id": 107,
-        "title": "L'excellence de demander les bénédictions d'Allah sur le Prophète (psl)",
+        "title": "Le mérite de la prière sur le Prophète",
         "hadiths": [
             {
                 "id": 219,
@@ -2204,7 +2204,7 @@
     },
     {
         "id": 108,
-        "title": "répandre les salutations de Salam (Paix)",
+        "title": "Le mérite de saluer (Salam)",
         "hadiths": [
             {
                 "id": 224,
@@ -2231,7 +2231,7 @@
     },
     {
         "id": 109,
-        "title": "Comment répondre à un mécréant s'il vous dit Salam",
+        "title": "La réponse au salut des gens du Livre",
         "hadiths": [
             {
                 "id": 227,
@@ -2244,7 +2244,7 @@
     },
     {
         "id": 110,
-        "title": "Invocation en entendant le chant du coq ou le braiment d'un âne",
+        "title": "Invocation au chant du coq et au braiment de l'âne",
         "hadiths": [
             {
                 "id": 228,
@@ -2257,7 +2257,7 @@
     },
     {
         "id": 111,
-        "title": "Invocation en entendant un chien aboyer dans la nuit",
+        "title": "Invocation à l'aboiement des chiens la nuit",
         "hadiths": [
             {
                 "id": 229,
@@ -2270,7 +2270,7 @@
     },
     {
         "id": 112,
-        "title": "Invocation pour quelqu'un à qui vous avez dit du mal",
+        "title": "Invocation pour celui qu'on a insulté",
         "hadiths": [
             {
                 "id": 230,
@@ -2283,7 +2283,7 @@
     },
     {
         "id": 113,
-        "title": "Comment un musulman devrait féliciter un autre musulman",
+        "title": "Ce que dit le musulman lorsqu'il fait l'éloge d'un musulman",
         "hadiths": [
             {
                 "id": 231,
@@ -2296,7 +2296,7 @@
     },
     {
         "id": 114,
-        "title": "Ce qu'un musulman devrait dire lorsqu'on le félicite",
+        "title": "Ce que doit dire celui qui reçoit des éloges",
         "hadiths": [
             {
                 "id": 232,
@@ -2309,7 +2309,7 @@
     },
     {
         "id": 115,
-        "title": "L'annonce du pèlerin de son arrivée pour le Hajj ou la Omra",
+        "title": "La Talbiya du Hajj et de la 'Omra",
         "hadiths": [
             {
                 "id": 233,
@@ -2322,7 +2322,7 @@
     },
     {
         "id": 116,
-        "title": "Dire Allahu Akbar en passant devant la Pierre Noire",
+        "title": "Le Takbir au coin de la Pierre Noire",
         "hadiths": [
             {
                 "id": 234,
@@ -2335,7 +2335,7 @@
     },
     {
         "id": 117,
-        "title": "Invocation à réciter entre le Coin Yéménite et la Pierre Noire",
+        "title": "Invocation entre le coin yéménite et la Pierre Noire",
         "hadiths": [
             {
                 "id": 235,
@@ -2348,7 +2348,7 @@
     },
     {
         "id": 118,
-        "title": "Invocation à réciter debout à Safa et Marwah",
+        "title": "Invocation sur le Mont Safa et le Mont Marwah",
         "hadiths": [
             {
                 "id": 236,
@@ -2361,7 +2361,7 @@
     },
     {
         "id": 119,
-        "title": "Invocation à réciter le jour d'Arafat",
+        "title": "Invocation le jour d'Arafat",
         "hadiths": [
             {
                 "id": 237,
@@ -2374,7 +2374,7 @@
     },
     {
         "id": 120,
-        "title": "Supplication à réciter dans la zone sacrée de Muzdalifah",
+        "title": "Invocation à Al-Mach'ar Al-Haram (Muzdalifa)",
         "hadiths": [
             {
                 "id": 238,
@@ -2387,7 +2387,7 @@
     },
     {
         "id": 121,
-        "title": "Dire Allahu Akbar en lapidant les trois piliers de Mina",
+        "title": "Le Takbir lors de la lapidation des stèles (Jamarat)",
         "hadiths": [
             {
                 "id": 239,
@@ -2400,7 +2400,7 @@
     },
     {
         "id": 122,
-        "title": "(La meilleure des supplications est celle du jour de AAarafah et la meilleure que moi et les prophètes avant moi avons dit (est) : (Nul n'a le droit d'être adoré sauf Allah, seul, sans associé. À Lui appartiennent toute louange et souveraineté et Il est sur toutes choses tout-puissant.))",
+        "title": "Ce qu'on dit lorsqu'on s'étonne ou qu'on est surpris",
         "hadiths": [
             {
                 "id": 240,
@@ -2420,7 +2420,7 @@
     },
     {
         "id": 123,
-        "title": "Que dire quand quelque chose qui vous plaît arrive",
+        "title": "Ce qu'on dit lorsqu'une chose nous plaît",
         "hadiths": [
             {
                 "id": 242,
@@ -2433,7 +2433,7 @@
     },
     {
         "id": 124,
-        "title": "Que dire lorsque vous ressentez une douleur dans votre corps",
+        "title": "Ce qu'on dit lorsqu'on ressent une douleur dans le corps",
         "hadiths": [
             {
                 "id": 243,
@@ -2446,7 +2446,7 @@
     },
     {
         "id": 125,
-        "title": "Que dire lorsque vous craignez d'affliger quelque chose avec le mauvais œil",
+        "title": "Invocation pour celui qui craint d'atteindre quelque chose de son mauvais œil",
         "hadiths": [
             {
                 "id": 244,
@@ -2459,7 +2459,7 @@
     },
     {
         "id": 126,
-        "title": "Que dire quand on a peur",
+        "title": "Ce qu'on dit lorsqu'on est effrayé",
         "hadiths": [
             {
                 "id": 245,
@@ -2472,7 +2472,7 @@
     },
     {
         "id": 127,
-        "title": "Que dire lors de l'abattage ou du sacrifice d'un animal",
+        "title": "Ce qu'on dit en égorgeant une bête",
         "hadiths": [
             {
                 "id": 246,
@@ -2485,7 +2485,7 @@
     },
     {
         "id": 128,
-        "title": "Que dire pour déjouer les complots du diable",
+        "title": "Ce qu'on dit pour repousser les ruses des diables",
         "hadiths": [
             {
                 "id": 247,
@@ -2498,7 +2498,7 @@
     },
     {
         "id": 129,
-        "title": "Repentir et recherche du pardon",
+        "title": "Le repentir et la demande de pardon (Istighfar)",
         "hadiths": [
             {
                 "id": 248,
@@ -2546,7 +2546,7 @@
     },
     {
         "id": 130,
-        "title": "L'excellence de se souvenir d'Allah",
+        "title": "Le mérite du rappel d'Allah (Dhikr)",
         "hadiths": [
             {
                 "id": 254,
@@ -2636,7 +2636,7 @@
     },
     {
         "id": 131,
-        "title": "Comment le Prophète a glorifié Allah",
+        "title": "La manière dont le Prophète glorifiait Allah (Tasbih)",
         "hadiths": [
             {
                 "id": 266,
@@ -2649,7 +2649,7 @@
     },
     {
         "id": 132,
-        "title": "Types de bonté et bonne étiquette pour la vie communautaire",
+        "title": "Types de bienfaits et règles de vie commune",
         "hadiths": [
             {
                 "id": 267,
