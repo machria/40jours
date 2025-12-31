@@ -34,6 +34,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${kufi.variable} antialiased font-sans bg-background text-foreground`}
       >
         <NextIntlClientProvider messages={messages}>

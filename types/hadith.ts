@@ -7,7 +7,13 @@ export interface Hadith {
     hadithnumber: number;
     arabicnumber: number;
     text: string;
-    grades: any[];
+    arabic: string;
+    english?: {
+        narrator?: string;
+        text: string;
+    };
+    tags?: string[];
+    grades?: any[];
     reference: HadithReference;
 }
 

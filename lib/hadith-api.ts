@@ -5,7 +5,7 @@ import { SECTION_TRANSLATIONS } from './hadith-translations';
 
 const DATA_DIR = path.join(process.cwd(), 'data/hadith');
 
-const COLLECTIONS: Partial<Record<CollectionName, string>> = {
+const COLLECTIONS: Record<CollectionName, string> = {
     bukhari: 'fra-bukhari.json',
     muslim: 'fra-muslim.json',
     abudawud: 'fra-abudawud.json',
@@ -24,27 +24,14 @@ export async function getCollection(name: CollectionName): Promise<HadithCollect
     }
 
     const fileName = COLLECTIONS[name];
-    if (!fileName) {
-        throw new Error(`Collection ${name} not configured.`);
-    }
-
     const filePath = path.join(DATA_DIR, fileName);
+
     try {
         const fileContent = await fs.readFile(filePath, 'utf-8');
-        const data = JSON.parse(fileContent) as HadithCollection;
+        const collection = JSON.parse(fileContent) as HadithCollection;
 
-        // Apply translations to sections
-        const translations = SECTION_TRANSLATIONS[name];
-        if (translations && data.metadata && data.metadata.sections) {
-            Object.keys(data.metadata.sections).forEach(sectionId => {
-                if (translations[sectionId]) {
-                    data.metadata.sections[sectionId] = translations[sectionId];
-                }
-            });
-        }
-
-        cache[name] = data;
-        return data;
+        cache[name] = collection;
+        return collection;
     } catch (error) {
         console.error(`Error loading collection ${name}:`, error);
         throw new Error(`Failed to load collection ${name}`);

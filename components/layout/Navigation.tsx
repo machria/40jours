@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BookOpen, User, Menu, Search, Map as MapIcon } from 'lucide-react';
+import { Home, BookOpen, User, Menu, Search, Map as MapIcon, Shield } from 'lucide-react';
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -14,6 +14,7 @@ const navItems = [
     { href: '/', label: 'Accueil', icon: Home },
     { href: '/coran', label: 'Sourates', icon: BookOpen },
     { href: '/juz', label: 'Juz (30j)', icon: MapIcon }, // Import MapIcon if needed or use another
+    { href: '/hisn', label: 'Citadelle', icon: Shield },
     { href: '/search', label: 'Recherche', icon: Search },
     { href: '/99-noms', label: '99 Noms', icon: Menu },
     { href: '/hadith', label: 'Hadith', icon: BookOpen },

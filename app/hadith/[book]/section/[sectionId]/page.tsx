@@ -87,30 +87,55 @@ export default async function SectionPage({ params }: PageProps) {
                                 </span>
                             )}
                         </div>
-                        <div className="prose dark:prose-invert max-w-none">
-                            <p className="text-lg leading-relaxed whitespace-pre-wrap font-serif">
-                                {hadith.text}
-                            </p>
-                        </div>
-                        <div className="mt-4 pt-4 border-t text-sm text-muted-foreground flex flex-wrap gap-2">
-                            {hadith.grades && hadith.grades.length > 0 ? (
-                                hadith.grades.map((g, i) => (
-                                    <span key={i} className="bg-muted px-2 py-1 rounded">
-                                        {g.name}: <span className={
-                                            g.grade.toLowerCase().includes('sahih') ? 'text-green-600 font-bold' :
-                                                g.grade.toLowerCase().includes('hasan') ? 'text-emerald-500 font-bold' :
-                                                    g.grade.toLowerCase().includes('daif') || g.grade.toLowerCase().includes('weak') ? 'text-orange-500 font-bold' :
-                                                        ''
-                                        }>{g.grade}</span>
-                                    </span>
-                                ))
-                            ) : (
-                                (book === 'bukhari' || book === 'muslim') && (
-                                    <span className="bg-muted px-2 py-1 rounded">
-                                        Degré: <span className="text-green-600 font-bold">Sahih</span>
-                                    </span>
-                                )
+                        <div className="space-y-6">
+                            {hadith.arabic && (
+                                <div className="bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10">
+                                    <p className="text-2xl md:text-3xl leading-loose font-kufi text-right text-foreground dir-rtl" dir="rtl">
+                                        {hadith.arabic}
+                                    </p>
+                                </div>
                             )}
+                            <div className="prose dark:prose-invert max-w-none px-2">
+                                <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap font-serif text-foreground/90">
+                                    {hadith.text}
+                                </p>
+                            </div>
+                        </div>
+                        <div className="mt-6 pt-6 border-t border-border/50 text-sm text-muted-foreground space-y-4">
+                            {hadith.english?.narrator && (
+                                <div className="flex items-center gap-2 text-foreground/80 font-medium italic">
+                                    <span className="text-primary text-lg">👤</span>
+                                    <span>{hadith.english.narrator}</span>
+                                </div>
+                            )}
+                            <div className="flex flex-wrap gap-2">
+                                {hadith.tags && hadith.tags.length > 0 && hadith.tags.map((tag, i) => (
+                                    <span key={`tag-${i}`} className={`px-2 py-1 rounded border border-border/50 text-xs font-bold ${tag === 'Qudsi' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300' :
+                                            tag === 'Marfou' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
+                                                'bg-muted text-muted-foreground'
+                                        }`}>
+                                        {tag}
+                                    </span>
+                                ))}
+                                {hadith.grades && hadith.grades.length > 0 ? (
+                                    hadith.grades.map((g, i) => (
+                                        <span key={i} className="bg-muted px-2 py-1 rounded border border-border/50">
+                                            {g.name}: <span className={
+                                                g.grade.toLowerCase().includes('sahih') ? 'text-green-600 font-bold' :
+                                                    g.grade.toLowerCase().includes('hasan') ? 'text-emerald-500 font-bold' :
+                                                        g.grade.toLowerCase().includes('daif') || g.grade.toLowerCase().includes('weak') ? 'text-orange-500 font-bold' :
+                                                            ''
+                                            }>{g.grade}</span>
+                                        </span>
+                                    ))
+                                ) : (
+                                    (book === 'bukhari' || book === 'muslim') && (
+                                        <span className="bg-muted px-2 py-1 rounded border border-border/50">
+                                            Degré: <span className="text-green-600 font-bold">Sahih</span>
+                                        </span>
+                                    )
+                                )}
+                            </div>
                         </div>
                     </div>
                 ))}
