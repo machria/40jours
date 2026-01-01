@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getSectionHadiths, getCollectionMetadata, getCollectionsList } from '@/lib/hadith-api';
 import { CollectionName } from '@/types/hadith';
+import HadithList from '@/components/hadith/HadithList';
 
 interface PageProps {
     params: Promise<{ book: string; sectionId: string }>;
@@ -75,91 +76,17 @@ export default async function SectionPage({ params }: PageProps) {
             </header>
 
             <div className="max-w-3xl mx-auto space-y-6">
-                {hadiths.map((hadith) => (
-                    <div key={hadith.hadithnumber} id={`h${hadith.hadithnumber}`} className="bg-card border rounded-xl p-6 shadow-sm">
-                        <div className="flex items-center justify-between mb-4 border-b pb-4">
-                            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold">
-                                Hadith {hadith.hadithnumber}
-                            </span>
-                            {hadith.arabicnumber && (
-                                <span className="text-muted-foreground text-xs">
-                                    Arabe: {hadith.arabicnumber}
-                                </span>
-                            )}
-                        </div>
-                        <div className="space-y-6">
-                            {hadith.arabic && (
-                                <div className="bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10">
-                                    <p className="text-2xl md:text-3xl leading-loose font-kufi text-right text-foreground dir-rtl" dir="rtl">
-                                        {hadith.arabic}
-                                    </p>
-                                </div>
-                            )}
-                            <div className="prose dark:prose-invert max-w-none px-2">
-                                <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap font-serif text-foreground/90">
-                                    {hadith.text}
-                                </p>
-                            </div>
-                        </div>
-                        <div className="mt-6 pt-6 border-t border-border/50 text-sm text-muted-foreground space-y-4">
-                            {hadith.english?.narrator && (
-                                <div className="flex items-center gap-2 text-foreground/80 font-medium italic">
-                                    <span className="text-primary text-lg">👤</span>
-                                    <span>{hadith.english.narrator}</span>
-                                </div>
-                            )}
-                            <div className="flex flex-wrap gap-2">
-                                {hadith.tags && hadith.tags.length > 0 && hadith.tags.map((tag, i) => (
-                                    <span key={`tag-${i}`} className={`px-2 py-1 rounded border border-border/50 text-xs font-bold ${tag === 'Qudsi' ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300' :
-                                            tag === 'Marfou' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :
-                                                'bg-muted text-muted-foreground'
-                                        }`}>
-                                        {tag}
-                                    </span>
-                                ))}
-                                {hadith.grades && hadith.grades.length > 0 ? (
-                                    hadith.grades.map((g, i) => (
-                                        <span key={i} className="bg-muted px-2 py-1 rounded border border-border/50">
-                                            {g.name}: <span className={
-                                                g.grade.toLowerCase().includes('sahih') ? 'text-green-600 font-bold' :
-                                                    g.grade.toLowerCase().includes('hasan') ? 'text-emerald-500 font-bold' :
-                                                        g.grade.toLowerCase().includes('daif') || g.grade.toLowerCase().includes('weak') ? 'text-orange-500 font-bold' :
-                                                            ''
-                                            }>{g.grade}</span>
-                                        </span>
-                                    ))
-                                ) : (
-                                    (book === 'bukhari' || book === 'muslim') && (
-                                        <span className="bg-muted px-2 py-1 rounded border border-border/50">
-                                            Degré: <span className="text-green-600 font-bold">Sahih</span>
-                                        </span>
-                                    )
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                ))}
+                <div className="max-w-3xl mx-auto space-y-6">
+                    <HadithList
+                        hadiths={hadiths}
+                        book={book}
+                        prevSection={prevId ? { id: prevId, url: `/hadith/${book}/section/${prevId}` } : undefined}
+                        nextSection={nextId ? { id: nextId, url: `/hadith/${book}/section/${nextId}` } : undefined}
+                    />
+                </div>
             </div>
 
-            <div className="max-w-3xl mx-auto mt-12 flex items-center justify-between gap-4">
-                {prevId ? (
-                    <Link
-                        href={`/hadith/${book}/section/${prevId}`}
-                        className="flex-1 bg-muted hover:bg-muted/80 text-center py-3 rounded-lg transition-colors border"
-                    >
-                        &larr; Précédent
-                    </Link>
-                ) : <div className="flex-1"></div>}
 
-                {nextId ? (
-                    <Link
-                        href={`/hadith/${book}/section/${nextId}`}
-                        className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground text-center py-3 rounded-lg transition-colors shadow-lg shadow-primary/20"
-                    >
-                        Suivant &rarr;
-                    </Link>
-                ) : <div className="flex-1"></div>}
-            </div>
         </main>
     );
 }

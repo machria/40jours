@@ -20,10 +20,13 @@ export default function HadithPage() {
 
             <section className="max-w-4xl mx-auto mb-10 bg-card border rounded-3xl p-6 md:p-8 shadow-sm">
                 <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                        <span className="text-4xl">📜</span>
+                    <div className="flex flex-col md:flex-row items-start gap-4">
+                        <span className="text-4xl hidden md:block">📜</span>
                         <div className="space-y-2">
-                            <h2 className="text-xl font-bold text-primary font-kufi">Pourquoi les Hadiths sont-ils nécessaires ?</h2>
+                            <h2 className="text-xl font-bold text-primary font-kufi flex items-center gap-2">
+                                <span className="md:hidden">📜</span>
+                                Pourquoi les Hadiths sont-ils nécessaires ?
+                            </h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 Le Coran est la parole d'Allah, et les Hadiths (la Sunna) sont son <strong>explication pratique</strong>.
                                 Sans les Hadiths, nous ne saurions pas comment prier (le nombre de rakat, les gestes), comment payer la Zakat, ou comment faire le Hajj.
@@ -32,10 +35,13 @@ export default function HadithPage() {
                         </div>
                     </div>
 
-                    <div className="border-t pt-6 flex items-start gap-4">
-                        <span className="text-4xl">💎</span>
+                    <div className="border-t pt-6 flex flex-col md:flex-row items-start gap-4">
+                        <span className="text-4xl hidden md:block">💎</span>
                         <div className="space-y-3">
-                            <h2 className="text-xl font-bold text-primary font-kufi">La Méthode de Vérification (L'Isnad)</h2>
+                            <h2 className="text-xl font-bold text-primary font-kufi flex items-center gap-2">
+                                <span className="md:hidden">💎</span>
+                                La Méthode de Vérification (L'Isnad)
+                            </h2>
                             <p className="text-muted-foreground leading-relaxed">
                                 Pour garantir l'authenticité des textes, les savants ont établi un système de vérification méthodique : <strong>l'Isnad</strong> (la chaîne de transmission).
                             </p>
@@ -52,27 +58,42 @@ export default function HadithPage() {
                 </div>
             </section>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="max-w-4xl mx-auto mb-8 flex justify-center">
+                <Link
+                    href="/hadith/flashcards"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95"
+                >
+                    <span className="text-xl">🔀</span>
+                    Hadiths Aléatoires (Flashcards)
+                </Link>
+            </div>
+
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
                 {collections.map((collection) => (
                     <Link
                         key={collection.id}
                         href={`/hadith/${collection.id}`}
                         className="group block"
                     >
-                        <div className="bg-card border hover:border-primary/50 transition-all rounded-2xl p-8 shadow-sm hover:shadow-md h-full flex flex-col items-center justify-center text-center space-y-4">
-                            <span className="text-4xl">📚</span>
-                            <h2 className="text-2xl font-bold font-kufi text-foreground group-hover:text-primary transition-colors">
-                                {collection.name}
-                            </h2>
-                            <span className="text-sm text-muted-foreground">
-                                Consulter le recueil complet en français
-                            </span>
+                        <div className="bg-card border hover:border-primary/50 transition-all rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md h-full flex flex-row md:flex-col items-center md:justify-center text-left md:text-center space-x-4 md:space-x-0 md:space-y-4">
+                            <span className="text-3xl md:text-4xl bg-primary/10 p-3 rounded-full md:bg-transparent md:p-0">📚</span>
+                            <div>
+                                <h2 className="text-xl md:text-2xl font-bold font-kufi text-foreground group-hover:text-primary transition-colors">
+                                    {collection.name}
+                                </h2>
+                                <span className="text-sm text-muted-foreground md:inline hidden">
+                                    Consulter le recueil complet en français
+                                </span>
+                            </div>
+                            <div className="ml-auto md:hidden text-muted-foreground">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                            </div>
                         </div>
                     </Link>
                 ))}
             </div>
 
-            <section className="max-w-4xl mx-auto mt-12 bg-muted/30 rounded-2xl p-6 md:p-8">
+            <section className="max-w-4xl mx-auto mt-6 bg-muted/30 rounded-2xl p-6 md:p-8">
                 <h3 className="text-xl font-bold font-kufi mb-6 text-center">Comprendre les Degrés des Hadiths</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                     <div className="bg-card p-4 rounded-lg border">

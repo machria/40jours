@@ -68,13 +68,22 @@ export default function HisnPage() {
                             Recueil d&apos;invocations et d&apos;évocations
                         </p>
                     </div>
-                    <Link
-                        href="/hisn/quiz"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-semibold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105"
-                    >
-                        <Trophy className="w-5 h-5" />
-                        Quiz Infini
-                    </Link>
+                    <div className="flex gap-2">
+                        <Link
+                            href="/hisn/flashcards"
+                            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-card border hover:border-primary/50 text-foreground font-semibold rounded-full hover:bg-accent/50 transition-all hover:scale-105"
+                        >
+                            <span className="text-lg">📇</span>
+                            Flashcards
+                        </Link>
+                        <Link
+                            href="/hisn/quiz"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-semibold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105"
+                        >
+                            <Trophy className="w-5 h-5" />
+                            Quiz Infini
+                        </Link>
+                    </div>
                 </div>
             </div>
 

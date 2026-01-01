@@ -2,8 +2,8 @@
 
 import { useEffect, useState, use } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Copy, Share2 } from 'lucide-react';
-import { TajwidText } from '@/components/TajwidText';
+import { ArrowLeft } from 'lucide-react';
+import HisnInvocationList from '@/components/hisn/HisnInvocationList';
 
 type Hadith = {
     id: number;
@@ -82,64 +82,7 @@ export default function HisnDetailPage({ params }: { params: Promise<{ id: strin
                 </h1>
             </div>
 
-            <div className="space-y-8">
-                {category.hadiths.map((hadith, index) => (
-                    <div
-                        key={hadith.id}
-                        className="flex flex-col bg-card border rounded-xl overflow-hidden shadow-sm"
-                    >
-                        {/* Header/Counter */}
-                        <div className="bg-muted/30 px-4 py-2 border-b flex justify-between items-center">
-                            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                                Invocation {index + 1}/{category.hadiths.length}
-                            </span>
-                            <div className="flex gap-2">
-                                {/* Placeholder buttons for future functionality */}
-                                <button className="p-1.5 hover:bg-muted rounded-md transition-colors" title="Copier">
-                                    <Copy className="w-4 h-4 text-muted-foreground" />
-                                </button>
-                                <button className="p-1.5 hover:bg-muted rounded-md transition-colors" title="Partager">
-                                    <Share2 className="w-4 h-4 text-muted-foreground" />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div className="p-6 md:p-8 space-y-6">
-                            {/* Arabic Text */}
-                            <div className="text-right" dir="rtl">
-                                <p className="text-2xl md:text-3xl leading-relaxed md:leading-loose font-arabic text-primary/90">
-                                    <TajwidText text={hadith.arabic} />
-                                </p>
-                            </div>
-
-                            {/* Transliteration / Source */}
-                            {hadith.source && (
-                                <div className="p-4 bg-accent/30 rounded-lg">
-                                    <p className="text-sm md:text-base italic text-muted-foreground/90 leading-relaxed">
-                                        {hadith.source}
-                                    </p>
-                                </div>
-                            )}
-
-                            {/* French Translation */}
-                            <div>
-                                <p className="text-base md:text-lg text-foreground/90 leading-relaxed">
-                                    {hadith.french}
-                                </p>
-                            </div>
-
-                            {/* Repeat Count */}
-                            {hadith.repeat > 1 && (
-                                <div className="flex justify-end pt-2">
-                                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary">
-                                        À répéter {hadith.repeat} fois
-                                    </span>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <HisnInvocationList hadiths={category.hadiths} categoryTitle={category.title} />
         </div>
     );
 }

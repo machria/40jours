@@ -82,25 +82,36 @@ export default async function BookPage({ params }: PageProps) {
             </header>
 
 
-            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                 {sections.map((section) => (
                     <Link
                         key={section.id}
                         href={`/hadith/${book}/section/${section.id}`}
                         className="group block"
                     >
-                        <div className="bg-card border hover:border-primary/50 transition-all rounded-xl p-4 md:p-6 shadow-sm hover:shadow-md h-full flex flex-col justify-between">
-                            <div className="space-y-2">
-                                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                        <div className="bg-card border hover:border-primary/50 transition-all rounded-xl p-4 shadow-sm hover:shadow-md flex flex-row md:flex-col justify-between items-center md:items-stretch h-full">
+                            <div className="space-y-1 md:space-y-2 flex-1">
+                                <span className="text-[10px] md:text-xs font-semibold text-muted-foreground uppercase tracking-wider block">
                                     Chapitre {section.id}
                                 </span>
-                                <h3 className="text-lg font-semibold font-kufi text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                                <h3 className="text-base md:text-lg font-semibold font-kufi text-foreground group-hover:text-primary transition-colors line-clamp-2 md:line-clamp-2">
                                     {section.title}
                                 </h3>
+                                {/* Mobile Detail */}
+                                <div className="md:hidden text-xs text-muted-foreground mt-1">
+                                    Hadiths {section.details?.hadithnumber_first} - {section.details?.hadithnumber_last}
+                                </div>
                             </div>
-                            <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground bg-muted/50 p-2 rounded-lg">
+
+                            {/* Desktop Footer */}
+                            <div className="hidden md:flex mt-4 items-center justify-between text-xs text-muted-foreground bg-muted/50 p-2 rounded-lg">
                                 <span>Hadiths {section.details?.hadithnumber_first} - {section.details?.hadithnumber_last}</span>
                                 <span>Lire &rarr;</span>
+                            </div>
+
+                            {/* Mobile Chevron */}
+                            <div className="md:hidden text-muted-foreground pl-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
                             </div>
                         </div>
                     </Link>
