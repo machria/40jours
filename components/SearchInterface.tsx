@@ -190,7 +190,7 @@ export default function SearchInterface() {
                     {scope === 'hadith' && hadithResults.map((hadith) => (
                         <Link
                             key={`${hadith.collection}-${hadith.number}`}
-                            href={`/hadith/${hadith.collection}/section/${hadith.sectionId || '1'}`}
+                            href={`/hadith/${hadith.collection}/section/${hadith.sectionId || '1'}#h${hadith.number}`}
                             className="block bg-card border rounded-lg p-4 hover:shadow-md transition-shadow hover:border-emerald-500/50"
                         >
                             <div className="flex justify-between items-center mb-2 border-b pb-2">
