@@ -195,8 +195,8 @@ export default function TajwidPage() {
                             <li><strong>Les Caractéristiques (Sifat)</strong> : Le souffle, l'emphase (Tafkhim), l'amincissement (Tarqiq).</li>
                             <li><strong>Les Règles du Noun Sakina</strong> : Distinguer clairement l'Izhar (clarté), l'Idgham (fusion), l'Iqlab (transformation) et l'Ikhfa (dissimulation).</li>
                         </ul>
-                        <div className="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-xl border border-blue-100 dark:border-blue-900 mt-4">
-                            <p className="text-sm text-blue-800 dark:text-blue-300 flex gap-2">
+                        <div className="bg-blue-50 dark:bg-blue-950 p-4 rounded-xl border border-blue-100 dark:border-blue-900 mt-4">
+                            <p className="text-sm text-blue-900 dark:text-blue-100 flex gap-2">
                                 <Info className="w-5 h-5 shrink-0" />
                                 <span><strong>Conseil d'or :</strong> Le Coran se transmet oralement. Rien ne remplace l'écoute et la correction par un enseignant qualifié (Cheikh/Cheikha) pour valider votre prononciation.</span>
                             </p>
