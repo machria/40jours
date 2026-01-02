@@ -17,12 +17,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     const email = credentials.email as string;
                     const password = credentials.password as string;
 
-                    let user = await User.findOne({ email });
+                    let user = await User.findOne({ email }).select("+password");
 
                     if (!user) {
-                        await bcrypt.hash(password, 10);
+                        const hashedPassword = await bcrypt.hash(password, 10);
                         user = await User.create({
                             email,
+                            password: hashedPassword,
                             name: email.split('@')[0],
                             dailyProgress: {},
                             createdAt: new Date(),
@@ -30,7 +31,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         });
                     }
 
-                    await bcrypt.compare(password, user.password || "");
+                    const passwordsMatch = await bcrypt.compare(password, user.password || "");
+
+                    if (!passwordsMatch) return null;
 
                     return { id: user._id.toString(), email: user.email, name: user.name };
                 } catch (error) {
