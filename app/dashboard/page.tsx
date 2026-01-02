@@ -1,122 +1,157 @@
-'use client';
-
-// import { auth } from "@/auth"; // Client component cannot import auth directly easily usually in V5 unless session provider
-import { useSession, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { useQuery } from '@tanstack/react-query';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { LogOut, User as UserIcon } from "lucide-react";
+import { auth } from "@/auth";
+import { redirect } from "next/navigation";
+import dbConnect from "@/lib/db";
+import User from "@/models/User";
+import { plan40jours } from "@/data/plan40jours";
+import { CheckCircle, BookOpen, Trophy, Flame } from "lucide-react";
 import Link from "next/link";
 
-interface ProgressData {
-    progressPercent: number;
-    completedDays: number;
-    streak: number;
-    dailyProgress: { [key: string]: boolean };
+async function getUserData(email: string) {
+    await dbConnect();
+    const user = await User.findOne({ email }).lean();
+    return JSON.parse(JSON.stringify(user));
 }
 
-export default function DashboardPage() {
-    const { data: session, status } = useSession();
-    const router = useRouter();
-
-    const { data: progressData, isLoading } = useQuery<ProgressData>({
-        queryKey: ['progress'],
-        queryFn: async () => {
-            const res = await fetch('/api/progress');
-            if (!res.ok) throw new Error('Failed to fetch');
-            return res.json();
-        },
-        enabled: status === 'authenticated'
-    });
-
-    useEffect(() => {
-        if (status === 'unauthenticated') {
-            router.push('/login');
-        }
-    }, [status, router]);
-
-    if (status === 'loading' || (status === 'authenticated' && isLoading)) {
-        return <div className="p-10 text-center animate-pulse">Chargement de vos données...</div>;
+export default async function DashboardPage() {
+    const session = await auth();
+    if (!session?.user?.email) {
+        redirect("/login");
     }
 
-    if (!session) return null;
+    const user = await getUserData(session.user.email);
 
-    // Transform dailyProgress map to chart data
-    const chartData = progressData?.dailyProgress ?
-        Object.entries(progressData.dailyProgress).map(([day, completed]) => ({
-            day: `J${day}`,
-            completed: completed ? 100 : 0
-        })) : [];
+    // Calculate stats
+    const completedDaysCount = Object.values(user.dailyProgress || {}).filter(Boolean).length;
+    const progressPercent = Math.round((completedDaysCount / 40) * 100);
+    const completedJuzCount = user.completedJuzs?.length || 0;
 
-    const percentage = progressData?.progressPercent || 0;
-    const streak = progressData?.streak || 0;
+    // Convert dailyProgress map to simpler object for checking
+    const dailyProgress = user.dailyProgress || {};
 
     return (
-        <div className="min-h-screen bg-background p-4 md:p-8">
-            <header className="flex items-center justify-between mb-8">
-                <h1 className="text-2xl font-bold font-kufi">Mon Tableau de Bord</h1>
-                <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                            <UserIcon className="w-4 h-4" />
-                        </div>
-                        <span className="text-sm font-medium">{session.user?.name}</span>
-                    </div>
-                    <button
-                        onClick={() => signOut({ callbackUrl: '/' })}
-                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                    >
-                        <LogOut className="w-5 h-5" />
-                    </button>
-                </div>
+        <div className="min-h-screen p-4 md:p-8 space-y-8">
+            <header className="mb-8">
+                <h1 className="text-3xl font-bold font-kufi text-primary">Mon Tableau de Bord</h1>
+                <p className="text-muted-foreground">Bienvenue, {user.name || session.user.name}</p>
             </header>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8">
-                <div className="bg-card border rounded-xl p-6 shadow-sm">
-                    <h3 className="text-muted-foreground text-sm font-medium mb-2">Progression Totale</h3>
-                    <div className="text-3xl font-bold text-primary">{percentage}%</div>
-                    <p className="text-xs text-muted-foreground mt-1">{progressData?.completedDays || 0} jours complétés</p>
+            {/* Stats Overview */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm">
+                    <div className="p-3 bg-primary/10 rounded-full text-primary">
+                        <Flame className="w-8 h-8" />
+                    </div>
+                    <span className="text-3xl font-bold text-foreground">{user.streak || 0}</span>
+                    <span className="text-sm text-muted-foreground">Jours consécutifs</span>
                 </div>
-                <div className="bg-card border rounded-xl p-6 shadow-sm">
-                    <h3 className="text-muted-foreground text-sm font-medium mb-2">Série Actuelle (Streak)</h3>
-                    <div className="text-3xl font-bold text-accent">{streak} Jours</div>
-                    <p className="text-xs text-muted-foreground mt-1">Continuez ainsi !</p>
+                <div className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm">
+                    <div className="p-3 bg-blue-500/10 rounded-full text-blue-600">
+                        <BookOpen className="w-8 h-8" />
+                    </div>
+                    <span className="text-3xl font-bold text-foreground">{completedJuzCount}/30</span>
+                    <span className="text-sm text-muted-foreground">Juz Complétés</span>
                 </div>
-                <div className="bg-card border rounded-xl p-6 shadow-sm">
-                    <h3 className="text-muted-foreground text-sm font-medium mb-2">Prochaine Lecture</h3>
-                    <div className="text-xl font-bold">Jour {(progressData?.completedDays || 0) + 1}</div>
-                    <Link href={`/jour/${(progressData?.completedDays || 0) + 1}`} className="text-primary text-xs hover:underline block mt-2">Commencer &rarr;</Link>
+                <div className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm">
+                    <div className="p-3 bg-yellow-500/10 rounded-full text-yellow-600">
+                        <Trophy className="w-8 h-8" />
+                    </div>
+                    <span className="text-3xl font-bold text-foreground">{completedDaysCount}/40</span>
+                    <span className="text-sm text-muted-foreground">Programme 40 Jours</span>
                 </div>
             </div>
 
-            <div className="bg-card border rounded-xl p-6 shadow-sm h-[400px]">
-                <h3 className="text-lg font-bold mb-6">Activité Récente</h3>
-                {chartData.length > 0 ? (
-                    <ResponsiveContainer width="100%" height="100%">
-                        <LineChart data={chartData}>
-                            <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E5E7EB" />
-                            <XAxis dataKey="day" stroke="#6B7280" fontSize={12} tickLine={false} axisLine={false} />
-                            <YAxis stroke="#6B7280" fontSize={12} tickLine={false} axisLine={false} />
-                            <Tooltip
-                                contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }}
-                            />
-                            <Line
-                                type="step"
-                                dataKey="completed"
-                                stroke="#10B981"
-                                strokeWidth={3}
-                                dot={{ fill: '#10B981', r: 4 }}
-                                activeDot={{ r: 6 }}
-                            />
-                        </LineChart>
-                    </ResponsiveContainer>
-                ) : (
-                    <div className="h-full flex items-center justify-center text-muted-foreground">
-                        Aucune donnée disponible. Commencez une lecture !
+            {/* 40 Jours Progress */}
+            <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
+                <div className="flex items-center justify-between">
+                    <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
+                        <span className="text-primary">📅</span>
+                        Progression 40 Jours
+                    </h2>
+                    <span className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
+                        {progressPercent}%
+                    </span>
+                </div>
+
+                <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 lg:grid-cols-10 gap-3">
+                    {plan40jours.map((day) => {
+                        const isCompleted = dailyProgress[String(day.jour)];
+                        return (
+                            <div
+                                key={day.jour}
+                                className={`
+                            relative flex flex-col items-center justify-center p-3 rounded-lg border h-20 transition-all
+                            ${isCompleted
+                                        ? "bg-primary text-primary-foreground border-primary"
+                                        : "bg-muted/30 border-border text-muted-foreground"
+                                    }
+                        `}
+                            >
+                                <span className="text-xs uppercase font-semibold opacity-70">J-{day.jour}</span>
+                                {isCompleted ? (
+                                    <CheckCircle className="w-6 h-6 mt-1" />
+                                ) : (
+                                    <span className="text-xs mt-1 text-center line-clamp-1 w-full">{day.sourates}</span>
+                                )}
+                            </div>
+                        )
+                    })}
+                </div>
+                <div className="flex justify-end">
+                    <Link href="/jour/1" className="text-sm text-primary hover:underline">
+                        Accéder au programme &rarr;
+                    </Link>
+                </div>
+            </section>
+
+            {/* Juz Progress */}
+            <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
+                <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
+                    <span className="text-blue-600">📖</span>
+                    Mes Juz
+                </h2>
+                <div className="grid grid-cols-6 sm:grid-cols-10 gap-2">
+                    {[...Array(30)].map((_, i) => {
+                        const juzId = i + 1;
+                        const isRead = user.completedJuzs?.includes(juzId);
+                        return (
+                            <div
+                                key={juzId}
+                                className={`
+                            aspect-square rounded-md flex items-center justify-center font-bold text-sm border
+                            ${isRead
+                                        ? "bg-blue-600 text-white border-blue-600"
+                                        : "bg-background border-border text-muted-foreground"
+                                    }
+                        `}
+                                title={`Juz ${juzId}`}
+                            >
+                                {juzId}
+                            </div>
+                        )
+                    })}
+                </div>
+            </section>
+
+            {/* Quiz Scores (Placeholder or real data if available) */}
+            <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
+                <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
+                    <span className="text-yellow-600">🏆</span>
+                    Meilleurs Scores (Quiz)
+                </h2>
+                {user.quizScores && Object.keys(user.quizScores).length > 0 ? (
+                    <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                        {Object.entries(user.quizScores).map(([key, score]) => (
+                            <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                                <span className="font-medium text-sm">Sourate {key}</span>
+                                <span className="font-bold text-primary">{String(score)}%</span>
+                            </div>
+                        ))}
                     </div>
+                ) : (
+                    <p className="text-muted-foreground text-sm">Aucun quiz effectué pour le moment.</p>
                 )}
-            </div>
+            </section>
+
         </div>
     );
 }
