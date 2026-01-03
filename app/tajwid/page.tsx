@@ -212,7 +212,7 @@ export default function TajwidPage() {
                     </h2>
                     <div className="bg-card border rounded-3xl p-6 shadow-sm space-y-4">
                         <p className="text-muted-foreground leading-relaxed">
-                            Le Tajwid embellit la forme, mais le vocabulaire ouvre le sens. Saviez-vous que <strong>80% du texte coranique</strong> est composé d'environ 300 mots répétés ?
+                            Le Tajwid embellit la forme, mais le vocabulaire ouvre le sens. Saviez-vous que <strong>80% du texte coranique</strong> est composé d'environ 250 mots répétés ?
                         </p>
                         <div className="mt-4 pt-4 border-t border-border/50">
                             <Link href="/vocabulaire" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
