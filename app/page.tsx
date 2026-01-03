@@ -63,8 +63,14 @@ export default async function Home() {
               Ce programme est conçu comme une étape intermédiaire idéale pour <strong>s&apos;habituer à lire le Coran quotidiennement</strong>. L&apos;objectif est de vous entraîner progressivement pour, à terme, être capable de le clôturer en 30 jours (une pratique courante notamment pendant le Ramadan).
             </p>
             <p className="p-4 bg-muted/50 rounded-lg border-l-4 border-accent text-sm md:text-base">
-              <span className="font-semibold block text-foreground mb-1">💡 Note sur le Hadith des 40 jours :</span>
-              Il existe un hadith rapportant qu&apos;il ne faut pas lire le Coran en plus de 40 jours. Il est important de savoir que ce hadith est considéré comme <strong>shadh (isolé/irrégulier)</strong> par les savants du hadith. Il n&apos;y a donc pas d&apos;interdiction formelle à mettre plus de temps, mais se fixer un objectif de 40 jours reste une excellente discipline spirituelle.
+              <span className="font-semibold block text-foreground mb-1">💡 Note sur le Rythme de Lecture :</span>
+              Dans le <strong>Sahih Al-Bukhari (Hadith 5054)</strong>, le Prophète (ﷺ) recommande de lire le Coran en <strong>un mois (30 jours)</strong>, et fixe une limite minimale de <strong>7 jours</strong>.
+              <br />
+              <strong>Abu Dawud (Hadith 1394)</strong> rapporte également : <em>« Celui qui récite le Coran en moins de trois jours ne le comprend pas. »</em>
+              <br />
+              Cependant, un récit rapporté par <strong>Tirmidhi (Hadith 2947)</strong> mentionne également : <em>« Récitez le Coran en quarante (jours). »</em>
+              <br />
+              Ce programme de 40 jours est donc une étape idéale pour s&apos;habituer à la régularité, en accord avec la Sunna, avant de viser éventuellement une clôture mensuelle.
             </p>
             <div className="flex items-center gap-2 pt-2 text-foreground font-medium">
               <span className="bg-primary/10 p-2 rounded-md">⏱️</span>

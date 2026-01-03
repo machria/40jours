@@ -13,6 +13,7 @@ export interface IUser extends Document {
     lastReadJuzId?: number;
     completedJuzs: number[];
     quizScores: Map<string, number>;
+    vocabularyQuizBestScore?: number;
 }
 
 const UserSchema: Schema = new Schema(
@@ -27,6 +28,7 @@ const UserSchema: Schema = new Schema(
         lastReadJuzId: { type: Number },
         completedJuzs: { type: [Number], default: [] },
         quizScores: { type: Map, of: Number, default: {} },
+        vocabularyQuizBestScore: { type: Number, default: 0 },
     },
     { timestamps: true }
 );

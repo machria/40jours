@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Play, Info, CheckCircle2, BookOpen } from 'lucide-react';
+import { ChevronLeft, Play, Info, CheckCircle2, BookOpen, Star, ArrowRight } from 'lucide-react';
 
 export default function TajwidPage() {
     return (
@@ -200,6 +200,26 @@ export default function TajwidPage() {
                                 <Info className="w-5 h-5 shrink-0" />
                                 <span><strong>Conseil d'or :</strong> Le Coran se transmet oralement. Rien ne remplace l'écoute et la correction par un enseignant qualifié (Cheikh/Cheikha) pour valider votre prononciation.</span>
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Vocabulary Link Section */}
+                <section className="space-y-6">
+                    <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
+                        <Star className="w-6 h-6 text-primary" />
+                        Comprendre ce que vous lisez
+                    </h2>
+                    <div className="bg-card border rounded-3xl p-6 shadow-sm space-y-4">
+                        <p className="text-muted-foreground leading-relaxed">
+                            Le Tajwid embellit la forme, mais le vocabulaire ouvre le sens. Saviez-vous que <strong>80% du texte coranique</strong> est composé d'environ 300 mots répétés ?
+                        </p>
+                        <div className="mt-4 pt-4 border-t border-border/50">
+                            <Link href="/vocabulaire" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
+                                <span className="bg-primary/10 p-1.5 rounded-full">📚</span>
+                                Découvrir les mots les plus fréquents du Coran
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 </section>
