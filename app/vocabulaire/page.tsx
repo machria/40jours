@@ -17,6 +17,14 @@ export default function VocabularyPage() {
                     <h1 className="text-xl font-bold font-kufi text-primary">Vocabulaire Coranique</h1>
                     <p className="text-xs text-muted-foreground">Les 250+ mots essentiels (Kit de Survie)</p>
                 </div>
+                <Link
+                    href="/vocabulaire/quiz"
+                    className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary px-4 py-2 rounded-full font-bold text-sm transition-colors"
+                >
+                    <Sparkles className="w-4 h-4" />
+                    <span className="hidden md:inline">Quiz</span>
+                    <span className="md:hidden">Jouer</span>
+                </Link>
             </header>
 
             <main className="flex-1 container max-w-3xl mx-auto p-4 md:p-6 space-y-8 pb-24">
@@ -71,17 +79,7 @@ export default function VocabularyPage() {
                     </p>
                 </section>
 
-                {/* Floating Quiz Button */}
-                <div className="fixed bottom-6 right-6 z-50">
-                    <Link
-                        href="/vocabulaire/quiz"
-                        className="group flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-4 rounded-full shadow-lg shadow-primary/25 transition-all hover:scale-105 active:scale-95 font-bold animate-in slide-in-from-bottom fade-in duration-500"
-                    >
-                        <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                        <span>Quiz Mort Subite</span>
-                        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                </div>
+
 
             </main>
         </div>
