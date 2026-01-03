@@ -28,6 +28,15 @@ export default async function DashboardPage() {
     // Convert dailyProgress map to simpler object for checking
     const dailyProgress = user.dailyProgress || {};
 
+    // Calculate next day (first uncompleted day, or 1 if all completed)
+    let nextDay = 1;
+    for (let i = 1; i <= 40; i++) {
+        if (!dailyProgress[i.toString()]) {
+            nextDay = i;
+            break;
+        }
+    }
+
     return (
         <div className="min-h-screen p-4 md:p-8 space-y-8">
             <header className="mb-8">
@@ -97,8 +106,8 @@ export default async function DashboardPage() {
                     })}
                 </div>
                 <div className="flex justify-end">
-                    <Link href="/jour/1" className="text-sm text-primary hover:underline">
-                        Accéder au programme &rarr;
+                    <Link href={`/jour/${nextDay}`} className="text-sm text-primary hover:underline">
+                        {completedDaysCount === 40 ? "Recommencer le programme (Jour 1) →" : `Continuer le programme (Jour ${nextDay}) →`}
                     </Link>
                 </div>
             </section>

@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search } from 'lucide-react';
 import { useQueries } from '@tanstack/react-query';
+import { useSession, signIn } from 'next-auth/react';
 import { getQuranPage, QuranPageData } from '@/lib/quranApi';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { TajwidText } from '@/components/TajwidText';
@@ -123,7 +124,14 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         setIsPlaying(!isPlaying);
     };
 
+    const { data: session } = useSession();
+
     const handleCompletion = async () => {
+        if (!session) {
+            signIn();
+            return;
+        }
+
         try {
             const res = await fetch('/api/progress', {
                 method: 'POST',
@@ -133,9 +141,12 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
             if (res.ok) {
                 setIsCompleted(true);
                 triggerGamification();
+            } else {
+                alert("Erreur lors de la sauvegarde. Veuillez réessayer.");
             }
         } catch (e) {
             console.error("Failed to mark complete", e);
+            alert("Erreur de connexion.");
         }
     };
 
