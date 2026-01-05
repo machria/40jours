@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Play, Info, CheckCircle2, BookOpen, Star, ArrowRight } from 'lucide-react';
+import { ChevronLeft, Play, Info, CheckCircle2, BookOpen, Star, ArrowRight, GraduationCap } from 'lucide-react';
 
 export default function TajwidPage() {
     return (
@@ -200,6 +200,26 @@ export default function TajwidPage() {
                                 <Info className="w-5 h-5 shrink-0" />
                                 <span><strong>Conseil d'or :</strong> Le Coran se transmet oralement. Rien ne remplace l'écoute et la correction par un enseignant qualifié (Cheikh/Cheikha) pour valider votre prononciation.</span>
                             </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Learn Arabic Section */}
+                <section className="space-y-6">
+                    <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
+                        <GraduationCap className="w-6 h-6 text-primary" />
+                        Apprendre l'Alphabet
+                    </h2>
+                    <div className="bg-card border rounded-3xl p-6 shadow-sm space-y-4">
+                        <p className="text-muted-foreground leading-relaxed">
+                            Vous ne savez pas encore lire l'arabe ? Commencez par les bases avec nos leçons interactives, flashcards et quiz pour maîtriser l'alphabet.
+                        </p>
+                        <div className="mt-4 pt-4 border-t border-border/50">
+                            <Link href="/apprendre-arabe" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
+                                <span className="bg-primary/10 p-1.5 rounded-full">🎓</span>
+                                Apprendre à lire l'arabe
+                                <ArrowRight className="w-4 h-4" />
+                            </Link>
                         </div>
                     </div>
                 </section>
