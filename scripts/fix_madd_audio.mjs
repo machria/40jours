@@ -9,9 +9,9 @@ const __dirname = path.dirname(__filename);
 
 // We use slightly modified Arabic text to force the TTS to prolong the vowel
 const REPAIR_EXAMPLES = [
-    { id: 'bab', arabic: 'بَاب' },
-    { id: 'hout', arabic: 'حُوت' },
-    { id: 'tin', arabic: 'تِين' },
+    { id: 'bab', arabic: 'بَآآآآآآآب' },
+    { id: 'hout', arabic: 'حُوووووووووت' },
+    { id: 'tin', arabic: 'تِيييييييييين' },
 ];
 
 const DOWNLOAD_DIR = path.join(__dirname, '../public/audio/examples');
@@ -24,9 +24,9 @@ if (!fs.existsSync(DOWNLOAD_DIR)) {
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function downloadAudio(example) {
-    // using 'ar' language. 
-    // We can also try adding Tashkeel explicitly if needed.
-    const url = `https://translate.googleapis.com/translate_tts?client=gtx&ie=UTF-8&tl=ar&q=${encodeURIComponent(example.arabic)}`;
+    // user requested ar-SA and slow speed (ttsspeed=0.24 is approx 0.75x or slower)
+    // switching client to tw-ob which usually honors ttsspeed better, or stick to gtx
+    const url = `https://translate.googleapis.com/translate_tts?client=tw-ob&ie=UTF-8&tl=ar-SA&ttsspeed=0.24&q=${encodeURIComponent(example.arabic)}`;
     const filePath = path.join(DOWNLOAD_DIR, `${example.id}.mp3`);
 
     console.log(`Downloading ${example.id} with query "${example.arabic}"...`);
