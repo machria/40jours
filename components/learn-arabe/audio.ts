@@ -40,7 +40,12 @@ export const playPronunciation = (input: string) => {
         'مِنْ رَبِّهِمْ': 'mir_rabbihim',
         'مِنْ بَعْدِ': 'mim_badi',
         'أَنْفُسَهُمْ': 'anfusahum',
-        'مِنْ شَرِّ': 'min_sharri'
+        'مِنْ شَرِّ': 'min_sharri',
+
+        // New Al-Madd Examples
+        'بَاب': 'bab',
+        'حُوت': 'hout',
+        'تِين': 'tin'
     };
 
     if (knownLetters.includes(input)) {

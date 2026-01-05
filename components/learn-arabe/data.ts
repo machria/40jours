@@ -105,12 +105,12 @@ export const LESSONS: Lesson[] = [
     {
         id: 'madd',
         title: '5. Al-Madd (Les Prolongations)',
-        description: 'Allonger le temps de la voyelle.',
-        content: 'Il existe trois lettres de prolongation : Alif (ا) pour le son "aa", Waw (و) pour le son "ouu", et Ya (ي) pour le son "ii". Elles ne portent pas de voyelle.',
+        description: 'Allonger le son de la voyelle.',
+        content: 'Le Madd consiste à étirer la voyelle courte "a", "i" ou "ou" pour qu\'elle devienne longue (2 temps). Exemples avec des mots réels :',
         examples: [
-            { arabic: 'بَا', transliteration: 'Baa', meaning: '' },
-            { arabic: 'بُو', transliteration: 'Bouu', meaning: '' },
-            { arabic: 'بِي', transliteration: 'Bii', meaning: '' },
+            { arabic: 'ب*َا*ب', transliteration: 'Bāb', meaning: 'Porte' },
+            { arabic: 'ح*ُو*ت', transliteration: 'Hūt', meaning: 'Baleine' },
+            { arabic: 'ت*ِي*ن', transliteration: 'Tīn', meaning: 'Figue' },
         ]
     },
     {
