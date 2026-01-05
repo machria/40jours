@@ -34,15 +34,20 @@ export default function VocabularyPage() {
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto text-accent mb-2">
                         <Sparkles className="w-8 h-8" />
                     </div>
-                    <h2 className="text-2xl font-bold font-kufi">Le Principe du 80/20</h2>
+                    <h2 className="text-2xl font-bold font-kufi">Le Cœur du Vocabulaire</h2>
                     <div className="text-muted-foreground leading-relaxed space-y-4">
                         <p>
-                            Le Coran contient environ 77 000 mots. Cependant, une minorité de racine se répète constamment.
+                            Le Coran contient environ 82 500 mots. Cependant, une minorité de racine se répète constamment.
                         </p>
                         <div className="bg-muted/50 p-4 rounded-xl text-sm border border-border/50">
                             <p className="font-semibold text-foreground mb-1">Pourquoi cette sélection de ~250 mots ?</p>
                             <p>
-                                Nous avons filtré le vocabulaire pour ne garder que les termes à <strong>très haute fréquence</strong>. Bien que l'objectif de 80% de compréhension nécessite environ 300 mots, cette liste de 250 constitue le "noyau dur" indispensable. Maîtriser ces 250 mots vous donne déjà accès à la majorité du sens global des versets.
+                                Nous avons filtré le vocabulaire pour ne garder que les termes à <strong>très haute fréquence</strong>. Cette liste de 250 constitue le "noyau dur" indispensable.
+                                <br /><br />
+                                <strong>Statistique réelle :</strong> Cette liste couvre exactement <strong>35 046 mots</strong> (occurrences) sur les <strong>82 457</strong> que compte le Coran, soit environ <strong>42.5%</strong> de la totalité du texte !
+                                <br /><br />
+                                <span className="text-primary font-bold">Le pouvoir des variations</span><br />
+                                Ce "noyau dur" est votre fondation. En y ajoutant la maîtrise de la <strong>grammaire</strong> (morphologie), l'utilité de chaque mot est décuplée. Une seule racine (ex: K-T-B) se transforme en dizaines de sens dérivés (Kitab, Kataba, Maktub...). C'est la clé pour débloquer le sens global des versets.
                             </p>
                         </div>
                     </div>
