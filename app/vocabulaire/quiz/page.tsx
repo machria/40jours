@@ -8,7 +8,7 @@ import { saveQuizScore, getBestScore } from './actions';
 import { useSession } from 'next-auth/react';
 import confetti from 'canvas-confetti';
 
-type QuestionType = 'AR_TO_FR' | 'FR_TO_AR' | 'TRANS_TO_AR';
+type QuestionType = 'AR_TO_FR' | 'FR_TO_AR';
 
 interface Question {
     word: VocabularyWord;
@@ -56,7 +56,7 @@ export default function QuizPage() {
         const word = allWords[randIdx];
 
         // 2. Pick random type
-        const types: QuestionType[] = ['AR_TO_FR', 'FR_TO_AR', 'TRANS_TO_AR'];
+        const types: QuestionType[] = ['AR_TO_FR', 'FR_TO_AR'];
         const type = types[Math.floor(Math.random() * types.length)];
 
         // 3. Generate distractors
@@ -159,8 +159,6 @@ export default function QuizPage() {
                 );
             case 'FR_TO_AR':
                 return <span className="font-semibold text-2xl">{q.word.fr}</span>;
-            case 'TRANS_TO_AR':
-                return <span className="font-semibold text-2xl">{q.word.trans}</span>;
         }
     };
 
@@ -175,8 +173,6 @@ export default function QuizPage() {
                         {showTransliteration && <span className="text-xs text-muted-foreground">{option.trans}</span>}
                     </div>
                 );
-            case 'TRANS_TO_AR':
-                return <div className="flex flex-col items-center"><span className="font-kufi text-xl">{option.arabic}</span><span className="text-xs text-muted-foreground">{option.fr}</span></div>;
         }
     }
 
@@ -184,7 +180,6 @@ export default function QuizPage() {
         switch (type) {
             case 'AR_TO_FR': return "Que veut dire ce mot ?";
             case 'FR_TO_AR': return "Quel est ce mot en Arabe ?";
-            case 'TRANS_TO_AR': return "Quelle est l'écriture Arabe ?";
         }
     }
 
