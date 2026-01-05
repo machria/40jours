@@ -9,9 +9,9 @@ const __dirname = path.dirname(__filename);
 
 // We use slightly modified Arabic text to force the TTS to prolong the vowel
 const REPAIR_EXAMPLES = [
-    { id: 'bab', arabic: 'بَآآآآآآآب' },
-    { id: 'hout', arabic: 'حُوووووووووت' },
-    { id: 'tin', arabic: 'تِيييييييييين' },
+    { id: 'bab', arabic: 'بَااب' }, // Double Alif for length
+    // { id: 'hout', arabic: 'حُوووووووووت' },
+    // { id: 'tin', arabic: 'تِيييييييييين' },
 ];
 
 const DOWNLOAD_DIR = path.join(__dirname, '../public/audio/examples');
