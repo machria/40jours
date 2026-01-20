@@ -215,10 +215,16 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                 </div>
 
                                 <div className="text-right mb-6" dir="rtl">
-                                    <TajwidText
-                                        text={ayah.text}
-                                        className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
-                                    />
+                                    <div
+                                        onClick={() => playAudio(ayah.surah, ayah.ayah, false)}
+                                        className="cursor-pointer hover:opacity-80 transition-opacity inline-block"
+                                        title="Écouter ce verset"
+                                    >
+                                        <TajwidText
+                                            text={ayah.text}
+                                            className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
+                                        />
+                                    </div>
                                 </div>
 
                                 <div className="text-left dir-ltr">
