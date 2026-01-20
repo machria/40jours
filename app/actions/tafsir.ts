@@ -6,66 +6,68 @@ import path from 'path';
 interface TafsirEntry {
     surah: number;
     ayah: number;
-    ayah_end?: number; // Optional end of range
     tafsir: string;
 }
 
-async function getTafsirData(): Promise<TafsirEntry[]> {
+const DATA_DIR = path.join(process.cwd(), 'data', 'tafsir');
+
+export async function getLocalTafsir(surah: number, ayah: number): Promise<string | null> {
     try {
-        const filePath = path.join(process.cwd(), 'data', 'tafsir-fr.json');
-        const fileContent = await fs.readFile(filePath, 'utf-8');
-        return JSON.parse(fileContent) as TafsirEntry[];
+        let currentAyah = ayah;
+        // Search backwards until we find a Tafsir file or reach the start of the Surah
+        while (currentAyah > 0) {
+            const filePath = path.join(DATA_DIR, `${surah}_${currentAyah}.json`);
+            try {
+                const content = await fs.readFile(filePath, 'utf-8');
+                const entry = JSON.parse(content);
+                return entry.tafsir;
+            } catch (e) {
+                // File not found, try previous ayah
+                currentAyah--;
+            }
+        }
+        return null;
     } catch (error) {
-        console.error("Error reading tafsir file:", error);
-        return [];
+        return null;
     }
 }
 
-export async function getLocalTafsir(surah: number, ayah: number): Promise<string | null> {
-    const data = await getTafsirData();
-    const entry = data.find(item => {
-        if (item.surah !== surah) return false;
-        const end = item.ayah_end || item.ayah;
-        return ayah >= item.ayah && ayah <= end;
-    });
-    return entry ? entry.tafsir : null;
-}
-
 export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
-    const data = await getTafsirData();
-    const surahEntries = data.filter(item => item.surah === surah);
+    const entries: TafsirEntry[] = [];
+    // Read files sequentially until we hit a missing one (assuming sequential ayahs)
+    // Max ayahs in a surah is 286 (Al-Baqarah)
+    let ayah = 1;
+    const MAX_AYAHS = 300;
 
-    // Expand ranges to ensure every verse has an entry if covered
-    const expanded: TafsirEntry[] = [];
-    surahEntries.forEach(entry => {
-        const end = entry.ayah_end || entry.ayah;
-        for (let a = entry.ayah; a <= end; a++) {
-            expanded.push({
-                surah: entry.surah,
-                ayah: a,
-                tafsir: entry.tafsir
-            });
+    while (ayah <= MAX_AYAHS) {
+        const tafsir = await getLocalTafsir(surah, ayah);
+        if (tafsir) {
+            entries.push({ surah, ayah, tafsir });
+        } else {
+            // Check if we really ended or just missing one? 
+            // Usually sequential. If ayah 1 exists, and 2 misses, maybe just missing.
+            // But we typically stop.
+            // Let's rely on checking file existence more efficiently if possible?
+            // For now, this is okay for a server action.
+
+            // Optimization: Double check if next one exists to be sure it's end of surah vs missing ayah.
+            // If current is missing, and next is missing, likely end.
+            const next = await getLocalTafsir(surah, ayah + 1);
+            if (!next) break;
         }
-    });
-
-    return expanded.sort((a, b) => a.ayah - b.ayah);
+        ayah++;
+    }
+    return entries;
 }
 
 export async function getTafsirBatch(ayahs: { surah: number; ayah: number }[]): Promise<{ surah: number; ayah: number; tafsir: string }[]> {
-    const data = await getTafsirData();
-
-    // Create a robust lookup map that handles ranges
-    const map = new Map<string, string>();
-    data.forEach(item => {
-        const end = item.ayah_end || item.ayah;
-        for (let a = item.ayah; a <= end; a++) {
-            map.set(`${item.surah}:${a}`, item.tafsir);
-        }
-    });
-
-    return ayahs.map(a => ({
-        surah: a.surah,
-        ayah: a.ayah,
-        tafsir: map.get(`${a.surah}:${a.ayah}`) || "Tafsir bientôt disponible (veuillez exécuter le script de récupération)."
+    const results = await Promise.all(ayahs.map(async (a) => {
+        const tafsir = await getLocalTafsir(a.surah, a.ayah);
+        return {
+            surah: a.surah,
+            ayah: a.ayah,
+            tafsir: tafsir || "Tafsir non disponible."
+        };
     }));
+    return results;
 }

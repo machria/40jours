@@ -48,21 +48,16 @@ export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
             const path = (await import('path')).default;
             const fs = (await import('fs')).default;
 
-            const filePath = path.join(process.cwd(), 'data', 'quran-data.json');
+            const filePath = path.join(process.cwd(), 'data', 'quran', 'pages', `${pageNumber}.json`);
 
             // Allow this to throw if file missing, caught by catch block
             const fileContent = fs.readFileSync(filePath, 'utf-8');
-            const allPagesData = JSON.parse(fileContent);
-            const rawPageData = allPagesData[pageNumber];
-
-            if (!rawPageData) {
-                throw new Error(`Page ${pageNumber} not found in local data`);
-            }
+            const pageAyahs = JSON.parse(fileContent);
 
             // Construct JSON to match API response structure expected by processing logic
             json = {
                 data: {
-                    ayahs: rawPageData,
+                    ayahs: pageAyahs,
                     number: pageNumber
                 }
             };

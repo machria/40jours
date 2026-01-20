@@ -25,6 +25,8 @@ interface HadithSearchResult {
 let hadithIndex: HadithIndexItem[] | null = null;
 const INDEX_PATH = path.join(process.cwd(), 'data', 'hadith-search-index.json');
 const DATA_DIR = path.join(process.cwd(), 'data', 'hadith');
+const SPLIT_DIR = path.join(DATA_DIR, 'split');
+const META_PATH = path.join(DATA_DIR, 'hadith-metadata.json');
 
 function getIndex(): HadithIndexItem[] {
     if (hadithIndex) return hadithIndex;
@@ -50,48 +52,46 @@ function normalizeFrench(text: string): string {
 
 // Helper to get full Hadith data including section info
 async function getHadithData(collection: string, number: string) {
-    // We can use a global cache for the simplified JSONs
-    const globalKey = `hadith_v2_${collection}`;
-
-    if (!(global as any)[globalKey]) {
-        const p = path.join(DATA_DIR, `fra-${collection}.json`);
-        if (fs.existsSync(p)) {
-            const data = JSON.parse(fs.readFileSync(p, 'utf-8'));
-            const map = new Map();
-            data.hadiths.forEach((h: any) => {
-                map.set(String(h.hadithnumber), h);
-            });
-
-            // Also store metadata for section lookup
-            const sectionDetails = data.metadata?.section_details || {};
-
-            (global as any)[globalKey] = { map, sectionDetails };
+    if (!global.hadithMetadata) {
+        if (fs.existsSync(META_PATH)) {
+            global.hadithMetadata = JSON.parse(fs.readFileSync(META_PATH, 'utf-8'));
+        } else {
+            return null;
         }
     }
 
-    const cache = (global as any)[globalKey];
-    if (cache) {
-        const hadith = cache.map.get(number);
-        if (!hadith) return null;
+    // 1. Find Section
+    const meta = global.hadithMetadata![collection];
+    if (!meta) return null;
 
-        // Find section ID
-        let sectionId = "";
-        const numericHadithNumber = parseFloat(number); // Handle "12a" potentially? usually hadithnumber is number in JSON
+    const numericHadithNumber = parseFloat(number);
+    let sectionId = "unknown";
 
-        // Iterate through section details to find the range
-        // section_details is { "0": { hadithnumber_first: ..., hadithnumber_last: ... } }
-        for (const [key, details] of Object.entries(cache.sectionDetails as Record<string, any>)) {
-            if (numericHadithNumber >= details.hadithnumber_first && numericHadithNumber <= details.hadithnumber_last) {
-                sectionId = key;
-                break;
-            }
+    for (const [key, details] of Object.entries(meta as Record<string, any>)) {
+        if (numericHadithNumber >= details.hadithnumber_first && numericHadithNumber <= details.hadithnumber_last) {
+            sectionId = key;
+            break;
         }
-
-        return {
-            ...hadith,
-            sectionId
-        };
     }
+
+    // 2. Load Section File
+    // We can cache section files in memory separately if needed, but FS is fast enough for now compared to 15MB parse
+    const sectionPath = path.join(SPLIT_DIR, collection, `section-${sectionId}.json`);
+
+    if (fs.existsSync(sectionPath)) {
+        const raw = fs.readFileSync(sectionPath, 'utf-8');
+        const hadiths = JSON.parse(raw);
+        const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
+
+        if (hadith) {
+            return {
+                ...hadith,
+                sectionId
+            };
+        }
+    }
+
+    // Fallback? No, if not in section, it's missing.
     return null;
 }
 
@@ -126,4 +126,8 @@ export async function searchHadith(query: string) {
     }));
 
     return hydrated.filter(Boolean) as HadithSearchResult[];
+}
+
+declare global {
+    var hadithMetadata: Record<string, any> | undefined;
 }

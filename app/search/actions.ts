@@ -18,7 +18,9 @@ interface SearchIndexItem {
 // Next.js server actions are stateless, but module scope vars might persist in warm lambdas/containers.
 let searchIndex: SearchIndexItem[] | null = null;
 
-const INDEX_PATH = path.join(process.cwd(), 'data', 'search-index.json');
+const QURAN_INDEX_PATH = path.join(process.cwd(), 'data', 'search', 'quran-index.json');
+const TAFSIR_INDEX_PATH = path.join(process.cwd(), 'data', 'search', 'tafsir-index.json');
+const AYAH_LOCATION_PATH = path.join(process.cwd(), 'data', 'ayah-location.json');
 
 function normalizeArabic(text: string): string {
     if (!text) return "";
@@ -37,17 +39,31 @@ function normalizeFrench(text: string): string {
         .replace(/[\u0300-\u036f]/g, "");
 }
 
-function getIndex(): SearchIndexItem[] {
-    if (searchIndex) return searchIndex;
-
+function getQuranIndex(): SearchIndexItem[] {
+    if (global.quranSearchIndex) return global.quranSearchIndex;
     try {
-        if (fs.existsSync(INDEX_PATH)) {
-            const raw = fs.readFileSync(INDEX_PATH, 'utf-8');
-            searchIndex = JSON.parse(raw);
-            return searchIndex!;
+        if (fs.existsSync(QURAN_INDEX_PATH)) {
+            const raw = fs.readFileSync(QURAN_INDEX_PATH, 'utf-8');
+            global.quranSearchIndex = JSON.parse(raw);
+            return global.quranSearchIndex!;
         }
     } catch (e) {
-        console.error("Failed to load search index", e);
+        console.error("Failed to load quran search index", e);
+    }
+    return [];
+}
+
+function getTafsirIndex(): SearchIndexItem[] {
+    if (global.tafsirSearchIndex) return global.tafsirSearchIndex;
+    try {
+        if (fs.existsSync(TAFSIR_INDEX_PATH)) {
+            // Tafsir index might be large, be careful.
+            const raw = fs.readFileSync(TAFSIR_INDEX_PATH, 'utf-8');
+            global.tafsirSearchIndex = JSON.parse(raw);
+            return global.tafsirSearchIndex!;
+        }
+    } catch (e) {
+        console.error("Failed to load tafsir search index", e);
     }
     return [];
 }
@@ -78,7 +94,7 @@ function getQuranData() {
 export async function searchQuran(query: string) {
     if (!query || query.length < 2) return [];
 
-    const index = getIndex();
+    const index = getQuranIndex();
     const isArabic = /[\u0600-\u06FF]/.test(query); // Determine language based on first char usually, or regex match
 
     // Multi-word support: Split query into terms
@@ -113,7 +129,7 @@ export async function searchQuran(query: string) {
 export async function searchTafsir(query: string) {
     if (!query || query.length < 2) return [];
 
-    const index = getIndex();
+    const index = getTafsirIndex();
 
     // Multi-word support
     const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
@@ -139,36 +155,48 @@ export async function searchTafsir(query: string) {
 }
 
 // Helper to get text for specific results (Batch fetch)
+// Reads strictly necessary pages
 export async function getAyahsData(refs: { surah: number, ayah: number }[]) {
-    const data = getQuranData();
+    // 1. Load Ayah Map
+    if (!global.ayahLocationMap) {
+        if (fs.existsSync(AYAH_LOCATION_PATH)) {
+            global.ayahLocationMap = JSON.parse(fs.readFileSync(AYAH_LOCATION_PATH, 'utf-8'));
+        } else {
+            return [];
+        }
+    }
+    const ayahMap = global.ayahLocationMap!;
+
+    // 2. Identify required pages
+    const pagesToLoad = new Set<number>();
+    const neededIds = new Set<string>();
+
+    refs.forEach(r => {
+        const key = `${r.surah}:${r.ayah}`;
+        neededIds.add(key);
+        const page = ayahMap[key];
+        if (page) pagesToLoad.add(page);
+    });
+
+    // 3. Load Pages and Extract Ayahs
     const result = [];
 
-    // Optimized lookup map (Lazy init)
-    // using a global map
-    // Optimized lookup map (Lazy init)
-    // using a global map
-    if (!global.quranLookup) {
-        const lookup = new Map<string, any>();
-        Object.values(data).forEach((page: any) => {
-            page.forEach((a: any) => {
-                lookup.set(`${a.surah}:${a.ayah}`, a);
-            });
-        });
-        global.quranLookup = lookup;
+    for (const page of pagesToLoad) {
+        const pPath = path.join(process.cwd(), 'data', 'quran', 'pages', `${page}.json`);
+        if (fs.existsSync(pPath)) {
+            const pageAyahs = JSON.parse(fs.readFileSync(pPath, 'utf-8'));
+            // pageAyahs is [] of ayahs on that page
+            const matches = pageAyahs.filter((a: any) => neededIds.has(`${a.surah}:${a.ayah}`));
+            result.push(...matches);
+        }
     }
 
-    // Ensure we have a reference to the map
-    const lookup = global.quranLookup!;
-
-    for (const ref of refs) {
-        const key = `${ref.surah}:${ref.ayah}`;
-        const ayah = lookup.get(key);
-        if (ayah) result.push(ayah);
-    }
     return result;
 }
 
 // Augment global type for the cache
 declare global {
-    var quranLookup: Map<string, any> | undefined;
+    var quranSearchIndex: SearchIndexItem[] | undefined;
+    var tafsirSearchIndex: SearchIndexItem[] | undefined;
+    var ayahLocationMap: Record<string, number> | undefined;
 }
