@@ -6,6 +6,8 @@ import { getQuranPage } from '@/lib/quranApi';
 import { TajwidText } from '@/components/TajwidText';
 import SurahViewer from '@/components/reading/SurahViewer';
 import { Metadata } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 // Generate Metadata
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -26,21 +28,46 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 // OR we load the whole `quran-data.json` in memory (only ~5MB) and filter.
 // Server Components can handle 5MB comfortably.
 
-import fs from 'fs';
-import path from 'path';
+const DATA_DIR = path.join(process.cwd(), 'public');
 
 function getSurahData(surahId: number) {
     try {
-        const p = path.join(process.cwd(), 'data', 'quran-data.json');
-        const file = fs.readFileSync(p, 'utf-8');
-        const allPages = JSON.parse(file);
+        // 1. Load Index (ayah-location)
+        const indexPath = path.join(DATA_DIR, 'ayah-location.json');
 
+        let indexData;
+        try {
+            indexData = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+        } catch (e) {
+            console.error("Index not found or invalid", indexPath);
+            return [];
+        }
+
+        // 2. Identify relevant pages
+        const pagesToLoad = new Set<number>();
+        // Iterate all keys "surah:ayah"
+        for (const key in indexData) {
+            if (key.startsWith(`${surahId}:`)) {
+                pagesToLoad.add(indexData[key]);
+            }
+        }
+
+        const sortedPages = Array.from(pagesToLoad).sort((a, b) => a - b);
         let ayahs: any[] = [];
 
-        // Iterate all pages (Object.values)
-        Object.values(allPages).forEach((pageAyahs: any) => {
-            const matches = pageAyahs.filter((a: any) => a.surah === surahId);
-            ayahs.push(...matches);
+        // 3. Load Pages and Filter
+        sortedPages.forEach(page => {
+            try {
+                const pagePath = path.join(DATA_DIR, 'quran', 'pages', `${page}.json`);
+                const pageContent = fs.readFileSync(pagePath, 'utf-8');
+                const pageAyahs = JSON.parse(pageContent);
+
+                // Filter for this surah only (pages may contain multiple surahs)
+                const matches = pageAyahs.filter((a: any) => a.surah === surahId);
+                ayahs.push(...matches);
+            } catch (pageError) {
+                console.error(`Error loading page ${page}:`, pageError);
+            }
         });
 
         // Deduplicate based on ayah number (handle verses spanning pages)
@@ -60,14 +87,14 @@ function getSurahData(surahId: number) {
 
         return uniqueAyahs;
     } catch (e) {
-        console.error(e);
+        console.error("Error in getSurahData:", e);
         return [];
     }
 }
 
 function getPhoneticData(surahId: number) {
     try {
-        const p = path.join(process.cwd(), 'data', 'quran-transliteration.json');
+        const p = path.join(process.cwd(), 'public', 'quran-transliteration.json');
         if (!fs.existsSync(p)) return [];
         const file = fs.readFileSync(p, 'utf-8');
         const data = JSON.parse(file);
@@ -81,7 +108,7 @@ function getPhoneticData(surahId: number) {
 
 function getSurahMeta(surahId: number) {
     try {
-        const p = path.join(process.cwd(), 'data', 'surahs.json');
+        const p = path.join(process.cwd(), 'public', 'surahs.json');
         const file = fs.readFileSync(p, 'utf-8');
         const surahs = JSON.parse(file);
         return surahs.find((s: any) => s.number === surahId);

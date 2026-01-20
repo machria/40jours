@@ -9,7 +9,8 @@ interface TafsirEntry {
     tafsir: string;
 }
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'tafsir');
+// Use public directory for reliable Vercel deployment access
+const DATA_DIR = path.join(process.cwd(), 'public', 'tafsir');
 
 export async function getLocalTafsir(surah: number, ayah: number): Promise<string | null> {
     try {

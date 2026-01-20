@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npx tsx scripts/copy_to_public.ts && next dev",
+    "build": "npx tsx scripts/copy_to_public.ts && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "npx tsx scripts/copy_to_public.ts"
   },
   "dependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",

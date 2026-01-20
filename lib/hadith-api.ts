@@ -1,70 +1,91 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { HadithCollection, CollectionName, Hadith } from '@/types/hadith';
+import { HadithCollection, CollectionName, Hadith, HadithMetadata } from '@/types/hadith';
 import { SECTION_TRANSLATIONS } from './hadith-translations';
 
-const DATA_DIR = path.join(process.cwd(), 'data/hadith');
+// Use public directory for stable access
+const DATA_DIR = path.join(process.cwd(), 'public', 'hadith');
 
-const COLLECTIONS: Record<CollectionName, string> = {
-    bukhari: 'fra-bukhari.json',
-    muslim: 'fra-muslim.json',
-    abudawud: 'fra-abudawud.json',
-    ibnmajah: 'fra-ibnmajah.json',
-    nasai: 'fra-nasai.json',
-    malik: 'fra-malik.json',
-    tirmidhi: 'fra-tirmidhi.json',
-};
+// In-memory cache for metadata to avoid reading file on every request
+const metadataCache: Partial<Record<CollectionName, HadithMetadata>> = {};
 
-// Simple in-memory cache
-const cache: Partial<Record<CollectionName, HadithCollection>> = {};
+const COLLECTIONS_LIST = [
+    { id: 'bukhari', name: 'Sahih al-Bukhari' },
+    { id: 'muslim', name: 'Sahih Muslim' },
+    { id: 'abudawud', name: 'Sunan Abu Dawud' },
+    { id: 'ibnmajah', name: 'Sunan Ibn Majah' },
+    { id: 'nasai', name: 'Sunan an-Nasai' },
+    { id: 'malik', name: 'Muwatta Malik' },
+    { id: 'tirmidhi', name: 'Jami At-Tirmidhi' },
+] as const;
 
-export async function getCollection(name: CollectionName): Promise<HadithCollection> {
-    if (cache[name]) {
-        return cache[name]!;
-    }
-
-    const fileName = COLLECTIONS[name];
-    const filePath = path.join(DATA_DIR, fileName);
-
-    try {
-        const fileContent = await fs.readFile(filePath, 'utf-8');
-        const collection = JSON.parse(fileContent) as HadithCollection;
-
-        cache[name] = collection;
-        return collection;
-    } catch (error) {
-        console.error(`Error loading collection ${name}:`, error);
-        throw new Error(`Failed to load collection ${name}`);
-    }
+export function getCollectionsList() {
+    return COLLECTIONS_LIST;
 }
 
-export async function getCollectionMetadata(name: CollectionName) {
-    const collection = await getCollection(name);
-    return collection.metadata;
+export async function getCollectionMetadata(name: CollectionName): Promise<HadithMetadata> {
+    if (metadataCache[name]) {
+        return metadataCache[name]!;
+    }
+
+    // Load generated metadata (contains section_details)
+    const metadataPath = path.join(DATA_DIR, name, 'metadata.json');
+    let fileMetadata: { section_details: Record<string, any> } = { section_details: {} };
+
+    try {
+        const fileContent = await fs.readFile(metadataPath, 'utf-8');
+        fileMetadata = JSON.parse(fileContent);
+    } catch (e) {
+        console.warn(`Could not load metadata for ${name} at ${metadataPath}`, e);
+        // Fallback or empty if not generated yet
+    }
+
+    const collectionInfo = COLLECTIONS_LIST.find(c => c.id === name);
+    const collectionName = collectionInfo ? collectionInfo.name : name;
+
+    const metadata: HadithMetadata = {
+        name: collectionName,
+        sections: SECTION_TRANSLATIONS[name] || {},
+        section_details: fileMetadata.section_details || {}
+    };
+
+    metadataCache[name] = metadata;
+    return metadata;
 }
 
 export async function getSectionHadiths(name: CollectionName, sectionId: string): Promise<Hadith[]> {
-    const collection = await getCollection(name);
-    const bookId = parseInt(sectionId, 10);
+    const filePath = path.join(DATA_DIR, name, `section-${sectionId}.json`);
 
-    // Some collections use 'book' in reference as string or number, handle safely
-    // Usually it matches the section ID number.
-    return collection.hadiths.filter(h => {
-        // Convert both to numbers for comparison to avoid string/number mismatch
-        const hBook = Number(h.reference.book);
-        const sId = Number(sectionId);
-        return hBook === sId;
-    });
+    try {
+        const fileContent = await fs.readFile(filePath, 'utf-8');
+        const hadiths = JSON.parse(fileContent) as Hadith[];
+        return hadiths;
+    } catch (error) {
+        console.error(`Error loading section ${sectionId} for ${name}:`, error);
+        return [];
+    }
 }
 
-export function getCollectionsList() {
-    return [
-        { id: 'bukhari', name: 'Sahih al-Bukhari' },
-        { id: 'muslim', name: 'Sahih Muslim' },
-        { id: 'abudawud', name: 'Sunan Abu Dawud' },
-        { id: 'ibnmajah', name: 'Sunan Ibn Majah' },
-        { id: 'nasai', name: 'Sunan an-Nasai' },
-        { id: 'malik', name: 'Muwatta Malik' },
-        { id: 'tirmidhi', name: 'Jami At-Tirmidhi' },
-    ];
+// Deprecated or expensive: Load ALL sections
+// Created to satisfy existing signature if needed, but optimally unused.
+export async function getCollection(name: CollectionName): Promise<HadithCollection> {
+    const metadata = await getCollectionMetadata(name);
+
+    // We need to load ALL hadiths. This is heavy.
+    // If we truly need this, we loop through all sections.
+    const allHadiths: Hadith[] = [];
+    const sectionIds = Object.keys(metadata.section_details || {});
+
+    // Sort roughly numerically
+    sectionIds.sort((a, b) => parseInt(a) - parseInt(b));
+
+    for (const id of sectionIds) {
+        const sectionHadiths = await getSectionHadiths(name, id);
+        allHadiths.push(...sectionHadiths);
+    }
+
+    return {
+        metadata,
+        hadiths: allHadiths
+    };
 }

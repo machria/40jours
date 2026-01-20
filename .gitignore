@@ -44,3 +44,11 @@ next-env.d.ts
 
 # SWC
 .swc/
+
+# Generated data
+/public/tafsir/
+/public/quran/
+/public/hadith/
+/public/surahs.json
+/public/ayah-location.json
+/public/quran-transliteration.json
