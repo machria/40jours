@@ -7,6 +7,7 @@ import { CheckCircle, BookOpen, Trophy, Flame, Users } from "lucide-react";
 import Link from "next/link";
 import ActivityChart from "@/components/dashboard/ActivityChart";
 import BadgesList from "@/components/dashboard/BadgesList";
+import { calculateStreak } from "@/lib/streak-utils";
 
 async function getUserData(email: string) {
     await dbConnect();
@@ -26,6 +27,9 @@ export default async function DashboardPage() {
     const completedDaysCount = Object.values(user.dailyProgress || {}).filter(Boolean).length;
     const progressPercent = Math.round((completedDaysCount / 40) * 100);
     const completedJuzCount = user.completedJuzs?.length || 0;
+
+    // Calculate dynamic streak to ensure accuracy
+    const currentStreak = calculateStreak(user.activityHistory || {});
 
     // Convert dailyProgress map to simpler object for checking
     const dailyProgress = user.dailyProgress || {};
@@ -52,7 +56,7 @@ export default async function DashboardPage() {
                     <div className="p-3 bg-primary/10 rounded-full text-primary">
                         <Flame className="w-8 h-8" />
                     </div>
-                    <span className="text-3xl font-bold text-foreground">{user.streak || 0}</span>
+                    <span className="text-3xl font-bold text-foreground">{currentStreak}</span>
                     <span className="text-sm text-muted-foreground">Jours consécutifs</span>
                 </div>
                 <div className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm">

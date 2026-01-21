@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { checkBadges } from "@/lib/gamification";
+import { calculateStreak } from "@/lib/streak-utils";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -20,7 +21,7 @@ export async function GET() {
 
         // Calculate aggregated stats
         const totalDays = 40;
-        // Handle Map or Object depending on hydration, but with Interface change it is Map
+        // Handle Map or Object depending on hydration
         const progressMap = user.dailyProgress instanceof Map ? user.dailyProgress : new Map(Object.entries(user.dailyProgress || {}));
         const completedDays = Array.from(progressMap.values()).filter(Boolean).length;
         const progressPercent = Math.round((completedDays / totalDays) * 100);
@@ -28,10 +29,14 @@ export async function GET() {
         // Convert Map to plain object for JSON
         const dailyProgressObj = Object.fromEntries(progressMap);
 
+        // Calculate dynamic streak based on actual history
+        // This ensures that if a user missed a day, they see 0 immediately
+        const currentStreak = calculateStreak(user.activityHistory);
+
         return NextResponse.json({
             progressPercent,
             completedDays,
-            streak: user.streak || 0,
+            streak: currentStreak,
             dailyProgress: dailyProgressObj,
             userName: user.name
         });
@@ -54,7 +59,6 @@ export async function POST(req: Request) {
 
         await dbConnect();
 
-        // Use findOne first to get the document instance
         const user = await User.findOne({ email: session.user.email });
 
         if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 });
@@ -75,6 +79,9 @@ export async function POST(req: Request) {
             user.activityHistory.set(today, currentCount + 1);
         }
 
+        // Update Streak
+        user.streak = calculateStreak(user.activityHistory);
+
         // Check Badges
         const newBadges = checkBadges(user);
         if (newBadges.length > 0) {
@@ -86,7 +93,7 @@ export async function POST(req: Request) {
 
         await user.save();
 
-        return NextResponse.json({ success: true, newBadges });
+        return NextResponse.json({ success: true, newBadges, newStreak: user.streak });
 
     } catch (error) {
         console.error(error);

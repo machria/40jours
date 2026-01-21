@@ -2,6 +2,7 @@ import { auth } from "@/auth";
 import dbConnect from "@/lib/db";
 import Group from "@/models/Group";
 import User, { IUser } from "@/models/User"; // Ensure IUser is exported from models/User
+import { calculateStreak } from "@/lib/streak-utils";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request, props: { params: Promise<{ id: string }> }) {
@@ -23,7 +24,7 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
         const group = await Group.findById(params.id)
             .populate({
                 path: 'members',
-                select: 'name image dailyProgress completedJuzs streak'
+                select: 'name image dailyProgress completedJuzs streak activityHistory'
             })
             .lean();
         console.log("DetailsAPI: Group found", group ? group.name : "null");
@@ -51,7 +52,7 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
                 name: member.name || "Utilisateur",
                 image: member.image,
                 daysCompleted,
-                streak: member.streak || 0
+                streak: calculateStreak(member.activityHistory)
             };
         });
 
