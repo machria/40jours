@@ -35,6 +35,23 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         translation?: string;
     }>({ isOpen: false, surahNumber: 0, ayahNumber: 0, text: '' });
 
+    // Phonetics State
+    const [phoneticsData, setPhoneticsData] = useState<any[]>([]);
+    const [showPhonetic, setShowPhonetic] = useState(false);
+
+    useEffect(() => {
+        // Load phonetics data once
+        fetch('/quran-transliteration.json')
+            .then(res => res.json())
+            .then(data => setPhoneticsData(data.quran))
+            .catch(err => console.error("Error loading phonetics", err));
+    }, []);
+
+    const getPhonetic = (surah: number, ayah: number) => {
+        if (!phoneticsData.length) return null;
+        return phoneticsData.find(p => p.chapter === surah && p.verse === ayah)?.text;
+    };
+
     const startPage = dayPlan?.startPage || 1;
     // ... (skip unchanged lines if possible, but replace_file_content needs contiguous block. Accessing separate chunks efficiently via multi_replace might be better or just 2 edits).
     // Let's use multi_replace for unrelated chunks if possible, or sequential replace.
@@ -223,6 +240,13 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                             <BookOpen className="w-3 h-3" />
                             Tafsir Complet
                         </Link>
+                        <span className="text-muted-foreground">•</span>
+                        <button
+                            onClick={() => setShowPhonetic(!showPhonetic)}
+                            className={`text-xs font-semibold px-2 py-0.5 rounded border transition-colors ${showPhonetic ? 'bg-primary/10 text-primary border-primary/20' : 'text-muted-foreground border-border hover:text-foreground'}`}
+                        >
+                            Phonétique
+                        </button>
                     </div>
                 </div>
                 <button
@@ -267,6 +291,13 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                                 </span>
                                             </p>
                                         </div>
+
+                                        {/* Phonetic */}
+                                        {showPhonetic && (
+                                            <div className="w-full text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20 text-left dir-ltr">
+                                                {getPhonetic(ayah.surahNumber, ayah.numberInSurah)}
+                                            </div>
+                                        )}
 
                                         {/* French Translation & Actions */}
                                         <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pt-2 dir-ltr text-left">

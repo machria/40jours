@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Shuffle, ChevronLeft, ChevronRight, Copy, Share2 } from 'lucide-react';
+import { ArrowLeft, Shuffle, ChevronLeft, ChevronRight, Copy, Share2, Play, Pause } from 'lucide-react';
 import { TajwidText } from '@/components/TajwidText';
 import { cn } from '@/components/layout/Navigation';
 
@@ -11,6 +11,7 @@ type Hadith = {
     arabic: string;
     french: string;
     source: string;
+    audio?: string;
 };
 
 type HisnCategory = {
@@ -28,6 +29,8 @@ export default function FlashcardsPage() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
     const [isRandom, setIsRandom] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
 
     // Original ordered list to restore if random is toggled off
     const [originalPlaylist, setOriginalPlaylist] = useState<FlashcardItem[]>([]);
@@ -57,6 +60,31 @@ export default function FlashcardsPage() {
         }
         fetchData();
     }, []);
+
+    useEffect(() => {
+        // Stop audio when changing cards or unmounting
+        return () => {
+            if (audioElement) {
+                audioElement.pause();
+                setIsPlaying(false);
+            }
+        };
+    }, [currentIndex, audioElement]);
+
+    const toggleAudio = (url?: string) => {
+        if (!url) return;
+
+        if (isPlaying) {
+            audioElement?.pause();
+            setIsPlaying(false);
+        } else {
+            const audio = new Audio(url);
+            audio.onended = () => setIsPlaying(false);
+            audio.play().catch(e => console.error("Audio play error:", e));
+            setAudioElement(audio);
+            setIsPlaying(true);
+        }
+    };
 
     const toggleRandom = () => {
         if (!isRandom) {
@@ -167,13 +195,31 @@ export default function FlashcardsPage() {
                         </div>
 
                         {/* Actions Bar */}
-                        <div className="p-4 border-t flex justify-end gap-2 bg-muted/10">
-                            <button className="p-2 hover:bg-muted rounded-lg transition-colors text-muted-foreground" title="Copier">
-                                <Copy className="w-5 h-5" />
-                            </button>
-                            <button className="p-2 hover:bg-muted rounded-lg transition-colors text-muted-foreground" title="Partager">
-                                <Share2 className="w-5 h-5" />
-                            </button>
+                        <div className="p-4 border-t flex justify-between items-center bg-muted/10">
+                            <div>
+                                {currentItem.audio && (
+                                    <button
+                                        onClick={() => toggleAudio(currentItem.audio)}
+                                        className={cn(
+                                            "flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all border",
+                                            isPlaying
+                                                ? "bg-primary text-primary-foreground border-primary shadow-sm"
+                                                : "bg-background text-primary border-primary/20 hover:bg-primary/5"
+                                        )}
+                                    >
+                                        {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                                        {isPlaying ? "Pause" : "Écouter"}
+                                    </button>
+                                )}
+                            </div>
+                            <div className="flex gap-2">
+                                <button className="p-2 hover:bg-muted rounded-lg transition-colors text-muted-foreground" title="Copier">
+                                    <Copy className="w-5 h-5" />
+                                </button>
+                                <button className="p-2 hover:bg-muted rounded-lg transition-colors text-muted-foreground" title="Partager">
+                                    <Share2 className="w-5 h-5" />
+                                </button>
+                            </div>
                         </div>
                     </div>
                 )}

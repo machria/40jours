@@ -237,7 +237,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                 </div>
 
                                 {showPhonetic && ayah.phonetic && (
-                                    <div className="mb-4 text-muted-foreground text-sm italic border-l-2 pl-4 border-primary/20">
+                                    <div className="mb-4 text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20">
                                         {ayah.phonetic}
                                     </div>
                                 )}

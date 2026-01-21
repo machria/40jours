@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { TajwidText } from '@/components/TajwidText';
-import { Copy, Share2, Eye, EyeOff, Brain, Sparkles } from 'lucide-react';
+import { Copy, Share2, Eye, EyeOff, Brain, Sparkles, Play, Pause, Volume2 } from 'lucide-react';
 import { cn } from '@/components/layout/Navigation';
 
 type Hadith = {
@@ -11,6 +11,7 @@ type Hadith = {
     french: string;
     source: string;
     repeat: number;
+    audio?: string;
 };
 
 interface HisnInvocationListProps {
@@ -22,6 +23,27 @@ export default function HisnInvocationList({ hadiths, categoryTitle }: HisnInvoc
     const [blurArabic, setBlurArabic] = useState(false);
     const [blurFrench, setBlurFrench] = useState(false);
     const [revealedItems, setRevealedItems] = useState<Record<string, boolean>>({});
+    const [playingId, setPlayingId] = useState<number | null>(null);
+    const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
+
+    const toggleAudio = (id: number, url?: string) => {
+        if (!url) return;
+
+        if (playingId === id) {
+            audioElement?.pause();
+            setPlayingId(null);
+        } else {
+            if (audioElement) {
+                audioElement.pause();
+            }
+            const audio = new Audio(url);
+            audio.onended = () => setPlayingId(null);
+            audio.play().catch(e => console.error("Audio play error:", e));
+            setAudioElement(audio);
+            setPlayingId(id);
+        }
+    };
+
 
     const toggleReveal = (id: string, type: 'arabic' | 'french') => {
         const key = `${id}-${type}`;
@@ -94,6 +116,20 @@ export default function HisnInvocationList({ hadiths, categoryTitle }: HisnInvoc
                                 Invocation {index + 1}/{hadiths.length}
                             </span>
                             <div className="flex gap-2">
+                                {hadith.audio && (
+                                    <button
+                                        onClick={() => toggleAudio(hadith.id, hadith.audio)}
+                                        className={cn(
+                                            "p-1.5 rounded-md transition-all border",
+                                            playingId === hadith.id
+                                                ? "bg-primary text-primary-foreground border-primary"
+                                                : "hover:bg-background border-transparent hover:border-border text-muted-foreground"
+                                        )}
+                                        title={playingId === hadith.id ? "Pause" : "Écouter"}
+                                    >
+                                        {playingId === hadith.id ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                                    </button>
+                                )}
                                 <button className="p-1.5 hover:bg-background rounded-md transition-colors border border-transparent hover:border-border" title="Copier">
                                     <Copy className="w-4 h-4 text-muted-foreground" />
                                 </button>

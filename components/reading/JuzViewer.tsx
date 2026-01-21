@@ -14,6 +14,7 @@ interface Ayah {
     translation: string;
     page: number;
     surahName?: string;
+    phonetic?: string;
 }
 
 interface JuzViewerProps {
@@ -134,6 +135,7 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
     };
 
     const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
+    const [showPhonetic, setShowPhonetic] = useState(false);
 
     return (
         <div className="pb-24">
@@ -161,6 +163,12 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                 </div>
 
                 <div className="flex bg-background rounded-md p-1 shadow-sm w-full sm:w-auto">
+                    <button
+                        onClick={() => setShowPhonetic(!showPhonetic)}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 border ${showPhonetic ? 'bg-accent/10 text-accent border-accent/20' : 'bg-background text-muted-foreground border-transparent hover:text-foreground'}`}
+                    >
+                        Phonétique
+                    </button>
                     <button
                         onClick={toggleAutoPlay}
                         className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 ${isAutoPlaying ? 'bg-amber-600 text-white shadow' : 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400'}`}
@@ -268,6 +276,12 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                                         className="font-kufi text-2xl md:text-3xl leading-[2.2] text-gray-900 dark:text-gray-100"
                                     />
                                 </div>
+
+                                {showPhonetic && ayah.phonetic && (
+                                    <div className="mb-4 text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20 text-right md:text-left dir-ltr">
+                                        {ayah.phonetic}
+                                    </div>
+                                )}
 
                                 <div className="text-left dir-ltr">
                                     <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">

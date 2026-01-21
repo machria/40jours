@@ -11,6 +11,7 @@ type Hadith = {
     french: string;
     source: string;
     repeat: number;
+    audio?: string;
 };
 
 type HisnCategory = {
