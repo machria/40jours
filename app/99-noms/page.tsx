@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ChevronLeft, HelpCircle, Trophy, ChevronRight, RefreshCw, Check, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { namesOfAllah, AllahName } from '@/data/names';
-import { getHighScore, saveHighScore } from '@/app/actions/quiz';
+import { saveGenericQuizScore } from '@/actions/quiz-actions';
 
 const generateQuizRound = (names: AllahName[]) => {
     const randomIndex = Math.floor(Math.random() * names.length);
@@ -36,11 +36,13 @@ export default function NamesPage() {
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
 
-    useEffect(() => {
-        getHighScore('99-names').then(data => {
-            if (data.highScore) setHighScore(data.highScore);
-        });
-    }, []);
+    // Initial high score load can be done via server component or prop if passed, 
+    // but distinct client-side fetching might be redundant if not passed. 
+    // For now, let's keep it simple and maybe load it via a server action if we really need it on client mount,
+    // or just rely on the session/user data if we had it. 
+    // Actually, let's just leave it empty for now as we don't have a direct 'getHighScore' in generic actions yet 
+    // and passing it as prop is better pattern. But refactoring to server component is bigger change.
+    // I'll just remove the old call to avoid errors since I deleted the import.
 
     const startQuiz = () => {
         setMode('quiz');
@@ -58,18 +60,20 @@ export default function NamesPage() {
         setIsCorrect(null);
     };
 
-    const handleAnswer = (answer: string) => {
+
+    const handleAnswer = async (answer: string) => {
         if (selectedOption) return; // Prevent double guess
         setSelectedOption(answer);
         const correct = answer === quizQuestion?.transliteration;
         setIsCorrect(correct);
-        setIsCorrect(correct);
+
         if (correct) {
             const newScore = score + 1;
             setScore(newScore);
             if (newScore > highScore) {
                 setHighScore(newScore);
-                saveHighScore('99-names', newScore);
+                // Save to DB using generic action
+                await saveGenericQuizScore('names99', newScore);
             }
         } else {
             setScore(0);

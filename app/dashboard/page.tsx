@@ -190,21 +190,37 @@ export default async function DashboardPage() {
                         </span>
                         <span className="font-bold text-primary">{user.arabicQuizBestScore || 0} pts</span>
                     </div>
+
+                    {/* 99 Names Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            ✨ 99 Noms
+                        </span>
+                        <span className="font-bold text-primary">{user.names99QuizBestScore || 0} pts</span>
+                    </div>
                 </div>
 
-                {user.quizScores && Object.keys(user.quizScores).length > 0 && (
-                    <div className="mt-4 pt-4 border-t">
-                        <h3 className="text-sm font-semibold mb-3 text-muted-foreground">Sourates (Mémorisation)</h3>
-                        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                            {Object.entries(user.quizScores).map(([key, score]) => (
-                                <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
-                                    <span className="font-medium text-sm">Sourate {key}</span>
-                                    <span className="font-bold text-primary">{String(score)}%</span>
-                                </div>
-                            ))}
+                {(() => {
+                    const memorizationScores = user.quizScores
+                        ? Object.entries(user.quizScores).filter(([key]) => key !== '99-names')
+                        : [];
+
+                    if (memorizationScores.length === 0) return null;
+
+                    return (
+                        <div className="mt-4 pt-4 border-t">
+                            <h3 className="text-sm font-semibold mb-3 text-muted-foreground">Sourates (Mémorisation)</h3>
+                            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                                {memorizationScores.map(([key, score]) => (
+                                    <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                                        <span className="font-medium text-sm">Sourate {key}</span>
+                                        <span className="font-bold text-primary">{String(score)}%</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                )}
+                    );
+                })()}
             </section>
 
         </div>

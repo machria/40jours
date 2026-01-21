@@ -4,7 +4,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Brain, Trophy, AlertTriangle, RefreshCcw, Home, Loader2, Sparkles, HeartCrack, Eye, EyeOff } from 'lucide-react';
 import { VOCABULARY_DATA, VocabularyWord } from '@/data/vocabulary';
-import { saveQuizScore, getBestScore } from './actions';
+import { saveGenericQuizScore } from '@/actions/quiz-actions';
+import { getBestScore } from './actions';
 import { useSession } from 'next-auth/react';
 import confetti from 'canvas-confetti';
 
@@ -142,7 +143,7 @@ export default function QuizPage() {
 
         // Persist
         if (session?.user) {
-            await saveQuizScore(finalScore);
+            await saveGenericQuizScore('vocabulary', finalScore);
         } else {
             localStorage.setItem('vocab_best_score', newBest.toString());
         }

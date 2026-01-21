@@ -5,7 +5,7 @@ import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { revalidatePath } from "next/cache";
 
-type QuizType = 'hisn' | 'arabic' | 'vocabulary';
+type QuizType = 'hisn' | 'arabic' | 'vocabulary' | 'names99';
 
 export async function saveGenericQuizScore(type: QuizType, score: number) {
     try {
@@ -36,6 +36,12 @@ export async function saveGenericQuizScore(type: QuizType, score: number) {
             case 'vocabulary':
                 if (score > (user.vocabularyQuizBestScore || 0)) {
                     user.vocabularyQuizBestScore = score;
+                    updated = true;
+                }
+                break;
+            case 'names99':
+                if (score > (user.names99QuizBestScore || 0)) {
+                    user.names99QuizBestScore = score;
                     updated = true;
                 }
                 break;
