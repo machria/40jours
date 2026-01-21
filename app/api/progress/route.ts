@@ -71,10 +71,14 @@ export async function POST(req: Request) {
         // Mongoose Map set
         user.dailyProgress.set(dayId.toString(), completed);
 
+        // Ensure activityHistory exists (for existing users who don't have this field yet)
+        if (!user.activityHistory) {
+            user.activityHistory = new Map();
+        }
+
         // Update Activity History
         if (completed) {
             const today = new Date().toISOString().split('T')[0];
-            if (!user.activityHistory) user.activityHistory = new Map();
             const currentCount = user.activityHistory.get(today) || 0;
             user.activityHistory.set(today, currentCount + 1);
         }

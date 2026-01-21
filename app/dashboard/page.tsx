@@ -12,7 +12,24 @@ import { calculateStreak } from "@/lib/streak-utils";
 async function getUserData(email: string) {
     await dbConnect();
     const user = await User.findOne({ email }).lean();
-    return JSON.parse(JSON.stringify(user));
+    if (!user) return null;
+
+    // Manually serialize to handle Maps if necessary
+    const serialized = { ...user };
+
+    if (serialized.activityHistory instanceof Map) {
+        serialized.activityHistory = Object.fromEntries(serialized.activityHistory);
+    }
+
+    // Check other Maps just in case (dailyProgress is usually Map in schema)
+    if (serialized.dailyProgress instanceof Map) {
+        serialized.dailyProgress = Object.fromEntries(serialized.dailyProgress);
+    }
+    if (serialized.quizScores instanceof Map) {
+        serialized.quizScores = Object.fromEntries(serialized.quizScores);
+    }
+
+    return JSON.parse(JSON.stringify(serialized));
 }
 
 export default async function DashboardPage() {
