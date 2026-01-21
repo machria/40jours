@@ -17,12 +17,41 @@ interface Question {
     correctAnswer: VocabularyWord;
 }
 
-export default function QuizPage() {
-    // Flatten words for easy access
-    const allWords = useMemo(() => {
-        return VOCABULARY_DATA.flatMap((cat) => cat.words);
-    }, []);
+// Flatten words for easy access
+const allWords = VOCABULARY_DATA.flatMap((cat) => cat.words);
 
+const generateQuestion = (): Question => {
+    // 1. Pick random word
+    const randIdx = Math.floor(Math.random() * allWords.length);
+    const word = allWords[randIdx];
+
+    // 2. Pick random type
+    const types: QuestionType[] = ['AR_TO_FR', 'FR_TO_AR'];
+    const type = types[Math.floor(Math.random() * types.length)];
+
+    // 3. Generate distractors
+    const distractors: VocabularyWord[] = [];
+    while (distractors.length < 3) {
+        const dIdx = Math.floor(Math.random() * allWords.length);
+        const randomWord = allWords[dIdx];
+        // Prevent picking same word or duplicate distractors
+        if (randomWord.arabic !== word.arabic && !distractors.find(w => w.arabic === randomWord.arabic)) {
+            distractors.push(randomWord);
+        }
+    }
+
+    // 4. Shuffle options
+    const options = [...distractors, word].sort(() => Math.random() - 0.5);
+
+    return {
+        word,
+        type,
+        options,
+        correctAnswer: word
+    };
+};
+
+export default function QuizPage() {
     const { data: session } = useSession();
 
     const [isPlaying, setIsPlaying] = useState(false);
@@ -50,36 +79,7 @@ export default function QuizPage() {
         loadScore();
     }, [session]);
 
-    const generateQuestion = (): Question => {
-        // 1. Pick random word
-        const randIdx = Math.floor(Math.random() * allWords.length);
-        const word = allWords[randIdx];
 
-        // 2. Pick random type
-        const types: QuestionType[] = ['AR_TO_FR', 'FR_TO_AR'];
-        const type = types[Math.floor(Math.random() * types.length)];
-
-        // 3. Generate distractors
-        const distractors: VocabularyWord[] = [];
-        while (distractors.length < 3) {
-            const dIdx = Math.floor(Math.random() * allWords.length);
-            const randomWord = allWords[dIdx];
-            // Prevent picking same word or duplicate distractors
-            if (randomWord.arabic !== word.arabic && !distractors.find(w => w.arabic === randomWord.arabic)) {
-                distractors.push(randomWord);
-            }
-        }
-
-        // 4. Shuffle options
-        const options = [...distractors, word].sort(() => Math.random() - 0.5);
-
-        return {
-            word,
-            type,
-            options,
-            correctAnswer: word
-        };
-    };
 
     const startGame = () => {
         setScore(0);

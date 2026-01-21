@@ -8,14 +8,15 @@ const nextConfig: NextConfig = {
   images: {
     domains: [],
   },
+  outputFileTracingExcludes: {
+    '*': [
+      './public/audio/**/*',
+      './public/tafsir/**/*',
+      './public/hadith/**/*'
+    ]
+  },
   experimental: {
-    outputFileTracingExcludes: {
-      '*': [
-        './public/audio/**/*',
-        './public/tafsir/**/*',
-        './public/hadith/**/*'
-      ]
-    }
+    // other experimental options if needed
   } as any
 };
 

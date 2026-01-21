@@ -13,6 +13,7 @@ interface Ayah {
     text: string;
     translation: string;
     page: number;
+    phonetic?: string;
 }
 
 interface SurahViewerProps {
@@ -119,6 +120,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
     };
 
     const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
+    const [showPhonetic, setShowPhonetic] = useState(false);
 
     return (
         <>
@@ -130,6 +132,13 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                     >
                         {isPlayingSequence ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
                         {isPlayingSequence ? "Pause" : "Tout écouter"}
+                    </button>
+
+                    <button
+                        onClick={() => setShowPhonetic(!showPhonetic)}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all border ${showPhonetic ? 'bg-accent/10 text-accent border-accent/20' : 'bg-background text-muted-foreground border-transparent hover:text-foreground'}`}
+                    >
+                        Phonétique
                     </button>
                 </div>
 
@@ -226,6 +235,12 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                         />
                                     </div>
                                 </div>
+
+                                {showPhonetic && ayah.phonetic && (
+                                    <div className="mb-4 text-muted-foreground text-sm italic border-l-2 pl-4 border-primary/20">
+                                        {ayah.phonetic}
+                                    </div>
+                                )}
 
                                 <div className="text-left dir-ltr">
                                     <p className="text-foreground/80 text-lg leading-relaxed">

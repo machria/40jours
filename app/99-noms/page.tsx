@@ -7,6 +7,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { namesOfAllah, AllahName } from '@/data/names';
 import { getHighScore, saveHighScore } from '@/app/actions/quiz';
 
+const generateQuizRound = (names: AllahName[]) => {
+    const randomIndex = Math.floor(Math.random() * names.length);
+    const question = names[randomIndex];
+
+    // Randomize question type
+    const types: ('arabe' | 'transliteration' | 'francais')[] = ['arabe', 'transliteration', 'francais'];
+    const type = types[Math.floor(Math.random() * types.length)];
+
+    // Generate 3 distractors
+    const neighbors = [...names].sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Ensure unique options
+    const options = [question, ...neighbors.filter(n => n.transliteration !== question.transliteration)].slice(0, 4).sort(() => 0.5 - Math.random());
+
+    return { question, type, options };
+};
+
 export default function NamesPage() {
     const [mode, setMode] = useState<'learn' | 'quiz'>('learn');
     const [index, setIndex] = useState(0);
@@ -33,22 +49,13 @@ export default function NamesPage() {
     };
 
     const nextQuestion = () => {
-        const randomIndex = Math.floor(Math.random() * namesOfAllah.length);
-        const question = namesOfAllah[randomIndex];
+        const { question, type, options } = generateQuizRound(namesOfAllah);
         setQuizQuestion(question);
-
-        // Randomize question type
-        const types: ('arabe' | 'transliteration' | 'francais')[] = ['arabe', 'transliteration', 'francais'];
-        setQuestionType(types[Math.floor(Math.random() * types.length)]);
+        setQuestionType(type);
+        setOptions(options);
 
         setSelectedOption(null);
         setIsCorrect(null);
-
-        // Generate 3 distractors
-        const neighbors = [...namesOfAllah].sort(() => 0.5 - Math.random()).slice(0, 3);
-        // Ensure unique options
-        const allOptions = [question, ...neighbors.filter(n => n.transliteration !== question.transliteration)].slice(0, 4);
-        setOptions(allOptions.sort(() => 0.5 - Math.random()));
     };
 
     const handleAnswer = (answer: string) => {

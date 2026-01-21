@@ -28,12 +28,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 // OR we load the whole `quran-data.json` in memory (only ~5MB) and filter.
 // Server Components can handle 5MB comfortably.
 
-const DATA_DIR = path.join(process.cwd(), 'public');
+
 
 function getSurahData(surahId: number) {
     try {
         // 1. Load Index (ayah-location)
-        const indexPath = path.join(DATA_DIR, 'ayah-location.json');
+        const indexPath = path.join(process.cwd(), 'public', 'ayah-location.json');
 
         let indexData;
         try {
@@ -58,7 +58,7 @@ function getSurahData(surahId: number) {
         // 3. Load Pages and Filter
         sortedPages.forEach(page => {
             try {
-                const pagePath = path.join(DATA_DIR, 'quran', 'pages', `${page}.json`);
+                const pagePath = path.join(process.cwd(), 'public', 'quran', 'pages', `${page}.json`);
                 const pageContent = fs.readFileSync(pagePath, 'utf-8');
                 const pageAyahs = JSON.parse(pageContent);
 
