@@ -11,8 +11,7 @@ const nextConfig: NextConfig = {
   outputFileTracingExcludes: {
     '*': [
       './public/audio/**/*',
-      './public/tafsir/**/*',
-      './public/hadith/**/*'
+      './public/tafsir/**/*'
     ]
   },
   experimental: {
