@@ -3,6 +3,7 @@ import { Inter, Reem_Kufi } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";
 import Navigation from "@/components/layout/Navigation";
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 
@@ -40,6 +41,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Navigation />
+            <PWAInstallPrompt />
             <div className="md:pl-64 pb-16 md:pb-0">
               {children}
             </div>

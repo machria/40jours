@@ -5,6 +5,8 @@ import { Play, BookOpen, Pause, ArrowLeft, ArrowRight, Clock } from 'lucide-reac
 import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
+import { useQuranAudio } from '@/hooks/useQuranAudio';
+import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 
 interface Ayah {
     id: number;
@@ -32,103 +34,72 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
         translation?: string;
     }>({ isOpen: false, surahNumber: 0, ayahNumber: 0, text: '' });
 
-    // Audio State
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [playingAyah, setPlayingAyah] = useState<string | null>(null); // "surah:ayah"
-    const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+    // Audio State - Unified via Hook
+    // Prepare playlist
+    // We create a stable playlist from the ayahs prop
+    // Note: ayahs prop changes when juzId changes, which is what we want.
+    const playlist = ayahs.map(a => ({
+        surah: a.surahNumber,
+        ayah: a.numberInSurah,
+        url: `/audio/${a.surahNumber.toString().padStart(3, '0')}${a.numberInSurah.toString().padStart(3, '0')}.mp3`,
+        metadata: { surahName: `Sourate ${a.surahNumber}`, text: a.text }
+    }));
 
-    // Auto-scroll to playing verse
-    useEffect(() => {
-        if (playingAyah) {
-            const [s, a] = playingAyah.split(':');
-            const element = document.getElementById(`ayah-${a}`);
+    const {
+        isPlaying,
+        currentAyah,
+        play,
+        pause,
+        togglePlay,
+        repeatMode,
+        toggleRepeat
+    } = useQuranAudio({
+        playlist,
+        onAyahChange: (ayah) => {
+            // Auto-scroll
+            const element = document.getElementById(`ayah-${ayah.surah}-${ayah.ayah}`);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
-    }, [playingAyah]);
+    });
+
+    // Scroll Persistence
+    useScrollPersistence({
+        storageKey: `juz_scroll_${juzId}`,
+        selector: '[id^="ayah-"]',
+        enabled: true
+    });
+
+    const isPlayingSequence = isPlaying && !!currentAyah; // Simplification
+
+    // Helper to check if specific ayah is playing
+    const isAyahPlaying = (surah: number, ayah: number) => {
+        return currentAyah?.surah === surah && currentAyah?.ayah === ayah;
+    };
+
+    const playAudio = (surah: number, ayah: number) => {
+        if (isAyahPlaying(surah, ayah) && isPlaying) {
+            pause();
+        } else {
+            play({ surah, ayah, url: '' });
+        }
+    };
+
+    const toggleAutoPlay = () => {
+        if (isPlaying) {
+            pause();
+        } else {
+            // Resume or Start from beginning
+            togglePlay();
+        }
+    };
 
     // Save last read juz
     useEffect(() => {
         localStorage.setItem('lastJuz', juzId.toString());
     }, [juzId]);
 
-    // Handle audio playback
-    useEffect(() => {
-        if (!playingAyah) return;
-
-        const [surah, ayah] = playingAyah.split(':').map(Number);
-        const surahPad = surah.toString().padStart(3, '0');
-        const ayahPad = ayah.toString().padStart(3, '0');
-        const url = `/audio/${surahPad}${ayahPad}.mp3`;
-
-        if (audioRef.current) {
-            audioRef.current.pause();
-        }
-
-        const audio = new Audio(url);
-        audioRef.current = audio;
-
-        audio.play().catch(e => {
-            console.error("Audio error", e);
-            setPlayingAyah(null);
-            setIsAutoPlaying(false);
-        });
-
-        audio.onended = () => {
-            if (isAutoPlaying) {
-                const currentIndex = ayahs.findIndex(item => item.surahNumber === surah && item.numberInSurah === ayah);
-                if (currentIndex !== -1 && currentIndex < ayahs.length - 1) {
-                    const next = ayahs[currentIndex + 1];
-                    setPlayingAyah(`${next.surahNumber}:${next.numberInSurah}`);
-                } else {
-                    setPlayingAyah(null);
-                    setIsAutoPlaying(false);
-                }
-            } else {
-                setPlayingAyah(null);
-            }
-        };
-
-        return () => {
-            audio.pause();
-        };
-    }, [playingAyah, isAutoPlaying, ayahs]);
-
-    const playAudio = (surah: number, ayah: number) => {
-        const key = `${surah}:${ayah}`;
-        if (playingAyah === key) {
-            setPlayingAyah(null);
-            setIsAutoPlaying(false);
-        } else {
-            setPlayingAyah(key);
-            // If user manually clicks, we don't necessarily enable auto-play unless they want to?
-            // Usually manual click = play single. explicit "Play All" = auto.
-            // Let's keep isAutoPlaying as is (false by default) unless manually enabled via Play All button.
-            // But if they are ALREADY auto-playing and click another verse, maybe they want to continue from there?
-            // For now, manual click stops auto-play to be safe, unless we decide otherwise.
-            setIsAutoPlaying(false);
-        }
-    };
-
-    const toggleAutoPlay = () => {
-        if (isAutoPlaying) {
-            setIsAutoPlaying(false);
-            setPlayingAyah(null);
-        } else {
-            setIsAutoPlaying(true);
-            if (!playingAyah) {
-                // Start from first ayah
-                if (ayahs.length > 0) {
-                    setPlayingAyah(`${ayahs[0].surahNumber}:${ayahs[0].numberInSurah}`);
-                }
-            }
-            // If already playing, just setting isAutoPlaying to true will be picked up by the Effect?
-            // No, the effect depends on `isAutoPlaying`, so it will re-run and restart the audio 
-            // which handles the "continue after this one ends" logic. 
-            // It might cause a slight skip but ensures the closure has the new `isAutoPlaying` value.
-        }
-    };
 
     const openTafsir = (surah: number, ayah: number, text: string, translation: string) => {
         setTafsirState({ isOpen: true, surahNumber: surah, ayahNumber: ayah, text, translation });
@@ -169,12 +140,21 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                     >
                         Phonétique
                     </button>
+
+                    <button
+                        onClick={toggleRepeat}
+                        className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-all mr-2 border ${repeatMode !== 'off' ? 'bg-amber-100 text-amber-700 border-amber-200' : 'bg-background text-muted-foreground border-transparent'}`}
+                        title="Mode Loop"
+                    >
+                        {repeatMode === 'single' ? '1x' : (repeatMode === 'all' ? 'Tout' : 'Loop')}
+                    </button>
+
                     <button
                         onClick={toggleAutoPlay}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 ${isAutoPlaying ? 'bg-amber-600 text-white shadow' : 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400'}`}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 ${isPlaying ? 'bg-amber-600 text-white shadow' : 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400'}`}
                     >
-                        {isAutoPlaying ? <Pause size={16} /> : <Play size={16} />}
-                        {isAutoPlaying ? 'Pause Juz' : 'Écouter Juz'}
+                        {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+                        {isPlaying ? 'Pause' : 'Tout Écouter'}
                     </button>
 
                     <button
@@ -218,7 +198,7 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                                         </div>
                                     )}
                                     <span
-                                        className={`cursor-pointer hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded transition-colors ${playingAyah === `${ayah.surahNumber}:${ayah.numberInSurah}` ? 'bg-emerald-100 dark:bg-emerald-900/40' : ''}`}
+                                        className={`cursor-pointer hover:bg-emerald-50 dark:hover:bg-emerald-900/20 rounded transition-colors ${isAyahPlaying(ayah.surahNumber, ayah.numberInSurah) ? 'bg-emerald-100 dark:bg-emerald-900/40' : ''}`}
                                         onClick={() => {
                                             playAudio(ayah.surahNumber, ayah.numberInSurah);
                                         }}
@@ -236,12 +216,12 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
             ) : (
                 <div className="space-y-6">
                     {ayahs.map((ayah) => {
-                        const isPlaying = playingAyah === `${ayah.surahNumber}:${ayah.numberInSurah}`;
+                        const isPlaying = isAyahPlaying(ayah.surahNumber, ayah.numberInSurah);
 
                         return (
                             <div
                                 key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
-                                id={`ayah-${ayah.numberInSurah}`}
+                                id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
                                 className={`scroll-mt-24 bg-white dark:bg-gray-800 border rounded-xl p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-900/10' : ''}`}
                             >
                                 <div className="flex items-center justify-between mb-4 border-b pb-4 border-gray-100 dark:border-gray-700">

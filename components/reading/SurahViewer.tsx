@@ -5,6 +5,7 @@ import { Play, BookOpen, Pause } from 'lucide-react';
 import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
+import { useQuranAudio } from '@/hooks/useQuranAudio';
 
 interface Ayah {
     id: number;
@@ -31,96 +32,79 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
         translation?: string;
     }>({ isOpen: false, surahNumber: 0, ayahNumber: 0, text: '' });
 
-    // Audio State
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [playingAyah, setPlayingAyah] = useState<string | null>(null); // "surah:ayah"
-    const [isPlayingSequence, setIsPlayingSequence] = useState(false);
+    // Tafsir State - Keep as is
 
-    const scrollToAyah = (ayahNumber: number) => {
-        const element = document.getElementById(`ayah-${ayahNumber}`);
+    // View State (Moved up to avoid TDZ)
+    const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
+    const [showPhonetic, setShowPhonetic] = useState(false);
+
+    // Helper functions
+    const scrollToAyah = (ayahNum: number) => {
+        const element = document.getElementById(`ayah-${ayahNum}`);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     };
 
-    const playAudio = (surah: number, ayah: number, autoContinue = false) => {
-        const key = `${surah}:${ayah}`;
+    // Audio State
+    // Prepare playlist
+    const playlist = ayahs.map(a => ({
+        surah: a.surah,
+        ayah: a.ayah,
+        url: `/audio/${a.surah.toString().padStart(3, '0')}${a.ayah.toString().padStart(3, '0')}.mp3`,
+        metadata: { surahName: `Sourate ${a.surah}`, text: a.text }
+    }));
 
-        // If clicking the same ayah that is playing
-        if (playingAyah === key && audioRef.current && !autoContinue) {
-            audioRef.current.pause();
-            setPlayingAyah(null);
-            setIsPlayingSequence(false);
-            return;
-        }
-
-        if (audioRef.current) {
-            audioRef.current.pause();
-        }
-
-        const surahPad = surah.toString().padStart(3, '0');
-        const ayahPad = ayah.toString().padStart(3, '0');
-        const url = `/audio/${surahPad}${ayahPad}.mp3`;
-
-        const audio = new Audio(url);
-        audioRef.current = audio;
-
-        // Auto-scroll to the playing ayah
-        if (viewMode === 'list') {
-            scrollToAyah(ayah);
-        }
-
-        audio.play().catch(e => {
-            console.error("Audio error", e);
-            // If auto-playing and fail (e.g. missing file), try next? 
-            // Better to stop to avoid infinite loop of errors
-            setPlayingAyah(null);
-            setIsPlayingSequence(false);
-        });
-
-        setPlayingAyah(key);
-
-        audio.onended = () => {
-            if (autoContinue) {
-                // Find next ayah index
-                const currentIndex = ayahs.findIndex(a => a.surah === surah && a.ayah === ayah);
-                if (currentIndex !== -1 && currentIndex < ayahs.length - 1) {
-                    const nextAyah = ayahs[currentIndex + 1];
-                    playAudio(nextAyah.surah, nextAyah.ayah, true);
-                } else {
-                    // End of surah
-                    setPlayingAyah(null);
-                    setIsPlayingSequence(false);
-                }
-            } else {
-                setPlayingAyah(null);
-                setIsPlayingSequence(false);
+    // Audio Hook
+    const {
+        isPlaying,
+        currentAyah,
+        repeatMode,
+        play,
+        pause,
+        togglePlay,
+        toggleRepeat
+    } = useQuranAudio({
+        playlist,
+        onAyahChange: (ayah) => {
+            // Auto-scroll
+            if (viewMode === 'list') {
+                scrollToAyah(ayah.ayah);
             }
-        };
+        }
+    });
+
+    const isPlayingSequence = isPlaying && !!currentAyah;
+
+    // Helper to check if specific ayah is playing
+    const isAyahPlaying = (surah: number, ayah: number) => {
+        return currentAyah?.surah === surah && currentAyah?.ayah === ayah;
+    };
+
+    const handlePlayClick = (surah: number, ayah: number) => {
+        if (isAyahPlaying(surah, ayah) && isPlaying) {
+            pause();
+        } else {
+            // When clicking a specific ayah, we want to play it.
+            // If it's already the current one but paused, resume?
+            // "play" from hook handles "play this specific item".
+            play({ surah, ayah, url: '' });
+        }
     };
 
     const togglePlaySequence = () => {
-        if (isPlayingSequence) {
-            // Stop
-            if (audioRef.current) audioRef.current.pause();
-            setPlayingAyah(null);
-            setIsPlayingSequence(false);
+        if (isPlaying) {
+            pause();
         } else {
-            // Start from beginning or current?
-            // Start from first ayah
-            if (ayahs.length > 0) {
-                setIsPlayingSequence(true);
-                playAudio(ayahs[0].surah, ayahs[0].ayah, true);
-            }
+            // Resume or Start from beginning
+            togglePlay();
         }
     };
+
 
     const openTafsir = (surah: number, ayah: number, text: string, translation: string) => {
         setTafsirState({ isOpen: true, surahNumber: surah, ayahNumber: ayah, text, translation });
     };
-
-    const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
-    const [showPhonetic, setShowPhonetic] = useState(false);
 
     return (
         <>
@@ -128,10 +112,22 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                 <div className="flex gap-2 w-full sm:w-auto">
                     <button
                         onClick={togglePlaySequence}
-                        className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 rounded-md text-sm font-bold transition-all shadow-sm ${isPlayingSequence ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
+                        className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 rounded-md text-sm font-bold transition-all shadow-sm ${isPlaying ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
                     >
-                        {isPlayingSequence ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
-                        {isPlayingSequence ? "Pause" : "Tout écouter"}
+                        {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
+                        {isPlaying ? "Pause" : "Tout écouter"}
+                    </button>
+
+                    <button
+                        onClick={toggleRepeat}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all border ${repeatMode !== 'off' ? 'bg-accent/10 text-accent border-accent/20' : 'bg-background text-muted-foreground border-transparent hover:text-foreground'}`}
+                        title="Mode de répétition : Verset (1x) ou Tout (Loop)"
+                    >
+                        <span className="flex items-center gap-1">
+                            {repeatMode === 'single' && '1x'}
+                            {repeatMode === 'all' && 'Tout'}
+                            {repeatMode === 'off' && 'Loop'}
+                        </span>
                     </button>
 
                     <button
@@ -173,10 +169,8 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                     <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                         {ayahs.map((ayah, i) => (
                             <span key={ayah.id}
-                                className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${playingAyah === `${ayah.surah}:${ayah.ayah}` ? 'bg-primary/20 text-primary' : ''}`}
-                                onClick={() => {
-                                    playAudio(ayah.surah, ayah.ayah, false);
-                                }}
+                                className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${isAyahPlaying(ayah.surah, ayah.ayah) ? 'bg-primary/20 text-primary' : ''}`}
+                                onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
                             >
                                 <TajwidText text={ayah.text} className="inline" />
                                 <span className="inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle mx-1 bg-background select-none">
@@ -189,28 +183,28 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
             ) : (
                 <div className="space-y-6">
                     {ayahs.map((ayah) => {
-                        const isPlaying = playingAyah === `${ayah.surah}:${ayah.ayah}`;
+                        const playing = isAyahPlaying(ayah.surah, ayah.ayah);
 
                         return (
                             <div
                                 key={ayah.id}
                                 id={`ayah-${ayah.ayah}`}
-                                className={`scroll-mt-32 bg-card border rounded-xl p-6 transition-all duration-500 ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
+                                className={`scroll-mt-32 bg-card border rounded-xl p-6 transition-all duration-500 ${playing ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
                             >
                                 <div className="flex items-center justify-between mb-4 border-b pb-4 border-border/50">
-                                    <span className={`text-xs font-mono px-2 py-1 rounded transition-colors ${isPlaying ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
+                                    <span className={`text-xs font-mono px-2 py-1 rounded transition-colors ${playing ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
                                         {ayah.surah}:{ayah.ayah}
                                     </span>
                                     <div className="flex gap-2">
                                         <button
-                                            onClick={() => playAudio(ayah.surah, ayah.ayah, false)}
-                                            className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying
+                                            onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
+                                            className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${playing
                                                 ? 'text-primary bg-primary/10'
                                                 : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'
                                                 }`}
                                         >
-                                            {isPlaying ? <Pause className="w-3 h-3 fill-current" /> : <Play className="w-3 h-3 fill-current" />}
-                                            {isPlaying ? 'Pause' : 'Écouter'}
+                                            {playing ? <Pause className="w-3 h-3 fill-current" /> : <Play className="w-3 h-3 fill-current" />}
+                                            {playing ? 'Pause' : 'Écouter'}
                                         </button>
 
                                         <button
@@ -225,7 +219,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
 
                                 <div className="text-right mb-6" dir="rtl">
                                     <div
-                                        onClick={() => playAudio(ayah.surah, ayah.ayah, false)}
+                                        onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
                                         className="cursor-pointer hover:opacity-80 transition-opacity inline-block"
                                         title="Écouter ce verset"
                                     >
@@ -264,3 +258,4 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
         </>
     );
 }
+

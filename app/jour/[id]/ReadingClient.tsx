@@ -1,15 +1,17 @@
 'use client';
 
 import { plan40jours } from '@/data/plan40jours';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search } from 'lucide-react';
+import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search, Repeat, Repeat1 } from 'lucide-react';
 import { useQueries } from '@tanstack/react-query';
 import { useSession, signIn } from 'next-auth/react';
 import { getQuranPage, QuranPageData } from '@/lib/quranApi';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { TajwidText } from '@/components/TajwidText';
 import confetti from 'canvas-confetti';
+import { useQuranAudio } from '@/hooks/useQuranAudio';
+import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 
 interface ReadingClientProps {
     dayId: number;
@@ -17,14 +19,6 @@ interface ReadingClientProps {
 
 export default function ReadingClient({ dayId }: ReadingClientProps) {
     const dayPlan = plan40jours.find(d => d.jour === dayId);
-
-    const [isPlaying, setIsPlaying] = useState(false);
-
-    // Audio State handled via Refs for mutable operations
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [currentAudioIndex, setCurrentAudioIndex] = useState<number>(-1);
-    const [audioQueue, setAudioQueue] = useState<string[]>([]);
-    const [isCompleted, setIsCompleted] = useState(false);
 
     // Tafsir State
     const [tafsirState, setTafsirState] = useState<{
@@ -53,94 +47,61 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
     };
 
     const startPage = dayPlan?.startPage || 1;
-    // ... (skip unchanged lines if possible, but replace_file_content needs contiguous block. Accessing separate chunks efficiently via multi_replace might be better or just 2 edits).
-    // Let's use multi_replace for unrelated chunks if possible, or sequential replace.
-    // The file is small enough for 3 disjoint edits via multi_replace.
-
     const endPage = dayPlan?.endPage || 1;
     const pagesToFetch = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
 
-    // Progressive Loading: Queries run in parallel but can render independently
+    // Progressive Loading
     const results = useQueries({
         queries: pagesToFetch.map(page => ({
             queryKey: ['quran-page', page],
             queryFn: () => getQuranPage(page),
             staleTime: Infinity,
+            keepPreviousData: true
         }))
     });
 
     const allPagesLoaded = results.every(r => r.isSuccess);
 
-    // Build Queue once all data is available
-    useEffect(() => {
-        // We only build audio queue from successfully loaded pages to ensure continuity
-        const urls: string[] = [];
+    // Build Playlist
+    const playlist = useMemo(() => {
+        const list: any[] = [];
         results.forEach(res => {
             if (res.data) {
                 res.data.ayahs.forEach(ayah => {
-                    const surahPad = ayah.surahNumber.toString().padStart(3, '0');
-                    const ayahPad = ayah.numberInSurah.toString().padStart(3, '0');
-                    // Use local audio files
-                    urls.push(`/audio/${surahPad}${ayahPad}.mp3`);
+                    list.push({
+                        surah: ayah.surahNumber,
+                        ayah: ayah.numberInSurah,
+                        url: `/audio/${ayah.surahNumber.toString().padStart(3, '0')}${ayah.numberInSurah.toString().padStart(3, '0')}.mp3`,
+                        metadata: {
+                            surahName: `Sourate ${ayah.surahNumber}`,
+                            text: ayah.text
+                        }
+                    });
                 });
             }
         });
-        if (urls.length !== audioQueue.length) {
-            setAudioQueue(urls);
-        }
-    }, [results]);
+        return list;
+    }, [results]); // Dependency on results array structure
 
-    // Handle Playback Effect
-    useEffect(() => {
-        if (isPlaying && audioQueue.length > 0) {
-            if (!audioRef.current) {
-                const startIdx = currentAudioIndex === -1 ? 0 : currentAudioIndex;
-                playAudioAtIndex(startIdx);
-            } else {
-                audioRef.current.play().catch(e => console.error(e));
-            }
-        } else if (!isPlaying && audioRef.current) {
-            audioRef.current.pause();
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isPlaying, audioQueue]);
+    // Audio Hook
+    const {
+        isPlaying,
+        currentAyah,
+        play,
+        pause,
+        togglePlay,
+        toggleRepeat,
+        repeatMode
+    } = useQuranAudio({ playlist });
 
-    const playAudioAtIndex = (index: number, autoContinue = true) => {
-        if (index >= audioQueue.length) {
-            setIsPlaying(false);
-            setCurrentAudioIndex(-1);
-            audioRef.current = null;
-            return;
-        }
+    // Scroll Persistence
+    useScrollPersistence({
+        storageKey: `day_scroll_${dayId}`,
+        selector: '[id^="ayah-"]',
+        enabled: allPagesLoaded // Only start tracking/restoring when full layout is ready to avoid jumping
+    });
 
-        if (audioRef.current) {
-            audioRef.current.pause();
-            audioRef.current = null;
-        }
-
-        const audio = new Audio(audioQueue[index]);
-        audioRef.current = audio;
-        setCurrentAudioIndex(index);
-        setIsPlaying(true); // Ensure play state is active visually
-
-        audio.play().catch(e => console.error("Audio play error", e));
-        audio.onended = () => {
-            if (autoContinue) {
-                playAudioAtIndex(index + 1);
-            } else {
-                setIsPlaying(false);
-            }
-        };
-    };
-
-    const togglePlay = () => {
-        if (!allPagesLoaded && audioQueue.length === 0) {
-            alert("Veuillez attendre le chargement de l'audio.");
-            return;
-        }
-        setIsPlaying(!isPlaying);
-    };
-
+    const [isCompleted, setIsCompleted] = useState(false);
     const { data: session } = useSession();
 
     const handleCompletion = async () => {
@@ -180,22 +141,24 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         successSound.play().catch(() => { });
     };
 
-    // Cleanup on unmount
-    useEffect(() => {
-        return () => {
-            if (audioRef.current) {
-                audioRef.current.pause();
-                audioRef.current = null;
-            }
-        };
-    }, []);
-
     if (!dayPlan) {
         return <div className="p-8 text-center">Plan non trouvé pour le jour {dayId}</div>;
     }
 
     const openTafsir = (surah: number, ayah: number, text: string, translation: string) => {
         setTafsirState({ isOpen: true, surahNumber: surah, ayahNumber: ayah, text, translation });
+    };
+
+    const isAyahPlaying = (surah: number, ayah: number) => {
+        return currentAyah?.surah === surah && currentAyah?.ayah === ayah;
+    };
+
+    const handlePlayAyah = (surah: number, ayah: number) => {
+        if (isAyahPlaying(surah, ayah) && isPlaying) {
+            pause();
+        } else {
+            play({ surah, ayah, url: '' }); // Hook finds the URL from playlist
+        }
     };
 
     const SkeletonPage = ({ idx }: { idx: number }) => (
@@ -281,7 +244,11 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
 
                             <div className="divide-y text-right">
                                 {page.ayahs.map((ayah) => (
-                                    <div key={`${ayah.surahNumber}:${ayah.numberInSurah}`} className="group p-4 hover:bg-muted/5 transition-colors grid gap-4">
+                                    <div
+                                        key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
+                                        id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
+                                        className="group p-4 hover:bg-muted/5 transition-colors grid gap-4"
+                                    >
                                         {/* Arabic */}
                                         <div className="w-full">
                                             <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
@@ -307,14 +274,13 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
 
                                             <div className="self-end md:self-start flex items-center gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
                                                 <button
-                                                    onClick={() => {
-                                                        const idx = audioQueue.findIndex(u => u.includes(`${ayah.surahNumber.toString().padStart(3, '0')}${ayah.numberInSurah.toString().padStart(3, '0')}.mp3`));
-                                                        if (idx !== -1) playAudioAtIndex(idx, false);
-                                                        else alert("Audio non disponible");
-                                                    }}
-                                                    className="flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5 px-3 py-1.5 rounded-full"
+                                                    onClick={() => handlePlayAyah(ayah.surahNumber, ayah.numberInSurah)}
+                                                    className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isAyahPlaying(ayah.surahNumber, ayah.numberInSurah)
+                                                        ? 'text-primary bg-primary/10'
+                                                        : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'
+                                                        }`}
                                                 >
-                                                    <Play className="w-3 h-3" />
+                                                    {isAyahPlaying(ayah.surahNumber, ayah.numberInSurah) ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
                                                     Écouter
                                                 </button>
 
@@ -379,25 +345,35 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
             </main>
 
             {/* Audio Footer */}
-            {/* Audio Footer */}
             <div className="fixed bottom-0 left-0 right-0 bg-card/95 backdrop-blur border-t z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
                 <div className="container mx-auto p-3 md:p-4 flex items-center justify-between md:rounded-none">
                     <div className="flex items-center gap-4 w-full justify-center md:justify-start">
                         <button
                             onClick={togglePlay}
-                            className={`size-12 rounded-full flex items-center justify-center transition-transform shadow-md ${!allPagesLoaded ? 'bg-muted text-muted-foreground cursor-not-allowed' : 'bg-primary text-primary-foreground hover:scale-105'}`}
+                            className={`size-12 rounded-full flex items-center justify-center transition-transform shadow-md ${!allPagesLoaded && playlist.length === 0 ? 'bg-muted text-muted-foreground cursor-not-allowed' : 'bg-primary text-primary-foreground hover:scale-105'}`}
                         >
-                            {!allPagesLoaded ?
+                            {(!allPagesLoaded && playlist.length === 0) ?
                                 <div className="w-5 h-5 border-2 border-white/50 border-t-white rounded-full animate-spin" /> :
                                 (isPlaying ? <Pause className="fill-current w-5 h-5" /> : <Play className="fill-current ml-1 w-5 h-5" />)
                             }
                         </button>
-                        <div className="block">
-                            <p className="text-sm font-semibold">Mishary Rashid</p>
-                            <p className="text-xs text-muted-foreground">
-                                {allPagesLoaded ? (isPlaying ? "Lecture en cours..." : "Lecture continue") : "Chargement audio..."}
+
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold truncate">
+                                {currentAyah ? `Sourate ${currentAyah.surah} : Verset ${currentAyah.ayah}` : 'Mishary Rashid'}
+                            </p>
+                            <p className="text-xs text-muted-foreground truncate">
+                                {isPlaying ? "Lecture en cours..." : "Lecture audio"}
                             </p>
                         </div>
+
+                        <button
+                            onClick={toggleRepeat}
+                            className={`p-2 rounded-full transition-all ${repeatMode !== 'off' ? 'bg-accent/20 text-accent' : 'text-muted-foreground hover:bg-muted'}`}
+                            title="Répéter (Verset / Tout / Off)"
+                        >
+                            {repeatMode === 'single' ? <Repeat1 className="w-5 h-5" /> : <Repeat className="w-5 h-5" />}
+                        </button>
                     </div>
                 </div>
             </div>
