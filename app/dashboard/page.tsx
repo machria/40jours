@@ -15,7 +15,7 @@ async function getUserData(email: string) {
     if (!user) return null;
 
     // Manually serialize to handle Maps if necessary
-    const serialized = { ...user };
+    const serialized: any = { ...user };
 
     if (serialized.activityHistory instanceof Map) {
         serialized.activityHistory = Object.fromEntries(serialized.activityHistory);
