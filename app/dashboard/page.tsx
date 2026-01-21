@@ -160,23 +160,50 @@ export default async function DashboardPage() {
                 <BadgesList unlockedBadges={user.badges || []} />
             </div>
 
-            {/* Quiz Scores (Placeholder or real data if available) */}
+            {/* Quiz Scores */}
             <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
                 <h2 className="text-xl font-bold font-kufi flex items-center gap-2">
                     <span className="text-yellow-600">🏆</span>
                     Meilleurs Scores (Quiz)
                 </h2>
-                {user.quizScores && Object.keys(user.quizScores).length > 0 ? (
-                    <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                        {Object.entries(user.quizScores).map(([key, score]) => (
-                            <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
-                                <span className="font-medium text-sm">Sourate {key}</span>
-                                <span className="font-bold text-primary">{String(score)}%</span>
-                            </div>
-                        ))}
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {/* Hisn Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            🏰 Citadelle
+                        </span>
+                        <span className="font-bold text-primary">{user.hisnQuizBestScore || 0} pts</span>
                     </div>
-                ) : (
-                    <p className="text-muted-foreground text-sm">Aucun quiz effectué pour le moment.</p>
+
+                    {/* Vocabulary Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            📚 Vocabulaire
+                        </span>
+                        <span className="font-bold text-primary">{user.vocabularyQuizBestScore || 0} pts</span>
+                    </div>
+
+                    {/* Arabic Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            🎓 Alphabet
+                        </span>
+                        <span className="font-bold text-primary">{user.arabicQuizBestScore || 0} pts</span>
+                    </div>
+                </div>
+
+                {user.quizScores && Object.keys(user.quizScores).length > 0 && (
+                    <div className="mt-4 pt-4 border-t">
+                        <h3 className="text-sm font-semibold mb-3 text-muted-foreground">Sourates (Mémorisation)</h3>
+                        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+                            {Object.entries(user.quizScores).map(([key, score]) => (
+                                <div key={key} className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                                    <span className="font-medium text-sm">Sourate {key}</span>
+                                    <span className="font-bold text-primary">{String(score)}%</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 )}
             </section>
 

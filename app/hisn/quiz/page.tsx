@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, RefreshCw, Trophy, AlertCircle, Shield } from 'lucide-react';
 import { cn } from '@/components/layout/Navigation';
+import { saveGenericQuizScore } from '@/actions/quiz-actions';
 
 type Hadith = {
     id: number;
@@ -44,6 +45,8 @@ export default function HisnQuizPage() {
         if (score > highScore) {
             setHighScore(score);
             localStorage.setItem('hisn-quiz-highscore', score.toString());
+            // Save to DB
+            saveGenericQuizScore('hisn', score);
         }
     }, [score, highScore]);
 

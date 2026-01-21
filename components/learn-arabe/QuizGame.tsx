@@ -5,6 +5,7 @@ import { ALPHABET, Letter } from './data';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, XCircle, ChevronRight, RotateCcw, Sparkles } from 'lucide-react';
 import { playPronunciation } from './audio';
+import { saveGenericQuizScore } from '@/actions/quiz-actions';
 
 type QuestionType = {
     id: string;
@@ -101,6 +102,15 @@ export default function QuizGame() {
 
     if (!currentQuestion) return <div className="text-center p-10">Chargement...</div>;
 
+
+    const handleFinish = async () => {
+        if (score > 0) {
+            await saveGenericQuizScore('arabic', score);
+        }
+        // Redirect or show summary
+        window.location.href = '/apprendre-arabe';
+    };
+
     return (
         <div className="max-w-xl mx-auto space-y-6">
             <div className="flex justify-between items-center text-sm font-medium text-muted-foreground bg-muted/30 p-4 rounded-xl">
@@ -166,14 +176,21 @@ export default function QuizGame() {
                 </div>
             </div>
 
-            {showResult && selectedAnswer !== currentQuestion.correctAnswer && (
-                <div className="flex justify-end animate-in fade-in slide-in-from-bottom-4">
-                    <Button size="lg" onClick={handleNextQuestion} className="gap-2 rounded-full px-8 w-full md:w-auto shadow-lg hover:shadow-xl transition-all">
+            <div className="flex gap-4">
+                <Button
+                    variant="secondary"
+                    className="flex-1 rounded-xl"
+                    onClick={handleFinish}
+                >
+                    Terminer et Sauvegarder
+                </Button>
+                {showResult && selectedAnswer !== currentQuestion.correctAnswer && (
+                    <Button size="lg" onClick={handleNextQuestion} className="flex-1 gap-2 rounded-xl shadow-lg hover:shadow-xl transition-all">
                         Question Suivante
                         <ChevronRight className="w-4 h-4" />
                     </Button>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 }

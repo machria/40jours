@@ -15,6 +15,8 @@ export interface IUser extends Document {
     completedJuzs: number[];
     quizScores: Map<string, number>;
     vocabularyQuizBestScore?: number;
+    hisnQuizBestScore?: number;
+    arabicQuizBestScore?: number;
     badges: { id: string; unlockedAt: Date }[];
     activityHistory: Map<string, number>;
 }
@@ -33,6 +35,8 @@ const UserSchema: Schema = new Schema(
         completedJuzs: { type: [Number], default: [] },
         quizScores: { type: Map, of: Number, default: {} },
         vocabularyQuizBestScore: { type: Number, default: 0 },
+        hisnQuizBestScore: { type: Number, default: 0 },
+        arabicQuizBestScore: { type: Number, default: 0 },
         badges: [{
             id: { type: String, required: true },
             unlockedAt: { type: Date, default: Date.now }
