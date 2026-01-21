@@ -130,66 +130,34 @@ export async function getTafsir(surah: number, ayah: number): Promise<string | n
     if (tafsirCache[key]) return tafsirCache[key] as string;
 
     try {
-        // 1. Fetch exhaustif English Tafsir
-        const res = await fetch(`https://quranapi.pages.dev/api/tafsir/${surah}_${ayah}.json`);
-
-        if (!res.ok) return null;
-
-        const json = await res.json();
-        const englishContent = json.tafsirs?.[0]?.content;
-
-        if (!englishContent) return "Tafsir non disponible en anglais.";
-
-        // 2. Preserve Arabic Text (Regex for Arabic range)
-        // We replace Arabic segments with a placeholder pattern.
-        // CRITICAL: We use a nonsense code 'PH' instead of 'ARABIC' because Google Translate 
-        // tends to translate '__ARABIC_0__' to '__ARABE_0__', breaking valid restoration.
-        const arabicRegex = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]+/g;
-        const placeholders: string[] = [];
-        const textToTranslate = englishContent.replace(arabicRegex, (match: string) => {
-            placeholders.push(match);
-            // using __PH_index__
-            return `__PH_${placeholders.length - 1}__`;
-        });
-
-        // 3. Translate to French
-        let frenchContent = "";
+        let tafsirContent = "";
 
         if (typeof window === 'undefined') {
-            // Server-side: Direct Call
-            const { translateText } = await import('./translator');
-            frenchContent = await translateText(textToTranslate, 'en', 'fr');
-        } else {
-            // Client-side: API Call
-            const translationRes = await fetch('/api/translate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    text: textToTranslate,
-                    sourceLang: 'en',
-                    targetLang: 'fr'
-                })
-            });
+            // Server-side: Read directly from filesystem
+            const path = (await import('path')).default;
+            const fs = (await import('fs')).default;
 
-            if (!translationRes.ok) {
-                console.error("Translation proxy failed");
-                return `(Traduction indisponible) ${englishContent}`;
+            const filePath = path.join(process.cwd(), 'data', 'tafsir', `${surah}_${ayah}.json`);
+
+            if (fs.existsSync(filePath)) {
+                const fileContent = fs.readFileSync(filePath, 'utf-8');
+                const json = JSON.parse(fileContent);
+                tafsirContent = json.tafsir;
+            } else {
+                return "Tafsir non disponible.";
             }
-
-            const translationData = await translationRes.json();
-            frenchContent = translationData.translation;
+        } else {
+            // Client-side: Fetch from static files in public/tafsir
+            const res = await fetch(`/tafsir/${surah}_${ayah}.json`);
+            if (!res.ok) {
+                return "Tafsir non disponible.";
+            }
+            const json = await res.json();
+            tafsirContent = json.tafsir;
         }
 
-        // 4. Restore Arabic Text
-        placeholders.forEach((arabic, index) => {
-            // Restore __PH_index__ (and robustly handle spaces GT might add: __ PH _ 0 __)
-            // Also optionally catch __ARABE_ if it somehow persists or matches old cache
-            const pattern = new RegExp(`__\\s*(?:PH|ARABE|ARABIC)\\s*_\\s*${index}\\s*__`, 'gi');
-            frenchContent = frenchContent.replace(pattern, arabic);
-        });
-
-        tafsirCache[key] = frenchContent;
-        return frenchContent;
+        tafsirCache[key] = tafsirContent;
+        return tafsirContent;
 
     } catch (e) {
         console.error("Error fetching tafsir:", e);

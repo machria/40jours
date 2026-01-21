@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
         './public/hadith/**/*'
       ]
     }
-  }
+  } as any
 };
 
 import createNextIntlPlugin from 'next-intl/plugin';
