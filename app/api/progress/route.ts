@@ -1,6 +1,7 @@
 import { auth } from "@/auth";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
+import { checkBadges } from "@/lib/gamification";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -66,9 +67,26 @@ export async function POST(req: Request) {
         // Mongoose Map set
         user.dailyProgress.set(dayId.toString(), completed);
 
+        // Update Activity History
+        if (completed) {
+            const today = new Date().toISOString().split('T')[0];
+            if (!user.activityHistory) user.activityHistory = new Map();
+            const currentCount = user.activityHistory.get(today) || 0;
+            user.activityHistory.set(today, currentCount + 1);
+        }
+
+        // Check Badges
+        const newBadges = checkBadges(user);
+        if (newBadges.length > 0) {
+            if (!user.badges) user.badges = [];
+            newBadges.forEach(badgeId => {
+                user.badges.push({ id: badgeId, unlockedAt: new Date() });
+            });
+        }
+
         await user.save();
 
-        return NextResponse.json({ success: true });
+        return NextResponse.json({ success: true, newBadges });
 
     } catch (error) {
         console.error(error);

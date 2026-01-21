@@ -3,8 +3,10 @@ import { redirect } from "next/navigation";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { plan40jours } from "@/data/plan40jours";
-import { CheckCircle, BookOpen, Trophy, Flame } from "lucide-react";
+import { CheckCircle, BookOpen, Trophy, Flame, Users } from "lucide-react";
 import Link from "next/link";
+import ActivityChart from "@/components/dashboard/ActivityChart";
+import BadgesList from "@/components/dashboard/BadgesList";
 
 async function getUserData(email: string) {
     await dbConnect();
@@ -68,6 +70,16 @@ export default async function DashboardPage() {
                     <span className="text-sm text-muted-foreground">Programme 40 Jours</span>
                 </div>
             </div>
+            <Link href="/social" className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                <div className="p-3 bg-purple-500/10 rounded-full text-purple-600 group-hover:scale-110 transition-transform">
+                    <Users className="w-8 h-8" />
+                </div>
+                <span className="text-xl font-bold text-foreground text-center">Communauté</span>
+                <span className="text-sm text-muted-foreground text-center">Groupes & Classements</span>
+            </Link>
+
+
+
 
             {/* 40 Jours Progress */}
             <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">
@@ -140,6 +152,13 @@ export default async function DashboardPage() {
                     })}
                 </div>
             </section>
+
+
+            {/* Charts & Badges */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <ActivityChart activityHistory={user.activityHistory || {}} />
+                <BadgesList unlockedBadges={user.badges || []} />
+            </div>
 
             {/* Quiz Scores (Placeholder or real data if available) */}
             <section className="bg-card border rounded-2xl p-6 md:p-8 space-y-6 shadow-sm">

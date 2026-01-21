@@ -11,9 +11,12 @@ export interface IUser extends Document {
     streak: number;
     lastReadDate: Date;
     lastReadJuzId?: number;
+    groups: any[]; // Using any[] to avoid circular dependency issues in type definition for now, or just ObjectId[]
     completedJuzs: number[];
     quizScores: Map<string, number>;
     vocabularyQuizBestScore?: number;
+    badges: { id: string; unlockedAt: Date }[];
+    activityHistory: Map<string, number>;
 }
 
 const UserSchema: Schema = new Schema(
@@ -26,9 +29,15 @@ const UserSchema: Schema = new Schema(
         streak: { type: Number, default: 0 },
         lastReadDate: { type: Date },
         lastReadJuzId: { type: Number },
+        groups: [{ type: Schema.Types.ObjectId, ref: 'Group' }],
         completedJuzs: { type: [Number], default: [] },
         quizScores: { type: Map, of: Number, default: {} },
         vocabularyQuizBestScore: { type: Number, default: 0 },
+        badges: [{
+            id: { type: String, required: true },
+            unlockedAt: { type: Date, default: Date.now }
+        }],
+        activityHistory: { type: Map, of: Number, default: {} }, // Key: "YYYY-MM-DD", Value: count
     },
     { timestamps: true }
 );
