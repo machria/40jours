@@ -12,11 +12,11 @@ const metadataCache: Partial<Record<CollectionName, HadithMetadata>> = {};
 const COLLECTIONS_LIST = [
     { id: 'bukhari', name: 'Sahih al-Bukhari' },
     { id: 'muslim', name: 'Sahih Muslim' },
-    { id: 'abudawud', name: 'Sunan Abu Dawud' },
-    { id: 'ibnmajah', name: 'Sunan Ibn Majah' },
     { id: 'nasai', name: 'Sunan an-Nasai' },
-    { id: 'malik', name: 'Muwatta Malik' },
     { id: 'tirmidhi', name: 'Jami At-Tirmidhi' },
+    { id: 'malik', name: 'Muwatta Malik' },
+    { id: 'ibnmajah', name: 'Sunan Ibn Majah' },
+    { id: 'abudawud', name: 'Sunan Abu Dawud' },
 ] as const;
 
 export function getCollectionsList() {

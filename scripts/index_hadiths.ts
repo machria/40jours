@@ -2,17 +2,18 @@
 import fs from 'fs';
 import path from 'path';
 
+// Order is critical for search result priority
 const COLLECTIONS = [
-    'fra-bukhari.json',
-    'fra-muslim.json',
-    'fra-nasai.json',
-    'fra-abudawud.json',
-    'fra-tirmidhi.json',
-    'fra-ibnmajah.json',
-    'fra-malik.json',
+    'bukhari',
+    'muslim',
+    'nasai',
+    'tirmidhi',
+    'malik',
+    'ibnmajah',
+    'abudawud',
 ];
 
-const DATA_DIR = path.join(process.cwd(), 'data', 'hadith');
+const PUBLIC_DIR = path.join(process.cwd(), 'public', 'hadith');
 const OUTPUT_INDEX = path.join(process.cwd(), 'data', 'hadith-search-index.json');
 
 // Types
@@ -32,40 +33,53 @@ function normalizeFrench(text: string): string {
 }
 
 async function buildHadithIndex() {
-    console.log('Building Hadith Search Index (French Only)...');
+    console.log('Building Hadith Search Index from Public Split Files (French Only)...');
     const index: HadithIndexItem[] = [];
 
-    for (const filename of COLLECTIONS) {
-        const collectionName = filename.replace('fra-', '').replace('.json', '');
-        const filePath = path.join(DATA_DIR, filename);
+    for (const collectionName of COLLECTIONS) {
+        const colDir = path.join(PUBLIC_DIR, collectionName);
 
-        if (!fs.existsSync(filePath)) {
-            console.warn(`File not found: ${filePath}`);
+        if (!fs.existsSync(colDir)) {
+            console.warn(`Directory not found: ${colDir}`);
             continue;
         }
 
-        try {
-            const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-            const hadiths = data.hadiths;
+        console.log(`Processing ${collectionName}...`);
 
-            if (Array.isArray(hadiths)) {
-                hadiths.forEach((hadith: any) => {
-                    // User specified: "in each json the french is in text"
-                    const frText = hadith.text || hadith.body || "";
+        // Read all section files
+        const files = fs.readdirSync(colDir);
+        const sectionFiles = files.filter(f => f.startsWith('section-') && f.endsWith('.json'));
 
-                    if (!frText) return;
+        for (const file of sectionFiles) {
+            try {
+                const filePath = path.join(colDir, file);
+                const hadiths = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-                    index.push({
-                        id: `${collectionName}:${hadith.hadithnumber}`,
-                        c: collectionName,
-                        n: String(hadith.hadithnumber),
-                        fn: normalizeFrench(frText),
+                if (Array.isArray(hadiths)) {
+                    hadiths.forEach((hadith: any) => {
+                        // User specified: "in each json the french is in text"
+                        const frText = hadith.text || hadith.body || "";
+
+                        if (!frText) return;
+
+                        index.push({
+                            id: `${collectionName}:${hadith.hadithnumber}`,
+                            c: collectionName,
+                            n: String(hadith.hadithnumber),
+                            fn: normalizeFrench(frText),
+                        });
                     });
-                });
+                }
+            } catch (error) {
+                console.error(`Error processing ${file} in ${collectionName}:`, error);
             }
-        } catch (error) {
-            console.error(`Error processing ${filename}:`, error);
         }
+    }
+
+    // Ensure output directory exists (it should, but safety first)
+    const outDir = path.dirname(OUTPUT_INDEX);
+    if (!fs.existsSync(outDir)) {
+        fs.mkdirSync(outDir, { recursive: true });
     }
 
     fs.writeFileSync(OUTPUT_INDEX, JSON.stringify(index));
