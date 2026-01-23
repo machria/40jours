@@ -136,8 +136,20 @@ async function splitHadithContent() {
         };
 
         data.hadiths.forEach((h: any) => {
-            const num = parseFloat(h.hadithnumber);
-            const sec = findSection(num);
+            let sec;
+            // Prioritize reference.book if available (fixes Ibn Majah overlap issues)
+            if (h.reference && h.reference.book !== undefined) {
+                const bookId = String(h.reference.book);
+                if (data.metadata?.section_details && data.metadata.section_details[bookId]) {
+                    sec = bookId;
+                }
+            }
+
+            if (!sec) {
+                const num = parseFloat(h.hadithnumber);
+                sec = findSection(num);
+            }
+
             if (!bySection[sec]) bySection[sec] = [];
             bySection[sec].push(h);
         });
