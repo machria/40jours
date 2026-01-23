@@ -10,7 +10,6 @@ interface HadithIndexItem {
     c: string; // collection
     n: string; // number
     fn: string; // french normalized
-    // Removed 'an' (Arabic normalized) as per user request to reduce index size
 }
 
 interface HadithSearchResult {
@@ -24,9 +23,11 @@ interface HadithSearchResult {
 
 let hadithIndex: HadithIndexItem[] | null = null;
 const INDEX_PATH = path.join(process.cwd(), 'data', 'hadith-search-index.json');
-const DATA_DIR = path.join(process.cwd(), 'data', 'hadith');
-const SPLIT_DIR = path.join(DATA_DIR, 'split');
-const META_PATH = path.join(DATA_DIR, 'hadith-metadata.json');
+// Use public directory as the source of truth, matching hadith-api.ts
+const PUBLIC_DATA_DIR = path.join(process.cwd(), 'public', 'hadith');
+
+// Priority order for results
+const COLLECTION_ORDER = ['bukhari', 'muslim', 'nasai', 'tirmidhi', 'malik', 'ibnmajah', 'abudawud'];
 
 function getIndex(): HadithIndexItem[] {
     if (hadithIndex) return hadithIndex;
@@ -52,46 +53,52 @@ function normalizeFrench(text: string): string {
 
 // Helper to get full Hadith data including section info
 async function getHadithData(collection: string, number: string) {
-    if (!global.hadithMetadata) {
-        if (fs.existsSync(META_PATH)) {
-            global.hadithMetadata = JSON.parse(fs.readFileSync(META_PATH, 'utf-8'));
-        } else {
-            return null;
-        }
+    // Load collection metadata to find the section
+    // We read specific collection metadata from public/hadith/[collection]/metadata.json
+    const metadataPath = path.join(PUBLIC_DATA_DIR, collection, 'metadata.json');
+
+    if (!fs.existsSync(metadataPath)) return null;
+
+    let meta: any;
+    try {
+        meta = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+    } catch (e) {
+        console.error(`Failed to read metadata for ${collection}`, e);
+        return null;
     }
 
-    // 1. Find Section
-    const meta = global.hadithMetadata![collection];
-    if (!meta) return null;
+    if (!meta || !meta.section_details) return null;
 
     const numericHadithNumber = parseFloat(number);
     let sectionId = "unknown";
 
-    for (const [key, details] of Object.entries(meta as Record<string, any>)) {
+    for (const [key, details] of Object.entries(meta.section_details as Record<string, any>)) {
         if (numericHadithNumber >= details.hadithnumber_first && numericHadithNumber <= details.hadithnumber_last) {
             sectionId = key;
             break;
         }
     }
 
-    // 2. Load Section File
-    // We can cache section files in memory separately if needed, but FS is fast enough for now compared to 15MB parse
-    const sectionPath = path.join(SPLIT_DIR, collection, `section-${sectionId}.json`);
+    // Load Section File from public/hadith/[collection]/section-[id].json
+    const sectionPath = path.join(PUBLIC_DATA_DIR, collection, `section-${sectionId}.json`);
 
     if (fs.existsSync(sectionPath)) {
-        const raw = fs.readFileSync(sectionPath, 'utf-8');
-        const hadiths = JSON.parse(raw);
-        const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
+        try {
+            const raw = fs.readFileSync(sectionPath, 'utf-8');
+            const hadiths = JSON.parse(raw);
+            const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
 
-        if (hadith) {
-            return {
-                ...hadith,
-                sectionId
-            };
+            if (hadith) {
+                return {
+                    ...hadith,
+                    sectionId
+                };
+            }
+        } catch (e) {
+            console.error(`Failed to read section ${sectionId} for ${collection}`, e);
         }
     }
 
-    // Fallback? No, if not in section, it's missing.
     return null;
 }
 
@@ -99,20 +106,34 @@ export async function searchHadith(query: string) {
     if (!query || query.length < 2) return [];
 
     const index = getIndex();
-    // No Arabic search supported in this version of the index
 
     // Multi-word support
     const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
     const terms = rawTerms.map(t => normalizeFrench(t));
 
+    // 1. Filter
     const results = index.filter(item => {
-        // Check if ALL terms are present
         return terms.every(term => item.fn.includes(term));
     });
 
-    const topResults = results.slice(0, 100); // Limit to 100 to avoid overload
+    // 2. Sort by Collection Priority
+    results.sort((a, b) => {
+        const indexA = COLLECTION_ORDER.indexOf(a.c);
+        const indexB = COLLECTION_ORDER.indexOf(b.c);
+        // If both are in the list, sort by index
+        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+        // If only A is in list, A comes first
+        if (indexA !== -1) return -1;
+        // If only B is in list, B comes first
+        if (indexB !== -1) return 1;
+        // Otherwise keep original order (or alphabetical)
+        return a.c.localeCompare(b.c);
+    });
 
-    // Hydrate
+    // 3. Limit to 60 as requested
+    const topResults = results.slice(0, 60);
+
+    // 4. Hydrate
     const hydrated = await Promise.all(topResults.map(async (item) => {
         const data = await getHadithData(item.c, item.n);
         if (!data) return null;
@@ -126,8 +147,4 @@ export async function searchHadith(query: string) {
     }));
 
     return hydrated.filter(Boolean) as HadithSearchResult[];
-}
-
-declare global {
-    var hadithMetadata: Record<string, any> | undefined;
 }
