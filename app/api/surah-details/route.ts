@@ -6,10 +6,6 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const id = searchParams.get('id');
 
-    if (!id) {
-        return NextResponse.json({ error: 'Missing id parameter' }, { status: 400 });
-    }
-
     try {
         const filePath = path.join(process.cwd(), 'data', 'surah-details.json');
 
@@ -19,6 +15,13 @@ export async function GET(request: Request) {
 
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         const data = JSON.parse(fileContent);
+
+        // If no ID provided, return all surahs
+        if (!id) {
+            return NextResponse.json(data);
+        }
+
+        // If ID provided, return specific surah
         const surahData = data[id];
 
         if (!surahData) {
