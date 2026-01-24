@@ -219,6 +219,14 @@ export default async function DashboardPage() {
                         </span>
                         <span className="font-bold text-primary">{user.names99QuizBestScore || 0} pts</span>
                     </div>
+
+                    {/* Sira Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            📜 Sira
+                        </span>
+                        <span className="font-bold text-primary">{user.siraQuizBestScore || 0} pts</span>
+                    </div>
                 </div>
 
                 {(() => {

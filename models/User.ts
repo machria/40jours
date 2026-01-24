@@ -18,6 +18,7 @@ export interface IUser extends Document {
     hisnQuizBestScore?: number;
     arabicQuizBestScore?: number;
     names99QuizBestScore?: number;
+    siraQuizBestScore?: number;
     badges: { id: string; unlockedAt: Date }[];
     activityHistory: Map<string, number>;
 }
@@ -39,6 +40,7 @@ const UserSchema: Schema = new Schema(
         hisnQuizBestScore: { type: Number, default: 0 },
         arabicQuizBestScore: { type: Number, default: 0 },
         names99QuizBestScore: { type: Number, default: 0 },
+        siraQuizBestScore: { type: Number, default: 0 },
         badges: [{
             id: { type: String, required: true },
             unlockedAt: { type: Date, default: Date.now }

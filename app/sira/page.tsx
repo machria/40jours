@@ -67,10 +67,18 @@ export default function SeerahPage() {
 
             {/* Header */}
             <header className="sticky top-0 z-10 bg-background/80 backdrop-blur border-b p-4">
-                <div className="max-w-5xl mx-auto">
-                    <h1 className="text-2xl font-bold font-kufi text-primary">Sira du Prophète ﷺ</h1>
-                    <p className="text-sm text-muted-foreground">Biographie du Prophète Muhammad ﷺ</p>
-                    <p className="text-xs text-muted-foreground mt-1">Source: Le Nectar Cacheté (الرحيق المختوم)</p>
+                <div className="max-w-5xl mx-auto flex items-start justify-between gap-4">
+                    <div>
+                        <h1 className="text-2xl font-bold font-kufi text-primary">Sira du Prophète ﷺ</h1>
+                        <p className="text-sm text-muted-foreground">Biographie du Prophète Muhammad ﷺ</p>
+                        <p className="text-xs text-muted-foreground mt-1">Source: Le Nectar Cacheté (الرحيق المختوم)</p>
+                    </div>
+                    <Link
+                        href="/sira/quiz"
+                        className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap"
+                    >
+                        📝 Quiz
+                    </Link>
                 </div>
             </header>
 

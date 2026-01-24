@@ -5,12 +5,14 @@ import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { revalidatePath } from "next/cache";
 
-type QuizType = 'hisn' | 'arabic' | 'vocabulary' | 'names99';
+type QuizType = 'hisn' | 'arabic' | 'vocabulary' | 'names99' | 'sira';
 
 export async function saveGenericQuizScore(type: QuizType, score: number) {
+    console.log(`[QuizAction] Saving score for ${type}: ${score}`);
     try {
         const session = await auth();
         if (!session?.user?.email) {
+            console.log('[QuizAction] Unauthorized: No session');
             return { success: false, error: "Unauthorized" };
         }
 
@@ -45,14 +47,22 @@ export async function saveGenericQuizScore(type: QuizType, score: number) {
                     updated = true;
                 }
                 break;
+            case 'sira':
+                if (score > (user.siraQuizBestScore || 0)) {
+                    user.siraQuizBestScore = score;
+                    updated = true;
+                }
+                break;
         }
 
         if (updated) {
             await user.save();
+            console.log(`[QuizAction] Score saved for ${type}. New best: ${score}`);
             revalidatePath('/dashboard');
             return { success: true, score, updated: true };
         }
 
+        console.log(`[QuizAction] Score not updated (current best is higher or equal)`);
         return { success: true, score, updated: false };
 
     } catch (error) {
