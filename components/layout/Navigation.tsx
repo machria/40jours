@@ -27,6 +27,7 @@ export default function Navigation() {
     // Menu items (in hamburger menu on mobile)
     const menuItems = [
         { href: '/juz', label: 'Juz (30 jours)', icon: MapIcon },
+        { href: '/sira', label: 'Sira du Prophète ﷺ', icon: BookOpen },
         { href: '/hisn', label: 'Citadelle du Musulman', icon: Shield },
         { href: '/99-noms', label: '99 Noms d\'Allah', icon: BookMarked },
         { href: '/hadith', label: 'Hadith', icon: BookOpen },
