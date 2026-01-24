@@ -91,7 +91,7 @@ function getQuranData() {
     return quranData;
 }
 
-export async function searchQuran(query: string) {
+export async function searchQuran(query: string, limit: number = 50) {
     if (!query || query.length < 2) return [];
 
     const index = getQuranIndex();
@@ -113,7 +113,7 @@ export async function searchQuran(query: string) {
     });
 
     // Limit results
-    const topResults = results.slice(0, 50);
+    const topResults = results.slice(0, limit);
 
     const hydratedResults = topResults.map(item => {
         return {
@@ -126,7 +126,7 @@ export async function searchQuran(query: string) {
     return hydratedResults;
 }
 
-export async function searchTafsir(query: string) {
+export async function searchTafsir(query: string, limit: number = 50) {
     if (!query || query.length < 2) return [];
 
     const index = getTafsirIndex();
@@ -142,7 +142,7 @@ export async function searchTafsir(query: string) {
     });
 
     // Limit results
-    const topResults = results.slice(0, 50);
+    const topResults = results.slice(0, limit);
 
     // Hydrate with Tafsir Snippet (requires loading Tafsir data)
     // For now, we return metadata, client might need to fetch text?

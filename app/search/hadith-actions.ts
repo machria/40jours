@@ -102,7 +102,7 @@ async function getHadithData(collection: string, number: string) {
     return null;
 }
 
-export async function searchHadith(query: string) {
+export async function searchHadith(query: string, limit: number = 60) {
     if (!query || query.length < 2) return [];
 
     const index = getIndex();
@@ -130,8 +130,8 @@ export async function searchHadith(query: string) {
         return a.c.localeCompare(b.c);
     });
 
-    // 3. Limit to 60 as requested
-    const topResults = results.slice(0, 60);
+    // 3. Limit to requested limit
+    const topResults = results.slice(0, limit);
 
     // 4. Hydrate
     const hydrated = await Promise.all(topResults.map(async (item) => {

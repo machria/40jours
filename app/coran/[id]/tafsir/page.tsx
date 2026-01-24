@@ -1,34 +1,50 @@
 import { getSurahTafsir } from '@/app/actions/tafsir';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import { ArrowLeft, BookOpen, ExternalLink } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { TajwidText } from '@/components/TajwidText';
-import { getQuranPage } from '@/lib/quranApi'; // We might need this to get Ayah text, or we can fetch it separately. 
-// Actually, getSurahTafsir only returns tafsir text. We ideally want the Ayah text too.
-// Let's import quran data logic or separate it. 
-// For now, let's just display the Tafsir indexed by Ayah number. 
-// Enhancing it to show Ayah text would be better. Let's try to get Ayahs too.
-
 import fs from 'fs/promises';
 import path from 'path';
 
 // Helper to get Ayahs for a Surah (Serverside)
 async function getAyahsForSurah(surahId: number) {
-    const filePath = path.join(process.cwd(), 'data', 'quran-data.json');
-    const fileContent = await fs.readFile(filePath, 'utf-8');
-    const allPages = JSON.parse(fileContent);
+    try {
+        const indexPath = path.join(process.cwd(), 'public', 'ayah-location.json');
+        const indexContent = await fs.readFile(indexPath, 'utf-8');
+        const index = JSON.parse(indexContent);
 
-    let surahAyahs: any[] = [];
-    // Iterate pages to find ayahs for this surah
-    Object.values(allPages).forEach((page: any) => {
-        page.forEach((ayah: any) => {
-            if (ayah.surah === surahId) {
-                surahAyahs.push(ayah);
+        // Find pages for this surah
+        const pages = new Set<number>();
+        // Optimization: Keys are "surah:ayah"
+        for (const key in index) {
+            if (key.startsWith(`${surahId}:`)) {
+                pages.add(index[key]);
             }
-        });
-    });
-    return surahAyahs.sort((a, b) => a.ayah - b.ayah);
+        }
+
+        const sortedPages = Array.from(pages).sort((a, b) => a - b);
+
+        let surahAyahs: any[] = [];
+
+        for (const pNum of sortedPages) {
+            const pPath = path.join(process.cwd(), 'public', 'quran', 'pages', `${pNum}.json`);
+            try {
+                const pContent = await fs.readFile(pPath, 'utf-8');
+                const pageData = JSON.parse(pContent);
+                // Filter verses for this surah
+                const matches = pageData.filter((a: any) => a.surah === surahId);
+                surahAyahs.push(...matches);
+            } catch (e) {
+                console.error(`Missing page ${pNum}`, e);
+            }
+        }
+
+        return surahAyahs.sort((a, b) => a.ayah - b.ayah);
+    } catch (e) {
+        console.error("Error loading Surah ayahs", e);
+        return [];
+    }
 }
 
 export default async function FullTafsirPage({ params }: { params: Promise<{ id: string }> }) {
@@ -106,10 +122,18 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                                 {group.ayahs.map((item, i) => (
                                     <div key={item.id} className={i > 0 ? "pt-8 border-t border-border/30" : ""}>
                                         <div className="flex justify-between items-start mb-4">
-                                            <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
+                                            <Link
+                                                href={`/coran/${surahId}#ayah-${item.ayah}`}
+                                                className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium hover:bg-primary/20 transition-colors flex items-center gap-2 group"
+                                            >
                                                 Verset {item.ayah}
-                                            </span>
+                                                <ExternalLink className="w-3 h-3 opacity-50 group-hover:opacity-100" />
+                                            </Link>
                                         </div>
+                                        {/* Use TajwidText if available, but for simplicity here we assume standard text provided by server loader. 
+                                            Wait, getAyahsForSurah returns structure from public json which matches needed structure. 
+                                            TajwidText component handles simple Arabic string. 
+                                        */}
                                         <TajwidText
                                             text={item.text}
                                             className="text-2xl md:text-3xl font-kufi text-right dir-rtl leading-[2.5] block text-foreground mb-4"

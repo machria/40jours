@@ -3,69 +3,68 @@
 Ce document trace l'avenir du projet, en se concentrant sur la stabilité technique, l'expérience utilisateur et l'ajout de fonctionnalités pédagogiques.
 
 ## ✅ Récemment Complété
-- **Toggle Phonétique** : Ajout de la translittération sur les pages Juz et Programme (40 Jours).
-- **Audio Hisn al-Muslim** : Lecture audio pour les invocations et mode flashcards.
-- **Enrichissement des Données** : Backfill de la translittération manquante pour Hisn al-Muslim.
-- **Optimisation Tafsir** : Migration vers des fichiers locaux fractionnés pour une meilleure performance et indépendance API.
+- **Architecture & Performance** : Migration Next.js 15, React 19, Tailwind 4.
+- **Données Hadiths** : Intégration Bukhari, Muslim, Nawawi, et récemment **Tirmidhi**. Correction des titres et structure.
+- **Tafsir Découplé** : Moteur de recherche dédié pour le Tafsir séparé du texte coranique.
+- **Tableau de Bord** : Suivi dynamique de la progression (40 jours, Juz, Scores Quiz) et calcul des "Streaks".
+- **Outils d'Apprentissage** : Audio pour Hisn al-Muslim, Quiz Vocabulaire interactif.
 
 ---
 
-## 🟢 Court Terme : Consolidation & UX (1-2 Semaines)
-*Objectif : Rendre l'expérience actuelle irréprochable et totalement fluide.*
+## 🟢 Phase 1 : Expérience Utilisateur & Personnalisation (Immédiat - 2 Semaines)
+*Objectif : Donner le contrôle à l'utilisateur et fluidifier la navigation.*
 
-### 1. Perfectionnement du PWA (Offline First)
-- [ ] **Audit Service Worker** : S'assurer que les nouveaux fichiers de données fractionnés (Tafsir, Hadith) sont correctement mis en cache pour une utilisation hors ligne.
-- [ ] **Installation Prompt** : Améliorer l'invitation à installer l'application sur mobile.
+### 1. Page de Paramètres (Settings) `Priorité Haute`
+- [ ] **Création de l'interface** : Page `/settings` accessible depuis le menu utilisateur.
+- [ ] **Options de Lecture** :
+    - Taille de police ajustable (indépendamment pour Arabe et Français).
+    - Choix de la police arabe (IndoPak, Uthmani, etc.).
+- [ ] **Audio** : Sélection du Récitateur par défaut (Mishary, Sudais, etc.) pour tout le site.
+- [ ] **Apparence** : Sélecteur de Thème explicite (Clair / Sombre / Sépia / OLED).
+- [ ] **Persistance** : Sauvegarde des préférences en local (invité) et en base de données (connecté).
 
-### 2. Recherche Globale
-- [ ] **Recherche Instantanée** : Implémenter une barre de recherche globale (cmd+k) permettant de trouver :
-    - Une sourate (par nom français/arabe).
-    - Un verset (par texte ou numéro).
-    - Un concept (ex: "patience", "paradis").
-- [ ] **Indexation** : Créer un index léger côté client lors du premier chargement.
+### 2. Navigation & Recherche Globale
+- [ ] **Command Palette (Cmd+K)** :
+    - Menu modal accessible partout pour navigation rapide.
+    - Commandes directes : "Aller à Sourate Yasin", "Ouvrir Juz 5", "Rechercher 'Patience'".
+- [x] **Search UX** : Améliorer l'autocomplétion et la prévisualisation des résultats dans la barre de recherche.
 
-### 3. Paramètres Utilisateur Centralisés
-- [ ] **Page de Paramètres** :
-    - Taille du texte (Arabe / Français).
-    - Choix du récitateur par défaut.
-    - Activation globale de la translittération.
-    - Thème (Clair/Sombre/Sépia).
-
----
-
-## 🟡 Moyen Terme : Fonctionnalités Pédagogiques (1-2 Mois)
-*Objectif : Transformer l'application de lecture en outil d'apprentissage.*
-
-### 1. Audio Avancé (Mémorisation)
-- [ ] **Répétition de Verset** : Mode "Boucle" sur un verset ou une plage de versets pour aider à la mémorisation (Hifz).
-- [ ] **Mode "Écoute Continue"** : Lecture audio en arrière-plan (background playback) pour écouter le Coran écran éteint (défi technique PWA/iOS).
-
-### 2. Vocabulaire Intelligent (SRS)
-- [ ] **Spaced Repetition System** : Remplacer le quiz aléatoire par un algorithme de répétition espacée (type Anki).
-- [ ] **Banque de Mots Personnelle** : Possibilité de marquer des mots comme "difficiles" pour les réviser plus souvent.
-
-### 3. Tableau de Bord Enrichi
-- [ ] **Statistiques Détaillées** : Graphiques de lecture par jour/semaine.
-- [ ] **Badges & Gamification** : Débloquer des succès (ex: "7 jours consécutifs", "Juz 30 terminé").
+### 3. SEO & Visibilité
+- [ ] **Métadonnées Dynamiques** : Titres et descriptions uniques pour chaque Sourate, Hadith, et Leçon pour indexation Google.
+- [ ] **Sitemap Complet** : Génération automatique incluant toutes les routes dynamiques (Hadiths individuels).
 
 ---
 
-## 🔴 Long Terme : Communauté & Expansion (> 3 Mois)
+## 🟡 Phase 2 : Engagement & Mémorisation (Moyen Terme - 1 Mois)
+*Objectif : Transformer l'application de lecture en outil d'apprentissage actif.*
+
+### 1. Outils de Mémorisation (Hifz)
+- [ ] **Mode Répétition Audio** : Bouton pour boucler sur un verset X fois ou à l'infini.
+- [ ] **Masquer/Révéler** : Toggle pour flouter le texte (Arabe ou Français) et le révéler au clic/survol pour tester sa mémoire.
+- [ ] **Mode "Écoute Continue"** : Amélioration du player pour la lecture en arrière-plan ininterrompue (PWA).
+
+### 2. Gamification & Feedback
+- [ ] **Système de Notifications** : Feedback visuel (Toast/Confettis) lors du déblocage d'un badge ou d'un nouveau record de série.
+- [ ] **Vue Calendrier** : Visualisation "GitHub-style" de l'activité de lecture sur l'année dans le dashboard.
+
+### 3. Notes & Signets Avancés
+- [ ] **Prise de Notes** : Ajouter des notes personnelles privées sur un verset ou un hadith.
+- [ ] **Collections de Favoris** : Organiser les favoris par dossiers (ex: "Versets sur la patience", "Duas pour le matin").
+
+---
+
+## 🔴 Phase 3 : Communauté & Expansion (Long Terme - 3 Mois+)
 *Objectif : Créer une plateforme communautaire et multi-supports.*
 
 ### 1. Fonctionnalités Sociales
-- [ ] **Groupes de Lecture** : Créer des groupes "40 Jours" avec des amis pour voir la progression de chacun.
-- [ ] **Leaderboard (Optionnel)** : Classement amical pour motiver (nombre de versets lus).
+- [ ] **Groupes "Halaqa"** : Créer des groupes privés pour suivre la progression collective (ex: défi 40 jours en famille).
+- [ ] **Partage Enrichi** : Génération d'images esthétiques de versets/hadiths pour partage réseaux sociaux (Instagram/WhatsApp).
 
-### 2. Contenu Enrichi
-- [ ] **Tafsir Comparé** : Ajouter d'autres sources de Tafsir (Ibn Kathir complet, As-Sa'di).
-- [ ] **Cours Vidéo** : Intégration de vidéos explicatives liées aux Juz.
-
-### 3. Application Native
-- [ ] **Capacitor / React Native** : Porter l'application web vers les stores (App Store / Play Store) pour de meilleures performances audio et notifications natives.
+### 2. Application Mobile Native
+- [ ] **Capacitor / Mobile** : Portage de la PWA en application native Android/iOS pour meilleures performances et notifications push.
 
 ---
 
 ## 🛠️ Maintenance Technique Continue
-- **Tests E2E** : Mettre en place des tests Cypress/Playwright pour les parcours critiques (Login -> Lecture -> Quiz).
-- **Accessibilité** : Audit a11y pour s'assurer que l'application est utilisable par tous.
+- **Tests Automatisés** : Ajouter des tests E2E (Playwright) pour les parcours critiques (Login -> Lecture -> Quiz).
+- **Audit Accessibilité (a11y)** : Garantir que l'app est navigable au clavier et lecteur d'écran.
