@@ -115,13 +115,29 @@ export default function HisnQuizPage() {
 
         if (optionId === currentCategory?.id) {
             setIsCorrect(true);
+            // Increment score immediately
+            const newScore = score + 1;
+            setScore(newScore);
+
+            // Update high score if needed
+            if (newScore > highScore) {
+                setHighScore(newScore);
+                localStorage.setItem('hisn-quiz-highscore', newScore.toString());
+                saveGenericQuizScore('hisn', newScore);
+            }
+
             // Wait a bit then next question
             setTimeout(() => {
-                setScore(prev => prev + 1);
                 generateQuestion();
             }, 1000);
         } else {
             setIsCorrect(false);
+            // Save final score before game over
+            if (score > highScore) {
+                setHighScore(score);
+                localStorage.setItem('hisn-quiz-highscore', score.toString());
+                saveGenericQuizScore('hisn', score);
+            }
             // Wait a bit then Game Over
             setTimeout(() => {
                 setGameState('game-over');

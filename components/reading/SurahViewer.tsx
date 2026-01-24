@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
+import { useSettings } from '@/context/SettingsContext';
 
 interface Ayah {
     id: number;
@@ -33,6 +34,10 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
     }>({ isOpen: false, surahNumber: 0, ayahNumber: 0, text: '' });
 
     // Tafsir State - Keep as is
+
+    // Settings
+    const { fontSize, fontSizes } = useSettings();
+    const currentFontSize = fontSizes[fontSize];
 
     // View State (Moved up to avoid TDZ)
     const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
@@ -172,7 +177,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                 className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${isAyahPlaying(ayah.surah, ayah.ayah) ? 'bg-primary/20 text-primary' : ''}`}
                                 onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
                             >
-                                <TajwidText text={ayah.text} className="inline" />
+                                <TajwidText text={ayah.text} className="inline" style={{ fontSize: currentFontSize }} />
                                 <span className="inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle mx-1 bg-background select-none">
                                     {ayah.ayah}
                                 </span>
@@ -225,7 +230,8 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                     >
                                         <TajwidText
                                             text={ayah.text}
-                                            className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
+                                            className="font-kufi leading-[2.2] text-foreground"
+                                            style={{ fontSize: currentFontSize }}
                                         />
                                     </div>
                                 </div>

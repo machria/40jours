@@ -6,6 +6,33 @@ import ReactMarkdown from 'react-markdown';
 import { TajwidText } from '@/components/TajwidText';
 import fs from 'fs/promises';
 import path from 'path';
+import { Metadata } from 'next';
+
+async function getSurahMeta(surahId: number) {
+    try {
+        const p = path.join(process.cwd(), 'public', 'surahs.json');
+        const file = await fs.readFile(p, 'utf-8');
+        const surahs = JSON.parse(file);
+        return surahs.find((s: any) => s.number === surahId);
+    } catch (e) {
+        return null;
+    }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+    const { id } = await params;
+    const surahId = parseInt(id);
+    const meta = await getSurahMeta(surahId);
+
+    if (!meta) {
+        return { title: 'Tafsir - Coran 40 Jours' };
+    }
+
+    return {
+        title: `Tafsir Ibn Kathir - Sourate ${meta.englishName}`,
+        description: `Explication complète (Tafsir Ibn Kathir) de la Sourate ${meta.englishName} (${meta.englishNameTranslation}). Comprendre le sens des versets du Coran.`,
+    };
+}
 
 // Helper to get Ayahs for a Surah (Serverside)
 async function getAyahsForSurah(surahId: number) {

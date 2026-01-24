@@ -6,9 +6,10 @@ import React, { useMemo } from 'react';
 interface TajwidTextProps {
     text: string;
     className?: string;
+    style?: React.CSSProperties;
 }
 
-export function TajwidText({ text, className = "" }: TajwidTextProps) {
+export function TajwidText({ text, className = "", style }: TajwidTextProps) {
     const segments = useMemo(() => {
         if (!text) return [];
 
@@ -59,7 +60,7 @@ export function TajwidText({ text, className = "" }: TajwidTextProps) {
     }, [text]);
 
     return (
-        <span className={className}>
+        <span className={className} style={style}>
             {segments.map((seg, i) => {
                 switch (seg.type) {
                     case 'qalqala':

@@ -30,8 +30,8 @@ Ce document trace l'avenir du projet, en se concentrant sur la stabilité techni
 - [x] **Search UX** : Améliorer l'autocomplétion et la prévisualisation des résultats dans la barre de recherche.
 
 ### 3. SEO & Visibilité
-- [ ] **Métadonnées Dynamiques** : Titres et descriptions uniques pour chaque Sourate, Hadith, et Leçon pour indexation Google.
-- [ ] **Sitemap Complet** : Génération automatique incluant toutes les routes dynamiques (Hadiths individuels).
+- [x] **Métadonnées Dynamiques** : Titres et descriptions uniques pour chaque Sourate, Hadith, et Leçon pour indexation Google.
+- [x] **Sitemap Complet** : Génération automatique incluant toutes les routes dynamiques (Hadiths individuels).
 
 ---
 
@@ -50,6 +50,10 @@ Ce document trace l'avenir du projet, en se concentrant sur la stabilité techni
 ### 3. Notes & Signets Avancés
 - [ ] **Prise de Notes** : Ajouter des notes personnelles privées sur un verset ou un hadith.
 - [ ] **Collections de Favoris** : Organiser les favoris par dossiers (ex: "Versets sur la patience", "Duas pour le matin").
+
+### 4. Contenu Enrichi
+- [x] **Contexte des Sourates** : Ajout de fiches détaillées (contexte, thèmes, objectifs) pour chaque sourate.
+- [ ] **Tafsir Comparé** : Ajouter d'autres sources de Tafsir (Ibn Kathir complet, As-Sa'di).
 
 ---
 

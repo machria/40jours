@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, BrainCircuit } from 'lucide-react';
+import { ChevronLeft, BrainCircuit, Info } from 'lucide-react';
 import SurahViewer from '@/components/reading/SurahViewer';
 import MemorizationQuiz from '@/components/surah/MemorizationQuiz';
+import SurahInfoModal from '@/components/reading/SurahInfoModal';
 
 interface SurahPageClientProps {
     ayahs: any[];
@@ -14,6 +15,7 @@ interface SurahPageClientProps {
 
 export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClientProps) {
     const [isQuizOpen, setIsQuizOpen] = useState(false);
+    const [isInfoOpen, setIsInfoOpen] = useState(false);
 
     return (
         <div className="min-h-screen bg-background">
@@ -24,6 +26,13 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                     onClose={() => setIsQuizOpen(false)}
                 />
             )}
+
+            <SurahInfoModal
+                isOpen={isInfoOpen}
+                onClose={() => setIsInfoOpen(false)}
+                surahId={surahId}
+                surahName={`Sourate ${meta?.englishName} (${meta?.name})`}
+            />
 
             {/* Header */}
             <header className="sticky top-0 z-20 bg-background/95 backdrop-blur border-b p-4 shadow-sm">
@@ -38,7 +47,16 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 md:gap-4">
+                        <button
+                            onClick={() => setIsInfoOpen(true)}
+                            className="bg-accent/10 hover:bg-accent/20 text-accent p-2 md:px-3 md:py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors"
+                            title="Contexte et Explication"
+                        >
+                            <Info className="w-4 h-4" />
+                            <span className="hidden sm:inline">Contexte</span>
+                        </button>
+
                         <button
                             onClick={() => setIsQuizOpen(true)}
                             className="bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors"

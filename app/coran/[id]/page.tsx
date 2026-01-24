@@ -10,10 +10,26 @@ import fs from 'fs';
 import path from 'path';
 
 // Generate Metadata
+// Generate Metadata
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const { id } = await params;
+    const surahId = parseInt(id);
+    const meta = getSurahMeta(surahId);
+
+    if (!meta) {
+        return {
+            title: `Sourate ${id} - Coran 40 Jours`,
+        };
+    }
+
     return {
-        title: `Sourate ${id} - Coran 40 Jours`,
+        title: `Sourate ${meta.englishName} (${meta.name}) - Lire et Écouter`,
+        description: `Lire la Sourate ${meta.englishName} (${meta.englishNameTranslation}) en ligne avec traduction française, phonétique et récitation audio. Chapitre ${surahId} du Saint Coran.`,
+        openGraph: {
+            title: `Sourate ${meta.englishName} - Coran 40 Jours`,
+            description: `Lire la Sourate ${meta.englishName} en arabe et français.`,
+            type: 'article',
+        }
     };
 }
 
