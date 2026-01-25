@@ -356,7 +356,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
-            <audio ref={audioRef} className="hidden" />
+            <audio ref={audioRef} className="hidden" preload="auto" playsInline />
         </div>
     );
 }

@@ -423,7 +423,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
-            <audio ref={audioRef} className="hidden" />
+            <audio ref={audioRef} className="hidden" preload="auto" playsInline />
         </div>
     );
 }

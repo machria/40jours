@@ -90,8 +90,13 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
         try {
             await audio.play();
             if (onAyahChange) onAyahChange(item);
-        } catch (err) {
-            console.error("Play failed", err);
+        } catch (err: any) {
+            if (err.name === 'AbortError') {
+                console.log('Audio play aborted (user switched track)');
+            } else {
+                console.error("Play failed", err);
+                setIsPlaying(false);
+            }
         } finally {
             setIsLoading(false);
         }

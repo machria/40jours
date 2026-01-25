@@ -264,7 +264,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
-            <audio ref={audioRef} className="hidden" />
+            <audio ref={audioRef} className="hidden" preload="auto" playsInline />
         </>
     );
 }
