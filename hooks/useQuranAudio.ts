@@ -67,7 +67,6 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
 
         if (audio.src !== window.location.origin + item.url && audio.src !== item.url) {
             audio.src = item.url;
-            audio.load(); // helpful for iOS
         }
 
         // Setup event listeners
@@ -143,10 +142,8 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     };
 
     const resume = () => {
-        if (audioRef.current) {
+        if (currentIndex !== -1 && audioRef.current) {
             audioRef.current.play().catch(console.error);
-        } else if (currentAyah) {
-            playAtIndex(currentIndex);
         } else if (playlist.length > 0) {
             playAtIndex(0);
         }
