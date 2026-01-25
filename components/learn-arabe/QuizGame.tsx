@@ -23,9 +23,26 @@ export default function QuizGame() {
     const [totalQuestions, setTotalQuestions] = useState(0);
     const [showResult, setShowResult] = useState(false);
     const [streak, setStreak] = useState(0);
+    // Weights for adaptive learning: letter.id -> weight (default 1)
+    // Higher weight = more likely to appear
+    const [weights, setWeights] = useState<Record<string, number>>({});
+
+    // Helper: Weighted Random Selection
+    const getWeightedLetter = (): Letter => {
+        const letters = ALPHABET;
+        const totalWeight = letters.reduce((sum, l) => sum + (weights[l.id] || 1), 0);
+        let random = Math.random() * totalWeight;
+
+        for (const letter of letters) {
+            const w = weights[letter.id] || 1;
+            if (random < w) return letter;
+            random -= w;
+        }
+        return letters[letters.length - 1];
+    };
 
     const generateQuestion = (): QuestionType => {
-        const letter = ALPHABET[Math.floor(Math.random() * ALPHABET.length)];
+        const letter = getWeightedLetter();
         // 70% form recognition (initial, medial, final), 30% sound recognition
         const type = Math.random() > 0.3 ? 'form' : 'sound';
 
@@ -37,7 +54,8 @@ export default function QuizGame() {
             const formType = ['initial', 'medial', 'final'][Math.floor(Math.random() * 3)] as 'initial' | 'medial' | 'final';
             context = formType;
             content = letter.forms[formType];
-            questionText = `Quelle est cette lettre (forme ${formType === 'initial' ? 'fixe/début' : formType === 'medial' ? 'médiane' : 'finale'}) ?`;
+            const formName = formType === 'initial' ? 'début' : formType === 'medial' ? 'milieu' : 'fin';
+            questionText = `Quelle lettre est écrite ainsi (au ${formName}) ?`;
         } else {
             context = 'sound';
             content = letter.arabic;
@@ -46,11 +64,10 @@ export default function QuizGame() {
 
         // Generate options (names of letters)
         const correct = letter.name;
-        const distractors = ALPHABET
-            .filter(l => l.id !== letter.id)
-            .sort(() => Math.random() - 0.5)
-            .slice(0, 3)
-            .map(l => l.name);
+        // Ensure unique distractors
+        const otherLetters = ALPHABET.filter(l => l.id !== letter.id);
+        const shuffledOthers = [...otherLetters].sort(() => Math.random() - 0.5);
+        const distractors = shuffledOthers.slice(0, 3).map(l => l.name);
 
         const options = [...distractors, correct].sort(() => Math.random() - 0.5);
 
@@ -65,8 +82,29 @@ export default function QuizGame() {
     };
 
     useEffect(() => {
+        // Hydrate weigths from local storage if needed, or start fresh
+        const stored = localStorage.getItem('arabic-quiz-weights');
+        if (stored) {
+            try { setWeights(JSON.parse(stored)); } catch (e) { }
+        }
         setCurrentQuestion(generateQuestion());
     }, []);
+
+    const updateWeight = (letterName: string, correct: boolean) => {
+        const letter = ALPHABET.find(l => l.name === letterName);
+        if (!letter) return;
+
+        setWeights(prev => {
+            const newWeights = { ...prev };
+            const currentW = newWeights[letter.id] || 1;
+            // If wrong: Increase weight significantly (so it appears sooner)
+            // If correct: Decrease weight slightly (but min 1)
+            newWeights[letter.id] = correct ? Math.max(1, currentW * 0.5) : currentW + 5;
+
+            localStorage.setItem('arabic-quiz-weights', JSON.stringify(newWeights));
+            return newWeights;
+        });
+    };
 
     const handleAnswerSelect = (answer: string) => {
         if (selectedAnswer !== null) return;
@@ -77,6 +115,7 @@ export default function QuizGame() {
         if (answer === currentQuestion?.correctAnswer) {
             setScore(prev => prev + 1);
             setStreak(prev => prev + 1);
+            updateWeight(currentQuestion.correctAnswer, true);
 
             // Audio feedback for correct answer
             const letter = ALPHABET.find(l => l.name === currentQuestion.correctAnswer);
@@ -91,6 +130,9 @@ export default function QuizGame() {
 
         } else {
             setStreak(0);
+            if (currentQuestion) {
+                updateWeight(currentQuestion.correctAnswer, false);
+            }
         }
     };
 
@@ -98,6 +140,7 @@ export default function QuizGame() {
         setSelectedAnswer(null);
         setShowResult(false);
         setCurrentQuestion(generateQuestion());
+        // Force re-render to pick up new weight? State update handles it.
     };
 
     if (!currentQuestion) return <div className="text-center p-10">Chargement...</div>;

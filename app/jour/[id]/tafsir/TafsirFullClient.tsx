@@ -1,93 +1,21 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, List, Grid, BookOpen, Play, Loader2 } from 'lucide-react';
+import { ChevronLeft, List, Grid, BookOpen, Play } from 'lucide-react';
 import { ReadingDay } from '@/data/plan40jours';
 import { Ayah } from '@/lib/quranApi';
 import { motion } from 'framer-motion';
 import { TajwidText } from '@/components/TajwidText';
-import { getTafsirIndex, resolveTafsirKey, fetchTafsirContent } from '@/lib/clientTafsir';
 
 export interface TafsirGroup {
     ayahs: Ayah[];
     tafsirContent: string;
-    id: string;
+    id: string; // unique hash or index
 }
 
-export default function TafsirFullClient({ day, ayahs }: { day: ReadingDay, ayahs: Ayah[] }) {
+export default function TafsirFullClient({ day, initialGroups }: { day: ReadingDay, initialGroups: TafsirGroup[] }) {
     const [viewMode, setViewMode] = useState<'detailed' | 'aggregated'>('aggregated');
-    const [groups, setGroups] = useState<TafsirGroup[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        async function loadTafsir() {
-            try {
-                // 1. Get Index
-                const index = await getTafsirIndex();
-
-                // 2. Group ayahs by Tafsir Key
-                const tempGroups: { key: string; ayahs: Ayah[] }[] = [];
-
-                for (const ayah of ayahs) {
-                    const key = resolveTafsirKey(index, ayah.surahNumber, ayah.numberInSurah);
-                    if (!key) {
-                        // If no key found, treat as independent or missing
-                        // fallback: create a unique key so it stands alone or group with "unknown"
-                        // ideally we just put it in a separate group
-                        tempGroups.push({ key: `missing-${ayah.surahNumber}-${ayah.numberInSurah}`, ayahs: [ayah] });
-                        continue;
-                    }
-
-                    const lastGroup = tempGroups[tempGroups.length - 1];
-                    if (lastGroup && lastGroup.key === key) {
-                        lastGroup.ayahs.push(ayah);
-                    } else {
-                        tempGroups.push({ key, ayahs: [ayah] });
-                    }
-                }
-
-                // 3. Fetch Content for unique keys
-                // Filter unique keys to avoid fetching same file multiple times if we weren't grouping strictly adjacent?
-                // Actually tempGroups are adjacent by definition of the loop.
-                // But different groups might share same key? No, because if they share same key they would be merged in the loop, 
-                // UNLESS the array of ayahs is not sorted? Quran pages are usually sorted. Assuming sorted.
-
-                const loadedGroups: TafsirGroup[] = await Promise.all(tempGroups.map(async (g) => {
-                    let content = "Tafsir non disponible.";
-                    if (!g.key.startsWith('missing-')) {
-                        const [s, a] = g.key.split('_').map(Number);
-                        const fetched = await fetchTafsirContent(s, a); // This uses cache if we implemented cache, but clientTafsir just fetches.
-                        // Browser cache should handle dupes if any.
-                        if (fetched) content = fetched;
-                    }
-
-                    return {
-                        ayahs: g.ayahs,
-                        tafsirContent: content,
-                        id: g.key
-                    };
-                }));
-
-                setGroups(loadedGroups);
-            } catch (e) {
-                console.error("Failed to load tafsir", e);
-            } finally {
-                setIsLoading(false);
-            }
-        }
-
-        loadTafsir();
-    }, [ayahs]);
-
-    if (isLoading) {
-        return (
-            <div className="flex flex-col items-center justify-center min-h-screen gap-4">
-                <Loader2 className="w-8 h-8 animate-spin text-primary" />
-                <p className="text-muted-foreground">Chargement du Tafsir...</p>
-            </div>
-        );
-    }
 
     return (
         <div className="flex flex-col min-h-screen">
@@ -108,7 +36,7 @@ export default function TafsirFullClient({ day, ayahs }: { day: ReadingDay, ayah
             </header>
 
             <div className="pt-20 pb-10 px-4 max-w-4xl mx-auto w-full space-y-8">
-                {groups.map((group, idx) => (
+                {initialGroups.map((group, idx) => (
                     <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 20 }}

@@ -2,7 +2,7 @@
 
 import { X, BookOpen } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchTafsirContent } from '@/lib/clientTafsir';
+import { getLocalTafsir } from '@/app/actions/tafsir';
 import { TajwidText } from '@/components/TajwidText';
 import ReactMarkdown from 'react-markdown';
 
@@ -18,7 +18,7 @@ interface TafsirModalProps {
 export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, ayahText, translation }: TafsirModalProps) {
     const { data: tafsirContent, isLoading } = useQuery({
         queryKey: ['tafsir', surahNumber, ayahNumber],
-        queryFn: () => fetchTafsirContent(surahNumber, ayahNumber),
+        queryFn: () => getLocalTafsir(surahNumber, ayahNumber),
         enabled: isOpen && !!surahNumber && !!ayahNumber,
         staleTime: Infinity
     });
