@@ -33,6 +33,10 @@ function getPhoneticData() {
     }
 }
 
+import { auth } from "@/auth";
+import dbConnect from "@/lib/db";
+import User from "@/models/User";
+
 export default async function JuzPage({ params }: PageProps) {
     const { id: paramId } = await params;
     const id = parseInt(paramId);
@@ -40,6 +44,18 @@ export default async function JuzPage({ params }: PageProps) {
 
     if (!juz) {
         notFound();
+    }
+
+    // Check user progress
+    const session = await auth();
+    let isCompleted = false;
+
+    if (session?.user?.email) {
+        await dbConnect();
+        const user = await User.findOne({ email: session.user.email }).select('completedJuzs');
+        if (user && user.completedJuzs) {
+            isCompleted = user.completedJuzs.includes(id);
+        }
     }
 
     // Fetch all verses for this Juz
@@ -70,9 +86,6 @@ export default async function JuzPage({ params }: PageProps) {
         });
     }
 
-    // Sort just in case, though pages should be ordered
-    // allAyahs.sort((a, b) => (a.surahNumber - b.surahNumber) || (a.numberInSurah - b.numberInSurah));
-
     return (
         <main className="container mx-auto px-4 py-8">
             <JuzViewer
@@ -80,6 +93,8 @@ export default async function JuzPage({ params }: PageProps) {
                 juzId={id}
                 theme={juz.theme}
                 description={juz.description}
+                isCompleted={isCompleted}
+                userEmail={session?.user?.email}
             />
         </main>
     );

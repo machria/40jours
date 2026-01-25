@@ -61,6 +61,8 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
     }));
 
     // Audio Hook
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
     const {
         isPlaying,
         currentAyah,
@@ -76,7 +78,8 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
             if (viewMode === 'list') {
                 scrollToAyah(ayah.ayah);
             }
-        }
+        },
+        audioRef
     });
 
     const isPlayingSequence = isPlaying && !!currentAyah;
@@ -261,6 +264,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
+            <audio ref={audioRef} className="hidden" />
         </>
     );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { plan40jours } from '@/data/plan40jours';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search, Repeat, Repeat1 } from 'lucide-react';
 import { useQueries } from '@tanstack/react-query';
@@ -18,6 +18,7 @@ interface ReadingClientProps {
 }
 
 export default function ReadingClient({ dayId }: ReadingClientProps) {
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const dayPlan = plan40jours.find(d => d.jour === dayId);
 
     // Tafsir State
@@ -92,7 +93,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         togglePlay,
         toggleRepeat,
         repeatMode
-    } = useQuranAudio({ playlist });
+    } = useQuranAudio({ playlist, audioRef });
 
     // Scroll Persistence
     useScrollPersistence({
@@ -337,6 +338,32 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                     </div>
                 )}
 
+                {/* Validation Button (Bottom) */}
+                {allPagesLoaded && (
+                    <div className="flex justify-center my-8">
+                        <button
+                            onClick={handleCompletion}
+                            disabled={isCompleted}
+                            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all shadow-md transform hover:scale-105 ${isCompleted
+                                ? 'bg-green-100 text-green-700 border-2 border-green-200 hover:bg-green-200'
+                                : 'bg-white text-gray-500 border-2 border-gray-200 hover:border-emerald-500 hover:text-emerald-600'
+                                }`}
+                        >
+                            {isCompleted ? (
+                                <>
+                                    <CheckCircle className="w-5 h-5" />
+                                    Jour Validé
+                                </>
+                            ) : (
+                                <>
+                                    <CheckCircle className="w-5 h-5 opacity-50" />
+                                    Marquer comme Terminé
+                                </>
+                            )}
+                        </button>
+                    </div>
+                )}
+
                 {/* End of Day Navigation */}
                 {allPagesLoaded && (
                     <div className="flex justify-center py-8">
@@ -396,6 +423,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
+            <audio ref={audioRef} className="hidden" />
         </div>
     );
 }

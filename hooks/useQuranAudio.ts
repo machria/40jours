@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, MutableRefObject } from 'react';
 
 export type AudioRepeatMode = 'off' | 'single' | 'all';
 
@@ -18,10 +18,10 @@ export interface AyahAudio {
 interface UseQuranAudioProps {
     playlist: AyahAudio[];
     onAyahChange?: (ayah: AyahAudio) => void;
+    audioRef: MutableRefObject<HTMLAudioElement | null>;
 }
 
-export function useQuranAudio({ playlist, onAyahChange }: UseQuranAudioProps) {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
+export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudioProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentIndex, setCurrentIndex] = useState<number>(-1);
     const [repeatMode, setRepeatMode] = useState<AudioRepeatMode>('off');
@@ -57,16 +57,21 @@ export function useQuranAudio({ playlist, onAyahChange }: UseQuranAudioProps) {
     const playAtIndex = useCallback(async (index: number) => {
         if (index < 0 || index >= playlist.length) return;
 
-        if (audioRef.current) {
-            audioRef.current.pause();
-            audioRef.current = null;
-        }
+        const audio = audioRef.current;
+        if (!audio) return;
 
         const item = playlist[index];
-        const audio = new Audio(item.url);
-        audioRef.current = audio;
+        // Only set src if it changed or if we are restarting?
+        // Actually, if we want to play a new item, we must set src.
+        // If we want to resume, we use `resume`.
+
+        if (audio.src !== window.location.origin + item.url && audio.src !== item.url) {
+            audio.src = item.url;
+            audio.load(); // helpful for iOS
+        }
 
         // Setup event listeners
+        // We assign directly to onended property to avoid piling up listeners
         audio.onended = () => {
             handleEnded(index);
         };
@@ -105,7 +110,11 @@ export function useQuranAudio({ playlist, onAyahChange }: UseQuranAudioProps) {
 
         if (mode === 'single') {
             // Replay same index
-            playAtIndex(endedIndex);
+            // We need to re-trigger play
+            if (audioRef.current) {
+                audioRef.current.currentTime = 0;
+                audioRef.current.play().catch(console.error);
+            }
         } else {
             // Go to next
             if (endedIndex < list.length - 1) {
@@ -130,7 +139,7 @@ export function useQuranAudio({ playlist, onAyahChange }: UseQuranAudioProps) {
 
     const resume = () => {
         if (audioRef.current) {
-            audioRef.current.play();
+            audioRef.current.play().catch(console.error);
         } else if (currentAyah) {
             playAtIndex(currentIndex);
         } else if (playlist.length > 0) {
@@ -174,7 +183,6 @@ export function useQuranAudio({ playlist, onAyahChange }: UseQuranAudioProps) {
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
-                audioRef.current = null;
             }
         };
     }, []);

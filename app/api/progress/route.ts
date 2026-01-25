@@ -47,6 +47,7 @@ export async function GET() {
     }
 }
 
+
 export async function POST(req: Request) {
     try {
         const session = await auth();
@@ -55,7 +56,7 @@ export async function POST(req: Request) {
         }
 
         const body = await req.json();
-        const { dayId, completed } = body;
+        const { dayId, completed, juzId } = body;
 
         await dbConnect();
 
@@ -63,41 +64,95 @@ export async function POST(req: Request) {
 
         if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 });
 
-        // Ensure dailyProgress exists
-        if (!user.dailyProgress) {
-            user.dailyProgress = new Map();
-        }
+        // Handle Juz Completion
+        if (juzId) {
+            if (!user.completedJuzs) user.completedJuzs = [];
 
-        // Mongoose Map set
-        user.dailyProgress.set(dayId.toString(), completed);
+            let newBadgesAdded: string[] = [];
 
-        // Ensure activityHistory exists (for existing users who don't have this field yet)
-        if (!user.activityHistory) {
-            user.activityHistory = new Map();
-        }
+            if (completed) {
+                // Add if not exists
+                if (!user.completedJuzs.includes(juzId)) {
+                    user.completedJuzs.push(juzId);
+                }
 
-        // Update Activity History
-        if (completed) {
-            const today = new Date().toISOString().split('T')[0];
-            const currentCount = user.activityHistory.get(today) || 0;
-            user.activityHistory.set(today, currentCount + 1);
-        }
+                // Ensure activityHistory exists
+                if (!user.activityHistory) {
+                    user.activityHistory = new Map();
+                }
 
-        // Update Streak
-        user.streak = calculateStreak(user.activityHistory);
+                // Update Activity History
+                const today = new Date().toISOString().split('T')[0];
+                const currentCount = user.activityHistory.get(today) || 0;
+                user.activityHistory.set(today, currentCount + 1);
 
-        // Check Badges
-        const newBadges = checkBadges(user);
-        if (newBadges.length > 0) {
-            if (!user.badges) user.badges = [];
-            newBadges.forEach(badgeId => {
-                user.badges.push({ id: badgeId, unlockedAt: new Date() });
+                // Update Streak
+                user.streak = calculateStreak(user.activityHistory);
+
+                // Check Badges
+                const potentialBadges = checkBadges(user);
+                if (potentialBadges.length > 0) {
+                    if (!user.badges) user.badges = [];
+                    potentialBadges.forEach(badgeId => {
+                        user.badges.push({ id: badgeId, unlockedAt: new Date() });
+                    });
+                    newBadgesAdded = potentialBadges;
+                }
+
+            } else {
+                // Remove if exists
+                user.completedJuzs = user.completedJuzs.filter((id: number) => id !== juzId);
+            }
+
+            await user.save();
+            return NextResponse.json({
+                success: true,
+                completedJuzs: user.completedJuzs,
+                newBadges: newBadgesAdded,
+                newStreak: user.streak
             });
         }
 
-        await user.save();
+        // Handle Day Completion (Existing Logic)
+        if (dayId) {
+            // Ensure dailyProgress exists
+            if (!user.dailyProgress) {
+                user.dailyProgress = new Map();
+            }
 
-        return NextResponse.json({ success: true, newBadges, newStreak: user.streak });
+            // Mongoose Map set
+            user.dailyProgress.set(dayId.toString(), completed);
+
+            // Ensure activityHistory exists (for existing users who don't have this field yet)
+            if (!user.activityHistory) {
+                user.activityHistory = new Map();
+            }
+
+            // Update Activity History
+            if (completed) {
+                const today = new Date().toISOString().split('T')[0];
+                const currentCount = user.activityHistory.get(today) || 0;
+                user.activityHistory.set(today, currentCount + 1);
+            }
+
+            // Update Streak
+            user.streak = calculateStreak(user.activityHistory);
+
+            // Check Badges
+            const newBadges = checkBadges(user);
+            if (newBadges.length > 0) {
+                if (!user.badges) user.badges = [];
+                newBadges.forEach(badgeId => {
+                    user.badges.push({ id: badgeId, unlockedAt: new Date() });
+                });
+            }
+
+            await user.save();
+
+            return NextResponse.json({ success: true, newBadges, newStreak: user.streak });
+        }
+
+        return NextResponse.json({ error: "Missing parameters" }, { status: 400 });
 
     } catch (error) {
         console.error(error);
