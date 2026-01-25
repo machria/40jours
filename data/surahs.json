@@ -5,7 +5,8 @@
     "englishName": "Al-Faatiha",
     "englishNameTranslation": "The Opening",
     "numberOfAyahs": 7,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "La mise en place de la relation intégrale serviteur–Seigneur : connaissance d’Allah, reconnaissance de Sa royauté et de Sa miséricorde, prise de conscience du Jugement, engagement dans l’adoration et la demande de guidée."
   },
   {
     "number": 2,
@@ -13,7 +14,8 @@
     "englishName": "Al-Baqara",
     "englishNameTranslation": "The Cow",
     "numberOfAyahs": 286,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Former une communauté croyante complète, dans sa croyance, son culte, ses lois et sa relation à l’histoire des révélations passées."
   },
   {
     "number": 3,
@@ -21,7 +23,8 @@
     "englishName": "Aal-i-Imraan",
     "englishNameTranslation": "The Family of Imraan",
     "numberOfAyahs": 200,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Fortifier la foi de la communauté face aux pressions doctrinales (Ahl al‑Kitâb) et aux épreuves militaires (Uḥud), en la ramenant à la sincérité, à la patience et à l’unicité d’Allah."
   },
   {
     "number": 4,
@@ -29,7 +32,8 @@
     "englishName": "An-Nisaa",
     "englishNameTranslation": "The Women",
     "numberOfAyahs": 176,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Bâtir une société juste et équilibrée en commençant par la cellule familiale, en protégeant les plus vulnérables (femmes, orphelins) et en consolidant les fondations de l’autorité légitime et de la justice."
   },
   {
     "number": 5,
@@ -37,7 +41,8 @@
     "englishName": "Al-Maaida",
     "englishNameTranslation": "The Table",
     "numberOfAyahs": 120,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Sceller les engagements : engagement du croyant envers Allah, envers la loi révélée, et envers les pactes sociaux et politiques, tout en rappelant l’exemple des communautés précédentes qui ont trahi leurs engagements."
   },
   {
     "number": 6,
@@ -45,7 +50,8 @@
     "englishName": "Al-An'aam",
     "englishNameTranslation": "The Cattle",
     "numberOfAyahs": 165,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Purifier la croyance du shirk et des superstitions, en installant un tawḥîd intellectuel et pratique, ferme et argumenté."
   },
   {
     "number": 7,
@@ -53,7 +59,8 @@
     "englishName": "Al-A'raaf",
     "englishNameTranslation": "The Heights",
     "numberOfAyahs": 206,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Montrer la continuité du message prophétique et les conséquences de l’obéissance ou de la désobéissance, en projetant le lecteur dans l’histoire et dans l’au‑delà."
   },
   {
     "number": 8,
@@ -61,7 +68,8 @@
     "englishName": "Al-Anfaal",
     "englishNameTranslation": "The Spoils of War",
     "numberOfAyahs": 75,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Poser les bases éthiques et juridiques du jihâd défensif et de la gestion de la guerre, en montrant que la victoire dépend d’abord de la foi, de la sincérité et de l’unité."
   },
   {
     "number": 9,
@@ -69,7 +77,8 @@
     "englishName": "At-Tawba",
     "englishNameTranslation": "The Repentance",
     "numberOfAyahs": 129,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Purifier la communauté de trois choses : la confusion dans les pactes avec les polythéistes, l’hypocrisie interne, et la mollesse dans le jihâd et l’obéissance au Prophète ﷺ."
   },
   {
     "number": 10,
@@ -77,7 +86,8 @@
     "englishName": "Yunus",
     "englishNameTranslation": "Jonas",
     "numberOfAyahs": 109,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Confirmer le message du Prophète ﷺ (tawḥîd, risâla, âkhira) et de montrer que le salut dépend de la foi et de la repentance sincère avant la venue du châtiment, à l’exemple du peuple de Yûnus."
   },
   {
     "number": 11,
@@ -85,7 +95,8 @@
     "englishName": "Hud",
     "englishNameTranslation": "Hud",
     "numberOfAyahs": 123,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Raffermir le cœur du Prophète ﷺ et des croyants en montrant que la voie des prophètes est celle de la patience et de la constance, et que la fin appartient toujours à la vérité même si le délai est long."
   },
   {
     "number": 12,
@@ -93,7 +104,8 @@
     "englishName": "Yusuf",
     "englishNameTranslation": "Joseph",
     "numberOfAyahs": 111,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Montrer la sagesse du décret d’Allah et d’enseigner la patience, la pureté morale et le pardon, tout en consolant le Prophète ﷺ face au complot de son peuple, comme Yûsuf face au complot de ses frères."
   },
   {
     "number": 13,
@@ -101,7 +113,8 @@
     "englishName": "Ar-Ra'd",
     "englishNameTranslation": "The Thunder",
     "numberOfAyahs": 43,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Réveiller les cœurs par les signes de la création et du Coran, en montrant que seuls les gens de cœur vivant, patients et reconnaissants profitent vraiment de ces signes."
   },
   {
     "number": 14,
@@ -109,7 +122,8 @@
     "englishName": "Ibrahim",
     "englishNameTranslation": "Abraham",
     "numberOfAyahs": 52,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Lier la foi à la gratitude : le croyant reconnaissant voit les bienfaits d’Allah dans l’histoire, dans sa propre vie et dans la guidance, et suit le modèle d’Ibrâhîm dans le tawḥîd, la prière et la confiance en Allah."
   },
   {
     "number": 15,
@@ -117,7 +131,8 @@
     "englishName": "Al-Hijr",
     "englishNameTranslation": "The Rock",
     "numberOfAyahs": 99,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rassurer le Prophète ﷺ sur la protection du Coran et de la vérité, tout en avertissant les négateurs que leurs moqueries ne les sauveront pas du sort de peuples comme Thamûd et le peuple de Lûṭ."
   },
   {
     "number": 16,
@@ -125,7 +140,8 @@
     "englishName": "An-Nahl",
     "englishNameTranslation": "The Bee",
     "numberOfAyahs": 128,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Multiplier les signes de la création pour prouver l’unicité d’Allah et inciter à la shukr (gratitude), en montrant que même les abeilles obéissent parfaitement à leur Créateur, contrairement aux hommes qui Lui associent des partenaires."
   },
   {
     "number": 17,
@@ -133,7 +149,8 @@
     "englishName": "Al-Israa",
     "englishNameTranslation": "The Night Journey",
     "numberOfAyahs": 111,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Guider vers la droiture morale et spirituelle, en ancrant la foi par l’événement de l’Isra’ et en rappelant que la vraie réforme commence par la famille et les mœurs."
   },
   {
     "number": 18,
@@ -141,7 +158,8 @@
     "englishName": "Al-Kahf",
     "englishNameTranslation": "The Cave",
     "numberOfAyahs": 110,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Protéger contre les épreuves de la foi (Dajjâl, richesse, pouvoir) en montrant que la vraie sauvegarde est dans la reliance à Allah et la foi pure, comme les jeunes de la caverne."
   },
   {
     "number": 19,
@@ -149,7 +167,8 @@
     "englishName": "Maryam",
     "englishNameTranslation": "Mary",
     "numberOfAyahs": 98,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Réchauffer les cœurs par les histoires de miséricorde divine envers les pieux et les invocations des prophètes, tout en affirmant la vérité sur ‘Îsâ face aux déviations chrétiennes."
   },
   {
     "number": 20,
@@ -157,7 +176,8 @@
     "englishName": "Taa-Haa",
     "englishNameTranslation": "Taa-Haa",
     "numberOfAyahs": 135,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rassurer le Prophète ﷺ dans sa mission en lui montrant le parcours de Mûsâ : faiblesse initiale → signes divins → victoire sur Pharaon, malgré les épreuves."
   },
   {
     "number": 21,
@@ -165,7 +185,8 @@
     "englishName": "Al-Anbiyaa",
     "englishNameTranslation": "The Prophets",
     "numberOfAyahs": 112,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Montrer la continuité des prophètes et que le rejet du message divin est une constante historique, mais que la victoire appartient toujours à Allah et Ses messagers patients."
   },
   {
     "number": 22,
@@ -173,7 +194,8 @@
     "englishName": "Al-Hajj",
     "englishNameTranslation": "The Pilgrimage",
     "numberOfAyahs": 78,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Régler les questions du pèlerinage et d’autoriser le jihâd défensif pour libérer la Ka‘ba des oppresseurs, tout en appelant à la foi pure face aux épreuves eschatologiques."
   },
   {
     "number": 23,
@@ -181,7 +203,8 @@
     "englishName": "Al-Muminoon",
     "englishNameTranslation": "The Believers",
     "numberOfAyahs": 118,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dépeindre le vrai croyant par ses actes concrets et de prouver le tawḥîd par la création, répondant aux railleries des Quraysh sur la pauvreté des musulmans."
   },
   {
     "number": 24,
@@ -189,7 +212,8 @@
     "englishName": "An-Noor",
     "englishNameTranslation": "The Light",
     "numberOfAyahs": 64,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Protéger l’honneur et la pureté de la communauté par des lois strictes contre la diffamation et l’immoralité, tout en illuminant les cœurs par la métaphore de la Lumière divine."
   },
   {
     "number": 25,
@@ -197,7 +221,8 @@
     "englishName": "Al-Furqaan",
     "englishNameTranslation": "The Criterion",
     "numberOfAyahs": 77,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Présenter le Coran comme critère ultime distinguant le bien du mal, en réfutant les polythéistes et en dépeignant les vrais croyants comme modèle."
   },
   {
     "number": 26,
@@ -205,7 +230,8 @@
     "englishName": "Ash-Shu'araa",
     "englishNameTranslation": "The Poets",
     "numberOfAyahs": 227,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Défendre la mission prophétique en montrant le schéma récurrent du rejet des messagers, et de réfuter l’accusation de poésie en opposant le Coran aux poètes égarés."
   },
   {
     "number": 27,
@@ -213,7 +239,8 @@
     "englishName": "An-Naml",
     "englishNameTranslation": "The Ant",
     "numberOfAyahs": 93,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver la prophétie par les récits de Sulaymân (contrôle de la nature, jinns) et de montrer que même les créatures mineures comme la fourmi reconnaissent la grandeur d’Allah."
   },
   {
     "number": 28,
@@ -221,7 +248,8 @@
     "englishName": "Al-Qasas",
     "englishNameTranslation": "The Stories",
     "numberOfAyahs": 88,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rassurer le Prophète ﷺ et les croyants par le récit complet de Mûsâ, montrant que la victoire sur l’oppression vient après épreuve et patience, et d’avertir les arrogants comme Qârûn."
   },
   {
     "number": 29,
@@ -229,7 +257,8 @@
     "englishName": "Al-Ankaboot",
     "englishNameTranslation": "The Spider",
     "numberOfAyahs": 69,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Préparer à l’épreuve (fitna) en montrant que la vraie foi se révèle dans la persévérance, et que les alliances avec les mécréants sont illusoires comme la toile d’araignée."
   },
   {
     "number": 30,
@@ -237,7 +266,8 @@
     "englishName": "Ar-Room",
     "englishNameTranslation": "The Romans",
     "numberOfAyahs": 60,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver la véracité du Coran par une prédiction précise (victoire romaine 614–624), tout en invitant à contempler les signes de création pour renforcer le tawḥîd."
   },
   {
     "number": 31,
@@ -245,7 +275,8 @@
     "englishName": "Luqman",
     "englishNameTranslation": "Luqman",
     "numberOfAyahs": 34,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Transmettre la sagesse pratique du sage pieux, centrée sur tawḥîd, piété filiale, humilité et patience, comme modèle pour les croyants face aux épreuves."
   },
   {
     "number": 32,
@@ -253,7 +284,8 @@
     "englishName": "As-Sajda",
     "englishNameTranslation": "The Prostration",
     "numberOfAyahs": 30,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Affirmer le tawḥîd créateur, la prophétie de Muḥammad ﷺ et la résurrection, en appelant à la prosternation reconnaissante."
   },
   {
     "number": 33,
@@ -261,7 +293,8 @@
     "englishName": "Al-Ahzaab",
     "englishNameTranslation": "The Clans",
     "numberOfAyahs": 73,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Consolider l’unité face aux coalisés et hypocrites, en posant des règles familiales/sociales et en affirmant la suprématie de l’obéissance au Prophète ﷺ."
   },
   {
     "number": 34,
@@ -269,7 +302,8 @@
     "englishName": "Saba",
     "englishNameTranslation": "Sheba",
     "numberOfAyahs": 54,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Avertir contre l’ingratitude face à la prospérité par orgueil, en montrant que les bienfaits divins exigent tawḥîd et humilité."
   },
   {
     "number": 35,
@@ -277,7 +311,8 @@
     "englishName": "Faatir",
     "englishNameTranslation": "The Originator",
     "numberOfAyahs": 45,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver toute-puissance Allah création vs. idoles inutiles, exhortant à reconnaissance bienfaits et monothéisme."
   },
   {
     "number": 36,
@@ -285,7 +320,8 @@
     "englishName": "Yaseen",
     "englishNameTranslation": "Yaseen",
     "numberOfAyahs": 83,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Réveiller cœurs par signes universels/résurrection, confirmant mission Prophète ﷺ, comme « cœur Coran »."
   },
   {
     "number": 37,
@@ -293,7 +329,8 @@
     "englishName": "As-Saaffaat",
     "englishNameTranslation": "Those drawn up in Ranks",
     "numberOfAyahs": 182,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver unité divine par anges/prophètes, montrant rejet message récurrent, victoire vérité."
   },
   {
     "number": 38,
@@ -301,7 +338,8 @@
     "englishName": "Saad",
     "englishNameTranslation": "The letter Saad",
     "numberOfAyahs": 88,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Consoler Prophète ﷺ par exemples Dâwûd/Sulaymân/Ayyûb éprouvés/récompensés, réfutant accusations folie."
   },
   {
     "number": 39,
@@ -309,7 +347,8 @@
     "englishName": "Az-Zumar",
     "englishNameTranslation": "The Groups",
     "numberOfAyahs": 75,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Inviter au repentir et au libre choix, avertissant des groupes au Jour du Jugement tout en affirmant la miséricorde d'Allah."
   },
   {
     "number": 40,
@@ -317,7 +356,8 @@
     "englishName": "Ghafir",
     "englishNameTranslation": "The Forgiver",
     "numberOfAyahs": 85,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Inviter au repentir par la miséricorde infinie d'Allah, avant le jugement inéluctable, illustré par le récit de Mûsâ et Pharaon."
   },
   {
     "number": 41,
@@ -325,7 +365,8 @@
     "englishName": "Fussilat",
     "englishNameTranslation": "Explained in detail",
     "numberOfAyahs": 54,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Affirmer que le Coran est un guide explicite, avertissant des châtiments passés et invitant à la prosternation."
   },
   {
     "number": 42,
@@ -333,7 +374,8 @@
     "englishName": "Ash-Shura",
     "englishNameTranslation": "Consultation",
     "numberOfAyahs": 53,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Lier le tawḥîd à la consultation (Shura), montrant que la révélation continue et appelant à l'unité et la justice parmi les croyants."
   },
   {
     "number": 43,
@@ -341,7 +383,8 @@
     "englishName": "Az-Zukhruf",
     "englishNameTranslation": "Ornaments of gold",
     "numberOfAyahs": 89,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Réfuter le polythéisme et les superstitions, en opposant les ornements de ce monde au Paradis des pieux."
   },
   {
     "number": 44,
@@ -349,7 +392,8 @@
     "englishName": "Ad-Dukhaan",
     "englishNameTranslation": "The Smoke",
     "numberOfAyahs": 59,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Avertir de l'imminence du châtiment (fumée) tout en rappelant la miséricorde de la révélation nocturne."
   },
   {
     "number": 45,
@@ -357,7 +401,8 @@
     "englishName": "Al-Jaathiya",
     "englishNameTranslation": "Crouching",
     "numberOfAyahs": 37,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Confirmer les signes d'Allah dans l'univers et dénoncer l'orgueil de ceux qui refusent la vérité."
   },
   {
     "number": 46,
@@ -365,7 +410,8 @@
     "englishName": "Al-Ahqaf",
     "englishNameTranslation": "The Dunes",
     "numberOfAyahs": 35,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Confirmer que le Coran est un miracle entendu par les djinns, avertir contre l'orgueil (comme 'Âd) et exhorter à la piété filiale."
   },
   {
     "number": 47,
@@ -373,7 +419,8 @@
     "englishName": "Muhammad",
     "englishNameTranslation": "Muhammad",
     "numberOfAyahs": 38,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Encourager le jihâd avec sincérité, démasquer les hypocrites et promettre la victoire aux endurants."
   },
   {
     "number": 48,
@@ -381,7 +428,8 @@
     "englishName": "Al-Fath",
     "englishNameTranslation": "The Victory",
     "numberOfAyahs": 29,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Confirmer que le traité de Hudaybiyya est une victoire divine éclatante et encourager la foi et la patience."
   },
   {
     "number": 49,
@@ -389,7 +437,8 @@
     "englishName": "Al-Hujuraat",
     "englishNameTranslation": "The Inner Apartments",
     "numberOfAyahs": 18,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Établir l'étiquette islamique pour préserver l'unité, le respect du Prophète ﷺ et éviter les maux sociaux comme la médisance."
   },
   {
     "number": 50,
@@ -397,7 +446,8 @@
     "englishName": "Qaaf",
     "englishNameTranslation": "The letter Qaaf",
     "numberOfAyahs": 45,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rappeler la proximité d'Allah (veine jugulaire), l'enregistrement des actes par les anges et la réalité inéluctable de la résurrection."
   },
   {
     "number": 51,
@@ -405,7 +455,8 @@
     "englishName": "Adh-Dhaariyat",
     "englishNameTranslation": "The Winnowing Winds",
     "numberOfAyahs": 60,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Lier les signes de la nature (les vents) à la vérité de la résurrection et rappeler que la subsistance dépend d'Allah seul."
   },
   {
     "number": 52,
@@ -413,7 +464,8 @@
     "englishName": "At-Tur",
     "englishNameTranslation": "The Mount",
     "numberOfAyahs": 49,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Avertir du châtiment inévitable par des serments puissants et confirmer que le Prophète ﷺ est un véritable avertisseur."
   },
   {
     "number": 53,
@@ -421,7 +473,8 @@
     "englishName": "An-Najm",
     "englishNameTranslation": "The Star",
     "numberOfAyahs": 62,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Confirmer la prophétie de Muḥammad ﷺ par la vision du Mi‘râj, réfuter les accusations de poésie et appeler au monothéisme pur."
   },
   {
     "number": 54,
@@ -429,7 +482,8 @@
     "englishName": "Al-Qamar",
     "englishNameTranslation": "The Moon",
     "numberOfAyahs": 55,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver la prophétie par le miracle de la lune fendue et avertir que l'Heure est proche à travers le rappel des châtiments passés."
   },
   {
     "number": 55,
@@ -437,7 +491,8 @@
     "englishName": "Ar-Rahmaan",
     "englishNameTranslation": "The Beneficent",
     "numberOfAyahs": 78,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Célébrer la miséricorde du Tout-Miséricordieux et ses bienfaits infinis, en incitant les hommes et les djinns à la gratitude."
   },
   {
     "number": 56,
@@ -445,7 +500,8 @@
     "englishName": "Al-Waaqia",
     "englishNameTranslation": "The Inevitable",
     "numberOfAyahs": 96,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dépeindre l'Heure inévitable et les destinées des trois groupes d'âmes, incitant à la piété pour éviter le châtiment."
   },
   {
     "number": 57,
@@ -453,7 +509,8 @@
     "englishName": "Al-Hadid",
     "englishNameTranslation": "The Iron",
     "numberOfAyahs": 29,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Encourager la dépense et l'effort pour Allah avec sincérité, tout en rappelant que le fer est une force au service de la foi."
   },
   {
     "number": 58,
@@ -461,7 +518,8 @@
     "englishName": "Al-Mujaadila",
     "englishNameTranslation": "The Pleading Woman",
     "numberOfAyahs": 22,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Protéger les droits des femmes (abolition du ẓihâr), enseigner le respect du Prophète ﷺ et démasquer les complots des hypocrites."
   },
   {
     "number": 59,
@@ -469,7 +527,8 @@
     "englishName": "Al-Hashr",
     "englishNameTranslation": "The Exile",
     "numberOfAyahs": 24,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Légitimer l'expulsion des traîtres (Banû Naḍîr), établir les règles du butin et glorifier Allah par Ses plus beaux noms."
   },
   {
     "number": 60,
@@ -477,7 +536,8 @@
     "englishName": "Al-Mumtahana",
     "englishNameTranslation": "She that is to be examined",
     "numberOfAyahs": 13,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Tester la foi des émigrantes, interdire l'alliance avec les ennemis d'Allah, tout en maintenant la justice envers ceux qui ne combattent pas."
   },
   {
     "number": 61,
@@ -485,7 +545,8 @@
     "englishName": "As-Saff",
     "englishNameTranslation": "The Ranks",
     "numberOfAyahs": 14,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Exhorter les croyants à s'unir en rangs serrés pour la cause d'Allah et rappeler la bonne annonce faite par Jésus."
   },
   {
     "number": 62,
@@ -493,7 +554,8 @@
     "englishName": "Al-Jumu'a",
     "englishNameTranslation": "Friday",
     "numberOfAyahs": 11,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Instituer la prière du Vendredi (Jumu‘a), rappeler l'universalité de la prophétie et l'importance de la discipline collective."
   },
   {
     "number": 63,
@@ -501,7 +563,8 @@
     "englishName": "Al-Munaafiqoon",
     "englishNameTranslation": "The Hypocrites",
     "numberOfAyahs": 11,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Démasquer l'hypocrisie, mettre en garde contre les serments mensongers et appeler à dépenser ses richesses avant la mort."
   },
   {
     "number": 64,
@@ -509,7 +572,8 @@
     "englishName": "At-Taghaabun",
     "englishNameTranslation": "Mutual Disillusion",
     "numberOfAyahs": 18,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Rappeler que le Jour du Jugement est un jour de gain et de perte mutuelle, et encourager la confiance totale en Allah."
   },
   {
     "number": 65,
@@ -517,7 +581,8 @@
     "englishName": "At-Talaaq",
     "englishNameTranslation": "Divorce",
     "numberOfAyahs": 12,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Réglementer le divorce avec justice, protéger les droits des femmes pendant la période d'attente ('idda) et encourager la confiance en la providence divine."
   },
   {
     "number": 66,
@@ -525,7 +590,8 @@
     "englishName": "At-Tahrim",
     "englishNameTranslation": "The Prohibition",
     "numberOfAyahs": 12,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Lever l'interdiction que le Prophète ﷺ s'était imposée, rappeler les exemples des femmes pieuses et impies, et prôner l'unité familiale."
   },
   {
     "number": 67,
@@ -533,7 +599,8 @@
     "englishName": "Al-Mulk",
     "englishNameTranslation": "The Sovereignty",
     "numberOfAyahs": 30,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Glorifier la royauté d'Allah sur la création, d'avertir du châtiment à venir, et de promettre protection dans la tombe ainsi que l'intercession au Jour du Jugement pour ceux qui la récitent."
   },
   {
     "number": 68,
@@ -541,7 +608,8 @@
     "englishName": "Al-Qalam",
     "englishNameTranslation": "The Pen",
     "numberOfAyahs": 52,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Défendre le Prophète ﷺ contre l'accusation de folie, d'avertir contre l'avarice et l'ingratitude à travers la parabole du jardin, et d'encourager à la patience dans l'accomplissement de la mission prophétique."
   },
   {
     "number": 69,
@@ -549,7 +617,8 @@
     "englishName": "Al-Haaqqa",
     "englishNameTranslation": "The Reality",
     "numberOfAyahs": 52,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dépeindre l'Heure comme inévitable en s'appuyant sur les châtiments passés, et affirmer que le Coran est une vérité éternelle."
   },
   {
     "number": 70,
@@ -557,7 +626,8 @@
     "englishName": "Al-Ma'aarij",
     "englishNameTranslation": "The Ascending Stairways",
     "numberOfAyahs": 44,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Affirmer l'imminence de l'Heure, dépeindre les pieux comme modèles et avertir des châtiments réservés aux incrédules."
   },
   {
     "number": 71,
@@ -565,7 +635,8 @@
     "englishName": "Nooh",
     "englishNameTranslation": "Noah",
     "numberOfAyahs": 28,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Encourager à la patience dans une longue prédication en prenant Nûḥ comme modèle : bien que rejeté, il triompha finalement grâce au tawḥîd."
   },
   {
     "number": 72,
@@ -573,7 +644,8 @@
     "englishName": "Al-Jinn",
     "englishNameTranslation": "The Jinn",
     "numberOfAyahs": 28,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Prouver que le Coran est un miracle universel adressé aux djinns et aux humains, et affirmer la continuité de la prophétie."
   },
   {
     "number": 73,
@@ -581,7 +653,8 @@
     "englishName": "Al-Muzzammil",
     "englishNameTranslation": "The Enshrouded One",
     "numberOfAyahs": 20,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Ordonner la prière nocturne et la récitation du Coran en préparation à la mission prophétique, et encourager à la patience."
   },
   {
     "number": 74,
@@ -589,7 +662,8 @@
     "englishName": "Al-Muddaththir",
     "englishNameTranslation": "The Cloaked One",
     "numberOfAyahs": 56,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Lancer la mission publique du Prophète ﷺ, le purifier spirituellement, et avertir les chefs mécréants."
   },
   {
     "number": 75,
@@ -597,7 +671,8 @@
     "englishName": "Al-Qiyaama",
     "englishNameTranslation": "The Resurrection",
     "numberOfAyahs": 40,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Réfuter l'impossibilité de la résurrection, dépeindre l'Heure de manière terrifiante et confirmer l'authenticité du Coran."
   },
   {
     "number": 76,
@@ -605,7 +680,8 @@
     "englishName": "Al-Insaan",
     "englishNameTranslation": "Man",
     "numberOfAyahs": 31,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Récompenser les pieux qui libèrent les captifs, dépeindre le Paradis et rappeler que la vie est une épreuve de choix."
   },
   {
     "number": 77,
@@ -613,7 +689,8 @@
     "englishName": "Al-Mursalaat",
     "englishNameTranslation": "The Emissaries",
     "numberOfAyahs": 50,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Avertir de l'imminence de l'Heure par des serments sur la création et montrer les destinées opposées des croyants et des non-croyants."
   },
   {
     "number": 78,
@@ -621,7 +698,8 @@
     "englishName": "An-Naba",
     "englishNameTranslation": "The Announcement",
     "numberOfAyahs": 40,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Annoncer la Grande Nouvelle (l'Heure), montrer les signes de la création comme preuves et présenter les destinées éternelles."
   },
   {
     "number": 79,
@@ -629,7 +707,8 @@
     "englishName": "An-Naazi'aat",
     "englishNameTranslation": "Those who drag forth",
     "numberOfAyahs": 46,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Ancrer la certitude de la Résurrection et briser l’illusion de puissance des tyrans, en montrant que l’ordre divin est inéluctable."
   },
   {
     "number": 80,
@@ -637,7 +716,8 @@
     "englishName": "Abasa",
     "englishNameTranslation": "He frowned",
     "numberOfAyahs": 42,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Former une éthique de la guidance : servir d’abord la vérité et ceux qui la cherchent, puis rappeler la Résurrection qui relativise toutes les hiérarchies mondaines."
   },
   {
     "number": 81,
@@ -645,7 +725,8 @@
     "englishName": "At-Takwir",
     "englishNameTranslation": "The Overthrowing",
     "numberOfAyahs": 29,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Frapper le cœur par la description du bouleversement final de l'univers et asseoir la crédibilité du message révélé."
   },
   {
     "number": 82,
@@ -653,7 +734,8 @@
     "englishName": "Al-Infitaar",
     "englishNameTranslation": "The Cleaving",
     "numberOfAyahs": 19,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dépeindre la rupture du cosmos lors de l'Heure et l'incrédulité de l'homme face à l'évidence du jugement."
   },
   {
     "number": 83,
@@ -661,7 +743,8 @@
     "englishName": "Al-Mutaffifin",
     "englishNameTranslation": "Defrauding",
     "numberOfAyahs": 36,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Condamner la fraude, annoncer les registres éternels et montrer le contraste entre les consciences pieuses et coupables."
   },
   {
     "number": 84,
@@ -669,7 +752,8 @@
     "englishName": "Al-Inshiqaaq",
     "englishNameTranslation": "The Splitting Open",
     "numberOfAyahs": 25,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Décrire la fissure du cosmos lors de l'Heure et la pesée des actes, menant à des destinées contrastées."
   },
   {
     "number": 85,
@@ -677,7 +761,8 @@
     "englishName": "Al-Burooj",
     "englishNameTranslation": "The Constellations",
     "numberOfAyahs": 22,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Consoler les persécutés, affirmer la préservation du Coran et encourager à la patience en attendant la justice divine."
   },
   {
     "number": 86,
@@ -685,7 +770,8 @@
     "englishName": "At-Taariq",
     "englishNameTranslation": "The Morning Star",
     "numberOfAyahs": 17,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Lier le mystère de la création à la certitude du jugement, et appeler à la réflexion sur la destinée humaine."
   },
   {
     "number": 87,
@@ -693,7 +779,8 @@
     "englishName": "Al-A'laa",
     "englishNameTranslation": "The Most High",
     "numberOfAyahs": 19,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Louer le Très-Haut, proposer le Prophète ﷺ comme modèle et montrer les voies contrastées du rappel et de l'oubli."
   },
   {
     "number": 88,
@@ -701,7 +788,8 @@
     "englishName": "Al-Ghaashiya",
     "englishNameTranslation": "The Overwhelming",
     "numberOfAyahs": 26,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dépeindre le contraste saisissant de l'Heure entre les visages heureux et les visages humiliés, et appeler à la réflexion."
   },
   {
     "number": 89,
@@ -709,7 +797,8 @@
     "englishName": "Al-Fajr",
     "englishNameTranslation": "The Dawn",
     "numberOfAyahs": 30,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Utiliser les serments sur le temps pour rappeler les châtiments des tyranniques, d'exhorter à la charité envers les orphelins et les mendiants, et de montrer que le taqwâ mène au salut."
   },
   {
     "number": 90,
@@ -717,7 +806,8 @@
     "englishName": "Al-Balad",
     "englishNameTranslation": "The City",
     "numberOfAyahs": 20,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Définir la vie comme une lutte et une épreuve, appelant à gravir la pente vertueuse de la générosité et de la foi."
   },
   {
     "number": 91,
@@ -725,7 +815,8 @@
     "englishName": "Ash-Shams",
     "englishNameTranslation": "The Sun",
     "numberOfAyahs": 15,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Utiliser les serments sur la création pour inspirer confiance en l'âme, montrer le choix entre taqwâ et fujûr, et donner l'exemple de Thamûd."
   },
   {
     "number": 92,
@@ -733,7 +824,8 @@
     "englishName": "Al-Lail",
     "englishNameTranslation": "The Night",
     "numberOfAyahs": 21,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Utiliser les serments opposés (nuit/jour) pour montrer les destinées selon les actions : générosité et taqwâ contre avarice."
   },
   {
     "number": 93,
@@ -741,7 +833,8 @@
     "englishName": "Ad-Dhuhaa",
     "englishNameTranslation": "The Morning Hours",
     "numberOfAyahs": 11,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Consoler le Prophète ﷺ, de lui rappeler les bienfaits d'Allah, et de l'exhorter à la générosité et à la louange."
   },
   {
     "number": 94,
@@ -749,7 +842,8 @@
     "englishName": "Ash-Sharh",
     "englishNameTranslation": "The Consolation",
     "numberOfAyahs": 8,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Soulager le Prophète ﷺ du fardeau de sa mission, de lui promettre élévation et facilité, et de l'encourager à la louange d'Allah."
   },
   {
     "number": 95,
@@ -757,7 +851,8 @@
     "englishName": "At-Tin",
     "englishNameTranslation": "The Fig",
     "numberOfAyahs": 8,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Utiliser les serments sur les lieux saints pour affirmer la perfection de la création de l'homme, son déclin sans taqwâ, et le jugement de Dieu."
   },
   {
     "number": 96,
@@ -765,7 +860,8 @@
     "englishName": "Al-Alaq",
     "englishNameTranslation": "The Clot",
     "numberOfAyahs": 19,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Initier la révélation par l'ordre de lire, liant la science à la générosité divine et mettant en garde contre l'autosuffisance."
   },
   {
     "number": 97,
@@ -773,7 +869,8 @@
     "englishName": "Al-Qadr",
     "englishNameTranslation": "The Power, Fate",
     "numberOfAyahs": 5,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Magnifier Lailat al-Qadr et d'inciter au culte durant cette nuit bénie."
   },
   {
     "number": 98,
@@ -781,7 +878,8 @@
     "englishName": "Al-Bayyina",
     "englishNameTranslation": "The Evidence",
     "numberOfAyahs": 8,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Expliquer la division des religions, de présenter le Messager ummî comme preuve définitive, et de montrer les destinées opposées."
   },
   {
     "number": 99,
@@ -789,7 +887,8 @@
     "englishName": "Az-Zalzala",
     "englishNameTranslation": "The Earthquake",
     "numberOfAyahs": 8,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Décrire la secousse de la terre lors de l'Heure et la responsabilité atomique des actes."
   },
   {
     "number": 100,
@@ -797,7 +896,8 @@
     "englishName": "Al-Aadiyaat",
     "englishNameTranslation": "The Chargers",
     "numberOfAyahs": 11,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Utiliser le serment sur les chevaux pour symboliser l'avidité humaine et l'ingratitude envers les biens matériels."
   },
   {
     "number": 101,
@@ -805,7 +905,8 @@
     "englishName": "Al-Qaari'a",
     "englishNameTranslation": "The Calamity",
     "numberOfAyahs": 11,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Évoquer le chaos de l'Heure, la pesée des actes, et les destins opposés."
   },
   {
     "number": 102,
@@ -813,7 +914,8 @@
     "englishName": "At-Takaathur",
     "englishNameTranslation": "Competition",
     "numberOfAyahs": 8,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dénoncer la course aux richesses et d'éveiller à la réalité des tombes et de l'au-delà."
   },
   {
     "number": 103,
@@ -821,7 +923,8 @@
     "englishName": "Al-Asr",
     "englishNameTranslation": "The Declining Day, Epoch",
     "numberOfAyahs": 3,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Jurer par le temps que l'homme est en perdition, sauf ceux qui unissent la foi, l'action bonne et l'exhortation mutuelle."
   },
   {
     "number": 104,
@@ -829,7 +932,8 @@
     "englishName": "Al-Humaza",
     "englishNameTranslation": "The Traducer",
     "numberOfAyahs": 9,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Condamner la médisance et l'avidité, et d'avertir du Feu destructeur."
   },
   {
     "number": 105,
@@ -837,7 +941,8 @@
     "englishName": "Al-Fil",
     "englishNameTranslation": "The Elephant",
     "numberOfAyahs": 5,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rappeler le miracle de la protection de la Ka'ba contre Abraha, et de montrer la puissance d'Allah avec une armée visible."
   },
   {
     "number": 106,
@@ -845,7 +950,8 @@
     "englishName": "Quraish",
     "englishNameTranslation": "Quraysh",
     "numberOfAyahs": 4,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Rappeler les bienfaits accordés aux Quraysh (caravanes sûres) et de les exhorter au culte du Seigneur de la Ka'ba."
   },
   {
     "number": 107,
@@ -853,7 +959,8 @@
     "englishName": "Al-Maa'un",
     "englishNameTranslation": "Almsgiving",
     "numberOfAyahs": 7,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Dénoncer le culte vide de sens et l'avarice sociale, en liant la prière négligée au refus d'aider son prochain."
   },
   {
     "number": 108,
@@ -861,7 +968,8 @@
     "englishName": "Al-Kawthar",
     "englishNameTranslation": "Abundance",
     "numberOfAyahs": 3,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Consoler le Prophète ﷺ avec le Kawthar et l'abondance, d'annoncer la victoire du tawḥîd, et de montrer que l'ennemi sera coupé."
   },
   {
     "number": 109,
@@ -869,7 +977,8 @@
     "englishName": "Al-Kaafiroon",
     "englishNameTranslation": "The Disbelievers",
     "numberOfAyahs": 6,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Refuser le compromis et le syncrétisme, et d'établir une séparation nette du dîn."
   },
   {
     "number": 110,
@@ -877,7 +986,8 @@
     "englishName": "An-Nasr",
     "englishNameTranslation": "Divine Support",
     "numberOfAyahs": 3,
-    "revelationType": "Medinan"
+    "revelationType": "Medinan",
+    "description": "Annoncer la victoire de la conquête comme signe de la fin de la prophétie, et d'inviter au retour vers Allah par la glorification."
   },
   {
     "number": 111,
@@ -885,7 +995,8 @@
     "englishName": "Al-Masad",
     "englishNameTranslation": "The Palm Fibre",
     "numberOfAyahs": 5,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Condamner Abû Lahab et Umm Jamil, et de montrer que la richesse est inutile face à la damnation."
   },
   {
     "number": 112,
@@ -893,7 +1004,8 @@
     "englishName": "Al-Ikhlaas",
     "englishNameTranslation": "Sincerity",
     "numberOfAyahs": 4,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Formuler le tawḥîd pur en réfutant toute association."
   },
   {
     "number": 113,
@@ -901,7 +1013,8 @@
     "englishName": "Al-Falaq",
     "englishNameTranslation": "The Dawn",
     "numberOfAyahs": 5,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Offrir une protection extérieure complète contre les maux visibles et invisibles."
   },
   {
     "number": 114,
@@ -909,6 +1022,7 @@
     "englishName": "An-Naas",
     "englishNameTranslation": "Mankind",
     "numberOfAyahs": 6,
-    "revelationType": "Meccan"
+    "revelationType": "Meccan",
+    "description": "Offrir une protection intérieure contre le waswas satanique (djinns et humains)."
   }
 ]

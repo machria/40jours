@@ -12,6 +12,7 @@ interface SurahMeta {
     englishNameTranslation: string;
     numberOfAyahs: number;
     revelationType: string;
+    description?: string;
 }
 
 function getSurahs(): SurahMeta[] {
@@ -63,9 +64,14 @@ export default function CoranPage() {
                                     <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
                                         {surah.englishName}
                                     </h3>
-                                    <p className="text-xs text-muted-foreground">
+                                    <p className="text-xs text-muted-foreground mb-1">
                                         {surah.englishNameTranslation} • {surah.numberOfAyahs} Versets
                                     </p>
+                                    {surah.description && (
+                                        <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed max-w-[250px]" title={surah.description}>
+                                            {surah.description}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                             <div className="text-right">
