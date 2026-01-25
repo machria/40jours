@@ -140,19 +140,47 @@ export default async function Home() {
           <span className="w-1 h-8 bg-accent rounded-full block"></span>
           Calendrier de Lecture
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {plan40jours.map((day) => (
             <Link
               key={day.jour}
               href={`/jour/${day.jour}`}
-              className="group relative bg-card border hover:border-primary/50 transition-all rounded-xl p-3 flex flex-col items-center justify-between h-24 shadow-sm hover:shadow-md cursor-pointer"
+              className="group bg-card hover:bg-muted/50 border rounded-xl p-4 transition-all hover:shadow-md flex flex-col justify-between"
             >
-              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Jour</span>
-              <span className="text-2xl font-bold font-kufi text-foreground group-hover:text-primary transition-colors">{day.jour}</span>
-              <span className="text-[10px] text-center text-muted-foreground line-clamp-1 w-full px-1">{day.sourates}</span>
+              <div>
+                <div className="flex justify-between items-start mb-2">
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full font-bold text-sm">
+                      {day.jour}
+                    </span>
+                    <span className="font-semibold text-lg group-hover:text-primary transition-colors">
+                      Jour {day.jour}
+                    </span>
+                  </div>
+                  <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                    Pages {day.pages}
+                  </span>
+                </div>
 
-              {/* Progress Indicator (hidden for now) */}
-              <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-muted group-hover:bg-primary/20"></div>
+                <div className="mt-2 mb-3">
+                  <h3 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-1">
+                    {day.theme}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed">
+                    {day.description}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-2 pt-3 border-t flex items-center justify-between text-xs text-muted-foreground group-hover:text-foreground transition-colors">
+                <span className="font-medium truncate max-w-[200px]" title={day.sourates}>
+                  {day.sourates}
+                </span>
+                <span className="flex items-center gap-1">
+                  Juz {day.juz}
+                  <ArrowRight className="w-3 h-3" />
+                </span>
+              </div>
             </Link>
           ))}
         </div>

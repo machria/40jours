@@ -7,6 +7,8 @@ export interface JuzInfo {
     endPage: number;
     start: { surah: number; ayah: number };
     end: { surah: number; ayah: number };
+    description: string;
+    theme: string;
 }
 
 export function getAllJuz(): JuzInfo[] {

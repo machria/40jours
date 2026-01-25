@@ -60,6 +60,15 @@ export default function JuzListPage() {
                                 </span>
                             </div>
 
+                            <div className="mt-2 mb-3">
+                                <h3 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-1">
+                                    {juz.theme}
+                                </h3>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed">
+                                    {juz.description}
+                                </p>
+                            </div>
+
                             <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 flex flex-col gap-1">
                                 <div className="flex justify-between">
                                     <span>Début:</span>

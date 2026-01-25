@@ -22,9 +22,11 @@ interface Ayah {
 interface JuzViewerProps {
     ayahs: Ayah[];
     juzId: number;
+    theme?: string;
+    description?: string;
 }
 
-export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
+export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewerProps) {
     // Tafsir State
     const [tafsirState, setTafsirState] = useState<{
         isOpen: boolean;
@@ -120,7 +122,10 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
 
                     <div className="flex flex-col items-center">
                         <h1 className="text-xl font-bold text-center text-emerald-800 dark:text-emerald-300">Juz {juzId}</h1>
-                        <div className="flex items-center gap-1 text-xs text-emerald-600/70 dark:text-emerald-400/70">
+                        {theme && (
+                            <h2 className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mt-1">{theme}</h2>
+                        )}
+                        <div className="flex items-center gap-1 text-xs text-emerald-600/70 dark:text-emerald-400/70 mt-1">
                             <Clock size={12} />
                             <span>~45-55 min</span>
                         </div>
@@ -171,6 +176,14 @@ export default function JuzViewer({ ayahs, juzId }: JuzViewerProps) {
                     </button>
                 </div>
             </div>
+
+            {description && (
+                <div className="mb-6 p-4 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-emerald-900 rounded-xl shadow-sm text-center">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-3xl mx-auto italic">
+                        &quot;{description}&quot;
+                    </p>
+                </div>
+            )}
 
             <div className="mb-6">
                 <Link

@@ -75,7 +75,12 @@ export default async function JuzPage({ params }: PageProps) {
 
     return (
         <main className="container mx-auto px-4 py-8">
-            <JuzViewer ayahs={allAyahs} juzId={id} />
+            <JuzViewer
+                ayahs={allAyahs}
+                juzId={id}
+                theme={juz.theme}
+                description={juz.description}
+            />
         </main>
     );
 }

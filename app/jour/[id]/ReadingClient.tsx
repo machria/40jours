@@ -223,6 +223,16 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
 
             {/* Main Content */}
             <main className="max-w-4xl mx-auto p-4 space-y-8">
+                {/* Description Block */}
+                <div className="bg-emerald-50 dark:bg-emerald-900/10 border border-emerald-100 dark:border-emerald-800 rounded-xl p-6 text-center shadow-sm">
+                    <h2 className="text-xl font-bold text-emerald-800 dark:text-emerald-300 mb-2 font-kufi">
+                        {dayPlan.theme}
+                    </h2>
+                    <p className="text-gray-700 dark:text-gray-300 text-base leading-relaxed italic max-w-2xl mx-auto">
+                        &quot;{dayPlan.description}&quot;
+                    </p>
+                </div>
+
                 {results.map((result, idx) => {
                     const pageNum = pagesToFetch[idx];
 
