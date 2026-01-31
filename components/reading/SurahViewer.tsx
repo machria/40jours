@@ -228,7 +228,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                                 <div className="text-right mb-6" dir="rtl">
                                     <div
                                         onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
-                                        className="cursor-pointer hover:opacity-80 transition-opacity inline-block"
+                                        className="cursor-pointer hover:opacity-80 transition-opacity inline-block w-full bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10"
                                         title="Écouter ce verset"
                                     >
                                         <TajwidText

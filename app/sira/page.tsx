@@ -36,16 +36,55 @@ export default function SeerahPage() {
 
     const formatDate = (dateStr: string) => {
         if (!dateStr) return '';
-        const date = new Date(dateStr);
-        return date.toLocaleDateString('fr-FR', {
+        // Handle negative dates (BC)
+        const isBC = dateStr.startsWith('-');
+        // If BC, remove the leading minus for processing (or handle year manually)
+        const normalizedDate = isBC ? dateStr.substring(1) : dateStr;
+        const date = new Date(normalizedDate);
+
+        // JavaScript Date constructor might struggle with negative years directly in ISO format depending on implementation
+        // For simplicity, let's just parse logic manualy or trust Date if it works.
+        // But common JS Date: new Date("-2000-01-01") often works but displays 2001 BC or similar.
+        // Let's adhere to a custom format for BC to be safe.
+
+        const options: Intl.DateTimeFormatOptions = {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
-        });
+        };
+
+        try {
+            // For BC dates like "-2000-01-01", we can just treat as positive year and append "av. J.-C."
+            if (isBC) {
+                // Extract year, month, day manually or assume simple ISO format
+                const parts = normalizedDate.split('-');
+                if (parts.length >= 1) {
+                    return `${parts[0]} av. J.-C.`; // Return just the year or full date if needed. 
+                    // If we want full date? 
+                    // Let's stay simple: Just Year for BC often suffices, or simple format.
+                    // But the user asked to fix "bugged object", likely the year display.
+
+                    // Let's try to actually format it.
+                    const dateObj = new Date(normalizedDate);
+                    // Invalid date check
+                    if (isNaN(dateObj.getTime())) return dateStr;
+
+                    return `env. ${Math.abs(dateObj.getFullYear())} av. J.-C.`;
+                }
+            }
+            return date.toLocaleDateString('fr-FR', options);
+        } catch (e) {
+            return dateStr;
+        }
     };
 
     const getYearFromDate = (dateStr: string) => {
         if (!dateStr) return '';
+        const isBC = dateStr.startsWith('-');
+        if (isBC) {
+            const year = dateStr.split('-')[1]; // after the first minus
+            return `${year} BC`;
+        }
         return dateStr.split('-')[0];
     };
 
@@ -83,23 +122,17 @@ export default function SeerahPage() {
             </header>
 
             <main className="p-4 max-w-5xl mx-auto">
-                {/* Timeline */}
-                <div className="relative">
-                    {/* Vertical line */}
-                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent"></div>
-
-                    {/* Events */}
-                    <div className="space-y-8">
-                        {events.map((event, index) => (
-                            <div key={index} className="relative pl-20">
-                                {/* Timeline dot */}
-                                <div className="absolute left-6 top-2 w-5 h-5 rounded-full bg-primary border-4 border-background shadow-lg"></div>
-
-                                {/* Event card */}
-                                <div className="bg-card border rounded-xl p-6 hover:shadow-lg transition-all group">
-                                    {/* Date badge */}
-                                    {event.start && (
-                                        <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                {/* Content List */}
+                <div className="space-y-6">
+                    {events.map((event, index) => (
+                        <div key={index} className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition-all group">
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                                    {event.title}
+                                </h3>
+                                {event.start && (
+                                    <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground shrink-0">
+                                        <div className="flex items-center gap-1 bg-muted px-2 py-1 rounded">
                                             <Calendar className="w-3 h-3" />
                                             <span className="font-medium">{formatDate(event.start)}</span>
                                             {event.end && (
@@ -108,37 +141,30 @@ export default function SeerahPage() {
                                                     <span className="font-medium">{formatDate(event.end)}</span>
                                                 </>
                                             )}
-                                            <span className="ml-2 px-2 py-0.5 bg-primary/10 text-primary rounded-full text-[10px] font-bold">
-                                                {getYearFromDate(event.start)} CE
-                                            </span>
                                         </div>
-                                    )}
-
-                                    {/* Title */}
-                                    <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                                        {event.title}
-                                    </h3>
-
-                                    {/* Commentary */}
-                                    {event.commentary && event.commentary.length > 0 && (
-                                        <div className="text-foreground/80 leading-relaxed mb-3">
-                                            <p>{event.commentary.join(' ')}</p>
-                                        </div>
-                                    )}
-
-                                    {/* Notes */}
-                                    {event.notes && (
-                                        <div className="mt-3 p-3 bg-muted/50 rounded-lg border border-muted">
-                                            <p className="text-sm italic text-muted-foreground flex items-start gap-2">
-                                                <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                                                <span>{event.notes}</span>
-                                            </p>
-                                        </div>
-                                    )}
-                                </div>
+                                        <span className="px-2 py-1 bg-primary/10 text-primary rounded font-bold">
+                                            {getYearFromDate(event.start)}
+                                        </span>
+                                    </div>
+                                )}
                             </div>
-                        ))}
-                    </div>
+
+                            {/* Commentary */}
+                            {event.commentary && event.commentary.length > 0 && (
+                                <div className="text-foreground/90 leading-relaxed mb-4 font-serif text-lg">
+                                    <p>{event.commentary.join(' ')}</p>
+                                </div>
+                            )}
+
+                            {/* Notes */}
+                            {event.notes && (
+                                <div className="mt-4 p-3 bg-muted/50 rounded-lg border border-muted/50 flex items-start gap-3">
+                                    <BookOpen className="w-4 h-4 mt-1 text-primary/70 shrink-0" />
+                                    <span className="text-sm italic text-muted-foreground">{event.notes}</span>
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
 
                 {/* Footer info */}

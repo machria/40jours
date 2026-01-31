@@ -41,47 +41,47 @@ export default function JuzListPage() {
                     <Link
                         key={juz.id}
                         href={`/juz/${juz.id}`}
-                        className="group bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all hover:shadow-md"
+                        className="group bg-card p-4 rounded-xl shadow-sm border border-border hover:border-primary transition-all hover:shadow-md"
                     >
                         <div className="flex justify-between items-start mb-2">
-                            <span className="w-8 h-8 flex items-center justify-center bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 rounded-full font-bold text-sm">
+                            <span className="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full font-bold text-sm">
                                 {juz.id}
                             </span>
-                            <BookOpen size={20} className="text-gray-400 group-hover:text-emerald-500 transition-colors" />
+                            <BookOpen size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />
                         </div>
 
                         <div className="mt-2">
                             <div className="flex justify-between items-baseline">
-                                <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                                <span className="text-lg font-semibold text-foreground">
                                     Juz {juz.id}
                                 </span>
-                                <span className="text-xs text-gray-500">
+                                <span className="text-xs text-muted-foreground">
                                     Pages {juz.startPage}-{juz.endPage}
                                 </span>
                             </div>
 
                             <div className="mt-2 mb-3">
-                                <h3 className="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-1">
+                                <h3 className="text-sm font-bold text-primary mb-1">
                                     {juz.theme}
                                 </h3>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 leading-relaxed">
+                                <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
                                     {juz.description}
                                 </p>
                             </div>
 
-                            <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 flex flex-col gap-1">
+                            <div className="mt-2 text-sm text-muted-foreground flex flex-col gap-1">
                                 <div className="flex justify-between">
                                     <span>Début:</span>
-                                    <span className="font-arabic">Sourate {juz.start.surah}, V. {juz.start.ayah}</span>
+                                    <span className="font-arabic text-foreground">Sourate {juz.start.surah}, V. {juz.start.ayah}</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span>Fin:</span>
-                                    <span className="font-arabic">Sourate {juz.end.surah}, V. {juz.end.ayah}</span>
+                                    <span className="font-arabic text-foreground">Sourate {juz.end.surah}, V. {juz.end.ayah}</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex items-center gap-1 text-xs text-emerald-600/80 dark:text-emerald-400/80 mt-3 pt-2 border-t border-gray-100 dark:border-gray-700 font-medium">
+                        <div className="flex items-center gap-1 text-xs text-muted-foreground mt-3 pt-2 border-t border-border font-medium">
                             <Clock size={14} />
                             <span>~45-55 min</span>
                         </div>

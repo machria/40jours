@@ -143,7 +143,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
 
     return (
         <div className="pb-24">
-            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-emerald-50 dark:bg-emerald-900/10 p-4 rounded-xl gap-4 border border-emerald-100 dark:border-emerald-800">
+            <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-card border rounded-xl p-4 shadow-sm gap-4">
                 <div className="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
                     {juzId > 1 ? (
                         <Link href={`/juz/${juzId - 1}`} className="flex items-center gap-1 text-sm text-emerald-700 dark:text-emerald-400 hover:underline">
@@ -209,7 +209,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
             </div>
 
             {description && (
-                <div className="mb-6 p-4 bg-white dark:bg-gray-800 border border-emerald-100 dark:border-emerald-900 rounded-xl shadow-sm text-center">
+                <div className="mb-6 p-4 bg-card border rounded-xl shadow-sm text-center">
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-3xl mx-auto italic">
                         &quot;{description}&quot;
                     </p>
@@ -219,7 +219,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
             <div className="mb-6">
                 <Link
                     href={`/juz/${juzId}/tafsir`}
-                    className="block w-full text-center py-3 bg-white dark:bg-gray-800 border-2 border-emerald-100 dark:border-emerald-900 rounded-xl hover:border-emerald-500 hover:shadow-md transition-all text-emerald-700 dark:text-emerald-400 font-semibold"
+                    className="block w-full text-center py-3 bg-card border rounded-xl hover:border-primary hover:shadow-md transition-all text-primary font-semibold"
                 >
                     <BookOpen className="inline-block w-5 h-5 mr-2" />
                     Lire le Tafsir complet du Juz
@@ -231,7 +231,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
 
             {
                 viewMode === 'mushaf' ? (
-                    <div className="bg-white dark:bg-gray-900 border rounded-xl p-6 md:p-10 shadow-sm">
+                    <div className="bg-card border rounded-xl p-6 md:p-10 shadow-sm">
                         <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                             {ayahs.map((ayah, i) => {
                                 // Check if this ayah starts a new Surah (simple heuristic: if surah num changed from prev)
@@ -270,7 +270,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                                 <div
                                     key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
                                     id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
-                                    className={`scroll-mt-24 bg-white dark:bg-gray-800 border rounded-xl p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-900/10' : ''}`}
+                                    className={`scroll-mt-24 bg-card border rounded-xl p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : ''}`}
                                 >
                                     <div className="flex items-center justify-between mb-4 border-b pb-4 border-gray-100 dark:border-gray-700">
                                         <span className="text-xs font-mono text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
@@ -299,10 +299,12 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                                     </div>
 
                                     <div className="text-right mb-6" dir="rtl">
-                                        <TajwidText
-                                            text={ayah.text}
-                                            className="font-kufi text-2xl md:text-3xl leading-[2.2] text-gray-900 dark:text-gray-100"
-                                        />
+                                        <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10">
+                                            <TajwidText
+                                                text={ayah.text}
+                                                className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
+                                            />
+                                        </div>
                                     </div>
 
                                     {showPhonetic && ayah.phonetic && (
@@ -312,7 +314,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                                     )}
 
                                     <div className="text-left dir-ltr">
-                                        <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+                                        <p className="text-foreground/90 text-lg leading-relaxed">
                                             {ayah.translation}
                                         </p>
                                     </div>
@@ -330,7 +332,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                         disabled={isSubmitting}
                         className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all shadow-md transform hover:scale-105 ${completed
                             ? 'bg-green-100 text-green-700 border-2 border-green-200 hover:bg-green-200'
-                            : 'bg-white text-gray-500 border-2 border-gray-200 hover:border-emerald-500 hover:text-emerald-600'
+                            : 'bg-card text-muted-foreground border hover:border-primary hover:text-primary'
                             }`}
                     >
                         {completed ? (
