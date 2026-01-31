@@ -11,6 +11,7 @@ interface Hadith {
     theme: string;
     narrator?: string;
     grade?: string;
+    commentaries?: { author: string; text: string }[];
 }
 
 interface HadithCardProps {
