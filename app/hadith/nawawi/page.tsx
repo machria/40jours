@@ -67,12 +67,35 @@ export default function NawawiPage() {
             <header className="text-center space-y-4 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center gap-3 text-primary mb-2">
                     <BookOpen className="w-8 h-8 md:w-10 md:h-10" />
-                    <h1 className="text-3xl md:text-4xl font-bold font-kufi">Les 40 Hadiths de Nawawi</h1>
+                    <h1 className="text-3xl font-bold mb-2">Les 40 Hadiths Nawawi</h1>
                 </div>
-                <p className="text-muted-foreground text-lg">
-                    Les fondations prophétiques de l'Islam, compilées par l'Imam An-Nawawi.
+                <p className="text-muted-foreground">
+                    L'essentiel de la sagesse prophétique 🌿
                 </p>
             </header>
+
+            {/* Preamble / Introduction */}
+            <div className="bg-card border rounded-xl p-6 md:p-8 mb-10 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-5">
+                    <BookOpen className="w-32 h-32" />
+                </div>
+                <div className="relative z-10 max-w-3xl">
+                    <h2 className="text-xl font-semibold mb-4 text-primary flex items-center gap-2">
+                        <span>💡</span> Pourquoi étudier cette œuvre ?
+                    </h2>
+                    <div className="space-y-4 text-muted-foreground leading-relaxed">
+                        <p>
+                            Les <span className="font-medium text-foreground">40 Hadiths de l'Imam An-Nawawi</span> sont une compilation bénie qui résume les principes fondamentaux de l'Islam. Les savants disent que toute la religion tourne autour de ces quelques paroles prophétiques.
+                        </p>
+                        <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg my-4">
+                            <h3 className="font-medium text-foreground mb-1 block">Conseil Spirituel :</h3>
+                            <p className="italic text-sm">
+                                "Ne vous contentez pas de lire ces hadiths comme de simples informations. Prenez-en un seul, méditez dessus longuement, et demandez-vous : <span className="font-semibold text-primary">'Quelle action concrète puis-je accomplir aujourd'hui pour mettre en pratique cet enseignement ?'</span> Que ce soit une parole, un geste ou une rectification de l'intention, faites vivre la Sunnah à travers vous."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             {/* Controls & Progress */}
             <div className="max-w-4xl mx-auto space-y-6">
