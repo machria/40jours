@@ -11,6 +11,304 @@ export interface Article {
 
 export const articles: Article[] = [
     {
+        slug: 'ghazali-ihya-quart-adorations',
+        title: "Ihya' Al-Ghazali (1/4) : Les Secrets des Adorations ('Ibadat)",
+        excerpt: "Découvrez comment transformer vos rituels en expériences spirituelles vivantes. Ghazali nous enseigne que la prière, le jeûne et la Zakat ont une âme qui va bien au-delà des gestes.",
+        date: '2026-02-02',
+        author: 'Imam Al-Ghazali (Extrait)',
+        readTime: '12 min',
+        content: `
+# Les Secrets Spirituels des Adorations (Rub' al-Ibadat)
+
+Le premier quart de l'*Ihya' Ulum al-Din* pose les fondations de la vie religieuse. Ghazali ne se contente pas d'énumérer les règles juridiques (*Fiqh*), il plonge dans la signification spirituelle profonde de chaque acte pour transformer le rituel en une expérience vivante de connexion divine.
+
+## Livre 1 : La Science (Kitab al-'Ilm)
+La quête de la science est le point de départ obligé. Ghazali distingue deux types de sciences :
+*   **Fard 'Ayn (Obligation individuelle) :** C'est la connaissance indispensable au salut de chaque croyant(e), comme connaître les règles de la prière, du jeûne et les maladies du cœur. Nul n'est excusé de l'ignorer.
+*   **Fard Kifaya (Obligation communautaire) :** C'est la science que si une partie de la communauté acquiert (comme la médecine, les maths, ou la jurisprudence avancée), les autres en sont déchargés.
+*   **Mise en garde :** Ghazali critique sévèrement les "savants mondains" (*Ulama al-Dunya*) qui utilisent la religion pour obtenir honneurs et richesses auprès des puissants. La vraie science est celle qui produit la "Crainte révérencielle" (*Khawsha*) et l'humilité. Une science qui n'augmente pas votre guidée ne fait qu'augmenter votre éloignement d'Allah.
+
+## Livre 2 : Les Dogmes de la Foi (Kitab Qawa'id al-'Aqa'id)
+La foi n'est pas une simple adhésion intellectuelle ou la répétition mécanique de la *Shahada*. Elle doit s'enraciner dans le cœur.
+*   Ghazali explique que la foi a plusieurs degrés : de la foi du simple imitateur (*Muqallid*) à la foi du visionnaire (*Arif*) qui "voit" par la lumière de son cœur que nul n'agit dans l'univers sauf Allah.
+*   Il insiste sur l'importance de protéger la foi des gens du commun des débats théologiques complexes (*Kalam*) qui pourraient semer le doute sans apporter de certitude. La doctrine doit être simple, claire et mener à l'action. "Il n'y a de Dieu qu'Allah" signifie qu'il n'y a de véritable Aimé, de véritable Pourvoyeur et de véritable Puissance que Lui.
+
+## Livre 3 : Les Secrets de la Purification (Kitab Asrar al-Tahara)
+La pureté (*Tahara*) est la moitié de la foi, mais elle ne se limite pas à l'eau. Ghazali décrit 4 degrés ascendants de purification :
+1.  **La purification extérieure :** Laver le corps, les vêtements et le lieu de prière des impuretés visibles (*Najasat*). C'est le niveau élémentaire.
+2.  **La purification des membres :** Préserver ses organes (oreilles, yeux, langue, mains, ventre, sexe, pieds) des péchés et des actions blâmables.
+3.  **La purification du cœur :** Nettoyer son for intérieur des maladies morales comme l'orgueil (*Kibr*), l'envie (*Hasad*), l'avarice et l'ostentation (*Riya*). C'est le travail d'une vie.
+4.  **La purification du secret (*Sirr*) :** Vider son cœur de tout ce qui n'est pas Allah. C'est le degré des Prophètes et des Véridiques (*Siddiqun*).
+Ghazali nous avertit : celui qui passe son temps à nettoyer son corps par obsession (*Waswas*) tout en laissant son cœur pourrir de haine est comme celui qui construit un palais sur une décharge.
+
+## Livre 4 : Les Secrets de la Prière (Kitab Asrar al-Salah)
+La prière n'est pas une "taxe" à payer à Dieu, c'est une ascension (*Mi'raj*) et une conversation intime (*Munajat*).
+*   **La présence du cœur :** Une prière faite par distraction est morte. Allah ne regarde pas les mouvements des corps mais l'humilité des cœurs.
+*   **Le Takbir (Dieu est plus Grand) :** Quand vous le prononcez, si dans votre cœur votre commerce ou votre famille occupe une place plus importante qu'Allah à cet instant, vous avez menti.
+*   **La Récitation :** C'est Allah qui vous parle. Écoutez-Le attentivement.
+*   **L'Inclinaison (*Ruku*) :** C'est le renouvellement de votre soumission et de votre humilité.
+*   **La Prosternation (*Sujud*) :** C'est le sommet de la proximité. Vous posez votre visage, siège de votre honneur, sur la poussière, pour anéantir votre ego devant la Grandeur Divine. C'est là que les invocations sont exaucées.
+
+## Livre 5 : Les Secrets de la Zakat (Kitab Asrar al-Zakat)
+L'argent est une épreuve. La Zakat a été instituée pour briser l'amour excessif du monde et guérir l'âme de l'avarice (*Bukhl*).
+*   **Le test de l'amour :** L'homme aime ce qu'il possède. Lui demander d'en donner une partie à Allah est la preuve (*Burhan*) qu'il aime Allah plus que sa richesse.
+*   **L'étiquette du donneur :** Il doit donner discrètement pour éviter l'ostentation, choisir les biens qu'il aime (pas les restes), et surtout, ne pas se sentir supérieur.
+*   **La gratitude inversée :** Le riche doit remercier le pauvre d'accepter son don, car le pauvre lui rend service en purifiant ses biens et en le débarrassant du feu de l'avarice. Faire suivre l'aumône d'un rappel ou d'une blessure ("je t'ai donné hier !") annule totalement la récompense.
+
+## Livre 6 : Les Secrets du Jeûne (Kitab Asrar al-Siyam)
+Le jeûne est une qualité divine car Allah ne mange ni ne boit. En jeûnant, l'homme se rapproche des anges.
+*   **Jeûne du commun :** S'abstenir de nourriture et de sexe du lever au coucher du soleil. C'est le niveau minimum pour la validité juridique.
+*   **Jeûne de l'élite :** Retenir ses organes (vue, ouïe, langue, main) de tout péché. Si le jeûneur ment ou médit, son jeûne est spirituellement rompu selon certains salafs. "Combien de jeûneurs n'ont de leur jeûne que la faim et la soif !"
+*   **Jeûne de l'élite de l'élite :** Le jeûne du cœur. C'est détourner son cœur de toutes les basses préoccupations mondaines pour ne penser qu'à Allah. Si on pense à l'organisation du repas de l'Iftar pendant la journée avec avidité, ce niveau est atteint. Le but est d'affaiblir les passions pour laisser la place à la lumière spirituelle.
+
+## Livre 7 : Les Secrets du Pèlerinage (Kitab Asrar al-Hajj)
+Le Hajj est la représentation sur terre du Voyage vers l'Au-delà. Chaque étape est un symbole :
+*   **Le départ :** Quitter sa famille et sa maison rappelle le départ final de l'âme à la mort.
+*   **L'Ihram (vêtement sacré) :** Se dévêtir de ses habits cousus pour mettre deux draps blancs rappelle le linceul (*Kafan*) et le Jour de la Résurrection, où tous seront égaux, sans signes de richesse.
+*   **Arafat :** La station debout sous le soleil, avec des millions d'autres implorant pardon, est l'image exacte du Jour du Jugement devant le Trône.
+*   **La Kaaba :** C'est la Maison d'Allah. En tournant autour (*Tawaf*), ne tournez pas juste avec votre corps, mais faites tourner votre cœur autour du Seigneur de la Maison, dans une adoration constante.
+
+## Livre 8 : Les Règles de la Récitation du Coran (Kitab Adab Tilawat al-Qur'an)
+Le Coran est la parole d'Allah incréée. Le lire, c'est converser avec Lui.
+*   **La vénération :** Il faut le toucher en état de pureté, se tenir avec respect (face à la Qibla) et le lire avec *Tartil* (lentement et distinctement).
+*   **Tadabbur (Méditation) :** C'est le but ultime. Lire une sourate en la comprenant et en pleurant de crainte ou de joie vaut mieux que de finir tout le Coran sans rien ressentir.
+*   **L'interaction :** Quand vous lisez un verset sur le Paradis, demandez-le. Quand vous lisez un verset sur l'Enfer, cherchez refuge. Quand vous lisez un verset de glorification, dites *Subhanallah*. Le lecteur doit se sentir personnellement visé par chaque ordre et chaque interdiction.
+
+## Livre 9 : Les Invocations et le Rappel (Kitab al-Adhkar wa al-Da'awat)
+Le Rappel (*Dhikr*) est l'âme des œuvres. C'est polir le miroir du cœur pour qu'Allah s'y reflète.
+*   **La constance :** "Souvenez-vous de Moi, Je me souviendrai de vous." Le Dhikr doit être constant, assis, debout ou couché.
+*   **L'Invocation (*Du'a*) :** C'est l'arme du croyant et la moelle de l'adoration. Mais Ghazali prévient : l'invocation d'un corps nourri de *Haram* (illicite) ne monte pas au ciel. La première condition de l'exaucement est une nourriture licite. Il faut invoquer avec la certitude de la réponse, insister sans se lasser, et choisir les moments propices (Sujud, fin de nuit, vendredi).
+
+## Livre 10 : L'Ordre des Litanies (Kitab Tartib al-Awrad)
+Le temps est votre capital le plus précieux. Chaque souffle est un joyau inestimable qui ne reviendra jamais.
+*   **L'organisation :** Ghazali exhorte le croyant à structurer sa journée et sa nuit avec des *Wirds* (litanies régulières). Il ne faut laisser aucun temps mort (*vacance*) où l'on n'est ni en adoration, ni en travail utile, ni en repos nécessaire.
+*   **La régularité :** "L'action la plus aimée d'Allah est celle qui dure, même si elle est petite." Un programme léger mais tenu toute la vie vaut mieux qu'un effort intense abandonné après une semaine. Variez les adorations (lecture, prière, dhikr) pour éviter l'ennui de l'âme.
+
+`
+    },
+    {
+        slug: 'ghazali-ihya-quart-habitudes',
+        title: "Ihya' Al-Ghazali (2/4) : Sanctifier le Quotidien (Adat)",
+        excerpt: "Manger, dormir, travailler, se marier... Comment ces actes banals peuvent-ils devenir des actes d'adoration ? Ghazali nous montre la voie de l'intention.",
+        date: '2026-02-02',
+        author: 'Imam Al-Ghazali (Extrait)',
+        readTime: '10 min',
+        content: `
+# Sanctifier le Quotidien (Rub' al-Adat)
+
+L'Islam est une voie du milieu : ni matérialisme, ni inachisme. Dans ce quart, Ghazali explique comment vivre en société tout en étant connecté au Divin. Il transforme les nécessités biologiques et sociales en actes d'adoration élevés grâce à l'intention et au bon comportement (*Adab*).
+
+## Livre 11 : L'Éthique du Manger (Kitab Adab al-Akl)
+Manger est le premier désir à discipliner. C'est l'essence de la vie physique.
+*   **Avant de manger :** Se laver les mains, dire *Bismillah* à haute voix. L'intention doit être de prendre des forces pour l'adoration, pas purement le plaisir.
+*   **Pendant le repas :** Manger de ce qui est devant soi, avec trois doigts, et bien mâcher. Ne pas critiquer la nourriture (si on aime on mange, sinon on laisse). Manger en groupe est béni.
+*   **La mesure :** Ne pas manger jusqu'à la satiété complète lourd. Couper l'appétit avant d'être plein. "Le croyant mange pour un intestin, l'incrédule pour sept."
+*   **Après le repas :** Remercier Allah (*Alhamdulillah*) qui a pourvu sans effort de notre part. Se laver les mains et la bouche.
+
+## Livre 12 : L'Éthique du Mariage (Kitab Adab al-Nikah)
+Ghazali pèse soigneusement le pour et le contre.
+*   **Les avantages :** Avoir une descendance pieuse (l'objectif principal), briser le désir charnel pour préserver la chasteté, le repos de l'âme par la compagnie, et l'exercice spirituel de supporter le caractère de l'autre.
+*   **Les inconvénients :** Le risque de ne pas pouvoir assumer financièrement la famille (et donc tomber dans le gain illicite) ou d'être distrait de l'adoration.
+*   **La vie conjugale :** Il insiste sur la douceur. Le mari doit supporter les désagréments avec patience et humour, comme le faisait le Prophète ﷺ. La femme doit respecter et soutenir son mari. L'harmonie du foyer est une adoration.
+
+## Livre 13 : L'Éthique du Gagne-Pain (Kitab Adab al-Kasb)
+Travailler pour nourrir sa famille est une obligation majeure. Le marché peut être un lieu de perdition ou d'élévation.
+*   **La Justice :** Ne jamais tromper, ni sur la quantité, ni sur la qualité. Révéler les défauts cachés de la marchandise est une obligation stricte.
+*   **La Bienfaisance (*Ihsan*) :** Accepter de baisser le prix pour le pauvre, reprendre la marchandise si le client regrette, donner un délai au débiteur.
+*   **L'Intention :** Le commerçant doit avoir l'intention de servir la communauté musulmane (par la boulangerie, le vêtement, etc.) et non juste d'amasser de l'or. Si l'Adhan retentit, il laisse tout, prouvant que son commerce n'est pas son idole.
+
+## Livre 14 : Le Licite et l'Illicite (Kitab al-Halal wa al-Haram)
+C'est le pivot de la religion. "L'adoration a dix parts, neuf d'entre elles résident dans la quête du Halal."
+*   **L'impact spirituel :** Une nourriture illicite (*Haram*) noircit le cœur, empêche les membres de faire le bien (ils deviennent lourds) et bloque l'ascension des invocations.
+*   **Les degrés de scrupule (*Wara'*) :**
+    1.  Éviter le Haram clair (vol, usure).
+    2.  Éviter les choses douteuses (*Shubuhat*).
+    3.  Éviter même le surplus de Halal (luxe) par peur de tomber dans le douteux. C'est le niveau des véridiques.
+
+## Livre 15 : L'Éthique de la Fraternité (Kitab Adab al-Suhba)
+L'homme est social. Ses amis façonnent sa religion.
+*   **Le choix de l'ami :** Il doit être intelligent (le sot fatigue), de bon caractère (le colérique blesse) et pieux (le pervers éloigne d'Allah).
+*   **Les Droits de la Fraternité :**
+    *   **L'argent :** Être prêt à partager, ou mieux, à le faire passer avant soi (*Ithar*).
+    *   **La langue :** Se taire sur ses défauts (ne jamais les dévoiler), et parler pour le défendre ou lui dire la vérité avec douceur.
+    *   **Le pardon :** Accepter ses excuses et ignorer ses fautes.
+    *   **La prière :** Invoquer pour lui en son absence, vivant ou mort.
+
+## Livre 16 : L'Éthique de la Retraite (Kitab Adab al-'Uzla)
+Le débat éternel : vivre seul ou en société ?
+*   **L'isolement est meilleur pour :** Celui qui craint pour sa foi dans une société corrompue, qui veut se consacrer totalement à l'adoration et à la pensée, ou qui veut éviter de commettre des péchés de langue (médisance, ostentation).
+*   **La fréquentation est meilleure pour :** Celui qui peut enseigner, apprendre, gagner sa vie, ou qui a besoin d'éducation par le contact des autres (pour casser son orgueil).
+*   **La synthèse :** "Sois avec les gens par ton corps, et avec Allah par ton cœur."
+
+## Livre 17 : L'Éthique du Voyage (Kitab Adab al-Safar)
+Voyager physique doit toujours rappeler le voyage vers l'Au-delà.
+*   Le voyageur est "l'invité de Dieu". Son invocation est exaucée car son cœur est brisé par l'éloignement et la fatigue.
+*   **Types de voyages :** Pour la science, pour le Hajj, pour visiter un frère, ou pour contempler les merveilles de la création. Fuir un endroit de péché est aussi une obligation.
+*   Avant de partir : Rendre les dépôts, payer ses dettes, laisser de quoi vivre à sa famille et faire ses adieux.
+
+## Livre 18 : L'Audition et l'Extase (Kitab Adab al-Sama' wa al-Wajd)
+Ghazali traite ici de l'écoute de la poésie et des chants spirituels (*Inshad*).
+*   **Le principe :** La musique/chant n'est pas interdit en soi, sauf si elle accompagne des péchés (alcool, mixité) ou excite les bas instincts.
+*   **L'effet :** Le chant est un "soufflet" qui attise le feu du cœur. S'il y a de l'amour d'Allah dans le cœur, le chant l'augmente et provoque l'extase (*Wajd*). S'il y a de l'amour du monde, le chant augmente cet amour vain.
+*   L'extase véritable doit mener à une meilleure pratique religieuse, sinon c'est une illusion de Satan.
+
+## Livre 19 : L'Ordonnance du Bien et l'Interdiction du Mal (Kitab al-Amr bi al-Ma'ruf)
+C'est la mission des Prophètes et le "Pôle Suprême" de la religion. Si on l'abandonne, le châtiment touche tout le monde.
+*   **Les piliers :** Un ordonnateur (tout musulman capable), un destinataire (un humain responsable), un acte blâmable (clair et actuel) et une méthode.
+*   **Les étapes de la méthode :**
+    1.  Informer (peut-être qu'il ne sait pas).
+    2.  Conseiller avec douceur.
+    3.  Hausser le ton (sans insulte).
+    4.  L'action physique (casser les bouteilles de vin), réservée à ceux qui ont l'autorité ou la capacité sans créer un mal plus grand (*Fitna*).
+*   La condition principale est la **patience**, car celui qui ordonne le bien sera forcément critiqué ou agressé.
+
+## Livre 20 : Le Caractère Prophétique (Kitab Adab al-Ma'isha wa Akhlaq al-Nubuwwa)
+Ce livre clôture le quart des Habitudes en présentant le modèle ultime : Muhammad ﷺ.
+*   Ghazali décrit sa modestie (il trayait sa brebis, réparait ses sandales), son courage, sa générosité (il ne disait jamais "non"), son éloquence et sa compassion.
+*   Le but de ce livre est de montrer que l'Adab n'est pas une contrainte sociale, mais une imitation de l'homme le plus parfait. Suivre sa Sunnah dans les petits détails (comme dormir sur le côté droit) connecte le croyant à la source de la lumière prophétique et attire l'amour d'Allah.
+
+`
+    },
+    {
+        slug: 'ghazali-ihya-quart-perils',
+        title: "Ihya' Al-Ghazali (3/4) : Les Maladies du Cœur (Muhlikat)",
+        excerpt: "L'ostentation, l'orgueil, l'envie... Ghazali, le médecin de l'âme, diagnostique ces maladies mortelles et prescrit leurs remèdes spirituels.",
+        date: '2026-02-02',
+        author: 'Imam Al-Ghazali (Extrait)',
+        readTime: '14 min',
+        content: `
+# Les Périls du Cœur (Rub' al-Muhlikat)
+
+Ce quart est une descente dans les abîmes de l'âme humaine pour en diagnostiquer les pathologies. Ghazali agit ici en "médecin des cœurs", identifiant les virus invisibles qui détruisent les œuvres de l'intérieur. Tant que ces racines pourries ne sont pas arrachées, l'arbre de la foi ne peut donner de fruits sains.
+
+## Livre 21 : Les Merveilles du Cœur (Kitab Sharh 'Aja'ib al-Qalb)
+Le cœur (*Qalb*) est l'essence de l'homme, le roi qui commande aux membres.
+*   **La citadelle assiégée :** Le cœur est disputé par deux armées : celle des anges (l'intellect, la lumière) et celle des démons (les passions, les ténèbres). Shaytan a des "portes" pour pénétrer la forteresse : la colère, la satiété, l'envie, et la hâte.
+*   **Le miroir :** Le cœur est créé pour refléter la Majesté Divine. Mais chaque péché est une tache noire (*Ran*) qui l'obscurcit. Si l'homme persiste, le miroir devient rouillé et aveugle. Le "polissage" se fait par le Dhikr et le repentir.
+*   **La connaissance de soi :** "Celui qui se connaît, connaît son Seigneur." Ignorer son propre cœur est la pire des ignorances.
+
+## Livre 22 : L'Éducation de l'Âme (Kitab Riyadat al-Nafs)
+L'âme (*Nafs*) est comme un cheval sauvage et rétif. Si on la laisse faire, elle court vers le précipice.
+*   **Les étapes de l'âme :**
+    1.  *Nafs Ammara* (Incitatrice au mal) : L'état par défaut, esclave des pulsions.
+    2.  *Nafs Lawwama* (Celle qui se blâme) : La conscience s'éveille, le croyant péche puis regrette. C'est le champ de bataille.
+    3.  *Nafs Mutma'inna* (Apaisée) : L'âme a été domptée et trouve son plaisir dans l'obéissance.
+*   **La méthode :** La *Mujahada* (lutte spirituelle). Imposer à l'âme le contraire de ce qu'elle désire (jeûner quand elle veut manger, se taire quand elle veut briller). Le bon caractère n'est pas inné, il s'acquiert par entraînement.
+
+## Livre 23 : Les Deux Désirs (Kitab Kasr al-Shahwatayn)
+Les deux plus grandes portes de l'Enfer sont la bouche et le sexe.
+*   **Le ventrre :** C'est la source de toutes les maladies. La satiété excessive durcit le cœur, alourdit l'esprit, réduit le besoin de sommeil (donc moins de prières de nuit) et excite le désir sexuel. Ghazali préconise la faim modérée comme clé de la lumière spirituelle. Le Prophète ﷺ disait : "Le fils d'Adam ne remplit pas de récipient pire que son estomac."
+*   **Le sexe :** C'est le piège le plus puissant de Satan. S'il est utilisé dans le Halal (mariage), c'est une miséricorde et un avant-goût des plaisirs du Paradis. S'il est débridé, il détruit la société et la foi. Le remède pour celui qui ne peut se marier est le jeûne, car il coupe l'énergie du désir.
+
+## Livre 24 : Les Fléaux de la Langue (Kitab Afat al-Lisan)
+La langue est le membre le plus désobéissant. Elle est facile à bouger mais ses conséquences sont éternelles.
+*   **La Médisance (*Ghibah*) :** C'est mentionner son frère absent par ce qu'il détesterait. C'est comme "manger la chair de son frère mort". Même si c'est vrai, c'est de la médisance (si c'est faux, c'est de la calomnie).
+*   **Le Mensonge :** Il détruit la confiance. Le Prophète ﷺ a dit qu'un croyant peut être lâche ou avare, mais pas menteur.
+*   **La Polémique (*Jidal*) :** Discuter juste pour avoir raison ou humilier l'autre éteint la lumière de la foi.
+*   **Le remède :** Le silence. "Celui qui se tait est sauvé." Ne parler que si la parole est meilleure que le silence.
+
+## Livre 25 : La Colère, la Haine et l'Envie (Kitab Dhamm al-Ghadab wa al-Hasad)
+*   **La Colère :** C'est une ébullition du sang du cœur demandant vengeance. Elle est une braise du diable. Sous la colère, l'intelligence se voile. Le Prophète ﷺ a dit : "Le fort n'est pas celui qui terrasse ses adversaires, mais celui qui se maîtrise lors de la colère." Le remède : changer de position (s'asseoir), faire les ablutions (l'eau éteint le feu) et chercher refuge auprès d'Allah.
+*   **L'Envie (*Hasad*) :** C'est souhaiter la disparition du bienfait d'Allah sur autrui. C'est le péché d'Iblis (jaloux d'Adam) et de Caïn. L'envieux est en réalité en colère contre le destin d'Allah ("Pourquoi Lui as-Tu donné et pas à moi ?"). L'envie dévore les bonnes actions comme le feu dévore le bois sur.
+
+## Livre 26 : Le Blâme du Bas-Monde (Kitab Dhamm al-Dunya)
+Comprendre la réalité de la *Dunya* est la base de l'ascétisme.
+*   **L'illusion :** Le monde est comme une ombre : si tu cours après, tu ne l'attrapes jamais; si tu lui tournes le dos (pour aller vers le soleil/Dieu), elle te suit.
+*   **L'image :** Ghazali compare la Dunya à une vieille femme laide qui se pare de bijoux et de voiles pour séduire les hommes. Ses prétendants, une fois mariés à elle, découvrent sa laideur et sa traîtrise (elle tue tous ses maris).
+*   **Le juste milieu :** On ne blâme pas le monde en soi (il est le champ de culture pour l'Au-delà), mais on blâme "l'amour du monde" qui chasse l'amour d'Allah du cœur.
+
+## Livre 27 : Le Blâme de la Richesse et de l'Avarice (Kitab Dhamm al-Bukhl)
+L'argent (*Mal*) est un serpent venimeux qui porte aussi un antidote.
+*   **Le venin :** Il pousse à l'orgueil, à l'oubli de Dieu et aux plaisirs illicites. L'avarice est une maladie qui prouve qu'on fait plus confiance à son compte en banque qu'à la promesse d'Allah.
+*   **L'antidote :** Utiliser l'argent pour adorer (Hajj), aider les pauvres et construire des œuvres durables (*Waqf*).
+*   **La Générosité :** C'est la qualité des Prophètes. Le généreux est proche d'Allah, proche des gens, proche du Paradis.
+
+## Livre 28 : Le Blâme de la Gloire et de l'Ostentation (Kitab Dhamm al-Jah wa al-Riya')
+C'est le danger suprême pour les élites spirituelles et les savants.
+*   **L'Amour du statut (*Jah*) :** Vouloir posséder le cœur des gens, être célèbre et respecté. C'est une forme subtile de tyrannie.
+*   **L'Ostentation (*Riya*) :** C'est le "Chirk cachée". Faire l'adoration pour être vu. C'est transformer un acte divin en monnaie mondaine. Au jour du Jugement, on dira à l'ostentatoire : "Va chercher ta récompense auprès de ceux pour qui tu as agi."
+*   **Le remède :** Cacher ses bonnes actions avec autant de soin qu'on cache ses péchés. Se rappeler que les louanges des hommes ne vous ajoutent pas un atome de valeur auprès d'Allah.
+
+## Livre 29 : Le Blâme de l'Orgueil et de la Vanité (Kitab Dhamm al-Kibr wa al-'Ujub)
+*   **L'Orgueil (*Kibr*) :** C'est se voir supérieur aux autres et refuser la vérité. "N'entrera pas au Paradis celui qui a un atome d'orgueil." Seul Allah a le manteau de la Grandeur; celui qui veut Lui disputer, Il le brise.
+*   **La Vanité (*'Ujub*) :** C'est s'admirer soi-même, s'attribuer le mérite de ses qualités en oubliant qu'elles sont un pur don d'Allah. La vanité mène à l'orgueil, qui mène à l'oubli.
+
+## Livre 30 : Le Blâme de la Tromperie spirituelle (Kitab Dhamm al-Ghurur)
+C'est le livre qui clôt les maladies. Le *Ghurur*, c'est la fausse sécurité.
+*   **Les trompés :** Ce sont ceux qui pensent être sauvés pour de mauvaises raisons. Le savant qui pense que sa science le sauvera alors qu'il ne la met pas en pratique. Le dévot qui pense que son action est parfaite alors qu'elle est pleine d'ostentation. Le pécheur qui compte sur la miséricorde d'Allah ("Allah est Ghafour") tout en persistant dans le péché sans repentir.
+*   **Le réveil :** Il faut combiner la Crainte et l'Espoir, et ne jamais se sentir "arrivé" ou "garanti" avant d'avoir posé le pied au Paradis.
+
+`
+    },
+    {
+        slug: 'ghazali-ihya-quart-sauvrices',
+        title: "Ihya' Al-Ghazali (4/4) : Le Chemin du Salut (Munjiyat)",
+        excerpt: "Après avoir nettoyé le cœur, il faut l'embellir. Le Repentir, la Patience, l'Espoir et l'Amour sont les stations vers la proximité divine.",
+        date: '2026-02-02',
+        author: 'Imam Al-Ghazali (Extrait)',
+        readTime: '13 min',
+        content: `
+# Les Stations du Salut (Rub' al-Munjiyat)
+
+Après le diagnostic et le nettoyage (Takhliya), vient le temps de l'embellissement (*Tahliya*). Ce dernier quart décrit les 10 stations (*Maqamat*) par lesquelles le voyageur s'élève jusqu'à la proximité divine. Ce ne sont pas des concepts théoriques, mais des états d'être à réaliser.
+
+## Livre 31 : Le Repentir (Kitab al-Tawbah)
+Le Repentir n'est pas un acte unique, c'est le début, milieu et fin du chemin.
+*   **La Vérité du Tawbah :** C'est un feu dans le cœur (le Regret) causé par la prise de conscience que le péché nous a séparé du Bien-Aimé. Ce feu brûle les racines du péché.
+*   **Les 3 conditions :** Le regret sincère (*Nadam*), l'arrêt immédiat du péché, et la résolution ferme de ne pas récidiver. Si le péché concerne autrui, la réparation (*Radd al-Mazalim*) est obligatoire.
+*   **L'Espoir :** Allah aime le repenti. "Celui qui se repent du péché est comme celui qui n'a pas de péché." Il ne faut jamais désespérer, même après 70 récidives par jour, tant qu'on revient sincèrement à chaque fois.
+
+## Livre 32 : La Patience et la Gratitude (Kitab al-Sabr wa al-Shukr)
+La foi est un oiseau à deux ailes : Patience et Gratitude.
+*   **La Patience (*Sabr*) :** Ce n'est pas la passivité, c'est une force de résistance (*Sumud*). Résister aux désirs illicites, résister pour accomplir les adorations difficiles, et résister face aux coups du destin sans se plaindre à autre qu'Allah.
+*   **La Gratitude (*Shukr*) :** La gratitude du cœur est de savoir que tout bienfait vient d'Allah. La gratitude de la langue est la louange. La gratitude des membres est d'utiliser le bienfait dans l'obéissance du Donateur. Regarder une femme étrangère avec l'œil qu'Allah vous a donné est le sommet de l 'ingratitude.
+
+## Livre 33 : La Crainte et l'Espoir (Kitab al-Khawf wa al-Raja)
+*   **La Crainte (*Khawf*) :** C'est le "fouet" d'Allah pour chasser l'âme vers le droit chemin. Elle brûle les désirs. Elle ne doit pas mener au désespoir, mais à l'action. "Celui qui a peur voyage de nuit."
+*   **L'Espoir (*Raja*) :** C'est la pluie qui fait fleurir les cœurs. Ce n'est pas l'insouciance (se croire sauvé sans agir), mais l'attente confiante de la Miséricorde après avoir fait l'effort.
+*   **L'équilibre :** Le croyant vole avec ces deux ailes. En santé, la Crainte domine; à la mort, l'Espoir doit dominer pour rencontrer Allah avec une bonne opinion de Lui.
+
+## Livre 34 : La Pauvreté et l'Ascétisme (Kitab al-Faqr wa al-Zuhd)
+*   **La Pauvreté :** Le pauvre patient est le roi de demain. Il entrera au Paradis 500 ans avant le riche.
+*   **Le Renoncement (*Zuhd*) :** C'est le détachement du cœur. Le *Zahid* n'est pas celui qui ne possède rien, mais celui que rien ne possède. Si le monde entier vient à lui, il ne se réjouit pas; s'il le perd, il ne s'attriste pas. Pour lui, l'or et la pierre sont égaux.
+
+## Livre 35 : L'Unicité et la Confiance (Kitab al-Tawhid wa al-Tawakkul)
+C'est le sommet de la foi.
+*   **Tawhid pur :** Voir qu'il n'y a dans l'univers aucun acteur, aucun donateur, aucun nuiseur sauf Allah. Les causes (le feu qui brûle, le médicament qui guérit, le patron qui paye) ne sont que des marionnettes; la main qui les bouge est celle d'Allah.
+*   **Tawakkul (Confiance) :** Une fois cette vision acquise, le cœur se repose totalement sur Allah, comme le nourrisson se repose sur sa mère. On fait les causes (attacher la chamelle) par obéissance à la loi divine, mais le cœur ne compte que sur le Créateur de la cause.
+
+## Livre 36 : L'Amour, le Désir et l'Intimité (Kitab al-Mahabbah)
+L'Islam est la religion de l'Amour. "Ceux qui croient sont les plus ardents en l'amour d'Allah."
+*   **Pourquoi aimer Allah ?** L'homme aime la beauté, la perfection et la bienfaisance. Allah est la Source de toute beauté, de toute perfection et de tout bienfait. Il est donc le seul digne d'amour réel.
+*   **Les signes de l'Amour :** Préférer la Parole de l'Aimé (Coran), aimer la solitude avec Lui (prière de nuit), ne pas craindre la mort (qui est la rencontre), et être doux avec Ses créatures.
+
+## Livre 37 : L'Intention, la Sincérité et la Véridicité (Kitab al-Niyyah)
+L'esprit de l'action, c'est l'intention.
+*   **Niyyah :** Une action neutre (dormir, manger) devient une adoration par l'intention.
+*   **Ikhlas (Sincérité) :** C'est purifier l'action de tout mélange. Faire le bien *uniquement* pour Allah, sans attendre ni louange, ni récompense, ni même le Paradis, mais juste la Face du Seigneur. C'est l'œuvre la plus difficile.
+*   **Sidq (Véridicité) :** C'est l'alignement total entre l'intérieur et l'extérieur.
+
+## Livre 38 : La Vigilance et l'Examen de Conscience (Kitab al-Muraqaba wa al-Muhasaba)
+Comment gérer le commerce avec Allah ?
+*   **Muraqaba (Vigilance) :** C'est la certitude permanente qu'Allah me regarde. "Adore Allah comme si tu le voyais." C'est l'état du cœur avant et pendant l'action.
+*   **Muhasaba (Examen) :** C'est faire ses comptes après l'action, comme un associé scrupuleux. Chaque soir, demandez à votre âme : "Qu'as-tu fait ? Pourquoi as-tu regardé ceci ? Pour qui as-tu dit cela ?"
+
+## Livre 39 : La Méditation (Kitab al-Tafakkur)
+"Une heure de méditation vaut mieux qu'une année d'adoration."
+*   La méditation est la clé des lumières. Elle mène de la connaissance intellectuelle à la vision du cœur.
+*   **Sur quoi méditer ?** Sur ses propres péchés (pour acquérir la crainte), sur les bienfaits d'Allah (pour acquérir l'amour), et sur les merveilles de la création (pour acquérir la connaissance de la Grandeur).
+
+## Livre 40 : Le Rappel de la Mort (Kitab Dhikr al-Mawt)
+C'est la conclusion nécessaire.
+*   Le Rappel de la mort n'est pas morbide, il est vivifiant. Il brise les plaisirs illicites, raccourcit les faux espoirs et pousse à l'action immédiate.
+*   Ghazali décrit les étapes finales : l'agonie, la tombe (Barzakh), le rassemblement, l'attente, le Pont (*Sirat*), et enfin les demeures éternelles : l'Enfer ou le Paradis.
+*   **Le sommet du Paradis :** Ce n'est pas les fleuves ni les houris, mais la Vision de la Face Noble d'Allah (*Ru'yat Allah*), le plaisir suprême pour lequel les amants ont œuvré.
+
+**Conclusion Finale :** Vous avez maintenant parcouru la carte de l'Ihya. Mais la carte n'est pas le territoire. Le but n'est pas de connaître ces stations, mais de les marcher. Qu'Allah nous donne la force de la mise en pratique.
+
+`
+    },
+    {
         slug: 'devenir-hafiz-methododes',
         title: 'Le Voyage vers le Coran : Comment devenir Hafiz',
         excerpt: 'Découvrez les mérites immenses de la mémorisation du Coran, les conditions spirituelles requises, et des méthodes pratiques (Hifz, Muraja\'ah) pour atteindre ce noble but.',
@@ -335,5 +633,129 @@ Le but n'est pas de s'arrêter au jour 41. Le but est que le jour 41, vous ne pu
 
 Qu'Allah vous accorde la constance (Istiqama).
 `
-    }
+    },
+    {
+        slug: '99-noms-cle-invocation',
+        title: 'Le Secret des 99 Noms d\'Allah : La clé de l\'exaucement',
+        excerpt: 'Découvrez pourquoi apprendre les 99 Noms d\'Allah n\'est pas qu\'un exercice de mémoire, mais le moyen le plus puissant pour transformer vos invocations et votre cœur.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '5 min',
+        content: `
+# Connaître Allah par Ses Noms
+
+Le Prophète ﷺ a dit : **"Certes, Allah a 99 noms, cent moins un. Celui qui les dénombre entrera au Paradis."** (Bukhari et Muslim).
+
+Beaucoup pensent que "dénombrer" (Ahsaha) signifie simplement les mémoriser par cœur comme une liste de courses. Mais le sens est bien plus profond.
+
+## 1. Connaître le sens (Ilm)
+
+Dire *"Al-Wadoud"* sans savoir que cela signifie *"Le Tout-Affectueux, Celui qui aime Ses serviteurs et Se fait aimer d'eux"* réduit ce Nom à un simple son.
+Pour chaque Nom, essayez de comprendre sa définition et son impact.
+
+## 2. Invoquer par ces Noms (Doua)
+
+Allah dit : **"C'est à Allah qu'appartiennent les Noms les plus beaux. Invoquez-Le par ces Noms."** (Sourate Al-A'raf, 7:180).
+
+C'est le secret de l'exaucement. Adaptez votre demande au Nom correspondant :
+*   Vous cherchez la subsistance ? Dites *"Ya Razzaq"*.
+*   Vous cherchez le pardon ? Dites *"Ya Ghaffar"*.
+*   Vous vous sentez faible ? Dites *"Ya Qawiyy"*.
+
+## 3. Vivre par ces Noms (Amal)
+
+C'est l'étape ultime. Si vous savez qu'Allah est **As-Sami** (Celui qui entend tout), alors surveillez votre langue. Si vous savez qu'Il est **Ar-Razzaq** (Le Pourvoyeur), ne craignez pas pour votre avenir financier et ne volez pas.
+
+## Découvrez notre section "99 Noms"
+
+Nous avons créé une section dédiée pour vous aider dans ce voyage :
+*   **Les Noms groupés :** Apprenez-les par paquets de 10.
+*   **Quiz interactifs :** Testez vos connaissances.
+*   **Suivi de progression :** Visualisez votre avancée vers les "99".
+
+Commencez aujourd'hui. Apprendre un Nom par jour vous prendra 3 mois, mais changera votre relation avec Allah pour l'éternité.
+`
+    },
+    {
+        slug: 'importance-sunnah-hadith',
+        title: 'La Sunnah : L\'autre moitié de la Révélation',
+        excerpt: 'Peut-on comprendre le Coran sans la Sunnah ? Pourquoi les Hadiths sont-ils indispensables ? Une introduction claire à la deuxième source de l\'Islam.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '6 min',
+        content: `
+# La Sunnah : Lumière sur la Lumière
+
+Certains prétendent aujourd'hui qu'on peut se "suffire du Coran". Pourtant, le Coran lui-même nous ordonne à maintes reprises d'obéir au Messager :
+**"Prenez ce que le Messager vous donne ; et ce qu'il vous interdit, abstenez-vous en."** (Sourate Al-Hashr, 59:7).
+
+## 1. La Sunnah explique le Coran
+
+Le Coran ordonne : *"Accomplissez la Salat"*. Mais où trouve-t-on qu'il y a 5 prières ? Que le Maghreb a 3 cycles (Raka'at) ? Que l'on récit Al-Fatiha ?
+Absolument tout cela se trouve dans la Sunnah. Sans les Hadiths, nous ne saurions même pas comment prier, jeûner ou faire le Hajj.
+
+La Sunnah est l'explication théorique et pratique du Coran. Le Prophète ﷺ était un "Coran qui marche".
+
+## 2. Une science rigoureuse
+
+Contrairement aux textes historiques classiques, les Hadiths ont été préservés par une science unique au monde : la science du **Isnad** (chaîne de transmission).
+Chaque parole attribuée au Prophète ﷺ a été passée au crible : qui l'a rapportée ? Était-il honnête ? Avait-il une bonne mémoire ? A-t-il rencontré celui d'avant ?
+
+C'est pour cela que vous verrez sur notre site les classifications suivantes :
+*   **Sahih (Authentique) :** Le top de la fiabilité. (Ex: Bukhari, Muslim).
+*   **Hasan (Bon) :** Accepté.
+*   **Da'if (Faible) :** À prendre avec précaution.
+
+## 3. Explorez la Sagesse Prophétique
+
+Notre section **"Hadith"** vous donne accès aux trésors de la parole prophétique :
+*   **Les 40 Nawawi :** Le point de départ idéal pour tout musulman. Ce sont les fondations.
+*   **Les Grands Recueils (Bukhari, Muslim...) :** Pour aller plus loin.
+
+Ne lisez pas les Hadiths comme de simples citations culturelles. Lisez-les comme des directives de votre Commandant bien-aimé ﷺ.
+`
+    },
+    {
+        slug: 'importance-etude-sira',
+        title: 'Pourquoi étudier la Sira du Prophète ﷺ ?',
+        excerpt: 'On ne peut aimer celui qu\'on ne connaît pas. La biographie du Prophète (Sira) n\'est pas de l\'histoire ancienne, c\'est le mode d\'emploi de notre vie actuelle.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '5 min',
+        content: `
+# La Sira : Plus que de l'Histoire
+
+Connaître la vie du Prophète Muhammad ﷺ (la **Sira**) est une obligation du cœur pour tout croyant.
+
+## 1. Pour l'aimer véritablement
+
+Comment aimer quelqu'un dont on ignore tout ? En découvrant sa douceur avec les enfants, sa patience face aux persécutions, son courage sur le champ de bataille et ses pleurs pour sa communauté (nous !), un amour naturel naît dans le cœur.
+Le Prophète ﷺ a dit : *"Nul d'entre vous ne sera véritablement croyant tant que je ne serai pas plus aimé de lui que son père, son fils et l'humanité entière."*
+
+## 2. Pour comprendre le Coran
+
+Le Coran a été révélé sur 23 ans. De nombreux versets sont liés à des événements précis (les causes de la révélation ou *Asbab an-Nuzul*).
+*   Comprendre la bataille de Badr éclaire la Sourate Al-Anfal.
+*   Connaître l'incident de la calomnie (Ifk) explique les versets de la Sourate An-Nur.
+La Sira est le contexte du Texte.
+
+## 3. Un modèle pour TOUTES les situations
+
+Allah a fait en sorte que Son Messager traverse toutes les épreuves humaines pour nous servir de modèle :
+*   Orphelin ? Il l'a été.
+*   Père endeuillé ? Il a enterré 6 de ses 7 enfants.
+*   Chef d'État ? Il a dirigé Médine.
+*   Persécuté ? Il a été chassé de chez lui.
+*   Marchand ? Il a commercé.
+*   Mari ? Il a eu des épouses.
+
+Quelle que soit votre épreuve, Muhammad ﷺ l'a vécue avant vous et vous a montré la voie de l'excellence dans cette situation.
+
+## Plongez dans sa vie
+
+Visitez notre section **"Sira"** pour découvrir sa biographie chronologique. Ne lisez pas juste les faits, cherchez les leçons. Demandez-vous toujours : *"Comment réagirait-il à ma place aujourd'hui ?"*
+`
+    },
 ];
+
+

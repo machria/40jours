@@ -1,8 +1,10 @@
 export interface AllahName {
+    Number: number;
     arabe: string;
     transliteration: string;
     francais: string;
     signification: string;
+    verset?: string;
 }
 
 export const namesOfAllah: AllahName[] = [

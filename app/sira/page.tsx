@@ -18,6 +18,7 @@ type SeerahEvent = {
 export default function SeerahPage() {
     const [events, setEvents] = useState<SeerahEvent[]>([]);
     const [loading, setLoading] = useState(true);
+    const [viewMode, setViewMode] = useState<'list' | 'timeline'>('timeline');
 
     useEffect(() => {
         async function loadEvents() {
@@ -36,16 +37,9 @@ export default function SeerahPage() {
 
     const formatDate = (dateStr: string) => {
         if (!dateStr) return '';
-        // Handle negative dates (BC)
         const isBC = dateStr.startsWith('-');
-        // If BC, remove the leading minus for processing (or handle year manually)
         const normalizedDate = isBC ? dateStr.substring(1) : dateStr;
         const date = new Date(normalizedDate);
-
-        // JavaScript Date constructor might struggle with negative years directly in ISO format depending on implementation
-        // For simplicity, let's just parse logic manualy or trust Date if it works.
-        // But common JS Date: new Date("-2000-01-01") often works but displays 2001 BC or similar.
-        // Let's adhere to a custom format for BC to be safe.
 
         const options: Intl.DateTimeFormatOptions = {
             year: 'numeric',
@@ -54,21 +48,11 @@ export default function SeerahPage() {
         };
 
         try {
-            // For BC dates like "-2000-01-01", we can just treat as positive year and append "av. J.-C."
             if (isBC) {
-                // Extract year, month, day manually or assume simple ISO format
                 const parts = normalizedDate.split('-');
                 if (parts.length >= 1) {
-                    return `${parts[0]} av. J.-C.`; // Return just the year or full date if needed. 
-                    // If we want full date? 
-                    // Let's stay simple: Just Year for BC often suffices, or simple format.
-                    // But the user asked to fix "bugged object", likely the year display.
-
-                    // Let's try to actually format it.
                     const dateObj = new Date(normalizedDate);
-                    // Invalid date check
                     if (isNaN(dateObj.getTime())) return dateStr;
-
                     return `env. ${Math.abs(dateObj.getFullYear())} av. J.-C.`;
                 }
             }
@@ -82,7 +66,7 @@ export default function SeerahPage() {
         if (!dateStr) return '';
         const isBC = dateStr.startsWith('-');
         if (isBC) {
-            const year = dateStr.split('-')[1]; // after the first minus
+            const year = dateStr.split('-')[1];
             return `${year} BC`;
         }
         return dateStr.split('-')[0];
@@ -110,65 +94,146 @@ export default function SeerahPage() {
                     <div>
                         <h1 className="text-2xl font-bold font-kufi text-primary">Sira du Prophète ﷺ</h1>
                         <p className="text-sm text-muted-foreground">Biographie du Prophète Muhammad ﷺ</p>
-                        <p className="text-xs text-muted-foreground mt-1">Source: Le Nectar Cacheté (الرحيق المختوم)</p>
                     </div>
-                    <Link
-                        href="/sira/quiz"
-                        className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap"
-                    >
-                        📝 Quiz
-                    </Link>
+                    <div className="flex items-center gap-2">
+                        <div className="flex bg-muted/50 p-1 rounded-lg">
+                            <button
+                                onClick={() => setViewMode('timeline')}
+                                className={cn(
+                                    "px-3 py-1.5 rounded-md text-sm font-medium transition-all",
+                                    viewMode === 'timeline'
+                                        ? "bg-background shadow text-primary"
+                                        : "text-muted-foreground hover:text-foreground"
+                                )}
+                            >
+                                Timeline
+                            </button>
+                            <button
+                                onClick={() => setViewMode('list')}
+                                className={cn(
+                                    "px-3 py-1.5 rounded-md text-sm font-medium transition-all",
+                                    viewMode === 'list'
+                                        ? "bg-background shadow text-primary"
+                                        : "text-muted-foreground hover:text-foreground"
+                                )}
+                            >
+                                Liste
+                            </button>
+                        </div>
+                        <Link
+                            href="/sira/quiz"
+                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap ml-2"
+                        >
+                            📝 Quiz
+                        </Link>
+                    </div>
                 </div>
             </header>
 
             <main className="p-4 max-w-5xl mx-auto">
-                {/* Content List */}
-                <div className="space-y-6">
-                    {events.map((event, index) => (
-                        <div key={index} className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition-all group">
-                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
-                                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                                    {event.title}
-                                </h3>
-                                {event.start && (
-                                    <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground shrink-0">
-                                        <div className="flex items-center gap-1 bg-muted px-2 py-1 rounded">
-                                            <Calendar className="w-3 h-3" />
-                                            <span className="font-medium">{formatDate(event.start)}</span>
-                                            {event.end && (
-                                                <>
-                                                    <span>→</span>
-                                                    <span className="font-medium">{formatDate(event.end)}</span>
-                                                </>
-                                            )}
+                {viewMode === 'list' ? (
+                    /* Content List View */
+                    <div className="space-y-6">
+                        {events.map((event, index) => (
+                            <div key={index} className="bg-card border rounded-xl p-6 shadow-sm hover:shadow-md transition-all group">
+                                <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-4">
+                                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                                        {event.title}
+                                    </h3>
+                                    {event.start && (
+                                        <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground shrink-0">
+                                            <div className="flex items-center gap-1 bg-muted px-2 py-1 rounded">
+                                                <Calendar className="w-3 h-3" />
+                                                <span className="font-medium">{formatDate(event.start)}</span>
+                                                {event.end && (
+                                                    <>
+                                                        <span>→</span>
+                                                        <span className="font-medium">{formatDate(event.end)}</span>
+                                                    </>
+                                                )}
+                                            </div>
+                                            <span className="px-2 py-1 bg-primary/10 text-primary rounded font-bold">
+                                                {getYearFromDate(event.start)}
+                                            </span>
                                         </div>
-                                        <span className="px-2 py-1 bg-primary/10 text-primary rounded font-bold">
-                                            {getYearFromDate(event.start)}
-                                        </span>
+                                    )}
+                                </div>
+
+                                {/* Commentary */}
+                                {event.commentary && event.commentary.length > 0 && (
+                                    <div className="text-foreground/90 leading-relaxed mb-4 font-serif text-lg">
+                                        <p>{event.commentary.join(' ')}</p>
+                                    </div>
+                                )}
+
+                                {/* Notes */}
+                                {event.notes && (
+                                    <div className="mt-4 p-3 bg-muted/50 rounded-lg border border-muted/50 flex items-start gap-3">
+                                        <BookOpen className="w-4 h-4 mt-1 text-primary/70 shrink-0" />
+                                        <span className="text-sm italic text-muted-foreground">{event.notes}</span>
                                     </div>
                                 )}
                             </div>
+                        ))}
+                    </div>
+                ) : (
+                    /* Timeline Visual View */
+                    <div className="relative space-y-8 pl-8 md:pl-0 before:absolute before:inset-0 before:ml-8 md:before:ml-[50%] before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-muted-foreground/20 before:to-transparent">
+                        {events.map((event, index) => (
+                            <div key={index} className={cn(
+                                "relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group",
+                                "is-active", // Placeholder for actual active state if needed
+                            )}>
+                                {/* Timeline Dot */}
+                                <div className="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-background border-4 border-primary shadow-sm -translate-x-[calc(50%-0.5px)] shrink-0 z-10 group-hover:scale-125 transition-transform" />
 
-                            {/* Commentary */}
-                            {event.commentary && event.commentary.length > 0 && (
-                                <div className="text-foreground/90 leading-relaxed mb-4 font-serif text-lg">
-                                    <p>{event.commentary.join(' ')}</p>
+                                {/* Date Badge (Desktop Center) */}
+                                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-6 text-xs font-bold text-muted-foreground bg-background px-2 py-1 rounded-full border shadow-sm z-10">
+                                    {getYearFromDate(event.start)}
                                 </div>
-                            )}
 
-                            {/* Notes */}
-                            {event.notes && (
-                                <div className="mt-4 p-3 bg-muted/50 rounded-lg border border-muted/50 flex items-start gap-3">
-                                    <BookOpen className="w-4 h-4 mt-1 text-primary/70 shrink-0" />
-                                    <span className="text-sm italic text-muted-foreground">{event.notes}</span>
+                                {/* Spacer for alternate side */}
+                                <div className="hidden md:block w-1/2" />
+
+                                {/* Content Card */}
+                                <div className={cn(
+                                    "w-full md:w-[calc(50%-2rem)] ml-8 md:ml-0 p-6 rounded-xl border bg-card shadow-sm hover:shadow-lg transition-all relative",
+                                    "md:group-odd:mr-8 md:group-even:ml-8"
+                                )}>
+                                    {/* Arrow */}
+                                    <div className={cn(
+                                        "absolute top-6 w-3 h-3 bg-card border-t border-r rotate-45",
+                                        "hidden md:block",
+                                        "md:group-odd:-right-[7px] md:group-odd:border-t-muted md:group-odd:border-r-muted md:group-odd:border-l-0 md:group-odd:border-b-0",
+                                        "md:group-even:-left-[7px] md:group-even:border-l-muted md:group-even:border-b-muted md:group-even:border-t-0 md:group-even:border-r-0 md:group-even:rotate-[225deg]"
+                                    )} />
+
+                                    <div className="flex items-start justify-between gap-4 mb-2">
+                                        <h3 className="text-lg font-bold text-primary">{event.title}</h3>
+                                        <div className="md:hidden text-xs font-bold bg-muted px-2 py-1 rounded">{formatDate(event.start)}</div>
+                                    </div>
+
+                                    <div className="text-sm text-foreground/80 leading-relaxed mb-3">
+                                        {event.commentary && event.commentary.length > 0 && (
+                                            <p className="line-clamp-4 group-hover:line-clamp-none transition-all duration-300">
+                                                {event.commentary.join(' ')}
+                                            </p>
+                                        )}
+                                    </div>
+
+                                    {event.notes && (
+                                        <div className="text-xs text-muted-foreground italic border-t pt-2 mt-2">
+                                            {event.notes}
+                                        </div>
+                                    )}
                                 </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
 
-                {/* Footer info */}
-                <div className="mt-12 p-6 bg-muted/30 rounded-xl border">
+                {/* Footer info (Always visible) */}
+                <div className="mt-20 p-6 bg-muted/30 rounded-xl border relative z-10">
                     <h4 className="font-bold text-foreground mb-2">À propos de cette Sira</h4>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                         Cette timeline chronologique retrace <strong className="text-foreground">4000 ans d'histoire islamique</strong>,
@@ -180,15 +245,6 @@ export default function SeerahPage() {
                         <strong className="text-foreground"> "Le Nectar Cacheté" (الرحيق المختوم / Ar-Raheeq Al-Makhtum)</strong>,
                         une référence reconnue pour sa simplicité et son authenticité.
                     </p>
-                    <div className="mt-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
-                        <h5 className="text-sm font-bold text-primary mb-2">📚 Contenu de la timeline (64 événements)</h5>
-                        <ul className="text-xs text-muted-foreground space-y-1">
-                            <li>• <strong>Contexte prophétique</strong> : Ibrahim, Musa, 'Isa عليهم السلام</li>
-                            <li>• <strong>Vie du Prophète ﷺ</strong> : De sa naissance (571) à son décès (632)</li>
-                            <li>• <strong>Compagnons narrateurs</strong> : Abu Bakr, 'Umar, 'Ali, Abu Hurayrah, 'Aishah رضي الله عنهم</li>
-                            <li>• <strong>Imams compilateurs</strong> : Malik, Bukhari, Muslim, Tirmidhi, Ibn Majah, Nasa'i, Abu Dawud</li>
-                        </ul>
-                    </div>
                     <p className="text-xs text-muted-foreground mt-3">
                         Sources : <a href="https://github.com/OpenIslam/seerah-timeline" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">OpenIslam/seerah-timeline</a> +
                         recherches complémentaires • Traduction française complète

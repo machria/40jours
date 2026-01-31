@@ -2,12 +2,12 @@
   {
     "question": "En quelle année la Ka'bah a-t-elle été construite par Ibrahim et Isma'il عليهما السلام ?",
     "options": [
+      "Environ 4 avant J.-C.",
       "Environ 1400 avant J.-C.",
-      "Environ 2000 avant J.-C.",
       "Environ 570 après J.-C.",
-      "Environ 4 avant J.-C."
+      "Environ 2000 avant J.-C."
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "La Ka'bah a été construite par le Prophète Ibrahim et son fils Isma'il environ 2000 ans avant J.-C., comme première maison de culte dédiée au Dieu Unique.",
     "category": "date"
   },
@@ -15,23 +15,23 @@
     "question": "Pourquoi Ibrahim عليه السلام a-t-il construit la Ka'bah à La Mecque ?",
     "options": [
       "Pour établir un centre commercial",
-      "Pour créer la première maison de culte dédiée au Dieu Unique",
+      "Pour protéger sa famille",
       "Pour marquer son territoire",
-      "Pour protéger sa famille"
+      "Pour créer la première maison de culte dédiée au Dieu Unique"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Ibrahim a construit la Ka'bah sur l'ordre d'Allah pour établir la première maison de culte dédiée exclusivement à l'adoration du Dieu Unique.",
     "category": "context"
   },
   {
     "question": "Quelle est l'importance de la construction de la Ka'bah pour l'Islam ?",
     "options": [
-      "C'est un simple monument historique",
+      "C'est un symbole politique",
       "C'est uniquement un lieu de pèlerinage",
-      "C'est la direction de la prière (Qibla) pour tous les musulmans",
-      "C'est un symbole politique"
+      "C'est un simple monument historique",
+      "C'est la direction de la prière (Qibla) pour tous les musulmans"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "La Ka'bah est d'une importance capitale car elle est la Qibla (direction de la prière) vers laquelle se tournent tous les musulmans du monde, et le lieu du Hajj.",
     "category": "importance"
   },
@@ -51,35 +51,35 @@
     "question": "Quel livre sacré le Prophète Musa عليه السلام a-t-il reçu ?",
     "options": [
       "L'Évangile",
-      "Le Coran",
       "La Torah",
+      "Le Coran",
       "Les Psaumes"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Le Prophète Musa a reçu la Torah (At-Tawrat) d'Allah et a conduit les Enfants d'Israël hors d'Égypte.",
     "category": "context"
   },
   {
     "question": "Pourquoi Musa عليه السلام est-il important dans l'Islam ?",
     "options": [
-      "Il est mentionné une seule fois dans le Coran",
       "Il est uniquement important pour les juifs",
+      "Il est l'un des plus grands prophètes et le plus mentionné dans le Coran",
       "Il n'a aucune importance",
-      "Il est l'un des plus grands prophètes et le plus mentionné dans le Coran"
+      "Il est mentionné une seule fois dans le Coran"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Musa est l'un des plus grands prophètes de l'Islam et le prophète le plus fréquemment mentionné dans le Coran, avec de nombreux enseignements tirés de son histoire.",
     "category": "importance"
   },
   {
     "question": "En quelle année le Prophète 'Isa عليه السلام est-il né ?",
     "options": [
-      "Environ 4 avant J.-C.",
-      "1400 avant J.-C.",
       "2000 avant J.-C.",
-      "571 après J.-C."
+      "571 après J.-C.",
+      "1400 avant J.-C.",
+      "Environ 4 avant J.-C."
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Le Prophète 'Isa (Jésus) est né environ 4 ans avant J.-C., par un miracle d'Allah, de Maryam (Marie).",
     "category": "date"
   },
@@ -98,84 +98,84 @@
   {
     "question": "Quelle est l'importance de 'Isa عليه السلام dans l'Islam ?",
     "options": [
-      "Il est considéré comme Dieu",
-      "Il n'est pas reconnu dans l'Islam",
+      "Il est uniquement un sage",
       "Il est un grand prophète et messager d'Allah",
-      "Il est uniquement un sage"
+      "Il n'est pas reconnu dans l'Islam",
+      "Il est considéré comme Dieu"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "'Isa est un grand prophète et messager d'Allah dans l'Islam, né miraculeusement, qui a prêché le monothéisme et annoncé la venue du Prophète Muhammad ﷺ.",
     "category": "importance"
   },
   {
     "question": "En quelle année 'Abdul-Muttalib, grand-père du Prophète ﷺ, est-il né ?",
     "options": [
-      "570 après J.-C.",
       "545 après J.-C.",
       "497 après J.-C.",
-      "571 après J.-C."
+      "571 après J.-C.",
+      "570 après J.-C."
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "'Abdul-Muttalib est né en 497 après J.-C. Il était le chef des Quraysh et le grand-père du Prophète Muhammad ﷺ.",
     "category": "date"
   },
   {
     "question": "Quel exploit important 'Abdul-Muttalib a-t-il accompli ?",
     "options": [
-      "Il a redécouvert le puits de Zamzam",
       "Il a construit la Ka'bah",
+      "Il a redécouvert le puits de Zamzam",
       "Il a conquis La Mecque",
       "Il a écrit le Coran"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "'Abdul-Muttalib a redécouvert le puits de Zamzam à La Mecque, qui avait été enseveli pendant des siècles.",
     "category": "context"
   },
   {
     "question": "Quel rôle 'Abdul-Muttalib a-t-il joué dans la vie du Prophète ﷺ ?",
     "options": [
-      "Il l'a élevé après la mort de ses parents",
+      "Il était son frère",
       "Aucun rôle",
-      "Il était son oncle",
-      "Il était son frère"
+      "Il l'a élevé après la mort de ses parents",
+      "Il était son oncle"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "'Abdul-Muttalib a élevé le Prophète ﷺ après le décès de sa mère Aminah, jusqu'à sa propre mort quand le Prophète avait 8 ans.",
     "category": "importance"
   },
   {
     "question": "En quelle année le puits de Zamzam a-t-il été redécouvert ?",
     "options": [
-      "545 après J.-C.",
-      "497 après J.-C.",
+      "571 après J.-C.",
       "570 après J.-C.",
-      "571 après J.-C."
+      "497 après J.-C.",
+      "545 après J.-C."
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Le puits de Zamzam a été redécouvert par 'Abdul-Muttalib en 545 après J.-C., après avoir été enseveli pendant des siècles.",
     "category": "date"
   },
   {
     "question": "Pour qui le puits de Zamzam a-t-il été créé à l'origine ?",
     "options": [
-      "Pour Ibrahim",
-      "Pour Muhammad ﷺ",
       "Pour Hajar et Isma'il",
+      "Pour Muhammad ﷺ",
+      "Pour Ibrahim",
       "Pour les Quraysh"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Le puits de Zamzam a été créé miraculeusement par Allah pour Hajar et son fils Isma'il عليه السلام lorsqu'ils étaient dans le désert.",
     "category": "context"
   },
   {
     "question": "Quelle est l'importance du puits de Zamzam aujourd'hui ?",
     "options": [
-      "Il n'existe plus",
-      "Il est uniquement décoratif",
       "Il est asséché",
-      "Il coule toujours et est bu par les pèlerins à La Mecque"
+      "Il n'existe plus",
+      "Il coule toujours et est bu par les pèlerins à La Mecque",
+      "Il est uniquement décoratif"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Le puits de Zamzam coule encore aujourd'hui et son eau est considérée comme bénie. Des millions de pèlerins en boivent chaque année lors du Hajj et de la 'Umrah.",
     "category": "importance"
   },
@@ -194,24 +194,24 @@
   {
     "question": "Pour quoi 'Abdullah était-il connu ?",
     "options": [
-      "Sa richesse",
       "Ses conquêtes",
+      "Sa beauté exceptionnelle et sa piété",
       "Sa force",
-      "Sa beauté exceptionnelle et sa piété"
+      "Sa richesse"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "'Abdullah était connu pour sa beauté exceptionnelle et sa piété. Il était très aimé et respecté à La Mecque.",
     "category": "context"
   },
   {
     "question": "Quelle est la particularité de la naissance du Prophète ﷺ par rapport à son père ?",
     "options": [
-      "Son père était vivant",
       "Son père est décédé avant sa naissance",
-      "Son père était absent",
-      "Son père était malade"
+      "Son père était malade",
+      "Son père était vivant",
+      "Son père était absent"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'Abdullah est décédé avant la naissance du Prophète ﷺ, qui est donc né orphelin de père.",
     "category": "importance"
   },
@@ -219,9 +219,9 @@
     "question": "En quelle année a eu lieu l'Année de l'Éléphant ?",
     "options": [
       "570 après J.-C.",
+      "577 après J.-C.",
       "545 après J.-C.",
-      "571 après J.-C.",
-      "577 après J.-C."
+      "571 après J.-C."
     ],
     "correct": 0,
     "explanation": "L'Année de l'Éléphant a eu lieu en 570 après J.-C., l'année même de la naissance du Prophète ﷺ.",
@@ -230,24 +230,24 @@
   {
     "question": "Qui a tenté de détruire la Ka'bah durant l'Année de l'Éléphant ?",
     "options": [
-      "Les Perses",
       "Les Quraysh",
-      "Les Romains",
-      "Abraha, le dirigeant abyssin du Yémen"
+      "Les Perses",
+      "Abraha, le dirigeant abyssin du Yémen",
+      "Les Romains"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Abraha, le dirigeant abyssin du Yémen, a mené une armée avec des éléphants pour détruire la Ka'bah.",
     "category": "context"
   },
   {
     "question": "Comment Allah a-t-il protégé la Ka'bah de la destruction ?",
     "options": [
-      "En envoyant des nuées d'oiseaux (Ababil) portant des pierres",
+      "Par une inondation",
       "Par une tempête de sable",
-      "Par un tremblement de terre",
-      "Par une inondation"
+      "En envoyant des nuées d'oiseaux (Ababil) portant des pierres",
+      "Par un tremblement de terre"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Allah a envoyé des nuées d'oiseaux appelés Ababil qui portaient des pierres et ont détruit l'armée d'Abraha. Cet événement est mentionné dans la Sourate Al-Fil.",
     "category": "importance"
   },
@@ -255,8 +255,8 @@
     "question": "En quelle année 'Abdullah, père du Prophète ﷺ, est-il décédé ?",
     "options": [
       "545 après J.-C.",
-      "577 après J.-C.",
       "571 après J.-C.",
+      "577 après J.-C.",
       "570 après J.-C."
     ],
     "correct": 3,
@@ -266,34 +266,34 @@
   {
     "question": "Où 'Abdullah est-il décédé ?",
     "options": [
-      "À La Mecque",
-      "À Médine",
       "En revenant d'un voyage commercial en Syrie",
-      "En Abyssinie"
+      "En Abyssinie",
+      "À Médine",
+      "À La Mecque"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "'Abdullah est décédé en revenant d'un voyage commercial en Syrie, laissant sa femme Aminah enceinte.",
     "category": "context"
   },
   {
     "question": "Quelle était la situation du Prophète ﷺ à sa naissance concernant ses parents ?",
     "options": [
+      "Il était orphelin de mère",
       "Ses deux parents étaient vivants",
       "Il était orphelin de père",
-      "Il était orphelin de mère",
       "Il était orphelin des deux parents"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Le Prophète ﷺ est né orphelin de père, car 'Abdullah est décédé avant sa naissance. Cette épreuve fait partie de la sagesse divine.",
     "category": "importance"
   },
   {
     "question": "En quelle année le Prophète Muhammad ﷺ est-il né ?",
     "options": [
-      "570 après J.-C.",
+      "583 après J.-C.",
       "571 après J.-C.",
       "577 après J.-C.",
-      "583 après J.-C."
+      "570 après J.-C."
     ],
     "correct": 1,
     "explanation": "Le Prophète Muhammad ﷺ est né le 12 Rabi' al-Awwal de l'année 571 après J.-C., durant l'Année de l'Éléphant.",
@@ -304,8 +304,8 @@
     "options": [
       "Son grand-père 'Abdul-Muttalib",
       "Sa mère Aminah",
-      "Son oncle Abu Talib",
-      "Lui-même"
+      "Lui-même",
+      "Son oncle Abu Talib"
     ],
     "correct": 0,
     "explanation": "C'est son grand-père 'Abdul-Muttalib qui l'a nommé Muhammad, un nom qui signifie 'le loué'.",
@@ -314,10 +314,10 @@
   {
     "question": "Pourquoi l'année 570 ap. J.-C. est-elle appelée 'Année de l'Éléphant' dans l'histoire islamique ?",
     "options": [
-      "À cause d'un zoo",
-      "À cause de la tentative d'Abraha de détruire la Ka'bah avec des éléphants",
       "À cause d'un cadeau",
-      "À cause d'une statue"
+      "À cause de la tentative d'Abraha de détruire la Ka'bah avec des éléphants",
+      "À cause d'une statue",
+      "À cause d'un zoo"
     ],
     "correct": 1,
     "explanation": "Cette année est appelée 'Année de l'Éléphant' car Abraha a tenté de détruire la Ka'bah avec une armée comprenant des éléphants, mais Allah a protégé Sa maison.",
@@ -326,9 +326,9 @@
   {
     "question": "En quelle année Aminah, la mère du Prophète ﷺ, est-elle décédée ?",
     "options": [
+      "579 après J.-C.",
       "571 après J.-C.",
       "583 après J.-C.",
-      "579 après J.-C.",
       "577 après J.-C."
     ],
     "correct": 3,
@@ -340,8 +340,8 @@
     "options": [
       "À Abwa, sur la route entre La Mecque et Médine",
       "À La Mecque",
-      "À Médine",
-      "En Syrie"
+      "En Syrie",
+      "À Médine"
     ],
     "correct": 0,
     "explanation": "Aminah est décédée d'une maladie grave à Abwa, un lieu situé sur la route entre La Mecque et Médine.",
@@ -350,12 +350,12 @@
   {
     "question": "À quel âge le Prophète ﷺ est-il devenu orphelin de mère (après le décès d'Aminah) ?",
     "options": [
-      "À la naissance",
       "À 6 ans",
+      "À la naissance",
       "À 8 ans",
       "À 12 ans"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ avait 6 ans lorsque sa mère Aminah est décédée, le laissant orphelin des deux parents.",
     "category": "importance"
   },
@@ -363,35 +363,35 @@
     "question": "En quelle année 'Abdul-Muttalib, grand-père du Prophète ﷺ, est-il décédé ?",
     "options": [
       "577 après J.-C.",
-      "583 après J.-C.",
       "579 après J.-C.",
+      "583 après J.-C.",
       "591 après J.-C."
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "'Abdul-Muttalib est décédé en 579 après J.-C. quand le Prophète ﷺ avait environ 8 ans.",
     "category": "date"
   },
   {
     "question": "Qui a pris soin du Prophète ﷺ après le décès de son grand-père ?",
     "options": [
-      "Sa tante",
       "Son oncle Abu Talib",
       "Les Quraysh",
+      "Sa tante",
       "Il vivait seul"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Après le décès de 'Abdul-Muttalib, c'est son oncle Abu Talib qui a pris soin du Prophète ﷺ et l'a élevé avec amour.",
     "category": "context"
   },
   {
     "question": "Quelle épreuve le Prophète ﷺ a-t-il vécue dans son enfance ?",
     "options": [
-      "Il était riche",
       "Il a perdu ses deux parents et son grand-père très jeune",
-      "Il était prince",
-      "Il n'a connu aucune épreuve"
+      "Il n'a connu aucune épreuve",
+      "Il était riche",
+      "Il était prince"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ a vécu l'épreuve de l'orphelinat, perdant son père avant sa naissance, sa mère à 6 ans, et son grand-père à 8 ans. Cette expérience l'a rendu compatissant envers les orphelins.",
     "category": "importance"
   },
@@ -400,8 +400,8 @@
     "options": [
       "8 ans",
       "12 ans",
-      "20 ans",
-      "25 ans"
+      "25 ans",
+      "20 ans"
     ],
     "correct": 1,
     "explanation": "Le Prophète ﷺ avait 12 ans lorsqu'il a voyagé en Syrie avec son oncle Abu Talib pour le commerce, en 583 après J.-C.",
@@ -411,31 +411,31 @@
     "question": "Qui a reconnu les signes de la prophétie chez le jeune Muhammad ﷺ lors de son voyage en Syrie avec Abu Talib ?",
     "options": [
       "Un roi",
-      "Un ange",
       "Un marchand",
-      "Le moine Bahira"
+      "Le moine Bahira",
+      "Un ange"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Le moine chrétien Bahira a reconnu les signes de la prophétie en voyant le jeune Muhammad ﷺ et a averti Abu Talib de le protéger.",
     "category": "context"
   },
   {
     "question": "Quelle est l'importance de la rencontre entre le jeune Muhammad ﷺ et le moine Bahira ?",
     "options": [
-      "Aucune importance",
-      "C'était juste une rencontre ordinaire",
       "Elle confirme les signes de la prophétie même avant la révélation",
-      "Bahira voulait faire du commerce"
+      "Bahira voulait faire du commerce",
+      "C'était juste une rencontre ordinaire",
+      "Aucune importance"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "La rencontre avec Bahira est importante car elle confirme que les signes de la prophétie étaient visibles en Muhammad ﷺ même avant qu'il ne reçoive la révélation.",
     "category": "importance"
   },
   {
     "question": "À quel âge le Prophète ﷺ a-t-il participé au Hilf al-Fudul ?",
     "options": [
-      "12 ans",
       "35 ans",
+      "12 ans",
       "25 ans",
       "20 ans"
     ],
@@ -458,12 +458,12 @@
   {
     "question": "Que dit le Prophète ﷺ plus tard au sujet du pacte 'Hilf al-Fudul' (Alliance des Vertueux) ?",
     "options": [
-      "Il l'a regretté",
       "Il a dit qu'il y participerait encore même après l'Islam",
+      "Il l'a regretté",
       "Il l'a oublié",
       "Il l'a critiqué"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ a dit qu'il avait participé à une alliance dans la maison d'Abdullah ibn Jud'an qui lui était plus chère que des chameaux rouges, et qu'il y participerait encore même après l'Islam.",
     "category": "importance"
   },
@@ -471,105 +471,105 @@
     "question": "À quel âge le Prophète ﷺ a-t-il épousé Khadijah رضي الله عنها ?",
     "options": [
       "20 ans",
+      "40 ans",
       "35 ans",
-      "25 ans",
-      "40 ans"
+      "25 ans"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Le Prophète ﷺ avait 25 ans lorsqu'il a épousé Khadijah رضي الله عنها en 595 après J.-C.",
     "category": "date"
   },
   {
     "question": "Quel âge avait Khadijah رضي الله عنها lors de son mariage avec le Prophète ﷺ ?",
     "options": [
-      "25 ans",
       "40 ans",
-      "35 ans",
-      "30 ans"
+      "30 ans",
+      "25 ans",
+      "35 ans"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Khadijah رضي الله عنها avait 40 ans lors de son mariage avec le Prophète ﷺ qui en avait 25.",
     "category": "context"
   },
   {
     "question": "Quelle était la position de Khadijah رضي الله عنها dans la société mecquoise ?",
     "options": [
-      "Elle était une femme noble et riche, respectée pour son commerce",
       "Elle était pauvre",
       "Elle était esclave",
+      "Elle était une femme noble et riche, respectée pour son commerce",
       "Elle était étrangère"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Khadijah était une femme noble, riche et respectée de La Mecque. Elle était une commerçante prospère et le Prophète ﷺ a d'abord travaillé pour elle.",
     "category": "importance"
   },
   {
     "question": "En quelle année la Ka'bah a-t-elle été reconstruite par les Quraysh ?",
     "options": [
-      "595 après J.-C.",
       "615 après J.-C.",
+      "605 après J.-C.",
       "610 après J.-C.",
-      "605 après J.-C."
+      "595 après J.-C."
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "La Ka'bah a été reconstruite par les Quraysh en 605 après J.-C., quand le Prophète ﷺ avait 35 ans.",
     "category": "date"
   },
   {
     "question": "Quel problème majeur le Prophète ﷺ a-t-il résolu lors de la reconstruction de la Ka'bah en 605 ?",
     "options": [
-      "Un problème financier",
-      "Un problème de terrain",
+      "Un différend sur qui placerait la Pierre Noire",
       "Un problème de construction",
-      "Un différend sur qui placerait la Pierre Noire"
+      "Un problème de terrain",
+      "Un problème financier"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ a résolu un différend entre les tribus sur qui aurait l'honneur de placer la Pierre Noire en proposant que toutes les tribus la soulèvent ensemble sur un tissu.",
     "category": "context"
   },
   {
     "question": "Que montre la résolution du différend de la Pierre Noire lors de la reconstruction de la Ka'bah sur le caractère du Prophète ﷺ ?",
     "options": [
-      "Sa force physique",
-      "Sa sagesse et sa capacité à résoudre les conflits",
       "Sa richesse",
-      "Son pouvoir politique"
+      "Son pouvoir politique",
+      "Sa sagesse et sa capacité à résoudre les conflits",
+      "Sa force physique"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Cet événement montre la sagesse exceptionnelle du Prophète ﷺ et sa capacité à résoudre les conflits de manière juste et équitable, même avant la révélation.",
     "category": "importance"
   },
   {
     "question": "À quel âge le Prophète ﷺ a-t-il reçu la première révélation ?",
     "options": [
-      "35 ans",
-      "45 ans",
       "40 ans",
-      "50 ans"
+      "35 ans",
+      "50 ans",
+      "45 ans"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ avait 40 ans lorsqu'il a reçu la première révélation le 27 Ramadan 610 après J.-C.",
     "category": "date"
   },
   {
     "question": "Où le Prophète ﷺ a-t-il reçu la première révélation ?",
     "options": [
-      "Dans la grotte de Hira",
-      "À la Ka'bah",
       "À sa maison",
-      "Au marché"
+      "À la Ka'bah",
+      "Au marché",
+      "Dans la grotte de Hira"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Le Prophète ﷺ a reçu la première révélation dans la grotte de Hira, où il avait l'habitude de se retirer pour méditer.",
     "category": "context"
   },
   {
     "question": "Quels sont les premiers mots révélés du Coran ?",
     "options": [
-      "Bismillah ar-Rahman ar-Rahim",
       "Al-Hamdulillah",
+      "Allahu Akbar",
       "Iqra' (Lis)",
-      "Allahu Akbar"
+      "Bismillah ar-Rahman ar-Rahim"
     ],
     "correct": 2,
     "explanation": "Les premiers mots révélés furent 'Iqra' bismi Rabbika' (Lis au nom de ton Seigneur) de la Sourate Al-'Alaq, marquant le début de la révélation coranique.",
@@ -578,21 +578,21 @@
   {
     "question": "Combien de temps a duré la période de prédication secrète ?",
     "options": [
-      "1 an",
+      "3 ans",
       "2 ans",
-      "5 ans",
-      "3 ans"
+      "1 an",
+      "5 ans"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "La période de prédication secrète a duré 3 ans, de 610 à 613 après J.-C.",
     "category": "date"
   },
   {
     "question": "Qui furent les premiers à accepter l'Islam ?",
     "options": [
-      "Les riches de La Mecque",
-      "Khadijah, Ali, Zayd ibn Harithah et Abu Bakr",
       "Les chefs des Quraysh",
+      "Khadijah, Ali, Zayd ibn Harithah et Abu Bakr",
+      "Les riches de La Mecque",
       "Les étrangers"
     ],
     "correct": 1,
@@ -602,9 +602,9 @@
   {
     "question": "Pourquoi la prédication de l'Islam était-elle secrète pendant les trois premières années ?",
     "options": [
-      "Par peur",
-      "Pour protéger les premiers musulmans de la persécution",
       "Par honte",
+      "Pour protéger les premiers musulmans de la persécution",
+      "Par peur",
       "Par stratégie politique"
     ],
     "correct": 1,
@@ -614,8 +614,8 @@
   {
     "question": "En quelle année le Prophète ﷺ a-t-il commencé à prêcher publiquement ?",
     "options": [
-      "610 après J.-C.",
       "616 après J.-C.",
+      "610 après J.-C.",
       "615 après J.-C.",
       "613 après J.-C."
     ],
@@ -627,9 +627,9 @@
     "question": "Où le Prophète ﷺ s'est-il rendu pour appeler publiquement à l'Islam ?",
     "options": [
       "À la Ka'bah",
-      "Au marché",
+      "Chez les Quraysh",
       "Au Mont Safa",
-      "Chez les Quraysh"
+      "Au marché"
     ],
     "correct": 2,
     "explanation": "Le Prophète ﷺ a gravi le Mont Safa et a appelé les Quraysh à l'Islam publiquement, marquant le début de la prédication ouverte.",
@@ -639,20 +639,20 @@
     "question": "Quelle fut la conséquence immédiate du début de la prédication publique de l'Islam à La Mecque ?",
     "options": [
       "Acceptation immédiate",
+      "Persécution accrue des musulmans",
       "Soutien des Quraysh",
-      "Indifférence",
-      "Persécution accrue des musulmans"
+      "Indifférence"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "La prédication publique a entraîné une persécution accrue des musulmans par les Quraysh, qui voyaient l'Islam comme une menace à leur pouvoir et leurs traditions.",
     "category": "importance"
   },
   {
     "question": "En quelle année a eu lieu la première migration vers l'Abyssinie ?",
     "options": [
-      "613 après J.-C.",
-      "619 après J.-C.",
       "616 après J.-C.",
+      "619 après J.-C.",
+      "613 après J.-C.",
       "615 après J.-C."
     ],
     "correct": 3,
@@ -662,36 +662,36 @@
   {
     "question": "Pourquoi le Prophète ﷺ a-t-il conseillé aux musulmans de migrer en Abyssinie ?",
     "options": [
-      "Pour le commerce",
-      "Pour conquérir le pays",
       "En raison de la persécution sévère à La Mecque",
+      "Pour conquérir le pays",
+      "Pour le commerce",
       "Pour le tourisme"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ a conseillé aux musulmans de migrer en Abyssinie en raison de la persécution sévère qu'ils subissaient à La Mecque, sachant que le roi chrétien était juste.",
     "category": "context"
   },
   {
     "question": "Combien de musulmans ont participé à la première migration vers l'Abyssinie ?",
     "options": [
-      "11 hommes et 4 femmes",
       "5 personnes",
       "50 personnes",
+      "11 hommes et 4 femmes",
       "100 personnes"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "La première migration vers l'Abyssinie comprenait 11 hommes et 4 femmes, soit 15 musulmans au total.",
     "category": "importance"
   },
   {
     "question": "En quelle année 'Umar ibn al-Khattab رضي الله عنه a-t-il accepté l'Islam ?",
     "options": [
-      "613 après J.-C.",
-      "615 après J.-C.",
       "616 après J.-C.",
-      "619 après J.-C."
+      "619 après J.-C.",
+      "613 après J.-C.",
+      "615 après J.-C."
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "'Umar ibn al-Khattab رضي الله عنه a accepté l'Islam en 616 après J.-C., quand le Prophète ﷺ avait 45 ans.",
     "category": "date"
   },
@@ -699,95 +699,95 @@
     "question": "Qu'est-ce qui a changé pour les musulmans à La Mecque après la conversion de 'Umar ibn al-Khattab ?",
     "options": [
       "Rien",
+      "Les Quraysh ont accepté l'Islam",
       "La persécution a augmenté",
-      "Les musulmans ont pu prier ouvertement à la Ka'bah",
-      "Les Quraysh ont accepté l'Islam"
+      "Les musulmans ont pu prier ouvertement à la Ka'bah"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Après la conversion de 'Umar, les musulmans ont gagné en force et ont pu prier ouvertement à la Ka'bah grâce à sa présence imposante et son courage.",
     "category": "context"
   },
   {
     "question": "Pourquoi la conversion de 'Umar رضي الله عنه était-elle importante ?",
     "options": [
-      "Il était riche",
       "Il était fort et courageux, renforçant considérablement la communauté musulmane",
       "Il était vieux",
+      "Il était riche",
       "Il était étranger"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "La conversion de 'Umar était cruciale car il était fort, courageux et respecté, ce qui a considérablement renforcé la communauté musulmane et leur a donné plus de confiance.",
     "category": "importance"
   },
   {
     "question": "En quelle année Khadijah رضي الله عنها et Abu Talib sont-ils décédés ?",
     "options": [
+      "622 après J.-C.",
       "616 après J.-C.",
-      "619 après J.-C.",
       "620 après J.-C.",
-      "622 après J.-C."
+      "619 après J.-C."
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Khadijah رضي الله عنها et Abu Talib sont tous deux décédés en 619 après J.-C., la même année appelée 'Année du Chagrin'.",
     "category": "date"
   },
   {
     "question": "Pourquoi l'année 619 ap. J.-C. est-elle appelée 'Année du Chagrin' dans la vie du Prophète ﷺ ?",
     "options": [
-      "À cause d'une famine",
-      "À cause d'une guerre",
+      "À cause d'une maladie",
       "Car le Prophète ﷺ a perdu sa femme et son oncle protecteur",
-      "À cause d'une maladie"
+      "À cause d'une guerre",
+      "À cause d'une famine"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Cette année est appelée 'Année du Chagrin' car le Prophète ﷺ a perdu Khadijah, sa plus grande supportrice, et Abu Talib, son protecteur, la même année.",
     "category": "context"
   },
   {
     "question": "Quel impact l'Année du Chagrin (décès de Khadijah et Abu Talib) a-t-elle eu sur le Prophète ﷺ ?",
     "options": [
-      "Aucun impact",
       "Il a perdu son soutien personnel et sa protection tribale",
+      "Aucun impact",
       "Il est devenu plus fort",
       "Il a quitté La Mecque"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "L'Année du Chagrin a laissé le Prophète ﷺ sans son plus grand soutien émotionnel (Khadijah) et sans sa protection tribale (Abu Talib), augmentant sa vulnérabilité.",
     "category": "importance"
   },
   {
     "question": "Pourquoi le Prophète ﷺ s'est-il rendu à Ta'if ?",
     "options": [
+      "Pour conquérir la ville",
       "Pour chercher du soutien après l'Année du Chagrin",
       "Pour le commerce",
-      "Pour visiter des amis",
-      "Pour conquérir la ville"
+      "Pour visiter des amis"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Après l'Année du Chagrin et la perte de sa protection, le Prophète ﷺ s'est rendu à Ta'if pour chercher du soutien et de la protection.",
     "category": "context"
   },
   {
     "question": "Comment les habitants de Ta'if ont-ils traité le Prophète ﷺ ?",
     "options": [
-      "Ils l'ont accueilli chaleureusement",
-      "Ils l'ont ignoré",
+      "Ils l'ont accepté immédiatement",
       "Ils l'ont rejeté et lapidé",
-      "Ils l'ont accepté immédiatement"
+      "Ils l'ont accueilli chaleureusement",
+      "Ils l'ont ignoré"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Les habitants de Ta'if ont rejeté le Prophète ﷺ et l'ont lapidé, le blessant gravement. Ce fut l'un des moments les plus difficiles de sa vie.",
     "category": "context"
   },
   {
     "question": "Quelle fut la réaction du Prophète ﷺ quand l'ange Jibril lui a proposé de détruire Ta'if ?",
     "options": [
+      "Il est parti en colère",
       "Il a accepté immédiatement",
       "Il a demandé plus de temps",
-      "Il a refusé et prié pour leur guidance",
-      "Il est parti en colère"
+      "Il a refusé et prié pour leur guidance"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Le Prophète ﷺ a refusé de détruire Ta'if et a prié pour que leurs descendants soient guidés vers l'Islam, montrant sa miséricorde exceptionnelle.",
     "category": "importance"
   },
@@ -795,9 +795,9 @@
     "question": "En quelle année a eu lieu le voyage nocturne (Isra' wal-Mi'raj) ?",
     "options": [
       "620 après J.-C.",
-      "619 après J.-C.",
+      "622 après J.-C.",
       "621 après J.-C.",
-      "622 après J.-C."
+      "619 après J.-C."
     ],
     "correct": 0,
     "explanation": "Le voyage nocturne (Isra' wal-Mi'raj) a eu lieu le 27 Rajab 620 après J.-C.",
@@ -806,21 +806,21 @@
   {
     "question": "Où le Prophète ﷺ a-t-il été transporté miraculeusement lors de l'Isra' (Voyage Nocturne) ?",
     "options": [
-      "À Médine",
       "À Jérusalem (Masjid al-Aqsa)",
-      "En Syrie",
-      "Au Yémen"
+      "À Médine",
+      "Au Yémen",
+      "En Syrie"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Lors de l'Isra', le Prophète ﷺ a été transporté miraculeusement de La Mecque à Jérusalem (Masjid al-Aqsa).",
     "category": "context"
   },
   {
     "question": "Qu'a reçu le Prophète ﷺ comme commandement divin lors du Mi'raj (Ascension) ?",
     "options": [
-      "De l'argent",
-      "Une armée",
       "Un livre",
+      "Une armée",
+      "De l'argent",
       "Le commandement des cinq prières quotidiennes"
     ],
     "correct": 3,
@@ -830,12 +830,12 @@
   {
     "question": "Combien d'hommes de Yathrib ont prêté serment lors du premier serment d''Aqabah ?",
     "options": [
-      "3 hommes",
-      "12 hommes",
       "6 hommes",
-      "73 hommes"
+      "73 hommes",
+      "3 hommes",
+      "12 hommes"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Six hommes de Yathrib (Médine) ont rencontré le Prophète ﷺ et ont prêté serment lors du premier serment d''Aqabah en 621.",
     "category": "date"
   },
@@ -854,10 +854,10 @@
   {
     "question": "Quelle fut l'importance du premier serment d''Aqabah pour la suite de la mission prophétique ?",
     "options": [
-      "Aucune importance",
-      "Il a ouvert la voie à la Hijrah vers Médine",
       "Il a causé une guerre",
-      "Il a enrichi les musulmans"
+      "Il a ouvert la voie à la Hijrah vers Médine",
+      "Il a enrichi les musulmans",
+      "Aucune importance"
     ],
     "correct": 1,
     "explanation": "Le premier serment d''Aqabah a ouvert la voie à la Hijrah en établissant un lien entre le Prophète ﷺ et les habitants de Médine.",
@@ -867,8 +867,8 @@
     "question": "Combien de personnes ont participé au second serment d''Aqabah ?",
     "options": [
       "6 personnes",
-      "12 personnes",
       "100 personnes",
+      "12 personnes",
       "75 personnes (73 hommes et 2 femmes)"
     ],
     "correct": 3,
@@ -878,12 +878,12 @@
   {
     "question": "Quelle était la différence majeure entre le premier et le second serment d''Aqabah ?",
     "options": [
+      "Le second était commercial",
       "Le second incluait un engagement à protéger le Prophète ﷺ",
-      "Aucune différence",
       "Le premier était plus important",
-      "Le second était commercial"
+      "Aucune différence"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Le second serment incluait un engagement à protéger le Prophète ﷺ comme ils protégeraient leurs propres familles, préparant la Hijrah.",
     "category": "context"
   },
@@ -891,9 +891,9 @@
     "question": "Qu'est-ce que le second serment d''Aqabah a rendu possible pour la communauté musulmane ?",
     "options": [
       "La construction d'une mosquée",
-      "Une bataille",
+      "Un traité de paix",
       "La Hijrah vers Médine",
-      "Un traité de paix"
+      "Une bataille"
     ],
     "correct": 2,
     "explanation": "Le second serment d''Aqabah a pavé la voie à la Hijrah en garantissant la protection et le soutien du Prophète ﷺ à Médine.",
@@ -902,45 +902,45 @@
   {
     "question": "En quelle année a eu lieu la Hijrah vers Médine ?",
     "options": [
-      "622 après J.-C.",
       "621 après J.-C.",
       "620 après J.-C.",
-      "623 après J.-C."
+      "623 après J.-C.",
+      "622 après J.-C."
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "La Hijrah vers Médine a eu lieu en 622 après J.-C., marquant le début du calendrier islamique (1er Muharram 1 AH).",
     "category": "date"
   },
   {
     "question": "Pourquoi le Prophète ﷺ a-t-il émigré à Médine ?",
     "options": [
-      "Pour le commerce",
       "Pour échapper à une tentative d'assassinat et établir un État islamique",
-      "Pour visiter des amis",
-      "Pour conquérir la ville"
+      "Pour le commerce",
+      "Pour conquérir la ville",
+      "Pour visiter des amis"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Le Prophète ﷺ a émigré à Médine pour échapper à une tentative d'assassinat des Quraysh et pour établir le premier État islamique.",
     "category": "context"
   },
   {
     "question": "Quelle est l'importance de la Hijrah dans l'Islam ?",
     "options": [
-      "C'est un événement mineur",
       "Elle marque le début du calendrier islamique et de l'État islamique",
       "C'est juste un voyage",
+      "C'est un événement mineur",
       "Elle n'a aucune importance"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "La Hijrah est d'une importance capitale car elle marque le début du calendrier islamique et l'établissement du premier État islamique à Médine.",
     "category": "importance"
   },
   {
     "question": "Quel édifice majeur le Prophète ﷺ a-t-il construit dès son arrivée à Médine lors de la Hijrah ?",
     "options": [
-      "Un palais",
-      "Une forteresse",
       "Un marché",
+      "Une forteresse",
+      "Un palais",
       "Masjid an-Nabawi (la Mosquée du Prophète)"
     ],
     "correct": 3,
@@ -950,46 +950,46 @@
   {
     "question": "Quelle était la fonction polyvalente de Masjid an-Nabawi (Mosquée du Prophète) à l'époque ?",
     "options": [
-      "Uniquement pour la prière",
-      "Une bibliothèque",
+      "Centre de la communauté musulmane (prière, éducation, gouvernance)",
       "Un musée",
-      "Centre de la communauté musulmane (prière, éducation, gouvernance)"
+      "Uniquement pour la prière",
+      "Une bibliothèque"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Masjid an-Nabawi était le centre de la communauté musulmane, servant de lieu de prière, d'éducation, de gouvernance et de rencontres.",
     "category": "importance"
   },
   {
     "question": "Où se trouve Masjid an-Nabawi aujourd'hui ?",
     "options": [
-      "À La Mecque",
-      "À Jérusalem",
       "À Médine",
-      "À Damas"
+      "À La Mecque",
+      "À Damas",
+      "À Jérusalem"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Masjid an-Nabawi se trouve toujours à Médine et est l'une des trois mosquées les plus sacrées de l'Islam.",
     "category": "importance"
   },
   {
     "question": "Qui sont les Muhajirun ?",
     "options": [
-      "Les habitants de Médine",
-      "Les commerçants",
+      "Les migrants de La Mecque vers Médine",
       "Les ennemis de l'Islam",
-      "Les migrants de La Mecque vers Médine"
+      "Les commerçants",
+      "Les habitants de Médine"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Les Muhajirun sont les musulmans qui ont émigré de La Mecque vers Médine avec le Prophète ﷺ.",
     "category": "context"
   },
   {
     "question": "Qui sont les Ansar ?",
     "options": [
-      "Les migrants",
+      "Les étrangers",
       "Les Quraysh",
       "Les auxiliaires de Médine qui ont accueilli les musulmans",
-      "Les étrangers"
+      "Les migrants"
     ],
     "correct": 2,
     "explanation": "Les Ansar (Auxiliaires) sont les habitants de Médine qui ont accueilli et soutenu le Prophète ﷺ et les Muhajirun.",
@@ -998,34 +998,34 @@
   {
     "question": "Quel lien social unique le Prophète ﷺ a-t-il établi entre les Muhajirun (migrants) et les Ansar (auxiliaires) ?",
     "options": [
-      "Un traité commercial",
       "Une séparation",
-      "Une guerre",
-      "Une fraternité (Mu'akhah)"
+      "Un traité commercial",
+      "Une fraternité (Mu'akhah)",
+      "Une guerre"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Le Prophète ﷺ a établi la fraternité (Mu'akhah) entre les Muhajirun et les Ansar, créant des liens fraternels forts entre eux.",
     "category": "importance"
   },
   {
     "question": "En quelle année a eu lieu la Bataille de Badr ?",
     "options": [
+      "3 AH (625)",
       "2 AH (624)",
       "1 AH (623)",
-      "3 AH (625)",
       "5 AH (627)"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "La Bataille de Badr a eu lieu le 17 Ramadan 2 AH (13 mars 624 après J.-C.).",
     "category": "date"
   },
   {
     "question": "Combien de musulmans ont participé à la Bataille de Badr ?",
     "options": [
-      "100",
+      "3000",
       "1000",
       "313",
-      "3000"
+      "100"
     ],
     "correct": 2,
     "explanation": "313 musulmans ont participé à la Bataille de Badr contre environ 1000 Quraysh.",
@@ -1034,106 +1034,106 @@
   {
     "question": "Quelle est l'importance de la Bataille de Badr ?",
     "options": [
-      "C'était une défaite",
       "C'est la première grande victoire musulmane malgré l'infériorité numérique",
+      "Elle n'a aucune importance",
       "C'était un match nul",
-      "Elle n'a aucune importance"
+      "C'était une défaite"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Badr est la première grande victoire musulmane et un tournant majeur, prouvant qu'Allah soutient les croyants malgré leur infériorité numérique.",
     "category": "importance"
   },
   {
     "question": "Combien de guerriers Quraysh ont attaqué lors de la Bataille d'Uhud ?",
     "options": [
-      "1000",
       "3000",
       "2000",
-      "5000"
+      "5000",
+      "1000"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Les Quraysh sont revenus avec 3000 guerriers lors de la Bataille d'Uhud pour venger leur défaite à Badr.",
     "category": "date"
   },
   {
     "question": "Pourquoi les musulmans ont-ils subi des pertes à Uhud ?",
     "options": [
-      "Ils étaient faibles",
       "Les archers ont quitté leurs positions prématurément",
+      "Ils étaient faibles",
       "Ils ont fui",
       "Ils n'avaient pas d'armes"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Les musulmans ont subi des pertes car les archers ont quitté leurs positions prématurément pour collecter le butin, permettant à Khalid ibn al-Walid d'attaquer par derrière.",
     "category": "context"
   },
   {
     "question": "Quelle leçon importante Uhud a-t-elle enseignée aux musulmans ?",
     "options": [
-      "Qu'ils étaient invincibles",
+      "L'importance de l'obéissance et de la discipline",
       "Qu'Allah ne les soutenait pas",
-      "Qu'ils devaient abandonner",
-      "L'importance de l'obéissance et de la discipline"
+      "Qu'ils étaient invincibles",
+      "Qu'ils devaient abandonner"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Uhud a enseigné l'importance cruciale de l'obéissance aux ordres du Prophète ﷺ et de la discipline militaire.",
     "category": "importance"
   },
   {
     "question": "Combien de guerriers ont assiégé Médine lors de la Bataille de la Tranchée ?",
     "options": [
-      "10 000",
+      "1000",
       "3000",
       "5000",
-      "1000"
+      "10 000"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Les Quraysh et leurs alliés ont assiégé Médine avec 10 000 guerriers lors de la Bataille de la Tranchée (Khandaq).",
     "category": "date"
   },
   {
     "question": "Qui a suggéré de creuser une tranchée autour de Médine ?",
     "options": [
-      "Abu Bakr",
-      "Ali",
       "'Umar",
-      "Salman al-Farsi"
+      "Salman al-Farsi",
+      "Abu Bakr",
+      "Ali"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Salman al-Farsi, un compagnon perse, a suggéré de creuser une tranchée, une tactique militaire persane inconnue des Arabes.",
     "category": "context"
   },
   {
     "question": "Quel fut le résultat de la Bataille de la Tranchée ?",
     "options": [
-      "Défaite musulmane",
-      "Match nul",
+      "Conquête de La Mecque",
       "Victoire musulmane sans combat direct grâce à la tranchée",
-      "Conquête de La Mecque"
+      "Match nul",
+      "Défaite musulmane"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Les musulmans ont défendu avec succès Médine grâce à la tranchée, et les assiégeants se sont retirés après un mois, marquant une victoire stratégique.",
     "category": "importance"
   },
   {
     "question": "En quelle année le Traité de Hudaybiyyah a-t-il été signé ?",
     "options": [
-      "5 AH (626)",
       "7 AH (629)",
       "6 AH (628)",
+      "5 AH (626)",
       "8 AH (630)"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Le Traité de Hudaybiyyah a été signé en Dhul-Qi'dah 6 AH (mars 628 après J.-C.).",
     "category": "date"
   },
   {
     "question": "Pourquoi le Traité de Hudaybiyyah semblait-il initialement défavorable aux musulmans ?",
     "options": [
-      "Il leur donnait tout",
+      "Il était en arabe",
       "Il contenait des clauses apparemment inégales",
       "Il était court",
-      "Il était en arabe"
+      "Il leur donnait tout"
     ],
     "correct": 1,
     "explanation": "Le traité semblait défavorable car il contenait des clauses apparemment inégales, comme le retour des convertis mecquois à La Mecque.",
@@ -1142,12 +1142,12 @@
   {
     "question": "Comment Allah a-t-il qualifié le Traité de Hudaybiyyah dans le Coran ?",
     "options": [
-      "Une défaite",
       "Une victoire claire (Fath Mubin)",
+      "Une erreur",
       "Un compromis",
-      "Une erreur"
+      "Une défaite"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Allah a qualifié le Traité de Hudaybiyyah de 'victoire claire' (Fath Mubin) car il a conduit à de nombreuses conversions et à la paix.",
     "category": "importance"
   },
@@ -1166,10 +1166,10 @@
   {
     "question": "Que contenaient les lettres envoyées par le Prophète ﷺ aux dirigeants mondiaux (Héraclius, Khosrô, etc.) en 628 ?",
     "options": [
-      "Des menaces",
-      "Une invitation à l'Islam",
       "Des demandes d'argent",
-      "Des poèmes"
+      "Une invitation à l'Islam",
+      "Des poèmes",
+      "Des menaces"
     ],
     "correct": 1,
     "explanation": "Ces lettres contenaient une invitation respectueuse à embrasser l'Islam et à reconnaître l'unicité d'Allah.",
@@ -1178,34 +1178,34 @@
   {
     "question": "Quelle est l'importance historique de l'envoi des lettres du Prophète ﷺ aux dirigeants étrangers ?",
     "options": [
-      "Aucune importance",
       "C'était juste une formalité",
-      "Cela montre l'universalité du message de l'Islam",
-      "C'était une provocation"
+      "C'était une provocation",
+      "Aucune importance",
+      "Cela montre l'universalité du message de l'Islam"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "L'envoi de ces lettres montre que le message de l'Islam est universel, destiné à toute l'humanité et non seulement aux Arabes.",
     "category": "importance"
   },
   {
     "question": "Khaybar était une forteresse de quelle communauté ?",
     "options": [
-      "Les Romains",
-      "Les Juifs",
       "Les Perses",
-      "Les Quraysh"
+      "Les Romains",
+      "Les Quraysh",
+      "Les Juifs"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Khaybar était une forteresse juive au nord de Médine, conquise par les musulmans en Muharram 7 AH (mai 628).",
     "category": "context"
   },
   {
     "question": "Qui a épousé le Prophète ﷺ après la conquête de Khaybar ?",
     "options": [
-      "'Aishah",
+      "Zaynab",
       "Hafsa",
       "Safiyyah",
-      "Zaynab"
+      "'Aishah"
     ],
     "correct": 2,
     "explanation": "Le Prophète ﷺ a épousé Safiyyah bint Huyayy رضي الله عنها après la conquête de Khaybar.",
@@ -1228,8 +1228,8 @@
     "options": [
       "1000",
       "3000",
-      "2000",
-      "5000"
+      "5000",
+      "2000"
     ],
     "correct": 1,
     "explanation": "3000 musulmans ont affronté environ 200 000 forces byzantines et arabes alliées lors de la Bataille de Mu'tah.",
@@ -1238,12 +1238,12 @@
   {
     "question": "Qui a mené la retraite tactique à Mu'tah après la mort des trois commandants ?",
     "options": [
-      "Abu Bakr",
       "'Umar",
-      "Ali",
-      "Khalid ibn al-Walid"
+      "Abu Bakr",
+      "Khalid ibn al-Walid",
+      "Ali"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Khalid ibn al-Walid a pris le commandement et a mené une brillante retraite tactique, sauvant l'armée musulmane de l'anéantissement.",
     "category": "context"
   },
@@ -1262,24 +1262,24 @@
   {
     "question": "En quelle année La Mecque a-t-elle été conquise ?",
     "options": [
-      "6 AH (628)",
-      "7 AH (629)",
       "9 AH (631)",
-      "8 AH (630)"
+      "8 AH (630)",
+      "7 AH (629)",
+      "6 AH (628)"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "La Mecque a été conquise le 20 Ramadan 8 AH (11 janvier 630 après J.-C.).",
     "category": "date"
   },
   {
     "question": "Combien de musulmans ont participé à la conquête de La Mecque ?",
     "options": [
-      "1000",
       "3000",
+      "10 000",
       "5000",
-      "10 000"
+      "1000"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Le Prophète ﷺ est entré à La Mecque avec 10 000 musulmans, une armée si imposante que la ville s'est rendue sans combat majeur.",
     "category": "context"
   },
@@ -1287,20 +1287,20 @@
     "question": "Comment le Prophète ﷺ a-t-il traité ses ennemis après la conquête de La Mecque ?",
     "options": [
       "Il les a punis sévèrement",
-      "Il les a tous pardonnés",
       "Il les a exilés",
-      "Il les a emprisonnés"
+      "Il les a emprisonnés",
+      "Il les a tous pardonnés"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Le Prophète ﷺ a pardonné à ses ennemis, disant 'Allez, vous êtes libres', montrant une miséricorde exceptionnelle malgré des années de persécution.",
     "category": "importance"
   },
   {
     "question": "Quand la Bataille de Hunayn a-t-elle eu lieu par rapport à la conquête de La Mecque (Fath Makkah) ?",
     "options": [
-      "Un an avant",
       "Cinq ans après",
       "Un an après",
+      "Un an avant",
       "Peu après"
     ],
     "correct": 3,
@@ -1310,12 +1310,12 @@
   {
     "question": "Quelle tribu les musulmans ont-ils affrontée à Hunayn ?",
     "options": [
-      "Les Quraysh",
-      "La tribu Hawazin",
       "Les Byzantins",
-      "Les Perses"
+      "Les Quraysh",
+      "Les Perses",
+      "La tribu Hawazin"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Les musulmans ont affronté la tribu Hawazin et ses alliés lors de la Bataille de Hunayn.",
     "category": "context"
   },
@@ -1323,43 +1323,43 @@
     "question": "Quelle leçon spirituelle importante les musulmans ont-ils apprise lors de la Bataille de Hunayn ?",
     "options": [
       "Qu'ils étaient invincibles",
-      "Qu'ils devaient abandonner",
       "Que la victoire vient d'Allah, pas du nombre",
+      "Qu'ils devaient abandonner",
       "Qu'ils étaient faibles"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "À Hunayn, certains musulmans ont été fiers de leur nombre (10 000), mais ont subi un revers initial, apprenant que la victoire vient d'Allah seul.",
     "category": "importance"
   },
   {
     "question": "Combien de musulmans le Prophète ﷺ a-t-il menés à Tabuk ?",
     "options": [
-      "30 000",
       "20 000",
+      "30 000",
       "10 000",
       "40 000"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Le Prophète ﷺ a mené 30 000 musulmans à Tabuk en Rajab 9 AH (octobre 630) pour faire face à la menace byzantine.",
     "category": "date"
   },
   {
     "question": "Qu'est-il arrivé à l'armée byzantine lors de l'expédition musulmane de Tabuk ?",
     "options": [
-      "Ils ne se sont pas présentés",
       "Ils ont attaqué",
+      "Ils ont fui",
       "Ils ont gagné",
-      "Ils ont fui"
+      "Ils ne se sont pas présentés"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Les Byzantins ne se sont pas présentés au combat, impressionnés par la force musulmane. De nombreuses tribus ont prêté allégeance à l'Islam.",
     "category": "context"
   },
   {
     "question": "Quelle fut l'importance stratégique de l'expédition de Tabuk pour l'État islamique ?",
     "options": [
-      "Aucune importance",
       "Elle a affaibli les musulmans",
+      "Aucune importance",
       "C'était une défaite",
       "Elle a montré la puissance musulmane et étendu l'influence islamique au nord"
     ],
@@ -1370,36 +1370,36 @@
   {
     "question": "Pourquoi l'année 9 AH est-elle appelée 'Année des Délégations' ?",
     "options": [
-      "À cause d'une guerre",
-      "Car des tribus de toute l'Arabie ont envoyé des délégations pour accepter l'Islam",
       "À cause d'une famine",
-      "À cause d'un traité"
+      "À cause d'un traité",
+      "Car des tribus de toute l'Arabie ont envoyé des délégations pour accepter l'Islam",
+      "À cause d'une guerre"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "L'année 9 AH est appelée 'Année des Délégations' car des tribus de toute l'Arabie ont envoyé des délégations à Médine pour accepter l'Islam.",
     "category": "context"
   },
   {
     "question": "Que montre l'Année des Délégations (9 AH) concernant la situation de l'Islam en Arabie ?",
     "options": [
-      "Sa propagation rapide dans toute la péninsule arabique",
       "Qu'il était faible",
       "Qu'il était rejeté",
+      "Sa propagation rapide dans toute la péninsule arabique",
       "Qu'il était limité à Médine"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "L'Année des Délégations montre la propagation rapide de l'Islam dans toute la péninsule arabique après la conquête de La Mecque.",
     "category": "importance"
   },
   {
     "question": "Quelle était la situation géopolitique de l'Islam à la fin de l'Année des Délégations ?",
     "options": [
-      "Il était faible",
       "Il était en déclin",
       "Il dominait la péninsule arabique",
+      "Il était faible",
       "Il était limité à une ville"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "À la fin de l'Année des Délégations, l'Islam dominait la péninsule arabique, avec la plupart des tribus ayant accepté l'Islam.",
     "category": "importance"
   },
@@ -1407,9 +1407,9 @@
     "question": "Combien de musulmans ont accompagné le Prophète ﷺ lors du Pèlerinage d'Adieu ?",
     "options": [
       "Plus de 100 000",
-      "50 000",
       "10 000",
-      "200 000"
+      "200 000",
+      "50 000"
     ],
     "correct": 0,
     "explanation": "Plus de 100 000 musulmans ont accompagné le Prophète ﷺ lors de son premier et dernier Hajj en Dhul-Hijjah 10 AH (mars 632).",
@@ -1418,58 +1418,58 @@
   {
     "question": "Qu'a prononcé le Prophète ﷺ lors du Pèlerinage d'Adieu ?",
     "options": [
+      "Un testament",
       "Un poème",
       "Le Sermon d'Adieu",
-      "Une déclaration de guerre",
-      "Un testament"
+      "Une déclaration de guerre"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Le Prophète ﷺ a prononcé le célèbre Sermon d'Adieu le jour d'Arafah, établissant les principes fondamentaux des droits humains et de l'égalité.",
     "category": "context"
   },
   {
     "question": "Quels principes importants le Sermon d'Adieu a-t-il établis ?",
     "options": [
-      "La supériorité raciale",
-      "La guerre",
+      "La richesse",
       "L'égalité de tous les humains, les droits des femmes, la sacralité de la vie et des biens",
-      "La richesse"
+      "La supériorité raciale",
+      "La guerre"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Le Sermon d'Adieu a établi l'égalité de tous les humains devant Allah, les droits des femmes, la sacralité de la vie et des biens, et l'importance de la justice.",
     "category": "importance"
   },
   {
     "question": "Quel verset a été révélé lors du Pèlerinage d'Adieu ?",
     "options": [
-      "Le premier verset",
       "Le verset de la perfection de la religion (Al-Ma'idah 5:3)",
+      "Le premier verset",
       "Le dernier verset",
       "Un verset de guerre"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Le verset 'Aujourd'hui, J'ai parachevé pour vous votre religion...' (Sourate Al-Ma'idah 5:3) a été révélé le jour d'Arafah.",
     "category": "context"
   },
   {
     "question": "Que signifie le verset de la perfection de la religion (Al-Ma'idah 5:3) pour l'Islam ?",
     "options": [
-      "Qu'il était incomplet",
-      "Qu'il fallait changer",
       "Que la religion a été parachevée et complétée",
-      "Qu'il était temporaire"
+      "Qu'il fallait changer",
+      "Qu'il était temporaire",
+      "Qu'il était incomplet"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Ce verset signifie qu'Allah a parachevé la religion islamique, la rendant complète et parfaite pour toute l'humanité jusqu'au Jour du Jugement.",
     "category": "importance"
   },
   {
     "question": "Comment les compagnons ont-ils réagi à la révélation du verset 'Aujourd'hui, J'ai parachevé pour vous votre religion...' ?",
     "options": [
-      "Avec joie uniquement",
+      "Avec colère",
       "Avec indifférence",
       "Avec joie mêlée de tristesse, comprenant que la mission du Prophète ﷺ touchait à sa fin",
-      "Avec colère"
+      "Avec joie uniquement"
     ],
     "correct": 2,
     "explanation": "Les compagnons ont réagi avec joie pour la perfection de la religion, mais aussi avec tristesse car ils ont compris que cela signalait la fin proche de la vie du Prophète ﷺ.",
@@ -1490,25 +1490,577 @@
   {
     "question": "Où le Prophète ﷺ est-il décédé ?",
     "options": [
-      "À La Mecque",
-      "À Jérusalem",
+      "En voyage",
       "Dans la maison de 'Aishah à Médine",
-      "En voyage"
+      "À La Mecque",
+      "À Jérusalem"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Le Prophète ﷺ est décédé dans la maison de 'Aishah رضي الله عنها à Médine, et a été enterré au même endroit.",
     "category": "context"
   },
   {
     "question": "Quel âge avait le Prophète ﷺ à son décès ?",
     "options": [
+      "70 ans",
       "50 ans",
-      "60 ans",
       "63 ans",
-      "70 ans"
+      "60 ans"
     ],
     "correct": 2,
     "explanation": "Le Prophète ﷺ avait 63 ans à son décès, ayant vécu 40 ans avant la prophétie et 23 ans comme prophète.",
+    "category": "importance"
+  },
+  {
+    "question": "Quel était le but principal de la Constitution de Médine ?",
+    "options": [
+      "Établir les relations et droits entre musulmans, juifs et païens à Médine",
+      "Déclarer la guerre aux Quraysh",
+      "Fixer les prix du marché",
+      "Forcer tout le monde à se convertir"
+    ],
+    "correct": 0,
+    "explanation": "La Constitution de Médine visait à organiser la vie sociale et politique de la cité, établissant une alliance défensive et garantissant la justice et la liberté religieuse pour toutes les communautés.",
+    "category": "context"
+  },
+  {
+    "question": "En quelle année hégirienne la Qibla a-t-elle été changée de Jérusalem vers La Mecque ?",
+    "options": [
+      "5 AH",
+      "3 AH",
+      "1 AH",
+      "2 AH"
+    ],
+    "correct": 3,
+    "explanation": "Le changement de Qibla a eu lieu durant la 2ème année de l'Hégire (2 AH), environ 17 mois après l'arrivée du Prophète ﷺ à Médine.",
+    "category": "date"
+  },
+  {
+    "question": "Quelle tribu a trahi les musulmans pendant la Bataille du Fossé (Khandaq), menant à leur siège par la suite ?",
+    "options": [
+      "Quraysh",
+      "Banu Qaynuqa",
+      "Banu Nadir",
+      "Banu Qurayza"
+    ],
+    "correct": 3,
+    "explanation": "Ce sont les Banu Qurayza qui ont rompu leur pacte et trahi les musulmans au moment le plus critique du siège de la Tranchée, s'alliant aux forces ennemies.",
+    "category": "context"
+  },
+  {
+    "question": "Qui a été innocenté par Allah dans le Coran suite à l'incident de la calomnie (Al-Ifk) ?",
+    "options": [
+      "Khadijah",
+      "Hafsah",
+      "'Aishah",
+      "Zaynab"
+    ],
+    "correct": 2,
+    "explanation": "C'est 'Aishah رضي الله عنها, l'épouse du Prophète ﷺ, qui a été innocentée par la révélation de versets de la Sourate An-Nur après avoir été faussement accusée.",
+    "category": "importance"
+  },
+  {
+    "question": "Dans quelle sourate trouve-t-on les versets innocentant 'Aishah de la calomnie ?",
+    "options": [
+      "Sourate An-Nisa",
+      "Sourate Yusuf",
+      "Sourate An-Nur",
+      "Sourate Al-Ahzab"
+    ],
+    "correct": 2,
+    "explanation": "Les versets innocentant 'Aishah et établissant des règles strictes contre la diffamation se trouvent dans la Sourate An-Nur (La Lumière).",
+    "category": "context"
+  },
+  {
+    "question": "Quel était l'objectif principal de la Constitution de Médine ?",
+    "options": [
+      "Convertir tout le monde",
+      "Organiser la vie sociale et la défense commune à Médine",
+      "Fixer les impôts",
+      "Déclarer la guerre aux Perses"
+    ],
+    "correct": 1,
+    "explanation": "La Constitution de Médine (Sahifat al-Madinah) visait à établir un cadre de vie commune, de justice et de défense mutuelle entre les musulmans (Muhajirun et Ansar) et les tribus juives.",
+    "category": "context"
+  },
+  {
+    "question": "Quel statut la Constitution de Médine accordait-elle aux juifs signataires ?",
+    "options": [
+      "Ils n'avaient aucun droit",
+      "Ils étaient considérés comme esclaves",
+      "Ils devaient quitter la ville",
+      "Ils formaient une seule communauté (Ummah) avec les croyants, gardant leur religion"
+    ],
+    "correct": 3,
+    "explanation": "La Constitution stipulait que les juifs formaient une communauté politique avec les croyants, tout en conservant leur propre religion et leurs biens, tant qu'ils respectaient le pacte.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle année marque l'établissement de la Constitution de Médine ?",
+    "options": [
+      "5 AH",
+      "1 AH",
+      "8 AH",
+      "10 AH"
+    ],
+    "correct": 1,
+    "explanation": "Ce document fondateur a été établi la première année de l'Hégire (1 AH), peu après l'arrivée du Prophète ﷺ à Médine.",
+    "category": "date"
+  },
+  {
+    "question": "Quelle était la première Qibla des musulmans avant La Mecque ?",
+    "options": [
+      "La Mecque",
+      "Damas",
+      "Médine",
+      "Jérusalem (Al-Quds)"
+    ],
+    "correct": 3,
+    "explanation": "Avant que la Qibla ne soit changée vers la Ka'bah à La Mecque, les musulmans priaient en direction de Jérusalem (Al-Aqsa).",
+    "category": "context"
+  },
+  {
+    "question": "En quelle année le changement de Qibla a-t-il eu lieu ?",
+    "options": [
+      "6 AH",
+      "4 AH",
+      "1 AH",
+      "2 AH"
+    ],
+    "correct": 3,
+    "explanation": "Le changement de la Qibla a eu lieu durant la 2ème année de l'Hégire (2 AH), environ 16 ou 17 mois après la Hijra.",
+    "category": "date"
+  },
+  {
+    "question": "Quelle signification spirituelle a le changement de Qibla vers la Ka'bah ?",
+    "options": [
+      "C'était plus pratique géographiquement",
+      "Cela marquait l'indépendance identitaire de la communauté musulmane",
+      "C'était une demande des Quraysh",
+      "C'était temporaire"
+    ],
+    "correct": 1,
+    "explanation": "Le changement vers la Ka'bah, la maison construite par Ibrahim, marquait l'identité distincte de la communauté musulmane et son lien direct avec l'héritage d'Abraham.",
+    "category": "importance"
+  },
+  {
+    "question": "En quelle année le jeûne du Ramadan a-t-il été rendu obligatoire ?",
+    "options": [
+      "1 AH",
+      "10 AH",
+      "5 AH",
+      "2 AH"
+    ],
+    "correct": 3,
+    "explanation": "Le jeûne du mois de Ramadan a été légiféré en l'an 2 de l'Hégire, la même année que la bataille de Badr.",
+    "category": "date"
+  },
+  {
+    "question": "Quel pilier de l'Islam a été institué en même temps que le jeûne de Ramadan en l'an 2 AH ?",
+    "options": [
+      "Le Jihad",
+      "La Zakat (aumône légale)",
+      "La Shahada",
+      "Le Hajj"
+    ],
+    "correct": 1,
+    "explanation": "La Zakat, l'aumône légale purificatrice, a été instituée en l'an 2 AH, renforçant la solidarité sociale de la communauté naissante.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle fête célèbre la fin du mois de Ramadan ?",
+    "options": [
+      "Eid al-Adha",
+      "Mawlid",
+      "Eid al-Fitr",
+      "Ashura"
+    ],
+    "correct": 2,
+    "explanation": "Eid al-Fitr (la fête de la rupture du jeûne) marque la fin du mois de Ramadan et a été célébrée pour la première fois en l'an 2 AH.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle fut la raison principale du conflit avec les Banu Qaynuqa ?",
+    "options": [
+      "Une attaque nocturne",
+      "Un différend commercial",
+      "L'agression d'une femme musulmane et le meurtre d'un musulman sur leur marché",
+      "Le refus de payer l'impôt"
+    ],
+    "correct": 2,
+    "explanation": "Le conflit a éclaté après qu'un orfèvre juif a humilié une femme musulmane et qu'un musulman venu la défendre a été tué, rompant ainsi le pacte de sécurité.",
+    "category": "context"
+  },
+  {
+    "question": "Quel trait caractérisait la tribu des Banu Qaynuqa ?",
+    "options": [
+      "Ils étaient forgerons et orfèvres connus pour leur bravoure",
+      "Ils étaient éleveurs de chameaux",
+      "Ils étaient agriculteurs",
+      "Ils étaient nomades"
+    ],
+    "correct": 0,
+    "explanation": "Les Banu Qaynuqa étaient des artisans, forgerons et orfèvres, résidant au centre de Médine et connus pour leur équipement militaire.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle fut l'issue du siège des Banu Qaynuqa ?",
+    "options": [
+      "Ils ont été exécutés",
+      "Ils se sont convertis",
+      "Ils ont été expulsés de Médine vers la Syrie",
+      "Ils ont payé une amende"
+    ],
+    "correct": 2,
+    "explanation": "Après leur reddition, et suite à l'intercession d'Abdullah ibn Ubayy, le Prophète ﷺ a ordonné leur expulsion de Médine. Ils sont partis vers Adhri'at en Syrie.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle trahison spécifique a conduit à l'expulsion des Banu Nadir ?",
+    "options": [
+      "Ils ont volé du bétail",
+      "Ils ont tenté d'assassiner le Prophète ﷺ en jetant une meule de pierre sur lui",
+      "Ils ont vendu des armes aux Quraysh",
+      "Ils ont insulté le Prophète"
+    ],
+    "correct": 1,
+    "explanation": "Alors que le Prophète ﷺ était venu leur demander une contribution financière prévue par le pacte, ils ont comploté pour le tuer en jetant une lourde pierre depuis un toit.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle sourate du Coran commente l'expulsion des Banu Nadir ?",
+    "options": [
+      "Sourate At-Tawbah",
+      "Sourate Al-Anfal",
+      "Sourate Al-Hashr (L'Exode)",
+      "Sourate Al-Baqarah"
+    ],
+    "correct": 2,
+    "explanation": "La Sourate Al-Hashr (59) a été révélée au sujet de l'expulsion des Banu Nadir, décrivant comment Allah a jeté l'effroi dans leurs cœurs.",
+    "category": "context"
+  },
+  {
+    "question": "En quelle année a eu lieu l'expulsion des Banu Nadir ?",
+    "options": [
+      "8 AH",
+      "2 AH",
+      "6 AH",
+      "4 AH"
+    ],
+    "correct": 3,
+    "explanation": "Cet événement a eu lieu en Rabi' al-Awwal de l'an 4 de l'Hégire.",
+    "category": "date"
+  },
+  {
+    "question": "À quel moment critique les Banu Qurayza ont-ils trahi les musulmans ?",
+    "options": [
+      "Après la conquête de La Mecque",
+      "Pendant Uhud",
+      "Pendant le siège de la Bataille du Fossé (Khandaq)",
+      "Avant Badr"
+    ],
+    "correct": 2,
+    "explanation": "Ils ont rompu leur pacte et se sont alliés aux coalisés ennemis au moment le plus dangereux du siège de Médine (Bataille du Fossé), exposant les femmes et enfants musulmans au danger.",
+    "category": "context"
+  },
+  {
+    "question": "Qui a prononcé le jugement final sur les Banu Qurayza ?",
+    "options": [
+      "Umar",
+      "Le Prophète ﷺ",
+      "Abu Bakr",
+      "Sa'd ibn Mu'adh, chef des Aws (leurs anciens alliés)"
+    ],
+    "correct": 3,
+    "explanation": "Les Banu Qurayza ont accepté de se soumettre au jugement de Sa'd ibn Mu'adh, leur ancien allié. Il a jugé selon la loi de la Torah (Deutéronome) appliquée en temps de guerre pour trahison.",
+    "category": "context"
+  },
+  {
+    "question": "Quel fut le verdict pour les combattants des Banu Qurayza ?",
+    "options": [
+      "L'amende",
+      "L'esclavage",
+      "L'exil",
+      "L'exécution pour trahison en temps de guerre"
+    ],
+    "correct": 3,
+    "explanation": "Le verdict fut l'exécution des combattants pour haute trahison ayant mis en péril toute la cité, conformément à la loi mosaïque et aux règles militaires de l'époque.",
+    "category": "context"
+  },
+  {
+    "question": "Qui était la cible de la calomnie lors de l'incident d'Al-Ifk ?",
+    "options": [
+      "Aishah, l'épouse du Prophète ﷺ",
+      "Khadijah",
+      "Fatimah",
+      "Zaynab"
+    ],
+    "correct": 0,
+    "explanation": "Les hypocrites ont visé l'honneur de Aishah رضي الله عنها, causant une grande douleur au Prophète ﷺ et à la communauté.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle sourate contient les versets innocentant Aishah ?",
+    "options": [
+      "Sourate An-Nur (La Lumière)",
+      "Sourate An-Nisa",
+      "Sourate Maryam",
+      "Sourate Yasin"
+    ],
+    "correct": 0,
+    "explanation": "Allah a révélé une dizaine de versets dans la Sourate An-Nur (24:11-26) déclarant l'innocence totale de Aishah et établissant les règles contre la diffamation.",
+    "category": "importance"
+  },
+  {
+    "question": "Quelle leçon majeure l'incident d'Al-Ifk enseigne-t-il aux musulmans ?",
+    "options": [
+      "De ne pas voyager",
+      "L'interdiction stricte de répandre des rumeurs sans preuves et l'importance de protéger l'honneur",
+      "De ne pas faire confiance aux femmes",
+      "L'importance de la guerre"
+    ],
+    "correct": 1,
+    "explanation": "Cet incident enseigne la gravité de la médisance et de la calomnie, et l'obligation de penser du bien des croyants et d'exiger des preuves irréfutables.",
+    "category": "importance"
+  },
+  {
+    "question": "Qu'est-ce que la 'Umrah al-Qada ?",
+    "options": [
+      "La 'Umrah d'adieu",
+      "Le premier Hajj",
+      "Une 'Umrah secrète",
+      "La 'Umrah de compensation accomplie un an après le traité de Hudaybiyah"
+    ],
+    "correct": 3,
+    "explanation": "C'est le pèlerinage mineur accompli en l'an 7 AH pour compenser celui que les musulmans n'avaient pas pu faire l'année précédente à cause du blocage des Quraysh à Hudaybiyah.",
+    "category": "context"
+  },
+  {
+    "question": "Combien de temps les musulmans sont-ils restés à La Mecque pour la 'Umrah al-Qada ?",
+    "options": [
+      "3 jours",
+      "1 jour",
+      "10 jours",
+      "1 mois"
+    ],
+    "correct": 0,
+    "explanation": "Conformément au traité, ils ont eu le droit de rester 3 jours à La Mecque, durant lesquels la ville a résonné de la Talbiyah.",
+    "category": "date"
+  },
+  {
+    "question": "Quelle démonstration les musulmans ont-ils faite lors de la 'Umrah al-Qada ?",
+    "options": [
+      "Une démonstration de colère",
+      "Une démonstration de silence",
+      "Une démonstration de force et de discipline (Raml) pour démentir les rumeurs de faiblesse",
+      "Une démonstration de richesse"
+    ],
+    "correct": 2,
+    "explanation": "Le Prophète ﷺ a ordonné aux hommes de marcher fièrement (Raml) durant le Tawaf pour montrer aux Quraysh que la fièvre de Médine ne les avait pas affaiblis.",
+    "category": "importance"
+  },
+  {
+    "question": "Quel statut unique avait Aishah parmi les épouses du Prophète ﷺ ?",
+    "options": [
+      "Elle avait le plus d'enfants",
+      "Elle était étrangère",
+      "Elle était la seule qu'il a épousée vierge",
+      "Elle était la plus riche"
+    ],
+    "correct": 2,
+    "explanation": "Aishah رضي الله عنها est la seule épouse que le Prophète ﷺ a mariée alors qu'elle était vierge ; toutes ses autres épouses étaient veuves ou divorcées.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle contribution majeure Aishah a-t-elle apportée à l'Islam ?",
+    "options": [
+      "Elle a dirigé des armées",
+      "Elle a construit la Ka'bah",
+      "Elle a écrit le Coran",
+      "Elle a rapporté plus de 2200 hadiths et était une experte en jurisprudence"
+    ],
+    "correct": 3,
+    "explanation": "Aishah est l'une des plus grandes savantes de l'Islam, ayant rapporté 2210 hadiths et émis des fatwas, préservant ainsi une grande partie de la Sunnah.",
+    "category": "importance"
+  },
+  {
+    "question": "Qui était Ibrahim par rapport au Prophète ﷺ ?",
+    "options": [
+      "Son père",
+      "Son fils né de Maria al-Qibtiyya",
+      "Son oncle",
+      "Son frère"
+    ],
+    "correct": 1,
+    "explanation": "Ibrahim était le dernier fils du Prophète ﷺ, né à Médine de son épouse Maria al-Qibtiyya.",
+    "category": "context"
+  },
+  {
+    "question": "Quel phénomène naturel a coïncidé avec la mort d'Ibrahim, fils du Prophète ﷺ ?",
+    "options": [
+      "Un tremblement de terre",
+      "Une tempête",
+      "Une inondation",
+      "Une éclipse solaire"
+    ],
+    "correct": 3,
+    "explanation": "Une éclipse solaire a eu lieu le jour de la mort d'Ibrahim. Les gens ont cru que c'était à cause de sa mort, mais le Prophète ﷺ a corrigé cette croyance.",
+    "category": "context"
+  },
+  {
+    "question": "Qu'a dit le Prophète ﷺ lors de la mort de son fils Ibrahim ?",
+    "options": [
+      "Il est resté silencieux",
+      "'Les yeux versent des larmes, le cœur est triste, mais nous ne disons que ce qui plaît à notre Seigneur'",
+      "Il a crié de colère",
+      "Il a blâmé les médecins"
+    ],
+    "correct": 1,
+    "explanation": "Le Prophète ﷺ a montré une humanité profonde et une soumission totale à Dieu, pleurant son fils tout en acceptant le décret divin sans révolte.",
+    "category": "importance"
+  },
+  {
+    "question": "Qui était Halima As-Sa'diyyah ?",
+    "options": [
+      "Une commerçante de La Mecque",
+      "La nourrice du Prophète ﷺ",
+      "La mère du Prophète ﷺ",
+      "Une épouse du Prophète ﷺ"
+    ],
+    "correct": 1,
+    "explanation": "Halima As-Sa'diyyah était la nourrice bédouine qui a allaité et élevé le Prophète ﷺ dans le désert durant ses premières années, comme c'était la coutume.",
+    "category": "context"
+  },
+  {
+    "question": "Quel événement miraculeux a eu lieu pendant que le Prophète ﷺ vivait chez Halima ?",
+    "options": [
+      "L'ouverture de sa poitrine par deux anges",
+      "Le voyage nocturne",
+      "La fente de la lune",
+      "La révélation du Coran"
+    ],
+    "correct": 0,
+    "explanation": "Deux anges sont venus, ont ouvert la poitrine du jeune Muhammad ﷺ, ont lavé son cœur avec de l'eau de Zamzam et en ont retiré une part de Satan.",
+    "category": "importance"
+  },
+  {
+    "question": "Pourquoi les Arabes confiaient-ils leurs bébés aux Bédouins du désert ?",
+    "options": [
+      "Parce qu'ils étaient pauvres",
+      "Pour les cacher",
+      "Pour travailler",
+      "Pour qu'ils grandissent forts, éloquents et loin des maladies de la ville"
+    ],
+    "correct": 3,
+    "explanation": "C'était une coutume noble pour assurer aux enfants une santé robuste, un langage arabe pur et une éducation aux valeurs bédouines.",
+    "category": "context"
+  },
+  {
+    "question": "Qui est considéré comme le premier martyr (Shaheed) de l'Islam ?",
+    "options": [
+      "Hamza",
+      "Bilal",
+      "Yasser",
+      "Sumayyah bint Khayyat"
+    ],
+    "correct": 3,
+    "explanation": "Sumayyah bint Khayyat, la mère de 'Ammar ibn Yasir, fut la première personne à être tuée pour sa foi en Islam, assassinée par Abu Jahl.",
+    "category": "importance"
+  },
+  {
+    "question": "Comment le Prophète ﷺ a-t-il réconforté la famille de Yasir commme ils étaient torturés ?",
+    "options": [
+      "Il les a libérés par la force",
+      "Il a négocié avec Abu Jahl",
+      "Il leur a donné de l'or",
+      "Il leur a dit : 'Patience, ô famille de Yasir, car votre rendez-vous est le Paradis'"
+    ],
+    "correct": 3,
+    "explanation": "Ne pouvant les libérer physiquement à ce stade, il leur a donné la plus grande bonne nouvelle : la promesse du Paradis pour leur patience.",
+    "category": "context"
+  },
+  {
+    "question": "Qui a tué Sumayyah ?",
+    "options": [
+      "Abu Jahl",
+      "Umayyah ibn Khalaf",
+      "Abu Lahab",
+      "Abu Sufyan"
+    ],
+    "correct": 0,
+    "explanation": "C'est Abu Jahl, l'un des pires ennemis de l'Islam, qui a tué Sumayyah d'un coup de lance dans un accès de rage face à sa fermeté.",
+    "category": "context"
+  },
+  {
+    "question": "Combien de temps a duré le boycott imposé aux Banu Hashim ?",
+    "options": [
+      "6 mois",
+      "3 ans",
+      "1 an",
+      "10 ans"
+    ],
+    "correct": 1,
+    "explanation": "Le boycott social et économique a duré trois longues années, durant lesquelles les musulmans et leur clan protecteur ont souffert d'une famine extrême.",
+    "category": "date"
+  },
+  {
+    "question": "Où les Banu Hashim ont-ils été confinés pendant le boycott ?",
+    "options": [
+      "Dans le ravin (Shi'b) d'Abu Talib",
+      "À Médine",
+      "Dans le désert",
+      "Dans la Ka'bah"
+    ],
+    "correct": 0,
+    "explanation": "Ils ont été forcés de se retirer dans la vallée ou le quartier (Shi'b) appartenant à Abu Talib, coupés de tout commerce et mariage.",
+    "category": "context"
+  },
+  {
+    "question": "Comment le boycott a-t-il pris fin ?",
+    "options": [
+      "Une inondation a détruit La Mecque",
+      "Les Quraysh ont eu pitié",
+      "Les musulmans ont payé une rançon",
+      "Le document du boycott a été mangé par des termites sauf le nom d'Allah"
+    ],
+    "correct": 3,
+    "explanation": "Allah a envoyé des termites (ou vers de terre) pour manger le pacte injuste accroché dans la Ka'bah, ne laissant que l'inscription 'Bismik Allahumma' (En ton nom, ô Allah).",
+    "category": "importance"
+  },
+  {
+    "question": "Quelle rumeur a déclenché le Serment de l'Agrément (Bay'at al-Ridwan) ?",
+    "options": [
+      "La trahison des Ansar",
+      "L'attaque de Médine",
+      "La mort de 'Uthman ibn 'Affan",
+      "La mort du Prophète ﷺ"
+    ],
+    "correct": 2,
+    "explanation": "'Uthman avait été envoyé comme émissaire à La Mecque et la rumeur de son assassinat par les Quraysh a conduit les compagnons à prêter serment de venger sa mort.",
+    "category": "context"
+  },
+  {
+    "question": "Où a eu lieu le Bay'at al-Ridwan ?",
+    "options": [
+      "Sous un arbre à al-Hudaybiyah",
+      "Au Mont Uhud",
+      "À La Mecque",
+      "À la mosquée de Médine"
+    ],
+    "correct": 0,
+    "explanation": "Ce serment historique a eu lieu sous un arbre (Samurah) dans la plaine d'Al-Hudaybiyah.",
+    "category": "context"
+  },
+  {
+    "question": "Quelle récompense Allah a-t-Il mentionnée dans le Coran pour ceux qui ont prêté ce serment ?",
+    "options": [
+      "La victoire sur les Perses",
+      "Son agrément (Ridwan) et la tranquillité (Sakinah)",
+      "Une longue vie",
+      "De l'or"
+    ],
+    "correct": 1,
+    "explanation": "Allah dit dans la Sourate Al-Fath (48:18) qu'Il a agréé les croyants lorsqu'ils ont prêté serment sous l'arbre, d'où le nom 'Serment de l'Agrément'.",
     "category": "importance"
   }
 ]

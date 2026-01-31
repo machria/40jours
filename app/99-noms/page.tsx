@@ -24,7 +24,7 @@ const generateQuizRound = (names: AllahName[]) => {
 };
 
 export default function NamesPage() {
-    const [mode, setMode] = useState<'learn' | 'quiz'>('learn');
+    const [mode, setMode] = useState<'learn' | 'quiz' | 'list'>('learn');
     const [index, setIndex] = useState(0);
 
     // Quiz State
@@ -35,14 +35,6 @@ export default function NamesPage() {
     const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
     const [score, setScore] = useState(0);
     const [highScore, setHighScore] = useState(0);
-
-    // Initial high score load can be done via server component or prop if passed, 
-    // but distinct client-side fetching might be redundant if not passed. 
-    // For now, let's keep it simple and maybe load it via a server action if we really need it on client mount,
-    // or just rely on the session/user data if we had it. 
-    // Actually, let's just leave it empty for now as we don't have a direct 'getHighScore' in generic actions yet 
-    // and passing it as prop is better pattern. But refactoring to server component is bigger change.
-    // I'll just remove the old call to avoid errors since I deleted the import.
 
     const startQuiz = () => {
         setMode('quiz');
@@ -91,23 +83,40 @@ export default function NamesPage() {
 
     return (
         <div className="min-h-screen bg-background flex flex-col">
-            <header className="p-4 flex items-center justify-between sticky top-0 bg-background/80 backdrop-blur z-10">
-                <Link href="/" className="p-2 hover:bg-muted rounded-full">
-                    <ChevronLeft className="w-6 h-6" />
-                </Link>
-                <h1 className="text-xl font-bold font-kufi text-primary">Les 99 Noms</h1>
-                <div className="flex gap-2">
+            <header className="p-4 flex items-center justify-between sticky top-0 bg-background/80 backdrop-blur z-10 border-b">
+                <div className="flex items-center gap-2">
+                    <Link href="/" className="p-2 hover:bg-muted rounded-full">
+                        <ChevronLeft className="w-6 h-6" />
+                    </Link>
+                    <h1 className="text-xl font-bold font-kufi text-primary">Les 99 Noms</h1>
+                </div>
+                <div className="flex gap-1 bg-muted/50 p-1 rounded-full">
                     <button
-                        onClick={() => setMode(mode === 'learn' ? 'quiz' : 'learn')}
-                        className={`p-2 rounded-full transition-colors ${mode === 'quiz' ? 'bg-primary text-primary-foreground' : 'hover:bg-muted text-accent'}`}
+                        onClick={() => setMode('learn')}
+                        className={`p-2 rounded-full transition-all ${mode === 'learn' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                        title="Mode Cartes"
                     >
-                        {mode === 'quiz' ? <HelpCircle className="w-5 h-5" /> : <Trophy className="w-5 h-5" />}
+                        <RefreshCw className="w-4 h-4" /> {/* Using Refresh as placeholder for Cards/Cycle */}
+                    </button>
+                    <button
+                        onClick={() => setMode('list')}
+                        className={`p-2 rounded-full transition-all ${mode === 'list' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                        title="Mode Liste"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-list"><line x1="8" x2="21" y1="6" y2="6" /><line x1="8" x2="21" y1="12" y2="12" /><line x1="8" x2="21" y1="18" y2="18" /><line x1="3" x2="3.01" y1="6" y2="6" /><line x1="3" x2="3.01" y1="12" y2="12" /><line x1="3" x2="3.01" y1="18" y2="18" /></svg>
+                    </button>
+                    <button
+                        onClick={() => setMode('quiz')}
+                        className={`p-2 rounded-full transition-all ${mode === 'quiz' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
+                        title="Mode Quiz"
+                    >
+                        <Trophy className="w-4 h-4" />
                     </button>
                 </div>
             </header>
 
-            <main className="flex-1 flex flex-col items-center justify-start py-8 px-4 overflow-y-auto w-full max-w-lg mx-auto space-y-6">
-                <div className="text-center space-y-4 bg-emerald-50/50 dark:bg-emerald-900/10 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-800/30">
+            <main className={`flex-1 flex flex-col items-center justify-start py-8 px-4 w-full ${mode === 'list' ? 'max-w-4xl' : 'max-w-lg'} mx-auto space-y-6 overflow-y-auto`}>
+                <div className="text-center space-y-4 bg-emerald-50/50 dark:bg-emerald-900/10 p-6 rounded-2xl border border-emerald-100 dark:border-emerald-800/30 w-full">
                     <p className="font-kufi text-xl text-emerald-800 dark:text-emerald-400">
                         Au nom d&apos;Allah, le Tout Miséricordieux, le Très Miséricordieux
                     </p>
@@ -119,8 +128,9 @@ export default function NamesPage() {
                         (Rapporté par Boukhari dans son Sahih n°2736 et Mouslim dans son Sahih n°2677)
                     </p>
                 </div>
+
                 <AnimatePresence mode="wait">
-                    {mode === 'learn' ? (
+                    {mode === 'learn' && (
                         <motion.div
                             key="learn"
                             initial={{ opacity: 0 }}
@@ -171,7 +181,46 @@ export default function NamesPage() {
                                 </button>
                             </div>
                         </motion.div>
-                    ) : (
+                    )}
+
+                    {mode === 'list' && (
+                        <motion.div
+                            key="list"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="w-full"
+                        >
+                            <div className="rounded-xl border bg-card overflow-hidden shadow-sm">
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left">
+                                        <thead className="bg-muted/50 text-muted-foreground uppercase text-xs font-medium">
+                                            <tr>
+                                                <th className="px-4 py-3 text-center w-12">#</th>
+                                                <th className="px-4 py-3 font-kufi text-right">Arabe</th>
+                                                <th className="px-4 py-3">Translittération</th>
+                                                <th className="px-4 py-3">Français</th>
+                                                <th className="px-4 py-3 hidden md:table-cell">Signification</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y">
+                                            {namesOfAllah.map((name, i) => (
+                                                <tr key={name.Number} className="hover:bg-muted/30 transition-colors">
+                                                    <td className="px-4 py-3 text-center text-muted-foreground font-mono text-xs">{name.Number}</td>
+                                                    <td className="px-4 py-3 font-kufi text-xl text-primary text-right">{name.arabe}</td>
+                                                    <td className="px-4 py-3 font-bold">{name.transliteration}</td>
+                                                    <td className="px-4 py-3">{name.francais}</td>
+                                                    <td className="px-4 py-3 text-muted-foreground italic hidden md:table-cell">{name.signification}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </motion.div>
+                    )}
+
+                    {mode === 'quiz' && (
                         <motion.div
                             key="quiz"
                             initial={{ opacity: 0, scale: 0.95 }}

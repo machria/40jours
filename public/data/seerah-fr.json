@@ -1,12 +1,12 @@
 [
   {
-    "title": "Construction de la Ka'bah par Ibrahim et Isma'il عليهما السلام",
+    "title": "Prophète 'Isa (Jésus) عليه السلام",
     "commentary": [
-      "Le Prophète Ibrahim (Abraham) et son fils Isma'il (Ismaël) ont construit la Ka'bah à La Mecque comme première maison de culte dédiée au Dieu Unique."
+      "Le Prophète 'Isa est né de Maryam (Marie) par un miracle. Il a accompli des miracles et prêché le message du monothéisme. Il a annoncé la venue du Prophète Muhammad ﷺ."
     ],
-    "notes": "Environ 2000 avant J.-C.",
+    "notes": "Né environ 4 avant J.-C., mentionné dans le Coran comme annonçant Ahmad",
     "hijri-date": "",
-    "start": "-2000-01-01"
+    "start": "-0004-01-01"
   },
   {
     "title": "Prophète Musa (Moïse) عليه السلام",
@@ -18,13 +18,13 @@
     "start": "-1400-01-01"
   },
   {
-    "title": "Prophète 'Isa (Jésus) عليه السلام",
+    "title": "Construction de la Ka'bah par Ibrahim et Isma'il عليهما السلام",
     "commentary": [
-      "Le Prophète 'Isa est né de Maryam (Marie) par un miracle. Il a accompli des miracles et prêché le message du monothéisme. Il a annoncé la venue du Prophète Muhammad ﷺ."
+      "Le Prophète Ibrahim (Abraham) et son fils Isma'il (Ismaël) ont construit la Ka'bah à La Mecque comme première maison de culte dédiée au Dieu Unique."
     ],
-    "notes": "Né environ 4 avant J.-C., mentionné dans le Coran comme annonçant Ahmad",
+    "notes": "Environ 2000 avant J.-C.",
     "hijri-date": "",
-    "start": "-0004-01-01"
+    "start": "-2000-01-01"
   },
   {
     "title": "Naissance de 'Abdul-Muttalib",
@@ -79,6 +79,16 @@
     "notes": "12 Rabi' al-Awwal",
     "hijri-date": "",
     "start": "0571-04-20"
+  },
+  {
+    "title": "L'Allaitement chez Halima As-Sa'diyyah",
+    "commentary": [
+      "Selon la coutume des Arabes, le jeune Muhammad ﷺ a été confié à une nourrice bédouine, Halima As-Sa'diyyah, pour grandir à l'air pur du désert.",
+      "C'est durant cette période qu'a eu lieu l'événement de l'ouverture de la poitrine par les anges."
+    ],
+    "notes": "0 - 4 ans",
+    "hijri-date": "",
+    "start": "0571-05-01"
   },
   {
     "title": "Décès de sa mère Aminah",
@@ -172,6 +182,16 @@
     "start": "0615-01-01"
   },
   {
+    "title": "Le Martyre de Sumayyah",
+    "commentary": [
+      "Sumayyah bint Khayyat fut la première martyre de l'Islam. Elle fut tuée par Abu Jahl pour avoir refusé de renier sa foi.",
+      "Sa famille, les Yasir, a subi de terribles tortures, et le Prophète ﷺ leur a promis le Paradis."
+    ],
+    "notes": "Début de l'Islam (Hégire -7)",
+    "hijri-date": "7 BH",
+    "start": "0615-06-01"
+  },
+  {
     "title": "'Umar ibn al-Khattab accepte l'Islam",
     "commentary": [
       "'Umar رضي الله عنه a accepté l'Islam, renforçant la communauté musulmane. Les musulmans ont pu prier ouvertement à la Ka'bah."
@@ -179,6 +199,17 @@
     "notes": "Âge 45 ans",
     "hijri-date": "6 BH",
     "start": "0616-01-01"
+  },
+  {
+    "title": "Le Boycott des Banu Hashim",
+    "commentary": [
+      "Les Quraysh ont imposé un boycott social et économique total aux clans Banu Hashim et Banu Muttalib pour qu'ils livrent le Prophète ﷺ.",
+      "Pendant trois ans, ils ont souffert de la faim dans le ravin d'Abu Talib, jusqu'à ce que le pacte injuste soit mangé par des termites."
+    ],
+    "notes": "7 BH - 10 BH",
+    "hijri-date": "7 BH",
+    "start": "0616-09-01",
+    "end": "0619-09-01"
   },
   {
     "title": "Année du Chagrin",
@@ -201,7 +232,8 @@
   {
     "title": "Al-Isra' wal-Mi'raj (Voyage Nocturne)",
     "commentary": [
-      "Le Prophète ﷺ a été transporté de La Mecque à Jérusalem (Isra') puis a ascensionné vers les cieux (Mi'raj), où il a rencontré les prophètes et a reçu le commandement des cinq prières quotidiennes."
+      "Le Prophète ﷺ a été transporté de La Mecque à Jérusalem (Isra') puis a ascensionné vers les cieux (Mi'raj), où il a rencontré les prophètes et a reçu le commandement des cinq prières quotidiennes.",
+      "L'événement est mentionné au début de la Sourate Al-Isra (17:1) et la vision céleste est décrite dans la Sourate An-Najm."
     ],
     "notes": "27 Rajab",
     "hijri-date": "11 BH",
@@ -228,7 +260,8 @@
   {
     "title": "Hijrah vers Médine",
     "commentary": [
-      "Le Prophète ﷺ a émigré de La Mecque à Médine, échappant à un assassinat. Cela marque le début du calendrier islamique."
+      "Le Prophète ﷺ a émigré de La Mecque à Médine, échappant à un assassinat. Cela marque le début du calendrier islamique.",
+      "La Sourate At-Tawbah (9:40) rappelle le moment critique ou le Prophète était dans la grotte avec Abu Bakr : 'Ne t'attriste pas, Allah est avec nous'."
     ],
     "notes": "1er Muharram 1 AH",
     "hijri-date": "1 AH",
@@ -253,40 +286,141 @@
     "start": "0622-11-01"
   },
   {
+    "title": "La Constitution de Médine",
+    "commentary": [
+      "Peu après son arrivée à Médine, le Prophète ﷺ a établi un document constitutionnel définissant les relations entre les musulmans (Muhajirun et Ansar), les juifs et les autres tribus.",
+      "Ce pacte établissait un état fondé sur la justice, la défense commune et la liberté religieuse."
+    ],
+    "notes": "Premier an de la Hijra (1 AH)",
+    "hijri-date": "1 AH",
+    "start": "0623-01-01"
+  },
+  {
+    "title": "Mariage avec 'Aishah رضي الله عنها",
+    "commentary": [
+      "Le Prophète ﷺ a consummé son mariage avec 'Aishah à Médine. Elle allait devenir la femme la plus savante de la Oumma et une source majeure de hadiths.",
+      "C'était le seul mariage du Prophète ﷺ avec une femme qui n'avait pas été mariée auparavant."
+    ],
+    "notes": "Shawwal 1 AH",
+    "hijri-date": "1 AH",
+    "start": "0623-04-01"
+  },
+  {
+    "title": "Changement de la Qibla",
+    "commentary": [
+      "Dix-sept mois après la Hijra, alors que le Prophète ﷺ priait dans la mosquée des Banu Salimah, Allah lui a ordonné de changer la direction de la prière de Jérusalem vers la Ka'bah à La Mecque.",
+      "Ceci marqua une distinction claire pour la communauté musulmane.",
+      "Les versets 142-150 de la Sourate Al-Baqarah traitent du changement de direction de la prière et répondent aux critiques des ignorants."
+    ],
+    "notes": "Milieu de Sha'ban 2 AH",
+    "hijri-date": "2 AH",
+    "start": "0624-02-11"
+  },
+  {
+    "title": "Institution du Ramadan et de la Zakat",
+    "commentary": [
+      "Le jeûne du mois de Ramadan et l'obligation de la Zakat ont été prescrits par Allah avant la bataille de Badr. Ces piliers ont renforcé la spiritualité et la solidarité sociale de la communauté."
+    ],
+    "notes": "Sha'ban 2 AH",
+    "hijri-date": "2 AH",
+    "start": "0624-02-25"
+  },
+  {
     "title": "Bataille de Badr",
     "commentary": [
-      "La première grande bataille entre les musulmans (313) et les Quraysh (1000). Allah a accordé la victoire aux musulmans malgré leur infériorité numérique."
+      "La première grande bataille entre les musulmans (313) et les Quraysh (1000). Allah a accordé la victoire aux musulmans malgré leur infériorité numérique.",
+      "La Sourate Al-Anfal (Le Butin) a été révélée à propos de cette bataille, détaillant les règles du butin et les leçons de la victoire."
     ],
     "notes": "17 Ramadan 2 AH",
     "hijri-date": "2 AH",
     "start": "0624-03-13"
   },
   {
+    "title": "Expulsion des Banu Qaynuqa",
+    "commentary": [
+      "La tribu juive des Banu Qaynuqa a rompu le pacte de Médine en agressant une femme musulmane et en tuant un homme musulman. Après un siège, ils ont été expulsés de Médine."
+    ],
+    "notes": "Shawwal 2 AH",
+    "hijri-date": "2 AH",
+    "start": "0624-04-15"
+  },
+  {
     "title": "Bataille d'Uhud",
     "commentary": [
-      "Les Quraysh sont revenus avec 3000 guerriers. Les musulmans ont d'abord gagné mais ont subi des pertes lorsque les archers ont quitté leurs positions. Le Prophète ﷺ a été blessé."
+      "Les Quraysh sont revenus avec 3000 guerriers. Les musulmans ont d'abord gagné mais ont subi des pertes lorsque les archers ont quitté leurs positions. Le Prophète ﷺ a été blessé.",
+      "Une grande partie de la Sourate Ali 'Imran (versets 121-179) commente cette bataille, analysant les causes de la défaite et consolant les croyants."
     ],
     "notes": "7 Shawwal 3 AH",
     "hijri-date": "3 AH",
     "start": "0625-03-23"
   },
   {
+    "title": "Expulsion des Banu Nadir",
+    "commentary": [
+      "Les Banu Nadir ont comploté pour assassiner le Prophète ﷺ en jetant une pierre sur lui. Jibril l'a informé du complot. Ils ont été assiégés puis expulsés. La Sourate Al-Hashr a été révélée à ce sujet."
+    ],
+    "notes": "Rabi' al-Awwal 4 AH",
+    "hijri-date": "4 AH",
+    "start": "0625-08-01"
+  },
+  {
     "title": "Bataille de la Tranchée (Khandaq)",
     "commentary": [
-      "Les Quraysh et leurs alliés ont assiégé Médine avec 10 000 guerriers. Les musulmans ont creusé une tranchée sur les conseils de Salman al-Farsi et ont défendu avec succès la ville."
+      "Les Quraysh et leurs alliés ont assiégé Médine avec 10 000 guerriers. Les musulmans ont creusé une tranchée sur les conseils de Salman al-Farsi et ont défendu avec succès la ville.",
+      "La Sourate Al-Ahzab (Les Coalisés) décrit ce siège, la peur des croyants et le miracle divin du vent qui a chassé les ennemis."
     ],
     "notes": "Shawwal 5 AH",
     "hijri-date": "5 AH",
     "start": "0627-03-01"
   },
   {
+    "title": "Bataille de Banu Qurayza",
+    "commentary": [
+      "Immédiatement après la Bataille de la Tranchée, l'ange Jibril a ordonné au Prophète ﷺ de marcher sur les Banu Qurayza qui avaient trahi les musulmans en s'alliant aux ennemis pendant le siège.",
+      "Après un siège de 25 jours, ils se sont rendus et ont été jugés selon leur propre loi."
+    ],
+    "notes": "Dhul-Qi'dah 5 AH",
+    "hijri-date": "5 AH",
+    "start": "0627-04-01"
+  },
+  {
+    "title": "L'incident d'Al-Ifk (La Calomnie)",
+    "commentary": [
+      "Lors du retour de l'expédition des Banu Mustaliq, des hypocrites ont répandu de fausses rumeurs sur l'honneur de 'Aishah رضي الله عنها.",
+      "Après un mois de souffrance pour le Prophète ﷺ et sa famille, Allah a révélé des versets de la Sourate An-Nur innocentant totalement 'Aishah."
+    ],
+    "notes": "Sha'ban 6 AH",
+    "hijri-date": "6 AH",
+    "start": "0627-12-01"
+  },
+  {
+    "title": "Le Serment de l'Agrément (Bay'at al-Ridwan)",
+    "commentary": [
+      "Lors de l'incident de Hudaybiyah, 1400 compagnons ont prêté serment de mort sous un arbre pour venger la rumeur de la mort d'Uthman.",
+      "Allah a révélé Sa satisfaction envers eux dans le Coran : 'Allah a très certainement agréé les croyants quand ils t'ont prêté serment sous l'arbre'."
+    ],
+    "notes": "Dhul-Qi'dah 6 AH",
+    "hijri-date": "6 AH",
+    "start": "0628-02-25"
+  },
+  {
     "title": "Traité de Hudaybiyyah",
     "commentary": [
-      "Le Prophète ﷺ et les Quraysh ont signé un traité de paix. Bien qu'il semblait défavorable, il a été appelé une 'victoire claire' dans le Coran et a conduit à de nombreuses conversions."
+      "Le Prophète ﷺ et les Quraysh ont signé un traité de paix. Bien qu'il semblait défavorable, il a été appelé une 'victoire claire' dans le Coran et a conduit à de nombreuses conversions.",
+      "C'est au retour de ce voyage que la Sourate Al-Fath (La Victoire Éclatante) a été révélée, qualifiant ce traité de 'victoire manifeste'."
     ],
     "notes": "Dhul-Qi'dah 6 AH",
     "hijri-date": "6 AH",
     "start": "0628-03-01"
+  },
+  {
+    "title": "Conquête de Khaybar",
+    "commentary": [
+      "Les musulmans ont conquis la forteresse juive de Khaybar. Le Prophète ﷺ a épousé Safiyyah رضي الله عنها."
+    ],
+    "notes": "Muharram 7 AH",
+    "hijri-date": "7 AH",
+    "start": "0628-05-01"
   },
   {
     "title": "Lettres aux Rois et Dirigeants",
@@ -298,13 +432,13 @@
     "start": "0628-06-01"
   },
   {
-    "title": "Conquête de Khaybar",
+    "title": "'Umrah al-Qada (Pèlerinage de Compensation)",
     "commentary": [
-      "Les musulmans ont conquis la forteresse juive de Khaybar. Le Prophète ﷺ a épousé Safiyyah رضي الله عنها."
+      "Conformément au traité de Hudaybiyah, le Prophète ﷺ et les musulmans sont retournés à La Mecque l'année suivante pour accomplir la 'Umrah qu'ils avaient manquée. Ils y sont restés 3 jours."
     ],
-    "notes": "Muharram 7 AH",
+    "notes": "Dhul-Qi'dah 7 AH",
     "hijri-date": "7 AH",
-    "start": "0628-05-01"
+    "start": "0629-03-01"
   },
   {
     "title": "Bataille de Mu'tah",
@@ -318,7 +452,8 @@
   {
     "title": "Conquête de La Mecque",
     "commentary": [
-      "Le Prophète ﷺ est entré pacifiquement à La Mecque avec 10 000 musulmans. Il a pardonné à ses ennemis et a purifié la Ka'bah des idoles."
+      "Le Prophète ﷺ est entré pacifiquement à La Mecque avec 10 000 musulmans. Il a pardonné à ses ennemis et a purifié la Ka'bah des idoles.",
+      "La Sourate An-Nasr (Le Secours) est associée à cette victoire finale et à l'entrée des gens en masse dans la religion d'Allah."
     ],
     "notes": "20 Ramadan 8 AH",
     "hijri-date": "8 AH",
@@ -336,7 +471,8 @@
   {
     "title": "Bataille de Tabuk",
     "commentary": [
-      "Le Prophète ﷺ a mené 30 000 musulmans à Tabuk pour faire face à la menace byzantine. Les Byzantins ne se sont pas présentés et de nombreuses tribus ont prêté allégeance à l'Islam."
+      "Le Prophète ﷺ a mené 30 000 musulmans à Tabuk pour faire face à la menace byzantine. Les Byzantins ne se sont pas présentés et de nombreuses tribus ont prêté allégeance à l'Islam.",
+      "La Sourate At-Tawbah (Le Repentir) a été révélée en grande partie au sujet de cette expédition, dévoilant les hypocrites qui ont refusé de partir."
     ],
     "notes": "Rajab 9 AH",
     "hijri-date": "9 AH",
@@ -351,6 +487,15 @@
     "hijri-date": "9 AH",
     "start": "0631-01-01",
     "end": "0631-12-31"
+  },
+  {
+    "title": "Décès d'Ibrahim, fils du Prophète ﷺ",
+    "commentary": [
+      "Le fils du Prophète, Ibrahim, né de Maria al-Qibtiyya, est décédé en bas âge. Le Prophète ﷺ a pleuré sa perte mais a accepté le décret d'Allah. Une éclipse solaire a eu lieu ce jour-là."
+    ],
+    "notes": "10 AH",
+    "hijri-date": "10 AH",
+    "start": "0632-01-27"
   },
   {
     "title": "Pèlerinage d'Adieu",
@@ -443,15 +588,6 @@
     "start": "0693-01-01"
   },
   {
-    "title": "Décès d'Anas ibn Malik رضي الله عنه",
-    "commentary": [
-      "Serviteur personnel du Prophète ﷺ pendant 10 ans. Il fut le dernier compagnon à mourir à Bassorah et a rapporté de nombreux hadiths."
-    ],
-    "notes": "A rapporté 2 286 hadiths",
-    "hijri-date": "93 AH",
-    "start": "0712-01-01"
-  },
-  {
     "title": "Naissance de l'Imam Malik ibn Anas",
     "commentary": [
       "Le grand Imam de Médine, fondateur de l'école juridique malékite. Il a compilé Al-Muwatta, l'une des premières collections de hadiths."
@@ -459,6 +595,15 @@
     "notes": "Auteur d'Al-Muwatta",
     "hijri-date": "93 AH",
     "start": "0711-01-01"
+  },
+  {
+    "title": "Décès d'Anas ibn Malik رضي الله عنه",
+    "commentary": [
+      "Serviteur personnel du Prophète ﷺ pendant 10 ans. Il fut le dernier compagnon à mourir à Bassorah et a rapporté de nombreux hadiths."
+    ],
+    "notes": "A rapporté 2 286 hadiths",
+    "hijri-date": "93 AH",
+    "start": "0712-01-01"
   },
   {
     "title": "Décès de l'Imam Malik ibn Anas",
@@ -470,15 +615,6 @@
     "start": "0795-01-01"
   },
   {
-    "title": "Naissance de l'Imam Abu Dawud",
-    "commentary": [
-      "Compilateur de Sunan Abu Dawud, l'une des six collections majeures de hadiths (Kutub al-Sittah). Sa collection se concentre sur les hadiths juridiques."
-    ],
-    "notes": "Auteur de Sunan Abu Dawud (4 800 hadiths)",
-    "hijri-date": "202 AH",
-    "start": "0817-01-01"
-  },
-  {
     "title": "Naissance de l'Imam al-Bukhari",
     "commentary": [
       "Le plus grand érudit de hadiths, compilateur de Sahih al-Bukhari, le livre le plus authentique après le Coran. Il a mémorisé 600 000 hadiths."
@@ -486,6 +622,15 @@
     "notes": "Auteur de Sahih al-Bukhari (7 563 hadiths avec répétitions)",
     "hijri-date": "194 AH",
     "start": "0810-07-13"
+  },
+  {
+    "title": "Naissance de l'Imam Abu Dawud",
+    "commentary": [
+      "Compilateur de Sunan Abu Dawud, l'une des six collections majeures de hadiths (Kutub al-Sittah). Sa collection se concentre sur les hadiths juridiques."
+    ],
+    "notes": "Auteur de Sunan Abu Dawud (4 800 hadiths)",
+    "hijri-date": "202 AH",
+    "start": "0817-01-01"
   },
   {
     "title": "Naissance de l'Imam Muslim",
@@ -506,15 +651,6 @@
     "start": "0824-01-01"
   },
   {
-    "title": "Naissance de l'Imam al-Nasa'i",
-    "commentary": [
-      "Compilateur de Sunan an-Nasa'i, l'une des six collections majeures de hadiths. Connu pour ses critères stricts d'authentification des hadiths."
-    ],
-    "notes": "Auteur de Sunan an-Nasa'i (5 761 hadiths)",
-    "hijri-date": "215 AH",
-    "start": "0829-01-01"
-  },
-  {
     "title": "Naissance de l'Imam Ibn Majah",
     "commentary": [
       "Compilateur de Sunan Ibn Majah, la sixième des collections majeures de hadiths. Il était un érudit de hadiths et d'exégèse coranique."
@@ -522,6 +658,15 @@
     "notes": "Auteur de Sunan Ibn Majah (4 341 hadiths)",
     "hijri-date": "209 AH",
     "start": "0824-01-01"
+  },
+  {
+    "title": "Naissance de l'Imam al-Nasa'i",
+    "commentary": [
+      "Compilateur de Sunan an-Nasa'i, l'une des six collections majeures de hadiths. Connu pour ses critères stricts d'authentification des hadiths."
+    ],
+    "notes": "Auteur de Sunan an-Nasa'i (5 761 hadiths)",
+    "hijri-date": "215 AH",
+    "start": "0829-01-01"
   },
   {
     "title": "Décès de l'Imam al-Bukhari",
@@ -542,15 +687,6 @@
     "start": "0875-07-01"
   },
   {
-    "title": "Décès de l'Imam Abu Dawud",
-    "commentary": [
-      "L'Imam Abu Dawud est décédé à Bassorah. Son Sunan est essentiel pour la jurisprudence islamique."
-    ],
-    "notes": "A vécu 73 ans",
-    "hijri-date": "275 AH",
-    "start": "0889-01-01"
-  },
-  {
     "title": "Décès de l'Imam Ibn Majah",
     "commentary": [
       "L'Imam Ibn Majah est décédé à Qazvin. Son Sunan complète les six collections majeures de hadiths."
@@ -558,6 +694,15 @@
     "notes": "A vécu 64 ans",
     "hijri-date": "273 AH",
     "start": "0887-01-01"
+  },
+  {
+    "title": "Décès de l'Imam Abu Dawud",
+    "commentary": [
+      "L'Imam Abu Dawud est décédé à Bassorah. Son Sunan est essentiel pour la jurisprudence islamique."
+    ],
+    "notes": "A vécu 73 ans",
+    "hijri-date": "275 AH",
+    "start": "0889-01-01"
   },
   {
     "title": "Décès de l'Imam al-Tirmidhi",
