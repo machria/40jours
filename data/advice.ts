@@ -28,7 +28,7 @@ Devenir **Hafiz** (gardien) du Coran est l'un des plus nobles objectifs qu'un mu
 
 La mémorisation du Coran offre des récompenses inestimables ici-bas et dans l'au-delà :
 
-*   **Une élévation constante :** Le Jour du Jugement, il sera dit au lecteur du Coran : *"Lis et monte, et récite comme tu récitais dans le bas-monde, car ta place sera là où tu réciteras le dernier verset."* (Tirmidhi)
+*   **Une élévation constante :** Le Jour du Jugement, il sera dit au lecteur du Coran : *"Lis et monte, et récite comme tu récitais dans le bas-monde, car ta place sera là où tu réciteras le dernier verset."* (Rapporté par At-Tirmidhi n°2914 et Abou Dawoud n°1464, authentifié par Al-Albani)
 *   **La noblesse des parents :** Les parents du Hafiz seront revêtus d'une couronne de lumière dont l'éclat est plus beau que celui du soleil.
 *   **Une intercession :** Le jeûne et le Coran intercéderont pour le serviteur le Jour de la Résurrection.
 
@@ -167,6 +167,173 @@ Vous avez besoin d'être actif.
 4.  **Validez chaque victoire :** Cochez chaque sourate apprise.
 
 N'attendez pas d'être "prêt". Vous ne le serez jamais assez. Commencez avec *Bismillah*.
+`
+    },
+    {
+        slug: 'art-du-tadabbur',
+        title: 'L\'Art du Tadabbur : Comment méditer le Coran ?',
+        excerpt: 'Lire le Coran ne suffit pas. Découvrez comment passer de la simple lecture à la méditation profonde (Tadabbur) qui transforme le cœur et le comportement.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '5 min',
+        content: `
+# L'Art du Tadabbur : Faire vivre le Coran en soi
+
+Allah nous pose une question directe : **"Ne méditent-ils pas sur le Coran ? Ou y a-t-il des cadenas sur leurs cœurs ?"** (Sourate Muhammad, 47:24).
+
+Le but ultime de la révélation n'est pas seulement d'être récitée, mais d'être comprise et vécue. C'est cela le **Tadabbur** : regarder au-delà des mots pour atteindre les sens profonds.
+
+## 1. La Différence entre Lire (Tilawa) et Méditer (Tadabbur)
+
+*   **La Tilawa** est l'acte de prononcer les mots sacrés. Elle apporte des hassanats (récompenses) pour chaque lettre.
+*   **Le Tadabbur** est l'acte de réfléchir sur le message. Il apporte la guérison du cœur et la guidance.
+
+On peut lire vite, mais on ne peut méditer que lentement.
+
+## 2. Comment pratiquer le Tadabbur avec notre site ?
+
+Voici une méthode simple en 3 étapes :
+
+### Étape 1 : Comprendre les mots (Mufadat)
+Vous ne pouvez pas méditer sur ce que vous ne comprenez pas.
+*   **Action :** Utilisez notre section **"Vocabulaire"**. Si vous croisez le mot *'Al-Falah'*, ne lisez pas juste "succès". Apprenez sa racine, ses nuances (le laboureur qui récolte après l'effort).
+
+### Étape 2 : L'Interrogation (Sua'l)
+Posez-vous des questions face au verset :
+*   Pourquoi Allah a-t-il utilisé ce mot et pas un autre ?
+*   Suis-je concerné par cet avertissement ?
+*   Est-ce que je ressens la joie promise dans ce verset ?
+
+### Étape 3 : L'Application (Amal)
+Le Tadabbur sans action est stérile.
+*   **Action :** Si vous lisez un verset sur la patience (Sabr), prenez l'engagement immédiat de ne pas vous énerver sur la prochaine contrariété de la journée.
+
+## Conclusion
+
+Ne faites pas de votre lecture une course pour finir la page. Faites-en une conversation avec votre Seigneur. Un seul verset médité et vécu vaut mieux qu'une lecture complète faite avec distraction.
+`
+    },
+    {
+        slug: 'tajwid-obligation-ou-excellence',
+        title: 'Le Tajwid : Embellir sa voix ou respecter la Parole ?',
+        excerpt: 'Le Tajwid est souvent perçu comme une simple option esthétique. Découvrez pourquoi c\'est en réalité une marque de respect profond envers la Parole divine.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '4 min',
+        content: `
+# Le Tajwid : Plus qu'une belle voix
+
+Pour beaucoup de débutants, le **Tajwid** (les règles de récitation) semble être un ensemble complexe de règles techniques réservées aux experts. C'est une erreur.
+
+## 1. Une Définition Simple
+
+Le mot *Tajwid* vient de la racine *Jawwada* qui signifie "améliorer" ou "rendre excellent". En pratique, c'est **donner à chaque lettre son droit**, en la prononçant depuis son point de sortie exact (Makhraj) et avec ses caractéristiques (Sifat).
+
+## 2. Respecter l'Auteur
+
+Imaginez que vous lisiez une lettre d'un roi. Vous feriez attention à ne pas écorcher son nom ni déformer ses propos.
+Le Coran est la parole d'Allah. Le lire correctement n'est pas du "zèle", c'est de la **politesse** (Adab) envers Lui.
+
+*   Changer une lettre peut changer le sens. Par exemple, *'Qalb'* (Cœur) mal prononcé peut devenir *'Kalb'* (Chien). C'est pour éviter ces altérations graves que le Tajwid est essentiel.
+
+## 3. Débutant ? Pas de panique !
+
+Le Prophète ﷺ a dit : **"Celui qui lit le Coran avec difficulté, en bégayant, aura une double récompense."** (Muslim)
+
+*   Une récompense pour la lecture.
+*   Une récompense pour l'effort.
+
+L'Islam valorise votre lutte. Ne laissez pas la peur de mal faire vous empêcher d'ouvrir le Coran.
+
+## 4. Comment s'y mettre aujourd'hui ?
+
+Notre section **"Tajwid"** a été conçue pour démystifier la science.
+*   **Commencez par le début :** Les points de sortie (Makharij).
+*   **Écoutez beaucoup :** Le Tajwid s'apprend par l'oreille (Talaqqi). Utilisez notre lecteur audio dans la section Sourates et imitez le récitateur.
+
+N'oubliez pas : La perfection n'est pas demandée au premier jour, mais la sincérité dans l'effort l'est.
+`
+    },
+    {
+        slug: 'citadelle-musulman-protection',
+        title: 'La Citadelle du Musulman : Pourquoi et comment l\'utiliser ?',
+        excerpt: 'Les invocations (Adhkar) ne sont pas de simples rituels. Elles sont une forteresse imprenable contre les maux du quotidien. Découvrez comment bâtir votre protection.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '4 min',
+        content: `
+# La Citadelle du Musulman (Hisn al-Muslim)
+
+Nous vivons dans un monde éprouvant, physiquement et spirituellement. Le croyant a besoin d'une armure. Cette armure, c'est le **Dhikr** (le rappel d'Allah).
+
+## 1. Pourquoi "Citadelle" ?
+
+Le titre du célèbre livre *Hisn al-Muslim* n'est pas anodin. Une citadelle est un lieu fortifié où l'on se réfugie en cas d'attaque.
+Les Adhkar du matin et du soir sont exactement cela : une forteresse spirituelle que vous bâtissez autour de vous par la permission d'Allah.
+
+Elles vous protègent contre :
+*   Le mauvais œil et la jalousie.
+*   Les suggestions (Waswasa) de Satan.
+*   L'anxiété et la tristesse.
+
+## 2. Quand les lire ?
+
+La régularité est la clé.
+*   **Matin :** Entre l'aube (Fajr) et le lever du soleil. C'est votre "armure" pour affronter la journée.
+*   **Soir :** Entre le 'Asr et le Maghreb. C'est votre apaisement pour la nuit.
+
+## 3. Utiliser notre section "Hisn"
+
+Nous avons numérisé ce trésor pour qu'il soit toujours dans votre poche.
+*   **Accès rapide :** Ne cherchez plus votre petit livre. Ouvrez l'appli.
+*   **Phonétique et Audio :** Si vous ne savez pas lire l'arabe, utilisez la phonétique pour ne pas vous priver de cette protection.
+*   **Compréhension :** Lisez la traduction ! Dire *"Je me réfugie auprès d'Allah"* a infiniment plus d'impact quand votre cœur comprend ce que votre langue prononce.
+
+Faites de ces invocations une habitude non-négociable, comme le brossage des dents ou le petit-déjeuner. C'est l'hygiène de l'âme.
+`
+    },
+    {
+        slug: 'reussir-defi-40-jours',
+        title: 'Réussir son défi des 40 jours : Le marathon de la foi',
+        excerpt: 'Tenir 40 jours peut sembler long. Voici les clés psychologiques et spirituelles pour ne pas abandonner en route et transformer ce défi en une habitude à vie.',
+        date: '2026-01-31',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '5 min',
+        content: `
+# Réussir le Défi des 40 Jours
+
+Pourquoi 40 jours ? Dans la tradition prophétique, c'est souvent la durée nécessaire pour qu'une action transforme l'être ou devienne une habitude ancrée (comme les 40 jours de Moussa, ou le développement de l'embryon).
+
+Ce n'est pas un sprint, c'est un marathon. Voici comment tenir.
+
+## 1. La Règle des "Deux Jours"
+
+Ne laissez jamais passer **deux jours** d'affilée sans lire.
+*   Rater un jour, ça arrive (maladie, urgence).
+*   Rater deux jours, c'est le début de l'abandon. C'est psychologique. Rattrapez-vous immédiatement le lendemain, même si c'est peu.
+
+## 2. Le "Minimum Vital"
+
+Les jours où vous êtes épuisé(e), ne visez pas la perfection. Visez la continuité.
+Si vous ne pouvez pas lire votre *Juz* entier, lisez au moins une page. Ou même **un verset**.
+L'objectif est de ne pas couper le lien avec le Livre d'Allah. Notre tableau de bord est là pour vous rappeler cette constance.
+
+## 3. Planifiez votre moment
+
+Ne dites pas "Je lirai quand j'aurai le temps". Vous n'aurez jamais le temps. Le temps se prend.
+*   Fixez un rendez-vous fixe avec Allah. (Ex: "Après le Fajr" ou "20min avant le Maghreb").
+*   Sanctuarisez ce moment. Mettez votre téléphone en mode avion.
+
+## 4. Utilisez le Suivi Visuel
+
+Notre page d'accueil avec son cercle de progression n'est pas un gadget.
+Le cerveau humain aime compléter des cercles. Voir votre progression passer de 10% à 50% donne une dopamine spirituelle qui motive à continuer.
+
+## 5. L'Après 40 Jours
+
+Le but n'est pas de s'arrêter au jour 41. Le but est que le jour 41, vous ne puissiez plus imaginer votre vie sans votre lecture quotidienne. Ce défi est une rampe de lancement vers une vie de compagnonnage avec le Coran.
+
+Qu'Allah vous accorde la constance (Istiqama).
 `
     }
 ];
