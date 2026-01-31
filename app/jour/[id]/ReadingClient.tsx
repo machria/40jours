@@ -93,7 +93,16 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         togglePlay,
         toggleRepeat,
         repeatMode
-    } = useQuranAudio({ playlist, audioRef });
+    } = useQuranAudio({
+        playlist,
+        audioRef,
+        onAyahChange: (ayah) => {
+            const element = document.getElementById(`ayah-${ayah.surah}-${ayah.ayah}`);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    });
 
     // Scroll Persistence
     useScrollPersistence({
@@ -258,7 +267,10 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                     <div
                                         key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
                                         id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
-                                        className="group p-4 hover:bg-muted/5 transition-colors grid gap-4"
+                                        className={`group p-4 transition-all duration-300 grid gap-4 ${isAyahPlaying(ayah.surahNumber, ayah.numberInSurah)
+                                            ? 'bg-primary/5 ring-1 ring-primary/20 shadow-sm z-10'
+                                            : 'hover:bg-muted/5'
+                                            }`}
                                     >
                                         {/* Arabic */}
                                         <div className="w-full">

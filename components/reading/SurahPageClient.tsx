@@ -54,7 +54,7 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                             title="Contexte et Explication"
                         >
                             <Info className="w-4 h-4" />
-                            <span className="hidden sm:inline">Contexte</span>
+                            <span className="hidden lg:inline">Contexte</span>
                         </button>
 
                         <button
@@ -62,7 +62,7 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                             className="bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors"
                         >
                             <BrainCircuit className="w-4 h-4" />
-                            <span className="hidden sm:inline">Mémorisation</span>
+                            <span className="hidden lg:inline">Mémorisation</span>
                         </button>
                         <div className="font-kufi text-xl font-bold text-primary hidden sm:block">
                             {meta?.name}

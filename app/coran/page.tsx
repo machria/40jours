@@ -56,12 +56,12 @@ export default function CoranPage() {
                             href={`/coran/${surah.number}`}
                             className="group bg-card hover:bg-muted/50 border rounded-xl p-4 transition-all hover:shadow-md flex items-center justify-between"
                         >
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-sm">
+                            <div className="flex items-center gap-4 min-w-0 flex-1">
+                                <div className="w-10 h-10 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-sm shrink-0">
                                     {surah.number}
                                 </div>
-                                <div>
-                                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+                                <div className="min-w-0">
+                                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors truncate">
                                         {surah.englishName}
                                     </h3>
                                     <p className="text-xs text-muted-foreground mb-1">
@@ -74,7 +74,7 @@ export default function CoranPage() {
                                     )}
                                 </div>
                             </div>
-                            <div className="text-right">
+                            <div className="text-right shrink-0 ml-2">
                                 <span className="font-kufi text-xl text-foreground/80 block mb-1">
                                     {surah.name}
                                 </span>
