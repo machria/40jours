@@ -58,13 +58,20 @@ export default function HadithPage() {
                 </div>
             </section>
 
-            <div className="max-w-4xl mx-auto mb-8 flex justify-center">
+            <div className="max-w-4xl mx-auto mb-8 flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                     href="/hadith/flashcards"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-bold rounded-full hover:bg-secondary/90 transition-all hover:scale-105 active:scale-95 border"
                 >
                     <span className="text-xl">🔀</span>
-                    Hadiths Aléatoires (Flashcards)
+                    Aléatoire
+                </Link>
+                <Link
+                    href="/hadith/themes"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-full shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95"
+                >
+                    <span className="text-xl">🌍</span>
+                    Univers Hadith
                 </Link>
             </div>
 
