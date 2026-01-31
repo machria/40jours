@@ -31,6 +31,7 @@ export default function Navigation() {
         { href: '/hisn', label: 'Citadelle du Musulman', icon: Shield },
         { href: '/99-noms', label: '99 Noms d\'Allah', icon: BookMarked },
         { href: '/hadith', label: 'Hadith', icon: BookOpen },
+        { href: '/hadith/nawawi', label: 'Portail des 40 hadiths', icon: BookOpen },
         { href: '/tajwid', label: 'Tajwid', icon: BookMarked },
         { href: '/vocabulaire', label: 'Vocabulaire', icon: Languages },
         { href: '/apprendre-arabe', label: 'Apprendre l\'Arabe', icon: GraduationCap },
