@@ -7,6 +7,7 @@ export interface Article {
     author: string;
     readTime?: string;
     coverImage?: string; // Optional for future
+    category: 'Sagesse d\'Al-Ghazali' | 'Méthodologie Coranique' | 'Vivre l\'Islam au Quotidien' | 'Le Programme 40 Jours';
 }
 
 export const articles: Article[] = [
@@ -17,6 +18,7 @@ export const articles: Article[] = [
         date: '2026-02-02',
         author: 'Imam Al-Ghazali (Extrait)',
         readTime: '12 min',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Les Secrets Spirituels des Adorations (Rub' al-Ibadat)
 
@@ -93,6 +95,7 @@ Le temps est votre capital le plus précieux. Chaque souffle est un joyau inesti
         date: '2026-02-02',
         author: 'Imam Al-Ghazali (Extrait)',
         readTime: '10 min',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Sanctifier le Quotidien (Rub' al-Adat)
 
@@ -176,6 +179,7 @@ Ce livre clôture le quart des Habitudes en présentant le modèle ultime : Muha
         date: '2026-02-02',
         author: 'Imam Al-Ghazali (Extrait)',
         readTime: '14 min',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Les Périls du Cœur (Rub' al-Muhlikat)
 
@@ -247,6 +251,7 @@ C'est le livre qui clôt les maladies. Le *Ghurur*, c'est la fausse sécurité.
         date: '2026-02-02',
         author: 'Imam Al-Ghazali (Extrait)',
         readTime: '13 min',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Les Stations du Salut (Rub' al-Munjiyat)
 
@@ -315,6 +320,7 @@ C'est la conclusion nécessaire.
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '8 min',
+        category: 'Méthodologie Coranique',
         content: `
 # Le Voyage vers le Coran : Comment devenir Hafiz
 
@@ -385,6 +391,7 @@ Qu'Allah vous compte parmi les gens du Coran, qui sont les gens d'Allah et Ses p
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        category: 'Méthodologie Coranique',
         content: `
 # L'Importance de la Langue Arabe
 
@@ -420,6 +427,7 @@ Lancez-vous ! Même un peu d'arabe changera radicalement votre concentration (Kh
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '6 min',
+        category: 'Le Programme 40 Jours',
         content: `
 # Objectif Premier Juz : Par où commencer et comment y arriver ?
 
@@ -474,6 +482,7 @@ N'attendez pas d'être "prêt". Vous ne le serez jamais assez. Commencez avec *B
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        category: 'Méthodologie Coranique',
         content: `
 # L'Art du Tadabbur : Faire vivre le Coran en soi
 
@@ -518,6 +527,7 @@ Ne faites pas de votre lecture une course pour finir la page. Faites-en une conv
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '4 min',
+        category: 'Méthodologie Coranique',
         content: `
 # Le Tajwid : Plus qu'une belle voix
 
@@ -559,6 +569,7 @@ N'oubliez pas : La perfection n'est pas demandée au premier jour, mais la sinc�
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '4 min',
+        category: 'Vivre l\'Islam au Quotidien',
         content: `
 # La Citadelle du Musulman (Hisn al-Muslim)
 
@@ -597,6 +608,7 @@ Faites de ces invocations une habitude non-négociable, comme le brossage des de
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        category: 'Le Programme 40 Jours',
         content: `
 # Réussir le Défi des 40 Jours
 
@@ -641,6 +653,7 @@ Qu'Allah vous accorde la constance (Istiqama).
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        category: 'Vivre l\'Islam au Quotidien',
         content: `
 # Connaître Allah par Ses Noms
 
@@ -683,6 +696,7 @@ Commencez aujourd'hui. Apprendre un Nom par jour vous prendra 3 mois, mais chang
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '6 min',
+        category: 'Vivre l\'Islam au Quotidien',
         content: `
 # La Sunnah : Lumière sur la Lumière
 
@@ -722,6 +736,7 @@ Ne lisez pas les Hadiths comme de simples citations culturelles. Lisez-les comme
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        category: 'Vivre l\'Islam au Quotidien',
         content: `
 # La Sira : Plus que de l'Histoire
 
@@ -754,6 +769,388 @@ Quelle que soit votre épreuve, Muhammad ﷺ l'a vécue avant vous et vous a mon
 ## Plongez dans sa vie
 
 Visitez notre section **"Sira"** pour découvrir sa biographie chronologique. Ne lisez pas juste les faits, cherchez les leçons. Demandez-vous toujours : *"Comment réagirait-il à ma place aujourd'hui ?"*
+`
+    },
+    {
+        slug: 'grammaire-vocabulaire-duo-gagnant',
+        title: 'Vocabulaire et Grammaire : Le Duo Gagnant pour comprendre',
+        excerpt: 'Ne cherchez pas à tout apprendre. Concentrez-vous sur la liste des 250 mots essentiels et utilisez la grammaire pour multiplier votre compréhension.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Méthodologie Coranique',
+        content: `
+# Vocabulaire et Grammaire : La Stratégie Intelligente
+
+Beaucoup de francophones pensent que l'arabe est une montagne infranchissable.
+C'est souvent parce qu'ils essaient de grimper tout droit, sans équipement.
+L'équipement, c'est la combinaison de deux choses : **le vocabulaire "socle"** et **la logique grammaticale**.
+
+## 1. Le Savoir Déjà Connu vs Le Savoir à Connaître
+
+Pour vous rassurer, sachez que vous ne partez pas de zéro.
+
+### Ce que vous savez déjà (Le Terrain Conquis)
+Sans vous en rendre compte, votre cerveau a déjà stocké des dizaines de racines coraniques via votre culture islamique :
+*   *Salam* (Paix), *Kitab* (Livre), *Nour* (Lumière), *Din* (Religion), *Dounia* (Monde).
+*   Les Noms d'Allah que vous entendez souvent (*Rahman*, *Rahim*, *Malik*).
+C'est votre base. Elle est solide.
+
+### Ce qu'il faut acquérir (La Liste des 250)
+Il existe une liste de mots qui reviennent constamment mais qu'on ne "devine" pas.
+Ce sont principalement :
+*   **Les Mots-Outils (Harf) :** *Thumma* (Ensuite), *Lakin* (Mais), *Kayfa* (Comment).
+*   **Les Pronoms :** *Hum* (Eux), *Nahnu* (Nous).
+*   **Les Verbes d'Action :** *Qala* (Dire), *Kana* (Être), *Ja'a* (Venir).
+
+Notre section **"Vocabulaire"** regroupe ces quelque 250 termes.
+**L'objectif n'est pas de tout savoir, mais de savoir ce qui est utile.** Maîtriser cette liste, c'est baliser 50% de votre chemin de lecture.
+
+## 2. La Grammaire : Votre Multiplicateur de Force
+
+C'est ici que la magie opère. L'arabe est une langue mathématique.
+Apprendre un mot, c'est en apprendre dix, **SI** vous connaissez la grammaire.
+
+### Exemple : La racine K-T-B (Écrire)
+Si vous apprenez juste le mot "Kitab" (Livre), vous avez 1 mot.
+Mais si vous comprenez la logique des racines :
+*   **KaTaBa :** Il a écrit.
+*   **YaKTuBu :** Il écrit.
+*   **KāTiB :** L'écrivain (celui qui fait l'action).
+*   **MaKTuB :** Ce qui est écrit (le destin).
+*   **MaKTaBa :** L'endroit où on écrit (bibliothèque/bureau).
+
+Avec une seule racine et quelques règles de grammaire (Sarf), vous débloquez une famille entière de sens.
+
+## 3. Notre Conseil Méthodologique
+
+Ne séparez pas les deux.
+1.  **Utilisez notre liste de 250 mots** comme "fondation". C'est le par cœur nécessaire.
+2.  **Lisez le Coran quotidiennement** pour voir ces mots "vivre" dans les phrases.
+3.  **Intéressez-vous à la grammaire** (les temps, les sujets, les pluriels) pour comprendre comment ces briques s'assemblent.
+
+C'est cette alliance entre un vocabulaire ciblé et une grammaire comprise qui vous fera passer de "déchiffreur" à "lecteur".
+`
+    },
+    {
+        slug: 'sira-chronologie-revelation',
+        title: 'Sira : Comprendre la Chronologie de la Révélation',
+        excerpt: 'Mecque vs Médine. La Sira n\'est pas une simple histoire, c\'est la carte géographique du Coran. Apprenez à situer chaque verset dans la vie du Prophète ﷺ.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '12 min',
+        category: 'Méthodologie Coranique',
+        content: `
+# Voyager dans le Temps : Comprendre la Sira
+
+Le Coran n'est pas descendu en une seule fois comme un livre imprimé.
+Il est descendu pluie après pluie, sur 23 années, pour irriguer le cœur du Prophète ﷺ et de sa communauté au gré des événements.
+Pour comprendre le Texte, il faut connaître le Contexte. C'est le rôle de la **Sira** (Biographie).
+
+## 1. Les Deux Ères : La Mecque vs Médine
+
+Vous verrez souvent dans les en-têtes de sourates : *"Makkiya"* (Mecquoise) ou *"Madaniyya"* (Médinoise). Ce n'est pas juste un détail géographique, c'est une ambiance spirituelle totalement différente.
+
+### La Période Mecquoise (13 ans) : La Construction de la Foi
+C'est le début. Les musulmans sont une minorité persécutée, faible et sans État.
+*   **Le style du Coran :** Versets courts, percutants, poétiques.
+*   **Les thèmes :** Le Tawhid (Unicité de Dieu), le Jour du Jugement, l'Enfer et le Paradis, la patience face à l'épreuve.
+*   **Exemples :** Sourates de la fin du Coran (Juz 'Amma), Sourate Yusuf.
+*   **La leçon pour nous :** C'est la nourriture de base du cœur. Quand votre foi baisse, lisez du "Mecquois".
+
+### La Période Médinoise (10 ans) : La Construction de la Société
+Le Prophète ﷺ émigre (Hijra). Il devient chef d'État. Les musulmans ont le pouvoir.
+*   **Le style du Coran :** Versets longs, détaillés, juridiques.
+*   **Les thèmes :** Les lois (Héritage, Mariage, Commerce), la Guerre (Jihad), les relations avec les Gens du Livre, l'Hypocrisie.
+*   **Exemples :** Al-Baqara, Ali 'Imran, An-Nisa.
+*   **La leçon pour nous :** C'est le cadre de notre vie en communauté.
+
+## 2. Naviguer avec la Sira
+
+Quand vous lisez le Coran, essayez toujours de vous poser la question : **"Où sommes-nous ?"**
+
+### Exemple 1 : Sourate Ad-Duha (Le Jour Montant)
+Allah dit : *"Ton Seigneur ne t'a ni abandonné ni détesté."*
+*   **Sans Sira :** C'est une belle promesse générale.
+*   **Avec Sira :** La révélation s'était interrompue pendant 6 mois. Les païens de la Mecque se moquaient du Prophète ﷺ en disant "Son démon l'a quitté". Le Prophète était déprimé, se sentant seul. Quand ces mots descendent, c'est une consolation intime et bouleversante d'un Ami à son ami. Vous ressentez alors l'Amour divin.
+
+### Exemple 2 : Sourate An-Nasr (Le Secours)
+Allah dit : *"Lorsque vient le secours d'Allah et la victoire..."*
+*   **Sans Sira :** Une annonce de victoire.
+*   **Avec Sira :** C'est l'une des dernières sourates. Elle annonce la mort prochaine du Prophète ﷺ (car sa mission est accomplie). Quand les compagnons l'ont entendue, ceux qui avaient la science ont pleuré, comprenant que l'adieu était proche.
+
+## 3. Utiliser notre section Sira
+
+Notre site ne présente pas la Sira comme une simple liste de dates.
+Nous avons tenté de lier les événements majeurs aux révélations.
+*   **Badr :** Le jour du discernement.
+*   **Uhud :** La leçon de l'obéissance et la douleur de la défaite.
+*   **Hudaibiya :** La victoire par la paix et la patience.
+
+Ne lisez pas la vie du Prophète ﷺ comme celle d'un héros antique. Lisez-la comme le "Mode d'Emploi" vivant du Coran.
+Allah a voulu que Sa Parole s'incarne dans un Homme, pour que nous puissions suivre ses pas.
+`
+    },
+    {
+        slug: 'guide-lecture-hadith',
+        title: 'Les Trésors du Hadith : Guide de Lecture pour Débutant',
+        excerpt: 'Bukhari, Muslim, Nawawi... Quelle différence ? Qu\'est-ce qu\'un hadith Sahih ? Un guide complet pour naviguer dans la vaste bibliothèque prophétique de notre site.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '11 min',
+        category: 'Vivre l\'Islam au Quotidien',
+        content: `
+# Les Trésors du Hadith : Guide de Navigation
+
+Le Coran est la Parole d'Allah. Le Hadith est l'explication, la mise en pratique et la sagesse du Messager d'Allah ﷺ.
+Notre site regroupe plusieurs collections. Voici comment ne pas s'y perdre.
+
+## 1. Comprendre la Structure d'un Hadith
+
+Chaque hadith est composé de deux parties :
+*   **Al-Isnad (La Chaîne) :** "Untel a rapporté d'après Untel, d'après Untel..." C'est le système de sécurité de l'Islam. C'est ce qui garantit que la parole n'a pas été inventée.
+*   **Al-Matn (Le Texte) :** C'est le contenu du message ("Les actes ne valent que par les intentions...").
+
+## 2. Que signifient les Grades ? (Sahih, Hasan, Da'if)
+
+Sur notre site (notamment section Al-Kafi ou autres), vous verrez des "Grades".
+*   **Sahih (Authentique) :** 100% fiable. La chaîne de transmission est en or (mémoire parfaite, honnêteté prouvée, continuité). Vous pouvez baser votre foi et votre pratique dessus sans hésitation.
+*   **Hasan (Bon) :** Très fiable, mais un léger défaut de mémoire chez un rapporteur. Il reste valide pour la pratique.
+*   **Da'if (Faible) :** Il y a une coupure dans la chaîne ou un rapporteur à la mémoire faible.
+    *   *Attention :* "Faible" ne veut pas dire forcément "Faux". Ça veut dire "On n'est pas sûr à 100%". On ne l'utilise pas pour établir les lois (Halal/Haram), mais on peut l'utiliser pour les encouragements aux bonnes œuvres (*Fada'il al-A'mal*).
+*   **Mawdu' (Fabriqué) :** C'est un mensonge. Nous filtrons ces hadiths de notre site.
+
+## 3. Par où commencer sur le site ?
+
+### Niveau 1 : Les 40 Hadiths de l'Imam Nawawi
+C'est la base absolue. Ces 42 hadiths résument l'esprit de l'Islam (L'intention, le bon conseil, l'absence de préjudice...).
+*   **Conseil :** Lisez-en un par semaine. Apprenez-le par cœur si possible. C'est le bagage minimum du musulman.
+
+### Niveau 2 : Al-Muwatta (Imam Malik)
+Le plus ancien recueil authentique. Il compile les hadiths et la pratique des gens de Médine. C'est un trésor de jurisprudence et de sagesse.
+
+### Niveau 3 : Les 6 Livres de Référence (Koutoub As-Sittah)
+Notre site vous donne accès aux ouvrages majeurs qui font autorité dans la Sunnah :
+1.  **Sahih Bukhari** (Le plus authentique)
+2.  **Sahih Muslim**
+3.  **Sunan Abu Dawud**
+4.  **Sunan Tirmidhi**
+5.  **Sunan An-Nasa'i**
+6.  **Sunan Ibn Majah**
+
+Ces recueils contiennent des milliers de hadiths couvrant tous les aspects de la vie.
+*   **Conseil :** Utilisez la recherche par mot-clé pour trouver ce que le Prophète ﷺ a dit sur un sujet précis (ex: "Colère", "Voisin", "Prière").
+
+
+## 4. L'Adab (Politesse) avec le Hadith
+
+Quand vous lisez "Le Messager d'Allah ﷺ a dit...", arrêtez-vous.
+Imaginez qu'il est devant vous.
+*   Ne dites pas "Ah, c'est juste une sunnah" (sous-entendu : c'est pas grave).
+*   Dites "J'entends et j'obéis, Ô Messager d'Allah", selon ma capacité.
+
+Le Hadith n'est pas de la culture générale. C'est de la lumière divine passée par le prisme du meilleur des hommes.
+`
+    },
+    {
+        slug: 'science-tafsir-comprendre-allah',
+        title: 'La Science du Tafsir : Comment Allah nous parle ?',
+        excerpt: 'Ne lisez plus le Coran comme un journal. Entrez dans la dimension du Tafsir pour découvrir pourquoi chaque mot est à sa place exacte.',
+        date: '2026-02-03',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '12 min',
+        category: 'Méthodologie Coranique',
+        content: `
+# La Science du Tafsir : Au-delà de la Traduction
+
+Avez-vous déjà lu un verset en vous disant : *"Je comprends les mots en français, mais je ne comprends pas ce qu'Allah veut me dire"* ?
+C'est normal.
+La traduction est un pont fragile. Le Tafsir (l'exégèse) est la terre ferme.
+
+## 1. La Traduction n'est pas le Coran
+
+Le Coran est la parole d'Allah en langue arabe. Toute traduction n'est qu'une *tentative humaine* d'expliquer le sens.
+*   **Le mot arabe est multidimensionnel :** Un mot comme *Tage* peut signifier "déborder", "tyrannie", "dépasser les limites". La traduction ne peut en choisir qu'un.
+*   **Le danger du littéralisme :** Lire *"Tue-les où que tu les trouves"* sans savoir que ce verset a été révélé sur un champ de bataille spécifique, c'est courir au désastre.
+
+C'est là qu'intervient le **Tafsir**. C'est la science qui répond aux questions :
+*   *Qui* parle ?
+*   *À qui* ce verset est-il adressé ?
+*   *Quand* est-il descendu (Asbab an-Nuzul) ?
+*   *Quel* est le contexte juridique et spirituel ?
+
+## 2. Attention au "Tafsir Personnel"
+
+Une maladie moderne consiste à dire : *"Moi, je pense que ce verset veut dire ça..."*
+Le Prophète ﷺ a mis en garde très sévèrement contre cela : *"Celui qui parle sur le Coran sans science, qu'il prépare sa place en Enfer."*
+Pourquoi ? Parce qu'interpréter la parole de Dieu n'est pas un jeu. On ne devine pas la loi divine. On l'étudie.
+
+### Les gardes-fous :
+1.  **Le Coran explique le Coran :** Un verset "flou" est souvent expliqué par un verset "clair" ailleurs.
+2.  **Le Prophète explique le Coran :** Sa vie est l'explication vivante du Livre.
+3.  **Les Compagnons (Sahaba) :** Ils étaient présents lors de la révélation. Ils savent si un verset est général ou spécifique.
+
+## 3. Vos Outils sur ce site (Comment les utiliser)
+
+Nous avons intégré les outils classiques pour vous sécuriser.
+
+### Ibn Kathir (Le Standard)
+C'est le Tafsir de référence par excellence. Ibn Kathir utilise la méthode "Le Coran par le Coran" et "Le Coran par le Hadith".
+*   **Usage :** À consulter quand vous ne comprenez pas le contexte historique d'une histoire.
+
+### Asbab an-Nuzul (Les Circonstances de Révélation)
+Savoir *pourquoi* un verset est descendu change tout.
+*   *Exemple :* Le verset *"Nulle contrainte en religion"* (2:256). Il a été révélé quand des parents musulmans voulaient forcer leurs enfants juifs/chrétiens à se convertir. Allah l'a interdit. Ce contexte prouve la tolérance intrinsèque de l'Islam.
+
+## 4. Une Méthode de Lecture Profonde (Tadabbur)
+
+Pour votre "Plan 40 Jours", ne faites pas de Tafsir savant. Faites du **Tadabbur** (Méditation).
+Le Tafsir cherche l'explication académique. Le Tadabbur cherche l'impact sur le cœur.
+
+**Posez-vous ces 3 questions devant chaque verset :**
+1.  **Qu'est-ce que ce verset m'apprend sur Allah ?** (Sa puissance, Sa miséricorde, Sa subtilité).
+2.  **Où suis-je dans ce verset ?** Suis-je comme ceux qu'Allah loue, ou comme ceux qu'Il blâme ?
+3.  **Quelle action puis-je faire aujourd'hui pour pratiquer ce verset ?**
+
+*Exemple pratique : Sourate Al-Fatiha*
+Quand vous lisez *"Maître du Jour de la Rétribution" (Maliki yawm id-din)*.
+*   *Tafsir :* Allah est le seul Juge ultime, personne ne possédera rien ce jour-là.
+*   *Tadabbur :* Si je dois rendre des comptes un jour, suis-je prêt ? Qui ai-je lésé ? Je dois demander pardon avant ce Jour.
+
+Le Tafsir nourrit l'esprit, le Tadabbur nourrit l'âme. Les deux sont indispensables.
+`
+    },
+    {
+        slug: '99-noms-guide-invocation',
+        title: 'Les 99 Noms : Le Guide Pratique de l\'Invocation (Du\'a)',
+        excerpt: 'Chaque Nom d\'Allah est une clé pour une serrure spécifique de votre vie. Apprenez à utiliser le bon Nom pour ouvrir la bonne porte.',
+        date: '2026-02-04',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '15 min',
+        category: 'Vivre l\'Islam au Quotidien',
+        content: `
+# Les 99 Noms : Bien plus qu'une liste
+
+Souvent, on apprend les "99 Noms" comme une poésie, pour obtenir la récompense promise. C'est bien.
+Mais imaginez avoir une trousse à outils ultra-sofistiquée et ne l'utiliser que pour décorer votre étagère. Quel gâchis !
+Allah dit : *"C'est à Allah qu'appartiennent les Noms les plus beaux. Invoquez-Le par eux."* (7:180).
+
+"Invoquez-Le par eux" signifie : **Utilisez le Nom qui correspond à votre problème.**
+
+## 1. Connaître Dieu avant de Lui demander
+
+On ne demande pas à un inconnu.
+Comment avoir confiance en Allah (Tawakkul) si vous ne savez pas qu'Il est *Al-Wakil* (Le Gardien, Celui à qui on confie ses affaires) ?
+Comment espérer le pardon après une faute grave si vous ignorez qu'Il est *Al-Ghaffar* (Le Grand Pardonneur) et *At-Tawwab* (Celui qui accueille le repentir sans cesse) ?
+
+Votre niveau de foi dépend directement de votre connaissance Ses Noms.
+
+## 2. Le Manuel d'Utilisation Spirituel
+
+Voici comment transformer votre Du'a (invocation) en ciblant le Nom adéquat.
+
+### Cas A : L'Anxiété et la Peur de l'Avenir
+Vous êtes stressé par vos finances, votre santé, l'incertitude.
+*   **Les Noms à utiliser :** *Al-Mu'min* (L'Apaisant/Le Sécurisant), *Al-Muhaymin* (Le Préservateur), *Al-Hafiz* (Le Gardien).
+*   **L'invocation :** "Ô *Mu'min*, fais descendre Ta sécurité (Amn) sur mon cœur agité."
+
+### Cas B : La Pauvreté et le Manque
+Vous cherchez un travail, vous avez des dettes.
+*   **Les Noms à utiliser :** *Ar-Razzaq* (Le Pourvoyeur), *Al-Fattah* (Celui qui ouvre les portes), *Al-Ghani* (Le Riche).
+*   **L'invocation :** "Ô *Fattah*, ouvre-moi les portes de Ta subsistance là où je ne m'y attends pas."
+
+### Cas C : L'Injustice et l'Oppression
+On vous a fait du mal, on vous a calomnié. Ne cherchez pas la vengeance seul.
+*   **Les Noms à utiliser :** *Al-Adl* (Le Juste), *Al-Hakam* (Le Juge), *Al-Jabbar* (Le Contraignant/Celui qui répare).
+*   **L'invocation :** "Ô *Jabbar*, répare mon cœur brisé et rétablis mon droit."
+
+### Cas D : La Confusion et le Doute
+Vous ne savez pas quelle décision prendre.
+*   **Les Noms à utiliser :** *Al-Hadi* (Le Guide), *An-Nour* (La Lumière), *Al-Alim* (L'Omniscient).
+*   **L'invocation :** "Ô *Hadi*, guide-moi vers le choix qui Te satisfait le plus."
+
+## 3. Jamal (Beauté) et Jalal (Majesté)
+
+Les Noms se divisent en deux catégories qui équilibrent le croyant :
+*   **Les Noms de Beauté (Jamal) :** *Ar-Rahman, Al-Wadoud (Le Tout-Aimant), Al-Jamil*. Ils suscitent l'Amour et l'Espoir (Raja).
+*   **Les Noms de Majesté (Jalal) :** *Al-Aziz (Le Puissant), Al-Qahhar (Le Dominateur), Al-Muntaqim (Le Vengeur)*. Ils suscitent la Crainte révérencielle (Khawf).
+
+Le croyant vole avec ces deux ailes. Trop de Beauté mène au laxisme ("Dieu pardonne tout, je peux pécher"). Trop de Majesté mène au désespoir ("Je suis damné"). L'équilibre est la clé.
+
+## 4. Le Secret du "Plus Grand Nom" (Ism Allah Al-A'zam)
+
+Le Prophète ﷺ a dit qu'Allah a un Nom caché, que s'Il est invoqué par ce Nom, Il exauce.
+Les savants ont divergé, mais beaucoup s'accordent à dire qu'il se trouve dans les versets : *"Allah ! Point de divinité à part Lui, le Vivant, Celui qui subsiste par Lui-même (Al-Hayy, Al-Qayyum)"*.
+Combinez ces Noms dans vos invocations les plus désespérées : *"Ya Hayyu, Ya Qayyum ! Bi Rahmatika Astaghith" (Ô Vivant, Ô Subsistant ! J'implore secours par Ta miséricorde).*
+
+Commencez ce soir. Prenez un Nom. Étudiez-le. Et appelez votre Seigneur avec.
+`
+    },
+    {
+        slug: 'plan-40-jours-transformation',
+        title: 'Le Plan 40 Jours : Architecture d\'une Transformation',
+        excerpt: 'Pourquoi 40 jours ? Ce n\'est pas un chiffre magique, c\'est un cycle biologique et spirituel prouvé. Décryptage de votre voyage intérieur, semaine par semaine.',
+        date: '2026-02-05',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '18 min',
+        category: 'Le Programme 40 Jours',
+        content: `
+# Pourquoi 40 Jours ? La Science derrière le Programme
+
+Vous avez peut-être remarqué que le chiffre 40 revient partout dans la tradition :
+*   Moussa (Moïse) a jeûné 40 jours avant de recevoir la Torah.
+*   La création de l'être humain dans l'utérus passe par des cycles de 40 jours.
+*   On dit que "Celui qui est fidèle à Allah pendant 40 jours, les sources de la sagesse jailliront de son cœur."
+
+Ce n'est pas un hasard. **40 jours, c'est le temps nécessaire pour briser une habitude et en construire une nouvelle.** C'est le cycle de renouvellement complet.
+
+Ce programme n'est pas une course. C'est une reprogrammation.
+Voici ce qui va se passer en vous, semaine par semaine.
+
+## Phase 1 : La "Désintoxication" (Jours 1-10)
+**Le mot d'ordre : LUTTE (Jihad an-Nafs)**
+
+Les premiers jours sont les plus durs. C'est la phase de sevrage.
+Votre "Nafs" (égo) est habitué à la dopamine facile (réseaux sociaux, musique, perte de temps). Quand vous essayez de le forcer à lire le Coran et à méditer, il se rebelle.
+*   **Symptômes :** Envie de dormir dès que vous ouvrez le Livre, pensées parasites, impression que le temps est interminable.
+*   **Votre stratégie :** Forcez. Ne cherchez pas le plaisir maintenant. Cherchez juste à *faire*. C'est comme aller à la salle de sport après 10 ans d'arrêt. Ça fait mal, mais c'est bon signe.
+*   **Le verset clé :** *"Quant à ceux qui luttent pour Nous, Nous les guiderons certes sur Nos sentiers"* (29:69).
+
+## Phase 2 : La Discipline (Jours 11-20)
+**Le mot d'ordre : RÉGULARITÉ (Istiqama)**
+
+Le corps et l'esprit commencent à accepter la nouvelle routine. La douleur diminue, mais l'ennui peut s'installer.
+C'est le moment critique où beaucoup abandonnent. Le "feu" du début est éteint, il ne reste que la discipline.
+*   **Transformation :** Vous commencez à organiser votre journée *autour* de votre lecture, et non l'inverse.
+*   **Le signe de progrès :** Si vous ratez votre séance, vous ressentez un "manque". Pas encore un plaisir, mais un vide.
+
+## Phase 3 : L'Ouverture (Jours 21-30)
+**Le mot d'ordre : COMPRÉHENSION (Fahm)**
+
+C'est souvent ici que le miracle opère. Votre cerveau s'est "arabcisé" un peu. Les concepts s'éclairent.
+Vous ne lisez plus seulement des lettres, vous commencez à voir les liens.
+*   **L'expérience :** Vous lisez un verset et il résonne exactement avec ce qui vous est arrivé dans la journée. Le Coran commence à vous "parler".
+*   **Conseil :** C'est le moment d'augmenter le *Tadabbur* (méditation). Prenez plus de temps sur chaque page.
+
+## Phase 4 : La Transformation / L'Ancrage (Jours 31-40)
+**Le mot d'ordre : DOUCEUR (Halawa)**
+
+Moussa a complété les 30 jours par 10 jours supplémentaires pour "parfaire" son rendez-vous.
+Ces 10 derniers jours sont ceux de la finition. La lecture devient fluide, apaisante. Vous finissez votre Khatma.
+*   **Le résultat :** Vous regardez en arrière et vous réalisez le chemin parcouru. Vous avez lu tout le Livre d'Allah ! Une immense fierté spirituelle (sans orgueil) vous envahit.
+*   **Attention :** Shaytan va tout faire pour "gâcher" la fin. Tenez bon jusqu'au dernier verset de Sourate An-Nas.
+
+## Et le Jour 41 ?
+
+C'est le jour le plus important de votre vie.
+Le Jour 41 est le premier jour du reste de votre vie.
+Vous n'êtes plus la même personne. Vous avez prouvé à vous-même que vous en étiez capable.
+
+**Ne fermez pas le Livre.**
+Même si vous réduisez la dose, ne coupez jamais le lien.
+Le prophète ﷺ a dit : *"Les actions les plus aimées d'Allah sont les plus constantes, même si elles sont petites."*
+
+Bienvenue dans votre nouvelle vie.
 `
     },
 ];
