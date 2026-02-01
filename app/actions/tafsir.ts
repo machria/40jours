@@ -79,58 +79,63 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
             return [];
         }
 
-        const maxAyahStr = availableAyahs[availableAyahs.length - 1]; // e.g. 8
-        // We only generate entries up to the last available Tafsir file. 
-        // We don't know the real end of Surah here, but going beyond the last tafsir file 
-        // would just repeat the last tafsir (if we kept the logic) or be empty. 
-        // Safest is to stop at the last file's index.
-        // Actually, normally the last tafsir file covers the rest. 
-        // E.g. 95_8 covers 8. 
-        // If we stop at 8, we are fine.
+        // We scan at least until the last start-ayah. 
+        // We'll extend if the last file has an ayah_end greater than its start.
+        // But for the loop limit, we can start with maxAyahStr and extend dynamically if needed, 
+        // OR just loop until a safe upper bound (e.g. 300) since we break when no files left?
+        // Actually, "availableAyahs" gives us the start points.
+        // We can just iterate through availableAyahs and fill the gaps.
 
         // Cache content to avoid re-reading files
-        const contentCache = new Map<number, string>();
+        const contentCache = new Map<number, { tafsir: string, ayah_end?: number }>();
 
         // Helper to get content
         const getContent = async (a: number) => {
             if (contentCache.has(a)) return contentCache.get(a)!;
             const p = path.join(DATA_DIR, `${surah}_${a}.json`);
-            const txt = await fs.readFile(p, 'utf-8');
-            const json = JSON.parse(txt);
-            contentCache.set(a, json.tafsir);
-            return json.tafsir;
+            try {
+                const txt = await fs.readFile(p, 'utf-8');
+                const json = JSON.parse(txt);
+                const data = { tafsir: json.tafsir, ayah_end: json.ayah_end };
+                contentCache.set(a, data);
+                return data;
+            } catch (e) {
+                return null;
+            }
         }
 
-        let currentTafsirAyahIndex = 0;
+        // Better approach: Iterate over available files, determining the range for each.
+        for (let i = 0; i < availableAyahs.length; i++) {
+            const startAyah = availableAyahs[i];
+            const nextStartAyah = availableAyahs[i + 1] || 9999; // 9999 effectively means "end of surah known files"
 
-        // Loop from 1 to the last available ayah file
-        for (let i = 1; i <= maxAyahStr; i++) {
-            // Do we have a new file for this ayah?
-            // availableAyahs is sorted e.g. [1, 4, 8]
-            // i=1: match 1. Use 1.
-            // i=2: no match. Use 1.
-            // i=3: no match. Use 1.
-            // i=4: match 4. Use 4.
+            const content = await getContent(startAyah);
+            if (!content) continue;
 
-            // Check if 'i' is in availableAyahs
-            // Since it's sorted, we can check if i >= availableAyahs[nextIndex]
+            const { tafsir, ayah_end } = content;
 
-            // Actually, we want: "Find largest number in availableAyahs that is <= i"
-            // Since we iterate i upward, we can just track current pointer.
+            // Determine the range this file *should* cover.
+            // Priority 1: Explicit 'ayah_end' from JSON.
+            // Priority 2: Until the next file starts (implicit grouping).
 
-            if (currentTafsirAyahIndex + 1 < availableAyahs.length) {
-                if (i >= availableAyahs[currentTafsirAyahIndex + 1]) {
-                    currentTafsirAyahIndex++;
-                }
+            let endAyah: number;
+
+            if (ayah_end) {
+                endAyah = ayah_end;
+            } else {
+                // Determine implicit end.
+                // If next file is at 5, and we are at 1. Implicitly covers 1,2,3,4.
+                endAyah = nextStartAyah - 1;
             }
 
-            const fileAyah = availableAyahs[currentTafsirAyahIndex];
+            // Safety: Don't overlap into the next file's territory if ayah_end is wildly wrong (unlikely but safe).
+            if (endAyah >= nextStartAyah) {
+                endAyah = nextStartAyah - 1;
+            }
 
-            // If i < fileAyah (e.g. i=1, first file is 5), then we have no tafsir yet?
-            // But usually 1 starts at 1.
-            if (i >= fileAyah) {
-                const tafsir = await getContent(fileAyah);
-                entries.push({ surah, ayah: i, tafsir });
+            // Loop through the range for THIS file
+            for (let a = startAyah; a <= endAyah; a++) {
+                entries.push({ surah, ayah: a, tafsir });
             }
         }
 
