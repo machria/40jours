@@ -281,7 +281,7 @@
         "id": 23,
         "arabic": " يَقُولُ: ((وَأَنَا أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَنَّ مُحَمَّداً عَبْدُهُ وَرَسُولُهُ، رَضِيتُ بِاللَّهِ رَبَّاً، وَبِمُحَمَّدٍ رَسُولاً، وَبِالْإِسْلاَمِ دِينَاً)) ((يَقُولُ ذَلِكَ عَقِبَ تَشَهُّدِ الْمُؤَذِّنِ)).",
         "french": "Immédiatement après la déclaration de foi invoquée par le mu-aththin, on dit : « Et moi aussi, je témoigne que nul n'a le droit d'être adoré sauf Allah, seul, sans associé, et que Mahomet est Son salve et Son Messager.  Je suis satisfait d’Allah comme Seigneur, de Muhammad comme Messager et de l’Islam comme religion.’",
-        "source": "Immediately following the declaration of faith called by the mu-aththin, one says:Wa-ana ashhadu an la ilaha illal-lahu wahdahu la shareeka lah, wa-anna Muhammadan AAabduhu warasooluh, radeetu billahi rabban wabimuhammadin rasoolan wabil-islami deena.",
+        "source": "Wa-ana ashhadu an la ilaha illal-lahu wahdahu la shareeka lah, wa-anna Muhammadan AAabduhu warasooluh, radeetu billahi rabban wabimuhammadin rasoolan wabil-islami deena.",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/23.mp3"
       },
@@ -375,7 +375,7 @@
         "id": 33,
         "arabic": "((سُبْحانَ رَبِّيَ الْعَظِيمِ)). ثلاث مرَّاتٍ.",
         "french": "(Comme mon Seigneur est parfait, Le Suprême.’(trois fois))",
-        "source": "(Subhana rabbiyal-AAatheem (three times))",
+        "source": "(Subhana rabbiyal-AAatheem (3x))",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/33.mp3"
       },
@@ -453,7 +453,7 @@
         "id": 41,
         "arabic": "((سُبْحَانَ رَبِّيَ الأَعْلَى)) ثلاث مرَّاتٍ.",
         "french": "(Comme mon Seigneur, le Très-Haut est parfait.’(trois fois))",
-        "source": "(Subhana rabbiyal-aAAla. (three times)))",
+        "source": "(Subhana rabbiyal-aAAla. (3x)))",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/41.mp3"
       },
@@ -695,7 +695,7 @@
         "id": 66,
         "arabic": "((أَسْتَغْفِرُ اللَّهَ (ثَلاَثَاً) اللَّهُمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلاَمُ، تَبَارَكْتَ يَا ذَا الْجَلاَلِ وَالْإِكْرَامِ)).",
         "french": "(Je demande pardon à Allah. (trois fois) (Ô Allah, Tu es As-Salam et de Toi vient toute paix, tu es béni, ô Possesseur de la majesté et de l'honneur.) (AS-Salam : Celui qui est libre de tous défauts et déficiences.))",
-        "source": "(Astaghfirul-lah (three times) (Allahumma antas-salam waminkas-salam, tabarakta ya thal-jalali wal-ikram.))",
+        "source": "(Astaghfirul-lah (3x) (Allahumma antas-salam waminkas-salam, tabarakta ya thal-jalali wal-ikram.))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/66.mp3"
       },
@@ -719,7 +719,7 @@
         "id": 69,
         "arabic": "((سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَاللَّهُ أَكْبَرُ (ثلاثاً وثلاثين) لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)).",
         "french": "(Comme Allah est parfait, toute louange est à Allah, et Allah est le plus grand. (trente-trois fois) (Nul n'a le droit d'être adoré sauf Allah, seul, sans associé, à Lui appartiennent toute souveraineté et louange et Il est sur toutes choses tout-puissant.))",
-        "source": "(Subhanal-lah walhamdu lillah, wallahu akbar (thirty-three times). (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.))",
+        "source": "(Subhanal-lah walhamdu lillah, wallahu akbar (33x). (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.))",
         "repeat": 33,
         "audio": "http://www.hisnmuslim.com/audio/ar/69.mp3"
       },
@@ -751,7 +751,7 @@
         "id": 73,
         "arabic": "((اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْماً نافِعاً، وَرِزْقاً طَيِّباً، وَعَمَلاً مُتَقَبَّلاً)) بَعْدَ السّلامِ مِنْ صَلاَةِ الفَجْرِ.",
         "french": "(Ô Allah, je Te demande une connaissance bénéfique, une subsistance bonne et des actions acceptables.) (À dire après avoir fait le salam pour la prière du fajr)",
-        "source": "(Allahumma innee as-aluka AAilman nafiAAan, warizqan tayyiban, waAAamalan mutaqabbalan.(after salam from fajr prayer))",
+        "source": "(Allahumma innee as-aluka AAilman nafiAAan, warizqan tayyiban, waAAamalan mutaqabbalan.",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/73.mp3"
       }
@@ -766,7 +766,7 @@
         "id": 74,
         "arabic": "قَالَ جَابرُ بْنُ عَبْدِ اللَّهِ رَضِيَ اللَّهُ عَنْهُمَا: كَانَ رسُولُ اللَّهِ صلى الله عليه وسلم يُعَلِّمُنَا الْاسْتِخَارَةَ فِي الْأُمُورِ كُلِّهَا كَمَا يُعَلِّمُنَا السُّورَةَ مِنَ الْقُرْآنِ، يَقُولُ: ((إِذَا هَمَّ أَحَدُكُمْ بِالْأَمْرِ فَلْيَرْكَعْ رَكْعَتَيْنِ مِنْ غَيْرِ الْفَرِيضَةِ، ثُمَّ لْيَقُلْ: اللَّهُمَّ إِنِّي أَسْتَخِيرُكَ بِعِلْمِكَ، وَأَسْتَقْدِرُكَ بِقُدْرَتِكَ، وَأَسْأَلُكَ مِنْ فَضْلِكَ العَظِيمِ؛ فَإِنَّكَ تَقْدِرُ وَلاَ أَقْدِرُ، وَتَعْلَمُ وَلاَ أَعْلَمُ، وَأَنْتَ عَلاَّمُ الغُيُوبِ، اللَّهُمَّ إِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الأمْرَ - وَيُسَمِّي حَاجَتَهُ - خَيْرٌ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي – أَوْ قَالَ: عَاجِلِهِ وَآجِلِهِ - فَاقْدُرْهُ لِي وَيَسِّرْهُ لِي ثمَّ بَارِكْ لِي فِيهِ، وَإِنْ كُنْتَ تَعْلَمُ أَنَّ هَذَا الْأَمْرَ شَرٌّ لِي فِي دِينِي وَمَعَاشِي وَعَاقِبَةِ أَمْرِي – أَوْ قَالَ: عَاجِلِهِ وَآجِلِهِ – فَاصْرِفْهُ عَنِّي وَاصْرِفْنِي عَنْهُ وَاقْدُرْ لِيَ الْخَيْرَ حَيْثُ كَانَ، ثُمَّ أَرْضِنِي بِهِ)).وَمَا نَدِمَ مَنِ اسْتَخَارَ الْخَالِقَ، وَشَاوَرَ الْمَخْلُوقِينَ الْمُؤْمِنِينَ وَتَثَبَّتَ فِي أَمْرِهِ، فَقَدْ قَالَ اللَّه تعالى: ﴿وَشاوِرْهُمْ فِي الْأَمْرِ فَإِذَا عَزَمْتَ فَتَوَكَّلْ عَلَى اللَّهِ﴾ .",
         "french": "(Sous l'autorité de Jabir Ibn AAabdullah, il a dit : « Le Prophète nous demanderait de prier pour nous guider dans toutes nos préoccupations, tout comme il nous enseignerait un chapitre du Coran. Il dirait : « Si l'un d'entre vous a l'intention d'entreprendre une affaire, qu'il prie deux unités surérogatoires (deux rakAAah nafilah) de prière et après quoi il devra invoquer : « Ô Allah, je cherche Ton conseil par Ta connaissance et par Ta puissance, je cherche la force et je demande Toi de Ton immense faveur, car en vérité Tu peux alors que je ne le suis pas et en vérité Tu le sais alors que je ne le fais pas et Tu es le Connaisseur de l'invisible. Ô Allah, si Tu sais que cette affaire - et ici il mentionne son besoin - d'être bonne pour moi par rapport à ma religion, ma vie et ma fin, alors décrète et facilite-la pour moi, et bénis-moi, et si Tu sais que cette affaire est mauvaise pour moi pour ma religion, ma vie et sa fin, alors éloigne-la de moi et éloigne-moi d'elle. et ordonne pour moi ce qui est bon partout où il se trouve et fais-moi en être satisfait. (Celui qui cherche la direction de son Créateur et consulte ses frères croyants et reste ensuite ferme dans sa résolution ne regrette pas, car Allah a dit :… et consulte-les dans cette affaire. Puis, quand tu as pris une décision, place ta confiance en Allah…)",
-        "source": "(On the authority of Jabir Ibn AAabdullah , he said: ’The Prophet  would instruct us to pray for guidance in all of our concerns, just as he would teach us a chapter from the Quran.  He  would say ’ If any of you intends to undertake a matter then let him pray two supererogatory units (two rakAAah nafilah) of prayer and after which he should supplicate:Allahumma innee astakheeruka biAAilmik, wa-astaqdiruka biqudratik, wa-as-aluka min fadlikal-AAatheem, fa-innaka taqdiru wala aqdir, wataAAlamu wala aAAlam ,wa-anta AAallamul ghuyoob, allahumma in kunta taAAlamu anna hathal-amr (say your need) khayrun lee fee deenee wamaAAashee waAAaqibati amree faqdurhu lee, wayassirhu lee, thumma barik lee feeh, wa-in kunta taAAlamu anna hathal-amr sharrun lee fee deenee wamaAAashee waAAaqibati amree fasrifhu AAannee wasrifnee AAanh, waqdur liyal-khayra haythu kan, thumma ardinee bih.)(One who seeks guidance from his Creator and consults his fellow believers and then remains firm in his resolve does not regret, for Allah has said:washawirhum fee al-amri fa-itha AAazamta fatawakkal AAala Allah)(chapter 3 verse 159)",
+        "source": "(Allahumma innee astakheeruka biAAilmik, wa-astaqdiruka biqudratik, wa-as-aluka min fadlikal-AAatheem, fa-innaka taqdiru wala aqdir, wataAAlamu wala aAAlam ,wa-anta AAallamul ghuyoob, allahumma in kunta taAAlamu anna hathal-amr (say your need) khayrun lee fee deenee wamaAAashee waAAaqibati amree faqdurhu lee, wayassirhu lee, thumma barik lee feeh, wa-in kunta taAAlamu anna hathal-amr sharrun lee fee deenee wamaAAashee waAAaqibati amree fasrifhu AAannee wasrifnee AAanh, waqdur liyal-khayra haythu kan, thumma ardinee bih.) (washawirhum fee al-amri fa-itha AAazamta fatawakkal AAala Allah)(chapter 3 verse 159)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/74.mp3"
       }
@@ -781,7 +781,7 @@
         "id": 75,
         "arabic": "أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ ﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالْأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾.",
         "french": "Allah - il n'y a de divinité que Lui, le Vivant, Celui qui soutient [toute] l'existence. Ni la somnolence ne l’envahit, ni le sommeil. A Lui appartient tout ce qui est dans les cieux et tout ce qui est sur la terre. Qui peut intercéder auprès de Lui sans sa permission ? Il sait ce qui est [actuellement] avant eux et ce qui sera après eux, et ils n'englobent rien de sa connaissance, sauf ce qu'il veut. Son Kursi s'étend sur les cieux et la terre, et leur préservation ne le fatigue pas. Et Il est le Très-Haut, le Très Grand.",
-        "source": "Recite Ayat-Al-Kursiy (Al-Baqarah :255)",
+        "source": "Ayat-Al-Kursiy (Al-Baqarah :255)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/75.mp3"
       },
@@ -789,7 +789,7 @@
         "id": 76,
         "arabic": "(بسم الله الرحمن الرحيم ﴿قُلْ هُوَ اللَّهُ أَحَدٌ* اللَّهُ الصَّمَدُ* لَمْ يَلِدْ وَلَمْ يُولَدْ* وَلَمْ يَكُن لَّهُ كُفُواً أَحَدٌ﴾.) (بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ* مِن شَرِّ مَا خَلَقَ* وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ* وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ* وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ﴾.) (بسم الله الرحمن الرحيم ﴿قُلْ أَعُوذُ بِرَبِّ النَّاسِ* مَلِكِ النَّاسِ* إِلَهِ النَّاسِ* مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ* الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ* مِنَ الْجِنَّةِ وَ النَّاسِ﴾)",
         "french": "([Sourate al-Ikhlaas (112)]( 1 ) Dis : Il est Allah, [qui est] Un, ( 2 ) Allah, le Refuge éternel. ( 3 ) Il n'engendre ni n'est né, ( 4 ) Il n'y a pas non plus d'équivalent.)([Sourate al-Falaq (113)] ( 1 ) Dis : Je cherche refuge auprès du Seigneur de l'aube ( 2 ) Contre le mal de ce qui Il a créé (3) Et contre le mal des ténèbres quand elles s'installent (4) Et contre le mal des souffleurs dans les nœuds (5) Et contre le mal de l'envieux quand il envie. )([Sourate an-Naas (114)])( 1) Dis : Je cherche refuge auprès du Seigneur de l'humanité, (2) Le Souverain de l'humanité. (3) Le Dieu de l'humanité, (4) Contre le mal des retraités. murmureur -( 5 ) Qui murmure [le mal] dans la poitrine des hommes - ( 6 ) Parmi les djinns et les hommes.",
-        "source": "Then recite [Soorah al-Ikhlaas (112)], [Soorah al-Falaq (113)] and [Soorah an-Naas (114)]",
+        "source": "[Soorah al-Ikhlaas (112)], [Soorah al-Falaq (113)] and [Soorah an-Naas (114)]",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/76.mp3"
       },
@@ -837,7 +837,7 @@
         "id": 82,
         "arabic": "((اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ. اللَّهُمَّ  إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ، وَالفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ القَبْرِ، لاَ إِلَهَ إِلاَّ أَنْتَ)) (ثلاثَ مرَّاتٍ).",
         "french": "(Ô Allah, accorde à mon corps la santé, Ô Allah, accorde à mon ouïe, Ô Allah, accorde à ma vue la santé. Nul n'a le droit d'être adoré sauf Toi.)(trois fois) (Ô Allah, je me réfugie auprès de Toi contre l'incrédulité et la pauvreté, et je me réfugie auprès de Toi contre le châtiment de la tombe. Nul n'a le droit d'être adoré sauf Toi. (trois fois))",
-        "source": "(Allahumma AAafinee fee badanee, allahumma AAafinee fee samAAee, allahumma AAafinee fee basaree, la ilaha illa ant.(three times).)(Allahumma innee aAAoothu bika minal-kufr, walfaqr, wa-aAAoothu bika min AAathabil-qabr, la ilaha illa ant (three times).)",
+        "source": "(Allahumma AAafinee fee badanee, allahumma AAafinee fee samAAee, allahumma AAafinee fee basaree, la ilaha illa ant.(3x).)(Allahumma innee aAAoothu bika minal-kufr, walfaqr, wa-aAAoothu bika min AAathabil-qabr, la ilaha illa ant (three times).)",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/82.mp3"
       },
@@ -845,7 +845,7 @@
         "id": 83,
         "arabic": "((حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيهِ تَوَكَّلتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ)) (سَبْعَ مَرّاتٍ).",
         "french": "Allah me suffit, nul n'a le droit d'être adoré sauf Lui, c'est sur Lui que je m'appuie et Il est le Seigneur du trône exalté.' (Récitez sept fois en arabe.)",
-        "source": "(Hasbiyal-lahu la ilaha illa huwa, AAalayhi tawakkalt, wahuwa rabbul-AAarshil-AAatheem (Recite seven times in Arabic.)",
+        "source": "(Hasbiyal-lahu la ilaha illa huwa, AAalayhi tawakkalt, wahuwa rabbul-AAarshil-AAatheem (7x)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/83.mp3"
       },
@@ -877,7 +877,7 @@
         "id": 87,
         "arabic": "((رَضِيتُ بِاللَّهِ رَبَّاً، وَبِالْإِسْلاَمِ دِيناً، وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيّاً)) (ثلاثَ مرَّاتٍ).",
         "french": "(Je suis satisfait d’Allah comme Seigneur, de l’Islam comme religion et de Muhammad comme Prophète.’(trois fois))",
-        "source": "(Radeetu billahi rabban wabil-islami deenan wabiMuhammadin  nabiyya. (three times))",
+        "source": "(Radeetu billahi rabban wabil-islami deenan wabiMuhammadin  nabiyya. (3x))",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/87.mp3"
       },
@@ -909,7 +909,7 @@
         "id": 91,
         "arabic": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ)) (مائة مرَّةٍ).",
         "french": "(Comme Allah est parfait et je Le loue.)(cent fois)",
-        "source": "(Subhanal-lahi wabihamdih.)one hundred times)",
+        "source": "(Subhanal-lahi wabihamdih.)(100x)",
         "repeat": 100,
         "audio": "http://www.hisnmuslim.com/audio/ar/91.mp3"
       },
@@ -925,7 +925,7 @@
         "id": 93,
         "arabic": "((لاَ إِلَهَ إِلاَّ اللَّهُ، وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)) (مائةَ مرَّةٍ إذا أصبحَ).",
         "french": "(Nul n'a le droit d'être adoré sauf Allah, seul, sans associé, à Lui appartiennent toute la souveraineté et la louange, et Il est sur toutes choses tout-puissant.)((cent fois chaque jour))",
-        "source": "(La ilaha illal-lah, wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer. (one hundred times every day))",
+        "source": "(La ilaha illal-lah, wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer. (100x))",
         "repeat": 100,
         "audio": "http://www.hisnmuslim.com/audio/ar/93.mp3"
       },
@@ -933,7 +933,7 @@
         "id": 94,
         "arabic": "((سُبْحَانَ اللَّهِ وَبِحَمْدِهِ: عَدَدَ خَلْقِهِ، وَرِضَا نَفْسِهِ، وَزِنَةَ عَرْشِهِ، وَمِدَادَ كَلِمَاتِهِ)) (ثلاثَ مرَّاتٍ إذا أصبحَ).",
         "french": "(Comme Allah est parfait et je Le loue par le nombre de Sa création et Son plaisir, et par le poids de Son trône et l'encre de Ses paroles.)(trois fois)",
-        "source": "(Subhanal-lahi wabihamdih, AAadada khalqihi warida nafsih, wazinata AAarshih, wamidada kalimatih.)(three times)",
+        "source": "(Subhanal-lahi wabihamdih, AAadada khalqihi warida nafsih, wazinata AAarshih, wamidada kalimatih.)(3x)",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/94.mp3"
       },
@@ -949,7 +949,7 @@
         "id": 96,
         "arabic": "((أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ)) (مِائَةَ مَرَّةٍ فِي الْيَوْمِ).",
         "french": "« Je demande le pardon d’Allah et je me tourne vers Lui avec repentance. » [cent fois par jour]",
-        "source": "Astaghfirullaaha wa 'atoobu 'ilayhi[one hundred times a day]",
+        "source": "Astaghfirullaaha wa 'atoobu 'ilayhi (100x)",
         "repeat": 100,
         "audio": "http://www.hisnmuslim.com/audio/ar/96.mp3"
       },
@@ -957,7 +957,7 @@
         "id": 97,
         "arabic": "((أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ)) (ثلاثَ مرَّاتٍ إذا أمسى).",
         "french": "(Je me réfugie dans les paroles parfaites d’Allah contre le mal qu’Il ​​a créé.)(trois fois le soir)",
-        "source": "(aAAoothu bikalimatil-lahit-tammati min sharri ma khalaq.) (three times in the evening)",
+        "source": "(aAAoothu bikalimatil-lahit-tammati min sharri ma khalaq.) (3x)",
         "repeat": 3,
         "audio": "http://www.hisnmuslim.com/audio/ar/97.mp3"
       },
@@ -965,7 +965,7 @@
         "id": 98,
         "arabic": "((اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبَيِّنَا مُحَمَّدٍ)) (عشرَ مرَّاتٍ).",
         "french": "«Ô Allah, envoie des prières et la paix sur notre Prophète Muhammad.» [dix fois]",
-        "source": "Allaahumma salli wa sallim 'alaa Nabiyyinaa Muhammadin[ten times]",
+        "source": "Allaahumma salli wa sallim 'alaa Nabiyyinaa Muhammadin(10x)",
         "repeat": 10,
         "audio": "http://www.hisnmuslim.com/audio/ar/98.mp3"
       }
@@ -988,7 +988,7 @@
         "id": 100,
         "arabic": "﴿اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْـــــــــــدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ﴾.",
         "french": "Allah - il n'y a de divinité que Lui, le Vivant, Celui qui soutient [toute] l'existence. Ni la somnolence ne l’envahit, ni le sommeil. A Lui appartient tout ce qui est dans les cieux et tout ce qui est sur la terre. Qui peut intercéder auprès de Lui sans sa permission ? Il sait ce qui est [actuellement] avant eux et ce qui sera après eux, et ils n'englobent rien de sa connaissance, sauf ce qu'il veut. Son Kursi s'étend sur les cieux et la terre, et leur préservation ne le fatigue pas. Et Il est le Très-Haut, le Très Grand.",
-        "source": "Recite Ayat-Al-Kursiy (Al-Baqarah :255)",
+        "source": "(Al-Baqarah :255)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/100.mp3"
       },
@@ -996,7 +996,7 @@
         "id": 101,
         "arabic": "﴿آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلآئِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لاَ نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُواْ سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ* لاَ يُكَلِّفُ اللَّهُ نَفْساً إِلاَّ وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْراً كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلاَ تُحَمِّلْنَا مَا لاَ طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَآ أَنتَ مَوْلاَنَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ﴾.",
         "french": "(285) Le Messager a cru à ce qui lui a été révélé par son Seigneur, ainsi que les croyants. Tous ont cru en Allah et en Ses anges et en Ses livres et en Ses messagers, [disant] : Nous ne faisons aucune distinction entre aucun de Ses messagers. Et ils disent : Nous entendons et nous obéissons. [Nous recherchons] Ton pardon, notre Seigneur, et vers Toi est la destination [finale]. (286) Allah ne charge une âme que [de ce qui est dans] sa capacité. Il aura [la conséquence de] ce [bien] qu'il a gagné, et il supportera [la conséquence de] ce [mal] qu'il a gagné. Notre Seigneur, ne nous blâme pas si nous avons oublié ou commis une erreur. Notre Seigneur, et ne nous impose pas un fardeau comme celui que Tu as imposé à ceux qui nous ont précédés. Notre Seigneur, et ne nous charge pas de ce que nous ne sommes pas capables de supporter. Et pardonne-nous ; et pardonne-nous ; et aie pitié de nous. Tu es notre protecteur, alors donne-nous la victoire sur les gens mécréants.",
-        "source": "Recite last two verses of Soorah (Al-Baqarah :285-286)",
+        "source": "(Al-Baqarah :285-286)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/101.mp3"
       },
@@ -1035,8 +1035,8 @@
       {
         "id": 106,
         "arabic": "((سُبْحَانَ اللَّهِ (ثلاثاً وثلاثين) وَالْحَمْدُ لِلَّهِ (ثلاثاً وثلاثين) وَاللَّهُ أَكْبَرُ (أربعاً وثلاثينَ))).",
-        "french": "(Comme Allah est parfait. (trente-trois fois) Toute louange est à Allah. (trente-trois fois) Allah est le plus grand. (trente-quatre fois))",
-        "source": "(Subhanal-lah. (thirty-three times) Alhamdu lillah. (thirty-three times) Allahu akbar. (thirty-four times))",
+        "french": "(Comme Allah est parfait. (33x) Toute louange est à Allah. (33x) Allah est le plus grand. (34x))",
+        "source": "(Subhanal-lah. (33x) Alhamdu lillah. (33x) Allahu akbar. (34x))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/106.mp3"
       },
@@ -1173,9 +1173,9 @@
     "hadiths": [
       {
         "id": 119,
-        "arabic": "((سُبْحَانَ المَلِكِ القُدُّوسِ)) ثلاثَ مرَّاتٍ والثَّالِثَةُ يَجْهَرُ بها ويَمُدُّ بها صَوتَهُ يقولُ: [رَبِّ الْمَلاَئِكَةِ وَالرُّوحِ])).",
-        "french": "(Comme le Roi, Le Saint est parfait. (trois fois) la troisième fois, il élevait la voix, l'allongeait et ajoutait : (Seigneur des angles et du Rooh (c'est-à-dire Jibra-anguille).))",
-        "source": "(Subhanal-malikil-quddoos (trois fois). À la troisième fois, il élevait la voix, l'allongeait et ajoutait : (Rabbil-mala-ikati warrooh.))",
+        "arabic": "((سُبْحَانَ المَلِكِ القُدُّوسِ)) ثلاثَ مرَّاتٍ والثَّالِثَةُ يَجْهَرُ بها ويَمُدُّ بها صَوتَهُ يقولُ: [رَبِّ الْمَلاَئِكَةِ وَالرُّوحِ))).",
+        "french": "(Comme le Roi, Le Saint est parfait. (3x) la troisième fois, il élevait la voix, l'allongeait et ajoutait : (Seigneur des angles et du Rooh (c'est-à-dire Jibra-anguille).))",
+        "source": "(Subhanal-malikil-quddoos (3x). (Rabbil-mala-ikati warrooh.))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/119.mp3"
       }
@@ -1283,7 +1283,7 @@
         "id": 129,
         "arabic": "((اللَّهُمَّ ربَّ السَّمَوَاتِ السَّبْعِ، وَرَبَّ الْعَرْشِ الْعَظِيمِ، كُنْ لِي جَاراً مِنْ فُلاَنِ بْنِ فُلاَنٍ، وَأَحْزَابِهِ مِنْ خَلاَئِقِكَ، أَنْ يَفْرُطَ عَلَيَّ أَحَدٌ مِنْهُمْ أَوْ يَطْغَى، عَزَّ جَارُكَ، وَجَلَّ ثَنَاؤُكَ، وَلاَ إِلَهَ إِلاَّ أَنْتَ)).",
         "french": "Ô Allah, Seigneur des sept cieux, Seigneur du Trône Magnifique, sois pour moi un soutien contre [telle ou telle personne] et ses assistants parmi tes créatures, afin qu'aucun d'eux ne m'insulte ou ne me fasse du mal. Puissant est votre patronage et glorieux sont vos louanges. Il n’y a personne digne d’adoration à part toi.",
-        "source": "Allaahumma rabbas-samaawaatis-sab'i, wa Rabbal-'Arshil-'Adheem, Kun lee jaaran min (here you mention the person's name) wa 'ahzabihi min khalaa'iqika, 'an yafruta 'alayya 'ahadun minhum 'aw yatghaa,'Azza jaaruka, wa jalla thanaa'uka, wa laa 'ilaaha 'illaa 'Anta.",
+        "source": "Allaahumma rabbas-samaawaatis-sab'i, wa Rabbal-'Arshil-'Adheem, Kun lee jaaran min (X) wa 'ahzabihi min khalaa'iqika, 'an yafruta 'alayya 'ahadun minhum 'aw yatghaa,'Azza jaaruka, wa jalla thanaa'uka, wa laa 'ilaaha 'illaa 'Anta.",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/129.mp3"
       },
@@ -1335,8 +1335,8 @@
       {
         "id": 133,
         "arabic": "((يَسْتَعِيذُ بِاللَّهِ و يَنْتَهِي عَمَّا شك فِيهِ)).",
-        "french": "",
-        "source": "(Dire :) Je cherche refuge auprès d'Allah. (Ensuite, il faut cesser de penser à ce qui a causé le doute.)",
+        "french": "(Dire :) Je cherche refuge auprès d'Allah. (Ensuite, il faut cesser de penser à ce qui a causé le doute.)",
+        "source": "",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/133.mp3"
       },
@@ -1344,7 +1344,7 @@
         "id": 134,
         "arabic": "((يَقُولُ: ((آمَنْتُ بِاللَّهِ وَرُسُلِهِ)).",
         "french": "(Il devrait dire : (J'ai cru en Allah et en Son Messager.))",
-        "source": "(He should say: ( Amantu billahi warusulih.))",
+        "source": "(( Amantu billahi warusulih.))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/134.mp3"
       },
@@ -1352,7 +1352,7 @@
         "id": 135,
         "arabic": "((يَقْرَأُ قَوْلَهُ تَعَالَى: ﴿هُوَ الْأوَّلُ وَالْآخِرُ وَالظّاهِرُ وَالْباطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ﴾)).",
         "french": "(Il doit également réciter le verset suivant : (Il est le Premier et le Dernier, Aththahir et Al-Batin et Il connaît bien toutes choses.)(ththahir : Indique la grandeur de Ses attributs et l'insignifiance de chaque création par rapport à Sa grandeur et Sa Majesté, car Il est au-dessus de toute Sa création en ce qui concerne Son essence et ses attributs.)(Al-Batin : Indique Sa conscience et sa connaissance de tous les secrets, de ce qui est dans les cœurs et le plus intime des les choses tout comme cela indique sa proximité et sa proximité avec tous d'une manière qui convient à sa majesté.))",
-        "source": "(He should also recite the following verse: ( Huwa al-awwalu, waal-akhiru, waalththahiru waalbatinu wahuwa bikulli shayin AAaleem))",
+        "source": "( ( Huwa al-awwalu, waal-akhiru, waalththahiru waalbatinu wahuwa bikulli shayin AAaleem))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/135.mp3"
       }
@@ -1481,7 +1481,7 @@
         "id": 145,
         "arabic": "((بَارَكَ اللَّهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَشَكَرْتَ الْوَاهِبَ، وَبَلَغَ أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ)). وَيَرُدُّ عَلَيْهِ الْمُهَــــــنَّأُ فَيَقُولُ: ((بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ، وَجَزَاكَ اللَّهُ خَيْراً، وَرَزَقَكَ اللَّهُ مِثْلَهُ، وَأَجْزَلَ ثَوَابَكَ)).",
         "french": "Qu'Allah vous bénisse avec Son don et que vous (le nouveau parent) lui rendiez grâce, que l'enfant atteigne la maturité et que sa justice vous soit accordée. La réponse de la personne félicitée est de dire : Qu'Allah vous bénisse et vous comble de Ses bénédictions, et qu'Allah vous récompense bien et vous accorde son pareil et vous récompense abondamment.",
-        "source": "Baarakallaahu laka fil-mawhoobi laka, wa shakartal-waahiba, wa balagha 'ashuddahu, wa ruzigta birrahu.  The reply of the person being congratulated is to say: Baarakallahu laka wa baaraka 'alayka, wa jazaakallaahu khayran, wa razaqakallaahu mithlahu, wa 'ajzala thawaabaka.",
+        "source": "Baarakallaahu laka fil-mawhoobi laka, wa shakartal-waahiba, wa balagha 'ashuddahu, wa ruzigta birrahu.  -> Baarakallahu laka wa baaraka 'alayka, wa jazaakallaahu khayran, wa razaqakallaahu mithlahu, wa 'ajzala thawaabaka.",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/145.mp3"
       }
@@ -1496,7 +1496,7 @@
         "id": 146,
         "arabic": " كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم يُعَوِّذُ الحَسَنَ وَالحُسَينَ رضي الله عنهما ((أُعِيذُكُمَا بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ كُلِّ شَيْطَانٍ وَهَامَّةٍ، وَمِنْ كُلِّ عَيْنٍ لاَمَّةٍ)).",
         "french": "(Ibn AAabbas a rapporté que le Messager d'Allah avait l'habitude de recommander Al-Hasan et Al-Husayn à la protection d'Allah, en disant : (Je vous recommande tous deux à la protection des paroles parfaites d'Allah contre tout diable, vermine et tout mauvais œil.))",
-        "source": "(Ibn AAabbas related that the Messenger of Allah  used to commend Al-Hasan and Al-Husayn to Allah’s protection, saying:(OAAeethukuma bikalimatil-lahit-tammah, min kulli shaytanin wahammah, wamin kulli AAaynin lammah.))",
+        "source": "((OAAeethukuma bikalimatil-lahit-tammah, min kulli shaytanin wahammah, wamin kulli AAaynin lammah.))",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/146.mp3"
       }
@@ -1519,7 +1519,7 @@
         "id": 148,
         "arabic": "((أَسْأَلُ اللَّهَ الْعَظيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفيَكَ)) (سبع مرات).",
         "french": "(Je demande à Allah Le Suprême, Seigneur du trône magnifique de vous guérir. (7 fois) (il (le malade) sera guéri.))",
-        "source": "(Asalul-lahal-AAatheem rabbal-AAarshil-AAatheem an yashfeek (7times).)",
+        "source": "(Asalul-lahal-AAatheem rabbal-AAarshil-AAatheem an yashfeek (7x).)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/148.mp3"
       }
@@ -1557,7 +1557,7 @@
         "id": 151,
         "arabic": "((جَعَلَ النَّبِيُّ صلى الله عليه وسلم عِنْدَ مَوْتِهِ يُدْخِلُ يَدَيْهِ فِي الْمَاءِ فَيَمْسَحُ بِهِمَا وَجْهَهُ، وَيَقُولُ: لاَ إِلَهَ إِلاَّ اللَّهُ إِنَّ لِلْمَوْتِ سَكَرَاتٍ)).",
         "french": "'Aishah (radhi-yAllaahu 'anhaa) a raconté que le Prophète (sal-Allaahu 'alayhe wa sallam) [pendant sa maladie dans laquelle il est décédé] trempait ses mains dans l'eau, puis il s'essuyait le visage et disait : « Nul n'a le droit d'être adoré sauf Allah, la mort contient en effet l'agonie. »",
-        "source": "'Aa.ishah (radhi-yAllaahu 'anhaa) related that The Prophet (sal-Allaahu 'alayhe wa sallam) [during his illness in which he passed away] would dip his hands in water and then he would wipe his face and say:[La ilaha illal-lah, inna lilmawti lasakarat.] ‘None has the right to be worshipped except Allaah, death does indeed contain agony.’",
+        "source": "'[La ilaha illal-lah, inna lilmawti lasakarat.] ’",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/151.mp3"
       },
@@ -1580,7 +1580,7 @@
         "id": 153,
         "arabic": "((مَنْ كَانَ آخِرُ كَلاَمِهِ لاَ إِلَهَ إِلاَّ اللَّهُ دَخَلَ الْجَنَّةَ)).",
         "french": "c'est-à-dire que ceux qui entourent le malade doivent l'instruire et l'encourager à dire la shahadah. (Celui dont les dernières paroles sont : (Nul n’a le droit d’être adoré sauf Allah.) entrera au Paradis.)",
-        "source": "i.e. those around the sick should instruct and encourage him to say the shahadah. (He whose last words are: (La ilaha illal-lah.) will enter Paradise.)",
+        "source": "(La ilaha illal-lah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/153.mp3"
       }
@@ -1899,7 +1899,7 @@
         "id": 178,
         "arabic": "((إِذَا أَكَلَ أَحَدُكُمْ طَعَاماً فَلْيَقُلْ بِسْمِ اللَّهِ، فَإِنْ نَسِيَ فِي أَوَّلِهِ فَلْيَقُلْ بسمِ اللَّهِ فِي أَوَّلِهِ وَآخِرِهِ)).",
         "french": "(Quand vous êtes sur le point de manger, vous devriez dire : (Bismil-lah.) et si vous oubliez de le dire avant de commencer, alors vous devriez dire (quand vous vous en souvenez) : Au nom d'Allah, au début et à la fin.)",
-        "source": "(Au moment de manger, il faut dire : (Bismil-lah.) et si on oublie de le dire au début, il faut dire (quand on s'en souvient) : Bismil-lahi fee awwalihi wa-akhirih.)",
+        "source": "(Bismil-lah.) / (Bismil-lahi fee awwalihi wa-akhirih.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/178.mp3"
       },
@@ -1907,7 +1907,7 @@
         "id": 179,
         "arabic": "((مَنْ أَطْعَمَهُ اللَّهُ الطَّعَامَ فَلْيَقُلْ: اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَأَطْعِمْنَا خَيْراً مِنْهُ، وَمَنْ سَقَاهُ اللَّهُ لَبَناً فَلْيَقُلْ اللَّهُمَّ بَارِكْ لَنَا فِيهِ وَزِدْنَا مِنْهُ)).",
         "french": "(Celui qu'Allah nourrit, qu'il dise : (Ô Allah, bénis-le pour nous et nourris-nous mieux que lui.) et celui qu'Allah donne du lait à boire devrait dire : (Ô Allah, bénis-le pour nous et donne-nous-en davantage.))",
-        "source": "(Whomever Allah feeds, should say:(Allahumma barik lana feehi wa-atAAimna khayran minh.) and whomever Allah gives milk to drink should say:(Allahumma barik lana feehi wazidna minh.))",
+        "source": "(Allahumma barik lana feehi wa-atAAimna khayran minh.) / (Allahumma barik lana feehi wazidna minh.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/179.mp3"
       }
@@ -1989,8 +1989,8 @@
       {
         "id": 185,
         "arabic": "((إِذَا دُعِيَ أَحَدُكُمْ فَلْيُجِبْ، فَإِنْ كَانَ صَائِماً فَلْيُصَلِّ، وَإِنْ كَانَ مُفْطِراً فَلْيَطْعَمْ)) ، وَمَعْنَى فَلْيُصَلِّ أَيْ فَلْيَدْعُ.",
-        "french": "",
-        "source": "(Si vous n'êtes pas invité (à un repas) alors répondez. Si vous jeûnez, invoquez (pour les présents), et si vous ne jeûnez pas, mangez.)",
+        "french": "(Si vous n'êtes pas invité (à un repas) alors répondez. Si vous jeûnez, invoquez (pour les présents), et si vous ne jeûnez pas, mangez.)",
+        "source": "",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/185.mp3"
       }
@@ -2035,7 +2035,7 @@
         "id": 188,
         "arabic": "((إِذَا عَطَسَ أَحَدُكُم فَلْيَقُلِ الْحَمْدُ لِلَّهِ، وَلْيَقُلْ لَهُ أَخُوهُ أَوْ صَاحِبُهُ: يَرْحَمُكَ اللَّهُ، فَإِذَا قَالَ لَهُ: يَرحَمُكَ اللَّهُ، فَلْيَقُلْ: يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ)).",
         "french": "(Quand l'un de vous éternue, il doit dire : (Location à Allah.) et son frère ou compagnon doit lui dire : (Qu'Allah vous fasse miséricorde.) et il (c'est-à-dire celui qui a éternué) lui répond : (Qu'Allah vous guide et rectifie votre état.))",
-        "source": "(Quand l'un de vous éternue, qu'il dise : (Alhamdu lillah) et que son frère ou compagnon lui dise : (Yarhamukal-lah) et qu'il (celui qui a éternué) réponde : (Yahdeekumul-lahu wayuslihu balakum.))",
+        "source": "(Alhamdu lillah) / (Yarhamukal-lah) / (Yahdeekumul-lahu wayuslihu balakum.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/188.mp3"
       }
@@ -2080,7 +2080,7 @@
         "id": 191,
         "arabic": "إِذَا تَزَوَّجَ أَحَدُكُمُ امْرَأَةً، أَوْ إِذَا اشْتَرَى خَادِماً فَلْيَقُلْ: ((اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا، وَخَيْرَ مَا جَبَلْتَهَا عَلَيْهِ، وَأَعُوذُ بِكَ مِنْ شَرِّهَا، وَشَرِّ مَا جَبَلْتَهَا عَلَيْهِ، وَإِذَا اشْتَرَى بَعِيراً فَلْيَأْخُذْ بِذِرْوَةِ سَنَامِهِ وَلْيَقُلْ مِثْلَ ذَلِكَ)).",
         "french": "(Quand vous épousez une femme ou achetez une servante, vous devez dire : (Ô Allah, je te demande le bien en elle et le bien vers lequel tu l'as incitée, et je me réfugie auprès de toi contre le mal en elle et le mal vers lequel tu l'as incitée.))(et si tu achètes un chameau, alors tu dois saisir sa bosse et dire de même.)",
-        "source": "(when you marry a woman or buy a maidservant, you should say: (Allahumma innee as-aluka khayraha wakhayra ma jabaltaha AAalayh, wa-aAAoothu bika min sharriha washarri ma jabaltaha AAalayh.))(and if you buy a camel, then you should take hold of it’s hump and say likewise.)",
+        "source": "(Allahumma innee as-aluka khayraha wakhayra ma jabaltaha AAalayh, wa-aAAoothu bika min sharriha washarri ma jabaltaha AAalayh.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/191.mp3"
       }
@@ -2139,8 +2139,8 @@
       {
         "id": 195,
         "arabic": "((عَنِ ابْنِ عُمَرَ رضي الله عنه قَاَلَ: كَانَ يُعَدُّ لِرَسُولِ اللَّهِ صلى الله عليه وسلم فِي الْمَجْلِسِ الوَاحِدِ مِائَةُ مَرَّةٍ مِنْ قَبْلِ أَنْ يَقُومَ: ((رَبِّ اغْفِرْ لِي، وَتُبْ عَلَيَّ، إِنَّكَ أَنْتَ التَّوَّابُ الغَفُورُ)).",
-        "french": "(Ibn AAumar a dit : On compterait que le Messager d'Allah dise cent fois à une personne assise avant de se lever : (Ô mon Seigneur, pardonne-moi et tourne-toi vers moi (pour accepter mon repentir). En vérité, Tu es Celui qui revient souvent. Celui qui pardonne souvent.))",
-        "source": "(Ibn AAumar  said: It would be counted that the Messenger of Allah  would say one hundred times at any one sitting before getting up: (Rabbigh-fir lee watub AAalay, innaka antat-tawwabul-ghafoor.))",
+        "french": "(Ibn AAumar a dit : On comptait que le Messager d'Allah dise cent fois à une personne assise avant de se lever : (Ô mon Seigneur, pardonne-moi et tourne-toi vers moi (pour accepter mon repentir). En vérité, Tu es Celui qui revient souvent. Celui qui pardonne souvent.))",
+        "source": "(Rabbigh-fir lee watub AAalay, innaka antat-tawwabul-ghafoor.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/195.mp3"
       }
@@ -2170,7 +2170,7 @@
         "id": 197,
         "arabic": "((وَلَكَ)).",
         "french": "(AAabdullah Ibn Sarjis a dit : « Je suis allé voir le Prophète et j'ai mangé de sa nourriture, puis je lui ai dit : (Qu'Allah te pardonne, ô Messager d'Allah.) il a répondu : (et toi.))",
-        "source": "(Abdullah Ibn Sarjis a dit : 'Je suis allé voir le Prophète et j'ai mangé de sa nourriture, puis je lui ai dit : (Ghafaral-lahu laka ya rasoolal-lah.) il a répondu : (wa-lak))",
+        "source": "(Ghafaral-lahu laka ya rasoolal-lah.) / (wa-lak)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/197.mp3"
       }
@@ -2185,7 +2185,7 @@
         "id": 198,
         "arabic": "((جَزَاكَ اللَّهُ خَيْراً)).",
         "french": "(Si quelqu'un vous rend service et que vous dites : (Qu'Allah vous récompense par du bien.) alors vous avez vraiment excellé dans sa louange.)",
-        "source": "(Si quelqu'un vous fait une faveur et que vous dites : (Jazakal-lahu khayran), vous avez alors excellé dans les éloges.)",
+        "source": "(Jazakal-lahu khayran)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/198.mp3"
       }
@@ -2260,7 +2260,7 @@
         "id": 203,
         "arabic": "((اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لاَ أَعْلَمُ)).",
         "french": "(shirk : associer les autres à Allah dans les choses qui Lui sont spécifiques. Cela peut se produire dans (1) la croyance, par exemple, croire qu'un autre qu'Allah a le pouvoir de bénéficier ou de nuire, (2) la parole, par exemple, jurer par un autre qu'Allah et (3) l'action, par exemple, s'incliner ou se prosterner devant un autre qu'Allah.) sans le savoir.)",
-        "source": "(Shirk : associer d'autres à Allah dans ce qui Lui est spécifique... ) (Allahumma innee aAAoothu bika an oshrika bika wa-ana aAAlam, wa-astaghfiruka lima la aAAlam.)",
+        "source": "(Allahumma innee aAAoothu bika an oshrika bika wa-ana aAAlam, wa-astaghfiruka lima la aAAlam.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/203.mp3"
       }
@@ -2275,7 +2275,7 @@
         "id": 204,
         "arabic": "((وَفِيكَ بَارَكَ اللَّهُ)).",
         "french": "(Aïcha a rapporté que le Messager d'Allah a reçu un mouton et qu'il a ordonné sa distribution. Lorsque le serviteur revenait (de la distribution), AAïsha demandait : « Qu'ont-ils dit ? », il a répondu : Ils invoqueraient : (Qu'Allah vous bénisse tous.) AAaïcha disait alors : (et qu'Allah les bénisse.) (nous répondons à leur supplication de la même manière et notre récompense reste avec nous.)",
-        "source": "(Aisha a rapporté que le Messager d'Allah a reçu un mouton... Aisha disait alors : (Wafeehim barakal-lah.)) (nous leur rendons l'invocation de la même manière et notre récompense nous reste.)",
+        "source": "(Wafeehim barakal-lah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/204.mp3"
       }
@@ -2290,7 +2290,7 @@
         "id": 205,
         "arabic": "((اللَّهُمَّ لاَ طَيْرَ إِلاَّ طَيْرُكَ، وَلاَ خَيْرَ إِلاَّ خَيْرُكَ، وَلاَ إِلَهَ غَيْرُكَ)).",
         "french": "(Cette supplication est utilisée chaque fois que l'on pense initialement à un événement ou à un événement fortuit pour prédire le bien ou le mal, en l'utilisant comme base pour déterminer quelle action il doit entreprendre, mais il dénonce ensuite un tel lien, s'appuie sur Allah et dit ensuite cette supplication comme une expiation pour cet acte, puisqu'il entre dans la catégorie du shirk. (Ô Allah, il n'y a de présage que de confiance en Toi, il n'y a de bien que Ton bien et nul n'a le droit d'être adoré sauf Toi.)",
-        "source": "(Cette invocation est utilisée chaque fois que l'on considère qu'un événement fortuit prédit le bien ou le mal...) (Allahumma la tayra illa tayruk, wala khayra illa khayruk, wala ilaha ghayruk.)",
+        "source": "(Allahumma la tayra illa tayruk, wala khayra illa khayruk, wala ilaha ghayruk.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/205.mp3"
       }
@@ -2463,7 +2463,7 @@
         "id": 217,
         "arabic": "((يُكَبِّرُ عَلَى كُلِّ شَرَفٍ ثَلاَثَ تَكْبِيرَاتٍ ثُمَّ يَقُولُ: لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، آيِبُونَ، تَائِبُونَ، عَابِدُونَ، لِرَبِّنا حَامِدُونَ، صَدَقَ اللَّهُ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزابَ وَحْدَهُ)).",
         "french": "(Ibn AAumar a rapporté que le Messager d'Allah, au retour d'une bataille ou d'un pèlerinage, disait à chaque moment fort : (Allah est le plus grand, Allah est le plus grand, Allah est le plus grand.) puis il disait : (Nul n'a le droit d'être adoré sauf Allah, seul, sans associé. À Lui appartiennent toute la souveraineté et la louange, et Il est sur toutes choses tout-puissant. Nous revenons, nous repentons, adorons et louons notre Seigneur. Allah a accompli Sa promesse, a aidé Son Serviteur et à lui seul. vaincu les alliés.))",
-        "source": "(Ibn AAumar  reported that the Messenger of Allah  on return from a battle or from performing the pilgrimage would say at every high point: (Allahu akbar, Allahu akbar, Allahu akbar.) and then he would say: (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer, ayiboona ta-iboon, AAabidoon, lirabbina hamidoon, sadaqal-lahu waAAdah, wanasara AAabdah, wahazamal-ahzaba wahdah.))",
+        "source": "(Allahu akbar, Allahu akbar, Allahu akbar.) / (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shay-in qadeer, ayiboona ta-iboon, AAabidoon, lirabbina hamidoon, sadaqal-lahu waAAdah, wanasara AAabdah, wahazamal-ahzaba wahdah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/217.mp3"
       }
@@ -2478,7 +2478,7 @@
         "id": 218,
         "arabic": "كَانَ النَّبِيُّ صلى الله عليه وسلم إِذَا أَتَاهُ الْأَمْرُ يَسُرُّهُ قَالَ: ((الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ)) وَإِذَا أَتَاهُ الْأَمْرُ يَكْرَهُهُ قَالَ: ((الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ)).",
         "french": "Lorsqu'il arrivait quelque chose qui lui plaisait, le Prophète avait l'habitude de dire : ((Alhamdu lillaahil-lathee bini'matihi tatimmuus-saalihaat)). La louange est à Allah qui, par Ses bénédictions, rend parfaites toutes les bonnes choses. Et s'il arrivait quelque chose qui lui déplaisait, il avait l'habitude de dire : ((Alhamdulillaahi 'alaa kulli haal)). La louange est à Allah en toutes circonstances.",
-        "source": "When something happened that pleased him, the Prophet used to say:((Alhamdu lillaahil-lathee bini'matihi tatimmuus-saalihaat)).And if something happened that displeased him, he used to say:((Alhamdulillaahi 'alaa kulli haal)).",
+        "source": "(Alhamdu lillaahil-lathee bini'matihi tatimmuus-saalihaat) / (Alhamdulillaahi 'alaa kulli haal)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/218.mp3"
       }
@@ -2676,7 +2676,7 @@
         "id": 234,
         "arabic": "((طَافَ النَّبيُّ صلى الله عليه وسلم بِالْبَيْتِ عَلَى بَعِيرٍ كُلَّمَا أَتَى الرُّكْنَ أَشَارَ إِلَيْهِ بِشَيْءٍ عِنْدَهُ وَكَبَّرَ)).",
         "french": "(Le Prophète faisait le tour de la KaAAbah sur un chameau, chaque fois qu'il atteignait la pierre noire, il la montrait avec son bâton et disait : (Allah est le plus grand))",
-        "source": "(Le Prophète a fait le tour de la Kaaba sur un chameau, chaque fois qu'il atteignait la pierre noire, il la pointait avec son bâton et disait : (Allahu akbar))",
+        "source": "(Allahu akbar)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/234.mp3"
       }
@@ -2691,7 +2691,7 @@
         "id": 235,
         "arabic": "((﴿رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ﴾)).",
         "french": "Le Prophète PSL disait entre le coin yéménite et la pierre noire : (Ô notre Seigneur, accorde-nous le meilleur dans cette vie et le meilleur dans l'autre vie, et protège-nous du châtiment du Feu.)",
-        "source": "The Prophet PBUH used to say between the Yemeni corner and the black stone: (Rabbana atina fee alddunya hasanatan wafee al-akhirati hasanatan waqina  AAathaba alnnar)[Al-Baqarah: 201]",
+        "source": "(Rabbana atina fee alddunya hasanatan wafee al-akhirati hasanatan waqina  AAathaba alnnar)[Al-Baqarah: 201]",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/235.mp3"
       }
@@ -2706,7 +2706,7 @@
         "id": 236,
         "arabic": "لَمَّا دَنَا النَّبِيُّ صلى الله عليه وسلم مِنَ الصَّفَا قَرَأَ: ﴿إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَآئِرِ اللَّهِ﴾ أَبْدَأُ بِمَا بَدَأَ اللَّهُ بِهِ)) فَبَدَأَ بِالصَّفَا فَرَقِيَ عَلَيْهِ حَتَّى رَأَى الْبَيْتَ، فَاسْتَقْبَلَ الْقِبْلَةَ، فَوَحَّدَ اللَّهَ وَكبَّرَهُ وَقَالَ: ((لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَنَصَرَ عَبْدَهُ، وَهَزَمَ الْأَحْزَابَ وَحْدَهُ، ثُمَّ دَعَا بَيْنَ ذلكَ. قَالَ مِثْلَ هَذَا ثَلاَثَ مَرَّاتٍ)) الْحَدِيثُ. وَفِيهِ: ((فَفَعَلَ عَلَى الْمَرْوَةِ كَمَا فَعَلَ عَلَى الصَّفَا)).",
         "french": "(Jabir a dit en décrivant le pèlerinage du Prophète : « … et quand il s'est approché du mont Safa, il a récité : (En effet Safa et Marwah sont des lieux de culte d'Allah…) (Je commence par ce par quoi Allah a commencé.) alors il a commencé par Safa et l'a gravi jusqu'à ce qu'il puisse voir la KaAAbah, il lui a ensuite fait face et a dit : (Allah est le plus grand, Allah est le plus grand, Allah est le plus grand.) et ensuite il disait les trois fois suivantes en faisant une supplication (il faut faire une supplication personnelle) après chaque fois : (Nul n'a le droit d'être adoré sauf Allah, seul, sans partenaire. À Lui appartiennent toute souveraineté et louange et Il est sur toutes choses tout-puissant. Nul n'a le droit d'être adoré sauf Allah seul. Il a rempli sa promesse, a aidé son serviteur et a vaincu à lui seul les alliés.)) (il répéterait cette action à Marwah.)",
-        "source": "(Jabir  said when describing the Prophet’s  pilgrimage: ‘…and when he approached mount Safa he recited: ( Innas-safa wa-almarwata min shaAAa-iri Allah ….) (Abda-o bima badaal-lahu bih.) so he started with Safa and climed it until he could see the KaAAbah, he then faced it and said: (Allahu akbar, Allahu akbar, Allahu akbar.) and then he would say the following three times making a supplication (one should make a personal supplication) after each time: (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer, la ilaha illal-lahu wahdah, anjaza waAAdah, wanasara AAabdah, wahazamal -ahzaba wahdah.)(he  would repeat this action at Marwah.) ",
+        "source": "(Innas-safa wa-almarwata min shaAAa-iri Allah ….) / (Abda-o bima badaal-lahu bih.) / (Allahu akbar, Allahu akbar, Allahu akbar.) / (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer, la ilaha illal-lahu wahdah, anjaza waAAdah, wanasara AAabdah, wahazamal -ahzaba wahdah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/236.mp3"
       }
@@ -2721,7 +2721,7 @@
         "id": 237,
         "arabic": "قَالَ النَّبِيُّ صلى الله عليه وسلم: ((خَيْرُ الدُّعَاءِ دُعَاءُ يَوْمِ عَرَفَةَ، وَخَيْرُ مَا قُلْتُ أَنَا وَالنَّبيُّونَ مِنْ قَبْلِي: لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ)).",
         "french": "(La meilleure des supplications est celle du jour de AAarafah et la meilleure que moi et les prophètes avant moi avons dit (est) : (Nul n'a le droit d'être adoré sauf Allah, seul, sans associé. À Lui appartiennent toute louange et souveraineté et Il est sur toutes choses tout-puissant.))",
-        "source": "(La meilleure des invocations est l'invocation du jour de Arafah et la meilleure parole que moi et les Prophètes avant moi avons dite est : (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.))",
+        "source": "(La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/237.mp3"
       }
@@ -2804,7 +2804,7 @@
         "id": 243,
         "arabic": "((ضَعْ يَدَكَ عَلَى الَّذِي تَألَّمَ مِنْ جَسَدِكَ وَقُلْ: بِسْمِ اللَّهِ، ثَلاَثاً، وَقُلْ سَبْعَ مَرَّاتٍ: أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ)).",
         "french": "(Placez votre main sur le site de la douleur et dites : (Au nom d'Allah (trois fois)) invoquez sept fois : (Je me réfugie en Allah et au sein de Sa toute-puissance contre le mal que je ressens et dont je me méfie.))",
-        "source": "(Place your hand at the site of the pain and say: (Bismil-lah (three times)) the supplicate seven times: (aAAoothu billahi waqudratih min sharri ma ajidu wa-ohathir.))",
+        "source": "(Bismil-lah (3x)) / (aAAoothu billahi waqudratih min sharri ma ajidu wa-ohathir.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/243.mp3"
       }
@@ -2934,7 +2934,7 @@
         "id": 254,
         "arabic": "قَالَ صلى الله عليه وسلم مَنْ قَالَ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ خَطَايَاهُ وَلَوْ كَانَتْ مِثْلَ زَبَدِ الْبَحْر)).",
         "french": "(Quiconque dit : (Comme Allah est parfait et je Le loue.) cent fois par jour, ses péchés sont effacés, même s'ils sont comme l'écume de la mer.)",
-        "source": "(Quiconque dit : (Subhanal-lahi wabihamdih.) cent fois par jour, ses péchés sont effacés, même s'ils sont comme l'écume de la mer.)",
+        "source": "(Subhanal-lahi wabihamdih.)(100x)",
         "repeat": 100,
         "audio": "http://www.hisnmuslim.com/audio/ar/254.mp3"
       },
@@ -2942,7 +2942,7 @@
         "id": 255,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ عَشْرَ مِرَارٍ، كَانَ كَمَنْ أَعْتَقَ أَرْبَعَةَ أَنْفُسٍ مِنْ وَلَدِ إِسْمَاعِيلَ)).",
         "french": "(Abou Hourayra a rapporté que le Messager d'Allah a dit : « Celui qui dit : (Nul n'a le droit d'être adoré sauf Allah, seul, sans associé. À Lui appartiennent toute la souveraineté et la louange et Il est sur toutes choses tout-puissant.) cent fois pendant la journée, a la récompense de libérer dix esclaves, cent bonnes actions sont enregistrées pour lui et cent mauvaises actions sont effacées et il a trouvé refuge contre le diable ce jour-là jusqu'au soir et personne ne viendra avec quelque chose de mieux que celui qui a fait plus.)",
-        "source": "(Abu Hurayrah  reported that the Messenger of Allah  said: ‘Whoever says: (La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.) a hundred times during the day, has the reward of freeing ten slaves, a hundred good deeds are recorded for him and a hundred bad deeds are wiped away and he has gained refuge from the devil that day until evening and none shall come with anything better except someone who has done more.)",
+        "source": "(La ilaha illal-lahu wahdahu la shareeka lah, lahul-mulku walahul-hamd, wahuwa AAala kulli shayin qadeer.)(10x)",
         "repeat": 10,
         "audio": "http://www.hisnmuslim.com/audio/ar/255.mp3"
       },
@@ -2950,7 +2950,7 @@
         "id": 256,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ، حَبِيبَتَانِ إِلَى الرَّحْمَنِ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحانَ اللَّهِ الْعَظِيمِ)).",
         "french": "(Aboo Hurayrah a rapporté que le Messager d'Allah a dit : « (Il y a) deux mots, (qui sont) légers sur la langue, lourds sur la balance et aimés du Très Miséricordieux : (Comme Allah est parfait et je Le loue. Comme Allah est parfait, Le Suprême.))",
-        "source": "(Abou Hourayra a rapporté que le Messager d'Allah a dit : '(Il y a) Deux paroles, légères sur la langue, lourdes sur la Balance et aimées du Tout Miséricordieux : (Subhanal-lahi wabihamdih, wasubhanal-lahil-AAatheem.))",
+        "source": "(Subhanal-lahi wabihamdih, wasubhanal-lahil-AAatheem.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/256.mp3"
       },
@@ -2958,7 +2958,7 @@
         "id": 257,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((لَأَنْ أَقُولَ سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، أَحَبُّ إِلَيَّ مِمَّا طَلَعَتْ عَلَيْهِ الشَّمسُ)).",
         "french": "(Aboo Hurayrah a rapporté que le Messager d'Allah a dit : « Dire : (Comme Allah est parfait, et toute louange est à Allah. Nul n'a le droit d'être adoré sauf Allah, et Allah est le plus grand.) m'est plus aimé que tout ce sur quoi le soleil s'est levé.)",
-        "source": "(Aboo Hurayrah  reported that the Messenger of Allah  said: ‘Saying: (Subhanal-lah, walhamdu lillah, la ilaha illal-lah wallahu akbar.) is more beloved to me than everything the sun has risen over.)",
+        "source": "(Subhanal-lah, walhamdu lillah, la ilaha illal-lah wallahu akbar.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/257.mp3"
       },
@@ -2966,7 +2966,7 @@
         "id": 258,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((أَيَعْجِزُ أَحَدُكُم أَنْ يَكْسِبَ كُلَّ يَوْمٍ أَلْفَ حَسَنَةٍ)) فَسَأَلَهُ سَائِلٌ مِنْ جُلَسَائِهِ كَيْفَ يَكْسِبُ أَحَدُنَا أَلْفَ حَسَنَةٍ؟ قَالَ: ((يُسَبِّحُ مِائَةَ تَسْبِيحَةٍ، فَيُكتَبُ لَهُ أَلْفُ حَسَنَةٍ أَوْ يُحَطُّ عَنْهُ أَلْفُ خَطِيئَةٍ)).",
         "french": "(Sa'd a dit : « Nous étions assis avec le Messager d'Allah et il a dit : « L'un d'entre vous est-il incapable d'acquérir mille bonnes actions chaque jour ? » Quelqu'un lui a alors demandé : Comment peut-on accomplir mille bonnes actions ? Il a répondu : « Il devrait dire : (Comme Allah est parfait.) cent fois, car mille bonnes actions sont enregistrées pour lui ou mille mauvaises actions sont effacées.)",
-        "source": "(Sa'd a dit : 'Nous étions assis avec le Messager d'Allah... Il a répondu : 'Il devrait dire : (Subhanal-lah.) cent fois, car mille bonnes actions lui sont inscrites ou mille mauvais péchés sont effacés.)",
+        "source": "(Subhanal-lah.)(100x)",
         "repeat": 100,
         "audio": "http://www.hisnmuslim.com/audio/ar/258.mp3"
       },
@@ -2974,7 +2974,7 @@
         "id": 259,
         "arabic": "((مَنْ قَالَ: سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ غُرِسَتْ لَهُ نَخْلَةٌ فِي الْجَنَّةِ)).",
         "french": "(Jabbir a rapporté que le Prophète a dit : « Celui qui dit : (Comme Allah est parfait. Le Suprême, et je Le loue.) un palmier est planté pour lui au paradis.)",
-        "source": "(Jabir a rapporté que le Prophète a dit : 'Quiconque dit : (Subhanal-lahil-AAatheemi wabihamdih.) un palmier est planté pour lui au paradis.)",
+        "source": "(Subhanal-lahil-AAatheemi wabihamdih.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/259.mp3"
       },
@@ -2982,7 +2982,7 @@
         "id": 260,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((يَا عَبْدَ اللَّهِ بْنَ قَيْسٍ أَلاَ أَدُلُّكَ عَلَى كَنْزٍ مِنْ كُنُوزِ الْجَنَّةِ))؟ فَقُلْتُ: بَلَى يَا رَسُولَ اللَّهِ، قَالَ: ((قُلْ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ)).",
         "french": "(AAabdullah Ibn Qays a raconté que le Prophète lui a dit : « O 'AAabdullah Ibn Qays, ne devrais-je pas t'informer d'un trésor parmi les trésors du paradis ? » Il a ensuite dit : « Dis : (Il n'y a de force ni de pouvoir qu'en Allah.))",
-        "source": "(Abdullah Ibn Qays a rapporté que le Prophète li a dit... Il a ensuite dit : 'Dis : (La hawla wala quwwata illa billah.))",
+        "source": "(La hawla wala quwwata illa billah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/260.mp3"
       },
@@ -2990,7 +2990,7 @@
         "id": 261,
         "arabic": "وَقَالَ صلى الله عليه وسلم: ((أَحَبُّ الْكَلاَمِ إِلَى اللَّهِ أَرْبَعٌ: سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، لاَ يَضُرُّكَ بِأَيِّهِنَّ بَدَأتَ)).",
         "french": "(les paroles les plus aimées d'Allah sont au nombre de quatre : (Comme Allah est parfait, toute louange est à Allah. Nul n'a le droit d'être adoré sauf Allah et Allah est le plus grand.))(peu importe par lequel d'entre eux vous commencez.)",
-        "source": "(Les paroles les plus aimées d'Allah sont quatre : (Subhanal-lah, walhamdu lillah, wala ilaha illal-lah, wallahu akbar.)) (peu importe par laquelle vous commencez.)",
+        "source": "(Subhanal-lah, walhamdu lillah, wala ilaha illal-lah, wallahu akbar.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/261.mp3"
       },
@@ -2998,7 +2998,7 @@
         "id": 262,
         "arabic": "جَاءَ أَعْرَابِيٌّ إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم فَقَالَ: عَلِّمْنِي كَلاماً أَقُولُهُ: قَالَ: ((قُلْ: لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، اللَّهُ أَكْبَرُ كَبِيراً، وَالْحَمْدُ لِلَّهِ كَثِيراً، سُبْحَانَ اللَّهِ رَبِّ العَالَمِينَ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ الْعَزِيزِ الْحَكِيمِ)) قَالَ: فَهَؤُلاَءِ لِرَبِّي، فَمَا لِي؟ قَالَ: ((قُلْ: اللَّهُمَّ اغْفِرْ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَارْزُقْنِي)).",
         "french": "(SaAAd Ibn Abee Waqqas a rapporté qu'un homme est venu vers le Messager d'Allah et lui a dit : « Apprends-moi quelque chose que je devrais dire ? » Il a dit : « Dis : (Nul n'a le droit d'être adoré en dehors d'Allah, seul sans partenaire. Allah est le plus grand et la plus grande louange est à Allah. Combien Allah est parfait, Seigneur des mondes. Il n'y a de force ni de pouvoir qu'en Allah, le Puissant, le Sage.) l'homme dit alors : « Ceux-ci sont pour mon Seigneur, et qu'y a-t-il pour moi ? » Il répondit : « Dis : (Ô Allah, pardonne-moi, aie pitié de moi, guide-moi et accorde-moi de la nourriture.))",
-        "source": "(SaAAd Ibn Abee Waqqas  narrated that a man came to the Messenger of Allah  and said to him: ‘Teach me something which I should say?’ He said: ‘Say: (La ilaha illal-lah, wahdahu la shareeka lah, Allahu akbaru kabeera, walhamdu lillahi katheera, subhanal-lahi rabbil-AAalameen, la hawla wala quwwata illa billahil-AAazeezil-hakeem.) the man then said: ‘These are for my Lord, and what is for me?’ He  replied: ‘Say:(Allahummagh-fir lee, warhamnee, wahdinee, warzuqnee.))",
+        "source": "(La ilaha illal-lah, wahdahu la shareeka lah, Allahu akbaru kabeera, walhamdu lillahi katheera, subhanal-lahi rabbil-AAalameen, la hawla wala quwwata illa billahil-AAazeezil-hakeem.) (Allahummagh-fir lee, warhamnee, wahdinee, warzuqnee.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/262.mp3"
       },
@@ -3006,7 +3006,7 @@
         "id": 263,
         "arabic": "كَانَ الرَّجُلُ إِذَا أَسْلَمَ عَلَّمَهُ النَّبيُّ صلى الله عليه وسلم الصَّلاَةَ ثُمَّ أَمَرَهُ أَنْ يَدْعُوَ بِهَؤُلاَءِ الْكَلِمَاتِ: ((اللَّهُمَّ اغْفِرِ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَعَافِنِي وَارْزُقْنِي)).",
         "french": "(Tariq Al-AshjaAAee a dit : « Quand quelqu'un acceptait l'Islam, le Prophète lui enseignait comment accomplir la prière et lui ordonnait ensuite d'invoquer avec les mots suivants : (Ô Allah, pardonne-moi, aie pitié de moi, guide-moi, donne-moi la santé et accorde-moi de la subsistance.))",
-        "source": "(Tariq Al-AshjaAAee  said: ‘When someone would embrace Islam, the Prophet  would teach him how to perform prayer and then order him to supplicate with the following words: (Allahummagh-fir lee, warhamnee, wahdinee, waAAafinee warzuqnee.))",
+        "source": "(Allahummagh-fir lee, warhamnee, wahdinee, waAAafinee warzuqnee.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/263.mp3"
       },
@@ -3014,7 +3014,7 @@
         "id": 264,
         "arabic": "((إِنَّ أَفْضَلَ الدُّعَاءِ الْحَمْدُ لِلَّهِ، وَأَفْضَلَ الذِّكْرِ لاَ إِلَهَ إِلاَّ اللَّهُ)).",
         "french": "(Jabir Ibn 'AAabdullah a rapporté que le Messager d'Allah a dit : « En vérité, la meilleure supplication est : (Toute louange est à Allah.) et en effet, la meilleure forme de souvenir est : (Nul n'a le droit d'être adoré en dehors d'Allah.))",
-        "source": "(Jabir Ibn Abdullah a rapporté que le Messager d'Allah a dit : 'En vérité, la meilleure invocation est : (Alhamdu lillah) et certes, la meilleure forme de rappel est : (La ilaha illal-lah.))",
+        "source": "(Alhamdu lillah) (La ilaha illal-lah.)",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/264.mp3"
       },
@@ -3022,7 +3022,7 @@
         "id": 265,
         "arabic": "الباقيات الصالحات : سبحان الله والحمد لله ، ولا إله إلا الله ،والله أكبر ،و لا حول ولا قوة إلا بالله",
         "french": "Les bonnes actions qui durent sont « Glorifié soit Allah », et « La louange est à Allah », et « Mais il n'y a personne qui soit digne d'adorer Allah », et « Allah est le plus grand », et « Il n'y a de puissance ni de puissance que par Allah ».",
-        "source": "The good deeds which endure are 'Subhaanallaah.', and 'Walhamdulillaah.', and 'Wa laa ilaaha illallaah'., and 'Wallaahu Akbar',and 'Wa laa hawla wa laa guwawala illaa billaah'.",
+        "source": "(Subhaanallaah.), (Walhamdulillaah.), (Wa laa ilaaha illallaah), (Wallaahu Akbar), (Wa laa hawla wa laa guwawala illaa billaah).",
         "repeat": 1,
         "audio": "http://www.hisnmuslim.com/audio/ar/265.mp3"
       }
