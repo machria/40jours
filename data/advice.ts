@@ -7,7 +7,7 @@ export interface Article {
     author: string;
     readTime?: string;
     coverImage?: string; // Optional for future
-    category: 'Sagesse d\'Al-Ghazali' | 'Méthodologie Coranique' | 'Vivre l\'Islam au Quotidien' | 'Le Programme 40 Jours';
+    category: 'Sagesse d\'Al-Ghazali' | 'Méthodologie Coranique' | 'Spiritualité & Guérison' | 'Vivre l\'Islam & Productivité' | 'Sciences & Compréhension';
 }
 
 export const articles: Article[] = [
@@ -427,7 +427,7 @@ Lancez-vous ! Même un peu d'arabe changera radicalement votre concentration (Kh
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '6 min',
-        category: 'Le Programme 40 Jours',
+        category: 'Méthodologie Coranique',
         content: `
 # Objectif Premier Juz : Par où commencer et comment y arriver ?
 
@@ -569,7 +569,7 @@ N'oubliez pas : La perfection n'est pas demandée au premier jour, mais la sinc�
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '4 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Spiritualité & Guérison',
         content: `
 # La Citadelle du Musulman (Hisn al-Muslim)
 
@@ -608,7 +608,7 @@ Faites de ces invocations une habitude non-négociable, comme le brossage des de
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
-        category: 'Le Programme 40 Jours',
+        category: 'Vivre l\'Islam & Productivité',
         content: `
 # Réussir le Défi des 40 Jours
 
@@ -653,7 +653,7 @@ Qu'Allah vous accorde la constance (Istiqama).
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Spiritualité & Guérison',
         content: `
 # Connaître Allah par Ses Noms
 
@@ -696,7 +696,7 @@ Commencez aujourd'hui. Apprendre un Nom par jour vous prendra 3 mois, mais chang
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '6 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Sciences & Compréhension',
         content: `
 # La Sunnah : Lumière sur la Lumière
 
@@ -736,7 +736,7 @@ Ne lisez pas les Hadiths comme de simples citations culturelles. Lisez-les comme
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Sciences & Compréhension',
         content: `
 # La Sira : Plus que de l'Histoire
 
@@ -839,7 +839,7 @@ C'est cette alliance entre un vocabulaire ciblé et une grammaire comprise qui v
         date: '2026-02-02',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
-        category: 'Méthodologie Coranique',
+        category: 'Sciences & Compréhension',
         content: `
 # Voyager dans le Temps : Comprendre la Sira
 
@@ -898,7 +898,7 @@ Allah a voulu que Sa Parole s'incarne dans un Homme, pour que nous puissions sui
         date: '2026-02-02',
         author: 'Équipe Coran 40 Jours',
         readTime: '11 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Sciences & Compréhension',
         content: `
 # Les Trésors du Hadith : Guide de Navigation
 
@@ -959,7 +959,7 @@ Le Hadith n'est pas de la culture générale. C'est de la lumière divine passé
         date: '2026-02-03',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
-        category: 'Méthodologie Coranique',
+        category: 'Sciences & Compréhension',
         content: `
 # La Science du Tafsir : Au-delà de la Traduction
 
@@ -1027,7 +1027,7 @@ Le Tafsir nourrit l'esprit, le Tadabbur nourrit l'âme. Les deux sont indispensa
         date: '2026-02-04',
         author: 'Équipe Coran 40 Jours',
         readTime: '15 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Spiritualité & Guérison',
         content: `
 # Les 99 Noms : Bien plus qu'une liste
 
@@ -1093,7 +1093,7 @@ Commencez ce soir. Prenez un Nom. Étudiez-le. Et appelez votre Seigneur avec.
         date: '2026-02-05',
         author: 'Équipe Coran 40 Jours',
         readTime: '18 min',
-        category: 'Le Programme 40 Jours',
+        category: 'Vivre l\'Islam & Productivité',
         content: `
 # Pourquoi 40 Jours ? La Science derrière le Programme
 
@@ -1160,7 +1160,7 @@ Bienvenue dans votre nouvelle vie.
         date: '2026-02-02',
         author: 'Équipe Coran 40 Jours',
         readTime: '7 min',
-        category: 'Vivre l\'Islam au Quotidien',
+        category: 'Sciences & Compréhension',
         content: `
 # Les 6 Livres Mères (Al-Kutub Al-Sittah) : Les Gardiens de la Sunnah
 
@@ -1240,6 +1240,531 @@ Sans ces livres, l'Islam serait une coquille vide de détails. Nous saurions *"q
 Les étudier, c'est s'asseoir, à travers 14 siècles, aux pieds du Messager d'Allah ﷺ.
 `
     },
+    {
+        slug: 'baraka-temps-organisation',
+        title: 'La "Baraka" du temps : Comment concilier travail, famille et Coran ?',
+        excerpt: 'Vous courez après le temps ? Découvrez comment la notion de "Baraka" peut transformer votre agenda et comment trouver des créneaux pour Allah dans une vie surchargée.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '6 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# La "Baraka" du Temps : Concilier Vie Active et Spiritualité
+
+"Je n'ai pas le temps." C'est la phrase que nous répétons tous. Entre le travail, les enfants, les courses et les obligations sociales, les 24 heures de la journée semblent fondre comme neige au soleil.
+
+Pourtant, certains grands savants du passé ont écrit des centaines de volumes, enseigné à des milliers d'élèves et adoraient Allah la nuit, le tout en vivant le même nombre d'heures que nous. Quel était leur secret ? La **Baraka**.
+
+## 1. Qu'est-ce que la Baraka du temps ?
+
+La Baraka (bénédiction divine) n'est pas une augmentation *quantitative* du temps (la journée fera toujours 24h), mais une augmentation *qualitative*.
+
+C'est quand Allah met de l'efficacité, de la facilité et de la paix dans vos heures. Une heure "bénie" vous permet d'accomplir ce qui prendrait normalement quatre heures. À l'inverse, une journée sans Baraka file entre les doigts sans aucune réalisation concrète (scrolling infini, distractions, fatigue inexpliquée).
+
+**L'équation spirituelle est simple :** Donnez du temps à Celui qui a créé le temps, et Il mettra de la Baraka dans le reste de votre temps.
+
+## 2. Les "Voleurs" de Baraka
+
+Avant de chercher à gagner du temps, bouchons les trous par où il s'échappe :
+*   **Les péchés :** Ils assombrissent le cœur et rendent l'action lourde et lente.
+*   **Le gaspillage :** Regarder 45 minutes de vidéos courtes (reels/shorts) ne vous repose pas, cela épuise votre dopamine et tue votre motivation.
+*   **Le désordre du sommeil :** Dormir tard après minuit détruit la productivité du lendemain.
+
+## 3. Où trouver des créneaux dans une vie moderne ?
+
+Voici trois "poches de temps" que nous négligeons souvent :
+
+### Le "Miracle Morning" du Croyant : L'Après-Fajr
+Le Prophète ﷺ a fait une invocation spécifique : **"Ô Allah, bénis ma communauté dans ses premières heures (Bukur)."** (Tirmidhi).
+C'est le moment le plus béni de la journée. Le cerveau est frais, la maison est calme, le téléphone ne sonne pas.
+*   *Conseil :* Ne vous recouchez pas tout de suite. Prenez juste 15 à 20 minutes après la prière pour lire votre partie du Coran. Ce que vous ferez en 20 minutes ici vaudrait 1h le soir.
+
+### Les "Temps Morts" (Transports et Attente)
+Combien de temps passez-vous dans le métro, la voiture, ou la salle d'attente ?
+*   *Conseil :* C'est le moment idéal pour l'écoute (Audio) ou le *Dhikr* (Rappel). Transformez votre trajet de 30 minutes en une séance d'université coranique. Si vous conduisez, écoutez. Si vous êtes passager, lisez.
+
+### Le "Time-Boxing" Familial
+Souvent, on ne lit pas parce qu'on attend d'être "tranquille". Cela n'arrive jamais quand on a une famille.
+*   *Conseil :* Impliquez-les. Créez un temps de "lecture silencieuse" de 15 minutes où tout le monde (enfants compris) pose les écrans et prend un livre/Coran. Cela crée une routine collective apaisante.
+
+## 4. La Qualité plus que la Quantité
+
+Allah ne vous demande pas de devenir moine. Il sait que vous devez travailler pour nourrir votre famille (ce qui est aussi une adoration !).
+Ce qu'Il demande, c'est la **constance**.
+*   Mieux vaut 10 minutes intenses et concentrées chaque jour que 2 heures une fois par semaine le dimanche.
+*   La goutte d'eau régulière perce le rocher, pas le seau d'eau versé une seule fois.
+
+## Conclusion
+
+Ne dites plus "Je n'ai pas le temps pour le Coran". Dites "Je n'ai pas encore donné la priorité au Coran".
+Faites l'expérience : prélevez "la part d'Allah" au début de votre journée (comme on prélève l'impôt à la source), et regardez comment Il va fructifier le reste de votre journée. C'est cela, la Baraka.
+`
+    },
+    {
+        slug: 'deep-work-spirituel',
+        title: 'Deep Work Spirituel : 30 minutes de concentration valent mieux que 2 heures de distraction',
+        excerpt: 'Appliquer les stratégies de productivité des élites (Deep Work) à votre relation avec Allah. Comment déconnecter pour mieux se connecter.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '7 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# Deep Work Spirituel : La Concentration comme Acte de Foi
+
+Dans son best-seller *Deep Work*, Cal Newport définit le "travail en profondeur" comme la capacité à se concentrer sans distraction sur une tâche cognitivement exigeante. C'est ce qui distingue les experts des amateurs.
+
+Et si nous appliquions cette rigueur à la chose la plus importante de notre vie : notre relation avec Allah ?
+
+## 1. La Maladie de l'Attention Fragmentée
+
+Nous vivons dans "l'économie de l'attention". Nos cerveaux sont câblés pour réagir à la nouveauté (notifications).
+Le problème, c'est que nous apportons cette fragmentation dans notre adoration :
+*   Nous lisons le Coran en jetant un œil au téléphone "juste pour voir l'heure".
+*   Nous faisons du Dhikr en pensant à notre liste de courses.
+*   Nous prions en mode "pilote automatique".
+
+Le résultat ? Une adoration sans saveur, sans lumière et sans impact sur notre cœur. Nous avons fait les mouvements, mais notre cœur n'était pas là.
+
+## 2. Le Khushu' (Humilité/Concentration) est un Muscle
+
+Le *Khushu'* dans la prière n'est pas une émotion magique qui tombe du ciel. C'est une discipline mentale. C'est la capacité de ramener son attention vers Allah à chaque fois qu'elle s'échappe.
+Comme un muscle, plus vous l'entraînez à rester concentré, plus il devient fort. Plus vous lui permettez de se distraire, plus il s'atrophie.
+
+## 3. Protocole de "Deep Work Spirituel"
+
+Comment pratiquer une adoration "profonde" ? Voici un protocole en 3 étapes :
+
+### Étape 1 : Le Mode Avion Radical
+C'est la condition non-négociable. Vous ne pouvez **pas** avoir de profondeur si votre téléphone est à portée de main avec les données activées.
+*   **La Règle :** Avant d'ouvrir le Coran ou de commencer vos Adhkar, mettez votre téléphone dans une autre pièce ou en mode avion total.
+*   **Pourquoi ?** Même si vous ne le regardez pas, la simple *présence* du téléphone réduit votre capacité cognitive (c'est prouvé scientifiquement).
+
+### Étape 2 : La "Khalwa" (L'Isolement)
+Les Prophètes cherchaient tous l'isolement (la grotte de Hira, le Mont Sinaï).
+*   Trouvez un coin calme. Fermez la porte. Dites à votre famille : "Je ne suis pas disponible pour les 30 prochaines minutes".
+*   Créez une "bulle" sacrée où rien du monde extérieur ne pénètre.
+
+### Étape 3 : Le Minuteur (Technique Pomodoro)
+Si vous vous dites "Je vais lire un peu", votre esprit va vagabonder.
+*   Fixez un temps précis (ex: 30 minutes).
+*   Lancez un minuteur.
+*   Dites-vous : "Pendant ces 30 minutes, je n'existe que pour Allah. Je ne penserai ni au travail, ni aux soucis."
+*   Quand l'esprit s'échappe (et il le fera), ramenez-le doucement mais fermement au texte sacré.
+
+## 4. La Règle d'Or : 30 > 120
+
+Il vaut mieux lire **2 pages** du Coran en mode "Deep Work" (en comprenant, en pleurant, en répétant les versets) que de lire **2 Juz** (40 pages) en pensant à autre chose.
+
+*   La quantité flatte l'ego ("J'ai beaucoup lu").
+*   La qualité nourrit l'âme.
+
+Allah ne regarde pas combien de pages vous avez tournées, mais combien de versets ont traversé votre cœur.
+
+## Conclusion
+
+Le diable est le maître de la distraction. Il sait qu'il ne peut pas vous empêcher de prier, alors il essaie de rendre votre prière vide de sens en vous distrayant.
+Le "Deep Work Spirituel" est votre contre-attaque. Reprenez le contrôle de votre attention, car votre attention est la seule chose que vous possédez réellement pour l'offrir à votre Créateur.
+`
+    },
+    {
+        slug: 'routine-fajr-succes',
+        title: 'La Routine du Fajr : Le levier de succès des "Gens de l\'Aube"',
+        excerpt: 'Pourquoi les gens qui réussissent spirituellement et mondialement se lèvent-ils tôt ? Découvrez les secrets de la "Golden Hour" du croyant.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '6 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# La Routine du Fajr : Le Secret des "Gens de l'Aube"
+
+Il existe une "communauté secrète" qui vit dans un monde parallèle. Pendant que le monde dort, eux sont éveillés. Pendant que le monde est dans l'obscurité, eux sont dans la Lumière. Ce sont les **Ahl al-Fajr** (les Gens de l'Aube).
+
+C'est le moment charnière qui détermine si votre journée sera une victoire ou une lutte.
+
+## 1. Pourquoi est-ce si difficile (et si important) ?
+
+Le Prophète ﷺ nous a prévenus : *"Satan fait trois nœuds sur la nuque de chacun de vous lorsqu'il s'endort."* (Bukhari).
+Le Fajr est la première bataille de la journée. Gagner cette bataille contre votre couette, c'est gagner la journée entière. Celui qui commence sa journée par une victoire spirituelle est invincible psychologiquement pour le reste des épreuves.
+
+## 2. Comment rejoindre le club ? (Conseils Pratiques)
+
+On ne se lève pas par miracle, on se lève par stratégie.
+
+*   **L'heure du coucher :** C'est mathématique. Si vous dormez à 1h du matin, vous ne serez pas concentré au Fajr. Les pieux prédécesseurs détestaient parler après le 'Isha.
+*   **La distance de l'alarme :** Ne laissez jamais votre téléphone à portée de main. Mettez-le à l'autre bout de la chambre. Le fait de devoir vous **lever** physiquement pour l'éteindre brise 50% de l'inertie du sommeil.
+*   **L'Eau :** Buvez un grand verre d'eau dès le réveil. L'hydratation réveille le cerveau instantanément.
+
+## 3. La "Golden Hour" du Croyant
+
+Vous êtes debout. Tout est calme. Quoi faire ?
+
+1.  **Le Wudu (Ablutions) :** L'eau fraîche détache le dernier nœud de Satan.
+2.  **La Sunnah :** Les deux unités de prière (Rak'at) avant le Fajr *“sont meilleures que le monde et ce qu'il contient”* (Muslim). Imaginez la valeur de la prière obligatoire !
+3.  **Le "Qur'an al-Fajr" :** Allah dit : *“La lecture de l'aube a des témoins.”* (Sourate Al-Isra, 17:78). Les Anges du jour et de la nuit se relaient à ce moment précis pour vous écouter.
+4.  **Le Dhikr jusqu'au lever du soleil (Shuruq) :** Si vous pouvez rester assis à vous souvenir d'Allah jusqu'à ce que le soleil se lève, puis prier deux unités (Duha), vous avez la récompense d'un Hajj et d'une Umrah complets ! (Tirmidhi).
+
+## 4. L'Impact sur la journée
+
+Le Prophète ﷺ a dit : *"Celui qui prie le Fajr est sous la protection d'Allah."* (Muslim).
+Imaginez sortir de chez vous en sachant que le Roi des Rois vous a placé sous Sa garde personnelle pour les 24 prochaines heures. Les problèmes du travail semblent minuscules. Le stress glisse sur vous.
+À l'inverse, rater le Fajr, c'est commencer la journée avec une dette et un cœur lourd.
+
+## Conclusion
+
+Ne dites pas "je ne suis pas du matin". Vous êtes né pour adorer Allah.
+Le Fajr n'est pas une option pour les "super-musulmans", c'est l'oxygène du croyant. Essayez, ne serait-ce que pendant 40 jours, et voyez votre vie changer.
+`
+    },
+    {
+        slug: 'anxiete-tristesse-remedes',
+        title: 'Anxiété et Tristesse : Les remèdes coraniques pour apaiser l\'esprit',
+        excerpt: 'La foi n\'immunise pas contre la tristesse (les Prophètes ont pleuré). Mais le Coran offre des clés puissantes (Ad-Duha, Yusuf) pour ne pas sombrer.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Anxiété, Stress, Déprime : La Pharmacie Coranique
+
+Il y a un mythe destructeur dans notre communauté : *"Si tu es triste, c'est que ta foi est faible."*
+C'est faux. Ya'qub (Jacob) a pleuré jusqu'à devenir aveugle de chagrin. Le Prophète ﷺ a vécu "l'Année de la Tristesse".
+La tristesse est humaine. Ce que l'Islam nous enseigne, ce n'est pas de ne rien ressentir, mais de ne pas nous laisser **noyés** par ces sentiments.
+
+## 1. Sourate Ad-Duha : La lettre d'amour d'Allah
+
+Cette sourate a été révélée à un moment où le Prophète ﷺ était en détresse, n'ayant pas reçu de révélation depuis 6 mois, et où les gens se moquaient de lui ("Ton Seigneur t'a abandonné").
+
+Allah descend alors ces mots qui sont un baume pour toute âme déprimée :
+1.  **"Par le jour montant !"** (Le soleil finit toujours par se lever après la nuit noire).
+2.  **"Ton Seigneur ne t'a ni abandonné, ni détesté."** (Ton épreuve n'est pas une punition, c'est une préparation).
+3.  **"La fin sera meilleure pour toi que le commencement."** (Cette douleur est temporaire).
+
+*Exercice :* Quand vous vous sentez seul et abandonné, lisez Ad-Duha comme si Allah vous parlait directement.
+
+## 2. Sourate Yusuf : La gestion du Trauma
+
+La sourate Yusuf est la seule sourate révélée d'un bloc. Pourquoi ? Pour consoler le Prophète ﷺ. Elle raconte l'histoire du pire cauchemar : trahison familiale, esclavage, fausse accusation, prison, oubli.
+
+La leçon clé : **"Et Allah est souverain en Son Commandement : mais la plupart des gens ne savent pas."**
+Même quand tout semble aller mal (Yusuf jeté au puits), Allah est en train de préparer le plan pour qu'il devienne ministre.
+Votre épreuve actuelle contient, en son sein, la graine de votre future élévation.
+
+## 3. Le Remède par l'Action (La prescription prophétique)
+
+Quand l'angoisse nous saisit, on a tendance à se figer sous la couette. Le Prophète ﷺ faisait le contraire : *"Dès qu'une affaire le souciait, il se précipitait vers la prière."*
+
+Pourquoi ?
+*   **Physiologiquement :** La prosternation (Sujud) irrigue le cerveau et calme le système nerveux.
+*   **Psychologiquement :** On dépose le "fardeau" sur Celui qui peut le porter.
+*   **L'Invocation du Chagrin :** Apprenez cette Doua : *"Ô Allah, je me réfugie auprès de Toi contre les soucis et la tristesse, l'impuissance et la paresse..."* (Bukhari). Notez qu'il lie "tristesse" et "paresse" (impuissance), car la dépression mène à l'inaction.
+
+## 4. Le concept de "Rida" (La Satisfaction)
+
+Le sommet de la guérison n'est pas que l'épreuve disparaisse, mais que le cœur l'accepte.
+Dire *Alhamdulillah* quand tout va bien est facile.
+Dire *Alhamdulillah* quand on a tout perdu, c'est la foi des géants. C'est dire : "Ô Allah, je ne comprends pas pourquoi cela m'arrive, mais je Te fais confiance plus que je ne me fais confiance."
+
+## Conclusion
+
+N'ayez pas honte de vos larmes, elles sont une miséricorde. Mais ne laissez pas Satan transformer votre tristesse en désespoir.
+Utilisez le Coran non pas comme un livre d'histoire, mais comme une ordonnance médicale. Prenez vos versets matin et soir. La guérison viendra, c'est une promesse : **"À côté de la difficulté est, certes, une facilité."** (94:5).
+`
+    },
+    {
+        slug: 'tawakkul-lacher-prise',
+        title: 'Le "Tawakkul" en action : Manuel de survie pour les angoissés',
+        excerpt: 'Vous imaginez toujours le pire ? Votre cerveau tourne en boucle ? Découvrez comment transformer votre anxiété naturelle en une confiance inébranlable grâce au Tawakkul actif.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '9 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Le Tawakkul : L'Antidote à l'Anxiété Chronique
+
+Nous vivons dans une culture du "Contrôle". Pour les personnes de nature anxieuse, l'incertitude est une torture. Le cerveau fabrique des scénarios catastrophes : *"Et si je perds mon travail ?"*, *"Et si malade ?"*, *"Et si..."*.
+
+L'Islam nous offre une technologie spirituelle pour briser cette boucle : le **Tawakkul** (la Confiance absolue en Allah). Mais comment l'appliquer quand on stresse naturellement ?
+
+## 1. Comprendre le Tawakkul (Ce n'est pas ce que vous croyez)
+
+Beaucoup pensent que le Tawakkul, c'est s'asseoir et attendre. Faux.
+C'est une action **du cœur** qui accompagne une action **du corps**.
+
+*   **L'équation :** Travailler comme si tout dépendait de vous + Dormir comme si tout dépendait d'Allah.
+*   **L'image :** C'est l'archer qui vise avec toute sa concentration (action), décoche la flèche, et sait qu'une fois la flèche partie, c'est le vent (le Destin) qui décide (lâcher-prise).
+
+## 2. Pour les "Cerveaux qui surchauffent" : Comment arrêter le "Et si... ?"
+
+L'angoisse vient souvent de l'illusion que nous portons le monde sur nos épaules.
+
+### Technique A : Le "Pire Scénario" (Acceptation Radicale)
+Quand une peur vous saisit, allez au bout.
+*   "J'ai peur de perdre mon travail."
+*   "D'accord, et si tu le perds ?" -> "Je n'aurai plus d'argent."
+*   "Et si tu n'as plus d'argent ?" -> "Allah me nourrira comme Il nourrit les oiseaux. Il m'ouvrira une autre porte, peut-être meilleure."
+
+Le Tawakkul, c'est accepter que **même dans le pire scénario**, Allah sera là. Si vous n'avez pas peur du résultat, vous êtes invulnérable.
+
+### Technique B : La "Zone de Contrôle"
+Dessinez deux cercles mentaux :
+1.  **Ce que je contrôle :** Mes efforts, mes invocations, ma préparation.
+2.  **Ce que je ne contrôle pas :** Le résultat, la réaction des autres, le futur.
+Les angoissés s'épuisent à essayer de gérer le cercle 2. Le Tawakkul, c'est investir 100% de son énergie dans le cercle 1 et laisser le cercle 2 au *Wakil* (Le Gérant par excellence).
+
+## 3. La "Trousse de Secours" : Les Invocations Puissantes
+
+Quand la panique monte, utilisez ces "médicaments" prophétiques. Ne les récitez pas, **vivez-les**.
+
+### L'Invocation du Lâcher-Prise total
+Le Prophète ﷺ disait quand une affaire le dépassait :
+*"Hasbunallah wa ni'ma al-Wakil"*
+(Allah nous suffit, et Il est le meilleur Garant).
+*   *Effet :* Vous dites à votre cerveau : "Le dossier est transmis plus haut."
+
+### L'Invocation contre l'Angoisse (Anxiété)
+*"Allahumma inni a'udhu bika minal hammi wal hazan..."*
+(Ô Allah, je me réfugie auprès de Toi contre les soucis et la tristesse, l'impuissance et la paresse...).
+*   *Notez :* Le Prophète ﷺ lie les "soucis" (futur) et la "tristesse" (passé). Le Tawakkul vous ramène au **présent**.
+
+### L'Invocation de la Facilité
+*"Allahumma la sahla illa ma ja'altahu sahla, wa anta taj'alu-l-hazna idha shi'ta sahla."*
+(Ô Allah, il n'y a de facile que ce que Tu rends facile, et si Tu le veux, Tu rends la chose difficile facile).
+*   *Usage :* Avant un examen, un entretien ou une épreuve.
+
+## 4. Un Exercice Pratique pour ce soir
+
+Vous avez un problème qui vous empêche de dormir ?
+1.  Faites vos ablutions et priez 2 Rak'at.
+2.  En prosternation, visualisez votre problème sous forme d'un paquet lourd.
+3.  Visualisez-vous en train de déposer ce paquet devant la Porte d'Allah.
+4.  Dites : "Ya Rabbi, j'ai fait tout ce que je pouvais. Maintenant, c'est Ton affaire. Je suis satisfait de ce que Tu décideras."
+5.  Relevez-vous léger. Vous n'avez plus le paquet.
+
+## Conclusion
+
+Le Tawakkul n'est pas une pilule magique qui fait disparaître les problèmes. C'est une ancre.
+La tempête fera rage autour du bateau, les vagues seront hautes, mais le bateau ne chavirera pas, car il est ancré au Rocher solide de la Certitude Divine. Ne soyez pas une feuille au vent, soyez un navire ancré.
+`
+    },
+    {
+        slug: '10-sourates-protectrices',
+        title: 'Les 10 Sourates et Versets Protecteurs à connaître absolument',
+        excerpt: 'Al-Mulk pour la tombe, Al-Kahf pour le Dajjal, Al-Mu\'awwidhat pour le mauvais œil... Découvrez les boucliers spirituels révélés pour votre protection.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Les Boucliers du Croyant : 10 Sourates et Versets Clés
+
+Le Coran entier est une guérison et une miséricorde. Mais le Prophète ﷺ a désigné certaines sourates comme des "spécialistes" pour des protections précises. Voici les 10 munitions indispensables pour votre arsenal spirituel.
+
+## 1. Al-Fatiha (L'Ouverture)
+C'est "La Mère du Livre" (*Umm al-Kitab*) et la sourate de la guérison (*Ash-Shafiya*).
+*   **Usage :** À réciter en cas de maladie physique ou spirituelle (Ruqya). C'est le pilier de toute invocation.
+
+## 2. Sourate Al-Baqara (La Vache)
+Le Prophète ﷺ a dit : *"Shaytan fuit la maison où l'on récite la Sourate Al-Baqara."* (Muslim).
+*   **Usage :** À lire (ou écouter) dans la maison régulièrement pour en chasser les mauvaises ondes et les djinns. Elle apporte la Baraka.
+
+## 3. Ayat al-Kursi (Le Verset du Trône - 2:255)
+C'est le sommet du Coran. Celui qui le lit :
+*   Le matin : est protégé jusqu'au soir.
+*   Le soir : est protégé jusqu'au matin.
+*   Après la prière : rien ne l'empêche d'entrer au Paradis si ce n'est la mort.
+
+## 4. Les 2 derniers versets d'Al-Baqara (285-286)
+*"Celui qui récite les deux derniers versets de la sourate Al-Baqara la nuit, ils lui suffisent."* (Bukhari).
+*   **Signification :** Ils lui suffisent comme protection contre tout mal (Qiyam al-layl, mauvais œil, etc.).
+
+## 5. Sourate Al-Kahf (La Caverne - 18)
+C'est votre protection contre la plus grande épreuve de la fin des temps : l'Antéchrist (*Dajjal*).
+*   **Le Bonus :** "Celui qui la lit le vendredi, une lumière l'éclairera jusqu'au vendredi suivant."
+
+## 6. Sourate Al-Mulk (La Royauté - 67)
+C'est "L'Avocate" ou "La Protectrice" (*Al-Mani'a*).
+Le Prophète ﷺ a dit : *"Il y a une sourate de 30 versets qui a intercédé pour un homme jusqu'à ce qu'il soit pardonné... C'est Tabarak."* (Tirmidhi).
+*   **L'habitude vitale :** À lire **chaque nuit** avant de dormir. Elle protège du châtiment de la tombe. C'est la sourate à ne jamais lâcher.
+
+## 7. Sourate Al-Kafirun (Les Infidèles - 109)
+C'est la sourate du "Désaveu".
+*   **Usage :** Le Prophète ﷺ a conseillé de la lire avant de dormir car elle est *"une innocence du polythéisme (Shirk)"*.
+
+## 8. Sourate Al-Ikhlas (Le Monothéisme Pur - 112)
+Petite par la taille, immense par le poids. Elle équivaut à **un tiers du Coran** en récompense.
+*   L'aimer, c'est gagner l'amour d'Allah.
+
+## 9 & 10. Al-Mu'awwidhatayn (Les Deux Protectrices - 113 & 114)
+**Al-Falaq** et **An-Nas**.
+Le Prophète ﷺ a dit : *"On ne s'est jamais protégé avec rien de semblable."*
+*   **Usage :** Matin et soir (3 fois), et avant de dormir. Elles sont l'arme absolue contre la jalousie (*Hasad*), la sorcellerie (*Sihr*) et les chuchotements (*Waswas*).
+
+## Conclusion
+
+Ne vous contentez pas de savoir que ces sourates existent. Activez-les.
+Intégrez *Al-Mulk* à votre routine du coucher. Lisez *Ayat al-Kursi* après chaque prière. Faites d'elles vos compagnons inséparables.
+`
+    },
+    {
+        slug: 'secrets-istijaba-invocation',
+        title: 'Pourquoi mes Duas ne sont-elles pas exaucées ? Les secrets de l\'Istijaba',
+        excerpt: 'Vous levez les mains, vous pleurez, mais rien ne se passe. Allah ne vous écoute-t-il pas ? Découvrez les conditions cachées de l\'acceptation.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '7 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Le Mystère de la Réponse Divine (Al-Istijaba)
+
+Allah a promis : *"Invoquez-Moi, Je vous répondrai."* (40:60).
+C'est une promesse divine. Allah ne ment jamais.
+Alors pourquoi avons-nous parfois l'impression de parler dans le vide ? Si la réponse ne vient pas, le blocage ne vient pas de l'Émetteur (Allah), mais du récepteur (nous) ou de la nature de la demande.
+
+## 1. Les 3 Formes de Réponse
+
+C'est la première chose à comprendre pour ne pas désespérer. Ibn Al-Jawzi explique qu'Allah répond toujours, mais sous 3 formes :
+1.  **L'Accélération :** Vous obtenez exactement ce que vous avez demandé rapidement.
+2.  **La Substitution :** Allah écarte de vous un mal équivalent (ex: vous demandez de l'argent, Il vous évite un accident de voiture).
+3.  **L'Épargne :** Il garde cette invocation pour le Jour du Jugement, où elle pèsera lourd dans la balance quand vous en aurez le plus besoin.
+
+## 2. Les Bloqueurs de Fréquence (Mawani')
+
+Imaginez essayer de capter une station radio avec un appareil défectueux. Voici ce qui parasite le signal :
+
+### A. La Nourriture Illicite (Le Bloqueur n°1)
+Le Prophète ﷺ a mentionné un homme qui voyage, lève les mains au ciel et crie *"Ya Rabb! Ya Rabb!"* (Seigneur !). Mais... *"sa nourriture est illicite, sa boisson est illicite... comment serait-il exaucé ?"* (Muslim).
+Si votre corps est nourri par l'usure (Riba), le vol, ou l'argent douteux, le ciel est verrouillé.
+*   *Action :* Purifiez vos revenus.
+
+### B. Le Cœur Distrait (L'Absence)
+*"Sachez qu'Allah ne répond pas à l'invocation d'un cœur inattentif et distrait."* (Tirmidhi).
+Dire des mots par habitude en pensant au dîner n'est pas une Doua. C'est du bruit.
+*   *Action :* Avant de lever les mains, faites le vide. Visualisez à Qui vous parlez.
+
+### C. La Précipitation (L'Impatience)
+Le Prophète ﷺ a dit : *"On vous répondra tant que vous ne vous pressez pas, en disant : 'J'ai invoqué et on ne m'a pas répondu !'"*
+Dire cela, c'est accuser Allah d'avarice ou de surdité. C'est un manque de politesse (Adab) grave qui annule la demande.
+
+## 3. Les Amplificateurs de Signal (Adab al-Du'a)
+
+Pour maximiser vos chances :
+1.  **Le Sandwich de la Louange :** Commencez par louer Allah (*Alhamdulillah, Ath-Thana*), puis priez sur le Prophète ﷺ (*Salat 'ala Nabi*). Faites votre demande. Terminez par la prière sur le Prophète ﷺ. Allah accepte les deux extrémités (la prière sur le Prophète), Il acceptera sûrement ce qui est au milieu.
+2.  **Les Moments d'Ouverture :**
+    *   Le dernier tiers de la nuit (Le moment VIP).
+    *   Entre l'Adhan et l'Iqama.
+    *   Pendant la prosternation (Sujud).
+    *   L'heure ultime du Vendredi (avant Maghreb).
+3.  **L'Insistance (Al-Ilhah) :** Allah aime celui qui insiste. Répétez votre demande 3 fois. Pleurez. Montrez votre pauvreté devant Lui.
+
+## Conclusion
+
+Ne voyez pas le retard de la réponse comme un refus, mais comme une éducation. Parfois, Allah retarde le cadeau parce qu'Il aime entendre votre voix L'implorer.
+Continuez de frapper à la porte. Elle finira par s'ouvrir, ou une fenêtre s'ouvrira ailleurs, bien meilleure que la porte que vous visiez.
+`
+    },
+    {
+        slug: 'coran-enfants-amour',
+        title: 'Transmettre l\'amour du Coran aux enfants : Erreurs à éviter et astuces ludiques',
+        excerpt: 'Ne faites pas du Coran une punition. Découvrez comment passer du "par cœur" forcé à l\'histoire vivante et faire aimer le Livre d\'Allah à vos enfants.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# Comment faire aimer le Coran à nos enfants ?
+
+C'est le rêve de tout parent : voir son enfant ouvrir le Coran de lui-même.
+Pourtant, beaucoup d'entre nous reproduisent les traumatismes de leur propre enfance : la règle sur les doigts, les cris, la mémorisation robotique sans comprendre un mot.
+Résultat ? L'enfant associe le Coran à la douleur et à l'ennui. À 15 ans, il rejette tout.
+
+Il est temps de changer de méthode.
+
+## 1. L'Erreur Fatale : La Mémoire avant l'Amour
+
+L'Imam Malik a dit : *"On n'enseigne pas le Coran comme on enseigne la poésie."*
+Si votre seul objectif est que votre enfant soit un "Hafiz" pour briller en société, vous avez raté l'essentiel. L'objectif est qu'il soit un "Compagnon du Coran".
+*   **La Règle :** L'aimer avant de l'apprendre. Un cœur qui aime apprendra vite. Un cœur qui déteste oubliera tout dès la contrainte levée.
+
+## 2. Racontez l'Histoire (Tafsir pour enfants)
+
+Avant de lui faire apprendre *Sourate Al-Fil* (L'Éléphant), racontez-lui l'histoire !
+*   *"Imagine une armée immense avec des éléphants géants qui vient écraser la Kaaba... et Allah envoie des oiseaux minuscules !"*
+*   Les yeux de l'enfant vont briller. Il demandera : *"Et après ? Et après ?"*
+*   À ce moment-là, vous dites : *"Lisons ce qu'Allah a dit là-dessus."*
+L'enfant n'apprend plus des sons abstraits, il apprend le récit épique de son Seigneur.
+
+## 3. Astuces Ludiques (Gamification)
+
+### L'Arbre du Coran
+Dessinez un grand arbre sur un carton. Chaque sourate apprise est une nouvelle feuille verte ou un fruit que l'enfant colle. Visuellement, il voit son "arbre" grandir. Ce n'est plus une corvée, c'est une collection.
+
+### Le Quiz des Prophètes
+Au lieu de regarder la télé, faites un quiz en famille. *"Qui a été avalé par une baleine ?"*, *"Qui a parlé aux animaux ?"*.
+Récompensez les bonnes réponses (pas forcément par des bonbons, mais par des privilèges : choisir le repas, faire une sortie).
+
+### Le "Héros du Soir"
+Avant de dormir, au lieu d'un conte de fées, racontez une histoire du Coran (Yusuf, Musa, Maryam). Faites les voix, mettez du suspense. Le Coran contient les meilleures histoires (*Ahsan al-Qasas*).
+
+## 4. Soyez le Modèle, pas le Professeur
+
+Les enfants ne font pas ce que vous dites, ils font ce que vous faites.
+*   Si vous ne touchez jamais le Coran sauf pour les gronder, ils verront l'hypocrisie.
+*   Si vous lisez le Coran avec plaisir, en souriant, en pleurant, ils seront intrigués. *"Qu'est-ce qu'il y a de si génial dans ce livre qui rend papa/maman si apaisé ?"*
+
+## Conclusion
+
+Ne soyez pas pressés. La graine met du temps à germer.
+Votre mission n'est pas de fabriquer un "produit fini" à 10 ans, mais de planter dans son cœur une graine d'amour qui grandira toute sa vie.
+Faites que le mot "Coran" évoque chez eux la douceur, la sécurité et la fierté, pas la punition.
+`
+    },
+    {
+        slug: 'maison-qibla-environnement',
+        title: 'Faire de sa maison une Qibla : Créer un environnement propice à l\'adoration',
+        excerpt: 'Votre maison est-elle un simple dortoir ou un sanctuaire ? Découvrez comment transformer votre foyer en une "petite mosquée" où il fait bon adorer Allah.',
+        date: '2026-02-02',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '6 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# Faire de sa maison une Qibla
+
+Allah a ordonné à Moussa et Haroun : *"Faites de vos maisons une Qibla (un lieu de prière) et accomplissez la Salat."* (Sourate Yunus 10:87).
+Dans un monde extérieur chaotique et bruyant, votre maison doit être votre refuge (*Sakan*) et votre forteresse spirituelle. Elle ne doit pas être juste un hôtel où l'on mange et dort.
+
+## 1. Le Coin Prière (Musalla)
+
+Ne priez pas n'importe où, entre la table basse et les jouets. Consacrez un espace, même d'un mètre carré, **exclusivement** à l'adoration.
+*   **La sacralisation :** Laissez le tapis de prière toujours déplié. Mettez un support avec un Coran ouvert. Parfumez cet endroit (Oud, musc).
+*   **L'effet psychologique :** Dès que vous entrez dans ce "carré VIP", votre cerveau sait qu'il est en mode "connexion divine". C'est votre Mihrab personnel.
+
+## 2. Le Fond Sonore (L'Ambiance)
+
+Si votre maison résonne du matin au soir des bruits de la télévision, des infos anxiogènes ou de musique, les Anges de la Miséricorde n'y entreront pas.
+*   **La Règle :** Remplacez le bruit de fond par la lumière de fond. Laissez tourner une récitation douce du Coran (sourate Al-Baqara par exemple) dans le salon, même à volume bas.
+*   Cela apaise les tensions familiales, calme les enfants et chasse les démons.
+
+## 3. La Halaqa Familiale (Le Cercle)
+
+Instaurez un rituel hebdomadaire (par exemple le vendredi soir).
+*   **Pas un cours magistral :** Ne faites pas la Khotba à votre famille.
+*   **Un partage :** Asseyez-vous en cercle. Servez du thé et des gâteaux (très important pour associer ce moment au plaisir !).
+*   Lisez *un* Hadith court (par ex. "Les Jardins des Vertueux") ou une histoire de Prophète pendant 10 minutes.
+*   Discutez : "Qu'est-ce qu'on retient pour notre semaine ?"
+
+## 4. Une Maison sans Image (Interdite)
+
+Les Anges de la Miséricorde n'entrent pas dans une maison où il y a des statues ou des images (représentations d'êtres vivants accrochées au mur).
+*   **La Preuve :** Le Prophète ﷺ a dit : *"Les Anges n'entrent pas dans une maison où il y a un chien ou une image."* (Rapporté par Al-Bukhari n°3225 et Muslim n°2106).
+*   **L'incident du coussin :** Aïcha (que Dieu l'agrée) avait acheté un coussin orné d'images. Le Prophète ﷺ s'est arrêté à la porte et a refusé d'entrer jusqu'à ce qu'elle s'en débarrasse. (Bukhari).
+*   **Faites le tri :** Remplacez les posters de visages/animaux par de la calligraphie, des paysages ou de l'abstrait. Faites de votre maison un lieu où les Anges se sentent "chez eux".
+
+## Conclusion
+
+Une maison où l'on adore Allah est vue par les habitants du Ciel comme une étoile qui brille pour les habitants de la Terre.
+Faites briller votre maison. Transformez-la en une annexe du Paradis.
+`
+    }
 ];
 
 

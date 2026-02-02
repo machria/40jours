@@ -13,8 +13,9 @@ export default function ConseilsPage() {
     const categories = [
         "Sagesse d'Al-Ghazali",
         "Méthodologie Coranique",
-        "Vivre l'Islam au Quotidien",
-        "Le Programme 40 Jours"
+        "Spiritualité & Guérison",
+        "Vivre l'Islam & Productivité",
+        "Sciences & Compréhension"
     ] as const;
 
     // Filter logic
