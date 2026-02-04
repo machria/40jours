@@ -2186,6 +2186,281 @@ La Muraja'ah n'est pas une corvée. C'est votre relation quotidienne avec Allah.
 Considérez votre révision non pas comme un "devoir à rendre", mais comme un "entretien avec votre Seigneur".
 Un Hafiz n'est pas celui qui a *fini* d'apprendre. C'est celui qui n'arrête *jamais* de réviser.
 `
+    },
+    {
+        slug: 'gerer-colere-sunnah-methode',
+        title: "Gérer la colère à la lumière de la Sunnah : Éteindre le feu",
+        excerpt: "La colère est une braise de l'Enfer qui peut brûler une vie en une seconde. Découvrez les \"extincteurs\" spirituels et physiologiques enseignés par le Prophète ﷺ pour ne plus exploser.",
+        date: '2026-02-04',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '11 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Gérer la Colère : Le Jihad contre Soi-même
+
+Le Prophète ﷺ a dit : **"La colère corrompt la foi comme le vinaigre corrompt le miel."** (Al-Bayhaqi).
+
+Nous avons tous vécu ces moments. Le sang bout, le cœur s'emballe, la vision se trouble. Une seconde plus tard, des mots blessants sortent, une porte claque, ou pire. Et une minute plus tard... le regret amer.
+La colère est l'arme de destruction massive de Shaytan. Elle détruit les familles, brise les amitiés et efface les bonnes actions.
+
+Mais l'Islam ne nous demande pas de ne *jamais* ressentir de colère (c'est humain !). Il nous enseigne comment la *dompter* avant qu'elle ne morde.
+
+## 1. Redéfinir la Force
+
+Dans notre société, celui qui crie le plus fort ou qui frappe est vu comme "fort". L'Islam inverse totalement ce paradigme.
+
+Le Messager d'Allah ﷺ a dit : **"L'homme fort n'est pas celui qui terrasse ses adversaires à la lutte. L'homme fort est celui qui se maîtrise lors de la colère."** (Bukhari & Muslim).
+
+La vraie force est interne. C'est la capacité de mettre un frein à main mental alors que tout votre corps veut accélérer.
+
+## 2. Le "Protocole d'Urgence" Prophétique
+
+Le Prophète ﷺ nous a donné une "trousse de secours" en 4 étapes pour éteindre l'incendie dès l'étincelle.
+
+### Étape 1 : Le Bouclier Verbal (L'Isti'adha)
+Dès que vous sentez la chaleur monter, dites immédiatement :
+**"A'udhu bi-Llahi min ash-Shaytan ir-Rajim"** (Je cherche refuge auprès d'Allah contre Satan le maudit).
+
+Un jour, deux hommes se disputaient violemment devant le Prophète ﷺ. L'un d'eux avait le visage rouge et les veines du cou gonflées. Le Prophète ﷺ dit : *"Je connais une parole, s'il la prononçait, ce qu'il ressent disparaîtrait..."*
+C'est le "coupe-circuit". Cela vous rappelle que vous n'êtes pas juste "énervé", mais que vous êtes *attaqué* par un ennemi invisible qui veut vous faire faire une bêtise.
+
+### Étape 2 : Le Changement de Position (La Gravité)
+Le Prophète ﷺ a dit : **"Si l'un de vous se met en colère alors qu'il est debout, qu'il s'asseye. Si la colère ne part pas, qu'il s'allonge."** (Abou Dawoud).
+
+C'est une technique psycho-physiologique géniale :
+*   La colère est une énergie d'agression (préparation au combat). On attaque debout.
+*   En s'asseyant, on désamorce le corps. On se met en position de non-combat.
+*   En s'allongeant, on est au sol, proche de la poussière. Il est impossible de crier ou de taper efficacement en étant allongé. Cela force le système nerveux à ralentir.
+
+### Étape 3 : Le Silence (Le Verrou)
+**"Si l'un de vous se met en colère, qu'il se taise."** (Ahmad).
+
+C'est le conseil le plus dur, mais le plus sauveur. Sous la colère, votre cerveau reptilien prend le contrôle et votre intelligence se déconnecte. Tout ce que vous direz sera faux, injuste ou exagéré.
+Taisez-vous. Littéralement. Mordez votre langue si il le faut. La victoire n'est pas d'avoir le dernier mot, c'est de ne pas prononcer le mot de trop.
+
+### Étape 4 : L'Extinction par l'Eau (Wudu)
+**"La colère vient de Satan, et Satan a été créé de feu. Et le feu ne s'éteint que par l'eau. Donc, si l'un de vous se met en colère, qu'il fasse ses ablutions."** (Abou Dawoud).
+
+La colère est physiquement une "chaleur" (vasodilatation). L'eau froide sur le visage et les membres refroidit littéralement le corps et apaise l'esprit par la dimension rituelle. C'est le reset ultime.
+
+## 3. La Récompense du "Désamorceur"
+
+Ceux qui avalent leur colère ne sont pas des faibles qui "se laissent faire", ce sont des géants spirituels.
+
+Allah décrit les habitants du Paradis comme ceux :
+**"...qui dominent leur rage et pardonnent à autrui."** (Sourate Ali 'Imran, 3:134).
+
+Le Prophète ﷺ a promis : **"Celui qui ravale sa colère alors qu'il est capable de l'assouvir, Allah l'appellera devant toutes les créatures le Jour de la Résurrection pour lui laisser choisir les Houris qu'il voudra."** (Tirmidhi).
+
+## Conclusion
+
+La prochaine fois que quelqu'un vous coupe la route, que vos enfants renversent du jus sur le tapis ou que votre conjoint(e) vous critique :
+1.  Ne réagissez pas tout de suite.
+2.  Prenez 5 secondes.
+3.  Cherchez refuge auprès d'Allah.
+4.  Asseyez-vous si besoin.
+
+Vous ne regretterez jamais d'avoir gardé votre calme. Vous regretterez toujours d'avoir laissé le feu tout brûler.
+`
+    },
+    {
+        slug: 'waswas-identifier-ignorer-liberer',
+        title: "Le Waswas (Chuchotements) : Comment le vaincre ?",
+        excerpt: "Vous avez des pensées horribles qui traversent votre esprit ? Vous refaites vos ablutions 10 fois ? Ce n'est pas de la piété, c'est du Waswas. Apprenez la technique du \"non-jugement\" pour vous libérer.",
+        date: '2026-02-04',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '12 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Le Waswas : Ce n'est PAS vous
+
+Il arrive que des croyants sincères viennent voir des imams en pleurant, terrifiés : *"J'ai des pensées blasphématoires sur Allah... J'ai des doutes sur ma foi... Je crois que je suis sorti de l'Islam !"*
+Ou alors, ils passent 45 minutes dans la salle de bain, persuadés que leur Wudu n'est jamais valide.
+
+Si c'est votre cas, respirez.
+Ce que vous vivez a un nom : le **Waswas** (les suggestions sataniques). Et la bonne nouvelle, c'est que le simple fait que cela vous dégoûte prouve que vous avez la foi.
+
+## 1. Diagnostic : Qui parle ?
+
+Le cerveau humain est comme une radio qui capte des fréquences.
+*   **La fréquence du Nafs :** Vos envies, vos peurs.
+*   **La fréquence de l'Ange :** L'inspiration au bien (*Ilham*).
+*   **La fréquence du Diable :** Le Waswas.
+
+Le but du Shaytan est de vous rendre la religion insupportable. Il a deux attaques principales :
+1.  **Le Waswas de la Foi (*Aqida*) :** Il jette des insultes ou des doutes sur Allah dans votre esprit pour vous faire croire que c'est *vous* qui pensez ça.
+2.  **Le Waswas des actes (*Fiqh*) :** Il vous fait douter de la pureté ("Tu as lâché un gaz", "Tu as oublié de laver ton coude") pour vous fatiguer et vous faire détester la prière.
+
+## 2. La Preuve de la Foi
+
+Des Compagnons sont venus voir le Prophète ﷺ, très angoissés : *"Ô Messager d'Allah, nous trouvons en nous-mêmes des pensées si graves que nous préférerions être brûlés en charbon plutôt que de les prononcer."*
+Le Prophète ﷺ sourit et demanda : **"Ressentez-vous vraiment cela [cette horreur] ?"**
+Ils dirent : *"Oui !"*
+Il dit : **"C'est la foi pure (Sarih al-Iman)."** (Muslim).
+
+**Pourquoi ?**
+Parce qu'un voleur ne cambriole pas une maison vide. Shaytan n'attaque que les cœurs qui contiennent le trésor de la foi. Si vous n'aviez pas de foi, ces pensées ne vous dérangeraient pas !
+
+## 3. La Stratégie de Défense (Le "Ignore & Go")
+
+Comment guérir ? Il n'y a qu'un seul remède, validé par tous les savants de la guérison des cœurs : **L'IGNORANCE TOTALE.**
+
+### Règle 1 : Ne pas discuter
+N'essayez jamais de débattre avec le Waswas.
+*   *Waswas : "Et qui a créé Allah ?"*
+*   *Vous (Erreur) : "Bah personne, Il est incréé..."*
+*   *Waswas : "Mais comment c'est possible ?..."*
+Vous avez perdu. Vous avez ouvert la porte.
+Dès que la pensée arrive, dites **"Amantu bi-Llah"** (J'ai cru en Allah) et coupez net. Passez à autre chose. Changez d'activité.
+
+### Règle 2 : Le Doute ne l'emporte pas sur la Certitude
+C'est une règle de Fiqh majeure (*Al-Yaqin la yazulu bi-shakk*).
+*   Vous êtes sûr d'avoir fait vos ablutions.
+*   Vous avez un doute (50/50) si vous les avez perdues.
+*   **Verdict :** Vous avez vos ablutions. Le doute (faible) ne chasse pas la certitude (forte). Ne refaites RIEN. Même si Shaytan vous dit "ta prière est nulle", répondez-lui (dans votre tête) : "Tant mieux, je veux qu'elle soit nulle !" et continuez.
+C'est en refusant d'obéir à la compulsion que vous affamez la bête. Si vous refaites, vous la nourrissez.
+
+### Règle 3 : Le "Non-Jugement"
+Dissociez-vous de la pensée.
+Imaginez que vous êtes sur un quai de gare. Le train "Pensée Horrible" passe devant vous.
+*   Ne montez pas dedans (ne la développez pas).
+*   Ne vous jetez pas sur les rails pour l'arrêter (ne paniquez pas).
+*   Regardez-le passer et dites : "Tiens, un Waswas passe." Et laissez-le partir.
+Ce n'est **pas votre pensée**. C'est un spam envoyé dans votre boîte mail mentale. Vous n'êtes pas responsable du spam que vous recevez, seulement de ne pas cliquer sur le lien !
+
+## 4. Le Remède Spirituel
+
+Le Prophète ﷺ a recommandé :
+1.  **L'Isti'adha :** Dire *Audhu bi-Llahi min ash-Shaitan ir-rajim*.
+2.  **La Fin (*Al-Intiha*) :** Se dire "STOP" fermement.
+3.  **La lecture de Sourate Al-Nas :** Elle a été révélée spécifiquement pour cela (*min sharri l-waswasi l-khannas*).
+
+## Conclusion
+
+Le Waswas est comme un chien qui aboie sur votre chemin vers Allah.
+Si vous vous arrêtez pour crier sur le chien ou lui jeter des pierres, vous n'avancerez plus. Le chien aura gagné.
+Ignorez le chien, et continuez à marcher vers le Palais du Roi. Au bout d'un moment, ses aboiements s'éloigneront.
+
+Courage, ce combat est la preuve que votre cœur est vivant.
+`
+    },
+    {
+        slug: 'sieste-qaylula-productivite',
+        title: "La Sieste (Qaylula) : Le hack de productivité oublié",
+        excerpt: "Vous vous sentez épuisé à 14h ? Ne buvez pas un énième café. Redécouvrez la Qaylula, cette sieste stratégique pratiquée par le Prophète ﷺ, désormais validée par la NASA pour booster votre cerveau.",
+        date: '2026-02-04',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# La Qaylula : Dormir pour mieux s'éveiller
+
+Dans notre culture moderne du "toujours plus", dormir est vu comme une perte de temps, voire de la paresse.
+Pourtant, le Prophète ﷺ a dit : **"Faites la sieste (Qaylula), car les diables ne font pas la sieste."** (Al-Tabarani).
+
+Ce n'est pas juste un conseil religieux, c'est une ingénierie biologique de pointe.
+
+## 1. Pourquoi avons-nous un "coup de barre" ?
+
+Ce n'est pas (seulement) à cause de la digestion. C'est votre **rythme circadien**.
+L'être humain est programmé biologiquement pour avoir deux pics de sommeil :
+1.  La nuit (évidemment).
+2.  Le début d'après-midi (environ 6 à 8 heures après le réveil).
+
+Lutter contre ce pic avec de la caféine est une erreur. C'est comme conduire avec le frein à main. La Sunnah nous apprend à surfer sur cette vague plutôt que de nager à contre-courant.
+
+## 2. La Science de la "Power Nap"
+
+La NASA a mené une étude sur ses pilotes. Résultat : une sieste de **26 minutes** améliore les performances de **34%** et la vigilance de **54%**.
+Les grandes entreprises (Google, Nike) installent désomais des "nap pods" (cabines de sieste). Ils redécouvrent ce que l'Islam enseigne depuis 1400 ans.
+
+### Les Bénéfices Spirituels et Physiques :
+*   **Reset Cérébral :** Elle vide le cache de la mémoire à court terme, vous rendant prêt à apprendre de nouvelles choses l'après-midi.
+*   **Force pour la Nuit :** L'Imam Al-Ghazali disait que la Qaylula est à la prière de la nuit (Qiyam) ce que le Suhur est au jeûne du jour. C'est le carburant qui permet de se lever pour Fajr ou Tahajjud avec énergie.
+*   **Humeur :** Elle réduit le cortisol (hormone du stress). On est moins irritable avec sa famille le soir.
+
+## 3. Le Mode d'Emploi de la Qaylula
+
+Attention, il y a sieste et sieste.
+Dormir 3 heures l'après-midi vous laissera groggy ("ivresse du sommeil") et ruinera votre nuit.
+
+**La Règle des 20 minutes (ou 90 minutes) :**
+*   **L'idéal (La Sunnah) :** 10 à 20 minutes. Juste assez pour se détendre sans tomber en sommeil profond. Vous vous réveillez frais et dispo.
+*   **Le cycle complet :** 90 minutes. Si vous êtes vraiment en dette de sommeil. Mais c'est risqué pour votre nuit suivante.
+
+**Le Timing :**
+Le temps de la Qaylula est large : il peut être **avant** Dhuhr (c'était la pratique courante des Compagnons en hiver) ou **après** Dhuhr (plus courant en été ou le vendredi).
+Le verset dit : *"...et au moment où vous déposez vos vêtements [pour vous reposer] à midi..."* (Sourate An-Nur, 24:58).
+
+## Conclusion
+
+Ne dites plus "Je n'ai pas le temps de dormir". Dites "Je n'ai pas le temps d'être inefficace".
+Fermer les yeux 15 minutes, c'est aiguiser la hache pour couper l'arbre beaucoup plus vite le reste de la journée.
+C'est une adoration, une Sunnah, et un secret de productivité.
+`
+    },
+    {
+        slug: 'alimentation-prophetique-conscience',
+        title: "L'Alimentation Prophétique : Manger avec conscience",
+        excerpt: "On dit \"Tu es ce que tu manges\". En Islam, c'est spirituellement vrai. Un estomac rempli de haram ou simplement trop rempli aveugle le cœur. Quelle était la diététique du Prophète ﷺ ?",
+        date: '2026-02-04',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '13 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# L'Assiette et le Cœur : Le Lien Invisible
+
+L'Imam Al-Ghazali a dit : **"Celui qui ne contrôle pas son estomac ne contrôlera pas son sexe, ni sa langue, ni ses membres."**
+L'estomac est la source des désirs. S'il est déréglé, tout le corps suit.
+
+Aujourd'hui, nous mangeons pour le plaisir, pour l'ennui, ou par habitude sociale. La Sunnah nous invite à manger pour **la mission**.
+
+## 1. La Règle des Tiers (Le "Stop" avant la satiété)
+
+C'est le hadith le plus célèbre et le plus ignoré sur la nutrition.
+Le Prophète ﷺ a dit : **"Le fils d'Adam ne remplit pas de récipient pire que son ventre. Quelques bouchées suffisent à maintenir ses reins solides. S'il doit absolument manger plus, alors : un tiers pour la nourriture, un tiers pour la boisson, et un tiers pour son souffle."** (Tirmidhi).
+
+### L'Explication Physiologique
+L'estomac est un sac musculaire élastique. Si vous le remplissez à 100% de solides :
+1.  Il n'y a pas de place pour les sucs gastriques (liquides) pour bien digérer.
+2.  Il n'y a pas de place pour l'air (le souffle). Le diaphragme est compressé, ce qui entraîne essoufflement et fatigue immédiate après le repas.
+
+### L'Impact Spirituel
+La satiété excessive (*Al-Shiba'*) rend le corps lourd et l'esprit paresseux. On a envie de dormir, pas de prier. Le cœur s'endurcit. La faim légère garde l'esprit vif et le cœur sensible au rappel.
+
+## 2. Halal ET Tayyib (Licite et Sain)
+
+Allah nous ordonne : **"Ô gens ! De ce qui existe sur la terre, mangez le licite (Halal) et le pur (Tayyib)."** (Sourate Al-Baqara, 2:168).
+
+Nous sommes obsédés par le Halal (est-ce que l'animal a été égorgé ? y a-t-il de l'alcool ?). C'est très bien. Mais nous oublions souvent le **Tayyib**.
+Le *Tayyib*, c'est ce qui est bon, pur, sain, naturel.
+*   Un poulet nourri aux hormones, élevé dans la souffrance, bourré d'antibiotiques... est-il vraiment *Tayyib*, même s'il est techniquement *Halal* ?
+*   La "Junk Food" ultra-transformée qui détruit votre santé (le dépôt qu'Allah vous a confié) est-elle *Tayyib* ?
+
+L'alimentation prophétique est simple et naturelle : dattes, orge, lait, miel, huile d'olive, viande (occasionnellement, pas tous les jours !), courge, vinaigre.
+Le Prophète ﷺ ne mangeait jamais d'aliments complexes ou mélangés à l'excès.
+
+## 3. La Pleine Conscience (Mindful Eating)
+
+Le Prophète ﷺ ne mangeait jamais "en passant", debout ou devant un écran (s'il en avait eu un).
+Le repas était un rituel sacré.
+1.  **S'asseoir :** Manger assis calme le système nerveux.
+2.  **La Main Droite :** Manger avec 3 doigts. Cela ralentit la prise alimentaire et améliore la digestion (on mange moins vite).
+3.  **Partager :** "Le repas d'un suffit à deux". Manger ensemble apporte la Barakah (bénédiction). On est rassasié plus vite.
+4.  **Louer :** Commencer par *Bismillah* et finir par *Alhamdulillah*. Reconnaître que cette énergie vient d'Allah pour nous permettre de L'adorer.
+
+## 4. Le Jeûne : Le Nettoyage Interne
+
+Enfin, l'alimentation prophétique inclut... le non-manger.
+Le jeûne du Lundi et Jeudi ou les Jours Blancs (13, 14, 15 du mois lunaire) permet au corps de se détoxifier (autophagie) et à l'âme de se discipliner.
+C'est le seul moment où l'estomac se repose vraiment.
+
+## Conclusion
+
+Votre corps est la monture de votre âme pour son voyage vers l'Au-delà.
+Si vous donnez du mauvais carburant à votre monture, ou si vous la surchargez de bagages inutiles, elle tombera en panne avant d'arriver à destination.
+Mangez comme un voyageur qui a besoin de forces, pas comme un touriste qui cherche juste le plaisir.
+`
     }
 ];
 
