@@ -31,7 +31,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
+    <main className="min-h-screen p-4 md:p-8">
       <header className="mb-8 text-center space-y-2">
         <h1 className="text-4xl md:text-5xl font-bold font-kufi text-primary">Coran 40 Jours</h1>
         <p className="text-muted-foreground text-lg">Votre compagnon spirituel pour compléter le Coran.</p>
@@ -185,6 +185,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }
