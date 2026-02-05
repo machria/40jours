@@ -677,7 +677,7 @@ C'est le secret de l'exaucement. Adaptez votre demande au Nom correspondant :
 
 ## 3. Vivre par ces Noms (Amal)
 
-C'est l'étape ultime. Si vous savez qu'Allah est **As-Sami** (Celui qui entend tout), alors surveillez votre langue. Si vous savez qu'Il est **Ar-Razzaq** (Le Pourvoyeur), ne craignez pas pour votre avenir financier et ne volez pas.
+C'est l'étape ultime. Si vous savez qu'Allah est **As-Sami'** (Celui qui entend tout), alors surveillez votre langue. Si vous savez qu'Il est **Ar-Razzaq** (Le Pourvoyeur), ne craignez pas pour votre avenir financier et ne volez pas.
 
 ## Découvrez notre section "99 Noms"
 
@@ -2198,7 +2198,7 @@ Un Hafiz n'est pas celui qui a *fini* d'apprendre. C'est celui qui n'arrête *ja
         content: `
 # Gérer la Colère : Le Jihad contre Soi-même
 
-Le Prophète ﷺ a dit : **"La colère corrompt la foi comme le vinaigre corrompt le miel."** (Al-Bayhaqi).
+Le Messager d’Allah (ﷺ) a dit : « Un homme peut dire un mot qui met Allah en colère sans voir de mal en cela, mais cela le fera tomber en Enfer à une profondeur de soixante-dix automnes. » (Ibn Majah 3970)
 
 Nous avons tous vécu ces moments. Le sang bout, le cœur s'emballe, la vision se trouble. Une seconde plus tard, des mots blessants sortent, une porte claque, ou pire. Et une minute plus tard... le regret amer.
 La colère est l'arme de destruction massive de Shaytan. Elle détruit les familles, brise les amitiés et efface les bonnes actions.
