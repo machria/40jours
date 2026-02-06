@@ -2461,6 +2461,313 @@ Votre corps est la monture de votre âme pour son voyage vers l'Au-delà.
 Si vous donnez du mauvais carburant à votre monture, ou si vous la surchargez de bagages inutiles, elle tombera en panne avant d'arriver à destination.
 Mangez comme un voyageur qui a besoin de forces, pas comme un touriste qui cherche juste le plaisir.
 `
+    },
+    {
+        slug: '7-habitudes-sante-prophete',
+        title: '7 Habitudes du Prophète ﷺ pour rester en bonne santé',
+        excerpt: 'La santé est une couronne sur la tête des bien-portants que seuls les malades voient. Découvrez l\'hygiène de vie prophétique, entre médecine préventive et sagesse spirituelle.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '7 min',
+        category: 'Vivre l\'Islam & Productivité',
+        content: `
+# 7 Habitudes du Prophète ﷺ pour rester en bonne santé
+
+Le Prophète ﷺ n'était pas seulement un guide spirituel, il était aussi un modèle de santé physique. Son corps était fort, son énergie inépuisable, et son hygiène de vie impeccable. Voici 7 habitudes tirées de sa Sunnah pour transformer votre capital santé.
+
+## 1. La Règle des Tiers (La Modération)
+Nous en avons déjà parlé, mais c'est la base absolue.
+**"Un tiers pour la nourriture, un tiers pour la boisson, un tiers pour le souffle."**
+Manger trop crée de l'inflammation, de la fatigue et de la lourdeur. Manger peu (juste ce qu'il faut) garde le corps en alerte et léger.
+
+## 2. Le Jeûne Intermittent (Lundi & Jeudi)
+Bien avant que la science moderne ne découvre les bienfaits du jeûne intermittent sur l'autophagie (le nettoyage cellulaire) et l'insuline, le Prophète ﷺ jeûnait régulièrement chaque semaine (lundi et jeudi) et chaque mois (les 3 jours blancs).
+C'est le "reset" de votre système digestif.
+
+## 3. L'Hygiène Bucco-Dentaire (Le Siwak)
+Le Prophète ﷺ aimait le Siwak de manière obsessionnelle. Il l'utilisait au réveil, avant chaque prière, en rentrant chez lui, et avant de dormir.
+**"Si je ne craignais pas de surcharger ma communauté, je leur aurais ordonné le Siwak avant chaque prière."** (Bukhari).
+La santé commence par la bouche. Des gencives saines signifient souvent un cœur sain.
+
+## 4. Le Sommeil Réparateur (Tôt et sur le flanc droit)
+Le Prophète ﷺ détestait dormir avant la prière de 'Isha et détestait parler après.
+Il se couchait tôt pour se lever tôt (pour le Qiyam).
+Il dormait sur son flanc droit, la main sous la joue. La science montre aujourd'hui que dormir sur le côté droit facilite le travail du cœur et la vidange gastrique, contrairement au côté gauche qui comprime les organes.
+
+## 5. L'Activité Physique (La Marche Active)
+Le Prophète ﷺ n'était pas sédentaire. Les compagnons disaient qu'il marchait si vite qu'ils avaient du mal à le suivre, "comme si la terre se pliait sous ses pieds".
+Il faisait de la marche rapide (*Harwala*), de l'équitation, et même de la lutte. Un corps de croyant doit être fort pour servir Allah.
+
+## 6. La Médecine Prophétique (Hijama & Miel)
+**"Le meilleur de vos remèdes est la Hijama."** (Bukhari).
+Le Prophète ﷺ utilisait des remèdes naturels. Il se faisait faire la Hijama (ventouses) pour détoxifier son sang.
+Il consommait aussi du **miel** régulièrement, souvent mélangé à de l'eau à jeun. Allah dit : **"De leur ventre, sort une liqueur, aux couleurs variées, dans laquelle il y a une guérison pour les gens."** (Sourate An-Nahl, 16:69).
+C'est la pharmacie naturelle du croyant.
+
+## 7. La Gestion du Stress (Ne te mets pas en colère)
+Le stress oxydatif tue. La colère est un poison.
+Quand un homme lui a demandé conseil, il a répété trois fois : **"Ne te mets pas en colère."**
+Le Prophète ﷺ gérait son stress par la prière (**"Bilal, apaise-nous par la prière"**) et le Dhikr. Un esprit apaisé donne un corps sain.
+`
+    },
+    {
+        slug: '5-histoires-echec-coran',
+        title: '5 Histoires du Coran qui changent votre vision de l\'échec',
+        excerpt: 'Vous avez échoué ? Vous vous sentez brisé ? Le Coran regorge d\'histoires où l\'échec apparent était en réalité le début de la victoire suprême.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '9 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# L'Échec n'est qu'un Brouillon de la Victoire
+
+Nous avons peur d'échouer. Peur de perdre notre emploi, de rater un examen, de divorcer, de pécher.
+Mais dans le dictionnaire d'Allah, le mot "Échec" a un sens différent.
+
+## 1. Adam (as) : La chute qui élève
+Adam a commis la première erreur de l'humanité. Il a mangé de l'arbre interdit. Résultat ? Expulsé du Paradis. L'échec total apparemment.
+Mais cet échec a conduit au **Repentir** (*Tawbah*). Et par ce repentir, Adam a connu la Miséricorde d'Allah d'une manière qu'il n'aurait jamais connue s'il était resté parfait.
+**Leçon :** Parfois, il faut tomber pour apprendre à se relever plus humblement. Un pécheur repentant est plus aimé d'Allah qu'un dévot orgueilleux.
+
+## 2. Nuh (as) : 950 ans de "non-résultats"
+Imaginez prêcher pendant 950 ans... et n'avoir qu'une poignée de suiveurs.
+Selon les standards du marketing moderne, c'est un échec cuisant. "Mauvais taux de conversion".
+Mais auprès d'Allah, Nuh (Noé) est l'un des 5 plus grands messagers (*Ulul Azm*). Pourquoi ? Parce que le succès ne se mesure pas au chiffre, mais à la constance et à l'effort.
+**Leçon :** Allah ne vous demande pas le résultat, Il vous demande l'effort.
+
+## 3. Yunus (as) : L'abandon et la Baleine
+Yunus (Jonas) a abandonné sa mission. Il est parti en colère.
+Résultat ? Avalé par une baleine dans les ténèbres de la mer. Une situation de désespoir absolu.
+C'est là, dans le ventre du "monstre", qu'il a prononcé son invocation légendaire : *"Pas de divinité à part Toi ! Pureté à Toi ! J'ai été du nombre des injustes."*
+Cet échec l'a mené à une proximité avec Allah qu'il n'avait pas avant.
+**Leçon :** D'après Ibn Taymiyya, le "Merveilleux" (*Karamat*) sort souvent des ténèbres de l'épreuve.
+
+## 4. Yusuf (as) : La Prison avant le Palais
+Jeté dans un puits par ses frères. Vendu comme esclave. Accusé faussement de viol. Jeté en prison pour des années.
+Une succession de catastrophes.
+Mais sans le puits, pas d'Egypte. Sans l'esclavage, pas de maison du ministre. Sans la prison, pas de rencontre avec le Roi.
+Chaque "échec" était en fait une marche de l'escalier vers son triomphe.
+**Leçon :** Ce que vous voyez comme un blocage est en réalité une redirection divine.
+
+## 5. Le Prophète ﷺ à Ta'if : Le Rejet Humain
+Quand le Prophète ﷺ est allé à Ta'if pour chercher du soutien, il a été caillassé par les enfants et les fous jusqu'à ce que ses sandales collent à ses pieds par le sang.
+Humiliation totale. Rejet complet.
+C'est à ce moment de brisure totale qu'Allah lui a envoyé l'ange des montagnes (qu'il a refusé d'utiliser pour se venger) et surtout... c'est juste après cela qu'a eu lieu **Al-Isra wal-Mi'raj** (L'Ascension Nocturne).
+De la poussière de Ta'if au trône d'Allah.
+**Leçon :** Quand les portes de la terre se ferment, c'est que les portes du Ciel vont s'ouvrir.
+`
+    },
+    {
+        slug: '3-moments-dua-rejetee',
+        title: 'Les 3 moments où l\'invocation (Du\'a) est rejetée',
+        excerpt: 'Vous invoquez et rien ne se passe ? Avant de douter d\'Allah, vérifiez si vous n\'avez pas involontairement mis un barrage sur la route de vos prières.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '6 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Pourquoi ma Doua est-elle bloquée ?
+
+Allah a promis : **"Invoquez-Moi, Je vous exaucerai."** (40:60).
+C'est une promesse Divine. Allah ne ment jamais.
+Si l'exaucement ne vient pas, le problème ne vient pas de l'Émetteur (Allah), mais du récepteur ou du canal (nous).
+
+Voici 3 barrages fréquents qui bloquent nos invocations.
+
+## 1. L'Alimentation Illicite (Le Blocage Physique)
+C'est la cause numéro 1 citée par le Prophète ﷺ.
+Il a mentionné un homme qui voyage (situation propice à l'exaucement), échevelé et poussiéreux (signe d'humilité), levant les mains au ciel (geste de demande) en criant "Ô Seigneur ! Ô Seigneur !".
+**"Mais sa nourriture est illicite (Haram), sa boisson est illicite, ses vêtements sont illicites et il a été nourri de l'illicite. Comment donc serait-il exaucé ?"** (Muslim).
+
+Le Haram dans le ventre est comme un "brouilleur" de signal. Que ce soit de l'alcool, du porc, ou plus couramment **de l'argent gagné de manière malhonnête** (intérêts usuraires, vol, tromperie au travail).
+
+## 2. Le Cœur Distrait (Le Blocage Spirituel)
+Vous faites des Douas "par cœur", machinalement, pendant que votre esprit pense à votre liste de courses ou à votre téléphone ?
+Le Prophète ﷺ a dit : **"Sachez qu'Allah n'exauce pas l'invocation d'un cœur inattentif et distrait."** (Tirmidhi).
+
+Une Doua n'est pas une formule magique. C'est une conversation. Si vous parlez à un Roi en regardant ailleurs, il ne vous écoutera pas.
+Pour qu'elle monte, la Doua doit sortir du fond du cœur, avec émotion et présence.
+
+## 3. La Précipitation (Le Blocage Psychologique)
+C'est le piège de l'impatience. On invoque une semaine, deux semaines... rien ne se passe. Alors on arrête.
+Le Prophète ﷺ a dit : **"L'un de vous sera exaucé tant qu'il ne se précipite pas en disant : 'J'ai invoqué et on ne m'a pas répondu'."** (Bukhari).
+
+Abandonner la Doua parce que "ça ne marche pas", c'est accuser Allah d'avarice ou de faiblesse.
+Allah répond toujours, mais à SA manière :
+1.  Il vous donne ce que vous demandez tout de suite.
+2.  Il retarde le don car c'est mieux pour vous (pour vous purifier ou augmenter votre récompense).
+3.  Il écarte de vous un mal équivalent que vous ignoriez.
+4.  Il vous le garde pour l'Au-delà (le meilleur trésor).
+
+Ne coupez jamais le fil du téléphone. Continuez d'appeler.
+`
+    },
+    {
+        slug: 'secrets-sujud-prosternation',
+        title: 'Les secrets du Sujud : Pourquoi est-ce la position la plus proche d\'Allah ?',
+        excerpt: 'Ce n\'est pas juste une posture de prière. C\'est un "reset" physiologique pour le cerveau et une ascension spirituelle pour l\'âme. Découvrez la puissance de la prosternation.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '8 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Le Sujud : L'Ascension par la Descente
+
+Le Prophète ﷺ a dit : **"La position où le serviteur est le plus proche de son Seigneur est la prosternation. Alors, multipliez-y les invocations."** (Muslim).
+
+C'est le paradoxe divin : pour monter au plus haut (vers Allah), il faut descendre au plus bas (le front sur le sol).
+Mais que se passe-t-il réellement quand nous nous prosternons ?
+
+## 1. La Physiologie : Un "Reset" pour le Cerveau
+
+Nous passons notre journée debout ou assis. Le sang doit lutter contre la gravité pour atteindre le cerveau.
+En Sujud, le cerveau se retrouve plus bas que le cœur.
+*   **Afflux Oygéné :** Le sang riche en oxygène inonde le cortex préfrontal (la zone de la décision, de la concentration et de la personnalité). C'est comme un "nettoyage" mental.
+*   **Décharge Électrostatique (Grounding) :** Nous accumulons des charges électrostatiques toute la journée (écrans, ondes, stress). Poser le front sur le sol permet de décharger cet excès vers la terre. C'est l'effet "prise de terre" qui apaise le système nerveux et réduit l'inflammation.
+
+## 2. La Psychologie : Briser l'Ego
+
+L'homme est fier. Il lève la tête, bombe le torse.
+Le Sujud est l'acte ultime de soumission. Vous prenez la partie la plus noble de votre corps (le visage, siège de l'identité et de l'honneur) et vous la posez là où on marche (la poussière).
+C'est dire physiquement : *"Ô Allah, je ne suis rien devant Ta Grandeur. Tu es le Très-Haut (Al-A'la), je suis le très-bas."*
+Cet acte brise l'orgueil (*Kibr*) et remet l'humain à sa place de serviteur (*Abd*). Et c'est là qu'il trouve sa vraie liberté.
+
+## 3. Le Spirituel : La Chute des Péchés
+
+Le Prophète ﷺ nous a donné une image magnifique :
+**"Lorsque le serviteur se tient debout pour prier, tous ses péchés sont placés sur sa tête et ses épaules. À chaque fois qu'il s'incline (Ruku) ou se prosterne (Sujud), les péchés tombent de lui."** (Authentifié par Al-Albani).
+
+Imaginez, à chaque Sujud, une pluie de péchés qui quittent votre dos. N'est-ce pas une raison de prolonger ce moment ?
+
+## 4. L'Exaucement : Le Code Secret
+
+Ibn Al-Qayyim disait que le Sujud est le "secret de la prière".
+C'est le moment "VIP". Vous êtes en audience privée.
+Ne récitez pas vos Douas à la vitesse de l'éclair. Prenez le temps.
+*   Demandez le Paradis.
+*   Plaignez-vous de vos soucis.
+*   Demandez la guidée.
+C'est le moment où le voile est le plus fin.
+
+**Conseil Pratique :** Ne faites pas du Sujud un simple mouvement de gymnastique ("picorer comme un coq"). Restez-y. Sentez le sang descendre. Sentez la proximité. Et ne relevez la tête que lorsque votre cœur s'est apaisé.
+`
+    },
+    {
+        slug: 'khushu-concentration-secours',
+        title: 'Le Khushu\' (Concentration) : Guide de secours quand l\'esprit s\'évade',
+        excerpt: 'Vous dites "Allahu Akbar" et soudain votre esprit part faire les courses ou ressasser une discussion ? Ce n\'est pas une fatalité. Voici comment reprendre le contrôle.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '7 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Au secours, je perds ma prière !
+
+C'est la plainte numéro 1 des croyants : "Je prie, mais je ne suis pas là."
+Le corps est à la mosquée, mais le cœur est au bureau ou au supermarché.
+Ce manque de **Khushu'** (humilité/concentration) transforme la prière en une gymnastique vide.
+
+## 1. Identifier l'Ennemi : Khinzab
+
+Ce n'est pas "juste" votre cerveau qui vagabonde. C'est une attaque ciblée.
+Uthman b. Abî al-‘As est venu se plaindre au Prophète ﷺ : *"Ô Messager d'Allah, le diable s'interpose entre moi et ma prière et trouble ma récitation."*
+Le Prophète ﷺ répondit : **"C'est un démon appelé Khinzab. Si tu sens sa présence, cherche refuge auprès d'Allah contre lui et crachote (sèchement) sur ta gauche trois fois."** (Muslim).
+
+Nommer l'ennemi est la première étape. Quand une pensée bizarre ("Est-ce que j'ai fermé le gaz ?") arrive en plein milieu de la Fatiha, dites-vous : "Tiens, c'est Khinzab."
+
+## 2. La Zone Tampon (Le Sas de Décompression)
+
+On ne peut pas passer du "scroll sur TikTok" à "Allahu Akbar" en 2 secondes et espérer être concentré. C'est impossible. Le cerveau a de l'inertie.
+Il faut une zone tampon :
+*   **Le Wudu (Ablutions) :** Ne le faites pas machinalement. Regardez l'eau couler et imaginez vos péchés partir avec.
+*   **L'Adhan :** Répétez après le muezzin. C'est la sonnerie qui annonce l'audience Royale.
+*   **Istighfar :** Dites "Astaghfirullah" avant de lever les mains. Videz la poubelle mentale avant d'entrer.
+
+## 3. La Technique de la "Prière d'Adieu"
+
+Le Prophète ﷺ a donné le conseil ultime pour le Khushu' :
+**"Souviens-toi de la mort dans ta prière. Car l'homme, s'il se souvient de la mort, est plus à même de parfaire sa prière. Et prie la prière d'un homme qui ne pense pas prier d'autre prière que celle-ci."** (As-Silsilah As-Sahihah).
+
+Imaginez que l'Ange de la Mort est derrière vous. C'est votre *dernière* prosternation. Après le "Salam", votre âme sera prise.
+Oserez-vous penser à votre liste de courses si vous savez que vous mourrez dans 3 minutes ?
+
+## 4. Le Ralenti et la Pause
+
+La précipitation tue le Khushu'.
+Ibn Al-Qayyim explique que le voleur de prière agit quand on se dépêche.
+*   **La solution :** Faites une pause (*Tuma'nina*) de 2 secondes après chaque mouvement.
+*   Après le Ruku, redressez-vous, attendez que chaque os reprenne sa place, dites "Rabbana walakal hamd", *puis* descendez.
+Ce silence forcé coupe l'élan des pensées parasites.
+
+## 5. Interagir avec le Récit
+
+Ne soyez pas passif.
+Quand vous récitez *"Iyyaka na'budu"* (C'est Toi seul que nous adorons), insistez mentalement sur le "Toi".
+Quand l'Imam récite un verset sur l'Enfer, dites intérieurement "Allahumma ajirni min an-nar" (Sauve-moi du feu).
+Rendez la récitation **interactive**.
+
+**Rappel :** Le Khushu' n'est pas un bouton ON/OFF. C'est un muscle. Certains jours seront meilleurs que d'autres. Ne désespérez pas, continuez l'entraînement.
+`
+    },
+    {
+        slug: 'destin-qadar-pour-les-nuls',
+        title: 'Le Destin (Qadar) pour les nuls : Pourquoi prier si tout est écrit ?',
+        excerpt: 'C\'est la question "bug" qui traverse l\'esprit de tout croyant un jour. Si mon paradis ou enfer est déjà tracé, à quoi bon agir ? Explication simplifiée d\'un dogme complexe.',
+        date: '2026-02-06',
+        author: 'Équipe Coran 40 Jours',
+        readTime: '10 min',
+        category: 'Sciences & Compréhension',
+        content: `
+# Si tout est écrit, pourquoi je me fatigue ?
+
+C'est une question légitime. Les compagnons eux-mêmes l'ont posée au Prophète ﷺ : *"Ô Messager d'Allah, devons-nous nous en remettre à ce qui est écrit et abandonner l'œuvre ?"*
+Il a répondu : **"Œuvrez ! Car chacun est facilité pour ce pour quoi il a été créé."** (Bukhari).
+
+Pour comprendre le Destin (*Al-Qadar*), il faut déconstruire notre vision humaine limitée du temps.
+
+## 1. Les 4 Niveaux du Qadar (L'Architecture Divine)
+Les savants (Ahlus Sunnah) expliquent que croire au Destin implique 4 étapes :
+
+1.  **Al-Ilm (La Science) :** Allah sait tout ce qui va arriver, avant que cela n'arrive. Il sait ce que vous, avec votre libre arbitre, *choisirez* de faire dans 10 ans. Sa connaissance n'est pas une contrainte, c'est une anticipation parfaite.
+2.  **Al-Kitaba (L'Écriture) :** 50 000 ans avant la création des cieux, Allah a ordonné au Calame (La Plume) d'écrire tout ce qui se passera jusqu'à la fin des temps sur la **Table Gardée** (*Al-Lawh Al-Mahfuz*).
+3.  **Al-Mashia (La Volonté) :** Rien ne bouge dans l'univers, pas même un atome, sans la permission d'Allah. Si vous levez le bras, c'est parce qu'Allah vous a laissé le faire.
+4.  **Al-Khalq (La Création) :** C'est Allah qui crée vos actes. Vous avez l'intention, Il crée le mouvement.
+
+## 2. Suis-je un robot ? (La réponse des Madhabs)
+C'est là que les sectes se sont égarées :
+*   **Les Jabriyya (Fatalistes) :** Ils disent : "L'homme est comme une plume au vent, il n'a aucun choix." -> Faux, car nous sentons bien que nous choisissons de lever la main ou pas.
+*   **Les Qadariyyah (Libre-arbitre total) :** Ils disent : "L'homme crée ses propres actes indépendamment de Dieu." -> Faux, car cela ferait de nous des "créateurs" rivaux d'Allah.
+
+**La position correcte (Ahlus Sunnah) :**
+C'est la voie du milieu. L'homme a un **libre-arbitre réel** (*Ikhtiyar*), mais sa capacité d'agir est soumise à la volonté d'Allah.
+C'est le concept du **Kasb** (Acquisition) : Allah *crée* l'acte, mais l'homme *l'acquiert* en le choisissant. Vous êtes responsable de votre *choix*, même si la *réalisation* dépend d'Allah.
+
+## 3. Le "Hack" du Destin : La Doua
+Le Prophète ﷺ a révélé un secret incroyable :
+**"Rien ne repousse le Destin (*Qadar*) sauf l'invocation (*Doua*)."** (Tirmidhi).
+
+Comment l'invocation peut-elle changer ce qui est écrit ?
+Il y a deux types de Destins dans les registres des Anges :
+*   **Le Destin Immuable (*Mubram*) :** Ce qui ne change pas (ex: le jour de votre mort final).
+*   **Le Destin Conditionnel (*Mu'allaq*) :** Il est écrit : *"Si Mon serviteur M'invoque, Je le guérirai. S'il ne M'invoque pas, il restera malade."*
+Votre Doua est donc *déjà* écrite comme la cause qui va débloquer le résultat !
+Ne dites pas : "Si c'est écrit, ça arrivera". Dites : "Peut-être que c'est écrit *à condition* que je le demande."
+
+## 4. L'Intelligence d'Umar ibn al-Khattab
+Lors de la peste d'Emmaüs, Umar (Calife) a décidé de faire demi-tour et de ne pas entrer dans la ville contaminée.
+Abu Ubaydah lui a dit : *"Fuis-tu le destin d'Allah, ô Umar ?"*
+Umar a répondu avec cette phrase légendaire : **"Oui, nous fuyons du destin d'Allah... vers le destin d'Allah !"**
+
+Il a compris que prendre ses précautions (la cause) fait AUSSI partie du destin.
+Se jeter dans le feu en disant "C'est mektoub" n'est pas de la foi, c'est de la folie.
+La vraie foi (Tawakkul), c'est : "J'attache mon chameau (action maximale) ET je place ma confiance en Allah (lâcher prise)."
+
+## Conclusion
+Le Destin n'est pas un oreiller de paresse ("C'est la volonté de Dieu, je dors").
+C'est un moteur de sérénité **après** l'effort.
+*   Avant l'action : Je fonce comme si tout dépendait de moi.
+*   Après le résultat (échec ou succès) : J'accepte sereinement, car c'est ce qu'Allah a voulu pour moi.
+`
     }
 ];
 
