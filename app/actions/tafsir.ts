@@ -3,19 +3,35 @@
 import fs from 'fs/promises';
 import path from 'path';
 
+export type TafsirSource = 'ibn-kathir' | 'al-jalalayn' | 'asbab-al-nuzul' | 'ibn-kathir-en' | 'maarif-ul-quran';
+
 interface TafsirEntry {
     surah: number;
     ayah: number;
     tafsir: string;
 }
 
-// Point to public directory for static assets (better for Vercel/Publishing)
-const DATA_DIR = path.join(process.cwd(), 'public', 'tafsir');
+function getDataDir(source: TafsirSource = 'ibn-kathir'): string {
+    if (source === 'al-jalalayn') {
+        return path.join(process.cwd(), 'data', 'tafsir', 'fr-al-jalalayn');
+    }
+    if (source === 'asbab-al-nuzul') {
+        return path.join(process.cwd(), 'data', 'tafsir', 'fr-asbab-al-nuzul');
+    }
+    if (source === 'ibn-kathir-en') {
+        return path.join(process.cwd(), 'data', 'tafsir', 'fr-ibn-kathir-en');
+    }
+    if (source === 'maarif-ul-quran') {
+        return path.join(process.cwd(), 'data', 'tafsir', 'fr-maarif-ul-quran');
+    }
+    return path.join(process.cwd(), 'public', 'tafsir');
+}
 
 // Optimized helper to get all available Tafsir files for a Surah
-async function getAvailableTafsirAyahs(surah: number): Promise<number[]> {
+async function getAvailableTafsirAyahs(surah: number, source: TafsirSource = 'ibn-kathir'): Promise<number[]> {
     try {
-        const files = await fs.readdir(DATA_DIR);
+        const dataDir = getDataDir(source);
+        const files = await fs.readdir(dataDir);
         // entries like "95_1.json"
         const prefix = `${surah}_`;
         const ayahs = files
@@ -29,12 +45,12 @@ async function getAvailableTafsirAyahs(surah: number): Promise<number[]> {
 
         return ayahs;
     } catch (e) {
-        console.error("Error reading tafsir directory", e);
+        console.error(`Error reading tafsir directory for ${source}`, e);
         return [];
     }
 }
 
-export async function getLocalTafsir(surah: number, ayah: number): Promise<string | null> {
+export async function getLocalTafsir(surah: number, ayah: number, source: TafsirSource = 'ibn-kathir'): Promise<string | null> {
     // This function is kept for backward compatibility or single-fetch if needed,
     // but relies on direct file access which is fast if we know it exists.
     // For single fetch, we might fallback to the old logic or just check exact match?
@@ -46,21 +62,23 @@ export async function getLocalTafsir(surah: number, ayah: number): Promise<strin
     // Simplistic legacy behavior (search backwards) but usually only called by `getSurahTafsir` which we optimize next.
     // If called isolated, we try exact match first.
     try {
-        const filePath = path.join(DATA_DIR, `${surah}_${ayah}.json`);
+        const dataDir = getDataDir(source);
+        const filePath = path.join(dataDir, `${surah}_${ayah}.json`);
         // Check exact match
         try {
             const content = await fs.readFile(filePath, 'utf-8');
-            return JSON.parse(content).tafsir;
+            return JSON.parse(content).tafsir || JSON.parse(content).text; // Support both tafsir and text fields
         } catch {
             // If not found, we shouldn't scan 300 files.
             // But if we want to support "range", we'd need to know the previous file.
             // Let's rely on `getAvailableTafsirAyahs` even here:
-            const available = await getAvailableTafsirAyahs(surah);
+            const available = await getAvailableTafsirAyahs(surah, source);
             const meaningful = available.filter(a => a <= ayah).pop();
             if (meaningful) {
-                const fallbackPath = path.join(DATA_DIR, `${surah}_${meaningful}.json`);
+                const fallbackPath = path.join(dataDir, `${surah}_${meaningful}.json`);
                 const content = await fs.readFile(fallbackPath, 'utf-8');
-                return JSON.parse(content).tafsir;
+                const json = JSON.parse(content);
+                return json.tafsir || json.text;
             }
         }
         return null;
@@ -69,11 +87,11 @@ export async function getLocalTafsir(surah: number, ayah: number): Promise<strin
     }
 }
 
-export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
+export async function getSurahTafsir(surah: number, source: TafsirSource = 'ibn-kathir'): Promise<TafsirEntry[]> {
     const entries: TafsirEntry[] = [];
 
     try {
-        const availableAyahs = await getAvailableTafsirAyahs(surah);
+        const availableAyahs = await getAvailableTafsirAyahs(surah, source);
 
         if (availableAyahs.length === 0) {
             return [];
@@ -86,17 +104,19 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
         // Actually, "availableAyahs" gives us the start points.
         // We can just iterate through availableAyahs and fill the gaps.
 
+        const dataDir = getDataDir(source);
+
         // Cache content to avoid re-reading files
         const contentCache = new Map<number, { tafsir: string, ayah_end?: number }>();
 
         // Helper to get content
         const getContent = async (a: number) => {
             if (contentCache.has(a)) return contentCache.get(a)!;
-            const p = path.join(DATA_DIR, `${surah}_${a}.json`);
+            const p = path.join(dataDir, `${surah}_${a}.json`);
             try {
                 const txt = await fs.readFile(p, 'utf-8');
                 const json = JSON.parse(txt);
-                const data = { tafsir: json.tafsir, ayah_end: json.ayah_end };
+                const data = { tafsir: json.tafsir || json.text, ayah_end: json.ayah_end };
                 contentCache.set(a, data);
                 return data;
             } catch (e) {
@@ -147,11 +167,11 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
     }
 }
 
-export async function getTafsirBatch(ayahs: { surah: number; ayah: number }[]): Promise<{ surah: number; ayah: number; tafsir: string }[]> {
+export async function getTafsirBatch(ayahs: { surah: number; ayah: number }[], source: TafsirSource = 'ibn-kathir'): Promise<{ surah: number; ayah: number; tafsir: string }[]> {
     // This function is less commonly used for full page, but we can optimize it too if needed.
     // For now, map simple load.
     const results = await Promise.all(ayahs.map(async (a) => {
-        const tafsir = await getLocalTafsir(a.surah, a.ayah);
+        const tafsir = await getLocalTafsir(a.surah, a.ayah, source);
         return {
             surah: a.surah,
             ayah: a.ayah,
