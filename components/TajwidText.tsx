@@ -128,13 +128,17 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
     }, [segments]);
 
     return (
-        <span className={className} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'keep-all' }}>
+        <span className={className} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'normal' }} dir="rtl">
             {words.map((group, i) => {
                 if (group.isSpace) {
                     return <span key={i}>{group.text}</span>;
                 }
                 return (
-                    <span key={i} style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>
+                    <span
+                        key={i}
+                        style={{ whiteSpace: 'nowrap' }}
+                        dir="rtl"
+                    >
                         {group.segments.map((seg, j) => {
                             switch (seg.type) {
                                 case 'qalqala':
