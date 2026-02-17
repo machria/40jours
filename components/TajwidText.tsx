@@ -91,24 +91,69 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
         return parts;
     }, [text]);
 
+    // Group segments into words to prevent breaking inside a word (fixes ligature issues)
+    const words = useMemo(() => {
+        type WordGroup = { isSpace: true; text: string } | { isSpace: false; segments: typeof segments };
+        const groups: WordGroup[] = [];
+        let currentWord: typeof segments = [];
+
+        const commitWord = () => {
+            if (currentWord.length > 0) {
+                groups.push({ isSpace: false, segments: currentWord });
+                currentWord = [];
+            }
+        };
+
+        segments.forEach(seg => {
+            if (seg.type !== 'normal') {
+                // Colored segments are parts of a word
+                currentWord.push(seg);
+            } else {
+                // Normal segments might contain spaces
+                // Split by whitespace but keep delimiters
+                const parts = seg.text.split(/(\s+)/);
+                parts.forEach(part => {
+                    if (!part) return;
+                    if (/\s+/.test(part)) {
+                        commitWord();
+                        groups.push({ isSpace: true, text: part });
+                    } else {
+                        currentWord.push({ text: part, type: 'normal' });
+                    }
+                });
+            }
+        });
+        commitWord();
+        return groups;
+    }, [segments]);
+
     return (
-        <span className={className} style={style}>
-            {segments.map((seg, i) => {
-                switch (seg.type) {
-                    case 'qalqala':
-                        return <span key={i} className="tajwid-blue">{seg.text}</span>;
-                    case 'ghunna':
-                    case 'ikhfa':
-                        return <span key={i} className="tajwid-green">{seg.text}</span>;
-                    case 'madd-strong':
-                        return <span key={i} className="tajwid-red">{seg.text}</span>;
-                    case 'madd-natural':
-                        return <span key={i} className="tajwid-orange">{seg.text}</span>;
-                    case 'silent':
-                        return <span key={i} className="tajwid-gray">{seg.text}</span>;
-                    default:
-                        return <span key={i}>{seg.text}</span>;
+        <span className={className} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'keep-all' }}>
+            {words.map((group, i) => {
+                if (group.isSpace) {
+                    return <span key={i}>{group.text}</span>;
                 }
+                return (
+                    <span key={i} style={{ whiteSpace: 'nowrap', display: 'inline-block' }}>
+                        {group.segments.map((seg, j) => {
+                            switch (seg.type) {
+                                case 'qalqala':
+                                    return <span key={j} className="tajwid-blue">{seg.text}</span>;
+                                case 'ghunna':
+                                case 'ikhfa':
+                                    return <span key={j} className="tajwid-green">{seg.text}</span>;
+                                case 'madd-strong':
+                                    return <span key={j} className="tajwid-red">{seg.text}</span>;
+                                case 'madd-natural':
+                                    return <span key={j} className="tajwid-orange">{seg.text}</span>;
+                                case 'silent':
+                                    return <span key={j} className="tajwid-gray">{seg.text}</span>;
+                                default:
+                                    return <span key={j}>{seg.text}</span>;
+                            }
+                        })}
+                    </span>
+                );
             })}
         </span>
     );
