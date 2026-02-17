@@ -128,7 +128,7 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
     }, [segments]);
 
     return (
-        <span className={className} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'normal' }} dir="rtl">
+        <span className={`${className} optimize-legibility`} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'normal', textRendering: 'optimizeLegibility' }} dir="rtl">
             {words.map((group, i) => {
                 if (group.isSpace) {
                     return <span key={i}>{group.text}</span>;
@@ -140,20 +140,25 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
                         dir="rtl"
                     >
                         {group.segments.map((seg, j) => {
+                            // Insert ZWJ (\u200D) between segments to force connection on iOS 12
+                            // We append ZWJ to all segments except the last one in the word.
+                            // This hints the browser that this segment should connect to the next one.
+                            const text = seg.text + (j < group.segments.length - 1 ? '\u200D' : '');
+
                             switch (seg.type) {
                                 case 'qalqala':
-                                    return <span key={j} className="tajwid-blue">{seg.text}</span>;
+                                    return <span key={j} className="tajwid-blue">{text}</span>;
                                 case 'ghunna':
                                 case 'ikhfa':
-                                    return <span key={j} className="tajwid-green">{seg.text}</span>;
+                                    return <span key={j} className="tajwid-green">{text}</span>;
                                 case 'madd-strong':
-                                    return <span key={j} className="tajwid-red">{seg.text}</span>;
+                                    return <span key={j} className="tajwid-red">{text}</span>;
                                 case 'madd-natural':
-                                    return <span key={j} className="tajwid-orange">{seg.text}</span>;
+                                    return <span key={j} className="tajwid-orange">{text}</span>;
                                 case 'silent':
-                                    return <span key={j} className="tajwid-gray">{seg.text}</span>;
+                                    return <span key={j} className="tajwid-gray">{text}</span>;
                                 default:
-                                    return <span key={j}>{seg.text}</span>;
+                                    return <span key={j}>{text}</span>;
                             }
                         })}
                     </span>

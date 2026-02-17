@@ -4,9 +4,11 @@ import path from 'path';
 
 // Paths
 const DATA_DIR = path.join(process.cwd(), 'data');
+const SEARCH_DIR = path.join(DATA_DIR, 'search');
 const QURAN_FILE = path.join(DATA_DIR, 'quran-data.json');
 const TAFSIR_FILE = path.join(DATA_DIR, 'tafsir-fr.json');
-const OUTPUT_INDEX = path.join(DATA_DIR, 'search-index.json');
+const QURAN_INDEX_OUTPUT = path.join(SEARCH_DIR, 'quran-index.json');
+const TAFSIR_INDEX_OUTPUT = path.join(SEARCH_DIR, 'tafsir-index.json');
 
 // Types
 interface SearchIndexItem {
@@ -103,6 +105,7 @@ async function buildIndex() {
     // Write Optimized Index
     // We can minimize keys to save space: "s", "a", "an" (ar_norm), "fn" (fr_norm), "tn" (tafsir_norm)
     const minimizedIndex = index.map(item => ({
+        id: item.id,
         s: item.s,
         a: item.a,
         an: item.ar_norm,
@@ -110,9 +113,28 @@ async function buildIndex() {
         tn: item.tafsir_norm
     }));
 
-    fs.writeFileSync(OUTPUT_INDEX, JSON.stringify(minimizedIndex));
-    console.log(`Index built with ${minimizedIndex.length} items. Saved to ${OUTPUT_INDEX}`);
-    console.log(`Size: ${(fs.statSync(OUTPUT_INDEX).size / 1024 / 1024).toFixed(2)} MB`);
+    if (!fs.existsSync(SEARCH_DIR)) {
+        fs.mkdirSync(SEARCH_DIR, { recursive: true });
+    }
+
+    // Write Quran Index (Contains everything for now, or split?)
+    // actions.ts reads quran-index.json for searchQuran (uses an, fn)
+    // actions.ts reads tafsir-index.json for searchTafsir (uses tn)
+    // We can just write the same full index to both, or split to save space.
+    // For simplicity and to ensure data availability, let's write the full index to quran-index.json.
+    // For tafsir-index.json, we can check if we want to include only verses with tafsir?
+    // But since current tafsir logic is "tafsir for every verse" (conceptually), let's write full index to both or just use one?
+    // The app expects two files. Let's write the full index to both to be safe, or optimize tafsir one later.
+
+    fs.writeFileSync(QURAN_INDEX_OUTPUT, JSON.stringify(minimizedIndex));
+    console.log(`Quran Index built with ${minimizedIndex.length} items. Saved to ${QURAN_INDEX_OUTPUT}`);
+    console.log(`Size: ${(fs.statSync(QURAN_INDEX_OUTPUT).size / 1024 / 1024).toFixed(2)} MB`);
+
+    // Write Tafsir Index
+    const tafsirIndex = minimizedIndex.filter(i => i.tn && i.tn.length > 0);
+    fs.writeFileSync(TAFSIR_INDEX_OUTPUT, JSON.stringify(tafsirIndex));
+    console.log(`Tafsir Index built with ${tafsirIndex.length} items. Saved to ${TAFSIR_INDEX_OUTPUT}`);
+    console.log(`Size: ${(fs.statSync(TAFSIR_INDEX_OUTPUT).size / 1024 / 1024).toFixed(2)} MB`);
 }
 
 buildIndex();
