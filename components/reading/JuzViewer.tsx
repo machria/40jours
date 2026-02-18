@@ -19,21 +19,45 @@ interface Ayah {
     phonetic?: string;
 }
 
+import { useSession } from 'next-auth/react';
+
+// ... imports
+
 interface JuzViewerProps {
     ayahs: Ayah[];
     juzId: number;
     theme?: string;
     description?: string;
-    isCompleted?: boolean;
-    userEmail?: string | null;
+    // Removed server-side props for static optmization
 }
 
-export default function JuzViewer({ ayahs, juzId, theme, description, isCompleted = false, userEmail }: JuzViewerProps) {
-    const [completed, setCompleted] = useState(isCompleted);
+export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewerProps) {
+    const { data: session } = useSession();
+    const userEmail = session?.user?.email;
+
+    const [completed, setCompleted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isLoadingStatus, setIsLoadingStatus] = useState(false);
+
+    // Fetch initial completion status
+    useEffect(() => {
+        if (userEmail) {
+            setIsLoadingStatus(true);
+            fetch(`/api/progress?juzId=${juzId}`) // We might need to adjust the API to allow GET or just check user profile
+                .then(res => res.json())
+                .then(data => {
+                    if (data.completedJuzs && Array.isArray(data.completedJuzs)) {
+                        setCompleted(data.completedJuzs.includes(juzId));
+                    }
+                })
+                .catch(err => console.error("Failed to fetch progress", err))
+                .finally(() => setIsLoadingStatus(false));
+        }
+    }, [userEmail, juzId]);
+
 
     const handleToggleComplete = async () => {
-        if (!userEmail) return; // Should show login prompt strictly speaking, but keeping simple for now
+        if (!userEmail) return;
 
         setIsSubmitting(true);
         // Optimistic update
@@ -358,7 +382,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, isComplete
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
-            <audio ref={audioRef} className="hidden" preload="auto" playsInline />
+            <audio ref={audioRef} className="hidden" preload="none" playsInline />
         </div>
     );
 }

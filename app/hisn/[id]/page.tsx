@@ -1,9 +1,9 @@
-'use client';
-
-import { useEffect, useState, use } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import HisnInvocationList from '@/components/hisn/HisnInvocationList';
+import path from 'path';
+import fs from 'fs/promises';
+import { notFound } from 'next/navigation';
 
 type Hadith = {
     id: number;
@@ -20,52 +20,30 @@ type HisnCategory = {
     hadiths: Hadith[];
 };
 
-export default function HisnDetailPage({ params }: { params: Promise<{ id: string }> }) {
-    // Unwrap params using React.use()
-    const { id } = use(params);
+// Helper to get data (Build time)
+async function getHisnData(): Promise<HisnCategory[]> {
+    const filePath = path.join(process.cwd(), 'data/hisn/fra-hisn.json');
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(fileContents);
+}
 
-    const [category, setCategory] = useState<HisnCategory | null>(null);
-    const [loading, setLoading] = useState(true);
+// Generate Static Params for all IDs
+export async function generateStaticParams() {
+    const data = await getHisnData();
+    return data.map((category) => ({
+        id: category.id.toString(),
+    }));
+}
 
-    useEffect(() => {
-        async function fetchCategory() {
-            try {
-                const response = await fetch(`/api/hisn/${id}`);
-                if (!response.ok) throw new Error('Failed to fetch category');
-                const data = await response.json();
-                setCategory(data);
-            } catch (error) {
-                console.error('Error fetching Hisn category:', error);
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchCategory();
-    }, [id]);
+export default async function HisnDetailPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
+    const idInt = parseInt(id);
 
-    if (loading) {
-        return (
-            <div className="container py-8 px-4 max-w-4xl mx-auto space-y-6">
-                <div className="h-8 w-24 bg-muted animate-pulse rounded"></div>
-                <div className="h-12 w-3/4 bg-muted animate-pulse rounded"></div>
-                <div className="space-y-8 mt-8">
-                    {[...Array(3)].map((_, i) => (
-                        <div key={i} className="h-64 bg-muted animate-pulse rounded-xl"></div>
-                    ))}
-                </div>
-            </div>
-        );
-    }
+    const data = await getHisnData();
+    const category = data.find((c) => c.id === idInt);
 
     if (!category) {
-        return (
-            <div className="container py-12 text-center">
-                <h2 className="text-2xl font-bold mb-4">Catégorie non trouvée</h2>
-                <Link href="/hisn" className="text-primary hover:underline">
-                    Retour à la liste
-                </Link>
-            </div>
-        );
+        return notFound();
     }
 
     return (

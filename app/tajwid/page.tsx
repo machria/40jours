@@ -50,7 +50,7 @@ export default function TajwidPage() {
                                 قُلْ أَعُوذُ بِرَبِّ <span className="text-green-600">ٱلنَّاسِ</span>
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate An-Nas (114:1) - Focus sur "An-Nas"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/114001.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -68,7 +68,7 @@ export default function TajwidPage() {
                                 <span className="text-green-600">مِن شَ</span>رِّ مَا خَلَقَ
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Falaq (113:2) - Focus sur "Min Sharri"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/113002.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -86,7 +86,7 @@ export default function TajwidPage() {
                                 سَيَصْلَىٰ <span className="text-green-600">نَارًا ذَ</span>اتَ لَهَبٍ
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Masad (111:3) - Focus sur "Naran Dhata"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/111003.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -116,7 +116,7 @@ export default function TajwidPage() {
                                 فَأَثَرْنَ بِهِۦ <span className="text-blue-600">نَقْ</span>عًا
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Adiyat (100:4) - Focus sur le Qaf</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/100004.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -134,7 +134,7 @@ export default function TajwidPage() {
                                 لَمْ يَلِدْ وَلَمْ <span className="text-blue-800 dark:text-blue-400">يُولَدْ</span>
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Ikhlas (112:3) - Focus sur le Dal final</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/112003.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -164,7 +164,7 @@ export default function TajwidPage() {
                                 إِذَا <span className="text-red-600">جَاءَ</span> نَصْرُ ٱللَّهِ
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate An-Nasr (110:1) - Focus sur "Jaaa'a"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/110001.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -182,7 +182,7 @@ export default function TajwidPage() {
                                 قُلْ يَا أَيُّهَا <span className="text-orange-500">ٱلْكَافِرُونَ</span>
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Kafirun (109:1) - Focus sur "Kafirouna"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/109001.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -200,7 +200,7 @@ export default function TajwidPage() {
                                 <span className="text-orange-500">مَٰلِكِ</span> يَوْمِ ٱلدِّينِ
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Fatiha (1:4) - Focus sur "Maliki"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/001004.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -230,7 +230,7 @@ export default function TajwidPage() {
                                 ٱلْقَارِعَةُ مَا <span className="text-gray-400">ٱ</span>لْقَارِعَةُ
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Qari'a (101:2) - Focus sur la liaison "Maa-l-Qari'ah"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/101002.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -248,7 +248,7 @@ export default function TajwidPage() {
                                 وَ<span className="text-gray-400">ٱل</span>شَّمْسِ وَضُحَىٰهَا
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Ash-Shams (91:1) - Focus sur "Wash-Shams"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/091001.mp3" type="audio/mpeg" />
                             </audio>
                         </div>
@@ -266,7 +266,7 @@ export default function TajwidPage() {
                                 أُ<span className="text-gray-400">و</span>لَٰئِكَ عَلَىٰ هُدًى
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Baqara (2:5) - Focus sur le Waw de "Ula'ika"</p>
-                            <audio controls className="w-full h-8 rounded text-xs">
+                            <audio controls className="w-full h-8 rounded text-xs" preload="none">
                                 <source src="/audio/002005.mp3" type="audio/mpeg" />
                             </audio>
                         </div>

@@ -10,12 +10,27 @@ const nextConfig: NextConfig = {
   },
   outputFileTracingExcludes: {
     '*': [
-      './public/audio/**/*'
+      './public/audio/**/*',
+      './public/tafsir/**/*',
+      './public/hadith/**/*'
     ]
   },
   experimental: {
     // other experimental options if needed
-  } as any
+  } as any,
+  async headers() {
+    return [
+      {
+        source: '/audio/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 import createNextIntlPlugin from 'next-intl/plugin';

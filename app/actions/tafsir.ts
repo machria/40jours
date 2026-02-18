@@ -1,6 +1,6 @@
 'use server';
 
-import fs from 'fs/promises';
+
 import path from 'path';
 
 interface TafsirEntry {
@@ -9,57 +9,76 @@ interface TafsirEntry {
     tafsir: string;
 }
 
-// Point to public directory for static assets (better for Vercel/Publishing)
-const DATA_DIR = path.join(process.cwd(), 'public', 'tafsir');
+// Helper to get number of ayahs in a surah to cap the range
+async function getSurahAyahCount(surah: number): Promise<number> {
+    try {
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+        const res = await fetch(`${appUrl}/surahs.json`, { next: { revalidate: 3600 } });
+        if (res.ok) {
+            const surahs = await res.json();
+            const s = surahs.find((x: any) => x.number === surah);
+            return s ? s.numberOfAyahs : 300;
+        }
+    } catch (e) { }
+
+    // Fallback FS
+    try {
+        const p = path.join(process.cwd(), 'public', 'surahs.json');
+        const fs = (await import('fs')).default;
+        const file = await fs.promises.readFile(p, 'utf-8');
+        const surahs = JSON.parse(file);
+        const s = surahs.find((x: any) => x.number === surah);
+        return s ? s.numberOfAyahs : 300;
+    } catch (e) { return 300; }
+}
 
 // Optimized helper to get all available Tafsir files for a Surah
 async function getAvailableTafsirAyahs(surah: number): Promise<number[]> {
+    // Strategy:
+    // 1. Try to fetch from index.json (Runtime / Vercel)
+    // 2. Fallback to fs (Build time / Local Dev if fetch fails)
     try {
-        const files = await fs.readdir(DATA_DIR);
-        // entries like "95_1.json"
-        const prefix = `${surah}_`;
-        const ayahs = files
-            .filter(f => f.startsWith(prefix) && f.endsWith('.json'))
-            .map(f => {
-                const part = f.replace(prefix, '').replace('.json', '');
-                return parseInt(part, 10);
-            })
-            .filter(n => !isNaN(n))
-            .sort((a, b) => a - b);
-
-        return ayahs;
+        // Try Fetch (Runtime)
+        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+        const res = await fetch(`${appUrl}/tafsir/index.json`, { next: { revalidate: 3600 } });
+        if (res.ok) {
+            const index = await res.json();
+            return index[surah] || [];
+        }
     } catch (e) {
-        console.error("Error reading tafsir directory", e);
+        // Fallback to FS
+    }
+
+    try {
+        // Build Time / FS Fallback
+        const indexPath = path.join(process.cwd(), 'public', 'tafsir', 'index.json');
+        const fs = (await import('fs')).default;
+        const indexContent = await fs.promises.readFile(indexPath, 'utf-8');
+        const index = JSON.parse(indexContent);
+        return index[surah] || [];
+    } catch (e) {
+        console.error("Error reading tafsir index", e);
         return [];
     }
 }
 
 export async function getLocalTafsir(surah: number, ayah: number): Promise<string | null> {
-    // This function is kept for backward compatibility or single-fetch if needed,
-    // but relies on direct file access which is fast if we know it exists.
-    // For single fetch, we might fallback to the old logic or just check exact match?
-    // User complaint was about the page load (batch).
-    // Let's implement smart check: try exact file, if not, find previous available in dir?
-    // Scanning dir for ONE ayah is expensive. 
-    // But page load uses getSurahTafsir.
-
-    // Simplistic legacy behavior (search backwards) but usually only called by `getSurahTafsir` which we optimize next.
-    // If called isolated, we try exact match first.
     try {
-        const filePath = path.join(DATA_DIR, `${surah}_${ayah}.json`);
-        // Check exact match
+        // Try exact match first via fetch if possible, effectively reusing shared cache logic
+        // But for consistency with legacy, we try FS or fallback.
+        const fs = (await import('fs')).default;
+        // Avoid using a top-level constant for DATA_DIR to prevent "Overly broad patterns" build warning
+        const filePath = path.join(process.cwd(), 'public', 'tafsir', `${surah}_${ayah}.json`);
+
         try {
-            const content = await fs.readFile(filePath, 'utf-8');
+            const content = await fs.promises.readFile(filePath, 'utf-8');
             return JSON.parse(content).tafsir;
         } catch {
-            // If not found, we shouldn't scan 300 files.
-            // But if we want to support "range", we'd need to know the previous file.
-            // Let's rely on `getAvailableTafsirAyahs` even here:
             const available = await getAvailableTafsirAyahs(surah);
             const meaningful = available.filter(a => a <= ayah).pop();
             if (meaningful) {
-                const fallbackPath = path.join(DATA_DIR, `${surah}_${meaningful}.json`);
-                const content = await fs.readFile(fallbackPath, 'utf-8');
+                const fallbackPath = path.join(process.cwd(), 'public', 'tafsir', `${surah}_${meaningful}.json`);
+                const content = await fs.promises.readFile(fallbackPath, 'utf-8');
                 return JSON.parse(content).tafsir;
             }
         }
@@ -69,22 +88,17 @@ export async function getLocalTafsir(surah: number, ayah: number): Promise<strin
     }
 }
 
+
 export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
     const entries: TafsirEntry[] = [];
 
     try {
         const availableAyahs = await getAvailableTafsirAyahs(surah);
+        const totalAyahs = await getSurahAyahCount(surah);
 
         if (availableAyahs.length === 0) {
             return [];
         }
-
-        // We scan at least until the last start-ayah. 
-        // We'll extend if the last file has an ayah_end greater than its start.
-        // But for the loop limit, we can start with maxAyahStr and extend dynamically if needed, 
-        // OR just loop until a safe upper bound (e.g. 300) since we break when no files left?
-        // Actually, "availableAyahs" gives us the start points.
-        // We can just iterate through availableAyahs and fill the gaps.
 
         // Cache content to avoid re-reading files
         const contentCache = new Map<number, { tafsir: string, ayah_end?: number }>();
@@ -92,9 +106,27 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
         // Helper to get content
         const getContent = async (a: number) => {
             if (contentCache.has(a)) return contentCache.get(a)!;
-            const p = path.join(DATA_DIR, `${surah}_${a}.json`);
+
+            // Try Fetch First
             try {
-                const txt = await fs.readFile(p, 'utf-8');
+                const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+                const res = await fetch(`${appUrl}/tafsir/${surah}_${a}.json`, {
+                    next: { revalidate: 3600 }
+                });
+                if (res.ok) {
+                    const json = await res.json();
+                    const data = { tafsir: json.tafsir, ayah_end: json.ayah_end };
+                    contentCache.set(a, data);
+                    return data;
+                }
+            } catch (e) { }
+
+            // Fallback to FS (for Build time or if fetch fails)
+            try {
+                // Inline path construction to avoid build warnings
+                const p = path.join(process.cwd(), 'public', 'tafsir', `${surah}_${a}.json`);
+                const fs = (await import('fs')).default;
+                const txt = await fs.promises.readFile(p, 'utf-8');
                 const json = JSON.parse(txt);
                 const data = { tafsir: json.tafsir, ayah_end: json.ayah_end };
                 contentCache.set(a, data);
@@ -104,34 +136,34 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
             }
         }
 
-        // Better approach: Iterate over available files, determining the range for each.
+        // Iterate over available files
         for (let i = 0; i < availableAyahs.length; i++) {
             const startAyah = availableAyahs[i];
-            const nextStartAyah = availableAyahs[i + 1] || 9999; // 9999 effectively means "end of surah known files"
+            const nextFileStart = availableAyahs[i + 1]; // undefined if last
 
             const content = await getContent(startAyah);
             if (!content) continue;
 
             const { tafsir, ayah_end } = content;
 
-            // Determine the range this file *should* cover.
-            // Priority 1: Explicit 'ayah_end' from JSON.
-            // Priority 2: Until the next file starts (implicit grouping).
-
             let endAyah: number;
 
             if (ayah_end) {
                 endAyah = ayah_end;
             } else {
-                // Determine implicit end.
-                // If next file is at 5, and we are at 1. Implicitly covers 1,2,3,4.
-                endAyah = nextStartAyah - 1;
+                if (nextFileStart) {
+                    endAyah = nextFileStart - 1;
+                } else {
+                    // Last file - extend to end of Surah
+                    endAyah = totalAyahs;
+                }
             }
 
-            // Safety: Don't overlap into the next file's territory if ayah_end is wildly wrong (unlikely but safe).
-            if (endAyah >= nextStartAyah) {
-                endAyah = nextStartAyah - 1;
+            // Safety clamp
+            if (nextFileStart && endAyah >= nextFileStart) {
+                endAyah = nextFileStart - 1;
             }
+            if (endAyah > totalAyahs) endAyah = totalAyahs;
 
             // Loop through the range for THIS file
             for (let a = startAyah; a <= endAyah; a++) {

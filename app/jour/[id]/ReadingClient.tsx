@@ -435,7 +435,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
             />
-            <audio ref={audioRef} className="hidden" preload="auto" playsInline />
+            <audio ref={audioRef} className="hidden" preload="none" playsInline />
         </div>
     );
 }

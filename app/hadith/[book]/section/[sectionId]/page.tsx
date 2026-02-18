@@ -8,6 +8,24 @@ interface PageProps {
     params: Promise<{ book: string; sectionId: string }>;
 }
 
+export async function generateStaticParams() {
+    const collections = getCollectionsList();
+    const paramsList = [];
+
+    for (const collection of collections) {
+        const metadata = await getCollectionMetadata(collection.id as CollectionName);
+        // Use section_details to only generate param for sections that actually exist on disk
+        const sectionIds = Object.keys(metadata.section_details || {});
+        for (const sectionId of sectionIds) {
+            paramsList.push({
+                book: collection.id,
+                sectionId: sectionId,
+            });
+        }
+    }
+    return paramsList;
+}
+
 export async function generateMetadata({ params }: PageProps) {
     const { book, sectionId } = await params;
     const collections = getCollectionsList();

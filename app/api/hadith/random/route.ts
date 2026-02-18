@@ -49,7 +49,11 @@ export async function GET(request: Request) {
             }
         }
 
-        return NextResponse.json(randomHadiths);
+        return NextResponse.json(randomHadiths, {
+            headers: {
+                'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400'
+            }
+        });
     } catch (error) {
         console.error('Error fetching random hadiths:', error);
         return NextResponse.json({ error: 'Failed to fetch random hadiths' }, { status: 500 });

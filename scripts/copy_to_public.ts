@@ -47,6 +47,37 @@ async function main() {
         console.log(`Copied ${item}`);
     }
 
+    // Generate Tafsir Index (Surah -> List of Files)
+    // This allows us to use fetch() instead of fs.readdir() at runtime
+    console.log('Generating Tafsir Index...');
+    const tafsirDir = path.join(PUBLIC_DIR, 'tafsir');
+    if (fs.existsSync(tafsirDir)) {
+        const files = fs.readdirSync(tafsirDir);
+        const index: Record<number, number[]> = {};
+
+        files.forEach(file => {
+            if (!file.endsWith('.json')) return;
+            const parts = file.replace('.json', '').split('_');
+            if (parts.length === 2) {
+                const surah = parseInt(parts[0]);
+                const ayah = parseInt(parts[1]);
+                if (!isNaN(surah) && !isNaN(ayah)) {
+                    if (!index[surah]) index[surah] = [];
+                    index[surah].push(ayah);
+                }
+            }
+        });
+
+        // Sort ayahs
+        Object.keys(index).forEach(key => {
+            const k = parseInt(key);
+            index[k].sort((a, b) => a - b);
+        });
+
+        fs.writeFileSync(path.join(tafsirDir, 'index.json'), JSON.stringify(index));
+        console.log('Generated tafsir/index.json');
+    }
+
     // Handle Hadith Data
     console.log('Processing Hadith data...');
     const hadithSplitDir = path.join(DATA_DIR, 'hadith', 'split');

@@ -38,7 +38,8 @@ export async function GET() {
             completedDays,
             streak: currentStreak,
             dailyProgress: dailyProgressObj,
-            userName: user.name
+            userName: user.name,
+            completedJuzs: user.completedJuzs || []
         });
 
     } catch (error) {

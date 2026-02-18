@@ -19,6 +19,12 @@ async function getSurahMeta(surahId: number) {
     }
 }
 
+export async function generateStaticParams() {
+    return Array.from({ length: 114 }, (_, i) => ({
+        id: (i + 1).toString(),
+    }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const { id } = await params;
     const surahId = parseInt(id);

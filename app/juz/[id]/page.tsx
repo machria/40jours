@@ -33,9 +33,7 @@ function getPhoneticData() {
     }
 }
 
-import { auth } from "@/auth";
-import dbConnect from "@/lib/db";
-import User from "@/models/User";
+
 
 export default async function JuzPage({ params }: PageProps) {
     const { id: paramId } = await params;
@@ -46,17 +44,12 @@ export default async function JuzPage({ params }: PageProps) {
         notFound();
     }
 
-    // Check user progress
-    const session = await auth();
-    let isCompleted = false;
-
-    if (session?.user?.email) {
-        await dbConnect();
-        const user = await User.findOne({ email: session.user.email }).select('completedJuzs');
-        if (user && user.completedJuzs) {
-            isCompleted = user.completedJuzs.includes(id);
-        }
+    if (!juz) {
+        notFound();
     }
+
+    // Auth check moved to client component to allow Static Generation (ISR)
+    // The page skeleton and content is static, user state is fetched on client.
 
     // Fetch all verses for this Juz
     let allAyahs: any[] = [];
@@ -93,8 +86,6 @@ export default async function JuzPage({ params }: PageProps) {
                 juzId={id}
                 theme={juz.theme}
                 description={juz.description}
-                isCompleted={isCompleted}
-                userEmail={session?.user?.email}
             />
         </main>
     );

@@ -7,6 +7,13 @@ interface PageProps {
     params: Promise<{ book: string }>;
 }
 
+export async function generateStaticParams() {
+    const collections = getCollectionsList();
+    return collections.map((c) => ({
+        book: c.id,
+    }));
+}
+
 export async function generateMetadata({ params }: PageProps) {
     const { book } = await params;
     const collections = getCollectionsList();

@@ -10,6 +10,13 @@ import fs from 'fs';
 import path from 'path';
 
 // Generate Metadata
+// Generate Static Params for all 114 Surahs
+export async function generateStaticParams() {
+    return Array.from({ length: 114 }, (_, i) => ({
+        id: (i + 1).toString(),
+    }));
+}
+
 // Generate Metadata
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const { id } = await params;
