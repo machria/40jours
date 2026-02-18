@@ -11,6 +11,8 @@ interface SettingsContextType {
     fontSize: FontSize;
     setFontSize: (size: FontSize) => void;
     fontSizes: Record<FontSize, string>;
+    tajwidEnabled: boolean;
+    setTajwidEnabled: (enabled: boolean) => void;
 }
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -49,6 +51,9 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
         xlarge: '28px',
     };
 
+    // Tajwid Settings
+    const [tajwidEnabled, setTajwidEnabled] = useState(true);
+
     useEffect(() => {
         if (!mounted) return;
         localStorage.setItem('theme', theme);
@@ -66,12 +71,26 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
         document.documentElement.setAttribute('data-font-size', fontSize);
     }, [fontSize, mounted]);
 
+    useEffect(() => {
+        if (!mounted) {
+            // Initial load
+            const storedTajwid = localStorage.getItem('tajwidEnabled');
+            if (storedTajwid !== null) {
+                setTajwidEnabled(storedTajwid === 'true');
+            }
+            return;
+        }
+        localStorage.setItem('tajwidEnabled', String(tajwidEnabled));
+    }, [tajwidEnabled, mounted]);
+
     const value = {
         theme,
         setTheme,
         fontSize,
         setFontSize,
         fontSizes,
+        tajwidEnabled,
+        setTajwidEnabled,
     };
 
     // Avoid hydration mismatch by rendering children only after mount, 

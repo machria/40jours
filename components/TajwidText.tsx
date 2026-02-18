@@ -9,9 +9,18 @@ interface TajwidTextProps {
     style?: React.CSSProperties;
 }
 
+import { useSettings } from '@/context/SettingsContext';
+
 export function TajwidText({ text, className = "", style }: TajwidTextProps) {
+    const { tajwidEnabled } = useSettings();
+
     const segments = useMemo(() => {
         if (!text) return [];
+
+        // If Tajwid is disabled, return single normal segment
+        if (!tajwidEnabled) {
+            return [{ text, type: 'normal' }];
+        }
 
         // Regex Groups:
         // 1. Red (Madd Strong): Letter + Maddah (\u0653)
@@ -89,7 +98,7 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
         }
 
         return parts;
-    }, [text]);
+    }, [text, tajwidEnabled]);
 
     // Group segments into words to prevent breaking inside a word (fixes ligature issues)
     const words = useMemo(() => {

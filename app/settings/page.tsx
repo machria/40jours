@@ -1,9 +1,10 @@
 'use client';
 
 import { useSettings } from '@/context/SettingsContext';
+import { TajwidText } from '@/components/TajwidText';
 
 export default function SettingsPage() {
-    const { theme, setTheme, fontSize, setFontSize, fontSizes } = useSettings();
+    const { theme, setTheme, fontSize, setFontSize, fontSizes, tajwidEnabled, setTajwidEnabled } = useSettings();
 
     return (
         <div className="container mx-auto p-4 max-w-2xl">
@@ -58,15 +59,42 @@ export default function SettingsPage() {
                     </div>
                 </div>
 
+                <div className="mb-6 flex items-center justify-between">
+                    <div>
+                        <label className="block text-foreground font-medium">Tajwid (Couleurs)</label>
+                        <p className="text-xs text-muted-foreground">Afficher les règles de Tajwid en couleur</p>
+                    </div>
+                    <div className="flex bg-muted rounded-lg p-1 h-9">
+                        <button
+                            onClick={() => setTajwidEnabled(true)}
+                            className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${tajwidEnabled
+                                ? 'bg-background text-foreground shadow-sm'
+                                : 'text-muted-foreground hover:text-foreground'
+                                }`}
+                        >
+                            Oui
+                        </button>
+                        <button
+                            onClick={() => setTajwidEnabled(false)}
+                            className={`px-3 py-1 rounded-md text-xs font-medium transition-colors ${!tajwidEnabled
+                                ? 'bg-background text-foreground shadow-sm'
+                                : 'text-muted-foreground hover:text-foreground'
+                                }`}
+                        >
+                            Non
+                        </button>
+                    </div>
+                </div>
+
                 <div className="border-t border-border pt-4">
                     <h3 className="text-sm font-medium text-muted-foreground mb-2">Aperçu</h3>
                     <div
                         className="p-4 bg-muted/50 rounded-lg border border-border text-foreground transition-all"
                         style={{ fontSize: fontSizes[fontSize] }}
                     >
-                        <p className="mb-2" style={{ fontFamily: 'var(--font-arabic)' }}>
-                            بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
-                        </p>
+                        <div style={{ fontFamily: 'var(--font-arabic)' }} className="mb-2 text-xl">
+                            <TajwidText text="بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ" />
+                        </div>
                         <p>
                             Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux.
                             Ceci est un exemple de texte pour visualiser vos réglages.
