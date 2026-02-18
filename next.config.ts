@@ -9,11 +9,7 @@ const nextConfig: NextConfig = {
     domains: [],
   },
   outputFileTracingExcludes: {
-    '*': [
-      './public/audio/**/*',
-      './public/tafsir/**/*',
-      './public/hadith/**/*'
-    ]
+    '*': []
   },
   experimental: {
     // other experimental options if needed

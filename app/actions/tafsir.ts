@@ -9,10 +9,17 @@ interface TafsirEntry {
     tafsir: string;
 }
 
+// Helper to get app URL
+function getAppUrl() {
+    if (process.env.NEXT_PUBLIC_APP_URL) return process.env.NEXT_PUBLIC_APP_URL;
+    if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+    return 'http://localhost:3000';
+}
+
 // Helper to get number of ayahs in a surah to cap the range
 async function getSurahAyahCount(surah: number): Promise<number> {
     try {
-        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+        const appUrl = getAppUrl();
         const res = await fetch(`${appUrl}/surahs.json`, { next: { revalidate: 3600 } });
         if (res.ok) {
             const surahs = await res.json();
@@ -39,7 +46,7 @@ async function getAvailableTafsirAyahs(surah: number): Promise<number[]> {
     // 2. Fallback to fs (Build time / Local Dev if fetch fails)
     try {
         // Try Fetch (Runtime)
-        const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+        const appUrl = getAppUrl();
         const res = await fetch(`${appUrl}/tafsir/index.json`, { next: { revalidate: 3600 } });
         if (res.ok) {
             const index = await res.json();
@@ -109,7 +116,7 @@ export async function getSurahTafsir(surah: number): Promise<TafsirEntry[]> {
 
             // Try Fetch First
             try {
-                const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+                const appUrl = getAppUrl();
                 const res = await fetch(`${appUrl}/tafsir/${surah}_${a}.json`, {
                     next: { revalidate: 3600 }
                 });
