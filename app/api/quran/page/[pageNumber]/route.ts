@@ -33,6 +33,8 @@ export async function GET(
                 number: page,
                 ayahs: pageAyahs
             }
+        }, {
+            headers: { 'Cache-Control': 'public, s-maxage=31536000, stale-while-revalidate=86400' }
         });
     } catch (error) {
         console.error(`Error loading Quran page ${page}:`, error);

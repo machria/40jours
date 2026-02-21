@@ -18,7 +18,9 @@ export async function GET(request: Request) {
 
         // If no ID provided, return all surahs
         if (!id) {
-            return NextResponse.json(data);
+            return NextResponse.json(data, {
+                headers: { 'Cache-Control': 'public, s-maxage=31536000, stale-while-revalidate=86400' }
+            });
         }
 
         // If ID provided, return specific surah
@@ -28,7 +30,9 @@ export async function GET(request: Request) {
             return NextResponse.json(null);
         }
 
-        return NextResponse.json(surahData);
+        return NextResponse.json(surahData, {
+            headers: { 'Cache-Control': 'public, s-maxage=31536000, stale-while-revalidate=86400' }
+        });
     } catch (error) {
         console.error('Error fetching surah details:', error);
         return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
