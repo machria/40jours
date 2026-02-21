@@ -65,7 +65,7 @@ export default function AyahWordByWord({
                 </div>
             </div>
 
-            <div className="text-right mb-6 flex flex-row-reverse flex-wrap gap-x-2 gap-y-6" dir="rtl">
+            <div className="text-right mb-6 flex flex-row flex-wrap gap-x-2 gap-y-6" dir="rtl">
                 {words.map((word, i) => {
                     const isActive = activeWordIndices.includes(i);
                     // Bismillah fix: grey out unpronounced
