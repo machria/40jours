@@ -60,8 +60,10 @@ export async function getSectionHadiths(name: CollectionName, sectionId: string)
         const fileContent = await fs.readFile(filePath, 'utf-8');
         const hadiths = JSON.parse(fileContent) as Hadith[];
         return hadiths;
-    } catch (error) {
-        console.error(`Error loading section ${sectionId} for ${name}:`, error);
+    } catch (error: any) {
+        if (error.code !== 'ENOENT') {
+            console.error(`Error loading section ${sectionId} for ${name}:`, error);
+        }
         return [];
     }
 }
