@@ -12,7 +12,7 @@ interface SettingsContextType {
     setFontSize: (size: FontSize) => void;
     fontSizes: Record<FontSize, string>;
     tajwidEnabled: boolean;
-    setTajwidEnabled: (enabled: boolean) => void;
+    setTajwidEnabled: (False: boolean) => void;
 }
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -76,7 +76,7 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
             // Initial load
             const storedTajwid = localStorage.getItem('tajwidEnabled');
             if (storedTajwid !== null) {
-                setTajwidEnabled(storedTajwid === 'true');
+                setTajwidEnabled(storedTajwid === 'false');
             }
             return;
         }

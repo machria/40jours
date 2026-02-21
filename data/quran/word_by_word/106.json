@@ -1,0 +1,287 @@
+[
+  {
+    "id": 6194,
+    "verse_key": "106:1",
+    "words": [
+      {
+        "id": 266,
+        "position": 1,
+        "char_type": "word",
+        "text": "لِإِيلَـٰفِ",
+        "text_indopak": "لِاِيۡلٰفِ",
+        "translation": "For (the) familiarity",
+        "transliteration": "liīlāfi",
+        "timestamp": {
+          "from": 0,
+          "to": 1290
+        }
+      },
+      {
+        "id": 267,
+        "position": 2,
+        "char_type": "word",
+        "text": "قُرَيْشٍ",
+        "text_indopak": "قُرَيۡشٍۙ‏",
+        "translation": "(of the) Quraish",
+        "transliteration": "qurayshin",
+        "timestamp": {
+          "from": 1290,
+          "to": 4575
+        }
+      },
+      {
+        "id": 268,
+        "position": 3,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6195,
+    "verse_key": "106:2",
+    "words": [
+      {
+        "id": 961,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِۦلَـٰفِهِمْ",
+        "text_indopak": "اٖلٰفِهِمۡ",
+        "translation": "Their familiarity",
+        "transliteration": "īlāfihim",
+        "timestamp": {
+          "from": 0,
+          "to": 1465
+        }
+      },
+      {
+        "id": 962,
+        "position": 2,
+        "char_type": "word",
+        "text": "رِحْلَةَ",
+        "text_indopak": "رِحۡلَةَ",
+        "translation": "(with the) journey",
+        "transliteration": "riḥ'lata",
+        "timestamp": {
+          "from": 1465,
+          "to": 2245
+        }
+      },
+      {
+        "id": 963,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلشِّتَآءِ",
+        "text_indopak": "الشِّتَآءِ",
+        "translation": "(of) winter",
+        "transliteration": "l-shitāi",
+        "timestamp": {
+          "from": 2245,
+          "to": 4915
+        }
+      },
+      {
+        "id": 964,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَٱلصَّيْفِ",
+        "text_indopak": "وَالصَّيۡفِ​ۚ‏",
+        "translation": "and summer",
+        "transliteration": "wal-ṣayfi",
+        "timestamp": {
+          "from": 4915,
+          "to": 8750
+        }
+      },
+      {
+        "id": 965,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6196,
+    "verse_key": "106:3",
+    "words": [
+      {
+        "id": 2411,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَلْيَعْبُدُوا۟",
+        "text_indopak": "فَلۡيَـعۡبُدُوۡا",
+        "translation": "So let them worship",
+        "transliteration": "falyaʿbudū",
+        "timestamp": {
+          "from": 0,
+          "to": 1485
+        }
+      },
+      {
+        "id": 2412,
+        "position": 2,
+        "char_type": "word",
+        "text": "رَبَّ",
+        "text_indopak": "رَبَّ",
+        "translation": "(the) Lord",
+        "transliteration": "rabba",
+        "timestamp": {
+          "from": 1485,
+          "to": 2095
+        }
+      },
+      {
+        "id": 2413,
+        "position": 3,
+        "char_type": "word",
+        "text": "هَـٰذَا",
+        "text_indopak": "هٰذَا",
+        "translation": "(of) this",
+        "transliteration": "hādhā",
+        "timestamp": {
+          "from": 2095,
+          "to": 2705
+        }
+      },
+      {
+        "id": 2414,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْبَيْتِ",
+        "text_indopak": "الۡبَيۡتِۙ‏",
+        "translation": "House",
+        "transliteration": "l-bayti",
+        "timestamp": {
+          "from": 2705,
+          "to": 5460
+        }
+      },
+      {
+        "id": 2415,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6197,
+    "verse_key": "106:4",
+    "words": [
+      {
+        "id": 3906,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱلَّذِىٓ",
+        "text_indopak": "الَّذِىۡۤ",
+        "translation": "The One Who",
+        "transliteration": "alladhī",
+        "timestamp": {
+          "from": 0,
+          "to": 1865
+        }
+      },
+      {
+        "id": 3907,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَطْعَمَهُم",
+        "text_indopak": "اَطۡعَمَهُمۡ",
+        "translation": "feeds them",
+        "transliteration": "aṭʿamahum",
+        "timestamp": {
+          "from": 1865,
+          "to": 2995
+        }
+      },
+      {
+        "id": 3908,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "[from]",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 2995,
+          "to": 4145
+        }
+      },
+      {
+        "id": 3909,
+        "position": 4,
+        "char_type": "word",
+        "text": "جُوعٍۢ",
+        "text_indopak": "جُوۡعٍ   ۙ",
+        "translation": "(against) hunger",
+        "transliteration": "jūʿin",
+        "timestamp": {
+          "from": 4145,
+          "to": 6825
+        }
+      },
+      {
+        "id": 3910,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَءَامَنَهُم",
+        "text_indopak": "وَّاٰمَنَهُمۡ",
+        "translation": "and gives them security",
+        "transliteration": "waāmanahum",
+        "timestamp": {
+          "from": 6825,
+          "to": 8285
+        }
+      },
+      {
+        "id": 3911,
+        "position": 6,
+        "char_type": "word",
+        "text": "مِّنْ",
+        "text_indopak": "مِّنۡ",
+        "translation": "from",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 8285,
+          "to": 9505
+        }
+      },
+      {
+        "id": 3912,
+        "position": 7,
+        "char_type": "word",
+        "text": "خَوْفٍۭ",
+        "text_indopak": "خَوۡفٍ‏",
+        "translation": "fear",
+        "transliteration": "khawfin",
+        "timestamp": {
+          "from": 9505,
+          "to": 11820
+        }
+      },
+      {
+        "id": 3913,
+        "position": 8,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

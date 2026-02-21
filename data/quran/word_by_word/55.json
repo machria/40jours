@@ -1,0 +1,5813 @@
+[
+  {
+    "id": 4902,
+    "verse_key": "55:1",
+    "words": [
+      {
+        "id": 297,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱلرَّحْمَـٰنُ",
+        "text_indopak": "اَلرَّحۡمٰنُۙ‏",
+        "translation": "The Most Gracious",
+        "transliteration": "al-raḥmānu",
+        "timestamp": {
+          "from": 0,
+          "to": 4545
+        }
+      },
+      {
+        "id": 298,
+        "position": 2,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4903,
+    "verse_key": "55:2",
+    "words": [
+      {
+        "id": 1061,
+        "position": 1,
+        "char_type": "word",
+        "text": "عَلَّمَ",
+        "text_indopak": "عَلَّمَ",
+        "translation": "He taught",
+        "transliteration": "ʿallama",
+        "timestamp": {
+          "from": 0,
+          "to": 785
+        }
+      },
+      {
+        "id": 1062,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْقُرْءَانَ",
+        "text_indopak": "الۡقُرۡاٰنَؕ‏",
+        "translation": "the Quran",
+        "transliteration": "l-qur'āna",
+        "timestamp": {
+          "from": 785,
+          "to": 4650
+        }
+      },
+      {
+        "id": 1063,
+        "position": 3,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4904,
+    "verse_key": "55:3",
+    "words": [
+      {
+        "id": 2223,
+        "position": 1,
+        "char_type": "word",
+        "text": "خَلَقَ",
+        "text_indopak": "خَلَقَ",
+        "translation": "He created",
+        "transliteration": "khalaqa",
+        "timestamp": {
+          "from": 0,
+          "to": 635
+        }
+      },
+      {
+        "id": 2224,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْإِنسَـٰنَ",
+        "text_indopak": "الۡاِنۡسَانَۙ‏",
+        "translation": "[the] man",
+        "transliteration": "l-insāna",
+        "timestamp": {
+          "from": 635,
+          "to": 5390
+        }
+      },
+      {
+        "id": 2225,
+        "position": 3,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4905,
+    "verse_key": "55:4",
+    "words": [
+      {
+        "id": 3552,
+        "position": 1,
+        "char_type": "word",
+        "text": "عَلَّمَهُ",
+        "text_indopak": "عَلَّمَهُ",
+        "translation": "He taught him",
+        "transliteration": "ʿallamahu",
+        "timestamp": {
+          "from": 0,
+          "to": 1015
+        }
+      },
+      {
+        "id": 3553,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْبَيَانَ",
+        "text_indopak": "الۡبَيَانَ‏",
+        "translation": "[the] speech",
+        "transliteration": "l-bayāna",
+        "timestamp": {
+          "from": 1015,
+          "to": 4810
+        }
+      },
+      {
+        "id": 3554,
+        "position": 3,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4906,
+    "verse_key": "55:5",
+    "words": [
+      {
+        "id": 4871,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱلشَّمْسُ",
+        "text_indopak": "اَلشَّمۡسُ",
+        "translation": "The sun",
+        "transliteration": "al-shamsu",
+        "timestamp": {
+          "from": 0,
+          "to": 1065
+        }
+      },
+      {
+        "id": 4872,
+        "position": 2,
+        "char_type": "word",
+        "text": "وَٱلْقَمَرُ",
+        "text_indopak": "وَالۡقَمَرُ",
+        "translation": "and the moon",
+        "transliteration": "wal-qamaru",
+        "timestamp": {
+          "from": 1065,
+          "to": 2115
+        }
+      },
+      {
+        "id": 4873,
+        "position": 3,
+        "char_type": "word",
+        "text": "بِحُسْبَانٍۢ",
+        "text_indopak": "بِحُسۡبَانٍ‏",
+        "translation": "by (precise) calculation",
+        "transliteration": "biḥus'bānin",
+        "timestamp": {
+          "from": 2115,
+          "to": 6200
+        }
+      },
+      {
+        "id": 4874,
+        "position": 4,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4907,
+    "verse_key": "55:6",
+    "words": [
+      {
+        "id": 6162,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلنَّجْمُ",
+        "text_indopak": "وَّالنَّجۡمُ",
+        "translation": "And the stars",
+        "transliteration": "wal-najmu",
+        "timestamp": {
+          "from": 0,
+          "to": 1655
+        }
+      },
+      {
+        "id": 6163,
+        "position": 2,
+        "char_type": "word",
+        "text": "وَٱلشَّجَرُ",
+        "text_indopak": "وَالشَّجَرُ",
+        "translation": "and the trees",
+        "transliteration": "wal-shajaru",
+        "timestamp": {
+          "from": 1655,
+          "to": 2655
+        }
+      },
+      {
+        "id": 6164,
+        "position": 3,
+        "char_type": "word",
+        "text": "يَسْجُدَانِ",
+        "text_indopak": "يَسۡجُدٰنِ‏",
+        "translation": "both prostrate",
+        "transliteration": "yasjudāni",
+        "timestamp": {
+          "from": 2655,
+          "to": 6290
+        }
+      },
+      {
+        "id": 6165,
+        "position": 4,
+        "char_type": "end",
+        "text": "٦",
+        "text_indopak": "٦",
+        "translation": "(6)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4908,
+    "verse_key": "55:7",
+    "words": [
+      {
+        "id": 7495,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلسَّمَآءَ",
+        "text_indopak": "وَالسَّمَآءَ",
+        "translation": "And the heaven",
+        "transliteration": "wal-samāa",
+        "timestamp": {
+          "from": 0,
+          "to": 2855
+        }
+      },
+      {
+        "id": 7496,
+        "position": 2,
+        "char_type": "word",
+        "text": "رَفَعَهَا",
+        "text_indopak": "رَفَعَهَا",
+        "translation": "He raised it",
+        "transliteration": "rafaʿahā",
+        "timestamp": {
+          "from": 2855,
+          "to": 3935
+        }
+      },
+      {
+        "id": 7497,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَوَضَعَ",
+        "text_indopak": "وَوَضَعَ",
+        "translation": "and He has set up",
+        "transliteration": "wawaḍaʿa",
+        "timestamp": {
+          "from": 3935,
+          "to": 4795
+        }
+      },
+      {
+        "id": 7498,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْمِيزَانَ",
+        "text_indopak": "الۡمِيۡزَانَۙ‏",
+        "translation": "the balance",
+        "transliteration": "l-mīzāna",
+        "timestamp": {
+          "from": 4795,
+          "to": 8380
+        }
+      },
+      {
+        "id": 7499,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧",
+        "text_indopak": "٧",
+        "translation": "(7)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4909,
+    "verse_key": "55:8",
+    "words": [
+      {
+        "id": 8741,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلَّا",
+        "text_indopak": "اَلَّا",
+        "translation": "That not",
+        "transliteration": "allā",
+        "timestamp": {
+          "from": 0,
+          "to": 835
+        }
+      },
+      {
+        "id": 8742,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَطْغَوْا۟",
+        "text_indopak": "تَطۡغَوۡا",
+        "translation": "you may transgress",
+        "transliteration": "taṭghaw",
+        "timestamp": {
+          "from": 835,
+          "to": 1725
+        }
+      },
+      {
+        "id": 8743,
+        "position": 3,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 1725,
+          "to": 1975
+        }
+      },
+      {
+        "id": 8744,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْمِيزَانِ",
+        "text_indopak": "الۡمِيۡزَانِ‏",
+        "translation": "the balance",
+        "transliteration": "l-mīzāni",
+        "timestamp": {
+          "from": 1975,
+          "to": 5860
+        }
+      },
+      {
+        "id": 8745,
+        "position": 5,
+        "char_type": "end",
+        "text": "٨",
+        "text_indopak": "٨",
+        "translation": "(8)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4910,
+    "verse_key": "55:9",
+    "words": [
+      {
+        "id": 9969,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَأَقِيمُوا۟",
+        "text_indopak": "وَاَقِيۡمُوا",
+        "translation": "And establish",
+        "transliteration": "wa-aqīmū",
+        "timestamp": {
+          "from": 0,
+          "to": 1055
+        }
+      },
+      {
+        "id": 9970,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْوَزْنَ",
+        "text_indopak": "الۡوَزۡنَ",
+        "translation": "the weight",
+        "transliteration": "l-wazna",
+        "timestamp": {
+          "from": 1055,
+          "to": 1965
+        }
+      },
+      {
+        "id": 9971,
+        "position": 3,
+        "char_type": "word",
+        "text": "بِٱلْقِسْطِ",
+        "text_indopak": "بِالۡقِسۡطِ",
+        "translation": "in justice",
+        "transliteration": "bil-qis'ṭi",
+        "timestamp": {
+          "from": 1965,
+          "to": 3155
+        }
+      },
+      {
+        "id": 9972,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَلَا",
+        "translation": "and (do) not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 3155,
+          "to": 3775
+        }
+      },
+      {
+        "id": 9973,
+        "position": 5,
+        "char_type": "word",
+        "text": "تُخْسِرُوا۟",
+        "text_indopak": "تُخۡسِرُوا",
+        "translation": "make deficient",
+        "transliteration": "tukh'sirū",
+        "timestamp": {
+          "from": 3775,
+          "to": 4655
+        }
+      },
+      {
+        "id": 9974,
+        "position": 6,
+        "char_type": "word",
+        "text": "ٱلْمِيزَانَ",
+        "text_indopak": "الۡمِيۡزَانَ‏",
+        "translation": "the balance",
+        "transliteration": "l-mīzāna",
+        "timestamp": {
+          "from": 4655,
+          "to": 8330
+        }
+      },
+      {
+        "id": 9975,
+        "position": 7,
+        "char_type": "end",
+        "text": "٩",
+        "text_indopak": "٩",
+        "translation": "(9)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4911,
+    "verse_key": "55:10",
+    "words": [
+      {
+        "id": 11167,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلْأَرْضَ",
+        "text_indopak": "وَالۡاَرۡضَ",
+        "translation": "And the earth",
+        "transliteration": "wal-arḍa",
+        "timestamp": {
+          "from": 0,
+          "to": 1165
+        }
+      },
+      {
+        "id": 11168,
+        "position": 2,
+        "char_type": "word",
+        "text": "وَضَعَهَا",
+        "text_indopak": "وَضَعَهَا",
+        "translation": "He laid it",
+        "transliteration": "waḍaʿahā",
+        "timestamp": {
+          "from": 1165,
+          "to": 2195
+        }
+      },
+      {
+        "id": 11169,
+        "position": 3,
+        "char_type": "word",
+        "text": "لِلْأَنَامِ",
+        "text_indopak": "لِلۡاَنَامِۙ‏",
+        "translation": "for the creatures",
+        "transliteration": "lil'anāmi",
+        "timestamp": {
+          "from": 2195,
+          "to": 5570
+        }
+      },
+      {
+        "id": 11170,
+        "position": 4,
+        "char_type": "end",
+        "text": "١٠",
+        "text_indopak": "١٠",
+        "translation": "(10)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4912,
+    "verse_key": "55:11",
+    "words": [
+      {
+        "id": 12493,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهَا",
+        "text_indopak": "فِيۡهَا",
+        "translation": "Therein",
+        "transliteration": "fīhā",
+        "timestamp": {
+          "from": 0,
+          "to": 745
+        }
+      },
+      {
+        "id": 12494,
+        "position": 2,
+        "char_type": "word",
+        "text": "فَـٰكِهَةٌۭ",
+        "text_indopak": "فَاكِهَةٌ  ۙ",
+        "translation": "(is) fruit",
+        "transliteration": "fākihatun",
+        "timestamp": {
+          "from": 745,
+          "to": 1845
+        }
+      },
+      {
+        "id": 12495,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَٱلنَّخْلُ",
+        "text_indopak": "وَّالنَّخۡلُ",
+        "translation": "and date-palms",
+        "transliteration": "wal-nakhlu",
+        "timestamp": {
+          "from": 1845,
+          "to": 4665
+        }
+      },
+      {
+        "id": 12496,
+        "position": 4,
+        "char_type": "word",
+        "text": "ذَاتُ",
+        "text_indopak": "ذَاتُ",
+        "translation": "having",
+        "transliteration": "dhātu",
+        "timestamp": {
+          "from": 4665,
+          "to": 5365
+        }
+      },
+      {
+        "id": 12497,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْأَكْمَامِ",
+        "text_indopak": "الۡاَكۡمَامِ​ ۖ‏",
+        "translation": "sheaths",
+        "transliteration": "l-akmāmi",
+        "timestamp": {
+          "from": 5365,
+          "to": 9130
+        }
+      },
+      {
+        "id": 12498,
+        "position": 6,
+        "char_type": "end",
+        "text": "١١",
+        "text_indopak": "١١",
+        "translation": "(11)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4913,
+    "verse_key": "55:12",
+    "words": [
+      {
+        "id": 13820,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلْحَبُّ",
+        "text_indopak": "وَالۡحَبُّ",
+        "translation": "And the grain",
+        "transliteration": "wal-ḥabu",
+        "timestamp": {
+          "from": 0,
+          "to": 795
+        }
+      },
+      {
+        "id": 13821,
+        "position": 2,
+        "char_type": "word",
+        "text": "ذُو",
+        "text_indopak": "ذُو",
+        "translation": "having",
+        "transliteration": "dhū",
+        "timestamp": {
+          "from": 795,
+          "to": 985
+        }
+      },
+      {
+        "id": 13822,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْعَصْفِ",
+        "text_indopak": "الۡعَصۡفِ",
+        "translation": "husk",
+        "transliteration": "l-ʿaṣfi",
+        "timestamp": {
+          "from": 985,
+          "to": 1985
+        }
+      },
+      {
+        "id": 13823,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَٱلرَّيْحَانُ",
+        "text_indopak": "وَالرَّيۡحَانُ​ۚ‏",
+        "translation": "and scented plants",
+        "transliteration": "wal-rayḥānu",
+        "timestamp": {
+          "from": 1985,
+          "to": 6250
+        }
+      },
+      {
+        "id": 13824,
+        "position": 5,
+        "char_type": "end",
+        "text": "١٢",
+        "text_indopak": "١٢",
+        "translation": "(12)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4914,
+    "verse_key": "55:13",
+    "words": [
+      {
+        "id": 14970,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1025
+        }
+      },
+      {
+        "id": 14971,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1025,
+          "to": 3795
+        }
+      },
+      {
+        "id": 14972,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3795,
+          "to": 5145
+        }
+      },
+      {
+        "id": 14973,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5145,
+          "to": 9510
+        }
+      },
+      {
+        "id": 14974,
+        "position": 5,
+        "char_type": "end",
+        "text": "١٣",
+        "text_indopak": "١٣",
+        "translation": "(13)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4915,
+    "verse_key": "55:14",
+    "words": [
+      {
+        "id": 16038,
+        "position": 1,
+        "char_type": "word",
+        "text": "خَلَقَ",
+        "text_indopak": "خَلَقَ",
+        "translation": "He created",
+        "transliteration": "khalaqa",
+        "timestamp": {
+          "from": 0,
+          "to": 685
+        }
+      },
+      {
+        "id": 16039,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْإِنسَـٰنَ",
+        "text_indopak": "الۡاِنۡسَانَ",
+        "translation": "the man",
+        "transliteration": "l-insāna",
+        "timestamp": {
+          "from": 685,
+          "to": 2845
+        }
+      },
+      {
+        "id": 16040,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "from",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 2845,
+          "to": 4125
+        }
+      },
+      {
+        "id": 16041,
+        "position": 4,
+        "char_type": "word",
+        "text": "صَلْصَـٰلٍۢ",
+        "text_indopak": "صَلۡصَالٍ",
+        "translation": "clay",
+        "transliteration": "ṣalṣālin",
+        "timestamp": {
+          "from": 4125,
+          "to": 6325
+        }
+      },
+      {
+        "id": 16042,
+        "position": 5,
+        "char_type": "word",
+        "text": "كَٱلْفَخَّارِ",
+        "text_indopak": "كَالۡفَخَّارِۙ‏",
+        "translation": "like the pottery",
+        "transliteration": "kal-fakhāri",
+        "timestamp": {
+          "from": 6325,
+          "to": 10800
+        }
+      },
+      {
+        "id": 16043,
+        "position": 6,
+        "char_type": "end",
+        "text": "١٤",
+        "text_indopak": "١٤",
+        "translation": "(14)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4916,
+    "verse_key": "55:15",
+    "words": [
+      {
+        "id": 17285,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَخَلَقَ",
+        "text_indopak": "وَخَلَقَ",
+        "translation": "And He created",
+        "transliteration": "wakhalaqa",
+        "timestamp": {
+          "from": 0,
+          "to": 825
+        }
+      },
+      {
+        "id": 17286,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْجَآنَّ",
+        "text_indopak": "الۡجَآنَّ",
+        "translation": "the jinn",
+        "transliteration": "l-jāna",
+        "timestamp": {
+          "from": 825,
+          "to": 4875
+        }
+      },
+      {
+        "id": 17287,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "from",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 4875,
+          "to": 5135
+        }
+      },
+      {
+        "id": 17288,
+        "position": 4,
+        "char_type": "word",
+        "text": "مَّارِجٍۢ",
+        "text_indopak": "مَّارِجٍ",
+        "translation": "a smokeless flame",
+        "transliteration": "mārijin",
+        "timestamp": {
+          "from": 5135,
+          "to": 6955
+        }
+      },
+      {
+        "id": 17289,
+        "position": 5,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "of",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 6955,
+          "to": 8235
+        }
+      },
+      {
+        "id": 17290,
+        "position": 6,
+        "char_type": "word",
+        "text": "نَّارٍۢ",
+        "text_indopak": "نَّارٍ​ۚ‏",
+        "translation": "fire",
+        "transliteration": "nārin",
+        "timestamp": {
+          "from": 8235,
+          "to": 11810
+        }
+      },
+      {
+        "id": 17291,
+        "position": 7,
+        "char_type": "end",
+        "text": "١٥",
+        "text_indopak": "١٥",
+        "translation": "(15)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4917,
+    "verse_key": "55:16",
+    "words": [
+      {
+        "id": 18340,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1025
+        }
+      },
+      {
+        "id": 18341,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1025,
+          "to": 3655
+        }
+      },
+      {
+        "id": 18342,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3655,
+          "to": 5015
+        }
+      },
+      {
+        "id": 18343,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5015,
+          "to": 8330
+        }
+      },
+      {
+        "id": 18344,
+        "position": 5,
+        "char_type": "end",
+        "text": "١٦",
+        "text_indopak": "١٦",
+        "translation": "(16)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4918,
+    "verse_key": "55:17",
+    "words": [
+      {
+        "id": 19356,
+        "position": 1,
+        "char_type": "word",
+        "text": "رَبُّ",
+        "text_indopak": "رَبُّ",
+        "translation": "Lord",
+        "transliteration": "rabbu",
+        "timestamp": {
+          "from": 0,
+          "to": 335
+        }
+      },
+      {
+        "id": 19357,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْمَشْرِقَيْنِ",
+        "text_indopak": "الۡمَشۡرِقَيۡنِ",
+        "translation": "(of) the two Easts",
+        "transliteration": "l-mashriqayni",
+        "timestamp": {
+          "from": 335,
+          "to": 1855
+        }
+      },
+      {
+        "id": 19358,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَرَبُّ",
+        "text_indopak": "وَ رَبُّ",
+        "translation": "and Lord",
+        "transliteration": "warabbu",
+        "timestamp": {
+          "from": 1855,
+          "to": 2675
+        }
+      },
+      {
+        "id": 19359,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْمَغْرِبَيْنِ",
+        "text_indopak": "الۡمَغۡرِبَيۡنِ​ۚ‏",
+        "translation": "(of) the two Wests",
+        "transliteration": "l-maghribayni",
+        "timestamp": {
+          "from": 2675,
+          "to": 6270
+        }
+      },
+      {
+        "id": 19360,
+        "position": 5,
+        "char_type": "end",
+        "text": "١٧",
+        "text_indopak": "١٧",
+        "translation": "(17)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4919,
+    "verse_key": "55:18",
+    "words": [
+      {
+        "id": 20415,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1095
+        }
+      },
+      {
+        "id": 20416,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1095,
+          "to": 3485
+        }
+      },
+      {
+        "id": 20417,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3485,
+          "to": 4755
+        }
+      },
+      {
+        "id": 20418,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4755,
+          "to": 8230
+        }
+      },
+      {
+        "id": 20419,
+        "position": 5,
+        "char_type": "end",
+        "text": "١٨",
+        "text_indopak": "١٨",
+        "translation": "(18)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4920,
+    "verse_key": "55:19",
+    "words": [
+      {
+        "id": 21507,
+        "position": 1,
+        "char_type": "word",
+        "text": "مَرَجَ",
+        "text_indopak": "مَرَجَ",
+        "translation": "He released",
+        "transliteration": "maraja",
+        "timestamp": {
+          "from": 0,
+          "to": 635
+        }
+      },
+      {
+        "id": 21508,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْبَحْرَيْنِ",
+        "text_indopak": "الۡبَحۡرَيۡنِ",
+        "translation": "the two seas",
+        "transliteration": "l-baḥrayni",
+        "timestamp": {
+          "from": 635,
+          "to": 1905
+        }
+      },
+      {
+        "id": 21509,
+        "position": 3,
+        "char_type": "word",
+        "text": "يَلْتَقِيَانِ",
+        "text_indopak": "يَلۡتَقِيٰنِۙ‏",
+        "translation": "meeting",
+        "transliteration": "yaltaqiyāni",
+        "timestamp": {
+          "from": 1905,
+          "to": 5520
+        }
+      },
+      {
+        "id": 21510,
+        "position": 4,
+        "char_type": "end",
+        "text": "١٩",
+        "text_indopak": "١٩",
+        "translation": "(19)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4921,
+    "verse_key": "55:20",
+    "words": [
+      {
+        "id": 22582,
+        "position": 1,
+        "char_type": "word",
+        "text": "بَيْنَهُمَا",
+        "text_indopak": "بَيۡنَهُمَا",
+        "translation": "Between both of them",
+        "transliteration": "baynahumā",
+        "timestamp": {
+          "from": 0,
+          "to": 1265
+        }
+      },
+      {
+        "id": 22583,
+        "position": 2,
+        "char_type": "word",
+        "text": "بَرْزَخٌۭ",
+        "text_indopak": "بَرۡزَخٌ",
+        "translation": "(is) a barrier",
+        "transliteration": "barzakhun",
+        "timestamp": {
+          "from": 1265,
+          "to": 2425
+        }
+      },
+      {
+        "id": 22584,
+        "position": 3,
+        "char_type": "word",
+        "text": "لَّا",
+        "text_indopak": "لَّا",
+        "translation": "not",
+        "transliteration": "lā",
+        "timestamp": {
+          "from": 2425,
+          "to": 2785
+        }
+      },
+      {
+        "id": 22585,
+        "position": 4,
+        "char_type": "word",
+        "text": "يَبْغِيَانِ",
+        "text_indopak": "يَبۡغِيٰنِ​ۚ‏",
+        "translation": "they transgress",
+        "transliteration": "yabghiyāni",
+        "timestamp": {
+          "from": 2785,
+          "to": 6410
+        }
+      },
+      {
+        "id": 22586,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٠",
+        "text_indopak": "٢٠",
+        "translation": "(20)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4922,
+    "verse_key": "55:21",
+    "words": [
+      {
+        "id": 23744,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1045
+        }
+      },
+      {
+        "id": 23745,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1045,
+          "to": 4055
+        }
+      },
+      {
+        "id": 23746,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 4055,
+          "to": 5315
+        }
+      },
+      {
+        "id": 23747,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5315,
+          "to": 9300
+        }
+      },
+      {
+        "id": 23748,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢١",
+        "text_indopak": "٢١",
+        "translation": "(21)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4923,
+    "verse_key": "55:22",
+    "words": [
+      {
+        "id": 24746,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَخْرُجُ",
+        "text_indopak": "يَخۡرُجُ",
+        "translation": "Come forth",
+        "transliteration": "yakhruju",
+        "timestamp": {
+          "from": 0,
+          "to": 865
+        }
+      },
+      {
+        "id": 24747,
+        "position": 2,
+        "char_type": "word",
+        "text": "مِنْهُمَا",
+        "text_indopak": "مِنۡهُمَا",
+        "translation": "from both of them",
+        "transliteration": "min'humā",
+        "timestamp": {
+          "from": 865,
+          "to": 1665
+        }
+      },
+      {
+        "id": 24748,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱللُّؤْلُؤُ",
+        "text_indopak": "اللُّـؤۡلُـؤُ",
+        "translation": "the pearl",
+        "transliteration": "l-lu'lu-u",
+        "timestamp": {
+          "from": 1665,
+          "to": 2855
+        }
+      },
+      {
+        "id": 24749,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَٱلْمَرْجَانُ",
+        "text_indopak": "وَالۡمَرۡجَانُ​ۚ‏",
+        "translation": "and the coral",
+        "transliteration": "wal-marjānu",
+        "timestamp": {
+          "from": 2855,
+          "to": 7010
+        }
+      },
+      {
+        "id": 24750,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٢",
+        "text_indopak": "٢٢",
+        "translation": "(22)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4924,
+    "verse_key": "55:23",
+    "words": [
+      {
+        "id": 26447,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 26448,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1005,
+          "to": 3685
+        }
+      },
+      {
+        "id": 26449,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3685,
+          "to": 4965
+        }
+      },
+      {
+        "id": 26450,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4965,
+          "to": 8480
+        }
+      },
+      {
+        "id": 26451,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٣",
+        "text_indopak": "٢٣",
+        "translation": "(23)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4925,
+    "verse_key": "55:24",
+    "words": [
+      {
+        "id": 26869,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلَهُ",
+        "text_indopak": "وَلَهُ",
+        "translation": "And for Him",
+        "transliteration": "walahu",
+        "timestamp": {
+          "from": 0,
+          "to": 575
+        }
+      },
+      {
+        "id": 26870,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْجَوَارِ",
+        "text_indopak": "الۡجَوَارِ",
+        "translation": "(are) the ships",
+        "transliteration": "l-jawāri",
+        "timestamp": {
+          "from": 575,
+          "to": 1815
+        }
+      },
+      {
+        "id": 26871,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْمُنشَـَٔاتُ",
+        "text_indopak": "الۡمُنۡشَئٰتُ",
+        "translation": "elevated",
+        "transliteration": "l-munshaātu",
+        "timestamp": {
+          "from": 1815,
+          "to": 4095
+        }
+      },
+      {
+        "id": 26872,
+        "position": 4,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 4095,
+          "to": 4385
+        }
+      },
+      {
+        "id": 26873,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْبَحْرِ",
+        "text_indopak": "الۡبَحۡرِ",
+        "translation": "the sea",
+        "transliteration": "l-baḥri",
+        "timestamp": {
+          "from": 4385,
+          "to": 5285
+        }
+      },
+      {
+        "id": 26874,
+        "position": 6,
+        "char_type": "word",
+        "text": "كَٱلْأَعْلَـٰمِ",
+        "text_indopak": "كَالۡاَعۡلَامِ​ۚ‏",
+        "translation": "like mountains",
+        "transliteration": "kal-aʿlāmi",
+        "timestamp": {
+          "from": 5285,
+          "to": 8800
+        }
+      },
+      {
+        "id": 26875,
+        "position": 7,
+        "char_type": "end",
+        "text": "٢٤",
+        "text_indopak": "٢٤",
+        "translation": "(24)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4926,
+    "verse_key": "55:25",
+    "words": [
+      {
+        "id": 27898,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 985
+        }
+      },
+      {
+        "id": 27899,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 985,
+          "to": 3425
+        }
+      },
+      {
+        "id": 27900,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3425,
+          "to": 4735
+        }
+      },
+      {
+        "id": 27901,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4735,
+          "to": 9050
+        }
+      },
+      {
+        "id": 27902,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٥",
+        "text_indopak": "٢٥",
+        "translation": "(25)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4927,
+    "verse_key": "55:26",
+    "words": [
+      {
+        "id": 28868,
+        "position": 1,
+        "char_type": "word",
+        "text": "كُلُّ",
+        "text_indopak": "كُلُّ",
+        "translation": "Everyone",
+        "transliteration": "kullu",
+        "timestamp": {
+          "from": 0,
+          "to": 555
+        }
+      },
+      {
+        "id": 28869,
+        "position": 2,
+        "char_type": "word",
+        "text": "مَنْ",
+        "text_indopak": "مَنۡ",
+        "translation": "who",
+        "transliteration": "man",
+        "timestamp": {
+          "from": 555,
+          "to": 905
+        }
+      },
+      {
+        "id": 28870,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَلَيْهَا",
+        "text_indopak": "عَلَيۡهَا",
+        "translation": "(is) on it",
+        "transliteration": "ʿalayhā",
+        "timestamp": {
+          "from": 905,
+          "to": 2035
+        }
+      },
+      {
+        "id": 28871,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَانٍۢ",
+        "text_indopak": "فَانٍ​ ۚ​ ۖ‏",
+        "translation": "(will) perish",
+        "transliteration": "fānin",
+        "timestamp": {
+          "from": 2035,
+          "to": 5320
+        }
+      },
+      {
+        "id": 28872,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٦",
+        "text_indopak": "٢٦",
+        "translation": "(26)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4928,
+    "verse_key": "55:27",
+    "words": [
+      {
+        "id": 29677,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَيَبْقَىٰ",
+        "text_indopak": "وَّيَبۡقٰى",
+        "translation": "But will remain",
+        "transliteration": "wayabqā",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 29678,
+        "position": 2,
+        "char_type": "word",
+        "text": "وَجْهُ",
+        "text_indopak": "وَجۡهُ",
+        "translation": "(the) Face",
+        "transliteration": "wajhu",
+        "timestamp": {
+          "from": 1005,
+          "to": 1655
+        }
+      },
+      {
+        "id": 29679,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكَ",
+        "text_indopak": "رَبِّكَ",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbika",
+        "timestamp": {
+          "from": 1655,
+          "to": 2495
+        }
+      },
+      {
+        "id": 29680,
+        "position": 4,
+        "char_type": "word",
+        "text": "ذُو",
+        "text_indopak": "ذُو",
+        "translation": "(the) Owner",
+        "transliteration": "dhū",
+        "timestamp": {
+          "from": 2495,
+          "to": 2705
+        }
+      },
+      {
+        "id": 29681,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْجَلَـٰلِ",
+        "text_indopak": "الۡجَلٰلِ",
+        "translation": "(of) Majesty",
+        "transliteration": "l-jalāli",
+        "timestamp": {
+          "from": 2705,
+          "to": 3805
+        }
+      },
+      {
+        "id": 29682,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَٱلْإِكْرَامِ",
+        "text_indopak": "وَالۡاِكۡرَامِ​ۚ‏",
+        "translation": "and Honor",
+        "transliteration": "wal-ik'rāmi",
+        "timestamp": {
+          "from": 3805,
+          "to": 8280
+        }
+      },
+      {
+        "id": 29683,
+        "position": 7,
+        "char_type": "end",
+        "text": "٢٧",
+        "text_indopak": "٢٧",
+        "translation": "(27)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4929,
+    "verse_key": "55:28",
+    "words": [
+      {
+        "id": 30759,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 985
+        }
+      },
+      {
+        "id": 30760,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 985,
+          "to": 3705
+        }
+      },
+      {
+        "id": 30761,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3705,
+          "to": 5045
+        }
+      },
+      {
+        "id": 30762,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5045,
+          "to": 9130
+        }
+      },
+      {
+        "id": 30763,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢٨",
+        "text_indopak": "٢٨",
+        "translation": "(28)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4930,
+    "verse_key": "55:29",
+    "words": [
+      {
+        "id": 31835,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَسْـَٔلُهُۥ",
+        "text_indopak": "يَسۡـَٔـلُهٗ",
+        "translation": "Asks Him",
+        "transliteration": "yasaluhu",
+        "timestamp": {
+          "from": 0,
+          "to": 1145
+        }
+      },
+      {
+        "id": 31836,
+        "position": 2,
+        "char_type": "word",
+        "text": "مَن",
+        "text_indopak": "مَنۡ",
+        "translation": "whoever",
+        "transliteration": "man",
+        "timestamp": {
+          "from": 1145,
+          "to": 2395
+        }
+      },
+      {
+        "id": 31837,
+        "position": 3,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "(is) in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 2395,
+          "to": 2535
+        }
+      },
+      {
+        "id": 31838,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلسَّمَـٰوَٰتِ",
+        "text_indopak": "السَّمٰوٰتِ",
+        "translation": "the heavens",
+        "transliteration": "l-samāwāti",
+        "timestamp": {
+          "from": 2535,
+          "to": 4225
+        }
+      },
+      {
+        "id": 31839,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَٱلْأَرْضِ ۚ",
+        "text_indopak": "وَالۡاَرۡضِ​ؕ",
+        "translation": "and the earth",
+        "transliteration": "wal-arḍi",
+        "timestamp": {
+          "from": 4225,
+          "to": 5615
+        }
+      },
+      {
+        "id": 31841,
+        "position": 6,
+        "char_type": "word",
+        "text": "كُلَّ",
+        "text_indopak": "كُلَّ",
+        "translation": "Every",
+        "transliteration": "kulla",
+        "timestamp": {
+          "from": 5615,
+          "to": 6115
+        }
+      },
+      {
+        "id": 31842,
+        "position": 7,
+        "char_type": "word",
+        "text": "يَوْمٍ",
+        "text_indopak": "يَوۡمٍ",
+        "translation": "day",
+        "transliteration": "yawmin",
+        "timestamp": {
+          "from": 6115,
+          "to": 7055
+        }
+      },
+      {
+        "id": 31843,
+        "position": 8,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "He",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 7055,
+          "to": 7405
+        }
+      },
+      {
+        "id": 31844,
+        "position": 9,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "(is) in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 7405,
+          "to": 7915
+        }
+      },
+      {
+        "id": 31845,
+        "position": 10,
+        "char_type": "word",
+        "text": "شَأْنٍۢ",
+        "text_indopak": "شَاۡنٍ​ۚ‏ ﻿﻿",
+        "translation": "a matter",
+        "transliteration": "shanin",
+        "timestamp": {
+          "from": 7915,
+          "to": 8930
+        }
+      },
+      {
+        "id": 31846,
+        "position": 11,
+        "char_type": "end",
+        "text": "٢٩",
+        "text_indopak": "٢٩",
+        "translation": "(29)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4931,
+    "verse_key": "55:30",
+    "words": [
+      {
+        "id": 32686,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 985
+        }
+      },
+      {
+        "id": 32687,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 985,
+          "to": 3384
+        }
+      },
+      {
+        "id": 32688,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3385,
+          "to": 4675
+        }
+      },
+      {
+        "id": 32689,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4675,
+          "to": 8700
+        }
+      },
+      {
+        "id": 32690,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣٠",
+        "text_indopak": "٣٠",
+        "translation": "(30)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4932,
+    "verse_key": "55:31",
+    "words": [
+      {
+        "id": 33861,
+        "position": 1,
+        "char_type": "word",
+        "text": "سَنَفْرُغُ",
+        "text_indopak": "سَنَفۡرُغُ",
+        "translation": "Soon We will attend",
+        "transliteration": "sanafrughu",
+        "timestamp": {
+          "from": 0,
+          "to": 1085
+        }
+      },
+      {
+        "id": 33862,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَكُمْ",
+        "text_indopak": "لَـكُمۡ",
+        "translation": "to you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 1085,
+          "to": 1705
+        }
+      },
+      {
+        "id": 33863,
+        "position": 3,
+        "char_type": "word",
+        "text": "أَيُّهَ",
+        "text_indopak": "اَيُّهَ",
+        "translation": "O you",
+        "transliteration": "ayyuha",
+        "timestamp": {
+          "from": 1705,
+          "to": 2595
+        }
+      },
+      {
+        "id": 33864,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلثَّقَلَانِ",
+        "text_indopak": "الثَّقَلٰنِ​ۚ‏",
+        "translation": "two classes",
+        "transliteration": "l-thaqalāni",
+        "timestamp": {
+          "from": 2595,
+          "to": 6410
+        }
+      },
+      {
+        "id": 33865,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣١",
+        "text_indopak": "٣١",
+        "translation": "(31)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4933,
+    "verse_key": "55:32",
+    "words": [
+      {
+        "id": 34638,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 34639,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1005,
+          "to": 3315
+        }
+      },
+      {
+        "id": 34640,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3315,
+          "to": 4555
+        }
+      },
+      {
+        "id": 34641,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4555,
+          "to": 8670
+        }
+      },
+      {
+        "id": 34642,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣٢",
+        "text_indopak": "٣٢",
+        "translation": "(32)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4934,
+    "verse_key": "55:33",
+    "words": [
+      {
+        "id": 35426,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَـٰمَعْشَرَ",
+        "text_indopak": "يٰمَعۡشَرَ",
+        "translation": "O assembly",
+        "transliteration": "yāmaʿshara",
+        "timestamp": {
+          "from": 0,
+          "to": 1215
+        }
+      },
+      {
+        "id": 35427,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْجِنِّ",
+        "text_indopak": "الۡجِنِّ",
+        "translation": "(of) the jinn",
+        "transliteration": "l-jini",
+        "timestamp": {
+          "from": 1215,
+          "to": 2945
+        }
+      },
+      {
+        "id": 35428,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَٱلْإِنسِ",
+        "text_indopak": "وَالۡاِنۡسِ",
+        "translation": "and the men",
+        "transliteration": "wal-insi",
+        "timestamp": {
+          "from": 2945,
+          "to": 5025
+        }
+      },
+      {
+        "id": 35429,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِنِ",
+        "text_indopak": "اِنِ",
+        "translation": "If",
+        "transliteration": "ini",
+        "timestamp": {
+          "from": 5025,
+          "to": 5385
+        }
+      },
+      {
+        "id": 35430,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱسْتَطَعْتُمْ",
+        "text_indopak": "اسۡتَطَعۡتُمۡ",
+        "translation": "you are able",
+        "transliteration": "is'taṭaʿtum",
+        "timestamp": {
+          "from": 5385,
+          "to": 6705
+        }
+      },
+      {
+        "id": 35431,
+        "position": 6,
+        "char_type": "word",
+        "text": "أَن",
+        "text_indopak": "اَنۡ",
+        "translation": "to",
+        "transliteration": "an",
+        "timestamp": {
+          "from": 6705,
+          "to": 7735
+        }
+      },
+      {
+        "id": 35432,
+        "position": 7,
+        "char_type": "word",
+        "text": "تَنفُذُوا۟",
+        "text_indopak": "تَنۡفُذُوۡا",
+        "translation": "pass beyond",
+        "transliteration": "tanfudhū",
+        "timestamp": {
+          "from": 7735,
+          "to": 9595
+        }
+      },
+      {
+        "id": 35433,
+        "position": 8,
+        "char_type": "word",
+        "text": "مِنْ",
+        "text_indopak": "مِنۡ",
+        "translation": "[of]",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 9595,
+          "to": 10015
+        }
+      },
+      {
+        "id": 35434,
+        "position": 9,
+        "char_type": "word",
+        "text": "أَقْطَارِ",
+        "text_indopak": "اَقۡطَارِ",
+        "translation": "(the) regions",
+        "transliteration": "aqṭāri",
+        "timestamp": {
+          "from": 10015,
+          "to": 11085
+        }
+      },
+      {
+        "id": 35435,
+        "position": 10,
+        "char_type": "word",
+        "text": "ٱلسَّمَـٰوَٰتِ",
+        "text_indopak": "السَّمٰوٰتِ",
+        "translation": "(of) the heavens",
+        "transliteration": "l-samāwāti",
+        "timestamp": {
+          "from": 11085,
+          "to": 12735
+        }
+      },
+      {
+        "id": 35436,
+        "position": 11,
+        "char_type": "word",
+        "text": "وَٱلْأَرْضِ",
+        "text_indopak": "وَالۡاَرۡضِ",
+        "translation": "and the earth",
+        "transliteration": "wal-arḍi",
+        "timestamp": {
+          "from": 12735,
+          "to": 13845
+        }
+      },
+      {
+        "id": 35437,
+        "position": 12,
+        "char_type": "word",
+        "text": "فَٱنفُذُوا۟ ۚ",
+        "text_indopak": "فَانْفُذُوۡا​ؕ",
+        "translation": "then pass",
+        "transliteration": "fa-unfudhū",
+        "timestamp": {
+          "from": 13845,
+          "to": 15635
+        }
+      },
+      {
+        "id": 35439,
+        "position": 13,
+        "char_type": "word",
+        "text": "لَا",
+        "text_indopak": "لَا",
+        "translation": "Not",
+        "transliteration": "lā",
+        "timestamp": {
+          "from": 15635,
+          "to": 16795
+        }
+      },
+      {
+        "id": 35440,
+        "position": 14,
+        "char_type": "word",
+        "text": "تَنفُذُونَ",
+        "text_indopak": "تَنۡفُذُوۡنَ",
+        "translation": "you (can) pass",
+        "transliteration": "tanfudhūna",
+        "timestamp": {
+          "from": 16795,
+          "to": 18665
+        }
+      },
+      {
+        "id": 35441,
+        "position": 15,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "except",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 18665,
+          "to": 19565
+        }
+      },
+      {
+        "id": 35442,
+        "position": 16,
+        "char_type": "word",
+        "text": "بِسُلْطَـٰنٍۢ",
+        "text_indopak": "بِسُلۡطٰنٍ​ۚ‏",
+        "translation": "by authority",
+        "transliteration": "bisul'ṭānin",
+        "timestamp": {
+          "from": 19565,
+          "to": 23450
+        }
+      },
+      {
+        "id": 35443,
+        "position": 17,
+        "char_type": "end",
+        "text": "٣٣",
+        "text_indopak": "٣٣",
+        "translation": "(33)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4935,
+    "verse_key": "55:34",
+    "words": [
+      {
+        "id": 36349,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 685
+        }
+      },
+      {
+        "id": 36350,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 685,
+          "to": 3115
+        }
+      },
+      {
+        "id": 36351,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3115,
+          "to": 4435
+        }
+      },
+      {
+        "id": 36352,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4435,
+          "to": 8330
+        }
+      },
+      {
+        "id": 36353,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣٤",
+        "text_indopak": "٣٤",
+        "translation": "(34)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4936,
+    "verse_key": "55:35",
+    "words": [
+      {
+        "id": 37563,
+        "position": 1,
+        "char_type": "word",
+        "text": "يُرْسَلُ",
+        "text_indopak": "يُرۡسَلُ",
+        "translation": "Will be sent",
+        "transliteration": "yur'salu",
+        "timestamp": {
+          "from": 0,
+          "to": 885
+        }
+      },
+      {
+        "id": 37564,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَلَيْكُمَا",
+        "text_indopak": "عَلَيۡكُمَا",
+        "translation": "against both of you",
+        "transliteration": "ʿalaykumā",
+        "timestamp": {
+          "from": 885,
+          "to": 2125
+        }
+      },
+      {
+        "id": 37565,
+        "position": 3,
+        "char_type": "word",
+        "text": "شُوَاظٌۭ",
+        "text_indopak": "شُوَاظٌ",
+        "translation": "a flame",
+        "transliteration": "shuwāẓun",
+        "timestamp": {
+          "from": 2125,
+          "to": 3125
+        }
+      },
+      {
+        "id": 37566,
+        "position": 4,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "of",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 3125,
+          "to": 4515
+        }
+      },
+      {
+        "id": 37567,
+        "position": 5,
+        "char_type": "word",
+        "text": "نَّارٍۢ",
+        "text_indopak": "نَّارٍ ۙ",
+        "translation": "fire",
+        "transliteration": "nārin",
+        "timestamp": {
+          "from": 4515,
+          "to": 6305
+        }
+      },
+      {
+        "id": 37568,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَنُحَاسٌۭ",
+        "text_indopak": "وَّنُحَاسٌ",
+        "translation": "and smoke",
+        "transliteration": "wanuḥāsun",
+        "timestamp": {
+          "from": 6305,
+          "to": 8895
+        }
+      },
+      {
+        "id": 37569,
+        "position": 7,
+        "char_type": "word",
+        "text": "فَلَا",
+        "text_indopak": "فَلَا",
+        "translation": "and not",
+        "transliteration": "falā",
+        "timestamp": {
+          "from": 8895,
+          "to": 9565
+        }
+      },
+      {
+        "id": 37570,
+        "position": 8,
+        "char_type": "word",
+        "text": "تَنتَصِرَانِ",
+        "text_indopak": "تَنۡتَصِرٰنِ​ۚ‏ ﻿﻿",
+        "translation": "you will (be able to) defend yourselves",
+        "transliteration": "tantaṣirāni",
+        "timestamp": {
+          "from": 9565,
+          "to": 14340
+        }
+      },
+      {
+        "id": 37571,
+        "position": 9,
+        "char_type": "end",
+        "text": "٣٥",
+        "text_indopak": "٣٥",
+        "translation": "(35)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4937,
+    "verse_key": "55:36",
+    "words": [
+      {
+        "id": 38021,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 935
+        }
+      },
+      {
+        "id": 38022,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 935,
+          "to": 3745
+        }
+      },
+      {
+        "id": 38023,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3745,
+          "to": 5085
+        }
+      },
+      {
+        "id": 38024,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5085,
+          "to": 9530
+        }
+      },
+      {
+        "id": 38025,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣٦",
+        "text_indopak": "٣٦",
+        "translation": "(36)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4938,
+    "verse_key": "55:37",
+    "words": [
+      {
+        "id": 38835,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَإِذَا",
+        "text_indopak": "فَاِذَا",
+        "translation": "Then when",
+        "transliteration": "fa-idhā",
+        "timestamp": {
+          "from": 0,
+          "to": 615
+        }
+      },
+      {
+        "id": 38836,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱنشَقَّتِ",
+        "text_indopak": "انْشَقَّتِ",
+        "translation": "is split",
+        "transliteration": "inshaqqati",
+        "timestamp": {
+          "from": 615,
+          "to": 2625
+        }
+      },
+      {
+        "id": 38837,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلسَّمَآءُ",
+        "text_indopak": "السَّمَآءُ",
+        "translation": "the heaven",
+        "transliteration": "l-samāu",
+        "timestamp": {
+          "from": 2625,
+          "to": 5425
+        }
+      },
+      {
+        "id": 38838,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَكَانَتْ",
+        "text_indopak": "فَكَانَتۡ",
+        "translation": "and it becomes",
+        "transliteration": "fakānat",
+        "timestamp": {
+          "from": 5425,
+          "to": 6565
+        }
+      },
+      {
+        "id": 38839,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَرْدَةًۭ",
+        "text_indopak": "وَرۡدَةً",
+        "translation": "rose-colored",
+        "transliteration": "wardatan",
+        "timestamp": {
+          "from": 6565,
+          "to": 8475
+        }
+      },
+      {
+        "id": 38840,
+        "position": 6,
+        "char_type": "word",
+        "text": "كَٱلدِّهَانِ",
+        "text_indopak": "كَالدِّهَانِ​ۚ‏",
+        "translation": "like murky oil",
+        "transliteration": "kal-dihāni",
+        "timestamp": {
+          "from": 8475,
+          "to": 12110
+        }
+      },
+      {
+        "id": 38841,
+        "position": 7,
+        "char_type": "end",
+        "text": "٣٧",
+        "text_indopak": "٣٧",
+        "translation": "(37)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4939,
+    "verse_key": "55:38",
+    "words": [
+      {
+        "id": 39722,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1015
+        }
+      },
+      {
+        "id": 39723,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1015,
+          "to": 3645
+        }
+      },
+      {
+        "id": 39724,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3645,
+          "to": 4835
+        }
+      },
+      {
+        "id": 39725,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4835,
+          "to": 8690
+        }
+      },
+      {
+        "id": 39726,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣٨",
+        "text_indopak": "٣٨",
+        "translation": "(38)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4940,
+    "verse_key": "55:39",
+    "words": [
+      {
+        "id": 40782,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَيَوْمَئِذٍۢ",
+        "text_indopak": "فَيَوۡمَٮِٕذٍ",
+        "translation": "Then (on) that Day",
+        "transliteration": "fayawma-idhin",
+        "timestamp": {
+          "from": 0,
+          "to": 1415
+        }
+      },
+      {
+        "id": 40783,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَّا",
+        "text_indopak": "لَّا",
+        "translation": "not",
+        "transliteration": "lā",
+        "timestamp": {
+          "from": 1415,
+          "to": 1915
+        }
+      },
+      {
+        "id": 40784,
+        "position": 3,
+        "char_type": "word",
+        "text": "يُسْـَٔلُ",
+        "text_indopak": "يُسۡـَٔـلُ",
+        "translation": "will be asked",
+        "transliteration": "yus'alu",
+        "timestamp": {
+          "from": 1915,
+          "to": 2755
+        }
+      },
+      {
+        "id": 40785,
+        "position": 4,
+        "char_type": "word",
+        "text": "عَن",
+        "text_indopak": "عَنۡ",
+        "translation": "about",
+        "transliteration": "ʿan",
+        "timestamp": {
+          "from": 2755,
+          "to": 3925
+        }
+      },
+      {
+        "id": 40786,
+        "position": 5,
+        "char_type": "word",
+        "text": "ذَنۢبِهِۦٓ",
+        "text_indopak": "ذَنۡۢبِهٖۤ",
+        "translation": "his sin",
+        "transliteration": "dhanbihi",
+        "timestamp": {
+          "from": 3925,
+          "to": 7205
+        }
+      },
+      {
+        "id": 40787,
+        "position": 6,
+        "char_type": "word",
+        "text": "إِنسٌۭ",
+        "text_indopak": "اِنۡسٌ",
+        "translation": "any man",
+        "transliteration": "insun",
+        "timestamp": {
+          "from": 7205,
+          "to": 9754
+        }
+      },
+      {
+        "id": 40788,
+        "position": 7,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَّلَا",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 9755,
+          "to": 10395
+        }
+      },
+      {
+        "id": 40789,
+        "position": 8,
+        "char_type": "word",
+        "text": "جَآنٌّۭ",
+        "text_indopak": "جَآنٌّ​ۚ‏",
+        "translation": "any jinn",
+        "transliteration": "jānnun",
+        "timestamp": {
+          "from": 10395,
+          "to": 14600
+        }
+      },
+      {
+        "id": 40790,
+        "position": 9,
+        "char_type": "end",
+        "text": "٣٩",
+        "text_indopak": "٣٩",
+        "translation": "(39)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4941,
+    "verse_key": "55:40",
+    "words": [
+      {
+        "id": 41246,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 735
+        }
+      },
+      {
+        "id": 41247,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 735,
+          "to": 3495
+        }
+      },
+      {
+        "id": 41248,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3495,
+          "to": 4805
+        }
+      },
+      {
+        "id": 41249,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4805,
+          "to": 9110
+        }
+      },
+      {
+        "id": 41250,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤٠",
+        "text_indopak": "٤٠",
+        "translation": "(40)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4942,
+    "verse_key": "55:41",
+    "words": [
+      {
+        "id": 42122,
+        "position": 1,
+        "char_type": "word",
+        "text": "يُعْرَفُ",
+        "text_indopak": "يُعۡرَفُ",
+        "translation": "Will be known",
+        "transliteration": "yuʿ'rafu",
+        "timestamp": {
+          "from": 0,
+          "to": 745
+        }
+      },
+      {
+        "id": 42123,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْمُجْرِمُونَ",
+        "text_indopak": "الۡمُجۡرِمُوۡنَ",
+        "translation": "the criminals",
+        "transliteration": "l-muj'rimūna",
+        "timestamp": {
+          "from": 745,
+          "to": 2315
+        }
+      },
+      {
+        "id": 42124,
+        "position": 3,
+        "char_type": "word",
+        "text": "بِسِيمَـٰهُمْ",
+        "text_indopak": "بِسِيۡمٰهُمۡ",
+        "translation": "by their marks",
+        "transliteration": "bisīmāhum",
+        "timestamp": {
+          "from": 2315,
+          "to": 3925
+        }
+      },
+      {
+        "id": 42125,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَيُؤْخَذُ",
+        "text_indopak": "فَيُؤۡخَذُ",
+        "translation": "and will be seized",
+        "transliteration": "fayu'khadhu",
+        "timestamp": {
+          "from": 3925,
+          "to": 5135
+        }
+      },
+      {
+        "id": 42126,
+        "position": 5,
+        "char_type": "word",
+        "text": "بِٱلنَّوَٰصِى",
+        "text_indopak": "بِالنَّوَاصِىۡ",
+        "translation": "by the forelocks",
+        "transliteration": "bil-nawāṣī",
+        "timestamp": {
+          "from": 5135,
+          "to": 7385
+        }
+      },
+      {
+        "id": 42127,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَٱلْأَقْدَامِ",
+        "text_indopak": "وَ الۡاَقۡدَامِ​ۚ‏ ﻿﻿",
+        "translation": "and the feet",
+        "transliteration": "wal-aqdāmi",
+        "timestamp": {
+          "from": 7385,
+          "to": 11120
+        }
+      },
+      {
+        "id": 42128,
+        "position": 7,
+        "char_type": "end",
+        "text": "٤١",
+        "text_indopak": "٤١",
+        "translation": "(41)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4943,
+    "verse_key": "55:42",
+    "words": [
+      {
+        "id": 42952,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 805
+        }
+      },
+      {
+        "id": 42953,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 805,
+          "to": 3285
+        }
+      },
+      {
+        "id": 42954,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3285,
+          "to": 4595
+        }
+      },
+      {
+        "id": 42955,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4595,
+          "to": 8900
+        }
+      },
+      {
+        "id": 42956,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤٢",
+        "text_indopak": "٤٢",
+        "translation": "(42)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4944,
+    "verse_key": "55:43",
+    "words": [
+      {
+        "id": 43641,
+        "position": 1,
+        "char_type": "word",
+        "text": "هَـٰذِهِۦ",
+        "text_indopak": "هٰذِهٖ",
+        "translation": "This",
+        "transliteration": "hādhihi",
+        "timestamp": {
+          "from": 0,
+          "to": 1115
+        }
+      },
+      {
+        "id": 43642,
+        "position": 2,
+        "char_type": "word",
+        "text": "جَهَنَّمُ",
+        "text_indopak": "جَهَنَّمُ",
+        "translation": "(is) Hell",
+        "transliteration": "jahannamu",
+        "timestamp": {
+          "from": 1115,
+          "to": 2725
+        }
+      },
+      {
+        "id": 43643,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلَّتِى",
+        "text_indopak": "الَّتِىۡ",
+        "translation": "which",
+        "transliteration": "allatī",
+        "timestamp": {
+          "from": 2725,
+          "to": 3705
+        }
+      },
+      {
+        "id": 43644,
+        "position": 4,
+        "char_type": "word",
+        "text": "يُكَذِّبُ",
+        "text_indopak": "يُكَذِّبُ",
+        "translation": "deny",
+        "transliteration": "yukadhibu",
+        "timestamp": {
+          "from": 3705,
+          "to": 4845
+        }
+      },
+      {
+        "id": 43645,
+        "position": 5,
+        "char_type": "word",
+        "text": "بِهَا",
+        "text_indopak": "بِهَا",
+        "translation": "[of it]",
+        "transliteration": "bihā",
+        "timestamp": {
+          "from": 4845,
+          "to": 5235
+        }
+      },
+      {
+        "id": 43646,
+        "position": 6,
+        "char_type": "word",
+        "text": "ٱلْمُجْرِمُونَ",
+        "text_indopak": "الۡمُجۡرِمُوۡنَ​ۘ‏",
+        "translation": "the criminals",
+        "transliteration": "l-muj'rimūna",
+        "timestamp": {
+          "from": 5235,
+          "to": 8820
+        }
+      },
+      {
+        "id": 43647,
+        "position": 7,
+        "char_type": "end",
+        "text": "٤٣",
+        "text_indopak": "٤٣",
+        "translation": "(43)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4945,
+    "verse_key": "55:44",
+    "words": [
+      {
+        "id": 44390,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَطُوفُونَ",
+        "text_indopak": "يَطُوۡفُوۡنَ",
+        "translation": "They will go around",
+        "transliteration": "yaṭūfūna",
+        "timestamp": {
+          "from": 0,
+          "to": 1345
+        }
+      },
+      {
+        "id": 44391,
+        "position": 2,
+        "char_type": "word",
+        "text": "بَيْنَهَا",
+        "text_indopak": "بَيۡنَهَا",
+        "translation": "between it",
+        "transliteration": "baynahā",
+        "timestamp": {
+          "from": 1345,
+          "to": 2575
+        }
+      },
+      {
+        "id": 44392,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَبَيْنَ",
+        "text_indopak": "وَبَيۡنَ",
+        "translation": "and between",
+        "transliteration": "wabayna",
+        "timestamp": {
+          "from": 2575,
+          "to": 3325
+        }
+      },
+      {
+        "id": 44393,
+        "position": 4,
+        "char_type": "word",
+        "text": "حَمِيمٍ",
+        "text_indopak": "حَمِيۡمٍ",
+        "translation": "scalding water",
+        "transliteration": "ḥamīmin",
+        "timestamp": {
+          "from": 3325,
+          "to": 4615
+        }
+      },
+      {
+        "id": 44394,
+        "position": 5,
+        "char_type": "word",
+        "text": "ءَانٍۢ",
+        "text_indopak": "اٰنٍ​ۚ‏",
+        "translation": "heated",
+        "transliteration": "ānin",
+        "timestamp": {
+          "from": 4615,
+          "to": 8040
+        }
+      },
+      {
+        "id": 44395,
+        "position": 6,
+        "char_type": "end",
+        "text": "٤٤",
+        "text_indopak": "٤٤",
+        "translation": "(44)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4946,
+    "verse_key": "55:45",
+    "words": [
+      {
+        "id": 45150,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1055
+        }
+      },
+      {
+        "id": 45151,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1055,
+          "to": 3765
+        }
+      },
+      {
+        "id": 45152,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3765,
+          "to": 5085
+        }
+      },
+      {
+        "id": 45153,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5085,
+          "to": 9440
+        }
+      },
+      {
+        "id": 45154,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤٥",
+        "text_indopak": "٤٥",
+        "translation": "(45)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4947,
+    "verse_key": "55:46",
+    "words": [
+      {
+        "id": 45871,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلِمَنْ",
+        "text_indopak": "وَلِمَنۡ",
+        "translation": "But for (him) who",
+        "transliteration": "waliman",
+        "timestamp": {
+          "from": 0,
+          "to": 635
+        }
+      },
+      {
+        "id": 45872,
+        "position": 2,
+        "char_type": "word",
+        "text": "خَافَ",
+        "text_indopak": "خَافَ",
+        "translation": "fears",
+        "transliteration": "khāfa",
+        "timestamp": {
+          "from": 635,
+          "to": 1465
+        }
+      },
+      {
+        "id": 45873,
+        "position": 3,
+        "char_type": "word",
+        "text": "مَقَامَ",
+        "text_indopak": "مَقَامَ",
+        "translation": "(the) standing",
+        "transliteration": "maqāma",
+        "timestamp": {
+          "from": 1465,
+          "to": 2385
+        }
+      },
+      {
+        "id": 45874,
+        "position": 4,
+        "char_type": "word",
+        "text": "رَبِّهِۦ",
+        "text_indopak": "رَبِّهٖ",
+        "translation": "(before) his Lord",
+        "transliteration": "rabbihi",
+        "timestamp": {
+          "from": 2385,
+          "to": 3495
+        }
+      },
+      {
+        "id": 45875,
+        "position": 5,
+        "char_type": "word",
+        "text": "جَنَّتَانِ",
+        "text_indopak": "جَنَّتٰنِ​ۚ‏",
+        "translation": "(are) two gardens",
+        "transliteration": "jannatāni",
+        "timestamp": {
+          "from": 3495,
+          "to": 7990
+        }
+      },
+      {
+        "id": 45876,
+        "position": 6,
+        "char_type": "end",
+        "text": "٤٦",
+        "text_indopak": "٤٦",
+        "translation": "(46)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4948,
+    "verse_key": "55:47",
+    "words": [
+      {
+        "id": 46666,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1065
+        }
+      },
+      {
+        "id": 46667,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1065,
+          "to": 3775
+        }
+      },
+      {
+        "id": 46668,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3775,
+          "to": 5075
+        }
+      },
+      {
+        "id": 46669,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِۙ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5075,
+          "to": 9200
+        }
+      },
+      {
+        "id": 46670,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤٧",
+        "text_indopak": "٤٧",
+        "translation": "(47)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4949,
+    "verse_key": "55:48",
+    "words": [
+      {
+        "id": 47269,
+        "position": 1,
+        "char_type": "word",
+        "text": "ذَوَاتَآ",
+        "text_indopak": "ذَوَاتَاۤ",
+        "translation": "Having",
+        "transliteration": "dhawātā",
+        "timestamp": {
+          "from": 0,
+          "to": 775
+        }
+      },
+      {
+        "id": 47270,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَفْنَانٍۢ",
+        "text_indopak": "اَفۡنَانٍ​ۚ‏",
+        "translation": "branches",
+        "transliteration": "afnānin",
+        "timestamp": {
+          "from": 2675,
+          "to": 5860
+        }
+      },
+      {
+        "id": 47271,
+        "position": 3,
+        "char_type": "end",
+        "text": "٤٨",
+        "text_indopak": "٤٨",
+        "translation": "(48)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4950,
+    "verse_key": "55:49",
+    "words": [
+      {
+        "id": 47880,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 995
+        }
+      },
+      {
+        "id": 47881,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 995,
+          "to": 3405
+        }
+      },
+      {
+        "id": 47882,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3405,
+          "to": 4675
+        }
+      },
+      {
+        "id": 47883,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4675,
+          "to": 8740
+        }
+      },
+      {
+        "id": 47884,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤٩",
+        "text_indopak": "٤٩",
+        "translation": "(49)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4951,
+    "verse_key": "55:50",
+    "words": [
+      {
+        "id": 48665,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِمَا",
+        "text_indopak": "فِيۡهِمَا",
+        "translation": "In both of them",
+        "transliteration": "fīhimā",
+        "timestamp": {
+          "from": 0,
+          "to": 1115
+        }
+      },
+      {
+        "id": 48666,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَيْنَانِ",
+        "text_indopak": "عَيۡنٰنِ",
+        "translation": "(are) two springs",
+        "transliteration": "ʿaynāni",
+        "timestamp": {
+          "from": 1115,
+          "to": 2305
+        }
+      },
+      {
+        "id": 48667,
+        "position": 3,
+        "char_type": "word",
+        "text": "تَجْرِيَانِ",
+        "text_indopak": "تَجۡرِيٰنِ​ۚ‏",
+        "translation": "flowing",
+        "transliteration": "tajriyāni",
+        "timestamp": {
+          "from": 2305,
+          "to": 5930
+        }
+      },
+      {
+        "id": 48668,
+        "position": 4,
+        "char_type": "end",
+        "text": "٥٠",
+        "text_indopak": "٥٠",
+        "translation": "(50)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4952,
+    "verse_key": "55:51",
+    "words": [
+      {
+        "id": 49319,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1065
+        }
+      },
+      {
+        "id": 49320,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1065,
+          "to": 3625
+        }
+      },
+      {
+        "id": 49321,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3625,
+          "to": 4925
+        }
+      },
+      {
+        "id": 49322,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4925,
+          "to": 8450
+        }
+      },
+      {
+        "id": 49323,
+        "position": 5,
+        "char_type": "end",
+        "text": "٥١",
+        "text_indopak": "٥١",
+        "translation": "(51)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4953,
+    "verse_key": "55:52",
+    "words": [
+      {
+        "id": 49884,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِمَا",
+        "text_indopak": "فِيۡهِمَا",
+        "translation": "In both of them",
+        "transliteration": "fīhimā",
+        "timestamp": {
+          "from": 0,
+          "to": 1125
+        }
+      },
+      {
+        "id": 49885,
+        "position": 2,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "[of]",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 1125,
+          "to": 2415
+        }
+      },
+      {
+        "id": 49886,
+        "position": 3,
+        "char_type": "word",
+        "text": "كُلِّ",
+        "text_indopak": "كُلِّ",
+        "translation": "(are) every",
+        "transliteration": "kulli",
+        "timestamp": {
+          "from": 2415,
+          "to": 3045
+        }
+      },
+      {
+        "id": 49887,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَـٰكِهَةٍۢ",
+        "text_indopak": "فَاكِهَةٍ",
+        "translation": "fruits",
+        "transliteration": "fākihatin",
+        "timestamp": {
+          "from": 3045,
+          "to": 5235
+        }
+      },
+      {
+        "id": 49888,
+        "position": 5,
+        "char_type": "word",
+        "text": "زَوْجَانِ",
+        "text_indopak": "زَوۡجٰنِ​ۚ‏",
+        "translation": "(in) pairs",
+        "transliteration": "zawjāni",
+        "timestamp": {
+          "from": 5235,
+          "to": 8500
+        }
+      },
+      {
+        "id": 49889,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥٢",
+        "text_indopak": "٥٢",
+        "translation": "(52)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4954,
+    "verse_key": "55:53",
+    "words": [
+      {
+        "id": 50593,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1045
+        }
+      },
+      {
+        "id": 50594,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1045,
+          "to": 3585
+        }
+      },
+      {
+        "id": 50595,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3585,
+          "to": 4815
+        }
+      },
+      {
+        "id": 50596,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4815,
+          "to": 8360
+        }
+      },
+      {
+        "id": 50597,
+        "position": 5,
+        "char_type": "end",
+        "text": "٥٣",
+        "text_indopak": "٥٣",
+        "translation": "(53)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4955,
+    "verse_key": "55:54",
+    "words": [
+      {
+        "id": 51153,
+        "position": 1,
+        "char_type": "word",
+        "text": "مُتَّكِـِٔينَ",
+        "text_indopak": "مُتَّكِـــِٕيۡنَ",
+        "translation": "Reclining",
+        "transliteration": "muttakiīna",
+        "timestamp": {
+          "from": 0,
+          "to": 1425
+        }
+      },
+      {
+        "id": 51154,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَلَىٰ",
+        "text_indopak": "عَلٰى",
+        "translation": "on",
+        "transliteration": "ʿalā",
+        "timestamp": {
+          "from": 1425,
+          "to": 2105
+        }
+      },
+      {
+        "id": 51155,
+        "position": 3,
+        "char_type": "word",
+        "text": "فُرُشٍۭ",
+        "text_indopak": "فُرُشٍۢ",
+        "translation": "couches",
+        "transliteration": "furushin",
+        "timestamp": {
+          "from": 2105,
+          "to": 3645
+        }
+      },
+      {
+        "id": 51156,
+        "position": 4,
+        "char_type": "word",
+        "text": "بَطَآئِنُهَا",
+        "text_indopak": "بَطَآٮِٕنُهَا",
+        "translation": "(whose) inner linings",
+        "transliteration": "baṭāinuhā",
+        "timestamp": {
+          "from": 3645,
+          "to": 6555
+        }
+      },
+      {
+        "id": 51157,
+        "position": 5,
+        "char_type": "word",
+        "text": "مِنْ",
+        "text_indopak": "مِنۡ",
+        "translation": "(are) of",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 6555,
+          "to": 7005
+        }
+      },
+      {
+        "id": 51158,
+        "position": 6,
+        "char_type": "word",
+        "text": "إِسْتَبْرَقٍۢ ۚ",
+        "text_indopak": "اِسۡتَبۡرَقٍ​ؕ",
+        "translation": "brocade",
+        "transliteration": "is'tabraqin",
+        "timestamp": {
+          "from": 7005,
+          "to": 8635
+        }
+      },
+      {
+        "id": 51160,
+        "position": 7,
+        "char_type": "word",
+        "text": "وَجَنَى",
+        "text_indopak": "وَجَنَی",
+        "translation": "and (the) fruit",
+        "transliteration": "wajanā",
+        "timestamp": {
+          "from": 8635,
+          "to": 9235
+        }
+      },
+      {
+        "id": 51161,
+        "position": 8,
+        "char_type": "word",
+        "text": "ٱلْجَنَّتَيْنِ",
+        "text_indopak": "الۡجَـنَّتَيۡنِ",
+        "translation": "(of) both the gardens",
+        "transliteration": "l-janatayni",
+        "timestamp": {
+          "from": 9235,
+          "to": 11655
+        }
+      },
+      {
+        "id": 51162,
+        "position": 9,
+        "char_type": "word",
+        "text": "دَانٍۢ",
+        "text_indopak": "دَانٍ​ۚ‏",
+        "translation": "(is) near",
+        "transliteration": "dānin",
+        "timestamp": {
+          "from": 11655,
+          "to": 14620
+        }
+      },
+      {
+        "id": 51163,
+        "position": 10,
+        "char_type": "end",
+        "text": "٥٤",
+        "text_indopak": "٥٤",
+        "translation": "(54)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4956,
+    "verse_key": "55:55",
+    "words": [
+      {
+        "id": 51790,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1045
+        }
+      },
+      {
+        "id": 51791,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1045,
+          "to": 3455
+        }
+      },
+      {
+        "id": 51792,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3455,
+          "to": 4725
+        }
+      },
+      {
+        "id": 51793,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4725,
+          "to": 8910
+        }
+      },
+      {
+        "id": 51794,
+        "position": 5,
+        "char_type": "end",
+        "text": "٥٥",
+        "text_indopak": "٥٥",
+        "translation": "(55)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4957,
+    "verse_key": "55:56",
+    "words": [
+      {
+        "id": 52188,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِنَّ",
+        "text_indopak": "فِيۡهِنَّ",
+        "translation": "In them",
+        "transliteration": "fīhinna",
+        "timestamp": {
+          "from": 0,
+          "to": 1615
+        }
+      },
+      {
+        "id": 52189,
+        "position": 2,
+        "char_type": "word",
+        "text": "قَـٰصِرَٰتُ",
+        "text_indopak": "قٰصِرٰتُ",
+        "translation": "(will be) companions of modest gaze",
+        "transliteration": "qāṣirātu",
+        "timestamp": {
+          "from": 1615,
+          "to": 2915
+        }
+      },
+      {
+        "id": 52190,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلطَّرْفِ",
+        "text_indopak": "الطَّرۡفِۙ",
+        "translation": "(will be) companions of modest gaze",
+        "transliteration": "l-ṭarfi",
+        "timestamp": {
+          "from": 2915,
+          "to": 3925
+        }
+      },
+      {
+        "id": 52191,
+        "position": 4,
+        "char_type": "word",
+        "text": "لَمْ",
+        "text_indopak": "لَمۡ",
+        "translation": "not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 3925,
+          "to": 4235
+        }
+      },
+      {
+        "id": 52192,
+        "position": 5,
+        "char_type": "word",
+        "text": "يَطْمِثْهُنَّ",
+        "text_indopak": "يَطۡمِثۡهُنَّ",
+        "translation": "has touched them",
+        "transliteration": "yaṭmith'hunna",
+        "timestamp": {
+          "from": 4235,
+          "to": 6565
+        }
+      },
+      {
+        "id": 52193,
+        "position": 6,
+        "char_type": "word",
+        "text": "إِنسٌۭ",
+        "text_indopak": "اِنۡسٌ",
+        "translation": "any man",
+        "transliteration": "insun",
+        "timestamp": {
+          "from": 6565,
+          "to": 9255
+        }
+      },
+      {
+        "id": 52194,
+        "position": 7,
+        "char_type": "word",
+        "text": "قَبْلَهُمْ",
+        "text_indopak": "قَبۡلَهُمۡ",
+        "translation": "before them",
+        "transliteration": "qablahum",
+        "timestamp": {
+          "from": 9255,
+          "to": 10465
+        }
+      },
+      {
+        "id": 52195,
+        "position": 8,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَلَا",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 10465,
+          "to": 11105
+        }
+      },
+      {
+        "id": 52196,
+        "position": 9,
+        "char_type": "word",
+        "text": "جَآنٌّۭ",
+        "text_indopak": "جَآنٌّ​ۚ‏ ﻿﻿",
+        "translation": "any jinn",
+        "transliteration": "jānnun",
+        "timestamp": {
+          "from": 11105,
+          "to": 15060
+        }
+      },
+      {
+        "id": 52197,
+        "position": 10,
+        "char_type": "end",
+        "text": "٥٦",
+        "text_indopak": "٥٦",
+        "translation": "(56)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4958,
+    "verse_key": "55:57",
+    "words": [
+      {
+        "id": 52806,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 755
+        }
+      },
+      {
+        "id": 52807,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 755,
+          "to": 3235
+        }
+      },
+      {
+        "id": 52808,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3235,
+          "to": 4585
+        }
+      },
+      {
+        "id": 52809,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4585,
+          "to": 8490
+        }
+      },
+      {
+        "id": 52810,
+        "position": 5,
+        "char_type": "end",
+        "text": "٥٧",
+        "text_indopak": "٥٧",
+        "translation": "(57)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4959,
+    "verse_key": "55:58",
+    "words": [
+      {
+        "id": 53397,
+        "position": 1,
+        "char_type": "word",
+        "text": "كَأَنَّهُنَّ",
+        "text_indopak": "كَاَنَّهُنَّ",
+        "translation": "As if they were",
+        "transliteration": "ka-annahunna",
+        "timestamp": {
+          "from": 0,
+          "to": 2815
+        }
+      },
+      {
+        "id": 53398,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْيَاقُوتُ",
+        "text_indopak": "الۡيَاقُوۡتُ",
+        "translation": "rubies",
+        "transliteration": "l-yāqūtu",
+        "timestamp": {
+          "from": 2815,
+          "to": 4205
+        }
+      },
+      {
+        "id": 53399,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَٱلْمَرْجَانُ",
+        "text_indopak": "وَالۡمَرۡجَانُ​ۚ‏",
+        "translation": "and coral",
+        "transliteration": "wal-marjānu",
+        "timestamp": {
+          "from": 4205,
+          "to": 8150
+        }
+      },
+      {
+        "id": 53400,
+        "position": 4,
+        "char_type": "end",
+        "text": "٥٨",
+        "text_indopak": "٥٨",
+        "translation": "(58)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4960,
+    "verse_key": "55:59",
+    "words": [
+      {
+        "id": 53852,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1045
+        }
+      },
+      {
+        "id": 53853,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1045,
+          "to": 3645
+        }
+      },
+      {
+        "id": 53854,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3645,
+          "to": 5035
+        }
+      },
+      {
+        "id": 53855,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5035,
+          "to": 8580
+        }
+      },
+      {
+        "id": 53856,
+        "position": 5,
+        "char_type": "end",
+        "text": "٥٩",
+        "text_indopak": "٥٩",
+        "translation": "(59)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4961,
+    "verse_key": "55:60",
+    "words": [
+      {
+        "id": 54424,
+        "position": 1,
+        "char_type": "word",
+        "text": "هَلْ",
+        "text_indopak": "هَلۡ",
+        "translation": "Is",
+        "transliteration": "hal",
+        "timestamp": {
+          "from": 0,
+          "to": 285
+        }
+      },
+      {
+        "id": 54425,
+        "position": 2,
+        "char_type": "word",
+        "text": "جَزَآءُ",
+        "text_indopak": "جَزَآءُ",
+        "translation": "(the) reward",
+        "transliteration": "jazāu",
+        "timestamp": {
+          "from": 285,
+          "to": 2585
+        }
+      },
+      {
+        "id": 54426,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْإِحْسَـٰنِ",
+        "text_indopak": "الْاِحۡسَانِ",
+        "translation": "for the good",
+        "transliteration": "l-iḥ'sāni",
+        "timestamp": {
+          "from": 2585,
+          "to": 3925
+        }
+      },
+      {
+        "id": 54427,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "but",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 3925,
+          "to": 4595
+        }
+      },
+      {
+        "id": 54428,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْإِحْسَـٰنُ",
+        "text_indopak": "الۡاِحۡسَانُ​ۚ‏",
+        "translation": "good",
+        "transliteration": "l-iḥ'sānu",
+        "timestamp": {
+          "from": 4595,
+          "to": 8320
+        }
+      },
+      {
+        "id": 54429,
+        "position": 6,
+        "char_type": "end",
+        "text": "٦٠",
+        "text_indopak": "٦٠",
+        "translation": "(60)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4962,
+    "verse_key": "55:61",
+    "words": [
+      {
+        "id": 55097,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 55098,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1005,
+          "to": 3735
+        }
+      },
+      {
+        "id": 55099,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3735,
+          "to": 5015
+        }
+      },
+      {
+        "id": 55100,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5015,
+          "to": 9030
+        }
+      },
+      {
+        "id": 55101,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦١",
+        "text_indopak": "٦١",
+        "translation": "(61)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4963,
+    "verse_key": "55:62",
+    "words": [
+      {
+        "id": 55719,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَمِن",
+        "text_indopak": "وَمِنۡ",
+        "translation": "Besides these two",
+        "transliteration": "wamin",
+        "timestamp": {
+          "from": 0,
+          "to": 1335
+        }
+      },
+      {
+        "id": 55720,
+        "position": 2,
+        "char_type": "word",
+        "text": "دُونِهِمَا",
+        "text_indopak": "دُوۡنِهِمَا",
+        "translation": "Besides these two",
+        "transliteration": "dūnihimā",
+        "timestamp": {
+          "from": 1335,
+          "to": 2725
+        }
+      },
+      {
+        "id": 55721,
+        "position": 3,
+        "char_type": "word",
+        "text": "جَنَّتَانِ",
+        "text_indopak": "جَنَّتٰنِ​ۚ‏",
+        "translation": "(are) two gardens",
+        "transliteration": "jannatāni",
+        "timestamp": {
+          "from": 2725,
+          "to": 6860
+        }
+      },
+      {
+        "id": 55722,
+        "position": 4,
+        "char_type": "end",
+        "text": "٦٢",
+        "text_indopak": "٦٢",
+        "translation": "(62)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4964,
+    "verse_key": "55:63",
+    "words": [
+      {
+        "id": 56167,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1075
+        }
+      },
+      {
+        "id": 56168,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1075,
+          "to": 3345
+        }
+      },
+      {
+        "id": 56169,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3345,
+          "to": 4625
+        }
+      },
+      {
+        "id": 56170,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِۙ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4625,
+          "to": 8840
+        }
+      },
+      {
+        "id": 56171,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦٣",
+        "text_indopak": "٦٣",
+        "translation": "(63)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4965,
+    "verse_key": "55:64",
+    "words": [
+      {
+        "id": 56581,
+        "position": 1,
+        "char_type": "word",
+        "text": "مُدْهَآمَّتَانِ",
+        "text_indopak": "مُدۡهَآمَّتٰنِ​ۚ‏",
+        "translation": "Dark green",
+        "transliteration": "mud'hāmmatāni",
+        "timestamp": {
+          "from": 0,
+          "to": 7640
+        }
+      },
+      {
+        "id": 56582,
+        "position": 2,
+        "char_type": "end",
+        "text": "٦٤",
+        "text_indopak": "٦٤",
+        "translation": "(64)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4966,
+    "verse_key": "55:65",
+    "words": [
+      {
+        "id": 57226,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1065
+        }
+      },
+      {
+        "id": 57227,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1065,
+          "to": 3735
+        }
+      },
+      {
+        "id": 57228,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3735,
+          "to": 5055
+        }
+      },
+      {
+        "id": 57229,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ​ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 5055,
+          "to": 9030
+        }
+      },
+      {
+        "id": 57230,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦٥",
+        "text_indopak": "٦٥",
+        "translation": "(65)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4967,
+    "verse_key": "55:66",
+    "words": [
+      {
+        "id": 57766,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِمَا",
+        "text_indopak": "فِيۡهِمَا",
+        "translation": "In both of them",
+        "transliteration": "fīhimā",
+        "timestamp": {
+          "from": 0,
+          "to": 1055
+        }
+      },
+      {
+        "id": 57767,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَيْنَانِ",
+        "text_indopak": "عَيۡنٰنِ",
+        "translation": "(are) two springs",
+        "transliteration": "ʿaynāni",
+        "timestamp": {
+          "from": 1055,
+          "to": 2215
+        }
+      },
+      {
+        "id": 57768,
+        "position": 3,
+        "char_type": "word",
+        "text": "نَضَّاخَتَانِ",
+        "text_indopak": "نَضَّاخَتٰنِ​ۚ‏",
+        "translation": "gushing forth",
+        "transliteration": "naḍḍākhatāni",
+        "timestamp": {
+          "from": 2215,
+          "to": 6360
+        }
+      },
+      {
+        "id": 57769,
+        "position": 4,
+        "char_type": "end",
+        "text": "٦٦",
+        "text_indopak": "٦٦",
+        "translation": "(66)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4968,
+    "verse_key": "55:67",
+    "words": [
+      {
+        "id": 58087,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 975
+        }
+      },
+      {
+        "id": 58088,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 975,
+          "to": 3334
+        }
+      },
+      {
+        "id": 58089,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3335,
+          "to": 4645
+        }
+      },
+      {
+        "id": 58090,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4645,
+          "to": 8680
+        }
+      },
+      {
+        "id": 58091,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦٧",
+        "text_indopak": "٦٧",
+        "translation": "(67)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4969,
+    "verse_key": "55:68",
+    "words": [
+      {
+        "id": 58642,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِمَا",
+        "text_indopak": "فِيۡهِمَا",
+        "translation": "In both of them",
+        "transliteration": "fīhimā",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 58643,
+        "position": 2,
+        "char_type": "word",
+        "text": "فَـٰكِهَةٌۭ",
+        "text_indopak": "فَاكِهَةٌ",
+        "translation": "(are) fruits",
+        "transliteration": "fākihatun",
+        "timestamp": {
+          "from": 1005,
+          "to": 2835
+        }
+      },
+      {
+        "id": 58644,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَنَخْلٌۭ",
+        "text_indopak": "وَّنَخۡلٌ",
+        "translation": "and date-palms",
+        "transliteration": "wanakhlun",
+        "timestamp": {
+          "from": 2835,
+          "to": 4755
+        }
+      },
+      {
+        "id": 58645,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَرُمَّانٌۭ",
+        "text_indopak": "وَّرُمَّانٌ​ۚ‏",
+        "translation": "and pomegranates",
+        "transliteration": "warummānun",
+        "timestamp": {
+          "from": 4755,
+          "to": 8720
+        }
+      },
+      {
+        "id": 58646,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦٨",
+        "text_indopak": "٦٨",
+        "translation": "(68)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4970,
+    "verse_key": "55:69",
+    "words": [
+      {
+        "id": 59039,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 735
+        }
+      },
+      {
+        "id": 59040,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 735,
+          "to": 3075
+        }
+      },
+      {
+        "id": 59041,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3075,
+          "to": 4385
+        }
+      },
+      {
+        "id": 59042,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ​ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4385,
+          "to": 8320
+        }
+      },
+      {
+        "id": 59043,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦٩",
+        "text_indopak": "٦٩",
+        "translation": "(69)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4971,
+    "verse_key": "55:70",
+    "words": [
+      {
+        "id": 59465,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِيهِنَّ",
+        "text_indopak": "فِيۡهِنَّ",
+        "translation": "In them",
+        "transliteration": "fīhinna",
+        "timestamp": {
+          "from": 0,
+          "to": 1875
+        }
+      },
+      {
+        "id": 59466,
+        "position": 2,
+        "char_type": "word",
+        "text": "خَيْرَٰتٌ",
+        "text_indopak": "خَيۡرٰتٌ",
+        "translation": "(are) good",
+        "transliteration": "khayrātun",
+        "timestamp": {
+          "from": 1875,
+          "to": 3145
+        }
+      },
+      {
+        "id": 59467,
+        "position": 3,
+        "char_type": "word",
+        "text": "حِسَانٌۭ",
+        "text_indopak": "حِسَانٌ​ۚ‏",
+        "translation": "and beautiful ones",
+        "transliteration": "ḥisānun",
+        "timestamp": {
+          "from": 3145,
+          "to": 6970
+        }
+      },
+      {
+        "id": 59468,
+        "position": 4,
+        "char_type": "end",
+        "text": "٧٠",
+        "text_indopak": "٧٠",
+        "translation": "(70)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4972,
+    "verse_key": "55:71",
+    "words": [
+      {
+        "id": 60058,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1105
+        }
+      },
+      {
+        "id": 60059,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1105,
+          "to": 3545
+        }
+      },
+      {
+        "id": 60060,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3545,
+          "to": 4675
+        }
+      },
+      {
+        "id": 60061,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ​ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4675,
+          "to": 8990
+        }
+      },
+      {
+        "id": 60062,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧١",
+        "text_indopak": "٧١",
+        "translation": "(71)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4973,
+    "verse_key": "55:72",
+    "words": [
+      {
+        "id": 60462,
+        "position": 1,
+        "char_type": "word",
+        "text": "حُورٌۭ",
+        "text_indopak": "حُوۡرٌ",
+        "translation": "Fair ones",
+        "transliteration": "ḥūrun",
+        "timestamp": {
+          "from": 0,
+          "to": 575
+        }
+      },
+      {
+        "id": 60463,
+        "position": 2,
+        "char_type": "word",
+        "text": "مَّقْصُورَٰتٌۭ",
+        "text_indopak": "مَّقۡصُوۡرٰتٌ",
+        "translation": "restrained",
+        "transliteration": "maqṣūrātun",
+        "timestamp": {
+          "from": 575,
+          "to": 3855
+        }
+      },
+      {
+        "id": 60464,
+        "position": 3,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 3855,
+          "to": 4215
+        }
+      },
+      {
+        "id": 60465,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْخِيَامِ",
+        "text_indopak": "الۡخِيَامِ​ۚ‏",
+        "translation": "the pavilions",
+        "transliteration": "l-khiyāmi",
+        "timestamp": {
+          "from": 4215,
+          "to": 7300
+        }
+      },
+      {
+        "id": 60466,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧٢",
+        "text_indopak": "٧٢",
+        "translation": "(72)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4974,
+    "verse_key": "55:73",
+    "words": [
+      {
+        "id": 61062,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "​فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 725
+        }
+      },
+      {
+        "id": 61063,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 725,
+          "to": 3345
+        }
+      },
+      {
+        "id": 61064,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3345,
+          "to": 4635
+        }
+      },
+      {
+        "id": 61065,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ​ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4635,
+          "to": 8550
+        }
+      },
+      {
+        "id": 61066,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧٣",
+        "text_indopak": "٧٣",
+        "translation": "(73)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4975,
+    "verse_key": "55:74",
+    "words": [
+      {
+        "id": 61472,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَمْ",
+        "text_indopak": "لَمۡ",
+        "translation": "Not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 0,
+          "to": 355
+        }
+      },
+      {
+        "id": 61473,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَطْمِثْهُنَّ",
+        "text_indopak": "يَطۡمِثۡهُنَّ",
+        "translation": "has touched them",
+        "transliteration": "yaṭmith'hunna",
+        "timestamp": {
+          "from": 355,
+          "to": 2525
+        }
+      },
+      {
+        "id": 61474,
+        "position": 3,
+        "char_type": "word",
+        "text": "إِنسٌۭ",
+        "text_indopak": "اِنۡسٌ",
+        "translation": "any man",
+        "transliteration": "insun",
+        "timestamp": {
+          "from": 2525,
+          "to": 5015
+        }
+      },
+      {
+        "id": 61475,
+        "position": 4,
+        "char_type": "word",
+        "text": "قَبْلَهُمْ",
+        "text_indopak": "قَبۡلَهُمۡ",
+        "translation": "before them",
+        "transliteration": "qablahum",
+        "timestamp": {
+          "from": 5015,
+          "to": 6195
+        }
+      },
+      {
+        "id": 61476,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَلَا",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 6195,
+          "to": 6865
+        }
+      },
+      {
+        "id": 61477,
+        "position": 6,
+        "char_type": "word",
+        "text": "جَآنٌّۭ",
+        "text_indopak": "جَآنٌّ​ۚ‏",
+        "translation": "any jinn",
+        "transliteration": "jānnun",
+        "timestamp": {
+          "from": 6865,
+          "to": 10590
+        }
+      },
+      {
+        "id": 61478,
+        "position": 7,
+        "char_type": "end",
+        "text": "٧٤",
+        "text_indopak": "٧٤",
+        "translation": "(74)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4976,
+    "verse_key": "55:75",
+    "words": [
+      {
+        "id": 61984,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 825
+        }
+      },
+      {
+        "id": 61985,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 825,
+          "to": 3125
+        }
+      },
+      {
+        "id": 61986,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3125,
+          "to": 4365
+        }
+      },
+      {
+        "id": 61987,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ​ۚ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4365,
+          "to": 8500
+        }
+      },
+      {
+        "id": 61988,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧٥",
+        "text_indopak": "٧٥",
+        "translation": "(75)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4977,
+    "verse_key": "55:76",
+    "words": [
+      {
+        "id": 62450,
+        "position": 1,
+        "char_type": "word",
+        "text": "مُتَّكِـِٔينَ",
+        "text_indopak": "مُتَّكِــِٕيۡنَ",
+        "translation": "Reclining",
+        "transliteration": "muttakiīna",
+        "timestamp": {
+          "from": 0,
+          "to": 1385
+        }
+      },
+      {
+        "id": 62451,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَلَىٰ",
+        "text_indopak": "عَلٰى",
+        "translation": "on",
+        "transliteration": "ʿalā",
+        "timestamp": {
+          "from": 1385,
+          "to": 2075
+        }
+      },
+      {
+        "id": 62452,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَفْرَفٍ",
+        "text_indopak": "رَفۡرَفٍ",
+        "translation": "cushions",
+        "transliteration": "rafrafin",
+        "timestamp": {
+          "from": 2075,
+          "to": 3105
+        }
+      },
+      {
+        "id": 62453,
+        "position": 4,
+        "char_type": "word",
+        "text": "خُضْرٍۢ",
+        "text_indopak": "خُضۡرٍ",
+        "translation": "green",
+        "transliteration": "khuḍ'rin",
+        "timestamp": {
+          "from": 3105,
+          "to": 3935
+        }
+      },
+      {
+        "id": 62454,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَعَبْقَرِىٍّ",
+        "text_indopak": "وَّعَبۡقَرِىٍّ",
+        "translation": "and carpets",
+        "transliteration": "waʿabqariyyin",
+        "timestamp": {
+          "from": 3935,
+          "to": 6245
+        }
+      },
+      {
+        "id": 62455,
+        "position": 6,
+        "char_type": "word",
+        "text": "حِسَانٍۢ",
+        "text_indopak": "حِسَانٍ​ۚ‏",
+        "translation": "beautiful",
+        "transliteration": "ḥisānin",
+        "timestamp": {
+          "from": 6245,
+          "to": 9410
+        }
+      },
+      {
+        "id": 62456,
+        "position": 7,
+        "char_type": "end",
+        "text": "٧٦",
+        "text_indopak": "٧٦",
+        "translation": "(76)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4978,
+    "verse_key": "55:77",
+    "words": [
+      {
+        "id": 62938,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَبِأَىِّ",
+        "text_indopak": "فَبِاَىِّ",
+        "translation": "So which",
+        "transliteration": "fabi-ayyi",
+        "timestamp": {
+          "from": 0,
+          "to": 1045
+        }
+      },
+      {
+        "id": 62939,
+        "position": 2,
+        "char_type": "word",
+        "text": "ءَالَآءِ",
+        "text_indopak": "اٰلَاۤءِ",
+        "translation": "(of the) favors",
+        "transliteration": "ālāi",
+        "timestamp": {
+          "from": 1045,
+          "to": 3725
+        }
+      },
+      {
+        "id": 62940,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكُمَا",
+        "text_indopak": "رَبِّكُمَا",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbikumā",
+        "timestamp": {
+          "from": 3725,
+          "to": 4955
+        }
+      },
+      {
+        "id": 62941,
+        "position": 4,
+        "char_type": "word",
+        "text": "تُكَذِّبَانِ",
+        "text_indopak": "تُكَذِّبٰنِ‏",
+        "translation": "will you both deny",
+        "transliteration": "tukadhibāni",
+        "timestamp": {
+          "from": 4955,
+          "to": 8820
+        }
+      },
+      {
+        "id": 62942,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧٧",
+        "text_indopak": "٧٧",
+        "translation": "(77)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 4979,
+    "verse_key": "55:78",
+    "words": [
+      {
+        "id": 63260,
+        "position": 1,
+        "char_type": "word",
+        "text": "تَبَـٰرَكَ",
+        "text_indopak": "تَبٰـرَكَ",
+        "translation": "Blessed is",
+        "transliteration": "tabāraka",
+        "timestamp": {
+          "from": 0,
+          "to": 1035
+        }
+      },
+      {
+        "id": 63261,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱسْمُ",
+        "text_indopak": "اسۡمُ",
+        "translation": "(the) name",
+        "transliteration": "us'mu",
+        "timestamp": {
+          "from": 1035,
+          "to": 1625
+        }
+      },
+      {
+        "id": 63262,
+        "position": 3,
+        "char_type": "word",
+        "text": "رَبِّكَ",
+        "text_indopak": "رَبِّكَ",
+        "translation": "(of) your Lord",
+        "transliteration": "rabbika",
+        "timestamp": {
+          "from": 1625,
+          "to": 2395
+        }
+      },
+      {
+        "id": 63263,
+        "position": 4,
+        "char_type": "word",
+        "text": "ذِى",
+        "text_indopak": "ذِى",
+        "translation": "Owner",
+        "transliteration": "dhī",
+        "timestamp": {
+          "from": 2395,
+          "to": 2705
+        }
+      },
+      {
+        "id": 63264,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْجَلَـٰلِ",
+        "text_indopak": "الۡجَـلٰلِ",
+        "translation": "(of) Majesty",
+        "transliteration": "l-jalāli",
+        "timestamp": {
+          "from": 2705,
+          "to": 3895
+        }
+      },
+      {
+        "id": 63265,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَٱلْإِكْرَامِ",
+        "text_indopak": "وَالۡاِكۡرَامِ‏",
+        "translation": "and Honor",
+        "transliteration": "wal-ik'rāmi",
+        "timestamp": {
+          "from": 3895,
+          "to": 10100
+        }
+      },
+      {
+        "id": 63266,
+        "position": 7,
+        "char_type": "end",
+        "text": "٧٨",
+        "text_indopak": "٧٨",
+        "translation": "(78)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

@@ -21,18 +21,12 @@ export async function getLocalTafsir(surah: number, ayah: number): Promise<strin
 
 /**
  * Get full Tafsir for a Surah.
- * Cached to prevent re-reading all files on repeated visits.
+ * Uncached because Next.js static generation handles the page caching itself,
+ * and unstable_cache has a 2MB limit which fails for long Surahs like Surah 2.
  */
-export const getSurahTafsir = unstable_cache(
-    async (surah: number) => {
-        return getSurahTafsirData(surah);
-    },
-    ['surah-tafsir-full'],
-    {
-        revalidate: 3600, // 1 hour
-        tags: ['tafsir']
-    }
-);
+export async function getSurahTafsir(surah: number) {
+    return getSurahTafsirData(surah);
+}
 
 /**
  * Get batch Tafsir for multiple Ayahs.

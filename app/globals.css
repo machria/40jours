@@ -79,22 +79,23 @@ body {
   font-family: var(--font-kufi), serif;
 }
 
-/* Hafs Tajwid Colors */
+/* Hafs Tajwid Colors - Désactivé à la demande de l'utilisateur
 .tajwid-red {
-  color: #DC2626; /* Red-600 */
+  color: #DC2626; 
 }
 .tajwid-red-dark {
-  color: #991B1B; /* Red-800 - Madd Lazim */
+  color: #991B1B; 
 }
 .tajwid-orange {
-  color: #F97316; /* Orange-500 - Madd Tabi'i */
+  color: #F97316; 
 }
 .tajwid-green {
-  color: #16A34A; /* Green-600 - Ghunnah */
+  color: #16A34A; 
 }
 .tajwid-blue {
-  color: #2563EB; /* Blue-600 - Qalqalah */
+  color: #2563EB; 
 }
 .tajwid-gray {
-  color: #A3A3A3; /* Neutral-400 - Silent Letters */
+  color: #A3A3A3; 
 }
+*/

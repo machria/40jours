@@ -1,0 +1,436 @@
+[
+  {
+    "id": 6208,
+    "verse_key": "109:1",
+    "words": [
+      {
+        "id": 158,
+        "position": 1,
+        "char_type": "word",
+        "text": "قُلْ",
+        "text_indopak": "قُلۡ",
+        "translation": "Say",
+        "transliteration": "qul",
+        "timestamp": {
+          "from": 0,
+          "to": 400
+        }
+      },
+      {
+        "id": 159,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَـٰٓأَيُّهَا",
+        "text_indopak": "يٰۤاَيُّهَا",
+        "translation": "O",
+        "transliteration": "yāayyuhā",
+        "timestamp": {
+          "from": 400,
+          "to": 3370
+        }
+      },
+      {
+        "id": 160,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْكَـٰفِرُونَ",
+        "text_indopak": "الۡكٰفِرُوۡنَۙ‏",
+        "translation": "disbelievers",
+        "transliteration": "l-kāfirūna",
+        "timestamp": {
+          "from": 3370,
+          "to": 7425
+        }
+      },
+      {
+        "id": 161,
+        "position": 4,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6209,
+    "verse_key": "109:2",
+    "words": [
+      {
+        "id": 942,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَآ",
+        "text_indopak": "لَاۤ",
+        "translation": "Not",
+        "transliteration": "lā",
+        "timestamp": {
+          "from": 0,
+          "to": 2495
+        }
+      },
+      {
+        "id": 943,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَعْبُدُ",
+        "text_indopak": "اَعۡبُدُ",
+        "translation": "I worship",
+        "transliteration": "aʿbudu",
+        "timestamp": {
+          "from": 2495,
+          "to": 3365
+        }
+      },
+      {
+        "id": 944,
+        "position": 3,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 3365,
+          "to": 3745
+        }
+      },
+      {
+        "id": 945,
+        "position": 4,
+        "char_type": "word",
+        "text": "تَعْبُدُونَ",
+        "text_indopak": "تَعۡبُدُوۡنَۙ‏",
+        "translation": "you worship",
+        "transliteration": "taʿbudūna",
+        "timestamp": {
+          "from": 3745,
+          "to": 7270
+        }
+      },
+      {
+        "id": 946,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6210,
+    "verse_key": "109:3",
+    "words": [
+      {
+        "id": 2570,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَلَاۤ",
+        "translation": "And not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 0,
+          "to": 2295
+        }
+      },
+      {
+        "id": 2571,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَنتُمْ",
+        "text_indopak": "اَنۡـتُمۡ",
+        "translation": "you",
+        "transliteration": "antum",
+        "timestamp": {
+          "from": 2295,
+          "to": 3675
+        }
+      },
+      {
+        "id": 2572,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَـٰبِدُونَ",
+        "text_indopak": "عٰبِدُوۡنَ",
+        "translation": "(are) worshippers",
+        "transliteration": "ʿābidūna",
+        "timestamp": {
+          "from": 3675,
+          "to": 5005
+        }
+      },
+      {
+        "id": 2573,
+        "position": 4,
+        "char_type": "word",
+        "text": "مَآ",
+        "text_indopak": "مَاۤ",
+        "translation": "(of) what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 5005,
+          "to": 6835
+        }
+      },
+      {
+        "id": 2574,
+        "position": 5,
+        "char_type": "word",
+        "text": "أَعْبُدُ",
+        "text_indopak": "اَعۡبُدُ​ ۚ‏",
+        "translation": "I worship",
+        "transliteration": "aʿbudu",
+        "timestamp": {
+          "from": 6835,
+          "to": 8070
+        }
+      },
+      {
+        "id": 2575,
+        "position": 6,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6211,
+    "verse_key": "109:4",
+    "words": [
+      {
+        "id": 3992,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَلَاۤ",
+        "translation": "And not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 0,
+          "to": 2245
+        }
+      },
+      {
+        "id": 3993,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَنَا۠",
+        "text_indopak": "اَنَا",
+        "translation": "I am",
+        "transliteration": "anā",
+        "timestamp": {
+          "from": 2245,
+          "to": 2625
+        }
+      },
+      {
+        "id": 3994,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَابِدٌۭ",
+        "text_indopak": "عَابِدٌ",
+        "translation": "a worshipper",
+        "transliteration": "ʿābidun",
+        "timestamp": {
+          "from": 2625,
+          "to": 3555
+        }
+      },
+      {
+        "id": 3995,
+        "position": 4,
+        "char_type": "word",
+        "text": "مَّا",
+        "text_indopak": "مَّا",
+        "translation": "(of) what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 3555,
+          "to": 4915
+        }
+      },
+      {
+        "id": 3996,
+        "position": 5,
+        "char_type": "word",
+        "text": "عَبَدتُّمْ",
+        "text_indopak": "عَبَدۡتُّمۡۙ‏",
+        "translation": "you worship",
+        "transliteration": "ʿabadttum",
+        "timestamp": {
+          "from": 4915,
+          "to": 6250
+        }
+      },
+      {
+        "id": 3997,
+        "position": 6,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6212,
+    "verse_key": "109:5",
+    "words": [
+      {
+        "id": 5290,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَ",
+        "translation": "And not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 0,
+          "to": 1785
+        }
+      },
+      {
+        "id": 5291,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَنتُمْ",
+        "text_indopak": "لَاۤ",
+        "translation": "you",
+        "transliteration": "antum",
+        "timestamp": {
+          "from": 1785,
+          "to": 3445
+        }
+      },
+      {
+        "id": 5292,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَـٰبِدُونَ",
+        "text_indopak": "اَنۡـتُمۡ",
+        "translation": "(are) worshippers",
+        "transliteration": "ʿābidūna",
+        "timestamp": {
+          "from": 3445,
+          "to": 4895
+        }
+      },
+      {
+        "id": 5293,
+        "position": 4,
+        "char_type": "word",
+        "text": "مَآ",
+        "text_indopak": "عٰبِدُوۡنَ",
+        "translation": "(of) what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 4895,
+          "to": 6735
+        }
+      },
+      {
+        "id": 5294,
+        "position": 5,
+        "char_type": "word",
+        "text": "أَعْبُدُ",
+        "text_indopak": "مَاۤ اَعۡبُدُ ؕ‏",
+        "translation": "I worship",
+        "transliteration": "aʿbudu",
+        "timestamp": {
+          "from": 6735,
+          "to": 8030
+        }
+      },
+      {
+        "id": 5295,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6213,
+    "verse_key": "109:6",
+    "words": [
+      {
+        "id": 6550,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَكُمْ",
+        "text_indopak": "لَـكُمۡ",
+        "translation": "For you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 0,
+          "to": 515
+        }
+      },
+      {
+        "id": 6551,
+        "position": 2,
+        "char_type": "word",
+        "text": "دِينُكُمْ",
+        "text_indopak": "دِيۡنُكُمۡ",
+        "translation": "(is) your religion",
+        "transliteration": "dīnukum",
+        "timestamp": {
+          "from": 515,
+          "to": 1645
+        }
+      },
+      {
+        "id": 6552,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَلِىَ",
+        "text_indopak": "وَلِىَ",
+        "translation": "and for me",
+        "transliteration": "waliya",
+        "timestamp": {
+          "from": 1645,
+          "to": 2435
+        }
+      },
+      {
+        "id": 6553,
+        "position": 4,
+        "char_type": "word",
+        "text": "دِينِ",
+        "text_indopak": "دِيۡنِ‏",
+        "translation": "(is) my religion",
+        "transliteration": "dīni",
+        "timestamp": {
+          "from": 2435,
+          "to": 5390
+        }
+      },
+      {
+        "id": 6554,
+        "position": 5,
+        "char_type": "end",
+        "text": "٦",
+        "text_indopak": "٦",
+        "translation": "(6)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

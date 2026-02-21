@@ -1,0 +1,381 @@
+[
+  {
+    "id": 6189,
+    "verse_key": "105:1",
+    "words": [
+      {
+        "id": 137,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلَمْ",
+        "text_indopak": "اَلَمۡ",
+        "translation": "Have not",
+        "transliteration": "alam",
+        "timestamp": {
+          "from": 0,
+          "to": 550
+        }
+      },
+      {
+        "id": 138,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَرَ",
+        "text_indopak": "تَرَ",
+        "translation": "you seen",
+        "transliteration": "tara",
+        "timestamp": {
+          "from": 550,
+          "to": 1120
+        }
+      },
+      {
+        "id": 139,
+        "position": 3,
+        "char_type": "word",
+        "text": "كَيْفَ",
+        "text_indopak": "كَيۡفَ",
+        "translation": "how",
+        "transliteration": "kayfa",
+        "timestamp": {
+          "from": 1120,
+          "to": 1700
+        }
+      },
+      {
+        "id": 140,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَعَلَ",
+        "text_indopak": "فَعَلَ",
+        "translation": "dealt",
+        "transliteration": "faʿala",
+        "timestamp": {
+          "from": 1700,
+          "to": 2420
+        }
+      },
+      {
+        "id": 141,
+        "position": 5,
+        "char_type": "word",
+        "text": "رَبُّكَ",
+        "text_indopak": "رَبُّكَ",
+        "translation": "your Lord",
+        "transliteration": "rabbuka",
+        "timestamp": {
+          "from": 2420,
+          "to": 3290
+        }
+      },
+      {
+        "id": 142,
+        "position": 6,
+        "char_type": "word",
+        "text": "بِأَصْحَـٰبِ",
+        "text_indopak": "بِاَصۡحٰبِ",
+        "translation": "with (the) Companions",
+        "transliteration": "bi-aṣḥābi",
+        "timestamp": {
+          "from": 3290,
+          "to": 4590
+        }
+      },
+      {
+        "id": 143,
+        "position": 7,
+        "char_type": "word",
+        "text": "ٱلْفِيلِ",
+        "text_indopak": "الۡفِيۡلِؕ‏",
+        "translation": "(of the) Elephant",
+        "transliteration": "l-fīli",
+        "timestamp": {
+          "from": 4590,
+          "to": 7895
+        }
+      },
+      {
+        "id": 144,
+        "position": 8,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6190,
+    "verse_key": "105:2",
+    "words": [
+      {
+        "id": 1019,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلَمْ",
+        "text_indopak": "اَلَمۡ",
+        "translation": "Did not",
+        "transliteration": "alam",
+        "timestamp": {
+          "from": 0,
+          "to": 615
+        }
+      },
+      {
+        "id": 1020,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَجْعَلْ",
+        "text_indopak": "يَجۡعَلۡ",
+        "translation": "He make",
+        "transliteration": "yajʿal",
+        "timestamp": {
+          "from": 615,
+          "to": 1425
+        }
+      },
+      {
+        "id": 1021,
+        "position": 3,
+        "char_type": "word",
+        "text": "كَيْدَهُمْ",
+        "text_indopak": "كَيۡدَهُمۡ",
+        "translation": "their plan",
+        "transliteration": "kaydahum",
+        "timestamp": {
+          "from": 1425,
+          "to": 2505
+        }
+      },
+      {
+        "id": 1022,
+        "position": 4,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "go",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 2505,
+          "to": 2945
+        }
+      },
+      {
+        "id": 1023,
+        "position": 5,
+        "char_type": "word",
+        "text": "تَضْلِيلٍۢ",
+        "text_indopak": "تَضۡلِيۡلٍۙ‏",
+        "translation": "astray",
+        "transliteration": "taḍlīlin",
+        "timestamp": {
+          "from": 2945,
+          "to": 6150
+        }
+      },
+      {
+        "id": 1024,
+        "position": 6,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6191,
+    "verse_key": "105:3",
+    "words": [
+      {
+        "id": 2361,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَأَرْسَلَ",
+        "text_indopak": "وَّاَرۡسَلَ",
+        "translation": "And He sent",
+        "transliteration": "wa-arsala",
+        "timestamp": {
+          "from": 0,
+          "to": 1035
+        }
+      },
+      {
+        "id": 2362,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَلَيْهِمْ",
+        "text_indopak": "عَلَيۡهِمۡ",
+        "translation": "against them",
+        "transliteration": "ʿalayhim",
+        "timestamp": {
+          "from": 1035,
+          "to": 2075
+        }
+      },
+      {
+        "id": 2363,
+        "position": 3,
+        "char_type": "word",
+        "text": "طَيْرًا",
+        "text_indopak": "طَيۡرًا",
+        "translation": "birds",
+        "transliteration": "ṭayran",
+        "timestamp": {
+          "from": 2075,
+          "to": 2905
+        }
+      },
+      {
+        "id": 2364,
+        "position": 4,
+        "char_type": "word",
+        "text": "أَبَابِيلَ",
+        "text_indopak": "اَبَابِيۡلَۙ‏",
+        "translation": "(in) flocks",
+        "transliteration": "abābīla",
+        "timestamp": {
+          "from": 2905,
+          "to": 6260
+        }
+      },
+      {
+        "id": 2365,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6192,
+    "verse_key": "105:4",
+    "words": [
+      {
+        "id": 3867,
+        "position": 1,
+        "char_type": "word",
+        "text": "تَرْمِيهِم",
+        "text_indopak": "تَرۡمِيۡهِمۡ",
+        "translation": "Striking them",
+        "transliteration": "tarmīhim",
+        "timestamp": {
+          "from": 0,
+          "to": 615
+        }
+      },
+      {
+        "id": 3868,
+        "position": 2,
+        "char_type": "word",
+        "text": "بِحِجَارَةٍۢ",
+        "text_indopak": "بِحِجَارَةٍ",
+        "translation": "with stones",
+        "transliteration": "biḥijāratin",
+        "timestamp": {
+          "from": 615,
+          "to": 3245
+        }
+      },
+      {
+        "id": 3869,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "of",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 3245,
+          "to": 4545
+        }
+      },
+      {
+        "id": 3870,
+        "position": 4,
+        "char_type": "word",
+        "text": "سِجِّيلٍۢ",
+        "text_indopak": "سِجِّيۡلٍۙ‏",
+        "translation": "baked clay",
+        "transliteration": "sijjīlin",
+        "timestamp": {
+          "from": 4545,
+          "to": 8710
+        }
+      },
+      {
+        "id": 3871,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6193,
+    "verse_key": "105:5",
+    "words": [
+      {
+        "id": 5092,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَجَعَلَهُمْ",
+        "text_indopak": "فَجَعَلَهُمۡ",
+        "translation": "Then He made them",
+        "transliteration": "fajaʿalahum",
+        "timestamp": {
+          "from": 0,
+          "to": 1125
+        }
+      },
+      {
+        "id": 5093,
+        "position": 2,
+        "char_type": "word",
+        "text": "كَعَصْفٍۢ",
+        "text_indopak": "كَعَصۡفٍ",
+        "translation": "like straw",
+        "transliteration": "kaʿaṣfin",
+        "timestamp": {
+          "from": 1125,
+          "to": 3405
+        }
+      },
+      {
+        "id": 5094,
+        "position": 3,
+        "char_type": "word",
+        "text": "مَّأْكُولٍۭ",
+        "text_indopak": "مَّاۡكُوۡلٍ‏",
+        "translation": "eaten up",
+        "transliteration": "makūlin",
+        "timestamp": {
+          "from": 3405,
+          "to": 7170
+        }
+      },
+      {
+        "id": 5095,
+        "position": 4,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

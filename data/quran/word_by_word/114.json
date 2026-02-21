@@ -1,0 +1,358 @@
+[
+  {
+    "id": 6231,
+    "verse_key": "114:1",
+    "words": [
+      {
+        "id": 115,
+        "position": 1,
+        "char_type": "word",
+        "text": "قُلْ",
+        "text_indopak": "قُلۡ",
+        "translation": "Say",
+        "transliteration": "qul",
+        "timestamp": {
+          "from": 0,
+          "to": 330
+        }
+      },
+      {
+        "id": 116,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَعُوذُ",
+        "text_indopak": "اَعُوۡذُ",
+        "translation": "I seek refuge",
+        "transliteration": "aʿūdhu",
+        "timestamp": {
+          "from": 330,
+          "to": 1230
+        }
+      },
+      {
+        "id": 117,
+        "position": 3,
+        "char_type": "word",
+        "text": "بِرَبِّ",
+        "text_indopak": "بِرَبِّ",
+        "translation": "in (the) Lord",
+        "transliteration": "birabbi",
+        "timestamp": {
+          "from": 1230,
+          "to": 2050
+        }
+      },
+      {
+        "id": 118,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلنَّاسِ",
+        "text_indopak": "النَّاسِۙ‏",
+        "translation": "(of) mankind",
+        "transliteration": "l-nāsi",
+        "timestamp": {
+          "from": 2050,
+          "to": 6085
+        }
+      },
+      {
+        "id": 119,
+        "position": 5,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6232,
+    "verse_key": "114:2",
+    "words": [
+      {
+        "id": 932,
+        "position": 1,
+        "char_type": "word",
+        "text": "مَلِكِ",
+        "text_indopak": "مَلِكِ",
+        "translation": "(The) King",
+        "transliteration": "maliki",
+        "timestamp": {
+          "from": 0,
+          "to": 615
+        }
+      },
+      {
+        "id": 933,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلنَّاسِ",
+        "text_indopak": "النَّاسِۙ‏",
+        "translation": "(of) mankind",
+        "transliteration": "l-nāsi",
+        "timestamp": {
+          "from": 615,
+          "to": 5180
+        }
+      },
+      {
+        "id": 934,
+        "position": 3,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6233,
+    "verse_key": "114:3",
+    "words": [
+      {
+        "id": 2819,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِلَـٰهِ",
+        "text_indopak": "اِلٰهِ",
+        "translation": "(The) God",
+        "transliteration": "ilāhi",
+        "timestamp": {
+          "from": 0,
+          "to": 765
+        }
+      },
+      {
+        "id": 2820,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلنَّاسِ",
+        "text_indopak": "النَّاسِۙ‏",
+        "translation": "(of) mankind",
+        "transliteration": "l-nāsi",
+        "timestamp": {
+          "from": 765,
+          "to": 5220
+        }
+      },
+      {
+        "id": 2821,
+        "position": 3,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6234,
+    "verse_key": "114:4",
+    "words": [
+      {
+        "id": 4131,
+        "position": 1,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "From",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 0,
+          "to": 335
+        }
+      },
+      {
+        "id": 4132,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَرِّ",
+        "text_indopak": "شَرِّ",
+        "translation": "(the) evil",
+        "transliteration": "sharri",
+        "timestamp": {
+          "from": 336,
+          "to": 2055
+        }
+      },
+      {
+        "id": 4133,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْوَسْوَاسِ",
+        "text_indopak": "الۡوَسۡوَاسِ  ۙ",
+        "translation": "(of) the whisperer",
+        "transliteration": "l-waswāsi",
+        "timestamp": {
+          "from": 2055,
+          "to": 3325
+        }
+      },
+      {
+        "id": 4134,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْخَنَّاسِ",
+        "text_indopak": "الۡخَـنَّاسِ ۙ‏",
+        "translation": "the one who withdraws",
+        "transliteration": "l-khanāsi",
+        "timestamp": {
+          "from": 3325,
+          "to": 7850
+        }
+      },
+      {
+        "id": 4135,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6235,
+    "verse_key": "114:5",
+    "words": [
+      {
+        "id": 5496,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱلَّذِى",
+        "text_indopak": "الَّذِىۡ",
+        "translation": "The one who",
+        "transliteration": "alladhī",
+        "timestamp": {
+          "from": 0,
+          "to": 1065
+        }
+      },
+      {
+        "id": 5497,
+        "position": 2,
+        "char_type": "word",
+        "text": "يُوَسْوِسُ",
+        "text_indopak": "يُوَسۡوِسُ",
+        "translation": "whispers",
+        "transliteration": "yuwaswisu",
+        "timestamp": {
+          "from": 1065,
+          "to": 2055
+        }
+      },
+      {
+        "id": 5498,
+        "position": 3,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 2055,
+          "to": 2435
+        }
+      },
+      {
+        "id": 5499,
+        "position": 4,
+        "char_type": "word",
+        "text": "صُدُورِ",
+        "text_indopak": "صُدُوۡرِ",
+        "translation": "(the) breasts",
+        "transliteration": "ṣudūri",
+        "timestamp": {
+          "from": 2435,
+          "to": 3345
+        }
+      },
+      {
+        "id": 5500,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلنَّاسِ",
+        "text_indopak": "النَّاسِۙ‏",
+        "translation": "(of) mankind",
+        "transliteration": "l-nāsi",
+        "timestamp": {
+          "from": 3345,
+          "to": 7790
+        }
+      },
+      {
+        "id": 5501,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6236,
+    "verse_key": "114:6",
+    "words": [
+      {
+        "id": 6729,
+        "position": 1,
+        "char_type": "word",
+        "text": "مِنَ",
+        "text_indopak": "مِنَ",
+        "translation": "From",
+        "transliteration": "mina",
+        "timestamp": {
+          "from": 0,
+          "to": 325
+        }
+      },
+      {
+        "id": 6730,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْجِنَّةِ",
+        "text_indopak": "الۡجِنَّةِ",
+        "translation": "the jinn",
+        "transliteration": "l-jinati",
+        "timestamp": {
+          "from": 325,
+          "to": 2555
+        }
+      },
+      {
+        "id": 6731,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَٱلنَّاسِ",
+        "text_indopak": "وَالنَّاسِ‏",
+        "translation": "and men",
+        "transliteration": "wal-nāsi",
+        "timestamp": {
+          "from": 2555,
+          "to": 8130
+        }
+      },
+      {
+        "id": 6732,
+        "position": 4,
+        "char_type": "end",
+        "text": "٦",
+        "text_indopak": "٦",
+        "translation": "(6)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,381 @@
+[
+  {
+    "id": 6226,
+    "verse_key": "113:1",
+    "words": [
+      {
+        "id": 215,
+        "position": 1,
+        "char_type": "word",
+        "text": "قُلْ",
+        "text_indopak": "قُلۡ",
+        "translation": "Say",
+        "transliteration": "qul",
+        "timestamp": {
+          "from": 0,
+          "to": 360
+        }
+      },
+      {
+        "id": 216,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَعُوذُ",
+        "text_indopak": "اَعُوۡذُ",
+        "translation": "I seek refuge",
+        "transliteration": "aʿūdhu",
+        "timestamp": {
+          "from": 360,
+          "to": 1280
+        }
+      },
+      {
+        "id": 217,
+        "position": 3,
+        "char_type": "word",
+        "text": "بِرَبِّ",
+        "text_indopak": "بِرَبِّ",
+        "translation": "in (the) Lord",
+        "transliteration": "birabbi",
+        "timestamp": {
+          "from": 1280,
+          "to": 2110
+        }
+      },
+      {
+        "id": 218,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْفَلَقِ",
+        "text_indopak": "الۡفَلَقِۙ‏",
+        "translation": "(of) the dawn",
+        "transliteration": "l-falaqi",
+        "timestamp": {
+          "from": 2110,
+          "to": 3005
+        }
+      },
+      {
+        "id": 219,
+        "position": 5,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6227,
+    "verse_key": "113:2",
+    "words": [
+      {
+        "id": 969,
+        "position": 1,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "From",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 0,
+          "to": 465
+        }
+      },
+      {
+        "id": 970,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَرِّ",
+        "text_indopak": "شَرِّ",
+        "translation": "(the) evil",
+        "transliteration": "sharri",
+        "timestamp": {
+          "from": 465,
+          "to": 1565
+        }
+      },
+      {
+        "id": 971,
+        "position": 3,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "(of) what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 1565,
+          "to": 1905
+        }
+      },
+      {
+        "id": 972,
+        "position": 4,
+        "char_type": "word",
+        "text": "خَلَقَ",
+        "text_indopak": "خَلَقَۙ‏",
+        "translation": "He created",
+        "transliteration": "khalaqa",
+        "timestamp": {
+          "from": 1905,
+          "to": 3120
+        }
+      },
+      {
+        "id": 973,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6228,
+    "verse_key": "113:3",
+    "words": [
+      {
+        "id": 2793,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَمِن",
+        "text_indopak": "وَمِنۡ",
+        "translation": "And from",
+        "transliteration": "wamin",
+        "timestamp": {
+          "from": 0,
+          "to": 705
+        }
+      },
+      {
+        "id": 2794,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَرِّ",
+        "text_indopak": "شَرِّ",
+        "translation": "(the) evil",
+        "transliteration": "sharri",
+        "timestamp": {
+          "from": 705,
+          "to": 2105
+        }
+      },
+      {
+        "id": 2795,
+        "position": 3,
+        "char_type": "word",
+        "text": "غَاسِقٍ",
+        "text_indopak": "غَاسِقٍ",
+        "translation": "(of) darkness",
+        "transliteration": "ghāsiqin",
+        "timestamp": {
+          "from": 2105,
+          "to": 3215
+        }
+      },
+      {
+        "id": 2796,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِذَا",
+        "text_indopak": "اِذَا",
+        "translation": "when",
+        "transliteration": "idhā",
+        "timestamp": {
+          "from": 3215,
+          "to": 3835
+        }
+      },
+      {
+        "id": 2797,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَقَبَ",
+        "text_indopak": "وَقَبَۙ‏",
+        "translation": "it spreads",
+        "transliteration": "waqaba",
+        "timestamp": {
+          "from": 3835,
+          "to": 4910
+        }
+      },
+      {
+        "id": 2798,
+        "position": 6,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6229,
+    "verse_key": "113:4",
+    "words": [
+      {
+        "id": 4181,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَمِن",
+        "text_indopak": "وَمِنۡ",
+        "translation": "And from",
+        "transliteration": "wamin",
+        "timestamp": {
+          "from": 0,
+          "to": 1315
+        }
+      },
+      {
+        "id": 4182,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَرِّ",
+        "text_indopak": "شَرِّ",
+        "translation": "(the) evil",
+        "transliteration": "sharri",
+        "timestamp": {
+          "from": 1315,
+          "to": 2055
+        }
+      },
+      {
+        "id": 4183,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلنَّفَّـٰثَـٰتِ",
+        "text_indopak": "النَّفّٰثٰتِ",
+        "translation": "(of) the blowers",
+        "transliteration": "l-nafāthāti",
+        "timestamp": {
+          "from": 2055,
+          "to": 4345
+        }
+      },
+      {
+        "id": 4184,
+        "position": 4,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 4345,
+          "to": 4535
+        }
+      },
+      {
+        "id": 4185,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْعُقَدِ",
+        "text_indopak": "الۡعُقَدِۙ‏",
+        "translation": "the knots",
+        "transliteration": "l-ʿuqadi",
+        "timestamp": {
+          "from": 4535,
+          "to": 5840
+        }
+      },
+      {
+        "id": 4186,
+        "position": 6,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6230,
+    "verse_key": "113:5",
+    "words": [
+      {
+        "id": 5473,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَمِن",
+        "text_indopak": "وَمِنۡ",
+        "translation": "And from",
+        "transliteration": "wamin",
+        "timestamp": {
+          "from": 0,
+          "to": 425
+        }
+      },
+      {
+        "id": 5474,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَرِّ",
+        "text_indopak": "شَرِّ",
+        "translation": "(the) evil",
+        "transliteration": "sharri",
+        "timestamp": {
+          "from": 425,
+          "to": 1915
+        }
+      },
+      {
+        "id": 5475,
+        "position": 3,
+        "char_type": "word",
+        "text": "حَاسِدٍ",
+        "text_indopak": "حَاسِدٍ",
+        "translation": "(of) an envier",
+        "transliteration": "ḥāsidin",
+        "timestamp": {
+          "from": 1915,
+          "to": 3085
+        }
+      },
+      {
+        "id": 5476,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِذَا",
+        "text_indopak": "اِذَا",
+        "translation": "when",
+        "transliteration": "idhā",
+        "timestamp": {
+          "from": 3085,
+          "to": 3675
+        }
+      },
+      {
+        "id": 5477,
+        "position": 5,
+        "char_type": "word",
+        "text": "حَسَدَ",
+        "text_indopak": "حَسَدَ‏",
+        "translation": "he envies",
+        "transliteration": "ḥasada",
+        "timestamp": {
+          "from": 3675,
+          "to": 5530
+        }
+      },
+      {
+        "id": 5478,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

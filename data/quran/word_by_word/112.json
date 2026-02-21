@@ -1,0 +1,261 @@
+[
+  {
+    "id": 6222,
+    "verse_key": "112:1",
+    "words": [
+      {
+        "id": 6,
+        "position": 1,
+        "char_type": "word",
+        "text": "قُلْ",
+        "text_indopak": "قُلۡ",
+        "translation": "Say",
+        "transliteration": "qul",
+        "timestamp": {
+          "from": 0,
+          "to": 430
+        }
+      },
+      {
+        "id": 7,
+        "position": 2,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "He",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 430,
+          "to": 700
+        }
+      },
+      {
+        "id": 8,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "(is) Allah",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 700,
+          "to": 1680
+        }
+      },
+      {
+        "id": 9,
+        "position": 4,
+        "char_type": "word",
+        "text": "أَحَدٌ",
+        "text_indopak": "اَحَدٌ​ ۚ‏",
+        "translation": "the One",
+        "transliteration": "aḥadun",
+        "timestamp": {
+          "from": 1680,
+          "to": 2915
+        }
+      },
+      {
+        "id": 10,
+        "position": 5,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6223,
+    "verse_key": "112:2",
+    "words": [
+      {
+        "id": 916,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اَللّٰهُ",
+        "translation": "Allah",
+        "transliteration": "al-lahu",
+        "timestamp": {
+          "from": 0,
+          "to": 985
+        }
+      },
+      {
+        "id": 917,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلصَّمَدُ",
+        "text_indopak": "الصَّمَدُ​ ۚ‏",
+        "translation": "the Eternal, the Absolute",
+        "transliteration": "l-ṣamadu",
+        "timestamp": {
+          "from": 985,
+          "to": 2420
+        }
+      },
+      {
+        "id": 918,
+        "position": 3,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6224,
+    "verse_key": "112:3",
+    "words": [
+      {
+        "id": 2746,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَمْ",
+        "text_indopak": "لَمۡ",
+        "translation": "Not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 0,
+          "to": 385
+        }
+      },
+      {
+        "id": 2747,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَلِدْ",
+        "text_indopak": "يَلِدۡ   ۙ",
+        "translation": "He begets",
+        "transliteration": "yalid",
+        "timestamp": {
+          "from": 385,
+          "to": 1005
+        }
+      },
+      {
+        "id": 2748,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَلَمْ",
+        "text_indopak": "وَلَمۡ",
+        "translation": "and not",
+        "transliteration": "walam",
+        "timestamp": {
+          "from": 1005,
+          "to": 1695
+        }
+      },
+      {
+        "id": 2749,
+        "position": 4,
+        "char_type": "word",
+        "text": "يُولَدْ",
+        "text_indopak": "يُوۡلَدۡ ۙ‏",
+        "translation": "He is begotten",
+        "transliteration": "yūlad",
+        "timestamp": {
+          "from": 1695,
+          "to": 2870
+        }
+      },
+      {
+        "id": 2750,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6225,
+    "verse_key": "112:4",
+    "words": [
+      {
+        "id": 4136,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَلَمْ",
+        "text_indopak": "وَلَمۡ",
+        "translation": "And not",
+        "transliteration": "walam",
+        "timestamp": {
+          "from": 0,
+          "to": 465
+        }
+      },
+      {
+        "id": 4137,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَكُن",
+        "text_indopak": "يَكُنۡ",
+        "translation": "is",
+        "transliteration": "yakun",
+        "timestamp": {
+          "from": 465,
+          "to": 1185
+        }
+      },
+      {
+        "id": 4138,
+        "position": 3,
+        "char_type": "word",
+        "text": "لَّهُۥ",
+        "text_indopak": "لَّهٗ",
+        "translation": "for Him",
+        "transliteration": "lahu",
+        "timestamp": {
+          "from": 1185,
+          "to": 2015
+        }
+      },
+      {
+        "id": 4139,
+        "position": 4,
+        "char_type": "word",
+        "text": "كُفُوًا",
+        "text_indopak": "كُفُوًا",
+        "translation": "equivalent",
+        "transliteration": "kufuwan",
+        "timestamp": {
+          "from": 2015,
+          "to": 2935
+        }
+      },
+      {
+        "id": 4140,
+        "position": 5,
+        "char_type": "word",
+        "text": "أَحَدٌۢ",
+        "text_indopak": "اَحَدٌ‏",
+        "translation": "any [one]",
+        "transliteration": "aḥadun",
+        "timestamp": {
+          "from": 2935,
+          "to": 4630
+        }
+      },
+      {
+        "id": 4141,
+        "position": 6,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

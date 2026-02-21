@@ -7,6 +7,7 @@ import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
+import AyahWordByWord from '@/components/reading/AyahWordByWord';
 
 interface Ayah {
     id: number;
@@ -28,12 +29,15 @@ interface JuzViewerProps {
     juzId: number;
     theme?: string;
     description?: string;
-    // Removed server-side props for static optmization
+    wbwData?: any[];
 }
 
-export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewerProps) {
+export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }: JuzViewerProps) {
     const { data: session } = useSession();
     const userEmail = session?.user?.email;
+
+    const hasWbw = wbwData && wbwData.length > 0;
+    const [isWordByWordMode, setIsWordByWordMode] = useState(false);
 
     const [completed, setCompleted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -229,6 +233,17 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                     >
                         Mushaf
                     </button>
+
+                    {hasWbw && viewMode === 'list' && (
+                        <button
+                            onClick={() => setIsWordByWordMode(!isWordByWordMode)}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ml-2 border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
+                            title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
+                        >
+                            <span className="hidden lg:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
+                            {!isWordByWordMode && <span className="lg:hidden">Mots</span>}
+                        </button>
+                    )}
                 </div>
             </div>
 
@@ -289,6 +304,25 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                     <div className="space-y-6">
                         {ayahs.map((ayah) => {
                             const isPlaying = isAyahPlaying(ayah.surahNumber, ayah.numberInSurah);
+
+                            const wbwAyah = wbwData ? wbwData.find(w => w.surah === ayah.surahNumber && w.ayah === ayah.numberInSurah) : null;
+
+                            if (isWordByWordMode && wbwAyah && wbwAyah.words && wbwAyah.words.length > 0) {
+                                return (
+                                    <AyahWordByWord
+                                        key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
+                                        surah={ayah.surahNumber}
+                                        ayah={ayah.numberInSurah}
+                                        words={wbwAyah.words}
+                                        translation={ayah.translation}
+                                        isPlaying={isPlaying}
+                                        onPlayClick={() => playAudio(ayah.surahNumber, ayah.numberInSurah)}
+                                        onTafsirClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation)}
+                                        audioRef={audioRef}
+                                        showPhonetic={showPhonetic}
+                                    />
+                                );
+                            }
 
                             return (
                                 <div

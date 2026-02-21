@@ -12,6 +12,7 @@ import { TajwidText } from '@/components/TajwidText';
 import confetti from 'canvas-confetti';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
+import AyahWordByWord from '@/components/reading/AyahWordByWord';
 
 interface ReadingClientProps {
     dayId: number;
@@ -83,6 +84,31 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         });
         return list;
     }, [results]); // Dependency on results array structure
+
+    // Fetch WBW
+    const [wbwData, setWbwData] = useState<any[]>([]);
+    const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+
+    useEffect(() => {
+        if (!allPagesLoaded) return;
+
+        const uniqueSurahs = Array.from(new Set(playlist.map(item => item.surah)));
+        if (uniqueSurahs.length > 0) {
+            const params = new URLSearchParams();
+            uniqueSurahs.forEach(s => params.append('surah', s.toString()));
+
+            fetch(`/api/wbw?${params.toString()}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (Array.isArray(data) && data.length > 0) {
+                        setWbwData(data);
+                    }
+                })
+                .catch(err => console.error("Failed to load WbW data", err));
+        }
+    }, [allPagesLoaded, playlist]);
+
+    const hasWbw = wbwData.length > 0;
 
     // Audio Hook
     const {
@@ -221,6 +247,17 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                             Phonétique
                         </button>
                     </div>
+
+                    {hasWbw && (
+                        <div className="mt-2 flex justify-center">
+                            <button
+                                onClick={() => setIsWordByWordMode(!isWordByWordMode)}
+                                className={`text-xs font-semibold px-3 py-1 rounded-full border transition-colors ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
+                            >
+                                {isWordByWordMode ? "Vue Normale" : "Mot par Mot"}
+                            </button>
+                        </div>
+                    )}
                 </div>
                 <button
                     className={`p-2 rounded-full transition-colors ${isCompleted ? 'text-green-600 bg-green-100' : 'text-primary hover:bg-primary/10'}`}
@@ -263,61 +300,85 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                             </div>
 
                             <div className="divide-y text-right">
-                                {page.ayahs.map((ayah) => (
-                                    <div
-                                        key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
-                                        id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
-                                        className={`group p-4 transition-all duration-300 grid gap-4 ${isAyahPlaying(ayah.surahNumber, ayah.numberInSurah)
-                                            ? 'bg-primary/5 ring-1 ring-primary/20 shadow-sm z-10'
-                                            : 'hover:bg-muted/5'
-                                            }`}
-                                    >
-                                        {/* Arabic */}
-                                        <div className="w-full">
-                                            <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
-                                                <TajwidText text={ayah.text} className="inline" />
-                                                <span className="mr-2 inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle">
-                                                    {ayah.numberInSurah}
-                                                </span>
-                                            </p>
-                                        </div>
+                                {page.ayahs.map((ayah) => {
+                                    const isPlaying = isAyahPlaying(ayah.surahNumber, ayah.numberInSurah);
 
-                                        {/* Phonetic */}
-                                        {showPhonetic && (
-                                            <div className="w-full text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20 text-left dir-ltr">
-                                                {getPhonetic(ayah.surahNumber, ayah.numberInSurah)}
+                                    const wbwAyah = wbwData.find(w => w.surah === ayah.surahNumber && w.ayah === ayah.numberInSurah);
+
+                                    if (isWordByWordMode && wbwAyah && wbwAyah.words && wbwAyah.words.length > 0) {
+                                        return (
+                                            <div key={`${ayah.surahNumber}:${ayah.numberInSurah}`} className="p-4">
+                                                <AyahWordByWord
+                                                    surah={ayah.surahNumber}
+                                                    ayah={ayah.numberInSurah}
+                                                    words={wbwAyah.words}
+                                                    translation={ayah.translation || ''}
+                                                    isPlaying={isPlaying}
+                                                    onPlayClick={() => handlePlayAyah(ayah.surahNumber, ayah.numberInSurah)}
+                                                    onTafsirClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
+                                                    audioRef={audioRef}
+                                                    showPhonetic={showPhonetic}
+                                                />
                                             </div>
-                                        )}
+                                        );
+                                    }
 
-                                        {/* French Translation & Actions */}
-                                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pt-2 dir-ltr text-left">
-                                            <p className="text-muted-foreground/90 text-base md:text-lg leading-relaxed font-sans flex-1">
-                                                {ayah.translation}
-                                            </p>
+                                    return (
+                                        <div
+                                            key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
+                                            id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
+                                            className={`group p-4 transition-all duration-300 grid gap-4 ${isPlaying
+                                                ? 'bg-primary/5 ring-1 ring-primary/20 shadow-sm z-10'
+                                                : 'hover:bg-muted/5'
+                                                }`}
+                                        >
+                                            {/* Arabic */}
+                                            <div className="w-full">
+                                                <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
+                                                    <TajwidText text={ayah.text} className="inline" />
+                                                    <span className="mr-2 inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle">
+                                                        {ayah.numberInSurah}
+                                                    </span>
+                                                </p>
+                                            </div>
 
-                                            <div className="self-end md:self-start flex items-center gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
-                                                <button
-                                                    onClick={() => handlePlayAyah(ayah.surahNumber, ayah.numberInSurah)}
-                                                    className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isAyahPlaying(ayah.surahNumber, ayah.numberInSurah)
-                                                        ? 'text-primary bg-primary/10'
-                                                        : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'
-                                                        }`}
-                                                >
-                                                    {isAyahPlaying(ayah.surahNumber, ayah.numberInSurah) ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
-                                                    Écouter
-                                                </button>
+                                            {/* Phonetic */}
+                                            {showPhonetic && (
+                                                <div className="w-full text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20 text-left dir-ltr">
+                                                    {getPhonetic(ayah.surahNumber, ayah.numberInSurah)}
+                                                </div>
+                                            )}
 
-                                                <button
-                                                    onClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
-                                                    className="flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent/80 border border-accent/20 hover:bg-accent/5 px-3 py-1.5 rounded-full"
-                                                >
-                                                    <BookOpen className="w-3 h-3" />
-                                                    Tafsir
-                                                </button>
+                                            {/* French Translation & Actions */}
+                                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pt-2 dir-ltr text-left">
+                                                <p className="text-muted-foreground/90 text-base md:text-lg leading-relaxed font-sans flex-1">
+                                                    {ayah.translation}
+                                                </p>
+
+                                                <div className="self-end md:self-start flex items-center gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                                                    <button
+                                                        onClick={() => handlePlayAyah(ayah.surahNumber, ayah.numberInSurah)}
+                                                        className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying
+                                                            ? 'text-primary bg-primary/10'
+                                                            : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'
+                                                            }`}
+                                                    >
+                                                        {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                                                        Écouter
+                                                    </button>
+
+                                                    <button
+                                                        onClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
+                                                        className="flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent/80 border border-accent/20 hover:bg-accent/5 px-3 py-1.5 rounded-full"
+                                                    >
+                                                        <BookOpen className="w-3 h-3" />
+                                                        Tafsir
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    )
+                                })}
                             </div>
                         </div>
                     )

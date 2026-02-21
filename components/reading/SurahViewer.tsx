@@ -7,6 +7,7 @@ import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useSettings } from '@/context/SettingsContext';
+import AyahWordByWord from './AyahWordByWord';
 
 interface Ayah {
     id: number;
@@ -21,9 +22,11 @@ interface Ayah {
 interface SurahViewerProps {
     ayahs: Ayah[];
     surahId: number;
+    wbwData?: any[];
+    isWordByWordMode?: boolean;
 }
 
-export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
+export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode = false }: SurahViewerProps) {
     // Tafsir State
     const [tafsirState, setTafsirState] = useState<{
         isOpen: boolean;
@@ -190,8 +193,26 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                 </div>
             ) : (
                 <div className="space-y-6">
-                    {ayahs.map((ayah) => {
+                    {ayahs.map((ayah, index) => {
                         const playing = isAyahPlaying(ayah.surah, ayah.ayah);
+                        const wbwAyah = wbwData ? wbwData.find(w => w.id === ayah.id) : null;
+
+                        if (isWordByWordMode && wbwAyah && wbwAyah.words && wbwAyah.words.length > 0) {
+                            return (
+                                <AyahWordByWord
+                                    key={ayah.id}
+                                    surah={ayah.surah}
+                                    ayah={ayah.ayah}
+                                    words={wbwAyah.words}
+                                    translation={ayah.translation}
+                                    isPlaying={playing}
+                                    onPlayClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
+                                    onTafsirClick={() => openTafsir(ayah.surah, ayah.ayah, ayah.text, ayah.translation)}
+                                    audioRef={audioRef}
+                                    showPhonetic={showPhonetic}
+                                />
+                            );
+                        }
 
                         return (
                             <div
@@ -253,7 +274,7 @@ export default function SurahViewer({ ayahs, surahId }: SurahViewerProps) {
                             </div>
                         );
                     })}
-                </div>
+                </div >
             )}
 
             <TafsirModal

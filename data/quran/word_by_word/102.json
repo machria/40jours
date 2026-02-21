@@ -1,0 +1,494 @@
+[
+  {
+    "id": 6169,
+    "verse_key": "102:1",
+    "words": [
+      {
+        "id": 164,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلْهَىٰكُمُ",
+        "text_indopak": "اَلۡهٰٮكُمُ",
+        "translation": "Diverts you",
+        "transliteration": "alhākumu",
+        "timestamp": {
+          "from": 0,
+          "to": 1350
+        }
+      },
+      {
+        "id": 165,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلتَّكَاثُرُ",
+        "text_indopak": "التَّكَاثُرُۙ‏",
+        "translation": "the competition to increase",
+        "transliteration": "l-takāthuru",
+        "timestamp": {
+          "from": 1350,
+          "to": 3315
+        }
+      },
+      {
+        "id": 166,
+        "position": 3,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6170,
+    "verse_key": "102:2",
+    "words": [
+      {
+        "id": 1095,
+        "position": 1,
+        "char_type": "word",
+        "text": "حَتَّىٰ",
+        "text_indopak": "حَتّٰى",
+        "translation": "Until",
+        "transliteration": "ḥattā",
+        "timestamp": {
+          "from": 0,
+          "to": 825
+        }
+      },
+      {
+        "id": 1096,
+        "position": 2,
+        "char_type": "word",
+        "text": "زُرْتُمُ",
+        "text_indopak": "زُرۡتُمُ",
+        "translation": "you visit",
+        "transliteration": "zur'tumu",
+        "timestamp": {
+          "from": 825,
+          "to": 1695
+        }
+      },
+      {
+        "id": 1097,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْمَقَابِرَ",
+        "text_indopak": "الۡمَقَابِرَؕ‏",
+        "translation": "the graves",
+        "transliteration": "l-maqābira",
+        "timestamp": {
+          "from": 1695,
+          "to": 3850
+        }
+      },
+      {
+        "id": 1098,
+        "position": 4,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6171,
+    "verse_key": "102:3",
+    "words": [
+      {
+        "id": 2157,
+        "position": 1,
+        "char_type": "word",
+        "text": "كَلَّا",
+        "text_indopak": "كَلَّا",
+        "translation": "Nay",
+        "transliteration": "kallā",
+        "timestamp": {
+          "from": 0,
+          "to": 775
+        }
+      },
+      {
+        "id": 2158,
+        "position": 2,
+        "char_type": "word",
+        "text": "سَوْفَ",
+        "text_indopak": "سَوۡفَ",
+        "translation": "Soon",
+        "transliteration": "sawfa",
+        "timestamp": {
+          "from": 775,
+          "to": 1505
+        }
+      },
+      {
+        "id": 2159,
+        "position": 3,
+        "char_type": "word",
+        "text": "تَعْلَمُونَ",
+        "text_indopak": "تَعۡلَمُوۡنَۙ‏",
+        "translation": "you will know",
+        "transliteration": "taʿlamūna",
+        "timestamp": {
+          "from": 1505,
+          "to": 5210
+        }
+      },
+      {
+        "id": 2160,
+        "position": 4,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6172,
+    "verse_key": "102:4",
+    "words": [
+      {
+        "id": 3510,
+        "position": 1,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "Then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 0,
+          "to": 1515
+        }
+      },
+      {
+        "id": 3511,
+        "position": 2,
+        "char_type": "word",
+        "text": "كَلَّا",
+        "text_indopak": "كَلَّا",
+        "translation": "nay",
+        "transliteration": "kallā",
+        "timestamp": {
+          "from": 1515,
+          "to": 2425
+        }
+      },
+      {
+        "id": 3512,
+        "position": 3,
+        "char_type": "word",
+        "text": "سَوْفَ",
+        "text_indopak": "سَوۡفَ",
+        "translation": "Soon",
+        "transliteration": "sawfa",
+        "timestamp": {
+          "from": 2425,
+          "to": 3215
+        }
+      },
+      {
+        "id": 3513,
+        "position": 4,
+        "char_type": "word",
+        "text": "تَعْلَمُونَ",
+        "text_indopak": "تَعۡلَمُوۡنَؕ‏",
+        "translation": "you will know",
+        "transliteration": "taʿlamūna",
+        "timestamp": {
+          "from": 3215,
+          "to": 6560
+        }
+      },
+      {
+        "id": 3514,
+        "position": 5,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6173,
+    "verse_key": "102:5",
+    "words": [
+      {
+        "id": 4892,
+        "position": 1,
+        "char_type": "word",
+        "text": "كَلَّا",
+        "text_indopak": "كَلَّا",
+        "translation": "Nay",
+        "transliteration": "kallā",
+        "timestamp": {
+          "from": 0,
+          "to": 885
+        }
+      },
+      {
+        "id": 4893,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَوْ",
+        "text_indopak": "لَوۡ",
+        "translation": "If",
+        "transliteration": "law",
+        "timestamp": {
+          "from": 885,
+          "to": 1195
+        }
+      },
+      {
+        "id": 4894,
+        "position": 3,
+        "char_type": "word",
+        "text": "تَعْلَمُونَ",
+        "text_indopak": "تَعۡلَمُوۡنَ",
+        "translation": "you know",
+        "transliteration": "taʿlamūna",
+        "timestamp": {
+          "from": 1195,
+          "to": 2445
+        }
+      },
+      {
+        "id": 4895,
+        "position": 4,
+        "char_type": "word",
+        "text": "عِلْمَ",
+        "text_indopak": "عِلۡمَ",
+        "translation": "(with) a knowledge",
+        "transliteration": "ʿil'ma",
+        "timestamp": {
+          "from": 2445,
+          "to": 3065
+        }
+      },
+      {
+        "id": 4896,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلْيَقِينِ",
+        "text_indopak": "الۡيَقِيۡنِؕ‏",
+        "translation": "(of) certainty",
+        "transliteration": "l-yaqīni",
+        "timestamp": {
+          "from": 3065,
+          "to": 6430
+        }
+      },
+      {
+        "id": 4897,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6174,
+    "verse_key": "102:6",
+    "words": [
+      {
+        "id": 6141,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَتَرَوُنَّ",
+        "text_indopak": "لَتَرَوُنَّ",
+        "translation": "Surely you will see",
+        "transliteration": "latarawunna",
+        "timestamp": {
+          "from": 0,
+          "to": 2155
+        }
+      },
+      {
+        "id": 6142,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْجَحِيمَ",
+        "text_indopak": "الۡجَحِيۡمَۙ‏",
+        "translation": "the Hellfire",
+        "transliteration": "l-jaḥīma",
+        "timestamp": {
+          "from": 2155,
+          "to": 5920
+        }
+      },
+      {
+        "id": 6143,
+        "position": 3,
+        "char_type": "end",
+        "text": "٦",
+        "text_indopak": "٦",
+        "translation": "(6)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6175,
+    "verse_key": "102:7",
+    "words": [
+      {
+        "id": 7440,
+        "position": 1,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "Then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 0,
+          "to": 1005
+        }
+      },
+      {
+        "id": 7441,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَتَرَوُنَّهَا",
+        "text_indopak": "لَتَرَوُنَّهَا",
+        "translation": "surely you will see it",
+        "transliteration": "latarawunnahā",
+        "timestamp": {
+          "from": 1005,
+          "to": 3775
+        }
+      },
+      {
+        "id": 7442,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَيْنَ",
+        "text_indopak": "عَيۡنَ",
+        "translation": "(with the) eye",
+        "transliteration": "ʿayna",
+        "timestamp": {
+          "from": 3775,
+          "to": 4355
+        }
+      },
+      {
+        "id": 7443,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْيَقِينِ",
+        "text_indopak": "الۡيَقِيۡنِۙ‏",
+        "translation": "(of) certainty",
+        "transliteration": "l-yaqīni",
+        "timestamp": {
+          "from": 4355,
+          "to": 7900
+        }
+      },
+      {
+        "id": 7444,
+        "position": 5,
+        "char_type": "end",
+        "text": "٧",
+        "text_indopak": "٧",
+        "translation": "(7)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6176,
+    "verse_key": "102:8",
+    "words": [
+      {
+        "id": 8678,
+        "position": 1,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "Then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 0,
+          "to": 1525
+        }
+      },
+      {
+        "id": 8679,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَتُسْـَٔلُنَّ",
+        "text_indopak": "لَـتُسۡـَٔـلُنَّ",
+        "translation": "surely you will be asked",
+        "transliteration": "latus'alunna",
+        "timestamp": {
+          "from": 1525,
+          "to": 3784
+        }
+      },
+      {
+        "id": 8680,
+        "position": 3,
+        "char_type": "word",
+        "text": "يَوْمَئِذٍ",
+        "text_indopak": "يَوۡمَٮِٕذٍ",
+        "translation": "that Day",
+        "transliteration": "yawma-idhin",
+        "timestamp": {
+          "from": 3785,
+          "to": 5105
+        }
+      },
+      {
+        "id": 8681,
+        "position": 4,
+        "char_type": "word",
+        "text": "عَنِ",
+        "text_indopak": "عَنِ",
+        "translation": "about",
+        "transliteration": "ʿani",
+        "timestamp": {
+          "from": 5105,
+          "to": 5585
+        }
+      },
+      {
+        "id": 8682,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلنَّعِيمِ",
+        "text_indopak": "النَّعِيۡمِ‏",
+        "translation": "the pleasures",
+        "transliteration": "l-naʿīmi",
+        "timestamp": {
+          "from": 5585,
+          "to": 11820
+        }
+      },
+      {
+        "id": 8683,
+        "position": 6,
+        "char_type": "end",
+        "text": "٨",
+        "text_indopak": "٨",
+        "translation": "(8)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

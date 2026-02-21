@@ -1,0 +1,6493 @@
+[
+  {
+    "id": 5105,
+    "verse_key": "58:1",
+    "words": [
+      {
+        "id": 358,
+        "position": 1,
+        "char_type": "word",
+        "text": "قَدْ",
+        "text_indopak": "قَدۡ",
+        "translation": "Indeed",
+        "transliteration": "qad",
+        "timestamp": {
+          "from": 0,
+          "to": 370
+        }
+      },
+      {
+        "id": 359,
+        "position": 2,
+        "char_type": "word",
+        "text": "سَمِعَ",
+        "text_indopak": "سَمِعَ",
+        "translation": "Allah has heard",
+        "transliteration": "samiʿa",
+        "timestamp": {
+          "from": 370,
+          "to": 900
+        }
+      },
+      {
+        "id": 360,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah has heard",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 900,
+          "to": 1770
+        }
+      },
+      {
+        "id": 361,
+        "position": 4,
+        "char_type": "word",
+        "text": "قَوْلَ",
+        "text_indopak": "قَوۡلَ",
+        "translation": "(the) speech",
+        "transliteration": "qawla",
+        "timestamp": {
+          "from": 1770,
+          "to": 2310
+        }
+      },
+      {
+        "id": 362,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلَّتِى",
+        "text_indopak": "الَّتِىۡ",
+        "translation": "(of one) who",
+        "transliteration": "allatī",
+        "timestamp": {
+          "from": 2310,
+          "to": 3020
+        }
+      },
+      {
+        "id": 363,
+        "position": 6,
+        "char_type": "word",
+        "text": "تُجَـٰدِلُكَ",
+        "text_indopak": "تُجَادِلُكَ",
+        "translation": "disputes with you",
+        "transliteration": "tujādiluka",
+        "timestamp": {
+          "from": 3020,
+          "to": 4120
+        }
+      },
+      {
+        "id": 364,
+        "position": 7,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "concerning",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 4120,
+          "to": 4470
+        }
+      },
+      {
+        "id": 365,
+        "position": 8,
+        "char_type": "word",
+        "text": "زَوْجِهَا",
+        "text_indopak": "زَوۡجِهَا",
+        "translation": "her husband",
+        "transliteration": "zawjihā",
+        "timestamp": {
+          "from": 4470,
+          "to": 5450
+        }
+      },
+      {
+        "id": 366,
+        "position": 9,
+        "char_type": "word",
+        "text": "وَتَشْتَكِىٓ",
+        "text_indopak": "وَ تَشۡتَكِىۡۤ",
+        "translation": "and she directs her complaint",
+        "transliteration": "watashtakī",
+        "timestamp": {
+          "from": 5450,
+          "to": 7680
+        }
+      },
+      {
+        "id": 367,
+        "position": 10,
+        "char_type": "word",
+        "text": "إِلَى",
+        "text_indopak": "اِلَى",
+        "translation": "to",
+        "transliteration": "ilā",
+        "timestamp": {
+          "from": 7680,
+          "to": 8000
+        }
+      },
+      {
+        "id": 368,
+        "position": 11,
+        "char_type": "word",
+        "text": "ٱللَّهِ",
+        "text_indopak": "اللّٰهِ ​ۖ",
+        "translation": "Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 8000,
+          "to": 8700
+        }
+      },
+      {
+        "id": 369,
+        "position": 12,
+        "char_type": "word",
+        "text": "وَٱللَّهُ",
+        "text_indopak": "وَاللّٰهُ",
+        "translation": "And Allah",
+        "transliteration": "wal-lahu",
+        "timestamp": {
+          "from": 8700,
+          "to": 9690
+        }
+      },
+      {
+        "id": 370,
+        "position": 13,
+        "char_type": "word",
+        "text": "يَسْمَعُ",
+        "text_indopak": "يَسۡمَعُ",
+        "translation": "hears",
+        "transliteration": "yasmaʿu",
+        "timestamp": {
+          "from": 9690,
+          "to": 10450
+        }
+      },
+      {
+        "id": 371,
+        "position": 14,
+        "char_type": "word",
+        "text": "تَحَاوُرَكُمَآ ۚ",
+        "text_indopak": "تَحَاوُرَكُمَا​ ؕ",
+        "translation": "(the) dialogue of both of you",
+        "transliteration": "taḥāwurakumā",
+        "timestamp": {
+          "from": 10450,
+          "to": 12120
+        }
+      },
+      {
+        "id": 373,
+        "position": 15,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 12120,
+          "to": 13850
+        }
+      },
+      {
+        "id": 374,
+        "position": 16,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 13850,
+          "to": 14610
+        }
+      },
+      {
+        "id": 375,
+        "position": 17,
+        "char_type": "word",
+        "text": "سَمِيعٌۢ",
+        "text_indopak": "سَمِيۡعٌ ۢ",
+        "translation": "(is) All-Hearer",
+        "transliteration": "samīʿun",
+        "timestamp": {
+          "from": 14610,
+          "to": 16120
+        }
+      },
+      {
+        "id": 376,
+        "position": 18,
+        "char_type": "word",
+        "text": "بَصِيرٌ",
+        "text_indopak": "بَصِيۡرٌ‏",
+        "translation": "All-Seer",
+        "transliteration": "baṣīrun",
+        "timestamp": {
+          "from": 16120,
+          "to": 18735
+        }
+      },
+      {
+        "id": 377,
+        "position": 19,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5106,
+    "verse_key": "58:2",
+    "words": [
+      {
+        "id": 1632,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "اَلَّذِيۡنَ",
+        "translation": "Those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 0,
+          "to": 905
+        }
+      },
+      {
+        "id": 1633,
+        "position": 2,
+        "char_type": "word",
+        "text": "يُظَـٰهِرُونَ",
+        "text_indopak": "يُظٰهِرُوۡنَ",
+        "translation": "pronounce zihar",
+        "transliteration": "yuẓāhirūna",
+        "timestamp": {
+          "from": 905,
+          "to": 2295
+        }
+      },
+      {
+        "id": 1634,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِنكُم",
+        "text_indopak": "مِنۡكُمۡ",
+        "translation": "among you",
+        "transliteration": "minkum",
+        "timestamp": {
+          "from": 2295,
+          "to": 3665
+        }
+      },
+      {
+        "id": 1635,
+        "position": 4,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "[from]",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 3665,
+          "to": 4805
+        }
+      },
+      {
+        "id": 1636,
+        "position": 5,
+        "char_type": "word",
+        "text": "نِّسَآئِهِم",
+        "text_indopak": "نِّسَآٮِٕهِمۡ",
+        "translation": "(to) their wives",
+        "transliteration": "nisāihim",
+        "timestamp": {
+          "from": 4805,
+          "to": 7764
+        }
+      },
+      {
+        "id": 1637,
+        "position": 6,
+        "char_type": "word",
+        "text": "مَّا",
+        "text_indopak": "مَّا",
+        "translation": "not",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 7765,
+          "to": 8475
+        }
+      },
+      {
+        "id": 1638,
+        "position": 7,
+        "char_type": "word",
+        "text": "هُنَّ",
+        "text_indopak": "هُنَّ",
+        "translation": "they",
+        "transliteration": "hunna",
+        "timestamp": {
+          "from": 8475,
+          "to": 9865
+        }
+      },
+      {
+        "id": 1639,
+        "position": 8,
+        "char_type": "word",
+        "text": "أُمَّهَـٰتِهِمْ ۖ",
+        "text_indopak": "اُمَّهٰتِهِمۡ​ؕ",
+        "translation": "(are) their mothers",
+        "transliteration": "ummahātihim",
+        "timestamp": {
+          "from": 9865,
+          "to": 11925
+        }
+      },
+      {
+        "id": 1641,
+        "position": 9,
+        "char_type": "word",
+        "text": "إِنْ",
+        "text_indopak": "اِنۡ",
+        "translation": "Not",
+        "transliteration": "in",
+        "timestamp": {
+          "from": 11925,
+          "to": 12835
+        }
+      },
+      {
+        "id": 1642,
+        "position": 10,
+        "char_type": "word",
+        "text": "أُمَّهَـٰتُهُمْ",
+        "text_indopak": "اُمَّهٰتُهُمۡ",
+        "translation": "(are) their mothers",
+        "transliteration": "ummahātuhum",
+        "timestamp": {
+          "from": 12835,
+          "to": 15185
+        }
+      },
+      {
+        "id": 1643,
+        "position": 11,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "except",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 15185,
+          "to": 15665
+        }
+      },
+      {
+        "id": 1644,
+        "position": 12,
+        "char_type": "word",
+        "text": "ٱلَّـٰٓـِٔى",
+        "text_indopak": "الّٰٓـىِٔۡ",
+        "translation": "those who",
+        "transliteration": "allāī",
+        "timestamp": {
+          "from": 15665,
+          "to": 18015
+        }
+      },
+      {
+        "id": 1645,
+        "position": 13,
+        "char_type": "word",
+        "text": "وَلَدْنَهُمْ ۚ",
+        "text_indopak": "وَلَدۡنَهُمۡ​ؕ",
+        "translation": "gave them birth",
+        "transliteration": "waladnahum",
+        "timestamp": {
+          "from": 18015,
+          "to": 19835
+        }
+      },
+      {
+        "id": 1647,
+        "position": 14,
+        "char_type": "word",
+        "text": "وَإِنَّهُمْ",
+        "text_indopak": "وَاِنَّهُمۡ",
+        "translation": "And indeed, they",
+        "transliteration": "wa-innahum",
+        "timestamp": {
+          "from": 19835,
+          "to": 21515
+        }
+      },
+      {
+        "id": 1648,
+        "position": 15,
+        "char_type": "word",
+        "text": "لَيَقُولُونَ",
+        "text_indopak": "لَيَقُوۡلُوۡنَ",
+        "translation": "surely say",
+        "transliteration": "layaqūlūna",
+        "timestamp": {
+          "from": 21515,
+          "to": 22915
+        }
+      },
+      {
+        "id": 1649,
+        "position": 16,
+        "char_type": "word",
+        "text": "مُنكَرًۭا",
+        "text_indopak": "مُنۡكَرًا",
+        "translation": "an evil",
+        "transliteration": "munkaran",
+        "timestamp": {
+          "from": 22915,
+          "to": 24315
+        }
+      },
+      {
+        "id": 1650,
+        "position": 17,
+        "char_type": "word",
+        "text": "مِّنَ",
+        "text_indopak": "مِّنَ",
+        "translation": "[of]",
+        "transliteration": "mina",
+        "timestamp": {
+          "from": 24315,
+          "to": 25285
+        }
+      },
+      {
+        "id": 1651,
+        "position": 18,
+        "char_type": "word",
+        "text": "ٱلْقَوْلِ",
+        "text_indopak": "الۡقَوۡلِ",
+        "translation": "[the] word",
+        "transliteration": "l-qawli",
+        "timestamp": {
+          "from": 25285,
+          "to": 26115
+        }
+      },
+      {
+        "id": 1652,
+        "position": 19,
+        "char_type": "word",
+        "text": "وَزُورًۭا ۚ",
+        "text_indopak": "وَزُوۡرًا​ؕ",
+        "translation": "and a lie",
+        "transliteration": "wazūran",
+        "timestamp": {
+          "from": 26115,
+          "to": 27715
+        }
+      },
+      {
+        "id": 1654,
+        "position": 20,
+        "char_type": "word",
+        "text": "وَإِنَّ",
+        "text_indopak": "وَ اِنَّ",
+        "translation": "But indeed",
+        "transliteration": "wa-inna",
+        "timestamp": {
+          "from": 27715,
+          "to": 29065
+        }
+      },
+      {
+        "id": 1655,
+        "position": 21,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 29065,
+          "to": 29955
+        }
+      },
+      {
+        "id": 1656,
+        "position": 22,
+        "char_type": "word",
+        "text": "لَعَفُوٌّ",
+        "text_indopak": "لَعَفُوٌّ",
+        "translation": "(is) surely, Oft-Pardoning",
+        "transliteration": "laʿafuwwun",
+        "timestamp": {
+          "from": 29955,
+          "to": 30925
+        }
+      },
+      {
+        "id": 1657,
+        "position": 23,
+        "char_type": "word",
+        "text": "غَفُورٌۭ",
+        "text_indopak": "غَفُوۡرٌ‏",
+        "translation": "Oft-Forgiving",
+        "transliteration": "ghafūrun",
+        "timestamp": {
+          "from": 30925,
+          "to": 33480
+        }
+      },
+      {
+        "id": 1658,
+        "position": 24,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5107,
+    "verse_key": "58:3",
+    "words": [
+      {
+        "id": 2337,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلَّذِينَ",
+        "text_indopak": "وَالَّذِيۡنَ",
+        "translation": "And those who",
+        "transliteration": "wa-alladhīna",
+        "timestamp": {
+          "from": 0,
+          "to": 1364
+        }
+      },
+      {
+        "id": 2338,
+        "position": 2,
+        "char_type": "word",
+        "text": "يُظَـٰهِرُونَ",
+        "text_indopak": "يُظٰهِرُوۡنَ",
+        "translation": "pronounce zihar",
+        "transliteration": "yuẓāhirūna",
+        "timestamp": {
+          "from": 1364,
+          "to": 2529
+        }
+      },
+      {
+        "id": 2339,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "[from]",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 2529,
+          "to": 3371
+        }
+      },
+      {
+        "id": 2340,
+        "position": 4,
+        "char_type": "word",
+        "text": "نِّسَآئِهِمْ",
+        "text_indopak": "نِّسَآٮِٕهِمۡ",
+        "translation": "(to) their wives",
+        "transliteration": "nisāihim",
+        "timestamp": {
+          "from": 3371,
+          "to": 6062
+        }
+      },
+      {
+        "id": 2341,
+        "position": 5,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 6062,
+          "to": 7164
+        }
+      },
+      {
+        "id": 2342,
+        "position": 6,
+        "char_type": "word",
+        "text": "يَعُودُونَ",
+        "text_indopak": "يَعُوۡدُوۡنَ",
+        "translation": "go back",
+        "transliteration": "yaʿūdūna",
+        "timestamp": {
+          "from": 7164,
+          "to": 8293
+        }
+      },
+      {
+        "id": 2343,
+        "position": 7,
+        "char_type": "word",
+        "text": "لِمَا",
+        "text_indopak": "لِمَا",
+        "translation": "on what",
+        "transliteration": "limā",
+        "timestamp": {
+          "from": 8293,
+          "to": 8817
+        }
+      },
+      {
+        "id": 2344,
+        "position": 8,
+        "char_type": "word",
+        "text": "قَالُوا۟",
+        "text_indopak": "قَالُوۡا",
+        "translation": "they said",
+        "transliteration": "qālū",
+        "timestamp": {
+          "from": 8817,
+          "to": 9733
+        }
+      },
+      {
+        "id": 2345,
+        "position": 9,
+        "char_type": "word",
+        "text": "فَتَحْرِيرُ",
+        "text_indopak": "فَتَحۡرِيۡرُ",
+        "translation": "then freeing",
+        "transliteration": "fataḥrīru",
+        "timestamp": {
+          "from": 11766,
+          "to": 12983
+        }
+      },
+      {
+        "id": 2346,
+        "position": 10,
+        "char_type": "word",
+        "text": "رَقَبَةٍۢ",
+        "text_indopak": "رَقَبَةٍ",
+        "translation": "(of) a slave",
+        "transliteration": "raqabatin",
+        "timestamp": {
+          "from": 12983,
+          "to": 14265
+        }
+      },
+      {
+        "id": 2347,
+        "position": 11,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "before",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 14265,
+          "to": 15602
+        }
+      },
+      {
+        "id": 2348,
+        "position": 12,
+        "char_type": "word",
+        "text": "قَبْلِ",
+        "text_indopak": "قَبۡلِ",
+        "translation": "before",
+        "transliteration": "qabli",
+        "timestamp": {
+          "from": 15602,
+          "to": 16387
+        }
+      },
+      {
+        "id": 2349,
+        "position": 13,
+        "char_type": "word",
+        "text": "أَن",
+        "text_indopak": "اَنۡ",
+        "translation": "[that]",
+        "transliteration": "an",
+        "timestamp": {
+          "from": 16387,
+          "to": 17550
+        }
+      },
+      {
+        "id": 2350,
+        "position": 14,
+        "char_type": "word",
+        "text": "يَتَمَآسَّا ۚ",
+        "text_indopak": "يَّتَمَآسَّا​ ؕ",
+        "translation": "they touch each other",
+        "transliteration": "yatamāssā",
+        "timestamp": {
+          "from": 17550,
+          "to": 21580
+        }
+      },
+      {
+        "id": 2352,
+        "position": 15,
+        "char_type": "word",
+        "text": "ذَٰلِكُمْ",
+        "text_indopak": "ذٰ لِكُمۡ",
+        "translation": "That",
+        "transliteration": "dhālikum",
+        "timestamp": {
+          "from": 21580,
+          "to": 22963
+        }
+      },
+      {
+        "id": 2353,
+        "position": 16,
+        "char_type": "word",
+        "text": "تُوعَظُونَ",
+        "text_indopak": "تُوۡعَظُوۡنَ",
+        "translation": "you are admonished",
+        "transliteration": "tūʿaẓūna",
+        "timestamp": {
+          "from": 22963,
+          "to": 24232
+        }
+      },
+      {
+        "id": 2354,
+        "position": 17,
+        "char_type": "word",
+        "text": "بِهِۦ ۚ",
+        "text_indopak": "بِهٖ​ ؕ",
+        "translation": "to it",
+        "transliteration": "bihi",
+        "timestamp": {
+          "from": 24232,
+          "to": 24794
+        }
+      },
+      {
+        "id": 2356,
+        "position": 18,
+        "char_type": "word",
+        "text": "وَٱللَّهُ",
+        "text_indopak": "وَاللّٰهُ",
+        "translation": "And Allah",
+        "transliteration": "wal-lahu",
+        "timestamp": {
+          "from": 24794,
+          "to": 26051
+        }
+      },
+      {
+        "id": 2357,
+        "position": 19,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "of what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 26051,
+          "to": 26710
+        }
+      },
+      {
+        "id": 2358,
+        "position": 20,
+        "char_type": "word",
+        "text": "تَعْمَلُونَ",
+        "text_indopak": "تَعۡمَلُوۡنَ",
+        "translation": "you do",
+        "transliteration": "taʿmalūna",
+        "timestamp": {
+          "from": 26710,
+          "to": 27829
+        }
+      },
+      {
+        "id": 2359,
+        "position": 21,
+        "char_type": "word",
+        "text": "خَبِيرٌۭ",
+        "text_indopak": "خَبِيۡرٌ‏",
+        "translation": "(is) All-Aware",
+        "transliteration": "khabīrun",
+        "timestamp": {
+          "from": 27829,
+          "to": 30098
+        }
+      },
+      {
+        "id": 2360,
+        "position": 22,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5108,
+    "verse_key": "58:4",
+    "words": [
+      {
+        "id": 3692,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَمَن",
+        "text_indopak": "فَمَنۡ",
+        "translation": "Then whoever",
+        "transliteration": "faman",
+        "timestamp": {
+          "from": 0,
+          "to": 275
+        }
+      },
+      {
+        "id": 3693,
+        "position": 2,
+        "char_type": "word",
+        "text": "لَّمْ",
+        "text_indopak": "لَّمۡ",
+        "translation": "(does) not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 275,
+          "to": 835
+        }
+      },
+      {
+        "id": 3694,
+        "position": 3,
+        "char_type": "word",
+        "text": "يَجِدْ",
+        "text_indopak": "يَجِدۡ",
+        "translation": "find",
+        "transliteration": "yajid",
+        "timestamp": {
+          "from": 835,
+          "to": 1435
+        }
+      },
+      {
+        "id": 3695,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَصِيَامُ",
+        "text_indopak": "فَصِيَامُ",
+        "translation": "then fasting",
+        "transliteration": "faṣiyāmu",
+        "timestamp": {
+          "from": 1435,
+          "to": 2375
+        }
+      },
+      {
+        "id": 3696,
+        "position": 5,
+        "char_type": "word",
+        "text": "شَهْرَيْنِ",
+        "text_indopak": "شَهۡرَيۡنِ",
+        "translation": "(for) two months",
+        "transliteration": "shahrayni",
+        "timestamp": {
+          "from": 2375,
+          "to": 3335
+        }
+      },
+      {
+        "id": 3697,
+        "position": 6,
+        "char_type": "word",
+        "text": "مُتَتَابِعَيْنِ",
+        "text_indopak": "مُتَتَابِعَيۡنِ",
+        "translation": "consecutively",
+        "transliteration": "mutatābiʿayni",
+        "timestamp": {
+          "from": 3335,
+          "to": 4905
+        }
+      },
+      {
+        "id": 3698,
+        "position": 7,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "before",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 4905,
+          "to": 5825
+        }
+      },
+      {
+        "id": 3699,
+        "position": 8,
+        "char_type": "word",
+        "text": "قَبْلِ",
+        "text_indopak": "قَبۡلِ",
+        "translation": "before",
+        "transliteration": "qabli",
+        "timestamp": {
+          "from": 5825,
+          "to": 6475
+        }
+      },
+      {
+        "id": 3700,
+        "position": 9,
+        "char_type": "word",
+        "text": "أَن",
+        "text_indopak": "اَنۡ",
+        "translation": "[that]",
+        "transliteration": "an",
+        "timestamp": {
+          "from": 6475,
+          "to": 7515
+        }
+      },
+      {
+        "id": 3701,
+        "position": 10,
+        "char_type": "word",
+        "text": "يَتَمَآسَّا ۖ",
+        "text_indopak": "يَّتَمَآسَّاؕ",
+        "translation": "they both touch each other",
+        "transliteration": "yatamāssā",
+        "timestamp": {
+          "from": 7515,
+          "to": 11790
+        }
+      },
+      {
+        "id": 3703,
+        "position": 11,
+        "char_type": "word",
+        "text": "فَمَن",
+        "text_indopak": "فَمَنۡ",
+        "translation": "But (he) who",
+        "transliteration": "faman",
+        "timestamp": {
+          "from": 11790,
+          "to": 12534
+        }
+      },
+      {
+        "id": 3704,
+        "position": 12,
+        "char_type": "word",
+        "text": "لَّمْ",
+        "text_indopak": "لَّمۡ",
+        "translation": "not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 12534,
+          "to": 13009
+        }
+      },
+      {
+        "id": 3705,
+        "position": 13,
+        "char_type": "word",
+        "text": "يَسْتَطِعْ",
+        "text_indopak": "يَسۡتَطِعۡ",
+        "translation": "is able",
+        "transliteration": "yastaṭiʿ",
+        "timestamp": {
+          "from": 13009,
+          "to": 13895
+        }
+      },
+      {
+        "id": 3706,
+        "position": 14,
+        "char_type": "word",
+        "text": "فَإِطْعَامُ",
+        "text_indopak": "فَاِطۡعَامُ",
+        "translation": "then (the) feeding",
+        "transliteration": "fa-iṭ'ʿāmu",
+        "timestamp": {
+          "from": 13895,
+          "to": 15119
+        }
+      },
+      {
+        "id": 3707,
+        "position": 15,
+        "char_type": "word",
+        "text": "سِتِّينَ",
+        "text_indopak": "سِتِّيۡنَ",
+        "translation": "(of) sixty",
+        "transliteration": "sittīna",
+        "timestamp": {
+          "from": 15119,
+          "to": 16000
+        }
+      },
+      {
+        "id": 3708,
+        "position": 16,
+        "char_type": "word",
+        "text": "مِسْكِينًۭا ۚ",
+        "text_indopak": "مِسۡكِيۡنًا​ؕ",
+        "translation": "needy one(s)",
+        "transliteration": "mis'kīnan",
+        "timestamp": {
+          "from": 16000,
+          "to": 17605
+        }
+      },
+      {
+        "id": 3710,
+        "position": 17,
+        "char_type": "word",
+        "text": "ذَٰلِكَ",
+        "text_indopak": "ذٰلِكَ",
+        "translation": "That ",
+        "transliteration": "dhālika",
+        "timestamp": {
+          "from": 17605,
+          "to": 18215
+        }
+      },
+      {
+        "id": 3711,
+        "position": 18,
+        "char_type": "word",
+        "text": "لِتُؤْمِنُوا۟",
+        "text_indopak": "لِتُؤۡمِنُوۡا",
+        "translation": "so that you may believe",
+        "transliteration": "litu'minū",
+        "timestamp": {
+          "from": 18215,
+          "to": 19355
+        }
+      },
+      {
+        "id": 3712,
+        "position": 19,
+        "char_type": "word",
+        "text": "بِٱللَّهِ",
+        "text_indopak": "بِاللّٰهِ",
+        "translation": "in Allah",
+        "transliteration": "bil-lahi",
+        "timestamp": {
+          "from": 19355,
+          "to": 20325
+        }
+      },
+      {
+        "id": 3713,
+        "position": 20,
+        "char_type": "word",
+        "text": "وَرَسُولِهِۦ ۚ",
+        "text_indopak": "وَرَسُوۡلِهٖ​ؕ",
+        "translation": "and His Messenger",
+        "transliteration": "warasūlihi",
+        "timestamp": {
+          "from": 20325,
+          "to": 21875
+        }
+      },
+      {
+        "id": 3715,
+        "position": 21,
+        "char_type": "word",
+        "text": "وَتِلْكَ",
+        "text_indopak": "وَتِلۡكَ",
+        "translation": "and these",
+        "transliteration": "watil'ka",
+        "timestamp": {
+          "from": 21875,
+          "to": 22615
+        }
+      },
+      {
+        "id": 3716,
+        "position": 22,
+        "char_type": "word",
+        "text": "حُدُودُ",
+        "text_indopak": "حُدُوۡدُ",
+        "translation": "(are the) limits",
+        "transliteration": "ḥudūdu",
+        "timestamp": {
+          "from": 22615,
+          "to": 23445
+        }
+      },
+      {
+        "id": 3717,
+        "position": 23,
+        "char_type": "word",
+        "text": "ٱللَّهِ ۗ",
+        "text_indopak": "اللّٰهِ​ؕ",
+        "translation": "(of) Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 23445,
+          "to": 25535
+        }
+      },
+      {
+        "id": 3719,
+        "position": 24,
+        "char_type": "word",
+        "text": "وَلِلْكَـٰفِرِينَ",
+        "text_indopak": "وَلِلۡكٰفِرِيۡنَ",
+        "translation": "and for the disbelievers",
+        "transliteration": "walil'kāfirīna",
+        "timestamp": {
+          "from": 25535,
+          "to": 27185
+        }
+      },
+      {
+        "id": 3720,
+        "position": 25,
+        "char_type": "word",
+        "text": "عَذَابٌ",
+        "text_indopak": "عَذَابٌ",
+        "translation": "(is) a punishment",
+        "transliteration": "ʿadhābun",
+        "timestamp": {
+          "from": 27185,
+          "to": 28185
+        }
+      },
+      {
+        "id": 3721,
+        "position": 26,
+        "char_type": "word",
+        "text": "أَلِيمٌ",
+        "text_indopak": "اَلِیْمٌ‏",
+        "translation": "painful",
+        "transliteration": "alīmun",
+        "timestamp": {
+          "from": 28185,
+          "to": 30560
+        }
+      },
+      {
+        "id": 3722,
+        "position": 27,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": {
+          "from": 28185,
+          "to": 30560
+        }
+      }
+    ]
+  },
+  {
+    "id": 5109,
+    "verse_key": "58:5",
+    "words": [
+      {
+        "id": 5004,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 0,
+          "to": 1235
+        }
+      },
+      {
+        "id": 5005,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 1235,
+          "to": 2155
+        }
+      },
+      {
+        "id": 5006,
+        "position": 3,
+        "char_type": "word",
+        "text": "يُحَآدُّونَ",
+        "text_indopak": "يُحَآدُّوۡنَ",
+        "translation": "oppose",
+        "transliteration": "yuḥāddūna",
+        "timestamp": {
+          "from": 2155,
+          "to": 6415
+        }
+      },
+      {
+        "id": 5007,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 6415,
+          "to": 7295
+        }
+      },
+      {
+        "id": 5008,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَرَسُولَهُۥ",
+        "text_indopak": "وَرَسُوۡلَهٗ",
+        "translation": "and His Messenger",
+        "transliteration": "warasūlahu",
+        "timestamp": {
+          "from": 7295,
+          "to": 8525
+        }
+      },
+      {
+        "id": 5009,
+        "position": 6,
+        "char_type": "word",
+        "text": "كُبِتُوا۟",
+        "text_indopak": "كُبِتُوۡا",
+        "translation": "(will) be disgraced",
+        "transliteration": "kubitū",
+        "timestamp": {
+          "from": 8525,
+          "to": 9295
+        }
+      },
+      {
+        "id": 5010,
+        "position": 7,
+        "char_type": "word",
+        "text": "كَمَا",
+        "text_indopak": "كَمَا",
+        "translation": "as",
+        "transliteration": "kamā",
+        "timestamp": {
+          "from": 9295,
+          "to": 9865
+        }
+      },
+      {
+        "id": 5011,
+        "position": 8,
+        "char_type": "word",
+        "text": "كُبِتَ",
+        "text_indopak": "كُبِتَ",
+        "translation": "were disgraced",
+        "transliteration": "kubita",
+        "timestamp": {
+          "from": 9865,
+          "to": 10445
+        }
+      },
+      {
+        "id": 5012,
+        "position": 9,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 10445,
+          "to": 11415
+        }
+      },
+      {
+        "id": 5013,
+        "position": 10,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "before them",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 11415,
+          "to": 12555
+        }
+      },
+      {
+        "id": 5014,
+        "position": 11,
+        "char_type": "word",
+        "text": "قَبْلِهِمْ ۚ",
+        "text_indopak": "قَبۡلِهِمۡ​",
+        "translation": "before them",
+        "transliteration": "qablihim",
+        "timestamp": {
+          "from": 12555,
+          "to": 13965
+        }
+      },
+      {
+        "id": 5016,
+        "position": 12,
+        "char_type": "word",
+        "text": "وَقَدْ",
+        "text_indopak": "وَقَدۡ",
+        "translation": "And certainly",
+        "transliteration": "waqad",
+        "timestamp": {
+          "from": 13965,
+          "to": 14485
+        }
+      },
+      {
+        "id": 5017,
+        "position": 13,
+        "char_type": "word",
+        "text": "أَنزَلْنَآ",
+        "text_indopak": "اَنۡزَلۡنَاۤ",
+        "translation": "We have sent down",
+        "transliteration": "anzalnā",
+        "timestamp": {
+          "from": 14485,
+          "to": 17675
+        }
+      },
+      {
+        "id": 5018,
+        "position": 14,
+        "char_type": "word",
+        "text": "ءَايَـٰتٍۭ",
+        "text_indopak": "اٰيٰتٍۢ",
+        "translation": "Verses",
+        "transliteration": "āyātin",
+        "timestamp": {
+          "from": 17675,
+          "to": 19155
+        }
+      },
+      {
+        "id": 5019,
+        "position": 15,
+        "char_type": "word",
+        "text": "بَيِّنَـٰتٍۢ ۚ",
+        "text_indopak": "بَيِّنٰتٍ​ ؕ",
+        "translation": "clear",
+        "transliteration": "bayyinātin",
+        "timestamp": {
+          "from": 19155,
+          "to": 21255
+        }
+      },
+      {
+        "id": 5021,
+        "position": 16,
+        "char_type": "word",
+        "text": "وَلِلْكَـٰفِرِينَ",
+        "text_indopak": "وَ لِلۡكٰفِرِيۡنَ",
+        "translation": "And for the disbelievers",
+        "transliteration": "walil'kāfirīna",
+        "timestamp": {
+          "from": 21255,
+          "to": 22875
+        }
+      },
+      {
+        "id": 5022,
+        "position": 17,
+        "char_type": "word",
+        "text": "عَذَابٌۭ",
+        "text_indopak": "عَذَابٌ",
+        "translation": "(is) a punishment",
+        "transliteration": "ʿadhābun",
+        "timestamp": {
+          "from": 22875,
+          "to": 23635
+        }
+      },
+      {
+        "id": 5023,
+        "position": 18,
+        "char_type": "word",
+        "text": "مُّهِينٌۭ",
+        "text_indopak": "مُّهِيۡنٌ​ ۚ‏",
+        "translation": "humiliating",
+        "transliteration": "muhīnun",
+        "timestamp": {
+          "from": 23635,
+          "to": 26910
+        }
+      },
+      {
+        "id": 5024,
+        "position": 19,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5110,
+    "verse_key": "58:6",
+    "words": [
+      {
+        "id": 6229,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَوْمَ",
+        "text_indopak": "يَوۡمَ",
+        "translation": "(On the) Day",
+        "transliteration": "yawma",
+        "timestamp": {
+          "from": 0,
+          "to": 555
+        }
+      },
+      {
+        "id": 6230,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَبْعَثُهُمُ",
+        "text_indopak": "يَبۡعَثُهُمُ",
+        "translation": "(when) Allah will raise them",
+        "transliteration": "yabʿathuhumu",
+        "timestamp": {
+          "from": 555,
+          "to": 1695
+        }
+      },
+      {
+        "id": 6231,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "(when) Allah will raise them",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 1695,
+          "to": 2515
+        }
+      },
+      {
+        "id": 6232,
+        "position": 4,
+        "char_type": "word",
+        "text": "جَمِيعًۭا",
+        "text_indopak": "جَمِيۡعًا",
+        "translation": "all",
+        "transliteration": "jamīʿan",
+        "timestamp": {
+          "from": 2515,
+          "to": 4415
+        }
+      },
+      {
+        "id": 6233,
+        "position": 5,
+        "char_type": "word",
+        "text": "فَيُنَبِّئُهُم",
+        "text_indopak": "فَيُنَبِّئُهُمۡ",
+        "translation": "and inform them",
+        "transliteration": "fayunabbi-uhum",
+        "timestamp": {
+          "from": 4415,
+          "to": 6705
+        }
+      },
+      {
+        "id": 6234,
+        "position": 6,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "of what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 6705,
+          "to": 7295
+        }
+      },
+      {
+        "id": 6235,
+        "position": 7,
+        "char_type": "word",
+        "text": "عَمِلُوٓا۟ ۚ",
+        "text_indopak": "عَمِلُوۡا​ ؕ",
+        "translation": "they did",
+        "transliteration": "ʿamilū",
+        "timestamp": {
+          "from": 7295,
+          "to": 8315
+        }
+      },
+      {
+        "id": 6237,
+        "position": 8,
+        "char_type": "word",
+        "text": "أَحْصَىٰهُ",
+        "text_indopak": "اَحۡصٰٮهُ",
+        "translation": "Allah has recorded it",
+        "transliteration": "aḥṣāhu",
+        "timestamp": {
+          "from": 8315,
+          "to": 9775
+        }
+      },
+      {
+        "id": 6238,
+        "position": 9,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah has recorded it",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 9775,
+          "to": 10625
+        }
+      },
+      {
+        "id": 6239,
+        "position": 10,
+        "char_type": "word",
+        "text": "وَنَسُوهُ ۚ",
+        "text_indopak": "وَنَسُوۡهُ​ ؕ",
+        "translation": "while they forgot it",
+        "transliteration": "wanasūhu",
+        "timestamp": {
+          "from": 10625,
+          "to": 13295
+        }
+      },
+      {
+        "id": 6241,
+        "position": 11,
+        "char_type": "word",
+        "text": "وَٱللَّهُ",
+        "text_indopak": "وَاللّٰهُ",
+        "translation": "And Allah",
+        "transliteration": "wal-lahu",
+        "timestamp": {
+          "from": 13295,
+          "to": 14205
+        }
+      },
+      {
+        "id": 6242,
+        "position": 12,
+        "char_type": "word",
+        "text": "عَلَىٰ",
+        "text_indopak": "عَلٰى",
+        "translation": "(is) over",
+        "transliteration": "ʿalā",
+        "timestamp": {
+          "from": 14205,
+          "to": 14785
+        }
+      },
+      {
+        "id": 6243,
+        "position": 13,
+        "char_type": "word",
+        "text": "كُلِّ",
+        "text_indopak": "كُلِّ",
+        "translation": "all",
+        "transliteration": "kulli",
+        "timestamp": {
+          "from": 14785,
+          "to": 15365
+        }
+      },
+      {
+        "id": 6244,
+        "position": 14,
+        "char_type": "word",
+        "text": "شَىْءٍۢ",
+        "text_indopak": "شَىۡءٍ",
+        "translation": "things",
+        "transliteration": "shayin",
+        "timestamp": {
+          "from": 15365,
+          "to": 16805
+        }
+      },
+      {
+        "id": 6245,
+        "position": 15,
+        "char_type": "word",
+        "text": "شَهِيدٌ",
+        "text_indopak": "شَهِيۡدٌ​‏",
+        "translation": "a Witness",
+        "transliteration": "shahīdun",
+        "timestamp": {
+          "from": 16805,
+          "to": 19510
+        }
+      },
+      {
+        "id": 6246,
+        "position": 16,
+        "char_type": "end",
+        "text": "٦",
+        "text_indopak": "٦",
+        "translation": "(6)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5111,
+    "verse_key": "58:7",
+    "words": [
+      {
+        "id": 7618,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلَمْ",
+        "text_indopak": "اَلَمۡ",
+        "translation": "Do not",
+        "transliteration": "alam",
+        "timestamp": {
+          "from": 0,
+          "to": 505
+        }
+      },
+      {
+        "id": 7619,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَرَ",
+        "text_indopak": "تَرَ",
+        "translation": "you see",
+        "transliteration": "tara",
+        "timestamp": {
+          "from": 505,
+          "to": 955
+        }
+      },
+      {
+        "id": 7620,
+        "position": 3,
+        "char_type": "word",
+        "text": "أَنَّ",
+        "text_indopak": "اَنَّ",
+        "translation": "that",
+        "transliteration": "anna",
+        "timestamp": {
+          "from": 955,
+          "to": 2175
+        }
+      },
+      {
+        "id": 7621,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 2175,
+          "to": 3025
+        }
+      },
+      {
+        "id": 7622,
+        "position": 5,
+        "char_type": "word",
+        "text": "يَعْلَمُ",
+        "text_indopak": "يَعۡلَمُ",
+        "translation": "knows",
+        "transliteration": "yaʿlamu",
+        "timestamp": {
+          "from": 3025,
+          "to": 3835
+        }
+      },
+      {
+        "id": 7623,
+        "position": 6,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "whatever",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 3835,
+          "to": 4195
+        }
+      },
+      {
+        "id": 7624,
+        "position": 7,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "(is) in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 4195,
+          "to": 4405
+        }
+      },
+      {
+        "id": 7625,
+        "position": 8,
+        "char_type": "word",
+        "text": "ٱلسَّمَـٰوَٰتِ",
+        "text_indopak": "السَّمٰوٰتِ",
+        "translation": "the heavens",
+        "transliteration": "l-samāwāti",
+        "timestamp": {
+          "from": 4405,
+          "to": 5835
+        }
+      },
+      {
+        "id": 7626,
+        "position": 9,
+        "char_type": "word",
+        "text": "وَمَا",
+        "text_indopak": "وَمَا",
+        "translation": "and whatever",
+        "transliteration": "wamā",
+        "timestamp": {
+          "from": 5835,
+          "to": 6435
+        }
+      },
+      {
+        "id": 7627,
+        "position": 10,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "(is) in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 6435,
+          "to": 6655
+        }
+      },
+      {
+        "id": 7628,
+        "position": 11,
+        "char_type": "word",
+        "text": "ٱلْأَرْضِ ۖ",
+        "text_indopak": "الۡاَرۡضِ​ؕ",
+        "translation": "the earth",
+        "transliteration": "l-arḍi",
+        "timestamp": {
+          "from": 6655,
+          "to": 7395
+        }
+      },
+      {
+        "id": 7630,
+        "position": 12,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "Not",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 7395,
+          "to": 8045
+        }
+      },
+      {
+        "id": 7631,
+        "position": 13,
+        "char_type": "word",
+        "text": "يَكُونُ",
+        "text_indopak": "يَكُوۡنُ",
+        "translation": "there is",
+        "transliteration": "yakūnu",
+        "timestamp": {
+          "from": 8045,
+          "to": 9065
+        }
+      },
+      {
+        "id": 7632,
+        "position": 14,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "any",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 9065,
+          "to": 9385
+        }
+      },
+      {
+        "id": 7633,
+        "position": 15,
+        "char_type": "word",
+        "text": "نَّجْوَىٰ",
+        "text_indopak": "نَّجۡوٰى",
+        "translation": "secret counsel",
+        "transliteration": "najwā",
+        "timestamp": {
+          "from": 9385,
+          "to": 10785
+        }
+      },
+      {
+        "id": 7634,
+        "position": 16,
+        "char_type": "word",
+        "text": "ثَلَـٰثَةٍ",
+        "text_indopak": "ثَلٰثَةٍ",
+        "translation": "(of) three",
+        "transliteration": "thalāthatin",
+        "timestamp": {
+          "from": 10785,
+          "to": 12095
+        }
+      },
+      {
+        "id": 7635,
+        "position": 17,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "but",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 12095,
+          "to": 12875
+        }
+      },
+      {
+        "id": 7636,
+        "position": 18,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "He (is)",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 12875,
+          "to": 13115
+        }
+      },
+      {
+        "id": 7637,
+        "position": 19,
+        "char_type": "word",
+        "text": "رَابِعُهُمْ",
+        "text_indopak": "رَابِعُهُمۡ",
+        "translation": "(the) fourth of them",
+        "transliteration": "rābiʿuhum",
+        "timestamp": {
+          "from": 13115,
+          "to": 14525
+        }
+      },
+      {
+        "id": 7638,
+        "position": 20,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَلَا",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 14525,
+          "to": 15055
+        }
+      },
+      {
+        "id": 7639,
+        "position": 21,
+        "char_type": "word",
+        "text": "خَمْسَةٍ",
+        "text_indopak": "خَمۡسَةٍ",
+        "translation": "five",
+        "transliteration": "khamsatin",
+        "timestamp": {
+          "from": 15055,
+          "to": 16135
+        }
+      },
+      {
+        "id": 7640,
+        "position": 22,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "but",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 16135,
+          "to": 16985
+        }
+      },
+      {
+        "id": 7641,
+        "position": 23,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "He (is)",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 16985,
+          "to": 17305
+        }
+      },
+      {
+        "id": 7642,
+        "position": 24,
+        "char_type": "word",
+        "text": "سَادِسُهُمْ",
+        "text_indopak": "سَادِسُهُمۡ",
+        "translation": "(the) sixth of them",
+        "transliteration": "sādisuhum",
+        "timestamp": {
+          "from": 17305,
+          "to": 18625
+        }
+      },
+      {
+        "id": 7643,
+        "position": 25,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَلَاۤ",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 18625,
+          "to": 20795
+        }
+      },
+      {
+        "id": 7644,
+        "position": 26,
+        "char_type": "word",
+        "text": "أَدْنَىٰ",
+        "text_indopak": "اَدۡنٰى",
+        "translation": "less",
+        "transliteration": "adnā",
+        "timestamp": {
+          "from": 20795,
+          "to": 21595
+        }
+      },
+      {
+        "id": 7645,
+        "position": 27,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "than",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 21595,
+          "to": 22775
+        }
+      },
+      {
+        "id": 7646,
+        "position": 28,
+        "char_type": "word",
+        "text": "ذَٰلِكَ",
+        "text_indopak": "ذٰ لِكَ",
+        "translation": "that",
+        "transliteration": "dhālika",
+        "timestamp": {
+          "from": 22775,
+          "to": 23595
+        }
+      },
+      {
+        "id": 7647,
+        "position": 29,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَلَاۤ",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 23595,
+          "to": 25325
+        }
+      },
+      {
+        "id": 7648,
+        "position": 30,
+        "char_type": "word",
+        "text": "أَكْثَرَ",
+        "text_indopak": "اَكۡثَرَ",
+        "translation": "more",
+        "transliteration": "akthara",
+        "timestamp": {
+          "from": 25325,
+          "to": 26115
+        }
+      },
+      {
+        "id": 7649,
+        "position": 31,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "but",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 26115,
+          "to": 26935
+        }
+      },
+      {
+        "id": 7650,
+        "position": 32,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "He",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 26935,
+          "to": 27305
+        }
+      },
+      {
+        "id": 7651,
+        "position": 33,
+        "char_type": "word",
+        "text": "مَعَهُمْ",
+        "text_indopak": "مَعَهُمۡ",
+        "translation": "(is) with them",
+        "transliteration": "maʿahum",
+        "timestamp": {
+          "from": 27305,
+          "to": 28125
+        }
+      },
+      {
+        "id": 7652,
+        "position": 34,
+        "char_type": "word",
+        "text": "أَيْنَ",
+        "text_indopak": "اَيۡنَ",
+        "translation": "wherever",
+        "transliteration": "ayna",
+        "timestamp": {
+          "from": 28125,
+          "to": 28755
+        }
+      },
+      {
+        "id": 7653,
+        "position": 35,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "wherever",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 28755,
+          "to": 28885
+        }
+      },
+      {
+        "id": 7654,
+        "position": 36,
+        "char_type": "word",
+        "text": "كَانُوا۟ ۖ",
+        "text_indopak": "كَانُوۡا​ۚ",
+        "translation": "they are",
+        "transliteration": "kānū",
+        "timestamp": {
+          "from": 28885,
+          "to": 29605
+        }
+      },
+      {
+        "id": 7656,
+        "position": 37,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "Then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 29605,
+          "to": 31765
+        }
+      },
+      {
+        "id": 7657,
+        "position": 38,
+        "char_type": "word",
+        "text": "يُنَبِّئُهُم",
+        "text_indopak": "يُنَبِّئُهُمۡ",
+        "translation": "He will inform them",
+        "transliteration": "yunabbi-uhum",
+        "timestamp": {
+          "from": 31765,
+          "to": 33835
+        }
+      },
+      {
+        "id": 7658,
+        "position": 39,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "of what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 33835,
+          "to": 34355
+        }
+      },
+      {
+        "id": 7659,
+        "position": 40,
+        "char_type": "word",
+        "text": "عَمِلُوا۟",
+        "text_indopak": "عَمِلُوۡا",
+        "translation": "they did",
+        "transliteration": "ʿamilū",
+        "timestamp": {
+          "from": 34355,
+          "to": 35135
+        }
+      },
+      {
+        "id": 7660,
+        "position": 41,
+        "char_type": "word",
+        "text": "يَوْمَ",
+        "text_indopak": "يَوۡمَ",
+        "translation": "(on the) Day",
+        "transliteration": "yawma",
+        "timestamp": {
+          "from": 35135,
+          "to": 35735
+        }
+      },
+      {
+        "id": 7661,
+        "position": 42,
+        "char_type": "word",
+        "text": "ٱلْقِيَـٰمَةِ ۚ",
+        "text_indopak": "الۡقِيٰمَةِ​ ؕ",
+        "translation": "(of) the Resurrection",
+        "transliteration": "l-qiyāmati",
+        "timestamp": {
+          "from": 35735,
+          "to": 37515
+        }
+      },
+      {
+        "id": 7663,
+        "position": 43,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 37515,
+          "to": 38595
+        }
+      },
+      {
+        "id": 7664,
+        "position": 44,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 38595,
+          "to": 39495
+        }
+      },
+      {
+        "id": 7665,
+        "position": 45,
+        "char_type": "word",
+        "text": "بِكُلِّ",
+        "text_indopak": "بِكُلِّ",
+        "translation": "of every",
+        "transliteration": "bikulli",
+        "timestamp": {
+          "from": 39495,
+          "to": 40255
+        }
+      },
+      {
+        "id": 7666,
+        "position": 46,
+        "char_type": "word",
+        "text": "شَىْءٍ",
+        "text_indopak": "شَىۡءٍ",
+        "translation": "thing",
+        "transliteration": "shayin",
+        "timestamp": {
+          "from": 40255,
+          "to": 41185
+        }
+      },
+      {
+        "id": 7667,
+        "position": 47,
+        "char_type": "word",
+        "text": "عَلِيمٌ",
+        "text_indopak": "عَلِيۡمٌ‏",
+        "translation": "(is) All-Knower",
+        "transliteration": "ʿalīmun",
+        "timestamp": {
+          "from": 41185,
+          "to": 43440
+        }
+      },
+      {
+        "id": 7668,
+        "position": 48,
+        "char_type": "end",
+        "text": "٧",
+        "text_indopak": "٧",
+        "translation": "(7)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5112,
+    "verse_key": "58:8",
+    "words": [
+      {
+        "id": 8814,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَلَمْ",
+        "text_indopak": "اَلَمۡ",
+        "translation": "Do not",
+        "transliteration": "alam",
+        "timestamp": {
+          "from": 0,
+          "to": 585
+        }
+      },
+      {
+        "id": 8815,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَرَ",
+        "text_indopak": "تَرَ",
+        "translation": "you see",
+        "transliteration": "tara",
+        "timestamp": {
+          "from": 585,
+          "to": 1015
+        }
+      },
+      {
+        "id": 8816,
+        "position": 3,
+        "char_type": "word",
+        "text": "إِلَى",
+        "text_indopak": "اِلَى",
+        "translation": "[to]",
+        "transliteration": "ilā",
+        "timestamp": {
+          "from": 1015,
+          "to": 1355
+        }
+      },
+      {
+        "id": 8817,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 1355,
+          "to": 2345
+        }
+      },
+      {
+        "id": 8818,
+        "position": 5,
+        "char_type": "word",
+        "text": "نُهُوا۟",
+        "text_indopak": "نُهُوۡا",
+        "translation": "were forbidden",
+        "transliteration": "nuhū",
+        "timestamp": {
+          "from": 2345,
+          "to": 2945
+        }
+      },
+      {
+        "id": 8819,
+        "position": 6,
+        "char_type": "word",
+        "text": "عَنِ",
+        "text_indopak": "عَنِ",
+        "translation": "from",
+        "transliteration": "ʿani",
+        "timestamp": {
+          "from": 2945,
+          "to": 3365
+        }
+      },
+      {
+        "id": 8820,
+        "position": 7,
+        "char_type": "word",
+        "text": "ٱلنَّجْوَىٰ",
+        "text_indopak": "النَّجۡوٰى",
+        "translation": "secret counsels",
+        "transliteration": "l-najwā",
+        "timestamp": {
+          "from": 3365,
+          "to": 4915
+        }
+      },
+      {
+        "id": 8821,
+        "position": 8,
+        "char_type": "word",
+        "text": "ثُمَّ",
+        "text_indopak": "ثُمَّ",
+        "translation": "then",
+        "transliteration": "thumma",
+        "timestamp": {
+          "from": 4915,
+          "to": 6005
+        }
+      },
+      {
+        "id": 8822,
+        "position": 9,
+        "char_type": "word",
+        "text": "يَعُودُونَ",
+        "text_indopak": "يَعُوۡدُوۡنَ",
+        "translation": "they return",
+        "transliteration": "yaʿūdūna",
+        "timestamp": {
+          "from": 6005,
+          "to": 7295
+        }
+      },
+      {
+        "id": 8823,
+        "position": 10,
+        "char_type": "word",
+        "text": "لِمَا",
+        "text_indopak": "لِمَا",
+        "translation": "to what",
+        "transliteration": "limā",
+        "timestamp": {
+          "from": 7295,
+          "to": 7935
+        }
+      },
+      {
+        "id": 8824,
+        "position": 11,
+        "char_type": "word",
+        "text": "نُهُوا۟",
+        "text_indopak": "نُهُوۡا",
+        "translation": "they were forbidden",
+        "transliteration": "nuhū",
+        "timestamp": {
+          "from": 7935,
+          "to": 8545
+        }
+      },
+      {
+        "id": 8825,
+        "position": 12,
+        "char_type": "word",
+        "text": "عَنْهُ",
+        "text_indopak": "عَنۡهُ",
+        "translation": "from [it]",
+        "transliteration": "ʿanhu",
+        "timestamp": {
+          "from": 8545,
+          "to": 9275
+        }
+      },
+      {
+        "id": 8826,
+        "position": 13,
+        "char_type": "word",
+        "text": "وَيَتَنَـٰجَوْنَ",
+        "text_indopak": "وَيَتَنٰجَوۡنَ",
+        "translation": "and they hold secret counsels",
+        "transliteration": "wayatanājawna",
+        "timestamp": {
+          "from": 9275,
+          "to": 10795
+        }
+      },
+      {
+        "id": 8827,
+        "position": 14,
+        "char_type": "word",
+        "text": "بِٱلْإِثْمِ",
+        "text_indopak": "بِالۡاِثۡمِ",
+        "translation": "for sin",
+        "transliteration": "bil-ith'mi",
+        "timestamp": {
+          "from": 10795,
+          "to": 11895
+        }
+      },
+      {
+        "id": 8828,
+        "position": 15,
+        "char_type": "word",
+        "text": "وَٱلْعُدْوَٰنِ",
+        "text_indopak": "وَالۡعُدۡوَانِ",
+        "translation": "and aggression",
+        "transliteration": "wal-ʿud'wāni",
+        "timestamp": {
+          "from": 11895,
+          "to": 13255
+        }
+      },
+      {
+        "id": 8829,
+        "position": 16,
+        "char_type": "word",
+        "text": "وَمَعْصِيَتِ",
+        "text_indopak": "وَمَعۡصِيَتِ",
+        "translation": "and disobedience",
+        "transliteration": "wamaʿṣiyati",
+        "timestamp": {
+          "from": 13255,
+          "to": 14475
+        }
+      },
+      {
+        "id": 8830,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلرَّسُولِ",
+        "text_indopak": "الرَّسُوۡلِ",
+        "translation": "(to) the Messenger",
+        "transliteration": "l-rasūli",
+        "timestamp": {
+          "from": 14475,
+          "to": 15535
+        }
+      },
+      {
+        "id": 8831,
+        "position": 18,
+        "char_type": "word",
+        "text": "وَإِذَا",
+        "text_indopak": "وَاِذَا",
+        "translation": "And when",
+        "transliteration": "wa-idhā",
+        "timestamp": {
+          "from": 15535,
+          "to": 16355
+        }
+      },
+      {
+        "id": 8832,
+        "position": 19,
+        "char_type": "word",
+        "text": "جَآءُوكَ",
+        "text_indopak": "جَآءُوۡكَ",
+        "translation": "they come to you",
+        "transliteration": "jāūka",
+        "timestamp": {
+          "from": 16355,
+          "to": 18794
+        }
+      },
+      {
+        "id": 8833,
+        "position": 20,
+        "char_type": "word",
+        "text": "حَيَّوْكَ",
+        "text_indopak": "حَيَّوۡكَ",
+        "translation": "they greet you",
+        "transliteration": "ḥayyawka",
+        "timestamp": {
+          "from": 18795,
+          "to": 19835
+        }
+      },
+      {
+        "id": 8834,
+        "position": 21,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "with what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 19835,
+          "to": 20495
+        }
+      },
+      {
+        "id": 8835,
+        "position": 22,
+        "char_type": "word",
+        "text": "لَمْ",
+        "text_indopak": "لَمۡ",
+        "translation": "not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 20495,
+          "to": 20875
+        }
+      },
+      {
+        "id": 8836,
+        "position": 23,
+        "char_type": "word",
+        "text": "يُحَيِّكَ",
+        "text_indopak": "يُحَيِّكَ",
+        "translation": "greets you",
+        "transliteration": "yuḥayyika",
+        "timestamp": {
+          "from": 20875,
+          "to": 21905
+        }
+      },
+      {
+        "id": 8837,
+        "position": 24,
+        "char_type": "word",
+        "text": "بِهِ",
+        "text_indopak": "بِهِ",
+        "translation": "therewith",
+        "transliteration": "bihi",
+        "timestamp": {
+          "from": 21905,
+          "to": 22385
+        }
+      },
+      {
+        "id": 8838,
+        "position": 25,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُۙ",
+        "translation": "Allah",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 22385,
+          "to": 23225
+        }
+      },
+      {
+        "id": 8839,
+        "position": 26,
+        "char_type": "word",
+        "text": "وَيَقُولُونَ",
+        "text_indopak": "وَيَقُوۡلُوۡنَ",
+        "translation": "and they say",
+        "transliteration": "wayaqūlūna",
+        "timestamp": {
+          "from": 26125,
+          "to": 27525
+        }
+      },
+      {
+        "id": 8840,
+        "position": 27,
+        "char_type": "word",
+        "text": "فِىٓ",
+        "text_indopak": "فِىۡۤ",
+        "translation": "among",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 27525,
+          "to": 29365
+        }
+      },
+      {
+        "id": 8841,
+        "position": 28,
+        "char_type": "word",
+        "text": "أَنفُسِهِمْ",
+        "text_indopak": "اَنۡفُسِهِمۡ",
+        "translation": "themselves",
+        "transliteration": "anfusihim",
+        "timestamp": {
+          "from": 29365,
+          "to": 31265
+        }
+      },
+      {
+        "id": 8842,
+        "position": 29,
+        "char_type": "word",
+        "text": "لَوْلَا",
+        "text_indopak": "لَوۡلَا",
+        "translation": "Why (does) not",
+        "transliteration": "lawlā",
+        "timestamp": {
+          "from": 31265,
+          "to": 32065
+        }
+      },
+      {
+        "id": 8843,
+        "position": 30,
+        "char_type": "word",
+        "text": "يُعَذِّبُنَا",
+        "text_indopak": "يُعَذِّبُنَا",
+        "translation": "Allah punish us",
+        "transliteration": "yuʿadhibunā",
+        "timestamp": {
+          "from": 32065,
+          "to": 33295
+        }
+      },
+      {
+        "id": 8844,
+        "position": 31,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah punish us",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 33295,
+          "to": 34195
+        }
+      },
+      {
+        "id": 8845,
+        "position": 32,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "for what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 34195,
+          "to": 34775
+        }
+      },
+      {
+        "id": 8846,
+        "position": 33,
+        "char_type": "word",
+        "text": "نَقُولُ ۚ",
+        "text_indopak": "نَقُوۡلُ​ؕ",
+        "translation": "we say",
+        "transliteration": "naqūlu",
+        "timestamp": {
+          "from": 34775,
+          "to": 36975
+        }
+      },
+      {
+        "id": 8848,
+        "position": 34,
+        "char_type": "word",
+        "text": "حَسْبُهُمْ",
+        "text_indopak": "حَسۡبُهُمۡ",
+        "translation": "Sufficient (for) them",
+        "transliteration": "ḥasbuhum",
+        "timestamp": {
+          "from": 36975,
+          "to": 38445
+        }
+      },
+      {
+        "id": 8849,
+        "position": 35,
+        "char_type": "word",
+        "text": "جَهَنَّمُ",
+        "text_indopak": "جَهَنَّمُ​ۚ",
+        "translation": "(is) Hell",
+        "transliteration": "jahannamu",
+        "timestamp": {
+          "from": 38445,
+          "to": 40145
+        }
+      },
+      {
+        "id": 8850,
+        "position": 36,
+        "char_type": "word",
+        "text": "يَصْلَوْنَهَا ۖ",
+        "text_indopak": "يَصۡلَوۡنَهَا​ۚ",
+        "translation": "they will burn in it",
+        "transliteration": "yaṣlawnahā",
+        "timestamp": {
+          "from": 40145,
+          "to": 41585
+        }
+      },
+      {
+        "id": 8852,
+        "position": 37,
+        "char_type": "word",
+        "text": "فَبِئْسَ",
+        "text_indopak": "فَبِئۡسَ",
+        "translation": "and worst is",
+        "transliteration": "fabi'sa",
+        "timestamp": {
+          "from": 41585,
+          "to": 42385
+        }
+      },
+      {
+        "id": 8853,
+        "position": 38,
+        "char_type": "word",
+        "text": "ٱلْمَصِيرُ",
+        "text_indopak": "الۡمَصِيۡرُ‏",
+        "translation": "the destination",
+        "transliteration": "l-maṣīru",
+        "timestamp": {
+          "from": 42385,
+          "to": 43370
+        }
+      },
+      {
+        "id": 8854,
+        "position": 39,
+        "char_type": "end",
+        "text": "٨",
+        "text_indopak": "٨",
+        "translation": "(8)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5113,
+    "verse_key": "58:9",
+    "words": [
+      {
+        "id": 10040,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَـٰٓأَيُّهَا",
+        "text_indopak": "يٰۤاَيُّهَا",
+        "translation": "O you who believe",
+        "transliteration": "yāayyuhā",
+        "timestamp": {
+          "from": 0,
+          "to": 2677
+        }
+      },
+      {
+        "id": 10041,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "O you who believe",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 2677,
+          "to": 3773
+        }
+      },
+      {
+        "id": 10042,
+        "position": 3,
+        "char_type": "word",
+        "text": "ءَامَنُوٓا۟",
+        "text_indopak": "اٰمَنُوۡۤا",
+        "translation": "O you who believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 3773,
+          "to": 6115
+        }
+      },
+      {
+        "id": 10043,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِذَا",
+        "text_indopak": "اِذَا",
+        "translation": "When",
+        "transliteration": "idhā",
+        "timestamp": {
+          "from": 6115,
+          "to": 6620
+        }
+      },
+      {
+        "id": 10044,
+        "position": 5,
+        "char_type": "word",
+        "text": "تَنَـٰجَيْتُمْ",
+        "text_indopak": "تَنَاجَيۡتُمۡ",
+        "translation": "you hold secret counsel",
+        "transliteration": "tanājaytum",
+        "timestamp": {
+          "from": 6620,
+          "to": 7868
+        }
+      },
+      {
+        "id": 10045,
+        "position": 6,
+        "char_type": "word",
+        "text": "فَلَا",
+        "text_indopak": "فَلَا",
+        "translation": "then (do) not",
+        "transliteration": "falā",
+        "timestamp": {
+          "from": 7868,
+          "to": 8601
+        }
+      },
+      {
+        "id": 10046,
+        "position": 7,
+        "char_type": "word",
+        "text": "تَتَنَـٰجَوْا۟",
+        "text_indopak": "تَـتَـنَاجَوۡا",
+        "translation": "hold secret counsel",
+        "transliteration": "tatanājaw",
+        "timestamp": {
+          "from": 8601,
+          "to": 9798
+        }
+      },
+      {
+        "id": 10047,
+        "position": 8,
+        "char_type": "word",
+        "text": "بِٱلْإِثْمِ",
+        "text_indopak": "بِالۡاِثۡمِ",
+        "translation": "for sin",
+        "transliteration": "bil-ith'mi",
+        "timestamp": {
+          "from": 9798,
+          "to": 10846
+        }
+      },
+      {
+        "id": 10048,
+        "position": 9,
+        "char_type": "word",
+        "text": "وَٱلْعُدْوَٰنِ",
+        "text_indopak": "وَالۡعُدۡوَانِ",
+        "translation": "and aggression",
+        "transliteration": "wal-ʿud'wāni",
+        "timestamp": {
+          "from": 10846,
+          "to": 12188
+        }
+      },
+      {
+        "id": 10049,
+        "position": 10,
+        "char_type": "word",
+        "text": "وَمَعْصِيَتِ",
+        "text_indopak": "وَمَعۡصِيَتِ",
+        "translation": "and disobedience",
+        "transliteration": "wamaʿṣiyati",
+        "timestamp": {
+          "from": 12188,
+          "to": 13309
+        }
+      },
+      {
+        "id": 10050,
+        "position": 11,
+        "char_type": "word",
+        "text": "ٱلرَّسُولِ",
+        "text_indopak": "الرَّسُوۡلِ",
+        "translation": "(to) the Messenger",
+        "transliteration": "l-rasūli",
+        "timestamp": {
+          "from": 13309,
+          "to": 14391
+        }
+      },
+      {
+        "id": 10051,
+        "position": 12,
+        "char_type": "word",
+        "text": "وَتَنَـٰجَوْا۟",
+        "text_indopak": "وَتَنَاجَوۡا",
+        "translation": "but hold secret counsel",
+        "transliteration": "watanājaw",
+        "timestamp": {
+          "from": 14391,
+          "to": 15629
+        }
+      },
+      {
+        "id": 10052,
+        "position": 13,
+        "char_type": "word",
+        "text": "بِٱلْبِرِّ",
+        "text_indopak": "بِالۡبِرِّ",
+        "translation": "for righteousness",
+        "transliteration": "bil-biri",
+        "timestamp": {
+          "from": 15629,
+          "to": 16691
+        }
+      },
+      {
+        "id": 10053,
+        "position": 14,
+        "char_type": "word",
+        "text": "وَٱلتَّقْوَىٰ ۖ",
+        "text_indopak": "وَالتَّقۡوٰى​ؕ",
+        "translation": "and piety",
+        "transliteration": "wal-taqwā",
+        "timestamp": {
+          "from": 16691,
+          "to": 18089
+        }
+      },
+      {
+        "id": 10055,
+        "position": 15,
+        "char_type": "word",
+        "text": "وَٱتَّقُوا۟",
+        "text_indopak": "وَاتَّقُوا",
+        "translation": "And fear",
+        "transliteration": "wa-ittaqū",
+        "timestamp": {
+          "from": 18089,
+          "to": 19275
+        }
+      },
+      {
+        "id": 10056,
+        "position": 16,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 19275,
+          "to": 19725
+        }
+      },
+      {
+        "id": 10057,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلَّذِىٓ",
+        "text_indopak": "الَّذِىۡۤ",
+        "translation": "the One Who",
+        "transliteration": "alladhī",
+        "timestamp": {
+          "from": 19725,
+          "to": 21643
+        }
+      },
+      {
+        "id": 10058,
+        "position": 18,
+        "char_type": "word",
+        "text": "إِلَيْهِ",
+        "text_indopak": "اِلَيۡهِ",
+        "translation": "to Him",
+        "transliteration": "ilayhi",
+        "timestamp": {
+          "from": 21643,
+          "to": 22187
+        }
+      },
+      {
+        "id": 10059,
+        "position": 19,
+        "char_type": "word",
+        "text": "تُحْشَرُونَ",
+        "text_indopak": "تُحۡشَرُوۡنَ‏",
+        "translation": "you will be gathered",
+        "transliteration": "tuḥ'sharūna",
+        "timestamp": {
+          "from": 22187,
+          "to": 24740
+        }
+      },
+      {
+        "id": 10060,
+        "position": 20,
+        "char_type": "end",
+        "text": "٩",
+        "text_indopak": "٩",
+        "translation": "(9)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5114,
+    "verse_key": "58:10",
+    "words": [
+      {
+        "id": 11256,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّمَا",
+        "text_indopak": "اِنَّمَا",
+        "translation": "Only",
+        "transliteration": "innamā",
+        "timestamp": {
+          "from": 0,
+          "to": 1255
+        }
+      },
+      {
+        "id": 11257,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلنَّجْوَىٰ",
+        "text_indopak": "النَّجۡوٰى",
+        "translation": "the secret counsels",
+        "transliteration": "l-najwā",
+        "timestamp": {
+          "from": 1255,
+          "to": 2855
+        }
+      },
+      {
+        "id": 11258,
+        "position": 3,
+        "char_type": "word",
+        "text": "مِنَ",
+        "text_indopak": "مِنَ",
+        "translation": "(are) from",
+        "transliteration": "mina",
+        "timestamp": {
+          "from": 2855,
+          "to": 3175
+        }
+      },
+      {
+        "id": 11259,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلشَّيْطَـٰنِ",
+        "text_indopak": "الشَّيۡطٰنِ",
+        "translation": "the Shaitaan",
+        "transliteration": "l-shayṭāni",
+        "timestamp": {
+          "from": 3175,
+          "to": 4455
+        }
+      },
+      {
+        "id": 11260,
+        "position": 5,
+        "char_type": "word",
+        "text": "لِيَحْزُنَ",
+        "text_indopak": "لِيَحۡزُنَ",
+        "translation": "that he may grieve",
+        "transliteration": "liyaḥzuna",
+        "timestamp": {
+          "from": 4455,
+          "to": 5325
+        }
+      },
+      {
+        "id": 11261,
+        "position": 6,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 5325,
+          "to": 6385
+        }
+      },
+      {
+        "id": 11262,
+        "position": 7,
+        "char_type": "word",
+        "text": "ءَامَنُوا۟",
+        "text_indopak": "اٰمَنُوۡا",
+        "translation": "believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 6385,
+          "to": 7505
+        }
+      },
+      {
+        "id": 11263,
+        "position": 8,
+        "char_type": "word",
+        "text": "وَلَيْسَ",
+        "text_indopak": "وَلَيۡسَ",
+        "translation": "but not",
+        "transliteration": "walaysa",
+        "timestamp": {
+          "from": 7505,
+          "to": 8255
+        }
+      },
+      {
+        "id": 11264,
+        "position": 9,
+        "char_type": "word",
+        "text": "بِضَآرِّهِمْ",
+        "text_indopak": "بِضَآرِّهِمۡ",
+        "translation": "he (can) harm them",
+        "transliteration": "biḍārrihim",
+        "timestamp": {
+          "from": 8255,
+          "to": 12235
+        }
+      },
+      {
+        "id": 11265,
+        "position": 10,
+        "char_type": "word",
+        "text": "شَيْـًٔا",
+        "text_indopak": "شَيۡـًٔـا",
+        "translation": "(in) anything",
+        "transliteration": "shayan",
+        "timestamp": {
+          "from": 12235,
+          "to": 13065
+        }
+      },
+      {
+        "id": 11266,
+        "position": 11,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "except",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 13065,
+          "to": 13805
+        }
+      },
+      {
+        "id": 11267,
+        "position": 12,
+        "char_type": "word",
+        "text": "بِإِذْنِ",
+        "text_indopak": "بِاِذۡنِ",
+        "translation": "by Allah's permission",
+        "transliteration": "bi-idh'ni",
+        "timestamp": {
+          "from": 13805,
+          "to": 14655
+        }
+      },
+      {
+        "id": 11268,
+        "position": 13,
+        "char_type": "word",
+        "text": "ٱللَّهِ ۚ",
+        "text_indopak": "اللّٰهِ​ؕ",
+        "translation": "by Allah's permission",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 14655,
+          "to": 16615
+        }
+      },
+      {
+        "id": 11270,
+        "position": 14,
+        "char_type": "word",
+        "text": "وَعَلَى",
+        "text_indopak": "وَعَلَى",
+        "translation": "And upon",
+        "transliteration": "waʿalā",
+        "timestamp": {
+          "from": 16615,
+          "to": 17675
+        }
+      },
+      {
+        "id": 11271,
+        "position": 15,
+        "char_type": "word",
+        "text": "ٱللَّهِ",
+        "text_indopak": "اللّٰهِ",
+        "translation": "Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 17675,
+          "to": 18465
+        }
+      },
+      {
+        "id": 11272,
+        "position": 16,
+        "char_type": "word",
+        "text": "فَلْيَتَوَكَّلِ",
+        "text_indopak": "فَلۡيَتَوَكَّلِ",
+        "translation": "let put (their) trust",
+        "transliteration": "falyatawakkali",
+        "timestamp": {
+          "from": 18465,
+          "to": 20015
+        }
+      },
+      {
+        "id": 11273,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلْمُؤْمِنُونَ",
+        "text_indopak": "الۡمُؤۡمِنُوۡنَ‏",
+        "translation": "the believers",
+        "transliteration": "l-mu'minūna",
+        "timestamp": {
+          "from": 20015,
+          "to": 23020
+        }
+      },
+      {
+        "id": 11274,
+        "position": 18,
+        "char_type": "end",
+        "text": "١٠",
+        "text_indopak": "١٠",
+        "translation": "(10)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5115,
+    "verse_key": "58:11",
+    "words": [
+      {
+        "id": 12565,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَـٰٓأَيُّهَا",
+        "text_indopak": "يٰۤاَيُّهَا",
+        "translation": "O you who believe",
+        "transliteration": "yāayyuhā",
+        "timestamp": {
+          "from": 0,
+          "to": 2565
+        }
+      },
+      {
+        "id": 12566,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "O you who believe",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 2565,
+          "to": 3555
+        }
+      },
+      {
+        "id": 12567,
+        "position": 3,
+        "char_type": "word",
+        "text": "ءَامَنُوٓا۟",
+        "text_indopak": "اٰمَنُوۡۤا",
+        "translation": "O you who believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 3555,
+          "to": 5895
+        }
+      },
+      {
+        "id": 12568,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِذَا",
+        "text_indopak": "اِذَا",
+        "translation": "When",
+        "transliteration": "idhā",
+        "timestamp": {
+          "from": 5895,
+          "to": 6465
+        }
+      },
+      {
+        "id": 12569,
+        "position": 5,
+        "char_type": "word",
+        "text": "قِيلَ",
+        "text_indopak": "قِيۡلَ",
+        "translation": "it is said",
+        "transliteration": "qīla",
+        "timestamp": {
+          "from": 6465,
+          "to": 7105
+        }
+      },
+      {
+        "id": 12570,
+        "position": 6,
+        "char_type": "word",
+        "text": "لَكُمْ",
+        "text_indopak": "لَـكُمۡ",
+        "translation": "to you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 7105,
+          "to": 7665
+        }
+      },
+      {
+        "id": 12571,
+        "position": 7,
+        "char_type": "word",
+        "text": "تَفَسَّحُوا۟",
+        "text_indopak": "تَفَسَّحُوۡا",
+        "translation": "Make room",
+        "transliteration": "tafassaḥū",
+        "timestamp": {
+          "from": 7665,
+          "to": 8815
+        }
+      },
+      {
+        "id": 12572,
+        "position": 8,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "in",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 8815,
+          "to": 9065
+        }
+      },
+      {
+        "id": 12573,
+        "position": 9,
+        "char_type": "word",
+        "text": "ٱلْمَجَـٰلِسِ",
+        "text_indopak": "الۡمَجٰلِسِ",
+        "translation": "the assemblies",
+        "transliteration": "l-majālisi",
+        "timestamp": {
+          "from": 9065,
+          "to": 10225
+        }
+      },
+      {
+        "id": 12574,
+        "position": 10,
+        "char_type": "word",
+        "text": "فَٱفْسَحُوا۟",
+        "text_indopak": "فَافۡسَحُوۡا",
+        "translation": "then make room",
+        "transliteration": "fa-if'saḥū",
+        "timestamp": {
+          "from": 10225,
+          "to": 11185
+        }
+      },
+      {
+        "id": 12575,
+        "position": 11,
+        "char_type": "word",
+        "text": "يَفْسَحِ",
+        "text_indopak": "يَفۡسَحِ",
+        "translation": "Allah will make room",
+        "transliteration": "yafsaḥi",
+        "timestamp": {
+          "from": 11185,
+          "to": 11995
+        }
+      },
+      {
+        "id": 12576,
+        "position": 12,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah will make room",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 11995,
+          "to": 12735
+        }
+      },
+      {
+        "id": 12577,
+        "position": 13,
+        "char_type": "word",
+        "text": "لَكُمْ ۖ",
+        "text_indopak": "لَـكُمۡ​ ۚ",
+        "translation": "for you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 12735,
+          "to": 13875
+        }
+      },
+      {
+        "id": 12579,
+        "position": 14,
+        "char_type": "word",
+        "text": "وَإِذَا",
+        "text_indopak": "وَاِذَا",
+        "translation": "And when",
+        "transliteration": "wa-idhā",
+        "timestamp": {
+          "from": 13875,
+          "to": 14565
+        }
+      },
+      {
+        "id": 12580,
+        "position": 15,
+        "char_type": "word",
+        "text": "قِيلَ",
+        "text_indopak": "قِيۡلَ",
+        "translation": "it is said",
+        "transliteration": "qīla",
+        "timestamp": {
+          "from": 14565,
+          "to": 15165
+        }
+      },
+      {
+        "id": 12581,
+        "position": 16,
+        "char_type": "word",
+        "text": "ٱنشُزُوا۟",
+        "text_indopak": "انْشُزُوۡا",
+        "translation": "Rise up",
+        "transliteration": "unshuzū",
+        "timestamp": {
+          "from": 15165,
+          "to": 16505
+        }
+      },
+      {
+        "id": 12582,
+        "position": 17,
+        "char_type": "word",
+        "text": "فَٱنشُزُوا۟",
+        "text_indopak": "فَانْشُزُوۡا",
+        "translation": "then rise up",
+        "transliteration": "fa-unshuzū",
+        "timestamp": {
+          "from": 16505,
+          "to": 18015
+        }
+      },
+      {
+        "id": 12583,
+        "position": 18,
+        "char_type": "word",
+        "text": "يَرْفَعِ",
+        "text_indopak": "يَرۡفَعِ",
+        "translation": "Allah will raise",
+        "transliteration": "yarfaʿi",
+        "timestamp": {
+          "from": 18015,
+          "to": 18845
+        }
+      },
+      {
+        "id": 12584,
+        "position": 19,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah will raise",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 18845,
+          "to": 19615
+        }
+      },
+      {
+        "id": 12585,
+        "position": 20,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 19615,
+          "to": 20665
+        }
+      },
+      {
+        "id": 12586,
+        "position": 21,
+        "char_type": "word",
+        "text": "ءَامَنُوا۟",
+        "text_indopak": "اٰمَنُوۡا",
+        "translation": "believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 20665,
+          "to": 21615
+        }
+      },
+      {
+        "id": 12587,
+        "position": 22,
+        "char_type": "word",
+        "text": "مِنكُمْ",
+        "text_indopak": "مِنۡكُمۡ ۙ",
+        "translation": "among you",
+        "transliteration": "minkum",
+        "timestamp": {
+          "from": 21615,
+          "to": 22925
+        }
+      },
+      {
+        "id": 12588,
+        "position": 23,
+        "char_type": "word",
+        "text": "وَٱلَّذِينَ",
+        "text_indopak": "وَالَّذِيۡنَ",
+        "translation": "and those who",
+        "transliteration": "wa-alladhīna",
+        "timestamp": {
+          "from": 22925,
+          "to": 24125
+        }
+      },
+      {
+        "id": 12589,
+        "position": 24,
+        "char_type": "word",
+        "text": "أُوتُوا۟",
+        "text_indopak": "اُوۡتُوا",
+        "translation": "were given",
+        "transliteration": "ūtū",
+        "timestamp": {
+          "from": 24125,
+          "to": 24645
+        }
+      },
+      {
+        "id": 12590,
+        "position": 25,
+        "char_type": "word",
+        "text": "ٱلْعِلْمَ",
+        "text_indopak": "الۡعِلۡمَ",
+        "translation": "the knowledge",
+        "transliteration": "l-ʿil'ma",
+        "timestamp": {
+          "from": 24645,
+          "to": 25375
+        }
+      },
+      {
+        "id": 12591,
+        "position": 26,
+        "char_type": "word",
+        "text": "دَرَجَـٰتٍۢ ۚ",
+        "text_indopak": "دَرَجٰتٍ ​ؕ",
+        "translation": "(in) degrees",
+        "transliteration": "darajātin",
+        "timestamp": {
+          "from": 25375,
+          "to": 28505
+        }
+      },
+      {
+        "id": 12593,
+        "position": 27,
+        "char_type": "word",
+        "text": "وَٱللَّهُ",
+        "text_indopak": "وَاللّٰهُ",
+        "translation": "And Allah",
+        "transliteration": "wal-lahu",
+        "timestamp": {
+          "from": 28505,
+          "to": 29505
+        }
+      },
+      {
+        "id": 12594,
+        "position": 28,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "of what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 29505,
+          "to": 30035
+        }
+      },
+      {
+        "id": 12595,
+        "position": 29,
+        "char_type": "word",
+        "text": "تَعْمَلُونَ",
+        "text_indopak": "تَعۡمَلُوۡنَ",
+        "translation": "you do",
+        "transliteration": "taʿmalūna",
+        "timestamp": {
+          "from": 30035,
+          "to": 31225
+        }
+      },
+      {
+        "id": 12596,
+        "position": 30,
+        "char_type": "word",
+        "text": "خَبِيرٌۭ",
+        "text_indopak": "خَبِيۡرٌ‏",
+        "translation": "(is) All-Aware",
+        "transliteration": "khabīrun",
+        "timestamp": {
+          "from": 31225,
+          "to": 34320
+        }
+      },
+      {
+        "id": 12597,
+        "position": 31,
+        "char_type": "end",
+        "text": "١١",
+        "text_indopak": "١١",
+        "translation": "(11)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5116,
+    "verse_key": "58:12",
+    "words": [
+      {
+        "id": 13897,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَـٰٓأَيُّهَا",
+        "text_indopak": "يٰۤاَيُّهَا",
+        "translation": "O you who believe",
+        "transliteration": "yāayyuhā",
+        "timestamp": {
+          "from": 0,
+          "to": 3135
+        }
+      },
+      {
+        "id": 13898,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "O you who believe",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 3135,
+          "to": 4075
+        }
+      },
+      {
+        "id": 13899,
+        "position": 3,
+        "char_type": "word",
+        "text": "ءَامَنُوٓا۟",
+        "text_indopak": "اٰمَنُوۡۤا",
+        "translation": "O you who believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 4075,
+          "to": 6985
+        }
+      },
+      {
+        "id": 13900,
+        "position": 4,
+        "char_type": "word",
+        "text": "إِذَا",
+        "text_indopak": "اِذَا",
+        "translation": "When",
+        "transliteration": "idhā",
+        "timestamp": {
+          "from": 6985,
+          "to": 7565
+        }
+      },
+      {
+        "id": 13901,
+        "position": 5,
+        "char_type": "word",
+        "text": "نَـٰجَيْتُمُ",
+        "text_indopak": "نَاجَيۡتُمُ",
+        "translation": "you privately consult",
+        "transliteration": "nājaytumu",
+        "timestamp": {
+          "from": 7565,
+          "to": 8785
+        }
+      },
+      {
+        "id": 13902,
+        "position": 6,
+        "char_type": "word",
+        "text": "ٱلرَّسُولَ",
+        "text_indopak": "الرَّسُوۡلَ",
+        "translation": "the Messenger",
+        "transliteration": "l-rasūla",
+        "timestamp": {
+          "from": 8785,
+          "to": 9795
+        }
+      },
+      {
+        "id": 13903,
+        "position": 7,
+        "char_type": "word",
+        "text": "فَقَدِّمُوا۟",
+        "text_indopak": "فَقَدِّمُوۡا",
+        "translation": "then offer",
+        "transliteration": "faqaddimū",
+        "timestamp": {
+          "from": 9795,
+          "to": 10935
+        }
+      },
+      {
+        "id": 13904,
+        "position": 8,
+        "char_type": "word",
+        "text": "بَيْنَ",
+        "text_indopak": "بَيۡنَ",
+        "translation": "before",
+        "transliteration": "bayna",
+        "timestamp": {
+          "from": 10935,
+          "to": 11465
+        }
+      },
+      {
+        "id": 13905,
+        "position": 9,
+        "char_type": "word",
+        "text": "يَدَىْ",
+        "text_indopak": "يَدَىۡ",
+        "translation": "before",
+        "transliteration": "yaday",
+        "timestamp": {
+          "from": 11465,
+          "to": 11885
+        }
+      },
+      {
+        "id": 13906,
+        "position": 10,
+        "char_type": "word",
+        "text": "نَجْوَىٰكُمْ",
+        "text_indopak": "نَجۡوٰٮكُمۡ",
+        "translation": "your private consultation",
+        "transliteration": "najwākum",
+        "timestamp": {
+          "from": 11885,
+          "to": 13245
+        }
+      },
+      {
+        "id": 13907,
+        "position": 11,
+        "char_type": "word",
+        "text": "صَدَقَةًۭ ۚ",
+        "text_indopak": "صَدَقَةً  ​ؕ",
+        "translation": "charity",
+        "transliteration": "ṣadaqatan",
+        "timestamp": {
+          "from": 13245,
+          "to": 14565
+        }
+      },
+      {
+        "id": 13909,
+        "position": 12,
+        "char_type": "word",
+        "text": "ذَٰلِكَ",
+        "text_indopak": "ذٰ لِكَ",
+        "translation": "That",
+        "transliteration": "dhālika",
+        "timestamp": {
+          "from": 14565,
+          "to": 15375
+        }
+      },
+      {
+        "id": 13910,
+        "position": 13,
+        "char_type": "word",
+        "text": "خَيْرٌۭ",
+        "text_indopak": "خَيۡرٌ",
+        "translation": "(is) better",
+        "transliteration": "khayrun",
+        "timestamp": {
+          "from": 15375,
+          "to": 16055
+        }
+      },
+      {
+        "id": 13911,
+        "position": 14,
+        "char_type": "word",
+        "text": "لَّكُمْ",
+        "text_indopak": "لَّكُمۡ",
+        "translation": "for you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 16055,
+          "to": 16795
+        }
+      },
+      {
+        "id": 13912,
+        "position": 15,
+        "char_type": "word",
+        "text": "وَأَطْهَرُ ۚ",
+        "text_indopak": "وَاَطۡهَرُ ​ؕ",
+        "translation": "and purer",
+        "transliteration": "wa-aṭharu",
+        "timestamp": {
+          "from": 16795,
+          "to": 18175
+        }
+      },
+      {
+        "id": 13914,
+        "position": 16,
+        "char_type": "word",
+        "text": "فَإِن",
+        "text_indopak": "فَاِنۡ",
+        "translation": "But if",
+        "transliteration": "fa-in",
+        "timestamp": {
+          "from": 18175,
+          "to": 18665
+        }
+      },
+      {
+        "id": 13915,
+        "position": 17,
+        "char_type": "word",
+        "text": "لَّمْ",
+        "text_indopak": "لَّمۡ",
+        "translation": "not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 18665,
+          "to": 19135
+        }
+      },
+      {
+        "id": 13916,
+        "position": 18,
+        "char_type": "word",
+        "text": "تَجِدُوا۟",
+        "text_indopak": "تَجِدُوۡا",
+        "translation": "you find",
+        "transliteration": "tajidū",
+        "timestamp": {
+          "from": 19135,
+          "to": 19895
+        }
+      },
+      {
+        "id": 13917,
+        "position": 19,
+        "char_type": "word",
+        "text": "فَإِنَّ",
+        "text_indopak": "فَاِنَّ",
+        "translation": "then indeed",
+        "transliteration": "fa-inna",
+        "timestamp": {
+          "from": 19895,
+          "to": 21285
+        }
+      },
+      {
+        "id": 13918,
+        "position": 20,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 21285,
+          "to": 22165
+        }
+      },
+      {
+        "id": 13919,
+        "position": 21,
+        "char_type": "word",
+        "text": "غَفُورٌۭ",
+        "text_indopak": "غَفُوۡرٌ",
+        "translation": "(is) Oft-Forgiving",
+        "transliteration": "ghafūrun",
+        "timestamp": {
+          "from": 22165,
+          "to": 23215
+        }
+      },
+      {
+        "id": 13920,
+        "position": 22,
+        "char_type": "word",
+        "text": "رَّحِيمٌ",
+        "text_indopak": "رَّحِيۡمٌ‏",
+        "translation": "Most Merciful",
+        "transliteration": "raḥīmun",
+        "timestamp": {
+          "from": 23215,
+          "to": 25520
+        }
+      },
+      {
+        "id": 13921,
+        "position": 23,
+        "char_type": "end",
+        "text": "١٢",
+        "text_indopak": "١٢",
+        "translation": "(12)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5117,
+    "verse_key": "58:13",
+    "words": [
+      {
+        "id": 15041,
+        "position": 1,
+        "char_type": "word",
+        "text": "ءَأَشْفَقْتُمْ",
+        "text_indopak": "ءَاَشۡفَقۡتُمۡ",
+        "translation": "Are you afraid",
+        "transliteration": "a-ashfaqtum",
+        "timestamp": {
+          "from": 0,
+          "to": 1295
+        }
+      },
+      {
+        "id": 15042,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَن",
+        "text_indopak": "اَنۡ",
+        "translation": "to",
+        "transliteration": "an",
+        "timestamp": {
+          "from": 1295,
+          "to": 2315
+        }
+      },
+      {
+        "id": 15043,
+        "position": 3,
+        "char_type": "word",
+        "text": "تُقَدِّمُوا۟",
+        "text_indopak": "تُقَدِّمُوۡا",
+        "translation": "offer",
+        "transliteration": "tuqaddimū",
+        "timestamp": {
+          "from": 2315,
+          "to": 3555
+        }
+      },
+      {
+        "id": 15044,
+        "position": 4,
+        "char_type": "word",
+        "text": "بَيْنَ",
+        "text_indopak": "بَيۡنَ",
+        "translation": "before",
+        "transliteration": "bayna",
+        "timestamp": {
+          "from": 3555,
+          "to": 4105
+        }
+      },
+      {
+        "id": 15045,
+        "position": 5,
+        "char_type": "word",
+        "text": "يَدَىْ",
+        "text_indopak": "يَدَىۡ",
+        "translation": "before",
+        "transliteration": "yaday",
+        "timestamp": {
+          "from": 4105,
+          "to": 4545
+        }
+      },
+      {
+        "id": 15046,
+        "position": 6,
+        "char_type": "word",
+        "text": "نَجْوَىٰكُمْ",
+        "text_indopak": "نَجۡوٰٮكُمۡ",
+        "translation": "your private consultation",
+        "transliteration": "najwākum",
+        "timestamp": {
+          "from": 4545,
+          "to": 5895
+        }
+      },
+      {
+        "id": 15047,
+        "position": 7,
+        "char_type": "word",
+        "text": "صَدَقَـٰتٍۢ ۚ",
+        "text_indopak": "صَدَقٰتٍ​ ؕ",
+        "translation": "charities",
+        "transliteration": "ṣadaqātin",
+        "timestamp": {
+          "from": 5895,
+          "to": 8795
+        }
+      },
+      {
+        "id": 15049,
+        "position": 8,
+        "char_type": "word",
+        "text": "فَإِذْ",
+        "text_indopak": "فَاِذۡ",
+        "translation": "Then when",
+        "transliteration": "fa-idh",
+        "timestamp": {
+          "from": 8795,
+          "to": 9365
+        }
+      },
+      {
+        "id": 15050,
+        "position": 9,
+        "char_type": "word",
+        "text": "لَمْ",
+        "text_indopak": "لَمۡ",
+        "translation": "you do not",
+        "transliteration": "lam",
+        "timestamp": {
+          "from": 9365,
+          "to": 9745
+        }
+      },
+      {
+        "id": 15051,
+        "position": 10,
+        "char_type": "word",
+        "text": "تَفْعَلُوا۟",
+        "text_indopak": "تَفۡعَلُوۡا",
+        "translation": "you do not",
+        "transliteration": "tafʿalū",
+        "timestamp": {
+          "from": 9745,
+          "to": 10795
+        }
+      },
+      {
+        "id": 15052,
+        "position": 11,
+        "char_type": "word",
+        "text": "وَتَابَ",
+        "text_indopak": "وَتَابَ",
+        "translation": "and Allah has forgiven",
+        "transliteration": "watāba",
+        "timestamp": {
+          "from": 10795,
+          "to": 11505
+        }
+      },
+      {
+        "id": 15053,
+        "position": 12,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "and Allah has forgiven",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 11505,
+          "to": 12315
+        }
+      },
+      {
+        "id": 15054,
+        "position": 13,
+        "char_type": "word",
+        "text": "عَلَيْكُمْ",
+        "text_indopak": "عَلَيۡكُمۡ",
+        "translation": "you",
+        "transliteration": "ʿalaykum",
+        "timestamp": {
+          "from": 12315,
+          "to": 13305
+        }
+      },
+      {
+        "id": 15055,
+        "position": 14,
+        "char_type": "word",
+        "text": "فَأَقِيمُوا۟",
+        "text_indopak": "فَاَقِيۡمُوا",
+        "translation": "then establish",
+        "transliteration": "fa-aqīmū",
+        "timestamp": {
+          "from": 13305,
+          "to": 14295
+        }
+      },
+      {
+        "id": 15056,
+        "position": 15,
+        "char_type": "word",
+        "text": "ٱلصَّلَوٰةَ",
+        "text_indopak": "الصَّلٰوةَ",
+        "translation": "the prayer",
+        "transliteration": "l-ṣalata",
+        "timestamp": {
+          "from": 14295,
+          "to": 15375
+        }
+      },
+      {
+        "id": 15057,
+        "position": 16,
+        "char_type": "word",
+        "text": "وَءَاتُوا۟",
+        "text_indopak": "وَ اٰتُوا",
+        "translation": "and give",
+        "transliteration": "waātū",
+        "timestamp": {
+          "from": 15375,
+          "to": 16145
+        }
+      },
+      {
+        "id": 15058,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلزَّكَوٰةَ",
+        "text_indopak": "الزَّكٰوةَ",
+        "translation": "the zakah",
+        "transliteration": "l-zakata",
+        "timestamp": {
+          "from": 16145,
+          "to": 17175
+        }
+      },
+      {
+        "id": 15059,
+        "position": 18,
+        "char_type": "word",
+        "text": "وَأَطِيعُوا۟",
+        "text_indopak": "وَاَطِيۡعُوا",
+        "translation": "and obey",
+        "transliteration": "wa-aṭīʿū",
+        "timestamp": {
+          "from": 17175,
+          "to": 18205
+        }
+      },
+      {
+        "id": 15060,
+        "position": 19,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 18205,
+          "to": 19005
+        }
+      },
+      {
+        "id": 15061,
+        "position": 20,
+        "char_type": "word",
+        "text": "وَرَسُولَهُۥ ۚ",
+        "text_indopak": "وَرَسُوۡلَهٗ​ ؕ",
+        "translation": "and His Messenger",
+        "transliteration": "warasūlahu",
+        "timestamp": {
+          "from": 19005,
+          "to": 20695
+        }
+      },
+      {
+        "id": 15063,
+        "position": 21,
+        "char_type": "word",
+        "text": "وَٱللَّهُ",
+        "text_indopak": "وَاللّٰهُ",
+        "translation": "And Allah",
+        "transliteration": "wal-lahu",
+        "timestamp": {
+          "from": 20695,
+          "to": 21645
+        }
+      },
+      {
+        "id": 15064,
+        "position": 22,
+        "char_type": "word",
+        "text": "خَبِيرٌۢ",
+        "text_indopak": "خَبِيۡرٌۢ",
+        "translation": "(is) All-Aware",
+        "transliteration": "khabīrun",
+        "timestamp": {
+          "from": 21645,
+          "to": 23375
+        }
+      },
+      {
+        "id": 15065,
+        "position": 23,
+        "char_type": "word",
+        "text": "بِمَا",
+        "text_indopak": "بِمَا",
+        "translation": "of what",
+        "transliteration": "bimā",
+        "timestamp": {
+          "from": 23375,
+          "to": 24025
+        }
+      },
+      {
+        "id": 15066,
+        "position": 24,
+        "char_type": "word",
+        "text": "تَعْمَلُونَ",
+        "text_indopak": "تَعۡمَلُوۡنَ‏",
+        "translation": "you do",
+        "transliteration": "taʿmalūna",
+        "timestamp": {
+          "from": 24025,
+          "to": 26630
+        }
+      },
+      {
+        "id": 15067,
+        "position": 25,
+        "char_type": "end",
+        "text": "١٣",
+        "text_indopak": "١٣",
+        "translation": "(13)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5118,
+    "verse_key": "58:14",
+    "words": [
+      {
+        "id": 16110,
+        "position": 1,
+        "char_type": "word",
+        "text": "۞ أَلَمْ",
+        "text_indopak": "۞ اَلَمۡ",
+        "translation": "Do not",
+        "transliteration": "alam",
+        "timestamp": {
+          "from": 0,
+          "to": 425
+        }
+      },
+      {
+        "id": 16111,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَرَ",
+        "text_indopak": "تَرَ",
+        "translation": "you see",
+        "transliteration": "tara",
+        "timestamp": {
+          "from": 425,
+          "to": 875
+        }
+      },
+      {
+        "id": 16112,
+        "position": 3,
+        "char_type": "word",
+        "text": "إِلَى",
+        "text_indopak": "اِلَى",
+        "translation": "[to]",
+        "transliteration": "ilā",
+        "timestamp": {
+          "from": 875,
+          "to": 1205
+        }
+      },
+      {
+        "id": 16113,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 1205,
+          "to": 2195
+        }
+      },
+      {
+        "id": 16114,
+        "position": 5,
+        "char_type": "word",
+        "text": "تَوَلَّوْا۟",
+        "text_indopak": "تَوَلَّوۡا",
+        "translation": "take as allies",
+        "transliteration": "tawallaw",
+        "timestamp": {
+          "from": 2195,
+          "to": 3205
+        }
+      },
+      {
+        "id": 16115,
+        "position": 6,
+        "char_type": "word",
+        "text": "قَوْمًا",
+        "text_indopak": "قَوۡمًا",
+        "translation": "a people",
+        "transliteration": "qawman",
+        "timestamp": {
+          "from": 3205,
+          "to": 3995
+        }
+      },
+      {
+        "id": 16116,
+        "position": 7,
+        "char_type": "word",
+        "text": "غَضِبَ",
+        "text_indopak": "غَضِبَ",
+        "translation": "wrath",
+        "transliteration": "ghaḍiba",
+        "timestamp": {
+          "from": 3995,
+          "to": 4575
+        }
+      },
+      {
+        "id": 16117,
+        "position": 8,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "(of) Allah",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 4575,
+          "to": 5435
+        }
+      },
+      {
+        "id": 16118,
+        "position": 9,
+        "char_type": "word",
+        "text": "عَلَيْهِم",
+        "text_indopak": "عَلَيۡهِمؕۡ",
+        "translation": "(is) upon them",
+        "transliteration": "ʿalayhim",
+        "timestamp": {
+          "from": 5435,
+          "to": 6355
+        }
+      },
+      {
+        "id": 16119,
+        "position": 10,
+        "char_type": "word",
+        "text": "مَّا",
+        "text_indopak": "مَّا",
+        "translation": "They (are) not",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 6355,
+          "to": 7625
+        }
+      },
+      {
+        "id": 16120,
+        "position": 11,
+        "char_type": "word",
+        "text": "هُم",
+        "text_indopak": "هُمۡ",
+        "translation": "They (are) not",
+        "transliteration": "hum",
+        "timestamp": {
+          "from": 7625,
+          "to": 8125
+        }
+      },
+      {
+        "id": 16121,
+        "position": 12,
+        "char_type": "word",
+        "text": "مِّنكُمْ",
+        "text_indopak": "مِّنۡكُمۡ",
+        "translation": "of you",
+        "transliteration": "minkum",
+        "timestamp": {
+          "from": 8125,
+          "to": 10095
+        }
+      },
+      {
+        "id": 16122,
+        "position": 13,
+        "char_type": "word",
+        "text": "وَلَا",
+        "text_indopak": "وَلَا",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 10095,
+          "to": 10675
+        }
+      },
+      {
+        "id": 16123,
+        "position": 14,
+        "char_type": "word",
+        "text": "مِنْهُمْ",
+        "text_indopak": "مِنۡهُمۡۙ",
+        "translation": "of them",
+        "transliteration": "min'hum",
+        "timestamp": {
+          "from": 10675,
+          "to": 11475
+        }
+      },
+      {
+        "id": 16124,
+        "position": 15,
+        "char_type": "word",
+        "text": "وَيَحْلِفُونَ",
+        "text_indopak": "وَيَحۡلِفُوۡنَ",
+        "translation": "and they swear",
+        "transliteration": "wayaḥlifūna",
+        "timestamp": {
+          "from": 11475,
+          "to": 12845
+        }
+      },
+      {
+        "id": 16125,
+        "position": 16,
+        "char_type": "word",
+        "text": "عَلَى",
+        "text_indopak": "عَلَى",
+        "translation": "to",
+        "transliteration": "ʿalā",
+        "timestamp": {
+          "from": 12845,
+          "to": 13215
+        }
+      },
+      {
+        "id": 16126,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلْكَذِبِ",
+        "text_indopak": "الۡكَذِبِ",
+        "translation": "the lie",
+        "transliteration": "l-kadhibi",
+        "timestamp": {
+          "from": 13215,
+          "to": 14085
+        }
+      },
+      {
+        "id": 16127,
+        "position": 18,
+        "char_type": "word",
+        "text": "وَهُمْ",
+        "text_indopak": "وَهُمۡ",
+        "translation": "while they",
+        "transliteration": "wahum",
+        "timestamp": {
+          "from": 14085,
+          "to": 14685
+        }
+      },
+      {
+        "id": 16128,
+        "position": 19,
+        "char_type": "word",
+        "text": "يَعْلَمُونَ",
+        "text_indopak": "يَعۡلَمُوۡنَ",
+        "translation": "know",
+        "transliteration": "yaʿlamūna",
+        "timestamp": {
+          "from": 14685,
+          "to": 17380
+        }
+      },
+      {
+        "id": 16129,
+        "position": 20,
+        "char_type": "end",
+        "text": "١٤",
+        "text_indopak": "١٤",
+        "translation": "(14)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5119,
+    "verse_key": "58:15",
+    "words": [
+      {
+        "id": 17326,
+        "position": 1,
+        "char_type": "word",
+        "text": "أَعَدَّ",
+        "text_indopak": "اَعَدَّ",
+        "translation": "Allah has prepared",
+        "transliteration": "aʿadda",
+        "timestamp": {
+          "from": 0,
+          "to": 675
+        }
+      },
+      {
+        "id": 17327,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah has prepared",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 675,
+          "to": 1555
+        }
+      },
+      {
+        "id": 17328,
+        "position": 3,
+        "char_type": "word",
+        "text": "لَهُمْ",
+        "text_indopak": "لَهُمۡ",
+        "translation": "for them",
+        "transliteration": "lahum",
+        "timestamp": {
+          "from": 1555,
+          "to": 2095
+        }
+      },
+      {
+        "id": 17329,
+        "position": 4,
+        "char_type": "word",
+        "text": "عَذَابًۭا",
+        "text_indopak": "عَذَابًا",
+        "translation": "a punishment",
+        "transliteration": "ʿadhāban",
+        "timestamp": {
+          "from": 2095,
+          "to": 3835
+        }
+      },
+      {
+        "id": 17330,
+        "position": 5,
+        "char_type": "word",
+        "text": "شَدِيدًا ۖ",
+        "text_indopak": "شَدِيۡدًا​ ؕ",
+        "translation": "severe",
+        "transliteration": "shadīdan",
+        "timestamp": {
+          "from": 3835,
+          "to": 5085
+        }
+      },
+      {
+        "id": 17332,
+        "position": 6,
+        "char_type": "word",
+        "text": "إِنَّهُمْ",
+        "text_indopak": "اِنَّهُمۡ",
+        "translation": "Indeed, [they]",
+        "transliteration": "innahum",
+        "timestamp": {
+          "from": 5085,
+          "to": 6915
+        }
+      },
+      {
+        "id": 17333,
+        "position": 7,
+        "char_type": "word",
+        "text": "سَآءَ",
+        "text_indopak": "سَآءَ",
+        "translation": "evil is",
+        "transliteration": "sāa",
+        "timestamp": {
+          "from": 6915,
+          "to": 9015
+        }
+      },
+      {
+        "id": 17334,
+        "position": 8,
+        "char_type": "word",
+        "text": "مَا",
+        "text_indopak": "مَا",
+        "translation": "what",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 9015,
+          "to": 9285
+        }
+      },
+      {
+        "id": 17335,
+        "position": 9,
+        "char_type": "word",
+        "text": "كَانُوا۟",
+        "text_indopak": "كَانُوۡا",
+        "translation": "they used to",
+        "transliteration": "kānū",
+        "timestamp": {
+          "from": 9285,
+          "to": 10225
+        }
+      },
+      {
+        "id": 17336,
+        "position": 10,
+        "char_type": "word",
+        "text": "يَعْمَلُونَ",
+        "text_indopak": "يَعۡمَلُوۡنَ‏",
+        "translation": "do",
+        "transliteration": "yaʿmalūna",
+        "timestamp": {
+          "from": 10225,
+          "to": 12860
+        }
+      },
+      {
+        "id": 17337,
+        "position": 11,
+        "char_type": "end",
+        "text": "١٥",
+        "text_indopak": "١٥",
+        "translation": "(15)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5120,
+    "verse_key": "58:16",
+    "words": [
+      {
+        "id": 18414,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱتَّخَذُوٓا۟",
+        "text_indopak": "اِتَّخَذُوۡۤا",
+        "translation": "They have taken",
+        "transliteration": "ittakhadhū",
+        "timestamp": {
+          "from": 0,
+          "to": 2495
+        }
+      },
+      {
+        "id": 18415,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَيْمَـٰنَهُمْ",
+        "text_indopak": "اَيۡمَانَهُمۡ",
+        "translation": "their oaths",
+        "transliteration": "aymānahum",
+        "timestamp": {
+          "from": 2495,
+          "to": 3925
+        }
+      },
+      {
+        "id": 18416,
+        "position": 3,
+        "char_type": "word",
+        "text": "جُنَّةًۭ",
+        "text_indopak": "جُنَّةً",
+        "translation": "(as) a cover",
+        "transliteration": "junnatan",
+        "timestamp": {
+          "from": 3925,
+          "to": 6165
+        }
+      },
+      {
+        "id": 18417,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَصَدُّوا۟",
+        "text_indopak": "فَصَدُّوۡا",
+        "translation": "so they hinder",
+        "transliteration": "faṣaddū",
+        "timestamp": {
+          "from": 6165,
+          "to": 7165
+        }
+      },
+      {
+        "id": 18418,
+        "position": 5,
+        "char_type": "word",
+        "text": "عَن",
+        "text_indopak": "عَنۡ",
+        "translation": "from",
+        "transliteration": "ʿan",
+        "timestamp": {
+          "from": 7165,
+          "to": 8135
+        }
+      },
+      {
+        "id": 18419,
+        "position": 6,
+        "char_type": "word",
+        "text": "سَبِيلِ",
+        "text_indopak": "سَبِيۡلِ",
+        "translation": "(the) way of Allah",
+        "transliteration": "sabīli",
+        "timestamp": {
+          "from": 8135,
+          "to": 9355
+        }
+      },
+      {
+        "id": 18420,
+        "position": 7,
+        "char_type": "word",
+        "text": "ٱللَّهِ",
+        "text_indopak": "اللّٰهِ",
+        "translation": "(the) way of Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 9355,
+          "to": 9895
+        }
+      },
+      {
+        "id": 18421,
+        "position": 8,
+        "char_type": "word",
+        "text": "فَلَهُمْ",
+        "text_indopak": "فَلَهُمۡ",
+        "translation": "so for them",
+        "transliteration": "falahum",
+        "timestamp": {
+          "from": 9895,
+          "to": 10715
+        }
+      },
+      {
+        "id": 18422,
+        "position": 9,
+        "char_type": "word",
+        "text": "عَذَابٌۭ",
+        "text_indopak": "عَذَابٌ",
+        "translation": "(is) a punishment",
+        "transliteration": "ʿadhābun",
+        "timestamp": {
+          "from": 10715,
+          "to": 11565
+        }
+      },
+      {
+        "id": 18423,
+        "position": 10,
+        "char_type": "word",
+        "text": "مُّهِينٌۭ",
+        "text_indopak": "مُّهِيۡنٌ‏",
+        "translation": "humiliating",
+        "transliteration": "muhīnun",
+        "timestamp": {
+          "from": 11565,
+          "to": 14540
+        }
+      },
+      {
+        "id": 18424,
+        "position": 11,
+        "char_type": "end",
+        "text": "١٦",
+        "text_indopak": "١٦",
+        "translation": "(16)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5121,
+    "verse_key": "58:17",
+    "words": [
+      {
+        "id": 19416,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَّن",
+        "text_indopak": "لَنۡ",
+        "translation": "Never",
+        "transliteration": "lan",
+        "timestamp": {
+          "from": 0,
+          "to": 1225
+        }
+      },
+      {
+        "id": 19417,
+        "position": 2,
+        "char_type": "word",
+        "text": "تُغْنِىَ",
+        "text_indopak": "تُغۡنِىَ",
+        "translation": "will avail",
+        "transliteration": "tugh'niya",
+        "timestamp": {
+          "from": 1225,
+          "to": 1975
+        }
+      },
+      {
+        "id": 19418,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَنْهُمْ",
+        "text_indopak": "عَنۡهُمۡ",
+        "translation": "them",
+        "transliteration": "ʿanhum",
+        "timestamp": {
+          "from": 1975,
+          "to": 2815
+        }
+      },
+      {
+        "id": 19419,
+        "position": 4,
+        "char_type": "word",
+        "text": "أَمْوَٰلُهُمْ",
+        "text_indopak": "اَمۡوَالُهُمۡ",
+        "translation": "their wealth",
+        "transliteration": "amwāluhum",
+        "timestamp": {
+          "from": 2815,
+          "to": 4215
+        }
+      },
+      {
+        "id": 19420,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَلَآ",
+        "text_indopak": "وَلَاۤ",
+        "translation": "and not",
+        "transliteration": "walā",
+        "timestamp": {
+          "from": 4215,
+          "to": 6095
+        }
+      },
+      {
+        "id": 19421,
+        "position": 6,
+        "char_type": "word",
+        "text": "أَوْلَـٰدُهُم",
+        "text_indopak": "اَوۡلَادُهُمۡ",
+        "translation": "their children",
+        "transliteration": "awlāduhum",
+        "timestamp": {
+          "from": 6095,
+          "to": 7385
+        }
+      },
+      {
+        "id": 19422,
+        "position": 7,
+        "char_type": "word",
+        "text": "مِّنَ",
+        "text_indopak": "مِّنَ",
+        "translation": "against",
+        "transliteration": "mina",
+        "timestamp": {
+          "from": 7385,
+          "to": 8495
+        }
+      },
+      {
+        "id": 19423,
+        "position": 8,
+        "char_type": "word",
+        "text": "ٱللَّهِ",
+        "text_indopak": "اللّٰهِ",
+        "translation": "Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 8495,
+          "to": 9315
+        }
+      },
+      {
+        "id": 19424,
+        "position": 9,
+        "char_type": "word",
+        "text": "شَيْـًٔا ۚ",
+        "text_indopak": "شَيۡــًٔـا​ ؕ",
+        "translation": "(in) anything",
+        "transliteration": "shayan",
+        "timestamp": {
+          "from": 9315,
+          "to": 10735
+        }
+      },
+      {
+        "id": 19426,
+        "position": 10,
+        "char_type": "word",
+        "text": "أُو۟لَـٰٓئِكَ",
+        "text_indopak": "اُولٰٓٮِٕكَ",
+        "translation": "Those",
+        "transliteration": "ulāika",
+        "timestamp": {
+          "from": 10735,
+          "to": 13035
+        }
+      },
+      {
+        "id": 19427,
+        "position": 11,
+        "char_type": "word",
+        "text": "أَصْحَـٰبُ",
+        "text_indopak": "اَصۡحٰبُ",
+        "translation": "(will be) companions",
+        "transliteration": "aṣḥābu",
+        "timestamp": {
+          "from": 13035,
+          "to": 13925
+        }
+      },
+      {
+        "id": 19428,
+        "position": 12,
+        "char_type": "word",
+        "text": "ٱلنَّارِ ۖ",
+        "text_indopak": "النَّارِ​ ؕ",
+        "translation": "(of) the Fire",
+        "transliteration": "l-nāri",
+        "timestamp": {
+          "from": 13925,
+          "to": 15415
+        }
+      },
+      {
+        "id": 19430,
+        "position": 13,
+        "char_type": "word",
+        "text": "هُمْ",
+        "text_indopak": "هُمۡ",
+        "translation": "they",
+        "transliteration": "hum",
+        "timestamp": {
+          "from": 15415,
+          "to": 15795
+        }
+      },
+      {
+        "id": 19431,
+        "position": 14,
+        "char_type": "word",
+        "text": "فِيهَا",
+        "text_indopak": "فِيۡهَا",
+        "translation": "in it",
+        "transliteration": "fīhā",
+        "timestamp": {
+          "from": 15795,
+          "to": 16555
+        }
+      },
+      {
+        "id": 19432,
+        "position": 15,
+        "char_type": "word",
+        "text": "خَـٰلِدُونَ",
+        "text_indopak": "خٰلِدُوۡنَ‏",
+        "translation": "will abide forever",
+        "transliteration": "khālidūna",
+        "timestamp": {
+          "from": 16555,
+          "to": 20150
+        }
+      },
+      {
+        "id": 19433,
+        "position": 16,
+        "char_type": "end",
+        "text": "١٧",
+        "text_indopak": "١٧",
+        "translation": "(17)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5122,
+    "verse_key": "58:18",
+    "words": [
+      {
+        "id": 20479,
+        "position": 1,
+        "char_type": "word",
+        "text": "يَوْمَ",
+        "text_indopak": "يَوۡمَ",
+        "translation": "(On the) Day",
+        "transliteration": "yawma",
+        "timestamp": {
+          "from": 0,
+          "to": 575
+        }
+      },
+      {
+        "id": 20480,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَبْعَثُهُمُ",
+        "text_indopak": "يَبۡعَثُهُمُ",
+        "translation": "Allah will raise them",
+        "transliteration": "yabʿathuhumu",
+        "timestamp": {
+          "from": 575,
+          "to": 1775
+        }
+      },
+      {
+        "id": 20481,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah will raise them",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 1775,
+          "to": 2585
+        }
+      },
+      {
+        "id": 20482,
+        "position": 4,
+        "char_type": "word",
+        "text": "جَمِيعًۭا",
+        "text_indopak": "جَمِيۡعًا",
+        "translation": "all",
+        "transliteration": "jamīʿan",
+        "timestamp": {
+          "from": 2585,
+          "to": 4205
+        }
+      },
+      {
+        "id": 20483,
+        "position": 5,
+        "char_type": "word",
+        "text": "فَيَحْلِفُونَ",
+        "text_indopak": "فَيَحۡلِفُوۡنَ",
+        "translation": "then they will swear",
+        "transliteration": "fayaḥlifūna",
+        "timestamp": {
+          "from": 4205,
+          "to": 5605
+        }
+      },
+      {
+        "id": 20484,
+        "position": 6,
+        "char_type": "word",
+        "text": "لَهُۥ",
+        "text_indopak": "لَهٗ",
+        "translation": "to Him",
+        "transliteration": "lahu",
+        "timestamp": {
+          "from": 5605,
+          "to": 6195
+        }
+      },
+      {
+        "id": 20485,
+        "position": 7,
+        "char_type": "word",
+        "text": "كَمَا",
+        "text_indopak": "كَمَا",
+        "translation": "as",
+        "transliteration": "kamā",
+        "timestamp": {
+          "from": 6195,
+          "to": 6865
+        }
+      },
+      {
+        "id": 20486,
+        "position": 8,
+        "char_type": "word",
+        "text": "يَحْلِفُونَ",
+        "text_indopak": "يَحۡلِفُوۡنَ",
+        "translation": "they swear",
+        "transliteration": "yaḥlifūna",
+        "timestamp": {
+          "from": 6865,
+          "to": 8005
+        }
+      },
+      {
+        "id": 20487,
+        "position": 9,
+        "char_type": "word",
+        "text": "لَكُمْ ۖ",
+        "text_indopak": "لَـكُمۡ​",
+        "translation": "to you",
+        "transliteration": "lakum",
+        "timestamp": {
+          "from": 8005,
+          "to": 9255
+        }
+      },
+      {
+        "id": 20489,
+        "position": 10,
+        "char_type": "word",
+        "text": "وَيَحْسَبُونَ",
+        "text_indopak": "وَيَحۡسَبُوۡنَ",
+        "translation": "And they think",
+        "transliteration": "wayaḥsabūna",
+        "timestamp": {
+          "from": 9255,
+          "to": 10525
+        }
+      },
+      {
+        "id": 20490,
+        "position": 11,
+        "char_type": "word",
+        "text": "أَنَّهُمْ",
+        "text_indopak": "اَنَّهُمۡ",
+        "translation": "that they",
+        "transliteration": "annahum",
+        "timestamp": {
+          "from": 10525,
+          "to": 12365
+        }
+      },
+      {
+        "id": 20491,
+        "position": 12,
+        "char_type": "word",
+        "text": "عَلَىٰ",
+        "text_indopak": "عَلٰى",
+        "translation": "(are) on",
+        "transliteration": "ʿalā",
+        "timestamp": {
+          "from": 12365,
+          "to": 13005
+        }
+      },
+      {
+        "id": 20492,
+        "position": 13,
+        "char_type": "word",
+        "text": "شَىْءٍ ۚ",
+        "text_indopak": "شَىۡءٍ​ ؕ",
+        "translation": "something",
+        "transliteration": "shayin",
+        "timestamp": {
+          "from": 13005,
+          "to": 15275
+        }
+      },
+      {
+        "id": 20494,
+        "position": 14,
+        "char_type": "word",
+        "text": "أَلَآ",
+        "text_indopak": "اَلَاۤ",
+        "translation": "No doubt",
+        "transliteration": "alā",
+        "timestamp": {
+          "from": 15275,
+          "to": 17705
+        }
+      },
+      {
+        "id": 20495,
+        "position": 15,
+        "char_type": "word",
+        "text": "إِنَّهُمْ",
+        "text_indopak": "اِنَّهُمۡ",
+        "translation": "Indeed, they",
+        "transliteration": "innahum",
+        "timestamp": {
+          "from": 17705,
+          "to": 19265
+        }
+      },
+      {
+        "id": 20496,
+        "position": 16,
+        "char_type": "word",
+        "text": "هُمُ",
+        "text_indopak": "هُمُ",
+        "translation": "[they]",
+        "transliteration": "humu",
+        "timestamp": {
+          "from": 19265,
+          "to": 19685
+        }
+      },
+      {
+        "id": 20497,
+        "position": 17,
+        "char_type": "word",
+        "text": "ٱلْكَـٰذِبُونَ",
+        "text_indopak": "الۡكٰذِبُوۡنَ‏ ﻿﻿",
+        "translation": "(are) the liars",
+        "transliteration": "l-kādhibūna",
+        "timestamp": {
+          "from": 19685,
+          "to": 22770
+        }
+      },
+      {
+        "id": 20498,
+        "position": 18,
+        "char_type": "end",
+        "text": "١٨",
+        "text_indopak": "١٨",
+        "translation": "(18)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5123,
+    "verse_key": "58:19",
+    "words": [
+      {
+        "id": 21829,
+        "position": 1,
+        "char_type": "word",
+        "text": "ٱسْتَحْوَذَ",
+        "text_indopak": "اِسۡتَحۡوَذَ",
+        "translation": "Has overcome",
+        "transliteration": "is'taḥwadha",
+        "timestamp": {
+          "from": 0,
+          "to": 1095
+        }
+      },
+      {
+        "id": 21830,
+        "position": 2,
+        "char_type": "word",
+        "text": "عَلَيْهِمُ",
+        "text_indopak": "عَلَيۡهِمُ",
+        "translation": "them",
+        "transliteration": "ʿalayhimu",
+        "timestamp": {
+          "from": 1095,
+          "to": 2095
+        }
+      },
+      {
+        "id": 21831,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلشَّيْطَـٰنُ",
+        "text_indopak": "الشَّيۡطٰنُ",
+        "translation": "the Shaitaan",
+        "transliteration": "l-shayṭānu",
+        "timestamp": {
+          "from": 2095,
+          "to": 3355
+        }
+      },
+      {
+        "id": 21832,
+        "position": 4,
+        "char_type": "word",
+        "text": "فَأَنسَىٰهُمْ",
+        "text_indopak": "فَاَنۡسٰٮهُمۡ",
+        "translation": "so he made them forget",
+        "transliteration": "fa-ansāhum",
+        "timestamp": {
+          "from": 3355,
+          "to": 5605
+        }
+      },
+      {
+        "id": 21833,
+        "position": 5,
+        "char_type": "word",
+        "text": "ذِكْرَ",
+        "text_indopak": "ذِكۡرَ",
+        "translation": "(the) remembrance",
+        "transliteration": "dhik'ra",
+        "timestamp": {
+          "from": 5605,
+          "to": 6085
+        }
+      },
+      {
+        "id": 21834,
+        "position": 6,
+        "char_type": "word",
+        "text": "ٱللَّهِ ۚ",
+        "text_indopak": "اللّٰهِ​ؕ",
+        "translation": "(of) Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 6085,
+          "to": 8995
+        }
+      },
+      {
+        "id": 21836,
+        "position": 7,
+        "char_type": "word",
+        "text": "أُو۟لَـٰٓئِكَ",
+        "text_indopak": "اُولٰٓٮِٕكَ",
+        "translation": "Those",
+        "transliteration": "ulāika",
+        "timestamp": {
+          "from": 8995,
+          "to": 11835
+        }
+      },
+      {
+        "id": 21837,
+        "position": 8,
+        "char_type": "word",
+        "text": "حِزْبُ",
+        "text_indopak": "حِزۡبُ",
+        "translation": "(are the) party",
+        "transliteration": "ḥiz'bu",
+        "timestamp": {
+          "from": 11835,
+          "to": 12415
+        }
+      },
+      {
+        "id": 21838,
+        "position": 9,
+        "char_type": "word",
+        "text": "ٱلشَّيْطَـٰنِ ۚ",
+        "text_indopak": "الشَّيۡطٰنِ​ؕ",
+        "translation": "(of) the Shaitaan",
+        "transliteration": "l-shayṭāni",
+        "timestamp": {
+          "from": 12415,
+          "to": 16105
+        }
+      },
+      {
+        "id": 21840,
+        "position": 10,
+        "char_type": "word",
+        "text": "أَلَآ",
+        "text_indopak": "اَلَاۤ",
+        "translation": "No doubt",
+        "transliteration": "alā",
+        "timestamp": {
+          "from": 16105,
+          "to": 18034
+        }
+      },
+      {
+        "id": 21841,
+        "position": 11,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 18035,
+          "to": 19105
+        }
+      },
+      {
+        "id": 21842,
+        "position": 12,
+        "char_type": "word",
+        "text": "حِزْبَ",
+        "text_indopak": "حِزۡبَ",
+        "translation": "(the) party",
+        "transliteration": "ḥiz'ba",
+        "timestamp": {
+          "from": 19105,
+          "to": 19705
+        }
+      },
+      {
+        "id": 21843,
+        "position": 13,
+        "char_type": "word",
+        "text": "ٱلشَّيْطَـٰنِ",
+        "text_indopak": "الشَّيۡطٰنِ",
+        "translation": "(of) the Shaitaan",
+        "transliteration": "l-shayṭāni",
+        "timestamp": {
+          "from": 19705,
+          "to": 20935
+        }
+      },
+      {
+        "id": 21844,
+        "position": 14,
+        "char_type": "word",
+        "text": "هُمُ",
+        "text_indopak": "هُمُ",
+        "translation": "they",
+        "transliteration": "humu",
+        "timestamp": {
+          "from": 20935,
+          "to": 21325
+        }
+      },
+      {
+        "id": 21845,
+        "position": 15,
+        "char_type": "word",
+        "text": "ٱلْخَـٰسِرُونَ",
+        "text_indopak": "الۡخٰسِرُوۡنَ‏",
+        "translation": "(will be) the losers",
+        "transliteration": "l-khāsirūna",
+        "timestamp": {
+          "from": 21325,
+          "to": 24520
+        }
+      },
+      {
+        "id": 21846,
+        "position": 16,
+        "char_type": "end",
+        "text": "١٩",
+        "text_indopak": "١٩",
+        "translation": "(19)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5124,
+    "verse_key": "58:20",
+    "words": [
+      {
+        "id": 22664,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 0,
+          "to": 1335
+        }
+      },
+      {
+        "id": 22665,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 1335,
+          "to": 2415
+        }
+      },
+      {
+        "id": 22666,
+        "position": 3,
+        "char_type": "word",
+        "text": "يُحَآدُّونَ",
+        "text_indopak": "يُحَآدُّوۡنَ",
+        "translation": "oppose",
+        "transliteration": "yuḥāddūna",
+        "timestamp": {
+          "from": 2415,
+          "to": 6195
+        }
+      },
+      {
+        "id": 22667,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 6195,
+          "to": 7095
+        }
+      },
+      {
+        "id": 22668,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَرَسُولَهُۥٓ",
+        "text_indopak": "وَرَسُوۡلَهٗۤ",
+        "translation": "and His Messenger",
+        "transliteration": "warasūlahu",
+        "timestamp": {
+          "from": 7095,
+          "to": 9985
+        }
+      },
+      {
+        "id": 22669,
+        "position": 6,
+        "char_type": "word",
+        "text": "أُو۟لَـٰٓئِكَ",
+        "text_indopak": "اُولٰٓٮِٕكَ",
+        "translation": "those",
+        "transliteration": "ulāika",
+        "timestamp": {
+          "from": 9985,
+          "to": 12604
+        }
+      },
+      {
+        "id": 22670,
+        "position": 7,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِى",
+        "translation": "(will be) among",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 12605,
+          "to": 12825
+        }
+      },
+      {
+        "id": 22671,
+        "position": 8,
+        "char_type": "word",
+        "text": "ٱلْأَذَلِّينَ",
+        "text_indopak": "الۡاَذَلِّيۡنَ‏ ﻿﻿",
+        "translation": "the most humiliated",
+        "transliteration": "l-adhalīna",
+        "timestamp": {
+          "from": 12825,
+          "to": 16060
+        }
+      },
+      {
+        "id": 22672,
+        "position": 9,
+        "char_type": "end",
+        "text": "٢٠",
+        "text_indopak": "٢٠",
+        "translation": "(20)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5125,
+    "verse_key": "58:21",
+    "words": [
+      {
+        "id": 23813,
+        "position": 1,
+        "char_type": "word",
+        "text": "كَتَبَ",
+        "text_indopak": "كَتَبَ",
+        "translation": "Allah has decreed",
+        "transliteration": "kataba",
+        "timestamp": {
+          "from": 0,
+          "to": 465
+        }
+      },
+      {
+        "id": 23814,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah has decreed",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 465,
+          "to": 1415
+        }
+      },
+      {
+        "id": 23815,
+        "position": 3,
+        "char_type": "word",
+        "text": "لَأَغْلِبَنَّ",
+        "text_indopak": "لَاَغۡلِبَنَّ",
+        "translation": "Surely, I will overcome",
+        "transliteration": "la-aghlibanna",
+        "timestamp": {
+          "from": 1415,
+          "to": 3545
+        }
+      },
+      {
+        "id": 23816,
+        "position": 4,
+        "char_type": "word",
+        "text": "أَنَا۠",
+        "text_indopak": "اَنَا",
+        "translation": "I",
+        "transliteration": "anā",
+        "timestamp": {
+          "from": 3545,
+          "to": 4015
+        }
+      },
+      {
+        "id": 23817,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَرُسُلِىٓ ۚ",
+        "text_indopak": "وَرُسُلِىۡ​ؕ",
+        "translation": "and My Messengers",
+        "transliteration": "warusulī",
+        "timestamp": {
+          "from": 4015,
+          "to": 5455
+        }
+      },
+      {
+        "id": 23819,
+        "position": 6,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 5455,
+          "to": 6605
+        }
+      },
+      {
+        "id": 23820,
+        "position": 7,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 6605,
+          "to": 7525
+        }
+      },
+      {
+        "id": 23821,
+        "position": 8,
+        "char_type": "word",
+        "text": "قَوِىٌّ",
+        "text_indopak": "قَوِىٌّ",
+        "translation": "(is) All-Strong",
+        "transliteration": "qawiyyun",
+        "timestamp": {
+          "from": 7525,
+          "to": 8475
+        }
+      },
+      {
+        "id": 23822,
+        "position": 9,
+        "char_type": "word",
+        "text": "عَزِيزٌۭ",
+        "text_indopak": "عَزِيۡزٌ‏ ﻿﻿",
+        "translation": "All-Mighty",
+        "transliteration": "ʿazīzun",
+        "timestamp": {
+          "from": 8475,
+          "to": 11010
+        }
+      },
+      {
+        "id": 23823,
+        "position": 10,
+        "char_type": "end",
+        "text": "٢١",
+        "text_indopak": "٢١",
+        "translation": "(21)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 5126,
+    "verse_key": "58:22",
+    "words": [
+      {
+        "id": 24778,
+        "position": 1,
+        "char_type": "word",
+        "text": "لَّا",
+        "text_indopak": "لَا",
+        "translation": "You will not find",
+        "transliteration": "lā",
+        "timestamp": {
+          "from": 0,
+          "to": 385
+        }
+      },
+      {
+        "id": 24779,
+        "position": 2,
+        "char_type": "word",
+        "text": "تَجِدُ",
+        "text_indopak": "تَجِدُ",
+        "translation": "You will not find",
+        "transliteration": "tajidu",
+        "timestamp": {
+          "from": 385,
+          "to": 1055
+        }
+      },
+      {
+        "id": 24780,
+        "position": 3,
+        "char_type": "word",
+        "text": "قَوْمًۭا",
+        "text_indopak": "قَوۡمًا",
+        "translation": "a people",
+        "transliteration": "qawman",
+        "timestamp": {
+          "from": 1055,
+          "to": 2435
+        }
+      },
+      {
+        "id": 24781,
+        "position": 4,
+        "char_type": "word",
+        "text": "يُؤْمِنُونَ",
+        "text_indopak": "يُّؤۡمِنُوۡنَ",
+        "translation": "who believe",
+        "transliteration": "yu'minūna",
+        "timestamp": {
+          "from": 2435,
+          "to": 3875
+        }
+      },
+      {
+        "id": 24782,
+        "position": 5,
+        "char_type": "word",
+        "text": "بِٱللَّهِ",
+        "text_indopak": "بِاللّٰهِ",
+        "translation": "in Allah",
+        "transliteration": "bil-lahi",
+        "timestamp": {
+          "from": 3875,
+          "to": 4815
+        }
+      },
+      {
+        "id": 24783,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَٱلْيَوْمِ",
+        "text_indopak": "وَالۡيَوۡمِ",
+        "translation": "and the Day",
+        "transliteration": "wal-yawmi",
+        "timestamp": {
+          "from": 4815,
+          "to": 5815
+        }
+      },
+      {
+        "id": 24784,
+        "position": 7,
+        "char_type": "word",
+        "text": "ٱلْـَٔاخِرِ",
+        "text_indopak": "الۡاٰخِرِ",
+        "translation": "the Last",
+        "transliteration": "l-ākhiri",
+        "timestamp": {
+          "from": 5815,
+          "to": 6835
+        }
+      },
+      {
+        "id": 24785,
+        "position": 8,
+        "char_type": "word",
+        "text": "يُوَآدُّونَ",
+        "text_indopak": "يُوَآدُّوۡنَ",
+        "translation": "loving",
+        "transliteration": "yuwāddūna",
+        "timestamp": {
+          "from": 6835,
+          "to": 10775
+        }
+      },
+      {
+        "id": 24786,
+        "position": 9,
+        "char_type": "word",
+        "text": "مَنْ",
+        "text_indopak": "مَنۡ",
+        "translation": "(those) who",
+        "transliteration": "man",
+        "timestamp": {
+          "from": 10775,
+          "to": 11085
+        }
+      },
+      {
+        "id": 24787,
+        "position": 10,
+        "char_type": "word",
+        "text": "حَآدَّ",
+        "text_indopak": "حَآدَّ",
+        "translation": "oppose",
+        "transliteration": "ḥādda",
+        "timestamp": {
+          "from": 11085,
+          "to": 14604
+        }
+      },
+      {
+        "id": 24788,
+        "position": 11,
+        "char_type": "word",
+        "text": "ٱللَّهَ",
+        "text_indopak": "اللّٰهَ",
+        "translation": "Allah",
+        "transliteration": "l-laha",
+        "timestamp": {
+          "from": 14605,
+          "to": 15785
+        }
+      },
+      {
+        "id": 24789,
+        "position": 12,
+        "char_type": "word",
+        "text": "وَرَسُولَهُۥ",
+        "text_indopak": "وَرَسُوۡلَهٗ",
+        "translation": "and His Messenger",
+        "transliteration": "warasūlahu",
+        "timestamp": {
+          "from": 15785,
+          "to": 17235
+        }
+      },
+      {
+        "id": 24790,
+        "position": 13,
+        "char_type": "word",
+        "text": "وَلَوْ",
+        "text_indopak": "وَلَوۡ",
+        "translation": "even if",
+        "transliteration": "walaw",
+        "timestamp": {
+          "from": 18785,
+          "to": 19785
+        }
+      },
+      {
+        "id": 24791,
+        "position": 14,
+        "char_type": "word",
+        "text": "كَانُوٓا۟",
+        "text_indopak": "كَانُوۡۤا",
+        "translation": "they were",
+        "transliteration": "kānū",
+        "timestamp": {
+          "from": 19785,
+          "to": 21895
+        }
+      },
+      {
+        "id": 24792,
+        "position": 15,
+        "char_type": "word",
+        "text": "ءَابَآءَهُمْ",
+        "text_indopak": "اٰبَآءَهُمۡ",
+        "translation": "their fathers",
+        "transliteration": "ābāahum",
+        "timestamp": {
+          "from": 21895,
+          "to": 24875
+        }
+      },
+      {
+        "id": 24793,
+        "position": 16,
+        "char_type": "word",
+        "text": "أَوْ",
+        "text_indopak": "اَوۡ",
+        "translation": "or",
+        "transliteration": "aw",
+        "timestamp": {
+          "from": 24875,
+          "to": 25265
+        }
+      },
+      {
+        "id": 24794,
+        "position": 17,
+        "char_type": "word",
+        "text": "أَبْنَآءَهُمْ",
+        "text_indopak": "اَبۡنَآءَهُمۡ",
+        "translation": "their sons",
+        "transliteration": "abnāahum",
+        "timestamp": {
+          "from": 25265,
+          "to": 28045
+        }
+      },
+      {
+        "id": 24795,
+        "position": 18,
+        "char_type": "word",
+        "text": "أَوْ",
+        "text_indopak": "اَوۡ",
+        "translation": "or",
+        "transliteration": "aw",
+        "timestamp": {
+          "from": 28045,
+          "to": 28425
+        }
+      },
+      {
+        "id": 24796,
+        "position": 19,
+        "char_type": "word",
+        "text": "إِخْوَٰنَهُمْ",
+        "text_indopak": "اِخۡوَانَهُمۡ",
+        "translation": "their brothers",
+        "transliteration": "ikh'wānahum",
+        "timestamp": {
+          "from": 28425,
+          "to": 29795
+        }
+      },
+      {
+        "id": 24797,
+        "position": 20,
+        "char_type": "word",
+        "text": "أَوْ",
+        "text_indopak": "اَوۡ",
+        "translation": "or",
+        "transliteration": "aw",
+        "timestamp": {
+          "from": 29795,
+          "to": 30145
+        }
+      },
+      {
+        "id": 24798,
+        "position": 21,
+        "char_type": "word",
+        "text": "عَشِيرَتَهُمْ ۚ",
+        "text_indopak": "عَشِيۡرَتَهُمۡ​ؕ",
+        "translation": "their kindred",
+        "transliteration": "ʿashīratahum",
+        "timestamp": {
+          "from": 30145,
+          "to": 32045
+        }
+      },
+      {
+        "id": 24800,
+        "position": 22,
+        "char_type": "word",
+        "text": "أُو۟لَـٰٓئِكَ",
+        "text_indopak": "اُولٰٓٮِٕكَ",
+        "translation": "Those ",
+        "transliteration": "ulāika",
+        "timestamp": {
+          "from": 32045,
+          "to": 34554
+        }
+      },
+      {
+        "id": 24801,
+        "position": 23,
+        "char_type": "word",
+        "text": "كَتَبَ",
+        "text_indopak": "كَتَبَ",
+        "translation": "He has decreed",
+        "transliteration": "kataba",
+        "timestamp": {
+          "from": 34555,
+          "to": 35165
+        }
+      },
+      {
+        "id": 24802,
+        "position": 24,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "within",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 35165,
+          "to": 35495
+        }
+      },
+      {
+        "id": 24803,
+        "position": 25,
+        "char_type": "word",
+        "text": "قُلُوبِهِمُ",
+        "text_indopak": "قُلُوۡبِهِمُ",
+        "translation": "their hearts",
+        "transliteration": "qulūbihimu",
+        "timestamp": {
+          "from": 35495,
+          "to": 36735
+        }
+      },
+      {
+        "id": 24804,
+        "position": 26,
+        "char_type": "word",
+        "text": "ٱلْإِيمَـٰنَ",
+        "text_indopak": "الۡاِيۡمَانَ",
+        "translation": "faith",
+        "transliteration": "l-īmāna",
+        "timestamp": {
+          "from": 36735,
+          "to": 37915
+        }
+      },
+      {
+        "id": 24805,
+        "position": 27,
+        "char_type": "word",
+        "text": "وَأَيَّدَهُم",
+        "text_indopak": "وَاَيَّدَهُمۡ",
+        "translation": "and supported them",
+        "transliteration": "wa-ayyadahum",
+        "timestamp": {
+          "from": 37915,
+          "to": 39855
+        }
+      },
+      {
+        "id": 24806,
+        "position": 28,
+        "char_type": "word",
+        "text": "بِرُوحٍۢ",
+        "text_indopak": "بِرُوۡحٍ",
+        "translation": "with a spirit",
+        "transliteration": "birūḥin",
+        "timestamp": {
+          "from": 39855,
+          "to": 40715
+        }
+      },
+      {
+        "id": 24807,
+        "position": 29,
+        "char_type": "word",
+        "text": "مِّنْهُ ۖ",
+        "text_indopak": "مِّنۡهُ​ ؕ",
+        "translation": "from Him",
+        "transliteration": "min'hu",
+        "timestamp": {
+          "from": 40715,
+          "to": 41885
+        }
+      },
+      {
+        "id": 24809,
+        "position": 30,
+        "char_type": "word",
+        "text": "وَيُدْخِلُهُمْ",
+        "text_indopak": "وَيُدۡخِلُهُمۡ",
+        "translation": "And He will admit them",
+        "transliteration": "wayud'khiluhum",
+        "timestamp": {
+          "from": 41915,
+          "to": 43965
+        }
+      },
+      {
+        "id": 24810,
+        "position": 31,
+        "char_type": "word",
+        "text": "جَنَّـٰتٍۢ",
+        "text_indopak": "جَنّٰتٍ",
+        "translation": "(to) Gardens",
+        "transliteration": "jannātin",
+        "timestamp": {
+          "from": 43965,
+          "to": 46485
+        }
+      },
+      {
+        "id": 24811,
+        "position": 32,
+        "char_type": "word",
+        "text": "تَجْرِى",
+        "text_indopak": "تَجۡرِىۡ",
+        "translation": "flow",
+        "transliteration": "tajrī",
+        "timestamp": {
+          "from": 46485,
+          "to": 47285
+        }
+      },
+      {
+        "id": 24812,
+        "position": 33,
+        "char_type": "word",
+        "text": "مِن",
+        "text_indopak": "مِنۡ",
+        "translation": "from",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 47285,
+          "to": 47865
+        }
+      },
+      {
+        "id": 24813,
+        "position": 34,
+        "char_type": "word",
+        "text": "تَحْتِهَا",
+        "text_indopak": "تَحۡتِهَا",
+        "translation": "underneath it",
+        "transliteration": "taḥtihā",
+        "timestamp": {
+          "from": 47865,
+          "to": 49085
+        }
+      },
+      {
+        "id": 24814,
+        "position": 35,
+        "char_type": "word",
+        "text": "ٱلْأَنْهَـٰرُ",
+        "text_indopak": "الۡاَنۡهٰرُ",
+        "translation": "the rivers",
+        "transliteration": "l-anhāru",
+        "timestamp": {
+          "from": 49085,
+          "to": 50265
+        }
+      },
+      {
+        "id": 24815,
+        "position": 36,
+        "char_type": "word",
+        "text": "خَـٰلِدِينَ",
+        "text_indopak": "خٰلِدِيۡنَ",
+        "translation": "will abide forever",
+        "transliteration": "khālidīna",
+        "timestamp": {
+          "from": 50265,
+          "to": 51485
+        }
+      },
+      {
+        "id": 24816,
+        "position": 37,
+        "char_type": "word",
+        "text": "فِيهَا ۚ",
+        "text_indopak": "فِيۡهَا​ ؕ",
+        "translation": "in it",
+        "transliteration": "fīhā",
+        "timestamp": {
+          "from": 51485,
+          "to": 52515
+        }
+      },
+      {
+        "id": 24818,
+        "position": 38,
+        "char_type": "word",
+        "text": "رَضِىَ",
+        "text_indopak": "رَضِىَ",
+        "translation": "Allah is pleased",
+        "transliteration": "raḍiya",
+        "timestamp": {
+          "from": 52515,
+          "to": 53645
+        }
+      },
+      {
+        "id": 24819,
+        "position": 39,
+        "char_type": "word",
+        "text": "ٱللَّهُ",
+        "text_indopak": "اللّٰهُ",
+        "translation": "Allah is pleased",
+        "transliteration": "l-lahu",
+        "timestamp": {
+          "from": 53645,
+          "to": 54455
+        }
+      },
+      {
+        "id": 24820,
+        "position": 40,
+        "char_type": "word",
+        "text": "عَنْهُمْ",
+        "text_indopak": "عَنۡهُمۡ",
+        "translation": "with them",
+        "transliteration": "ʿanhum",
+        "timestamp": {
+          "from": 54455,
+          "to": 55295
+        }
+      },
+      {
+        "id": 24821,
+        "position": 41,
+        "char_type": "word",
+        "text": "وَرَضُوا۟",
+        "text_indopak": "وَرَضُوۡا",
+        "translation": "and they are pleased",
+        "transliteration": "waraḍū",
+        "timestamp": {
+          "from": 55295,
+          "to": 55985
+        }
+      },
+      {
+        "id": 24822,
+        "position": 42,
+        "char_type": "word",
+        "text": "عَنْهُ ۚ",
+        "text_indopak": "عَنۡهُ​ ؕ",
+        "translation": "with Him",
+        "transliteration": "ʿanhu",
+        "timestamp": {
+          "from": 55985,
+          "to": 56525
+        }
+      },
+      {
+        "id": 24824,
+        "position": 43,
+        "char_type": "word",
+        "text": "أُو۟لَـٰٓئِكَ",
+        "text_indopak": "اُولٰٓٮِٕكَ",
+        "translation": "Those",
+        "transliteration": "ulāika",
+        "timestamp": {
+          "from": 56525,
+          "to": 59645
+        }
+      },
+      {
+        "id": 24825,
+        "position": 44,
+        "char_type": "word",
+        "text": "حِزْبُ",
+        "text_indopak": "حِزۡبُ",
+        "translation": "(are the) party",
+        "transliteration": "ḥiz'bu",
+        "timestamp": {
+          "from": 59645,
+          "to": 60205
+        }
+      },
+      {
+        "id": 24826,
+        "position": 45,
+        "char_type": "word",
+        "text": "ٱللَّهِ ۚ",
+        "text_indopak": "اللّٰهِ​ ؕ",
+        "translation": "(of) Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 60205,
+          "to": 63565
+        }
+      },
+      {
+        "id": 24828,
+        "position": 46,
+        "char_type": "word",
+        "text": "أَلَآ",
+        "text_indopak": "اَلَاۤ",
+        "translation": "No doubt",
+        "transliteration": "alā",
+        "timestamp": {
+          "from": 63565,
+          "to": 65664
+        }
+      },
+      {
+        "id": 24829,
+        "position": 47,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 65665,
+          "to": 66805
+        }
+      },
+      {
+        "id": 24830,
+        "position": 48,
+        "char_type": "word",
+        "text": "حِزْبَ",
+        "text_indopak": "حِزۡبَ",
+        "translation": "(the) party",
+        "transliteration": "ḥiz'ba",
+        "timestamp": {
+          "from": 66805,
+          "to": 67495
+        }
+      },
+      {
+        "id": 24831,
+        "position": 49,
+        "char_type": "word",
+        "text": "ٱللَّهِ",
+        "text_indopak": "اللّٰهِ",
+        "translation": "(of) Allah",
+        "transliteration": "l-lahi",
+        "timestamp": {
+          "from": 67495,
+          "to": 68415
+        }
+      },
+      {
+        "id": 24832,
+        "position": 50,
+        "char_type": "word",
+        "text": "هُمُ",
+        "text_indopak": "هُمُ",
+        "translation": "they",
+        "transliteration": "humu",
+        "timestamp": {
+          "from": 68415,
+          "to": 68855
+        }
+      },
+      {
+        "id": 24833,
+        "position": 51,
+        "char_type": "word",
+        "text": "ٱلْمُفْلِحُونَ",
+        "text_indopak": "الۡمُفۡلِحُوۡنَ‏",
+        "translation": "(are) the successful ones",
+        "transliteration": "l-muf'liḥūna",
+        "timestamp": {
+          "from": 68855,
+          "to": 72980
+        }
+      },
+      {
+        "id": 24834,
+        "position": 52,
+        "char_type": "end",
+        "text": "٢٢",
+        "text_indopak": "٢٢",
+        "translation": "(22)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

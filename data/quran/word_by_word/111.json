@@ -1,0 +1,381 @@
+[
+  {
+    "id": 6217,
+    "verse_key": "111:1",
+    "words": [
+      {
+        "id": 18,
+        "position": 1,
+        "char_type": "word",
+        "text": "تَبَّتْ",
+        "text_indopak": "تَبَّتۡ",
+        "translation": "Perish",
+        "transliteration": "tabbat",
+        "timestamp": {
+          "from": 0,
+          "to": 830
+        }
+      },
+      {
+        "id": 19,
+        "position": 2,
+        "char_type": "word",
+        "text": "يَدَآ",
+        "text_indopak": "يَدَاۤ",
+        "translation": "(the) hands",
+        "transliteration": "yadā",
+        "timestamp": {
+          "from": 830,
+          "to": 3270
+        }
+      },
+      {
+        "id": 20,
+        "position": 3,
+        "char_type": "word",
+        "text": "أَبِى",
+        "text_indopak": "اَبِىۡ",
+        "translation": "(of) Abu",
+        "transliteration": "abī",
+        "timestamp": {
+          "from": 3270,
+          "to": 3910
+        }
+      },
+      {
+        "id": 21,
+        "position": 4,
+        "char_type": "word",
+        "text": "لَهَبٍۢ",
+        "text_indopak": "لَهَبٍ",
+        "translation": "Lahab",
+        "transliteration": "lahabin",
+        "timestamp": {
+          "from": 3910,
+          "to": 5620
+        }
+      },
+      {
+        "id": 22,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَتَبَّ",
+        "text_indopak": "وَّتَبَّؕ‏",
+        "translation": "and perish he",
+        "transliteration": "watabba",
+        "timestamp": {
+          "from": 5620,
+          "to": 6805
+        }
+      },
+      {
+        "id": 23,
+        "position": 6,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6218,
+    "verse_key": "111:2",
+    "words": [
+      {
+        "id": 949,
+        "position": 1,
+        "char_type": "word",
+        "text": "مَآ",
+        "text_indopak": "مَاۤ",
+        "translation": "Not",
+        "transliteration": "mā",
+        "timestamp": {
+          "from": 0,
+          "to": 1795
+        }
+      },
+      {
+        "id": 950,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَغْنَىٰ",
+        "text_indopak": "اَغۡنٰى",
+        "translation": "(will) avail",
+        "transliteration": "aghnā",
+        "timestamp": {
+          "from": 1795,
+          "to": 2455
+        }
+      },
+      {
+        "id": 951,
+        "position": 3,
+        "char_type": "word",
+        "text": "عَنْهُ",
+        "text_indopak": "عَنۡهُ",
+        "translation": "him",
+        "transliteration": "ʿanhu",
+        "timestamp": {
+          "from": 2455,
+          "to": 3275
+        }
+      },
+      {
+        "id": 952,
+        "position": 4,
+        "char_type": "word",
+        "text": "مَالُهُۥ",
+        "text_indopak": "مَالُهٗ",
+        "translation": "his wealth",
+        "transliteration": "māluhu",
+        "timestamp": {
+          "from": 3275,
+          "to": 4425
+        }
+      },
+      {
+        "id": 953,
+        "position": 5,
+        "char_type": "word",
+        "text": "وَمَا",
+        "text_indopak": "وَمَا",
+        "translation": "and what",
+        "transliteration": "wamā",
+        "timestamp": {
+          "from": 4425,
+          "to": 4865
+        }
+      },
+      {
+        "id": 954,
+        "position": 6,
+        "char_type": "word",
+        "text": "كَسَبَ",
+        "text_indopak": "كَسَبَؕ‏",
+        "translation": "he earned",
+        "transliteration": "kasaba",
+        "timestamp": {
+          "from": 4865,
+          "to": 5720
+        }
+      },
+      {
+        "id": 955,
+        "position": 7,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6219,
+    "verse_key": "111:3",
+    "words": [
+      {
+        "id": 2625,
+        "position": 1,
+        "char_type": "word",
+        "text": "سَيَصْلَىٰ",
+        "text_indopak": "سَيَصۡلٰى",
+        "translation": "He will be burnt",
+        "transliteration": "sayaṣlā",
+        "timestamp": {
+          "from": 0,
+          "to": 265
+        }
+      },
+      {
+        "id": 2626,
+        "position": 2,
+        "char_type": "word",
+        "text": "نَارًۭا",
+        "text_indopak": "نَارًا",
+        "translation": "(in) a Fire",
+        "transliteration": "nāran",
+        "timestamp": {
+          "from": 265,
+          "to": 1905
+        }
+      },
+      {
+        "id": 2627,
+        "position": 3,
+        "char_type": "word",
+        "text": "ذَاتَ",
+        "text_indopak": "ذَاتَ",
+        "translation": "of",
+        "transliteration": "dhāta",
+        "timestamp": {
+          "from": 1905,
+          "to": 2755
+        }
+      },
+      {
+        "id": 2628,
+        "position": 4,
+        "char_type": "word",
+        "text": "لَهَبٍۢ",
+        "text_indopak": "لَهَبٍ ۖۚ‏",
+        "translation": "Blazing Flames",
+        "transliteration": "lahabin",
+        "timestamp": {
+          "from": 2755,
+          "to": 4030
+        }
+      },
+      {
+        "id": 2629,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6220,
+    "verse_key": "111:4",
+    "words": [
+      {
+        "id": 4041,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱمْرَأَتُهُۥ",
+        "text_indopak": "وَّامۡرَاَ تُهٗ ؕ",
+        "translation": "And his wife",
+        "transliteration": "wa-im'ra-atuhu",
+        "timestamp": {
+          "from": 0,
+          "to": 1235
+        }
+      },
+      {
+        "id": 4042,
+        "position": 2,
+        "char_type": "word",
+        "text": "حَمَّالَةَ",
+        "text_indopak": "حَمَّالَةَ",
+        "translation": "(the) carrier",
+        "transliteration": "ḥammālata",
+        "timestamp": {
+          "from": 1235,
+          "to": 3595
+        }
+      },
+      {
+        "id": 4043,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْحَطَبِ",
+        "text_indopak": "الۡحَطَبِ​ۚ‏",
+        "translation": "(of) firewood",
+        "transliteration": "l-ḥaṭabi",
+        "timestamp": {
+          "from": 3595,
+          "to": 4520
+        }
+      },
+      {
+        "id": 4044,
+        "position": 4,
+        "char_type": "end",
+        "text": "٤",
+        "text_indopak": "٤",
+        "translation": "(4)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6221,
+    "verse_key": "111:5",
+    "words": [
+      {
+        "id": 5280,
+        "position": 1,
+        "char_type": "word",
+        "text": "فِى",
+        "text_indopak": "فِىۡ",
+        "translation": "In",
+        "transliteration": "fī",
+        "timestamp": {
+          "from": 0,
+          "to": 0
+        }
+      },
+      {
+        "id": 5281,
+        "position": 2,
+        "char_type": "word",
+        "text": "جِيدِهَا",
+        "text_indopak": "جِيۡدِهَا",
+        "translation": "her neck",
+        "transliteration": "jīdihā",
+        "timestamp": {
+          "from": 0,
+          "to": 745
+        }
+      },
+      {
+        "id": 5282,
+        "position": 3,
+        "char_type": "word",
+        "text": "حَبْلٌۭ",
+        "text_indopak": "حَبۡلٌ",
+        "translation": "(will be) a rope",
+        "transliteration": "ḥablun",
+        "timestamp": {
+          "from": 745,
+          "to": 2325
+        }
+      },
+      {
+        "id": 5283,
+        "position": 4,
+        "char_type": "word",
+        "text": "مِّن",
+        "text_indopak": "مِّنۡ",
+        "translation": "of",
+        "transliteration": "min",
+        "timestamp": {
+          "from": 2325,
+          "to": 2885
+        }
+      },
+      {
+        "id": 5284,
+        "position": 5,
+        "char_type": "word",
+        "text": "مَّسَدٍۭ",
+        "text_indopak": "مَّسَدٍ‏",
+        "translation": "palm-fiber",
+        "transliteration": "masadin",
+        "timestamp": {
+          "from": 2885,
+          "to": 5500
+        }
+      },
+      {
+        "id": 5285,
+        "position": 6,
+        "char_type": "end",
+        "text": "٥",
+        "text_indopak": "٥",
+        "translation": "(5)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

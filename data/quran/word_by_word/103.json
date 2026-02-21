@@ -1,0 +1,232 @@
+[
+  {
+    "id": 6177,
+    "verse_key": "103:1",
+    "words": [
+      {
+        "id": 177,
+        "position": 1,
+        "char_type": "word",
+        "text": "وَٱلْعَصْرِ",
+        "text_indopak": "وَالۡعَصۡرِۙ‏",
+        "translation": "By the time",
+        "transliteration": "wal-ʿaṣri",
+        "timestamp": {
+          "from": 0,
+          "to": 1715
+        }
+      },
+      {
+        "id": 178,
+        "position": 2,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6178,
+    "verse_key": "103:2",
+    "words": [
+      {
+        "id": 1056,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 0,
+          "to": 1185
+        }
+      },
+      {
+        "id": 1057,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلْإِنسَـٰنَ",
+        "text_indopak": "الۡاِنۡسَانَ",
+        "translation": "mankind",
+        "transliteration": "l-insāna",
+        "timestamp": {
+          "from": 1185,
+          "to": 3835
+        }
+      },
+      {
+        "id": 1058,
+        "position": 3,
+        "char_type": "word",
+        "text": "لَفِى",
+        "text_indopak": "لَفِىۡ",
+        "translation": "(is) surely, in",
+        "transliteration": "lafī",
+        "timestamp": {
+          "from": 3835,
+          "to": 4415
+        }
+      },
+      {
+        "id": 1059,
+        "position": 4,
+        "char_type": "word",
+        "text": "خُسْرٍ",
+        "text_indopak": "خُسۡرٍۙ‏",
+        "translation": "loss",
+        "transliteration": "khus'rin",
+        "timestamp": {
+          "from": 4415,
+          "to": 5480
+        }
+      },
+      {
+        "id": 1060,
+        "position": 5,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6179,
+    "verse_key": "103:3",
+    "words": [
+      {
+        "id": 2213,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِلَّا",
+        "text_indopak": "اِلَّا",
+        "translation": "Except",
+        "transliteration": "illā",
+        "timestamp": {
+          "from": 0,
+          "to": 425
+        }
+      },
+      {
+        "id": 2214,
+        "position": 2,
+        "char_type": "word",
+        "text": "ٱلَّذِينَ",
+        "text_indopak": "الَّذِيۡنَ",
+        "translation": "those who",
+        "transliteration": "alladhīna",
+        "timestamp": {
+          "from": 425,
+          "to": 1435
+        }
+      },
+      {
+        "id": 2215,
+        "position": 3,
+        "char_type": "word",
+        "text": "ءَامَنُوا۟",
+        "text_indopak": "اٰمَنُوۡا",
+        "translation": "believe",
+        "transliteration": "āmanū",
+        "timestamp": {
+          "from": 1435,
+          "to": 2715
+        }
+      },
+      {
+        "id": 2216,
+        "position": 4,
+        "char_type": "word",
+        "text": "وَعَمِلُوا۟",
+        "text_indopak": "وَ",
+        "translation": "and do",
+        "transliteration": "waʿamilū",
+        "timestamp": {
+          "from": 2715,
+          "to": 3535
+        }
+      },
+      {
+        "id": 2217,
+        "position": 5,
+        "char_type": "word",
+        "text": "ٱلصَّـٰلِحَـٰتِ",
+        "text_indopak": "عَمِلُوا",
+        "translation": "righteous deeds",
+        "transliteration": "l-ṣāliḥāti",
+        "timestamp": {
+          "from": 3535,
+          "to": 5155
+        }
+      },
+      {
+        "id": 2218,
+        "position": 6,
+        "char_type": "word",
+        "text": "وَتَوَاصَوْا۟",
+        "text_indopak": "الصّٰلِحٰتِ",
+        "translation": "and enjoin (each other)",
+        "transliteration": "watawāṣaw",
+        "timestamp": {
+          "from": 5155,
+          "to": 6415
+        }
+      },
+      {
+        "id": 2219,
+        "position": 7,
+        "char_type": "word",
+        "text": "بِٱلْحَقِّ",
+        "text_indopak": "وَتَوَاصَوۡا",
+        "translation": "to the truth",
+        "transliteration": "bil-ḥaqi",
+        "timestamp": {
+          "from": 6415,
+          "to": 7475
+        }
+      },
+      {
+        "id": 2220,
+        "position": 8,
+        "char_type": "word",
+        "text": "وَتَوَاصَوْا۟",
+        "text_indopak": "بِالۡحَقِّ   ۙ",
+        "translation": "and enjoin (each other)",
+        "transliteration": "watawāṣaw",
+        "timestamp": {
+          "from": 7475,
+          "to": 8865
+        }
+      },
+      {
+        "id": 2221,
+        "position": 9,
+        "char_type": "word",
+        "text": "بِٱلصَّبْرِ",
+        "text_indopak": "وَتَوَاصَوۡا بِالصَّبۡرِ‏",
+        "translation": "to [the] patience",
+        "transliteration": "bil-ṣabri",
+        "timestamp": {
+          "from": 8865,
+          "to": 12000
+        }
+      },
+      {
+        "id": 2222,
+        "position": 10,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]

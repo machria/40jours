@@ -1,0 +1,180 @@
+[
+  {
+    "id": 6205,
+    "verse_key": "108:1",
+    "words": [
+      {
+        "id": 276,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّآ",
+        "text_indopak": "اِنَّاۤ",
+        "translation": "Indeed, We",
+        "transliteration": "innā",
+        "timestamp": {
+          "from": 0,
+          "to": 3510
+        }
+      },
+      {
+        "id": 277,
+        "position": 2,
+        "char_type": "word",
+        "text": "أَعْطَيْنَـٰكَ",
+        "text_indopak": "اَعۡطَيۡنٰكَ",
+        "translation": "We have given you",
+        "transliteration": "aʿṭaynāka",
+        "timestamp": {
+          "from": 3510,
+          "to": 5010
+        }
+      },
+      {
+        "id": 278,
+        "position": 3,
+        "char_type": "word",
+        "text": "ٱلْكَوْثَرَ",
+        "text_indopak": "الۡكَوۡثَرَؕ‏",
+        "translation": "Al-Kauthar",
+        "transliteration": "l-kawthara",
+        "timestamp": {
+          "from": 5010,
+          "to": 6245
+        }
+      },
+      {
+        "id": 279,
+        "position": 4,
+        "char_type": "end",
+        "text": "١",
+        "text_indopak": "١",
+        "translation": "(1)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6206,
+    "verse_key": "108:2",
+    "words": [
+      {
+        "id": 996,
+        "position": 1,
+        "char_type": "word",
+        "text": "فَصَلِّ",
+        "text_indopak": "فَصَلِّ",
+        "translation": "So pray",
+        "transliteration": "faṣalli",
+        "timestamp": {
+          "from": 0,
+          "to": 345
+        }
+      },
+      {
+        "id": 997,
+        "position": 2,
+        "char_type": "word",
+        "text": "لِرَبِّكَ",
+        "text_indopak": "لِرَبِّكَ",
+        "translation": "to your Lord",
+        "transliteration": "lirabbika",
+        "timestamp": {
+          "from": 345,
+          "to": 1555
+        }
+      },
+      {
+        "id": 998,
+        "position": 3,
+        "char_type": "word",
+        "text": "وَٱنْحَرْ",
+        "text_indopak": "وَانۡحَرۡ ؕ‏",
+        "translation": "and sacrifice",
+        "transliteration": "wa-in'ḥar",
+        "timestamp": {
+          "from": 1555,
+          "to": 2970
+        }
+      },
+      {
+        "id": 999,
+        "position": 4,
+        "char_type": "end",
+        "text": "٢",
+        "text_indopak": "٢",
+        "translation": "(2)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  },
+  {
+    "id": 6207,
+    "verse_key": "108:3",
+    "words": [
+      {
+        "id": 2556,
+        "position": 1,
+        "char_type": "word",
+        "text": "إِنَّ",
+        "text_indopak": "اِنَّ",
+        "translation": "Indeed",
+        "transliteration": "inna",
+        "timestamp": {
+          "from": 0,
+          "to": 1555
+        }
+      },
+      {
+        "id": 2557,
+        "position": 2,
+        "char_type": "word",
+        "text": "شَانِئَكَ",
+        "text_indopak": "شَانِئَكَ",
+        "translation": "your enemy ",
+        "transliteration": "shāni-aka",
+        "timestamp": {
+          "from": 1555,
+          "to": 2725
+        }
+      },
+      {
+        "id": 2558,
+        "position": 3,
+        "char_type": "word",
+        "text": "هُوَ",
+        "text_indopak": "هُوَ",
+        "translation": "he (is)",
+        "transliteration": "huwa",
+        "timestamp": {
+          "from": 2725,
+          "to": 3095
+        }
+      },
+      {
+        "id": 2559,
+        "position": 4,
+        "char_type": "word",
+        "text": "ٱلْأَبْتَرُ",
+        "text_indopak": "الۡاَبۡتَرُ‏",
+        "translation": "the one cut off",
+        "transliteration": "l-abtaru",
+        "timestamp": {
+          "from": 3095,
+          "to": 4720
+        }
+      },
+      {
+        "id": 2560,
+        "position": 5,
+        "char_type": "end",
+        "text": "٣",
+        "text_indopak": "٣",
+        "translation": "(3)",
+        "transliteration": null,
+        "timestamp": null
+      }
+    ]
+  }
+]
