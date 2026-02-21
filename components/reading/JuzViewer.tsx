@@ -117,8 +117,11 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
         onAyahChange: (ayah) => {
             // Auto-scroll
             const element = document.getElementById(`ayah-${ayah.surah}-${ayah.ayah}`);
+
+            // Adjust scroll position for fixed header on mobile
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const y = element.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
             }
         },
         audioRef

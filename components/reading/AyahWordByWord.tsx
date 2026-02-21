@@ -36,7 +36,7 @@ export default function AyahWordByWord({
 
     return (
         <div
-            id={`ayah-${ayah}`}
+            id={`ayah-${surah}-${ayah}`}
             className={`scroll-mt-32 bg-card border rounded-xl p-4 md:p-6 transition-all duration-500 ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
         >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b pb-4 border-border/50">

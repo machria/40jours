@@ -125,7 +125,8 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         onAyahChange: (ayah) => {
             const element = document.getElementById(`ayah-${ayah.surah}-${ayah.ayah}`);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                const y = element.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
             }
         }
     });
