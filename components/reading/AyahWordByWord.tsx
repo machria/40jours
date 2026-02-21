@@ -37,13 +37,13 @@ export default function AyahWordByWord({
     return (
         <div
             id={`ayah-${ayah}`}
-            className={`scroll-mt-32 bg-card border rounded-xl p-6 transition-all duration-500 ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
+            className={`scroll-mt-32 bg-card border rounded-xl p-4 md:p-6 transition-all duration-500 ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : 'hover:shadow-md'}`}
         >
-            <div className="flex items-center justify-between mb-4 border-b pb-4 border-border/50">
-                <span className={`text-xs font-mono px-2 py-1 rounded transition-colors ${isPlaying ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b pb-4 border-border/50">
+                <span className={`w-fit text-xs font-mono px-2 py-1 rounded transition-colors ${isPlaying ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
                     {surah}:{ayah}
                 </span>
-                <div className="flex gap-2">
+                <div className="flex gap-2 self-end sm:self-auto">
                     <button
                         onClick={onPlayClick}
                         className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying

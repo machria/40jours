@@ -197,17 +197,17 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                     ) : <div />}
                 </div>
 
-                <div className="flex bg-background rounded-md p-1 shadow-sm w-full sm:w-auto">
+                <div className="flex flex-wrap justify-center sm:justify-end gap-2 bg-background rounded-md p-1 sm:shadow-sm w-full sm:w-auto mt-2 sm:mt-0">
                     <button
                         onClick={() => setShowPhonetic(!showPhonetic)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 border ${showPhonetic ? 'bg-accent/10 text-accent border-accent/20' : 'bg-background text-muted-foreground border-transparent hover:text-foreground'}`}
+                        className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all border ${showPhonetic ? 'bg-accent/10 text-accent border-accent/20' : 'bg-background text-muted-foreground border-transparent hover:text-foreground'}`}
                     >
                         Phonétique
                     </button>
 
                     <button
                         onClick={toggleRepeat}
-                        className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-all mr-2 border ${repeatMode !== 'off' ? 'bg-amber-100 text-amber-700 border-amber-200' : 'bg-background text-muted-foreground border-transparent'}`}
+                        className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-all border ${repeatMode !== 'off' ? 'bg-amber-100 text-amber-700 border-amber-200' : 'bg-background text-muted-foreground border-transparent'}`}
                         title="Mode Loop"
                     >
                         {repeatMode === 'single' ? '1x' : (repeatMode === 'all' ? 'Tout' : 'Loop')}
@@ -215,21 +215,21 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
 
                     <button
                         onClick={toggleAutoPlay}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all mr-2 ${isPlaying ? 'bg-amber-600 text-white shadow' : 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400'}`}
+                        className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${isPlaying ? 'bg-amber-600 text-white shadow' : 'bg-amber-100 text-amber-700 hover:bg-amber-200 dark:bg-amber-900/30 dark:text-amber-400'}`}
                     >
                         {isPlaying ? <Pause size={16} /> : <Play size={16} />}
-                        {isPlaying ? 'Pause' : 'Tout Écouter'}
+                        <span className="hidden sm:inline">{isPlaying ? 'Pause' : 'Tout Écouter'}</span>
                     </button>
 
                     <button
                         onClick={() => setViewMode('list')}
-                        className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'list' ? 'bg-emerald-600 text-white shadow' : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'}`}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'list' ? 'bg-emerald-600 text-white shadow' : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'}`}
                     >
                         Liste
                     </button>
                     <button
                         onClick={() => setViewMode('mushaf')}
-                        className={`flex-1 sm:flex-none px-4 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'mushaf' ? 'bg-emerald-600 text-white shadow' : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'}`}
+                        className={`px-3 py-2 rounded-md text-sm font-medium transition-all ${viewMode === 'mushaf' ? 'bg-emerald-600 text-white shadow' : 'text-gray-600 hover:text-gray-900 dark:text-gray-400'}`}
                     >
                         Mushaf
                     </button>
@@ -237,11 +237,11 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                     {hasWbw && viewMode === 'list' && (
                         <button
                             onClick={() => setIsWordByWordMode(!isWordByWordMode)}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-all ml-2 border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
+                            className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
                             title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
                         >
-                            <span className="hidden lg:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
-                            {!isWordByWordMode && <span className="lg:hidden">Mots</span>}
+                            <span className="hidden sm:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
+                            {!isWordByWordMode && <span className="sm:hidden">Mots</span>}
                         </button>
                     )}
                 </div>
@@ -328,13 +328,13 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                                 <div
                                     key={`${ayah.surahNumber}:${ayah.numberInSurah}`}
                                     id={`ayah-${ayah.surahNumber}-${ayah.numberInSurah}`}
-                                    className={`scroll-mt-24 bg-card border rounded-xl p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : ''}`}
+                                    className={`scroll-mt-24 bg-card border rounded-xl p-4 md:p-6 transition-all hover:shadow-md ${isPlaying ? 'ring-2 ring-primary shadow-lg scale-[1.01]' : ''}`}
                                 >
-                                    <div className="flex items-center justify-between mb-4 border-b pb-4 border-gray-100 dark:border-gray-700">
-                                        <span className="text-xs font-mono text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">
+                                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b pb-4 border-gray-100 dark:border-gray-700">
+                                        <span className="text-xs font-mono text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded w-fit">
                                             Sourate {ayah.surahNumber} : Verset {ayah.numberInSurah}
                                         </span>
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-2 self-end sm:self-auto">
                                             <button
                                                 onClick={() => playAudio(ayah.surahNumber, ayah.numberInSurah)}
                                                 className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying
@@ -357,7 +357,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                                     </div>
 
                                     <div className="text-right mb-6" dir="rtl">
-                                        <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-2xl p-6 md:p-8 border border-primary/10">
+                                        <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-2xl p-4 md:p-8 border border-primary/10">
                                             <TajwidText
                                                 text={ayah.text}
                                                 className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
@@ -372,7 +372,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                                     )}
 
                                     <div className="text-left dir-ltr">
-                                        <p className="text-foreground/90 text-lg leading-relaxed">
+                                        <p className="text-foreground/90 text-[15px] md:text-lg leading-relaxed">
                                             {ayah.translation}
                                         </p>
                                     </div>
