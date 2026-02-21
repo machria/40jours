@@ -8,6 +8,7 @@ import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 import AyahWordByWord from '@/components/reading/AyahWordByWord';
+import { useSettings } from '@/context/SettingsContext';
 
 interface Ayah {
     id: number;
@@ -38,6 +39,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
 
     const hasWbw = wbwData && wbwData.length > 0;
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+    const { reversePhonetics, setReversePhonetics } = useSettings();
 
     const [completed, setCompleted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -238,14 +240,27 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                     </button>
 
                     {hasWbw && viewMode === 'list' && (
-                        <button
-                            onClick={() => setIsWordByWordMode(!isWordByWordMode)}
-                            className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
-                            title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
-                        >
-                            <span className="hidden sm:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
-                            {!isWordByWordMode && <span className="sm:hidden">Mots</span>}
-                        </button>
+                        <>
+                            <button
+                                onClick={() => setIsWordByWordMode(!isWordByWordMode)}
+                                className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
+                                title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
+                            >
+                                <span className="hidden sm:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
+                                {!isWordByWordMode && <span className="sm:hidden">Mots</span>}
+                            </button>
+
+                            {isWordByWordMode && (
+                                <button
+                                    onClick={() => setReversePhonetics(!reversePhonetics)}
+                                    className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all border ${reversePhonetics ? 'bg-accent text-accent-foreground border-accent' : 'bg-transparent text-accent border-accent/20 hover:bg-accent/10'}`}
+                                    title="Inverser les lettres de la phonétique"
+                                >
+                                    <span className="hidden sm:inline">Phonétique RTL</span>
+                                    <span className="sm:hidden">RTL</span>
+                                </button>
+                            )}
+                        </>
                     )}
                 </div>
             </div>
@@ -323,6 +338,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                                         onTafsirClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation)}
                                         audioRef={audioRef}
                                         showPhonetic={showPhonetic}
+                                        reversePhonetics={reversePhonetics}
                                     />
                                 );
                             }

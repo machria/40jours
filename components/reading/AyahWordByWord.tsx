@@ -16,6 +16,7 @@ interface AyahWordByWordProps {
     onTafsirClick: () => void;
     audioRef: React.RefObject<HTMLAudioElement | null>;
     showPhonetic: boolean;
+    reversePhonetics?: boolean;
 }
 
 export default function AyahWordByWord({
@@ -27,7 +28,8 @@ export default function AyahWordByWord({
     onPlayClick,
     onTafsirClick,
     audioRef,
-    showPhonetic
+    showPhonetic,
+    reversePhonetics = false
 }: AyahWordByWordProps) {
     const { fontSize, fontSizes } = useSettings();
     const currentFontSize = fontSizes[fontSize];
@@ -108,10 +110,11 @@ export default function AyahWordByWord({
                             {/* Transliteration below the word */}
                             {showPhonetic && !isEndMarker && word.transliteration && (
                                 <span
-                                    className={`mt-2 text-xs font-sans dir-ltr transition-colors duration-200 ${isActive ? 'text-primary font-bold' : hasAudio ? 'text-muted-foreground' : 'text-muted-foreground/40'}`}
-                                    dir="ltr"
+                                    className={`mt-2 text-xs font-sans dir-rtl transition-colors duration-200 ${isActive ? 'text-primary font-bold' : hasAudio ? 'text-muted-foreground' : 'text-muted-foreground/40'} ${reversePhonetics ? 'tracking-[0.1em]' : ''}`}
+                                    dir="rtl"
+                                    title={reversePhonetics ? `Lecture normale: ${word.transliteration}` : undefined}
                                 >
-                                    {word.transliteration}
+                                    {reversePhonetics ? word.transliteration.split('').reverse().join('') : word.transliteration}
                                 </span>
                             )}
                         </div>

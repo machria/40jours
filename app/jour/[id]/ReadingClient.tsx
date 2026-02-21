@@ -13,6 +13,7 @@ import confetti from 'canvas-confetti';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 import AyahWordByWord from '@/components/reading/AyahWordByWord';
+import { useSettings } from '@/context/SettingsContext';
 
 interface ReadingClientProps {
     dayId: number;
@@ -88,6 +89,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
     // Fetch WBW
     const [wbwData, setWbwData] = useState<any[]>([]);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+    const { reversePhonetics, setReversePhonetics } = useSettings();
 
     useEffect(() => {
         if (!allPagesLoaded) return;
@@ -250,13 +252,22 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                     </div>
 
                     {hasWbw && (
-                        <div className="mt-2 flex justify-center">
+                        <div className="mt-2 flex justify-center gap-2 flex-wrap">
                             <button
                                 onClick={() => setIsWordByWordMode(!isWordByWordMode)}
                                 className={`text-xs font-semibold px-3 py-1 rounded-full border transition-colors ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
                             >
                                 {isWordByWordMode ? "Vue Normale" : "Mot par Mot"}
                             </button>
+                            {isWordByWordMode && (
+                                <button
+                                    onClick={() => setReversePhonetics(!reversePhonetics)}
+                                    className={`flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full border transition-colors ${reversePhonetics ? 'bg-accent text-accent-foreground border-accent' : 'bg-transparent text-accent border-accent/20 hover:bg-accent/10'}`}
+                                    title="Inverser les lettres de la phonétique"
+                                >
+                                    Phonétique RTL
+                                </button>
+                            )}
                         </div>
                     )}
                 </div>
@@ -319,6 +330,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                                     onTafsirClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
                                                     audioRef={audioRef}
                                                     showPhonetic={showPhonetic}
+                                                    reversePhonetics={reversePhonetics}
                                                 />
                                             </div>
                                         );

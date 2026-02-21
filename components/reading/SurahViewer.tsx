@@ -39,7 +39,7 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
     // Tafsir State - Keep as is
 
     // Settings
-    const { fontSize, fontSizes } = useSettings();
+    const { fontSize, fontSizes, reversePhonetics, setReversePhonetics } = useSettings();
     const currentFontSize = fontSizes[fontSize];
 
     // View State (Moved up to avoid TDZ)
@@ -147,6 +147,17 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
                     >
                         Phonétique
                     </button>
+
+                    {isWordByWordMode && (
+                        <button
+                            onClick={() => setReversePhonetics(!reversePhonetics)}
+                            className={`px-3 py-2 rounded-md text-sm font-medium transition-all border ${reversePhonetics ? 'bg-accent text-accent-foreground border-accent' : 'bg-background text-accent border-accent/20 hover:text-foreground'}`}
+                            title="Inverser les lettres de la phonétique"
+                        >
+                            <span className="hidden sm:inline">Phonétique RTL</span>
+                            <span className="sm:hidden">RTL</span>
+                        </button>
+                    )}
                 </div>
 
                 <div className="flex gap-2 w-full sm:w-auto overflow-x-auto">
@@ -210,6 +221,7 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
                                     onTafsirClick={() => openTafsir(ayah.surah, ayah.ayah, ayah.text, ayah.translation)}
                                     audioRef={audioRef}
                                     showPhonetic={showPhonetic}
+                                    reversePhonetics={reversePhonetics}
                                 />
                             );
                         }

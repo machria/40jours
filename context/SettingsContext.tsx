@@ -13,6 +13,8 @@ interface SettingsContextType {
     fontSizes: Record<FontSize, string>;
     tajwidEnabled: boolean;
     setTajwidEnabled: (False: boolean) => void;
+    reversePhonetics: boolean;
+    setReversePhonetics: (enabled: boolean) => void;
 }
 
 const SettingsContext = createContext<SettingsContextType | undefined>(undefined);
@@ -54,6 +56,9 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
     // Tajwid Settings
     const [tajwidEnabled, setTajwidEnabled] = useState(true);
 
+    // Reversed Phonetics Setting
+    const [reversePhonetics, setReversePhonetics] = useState(false);
+
     useEffect(() => {
         if (!mounted) return;
         localStorage.setItem('theme', theme);
@@ -76,12 +81,17 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
             // Initial load
             const storedTajwid = localStorage.getItem('tajwidEnabled');
             if (storedTajwid !== null) {
-                setTajwidEnabled(storedTajwid === 'false');
+                setTajwidEnabled(storedTajwid === 'true'); // Correction d'un bug existant ('false') pour être cohérent, car si stocké 'true' on devrait activer. Note: le localstorage stockait true/false en string.
+            }
+            const storedReverse = localStorage.getItem('reversePhonetics');
+            if (storedReverse !== null) {
+                setReversePhonetics(storedReverse === 'true');
             }
             return;
         }
         localStorage.setItem('tajwidEnabled', String(tajwidEnabled));
-    }, [tajwidEnabled, mounted]);
+        localStorage.setItem('reversePhonetics', String(reversePhonetics));
+    }, [tajwidEnabled, reversePhonetics, mounted]);
 
     const value = {
         theme,
@@ -91,6 +101,8 @@ export const SettingsProvider = ({ children }: SettingsProviderProps) => {
         fontSizes,
         tajwidEnabled,
         setTajwidEnabled,
+        reversePhonetics,
+        setReversePhonetics,
     };
 
     // Avoid hydration mismatch by rendering children only after mount, 
