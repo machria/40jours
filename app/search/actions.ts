@@ -19,7 +19,6 @@ interface SearchIndexItem {
 let searchIndex: SearchIndexItem[] | null = null;
 
 const QURAN_INDEX_PATH = path.join(process.cwd(), 'data', 'search', 'quran-index.json');
-const TAFSIR_INDEX_PATH = path.join(process.cwd(), 'data', 'search', 'tafsir-index.json');
 const AYAH_LOCATION_PATH = path.join(process.cwd(), 'data', 'ayah-location.json');
 
 function normalizeArabic(text: string): string {
@@ -53,20 +52,6 @@ function getQuranIndex(): SearchIndexItem[] {
     return [];
 }
 
-function getTafsirIndex(): SearchIndexItem[] {
-    if (global.tafsirSearchIndex) return global.tafsirSearchIndex;
-    try {
-        if (fs.existsSync(TAFSIR_INDEX_PATH)) {
-            // Tafsir index might be large, be careful.
-            const raw = fs.readFileSync(TAFSIR_INDEX_PATH, 'utf-8');
-            global.tafsirSearchIndex = JSON.parse(raw);
-            return global.tafsirSearchIndex!;
-        }
-    } catch (e) {
-        console.error("Failed to load tafsir search index", e);
-    }
-    return [];
-}
 
 export interface SearchResult {
     surah: number;
@@ -126,33 +111,6 @@ export async function searchQuran(query: string, limit: number = 50) {
     return hydratedResults;
 }
 
-export async function searchTafsir(query: string, limit: number = 50) {
-    if (!query || query.length < 2) return [];
-
-    const index = getTafsirIndex();
-
-    // Multi-word support
-    const rawTerms = query.split(/\s+/).filter(t => t.length > 0);
-    const terms = rawTerms.map(t => normalizeFrench(t));
-
-    const results = index.filter(item => {
-        if (!item.tn) return false;
-        // Check if ALL terms are present in Tafsir text
-        return terms.every(term => item.tn.includes(term));
-    });
-
-    // Limit results
-    const topResults = results.slice(0, limit);
-
-    // Hydrate with Tafsir Snippet (requires loading Tafsir data)
-    // For now, we return metadata, client might need to fetch text?
-    // Or we load Tafsir data here.
-    return topResults.map(item => ({
-        surah: item.s,
-        ayah: item.a,
-        key: `${item.s}:${item.a}`
-    }));
-}
 
 // Helper to get text for specific results (Batch fetch)
 // Reads strictly necessary pages
@@ -197,6 +155,5 @@ export async function getAyahsData(refs: { surah: number, ayah: number }[]) {
 // Augment global type for the cache
 declare global {
     var quranSearchIndex: SearchIndexItem[] | undefined;
-    var tafsirSearchIndex: SearchIndexItem[] | undefined;
     var ayahLocationMap: Record<string, number> | undefined;
 }
