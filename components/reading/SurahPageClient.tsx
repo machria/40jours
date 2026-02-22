@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, BrainCircuit, Info } from 'lucide-react';
 import SurahViewer from '@/components/reading/SurahViewer';
@@ -11,15 +11,23 @@ interface SurahPageClientProps {
     ayahs: any[];
     meta: any;
     surahId: number;
-    wbwData?: any[];
 }
 
-export default function SurahPageClient({ ayahs, meta, surahId, wbwData }: SurahPageClientProps) {
+export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClientProps) {
     const [isQuizOpen, setIsQuizOpen] = useState(false);
     const [isInfoOpen, setIsInfoOpen] = useState(false);
-    // Determine if Word By Word is available
-    const hasWbw = wbwData && wbwData.length > 0;
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+    const [wbwData, setWbwData] = useState<any[] | null>(null);
+    const wbwLoaded = useRef(false);
+
+    useEffect(() => {
+        if (!isWordByWordMode || wbwLoaded.current) return;
+        wbwLoaded.current = true;
+        fetch(`/quran/word_by_word/${surahId}.json`)
+            .then(res => res.json())
+            .then(data => setWbwData(Array.isArray(data) ? data : null))
+            .catch(() => setWbwData(null));
+    }, [isWordByWordMode, surahId]);
 
     return (
         <div className="min-h-screen bg-background">
@@ -69,16 +77,15 @@ export default function SurahPageClient({ ayahs, meta, surahId, wbwData }: Surah
                             <span className="hidden lg:inline">Mémorisation</span>
                         </button>
 
-                        {hasWbw && (
-                            <button
-                                onClick={() => setIsWordByWordMode(!isWordByWordMode)}
-                                className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
-                                title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
-                            >
-                                <span className="hidden lg:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
-                                {!isWordByWordMode && <span className="lg:hidden">Mots</span>}
-                            </button>
-                        )}
+                        <button
+                            onClick={() => setIsWordByWordMode(!isWordByWordMode)}
+                            className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
+                            title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
+                        >
+                            <span className="hidden lg:inline">{isWordByWordMode ? "Vue Normale" : "Mot par Mot"}</span>
+                            {!isWordByWordMode && <span className="lg:hidden">Mots</span>}
+                        </button>
+
                         <div className="font-kufi text-xl font-bold text-primary hidden sm:block">
                             {meta?.name}
                         </div>
@@ -90,11 +97,11 @@ export default function SurahPageClient({ ayahs, meta, surahId, wbwData }: Surah
                 {/* Bismillah (skip for Surah 1 and 9 usually) */}
                 {surahId !== 1 && surahId !== 9 && (
                     <div className="text-center py-8 font-kufi text-2xl text-primary/80">
-                        بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+                        بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
                     </div>
                 )}
 
-                <SurahViewer ayahs={ayahs} surahId={surahId} wbwData={wbwData} isWordByWordMode={isWordByWordMode} />
+                <SurahViewer ayahs={ayahs} surahId={surahId} wbwData={wbwData ?? undefined} isWordByWordMode={isWordByWordMode} />
             </main>
         </div>
     );

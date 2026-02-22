@@ -26,6 +26,10 @@ const INDEX_PATH = path.join(process.cwd(), 'data', 'hadith-search-index.json');
 // Use public directory as the source of truth, matching hadith-api.ts
 const PUBLIC_DATA_DIR = path.join(process.cwd(), 'public', 'hadith');
 
+// Module-level caches to avoid repeated disk reads on warm instances
+const metaCache: Record<string, any> = {};
+const sectionCache: Record<string, any[]> = {};
+
 // Priority order for results
 const COLLECTION_ORDER = ['bukhari', 'muslim', 'nasai', 'tirmidhi', 'malik', 'ibnmajah', 'abudawud'];
 
@@ -53,21 +57,20 @@ function normalizeFrench(text: string): string {
 
 // Helper to get full Hadith data including section info
 async function getHadithData(collection: string, number: string) {
-    // Load collection metadata to find the section
-    // We read specific collection metadata from public/hadith/[collection]/metadata.json
     const metadataPath = path.join(PUBLIC_DATA_DIR, collection, 'metadata.json');
 
-    if (!fs.existsSync(metadataPath)) return null;
-
-    let meta: any;
-    try {
-        meta = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
-    } catch (e) {
-        console.error(`Failed to read metadata for ${collection}`, e);
-        return null;
+    if (!metaCache[collection]) {
+        if (!fs.existsSync(metadataPath)) return null;
+        try {
+            metaCache[collection] = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
+        } catch (e) {
+            console.error(`Failed to read metadata for ${collection}`, e);
+            return null;
+        }
     }
 
-    if (!meta || !meta.section_details) return null;
+    const meta = metaCache[collection];
+    if (!meta?.section_details) return null;
 
     const numericHadithNumber = parseFloat(number);
     let sectionId = "unknown";
@@ -79,27 +82,23 @@ async function getHadithData(collection: string, number: string) {
         }
     }
 
-    // Load Section File from public/hadith/[collection]/section-[id].json
-    const sectionPath = path.join(PUBLIC_DATA_DIR, collection, `section-${sectionId}.json`);
-
-    if (fs.existsSync(sectionPath)) {
+    const cacheKey = `${collection}:${sectionId}`;
+    if (!sectionCache[cacheKey]) {
+        const sectionPath = path.join(PUBLIC_DATA_DIR, collection, `section-${sectionId}.json`);
+        if (!fs.existsSync(sectionPath)) return null;
         try {
-            const raw = fs.readFileSync(sectionPath, 'utf-8');
-            const hadiths = JSON.parse(raw);
-            const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
-
-            if (hadith) {
-                return {
-                    ...hadith,
-                    sectionId
-                };
-            }
+            sectionCache[cacheKey] = JSON.parse(fs.readFileSync(sectionPath, 'utf-8'));
         } catch (e) {
             console.error(`Failed to read section ${sectionId} for ${collection}`, e);
+            return null;
         }
     }
 
-    return null;
+    const hadiths = sectionCache[cacheKey];
+    const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
+    if (!hadith) return null;
+
+    return { ...hadith, sectionId };
 }
 
 export async function searchHadith(query: string, limit: number = 60) {

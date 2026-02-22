@@ -140,17 +140,6 @@ function getSurahMeta(surahId: number) {
     }
 }
 
-function getWordByWordData(surahId: number) {
-    try {
-        const p = path.join(process.cwd(), 'data', 'quran', 'word_by_word', `${surahId}.json`);
-        if (!fs.existsSync(p)) return null;
-        const file = fs.readFileSync(p, 'utf-8');
-        return JSON.parse(file);
-    } catch (e) {
-        console.error("No wbw data for surah", surahId);
-        return null;
-    }
-}
 
 
 
@@ -181,7 +170,6 @@ export default async function SurahPage({ params }: { params: Promise<{ id: stri
     const ayahs = getSurahData(surahId);
     const meta = getSurahMeta(surahId);
     const phonetics = getPhoneticData(surahId);
-    const wbwData = getWordByWordData(surahId);
 
     // Merge phonetic data
     if (phonetics.length > 0) {
@@ -198,7 +186,7 @@ export default async function SurahPage({ params }: { params: Promise<{ id: stri
     if (!ayahs.length) notFound();
 
     return (
-        <SurahPageClient ayahs={ayahs} meta={meta} surahId={surahId} wbwData={wbwData} />
+        <SurahPageClient ayahs={ayahs} meta={meta} surahId={surahId} />
     );
 }
 

@@ -68,6 +68,24 @@ export async function getSectionHadiths(name: CollectionName, sectionId: string)
     }
 }
 
+// Efficient: pick one random hadith by loading only one section file
+export async function getRandomHadithFromCollection(name: CollectionName): Promise<{
+    hadith: Hadith;
+    chapterTitle: string;
+} | null> {
+    const metadata = await getCollectionMetadata(name);
+    const sectionIds = Object.keys(metadata.section_details || {});
+    if (!sectionIds.length) return null;
+
+    const randomSectionId = sectionIds[Math.floor(Math.random() * sectionIds.length)];
+    const hadiths = await getSectionHadiths(name, randomSectionId);
+    if (!hadiths.length) return null;
+
+    const hadith = hadiths[Math.floor(Math.random() * hadiths.length)];
+    const chapterTitle = metadata.sections[randomSectionId] || '';
+    return { hadith, chapterTitle };
+}
+
 // Deprecated or expensive: Load ALL sections
 // Created to satisfy existing signature if needed, but optimally unused.
 export async function getCollection(name: CollectionName): Promise<HadithCollection> {

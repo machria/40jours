@@ -79,34 +79,6 @@ export default async function JuzPage({ params }: PageProps) {
         });
     }
 
-    // --- Load Word By Word Data for this Juz ---
-    const wbwData: any[] = [];
-    const uniqueSurahs = Array.from(new Set(allAyahs.map(a => a.surahNumber)));
-
-    uniqueSurahs.forEach(surahNum => {
-        try {
-            const wbwPath = path.join(process.cwd(), 'data', 'quran', 'word_by_word', `${surahNum}.json`);
-            if (fs.existsSync(wbwPath)) {
-                const surahWbwData = JSON.parse(fs.readFileSync(wbwPath, 'utf-8'));
-                // Filter only the ayahs that are in this juz
-                const ayahsInJuzForThisSurah = allAyahs.filter(a => a.surahNumber === surahNum).map(a => a.numberInSurah);
-
-                // Add surah and ayah numbers to wbw objects for easy matching in JuzViewer
-                const relevantWbw = surahWbwData
-                    .filter((w: any) => ayahsInJuzForThisSurah.includes(parseInt(w.verse_key.split(':')[1])))
-                    .map((w: any) => ({
-                        ...w,
-                        surah: surahNum,
-                        ayah: parseInt(w.verse_key.split(':')[1])
-                    }));
-
-                wbwData.push(...relevantWbw);
-            }
-        } catch (e) {
-            console.error(`Failed to load wbw relative to surah ${surahNum}`, e);
-        }
-    });
-
     return (
         <main className="container mx-auto px-4 py-8">
             <JuzViewer
@@ -114,7 +86,6 @@ export default async function JuzPage({ params }: PageProps) {
                 juzId={id}
                 theme={juz.theme}
                 description={juz.description}
-                wbwData={wbwData.length > 0 ? wbwData : undefined}
             />
         </main>
     );

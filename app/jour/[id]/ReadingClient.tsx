@@ -101,21 +101,25 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
 
         const uniqueSurahs = Array.from(new Set(playlist.map(item => item.surah)));
         if (uniqueSurahs.length > 0) {
-            const params = new URLSearchParams();
-            uniqueSurahs.forEach(s => params.append('surah', s.toString()));
-
-            fetch(`/api/wbw?${params.toString()}`)
-                .then(res => res.json())
-                .then(data => {
-                    if (Array.isArray(data) && data.length > 0) {
-                        setWbwData(data);
-                    }
+            Promise.all(
+                uniqueSurahs.map(s =>
+                    fetch(`/quran/word_by_word/${s}.json`)
+                        .then(res => res.json())
+                        .then((data: any[]) => data.map(v => ({
+                            ...v,
+                            surah: s,
+                            ayah: parseInt(v.verse_key.split(':')[1])
+                        })))
+                        .catch(() => [] as any[])
+                )
+            )
+                .then(results => {
+                    const flat = results.flat();
+                    if (flat.length > 0) setWbwData(flat);
                 })
                 .catch(err => console.error("Failed to load WbW data", err));
         }
     }, [allPagesLoaded, isWordByWordMode, playlist]);
-
-    const hasWbw = wbwData.length > 0;
 
     // Audio Hook
     const {
@@ -256,7 +260,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                         </button>
                     </div>
 
-                    {hasWbw && (
+                    {(
                         <div className="mt-2 flex justify-center gap-2 flex-wrap">
                             <button
                                 onClick={() => setIsWordByWordMode(!isWordByWordMode)}

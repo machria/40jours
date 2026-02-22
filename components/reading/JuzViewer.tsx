@@ -31,15 +31,36 @@ interface JuzViewerProps {
     juzId: number;
     theme?: string;
     description?: string;
-    wbwData?: any[];
 }
 
-export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }: JuzViewerProps) {
+export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewerProps) {
     const { data: session } = useSession();
     const userEmail = session?.user?.email;
 
-    const hasWbw = wbwData && wbwData.length > 0;
+    const [wbwData, setWbwData] = useState<any[]>([]);
+    const wbwLoaded = useRef(false);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+
+    useEffect(() => {
+        if (!isWordByWordMode || wbwLoaded.current) return;
+        wbwLoaded.current = true;
+        const uniqueSurahs = Array.from(new Set(ayahs.map(a => a.surahNumber)));
+        Promise.all(
+            uniqueSurahs.map(surahNum =>
+                fetch(`/quran/word_by_word/${surahNum}.json`)
+                    .then(res => res.json())
+                    .then((data: any[]) => {
+                        const ayahsInJuz = new Set(
+                            ayahs.filter(a => a.surahNumber === surahNum).map(a => a.numberInSurah)
+                        );
+                        return data
+                            .filter(w => ayahsInJuz.has(parseInt(w.verse_key.split(':')[1])))
+                            .map(w => ({ ...w, surah: surahNum, ayah: parseInt(w.verse_key.split(':')[1]) }));
+                    })
+                    .catch(() => [] as any[])
+            )
+        ).then(results => setWbwData(results.flat()));
+    }, [isWordByWordMode, ayahs]);
     const { reversePhonetics, setReversePhonetics } = useSettings();
 
     const [completed, setCompleted] = useState(false);
@@ -240,7 +261,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
                         Mushaf
                     </button>
 
-                    {hasWbw && viewMode === 'list' && (
+                    {viewMode === 'list' && (
                         <>
                             <button
                                 onClick={() => setIsWordByWordMode(!isWordByWordMode)}
