@@ -19,7 +19,6 @@ interface Ayah {
     translation: string;
     page: number;
     surahName?: string;
-    phonetic?: string;
 }
 
 import { useSession } from 'next-auth/react';
@@ -41,6 +40,10 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
     const wbwLoaded = useRef(false);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
 
+    const [phoneticsMap, setPhoneticsMap] = useState<Map<string, string>>(new Map());
+    const phoneticsLoaded = useRef(false);
+    const [showPhonetic, setShowPhonetic] = useState(false);
+
     useEffect(() => {
         if (!isWordByWordMode || wbwLoaded.current) return;
         wbwLoaded.current = true;
@@ -61,6 +64,23 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
             )
         ).then(results => setWbwData(results.flat()));
     }, [isWordByWordMode, ayahs]);
+
+    useEffect(() => {
+        if (!showPhonetic || phoneticsLoaded.current) return;
+        phoneticsLoaded.current = true;
+        fetch('/quran-transliteration.json')
+            .then(res => res.json())
+            .then(data => {
+                const map = new Map<string, string>();
+                (data.quran || []).forEach((p: any) => map.set(`${p.chapter}:${p.verse}`, p.text));
+                setPhoneticsMap(map);
+            })
+            .catch(err => console.error('Failed to load phonetics', err));
+    }, [showPhonetic]);
+
+    const getPhonetic = (surahNumber: number, numberInSurah: number) =>
+        phoneticsMap.get(`${surahNumber}:${numberInSurah}`) ?? null;
+
     const { reversePhonetics, setReversePhonetics } = useSettings();
 
     const [completed, setCompleted] = useState(false);
@@ -194,7 +214,6 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
     };
 
     const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
-    const [showPhonetic, setShowPhonetic] = useState(false);
 
     return (
         <div className="pb-24">
@@ -406,9 +425,9 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                                         </div>
                                     </div>
 
-                                    {showPhonetic && ayah.phonetic && (
+                                    {showPhonetic && getPhonetic(ayah.surahNumber, ayah.numberInSurah) && (
                                         <div className="mb-4 text-gray-600 dark:text-gray-400 text-sm italic border-l-2 pl-4 border-primary/20 text-right md:text-left dir-ltr">
-                                            {ayah.phonetic}
+                                            {getPhonetic(ayah.surahNumber, ayah.numberInSurah)}
                                         </div>
                                     )}
 
