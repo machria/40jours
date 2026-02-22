@@ -36,14 +36,16 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
     // Phonetics State
     const [phoneticsData, setPhoneticsData] = useState<any[]>([]);
     const [showPhonetic, setShowPhonetic] = useState(false);
+    const phoneticsLoaded = useRef(false);
 
     useEffect(() => {
-        // Load phonetics data once
+        if (!showPhonetic || phoneticsLoaded.current) return;
+        phoneticsLoaded.current = true;
         fetch('/quran-transliteration.json')
             .then(res => res.json())
             .then(data => setPhoneticsData(data.quran))
             .catch(err => console.error("Error loading phonetics", err));
-    }, []);
+    }, [showPhonetic]);
 
     const getPhonetic = (surah: number, ayah: number) => {
         if (!phoneticsData.length) return null;
@@ -91,9 +93,11 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
     const [wbwData, setWbwData] = useState<any[]>([]);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
     const { reversePhonetics, setReversePhonetics } = useSettings();
+    const wbwLoaded = useRef(false);
 
     useEffect(() => {
-        if (!allPagesLoaded) return;
+        if (!allPagesLoaded || !isWordByWordMode || wbwLoaded.current) return;
+        wbwLoaded.current = true;
 
         const uniqueSurahs = Array.from(new Set(playlist.map(item => item.surah)));
         if (uniqueSurahs.length > 0) {
@@ -109,7 +113,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 })
                 .catch(err => console.error("Failed to load WbW data", err));
         }
-    }, [allPagesLoaded, playlist]);
+    }, [allPagesLoaded, isWordByWordMode, playlist]);
 
     const hasWbw = wbwData.length > 0;
 
