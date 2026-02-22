@@ -24,9 +24,16 @@ const nextConfig: NextConfig = {
           { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
-      // WBW : fichiers statiques immuables (1 an)
+      // Fichiers statiques immuables (WBW + translittération + pages Coran)
       {
-        source: '/quran/word_by_word/:path*',
+        source: '/quran/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/quran-transliteration.json',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
           { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
