@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Music, Mic, Layers, PlayCircle } from 'lucide-react';
+import { getAyahAudioUrl } from '@/lib/audioUrls';
 
 export default function TajwidPage() {
     return (
@@ -51,7 +52,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate An-Nas (114:1) - Focus sur "An-Nas"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/114001.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(114, 1)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -69,7 +70,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Falaq (113:2) - Focus sur "Min Sharri"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/113002.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(113, 2)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -87,7 +88,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Masad (111:3) - Focus sur "Naran Dhata"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/111003.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(111, 3)} type="audio/mpeg" />
                             </audio>
                         </div>
                     </div>
@@ -117,7 +118,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Adiyat (100:4) - Focus sur le Qaf</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/100004.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(100, 4)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -135,7 +136,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Ikhlas (112:3) - Focus sur le Dal final</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/112003.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(112, 3)} type="audio/mpeg" />
                             </audio>
                         </div>
                     </div>
@@ -165,7 +166,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate An-Nasr (110:1) - Focus sur "Jaaa'a"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/110001.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(110, 1)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -183,7 +184,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Kafirun (109:1) - Focus sur "Kafirouna"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/109001.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(109, 1)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -201,7 +202,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Fatiha (1:4) - Focus sur "Maliki"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/001004.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(1, 4)} type="audio/mpeg" />
                             </audio>
                         </div>
                     </div>
@@ -231,7 +232,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Qari'a (101:2) - Focus sur la liaison "Maa-l-Qari'ah"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/101002.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(101, 2)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -249,7 +250,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Ash-Shams (91:1) - Focus sur "Wash-Shams"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/091001.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(91, 1)} type="audio/mpeg" />
                             </audio>
                         </div>
 
@@ -267,7 +268,7 @@ export default function TajwidPage() {
                             </div>
                             <p className="text-xs text-muted-foreground italic mb-2">Sourate Al-Baqara (2:5) - Focus sur le Waw de "Ula'ika"</p>
                             <audio controls className="w-full h-8 rounded text-xs" preload="none">
-                                <source src="/audio/002005.mp3" type="audio/mpeg" />
+                                <source src={getAyahAudioUrl(2, 5)} type="audio/mpeg" />
                             </audio>
                         </div>
                     </div>

@@ -14,6 +14,7 @@ import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 import AyahWordByWord from '@/components/reading/AyahWordByWord';
 import { useSettings } from '@/context/SettingsContext';
+import { getAyahAudioUrl } from '@/lib/audioUrls';
 
 interface ReadingClientProps {
     dayId: number;
@@ -74,7 +75,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                     list.push({
                         surah: ayah.surahNumber,
                         ayah: ayah.numberInSurah,
-                        url: `/audio/${ayah.surahNumber.toString().padStart(3, '0')}${ayah.numberInSurah.toString().padStart(3, '0')}.mp3`,
+                        url: getAyahAudioUrl(ayah.surahNumber, ayah.numberInSurah),
                         metadata: {
                             surahName: `Sourate ${ayah.surahNumber}`,
                             text: ayah.text

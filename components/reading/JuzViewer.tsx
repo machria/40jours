@@ -9,6 +9,7 @@ import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useScrollPersistence } from '@/hooks/useScrollPersistence';
 import AyahWordByWord from '@/components/reading/AyahWordByWord';
 import { useSettings } from '@/context/SettingsContext';
+import { getAyahAudioUrl } from '@/lib/audioUrls';
 
 interface Ayah {
     id: number;
@@ -100,7 +101,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description, wbwData }:
     const playlist = ayahs.map(a => ({
         surah: a.surahNumber,
         ayah: a.numberInSurah,
-        url: `/audio/${a.surahNumber.toString().padStart(3, '0')}${a.numberInSurah.toString().padStart(3, '0')}.mp3`,
+        url: getAyahAudioUrl(a.surahNumber, a.numberInSurah),
         metadata: { surahName: `Sourate ${a.surahNumber}`, text: a.text }
     }));
 

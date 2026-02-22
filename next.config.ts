@@ -16,13 +16,58 @@ const nextConfig: NextConfig = {
   } as any,
   async headers() {
     return [
+      // Fichiers audio : cache navigateur + CDN Vercel (1 an, immuable)
       {
         source: '/audio/:path*',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      // JSON statiques publics (Coran, translittération, surahs…)
+      {
+        source: '/:path*.json',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=604800' },
+        ],
+      },
+      // Pages statiques du Coran, Hisn, Hadith
+      {
+        source: '/coran/:path*',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/hisn/:path*',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/hadith/:path*',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      // API statiques (Coran, WBW, Surah details)
+      {
+        source: '/api/quran/:path*',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/api/wbw',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/api/surah-details',
+        headers: [
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' },
         ],
       },
     ];
@@ -47,9 +92,9 @@ const withPWA = withPWAInit({
       /^manifest.*\.js$/
     ],
     runtimeCaching: [
-      // Cache Audio Files (CacheFirst - they don't change)
+      // Cache Audio Files (CacheFirst) — local /audio/ ou CDN externe
       {
-        urlPattern: /\/audio\/.*\.mp3/i,
+        urlPattern: /\/audio\/.*\.mp3$/i,
         handler: "CacheFirst",
         options: {
           cacheName: "audio-cache",

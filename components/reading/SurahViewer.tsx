@@ -8,6 +8,7 @@ import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useSettings } from '@/context/SettingsContext';
 import AyahWordByWord from './AyahWordByWord';
+import { getAyahAudioUrl } from '@/lib/audioUrls';
 
 interface Ayah {
     id: number;
@@ -59,7 +60,7 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
     const playlist = ayahs.map(a => ({
         surah: a.surah,
         ayah: a.ayah,
-        url: `/audio/${a.surah.toString().padStart(3, '0')}${a.ayah.toString().padStart(3, '0')}.mp3`,
+        url: getAyahAudioUrl(a.surah, a.ayah),
         metadata: { surahName: `Sourate ${a.surah}`, text: a.text }
     }));
 

@@ -1,3 +1,5 @@
+import { getLetterAudioUrl, getExampleAudioUrl } from '@/lib/audioUrls';
+
 export const playPronunciation = (input: string) => {
     // List of known letter IDs that have local audio files
     const knownLetters = [
@@ -50,11 +52,11 @@ export const playPronunciation = (input: string) => {
 
     if (knownLetters.includes(input)) {
         // Play local file for letters
-        const audio = new Audio(`/audio/letters/${input}.mp3`);
+        const audio = new Audio(getLetterAudioUrl(input));
         audio.play().catch(e => console.error("Audio playback failed", e));
     } else if (lessonExamples[input]) {
         // Play local file for lesson examples
-        const audio = new Audio(`/audio/examples/${lessonExamples[input]}.mp3`);
+        const audio = new Audio(getExampleAudioUrl(lessonExamples[input]));
         audio.play().catch(e => console.error("Audio playback failed", e));
     } else {
         console.warn(`No audio file found for: ${input}`);

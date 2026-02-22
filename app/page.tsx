@@ -1,35 +1,32 @@
 import { plan40jours } from '@/data/plan40jours';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
-import { auth } from "@/auth";
-import dbConnect from "@/lib/db";
-import User from "@/models/User";
+import { Suspense } from 'react';
+import HomeProgress from '@/components/HomeProgress';
 
-export default async function Home() {
-  const session = await auth();
-  let progressPercent = 0;
-  let nextDay = 1;
-  let completedDaysCount = 0;
+// Page entièrement statique : le progrès utilisateur est chargé côté client
+export const dynamic = 'force-static';
 
-  if (session?.user?.email) {
-    await dbConnect();
-    const user = await User.findOne({ email: session.user.email });
-    if (user && user.dailyProgress) {
-      const progressMap = user.dailyProgress instanceof Map ? user.dailyProgress : new Map(Object.entries(user.dailyProgress));
-      const completedDays = Array.from(progressMap.entries()).filter(([_, v]) => v).map(([k]) => parseInt(k));
-      completedDaysCount = completedDays.length;
-      progressPercent = Math.round((completedDaysCount / 40) * 100);
+function HomeProgressFallback() {
+  return (
+    <div className="bg-card border rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center space-y-4">
+      <div className="relative size-32 md:size-40 rounded-full border-4 border-accent flex items-center justify-center bg-accent/5">
+        <div className="text-center">
+          <span className="text-3xl font-bold block text-accent">0%</span>
+          <span className="text-xs text-muted-foreground">Complété</span>
+        </div>
+      </div>
+      <Link
+        href="/jour/1"
+        className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-3 rounded-full font-semibold transition-transform active:scale-95 shadow-lg shadow-primary/20 inline-block"
+      >
+        Commencer le Défi
+      </Link>
+    </div>
+  );
+}
 
-      // Find first uncompleted day
-      for (let i = 1; i <= 40; i++) {
-        if (!progressMap.get(i.toString())) {
-          nextDay = i;
-          break;
-        }
-      }
-    }
-  }
-
+export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8">
       <header className="mb-8 text-center space-y-2">
@@ -40,17 +37,9 @@ export default async function Home() {
 
 
       <section className="max-w-4xl mx-auto mb-12">
-        <div className="bg-card border rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center space-y-4">
-          <div className="relative size-32 md:size-40 rounded-full border-4 border-accent flex items-center justify-center bg-accent/5">
-            <div className="text-center">
-              <span className="text-3xl font-bold block text-accent">{progressPercent}%</span>
-              <span className="text-xs text-muted-foreground">Complété</span>
-            </div>
-          </div>
-          <Link href={`/jour/${nextDay}`} className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-3 rounded-full font-semibold transition-transform active:scale-95 shadow-lg shadow-primary/20 inline-block">
-            {completedDaysCount > 0 ? `Continuer (Jour ${nextDay})` : "Commencer le Défi"}
-          </Link>
-        </div>
+        <Suspense fallback={<HomeProgressFallback />}>
+          <HomeProgress />
+        </Suspense>
       </section>
 
       <section className="max-w-4xl mx-auto mb-12">
