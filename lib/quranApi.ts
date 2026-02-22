@@ -34,8 +34,6 @@ const quranCache: { [key: number]: QuranPageData } = {};
 // Using unknown for safe casting
 const tafsirCache: { [key: string]: unknown } = {};
 
-const API_BASE_URL = '/api/quran';
-
 export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
     if (quranCache[pageNumber]) {
         return quranCache[pageNumber];
@@ -44,17 +42,15 @@ export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
     try {
         let json;
         if (typeof window === 'undefined') {
-            // Server-side: Read directly from filesystem to avoid HTTP loopback issues on Vercel
+            // Server-side: Read directly from filesystem
             const path = (await import('path')).default;
             const fs = (await import('fs')).default;
 
             const filePath = path.join(process.cwd(), 'data', 'quran', 'pages', `${pageNumber}.json`);
 
-            // Allow this to throw if file missing, caught by catch block
             const fileContent = fs.readFileSync(filePath, 'utf-8');
             const pageAyahs = JSON.parse(fileContent);
 
-            // Construct JSON to match API response structure expected by processing logic
             json = {
                 data: {
                     ayahs: pageAyahs,
@@ -62,18 +58,15 @@ export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
                 }
             };
         } else {
-            // Client-side: Fetch via API
-            let url = `${API_BASE_URL}/page/${pageNumber}`;
-            const response = await fetch(url, {
-                cache: 'no-store'
-            });
+            // Client-side: Fetch static file directly from /public (no Lambda)
+            const response = await fetch(`/quran/pages/${pageNumber}.json`);
 
             if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(`Failed to fetch Quran page from local API: ${response.status} ${errorText}`);
+                throw new Error(`Failed to fetch Quran page: ${response.status}`);
             }
 
-            json = await response.json();
+            const pageAyahs = await response.json();
+            json = { data: { ayahs: pageAyahs, number: pageNumber } };
         }
 
         // Process JSON (Common Logic)

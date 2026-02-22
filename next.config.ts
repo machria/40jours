@@ -57,23 +57,17 @@ const nextConfig: NextConfig = {
       {
         source: '/hisn/:path*',
         headers: [
-          { key: 'CDN-Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
       {
         source: '/hadith/:path*',
         headers: [
-          { key: 'CDN-Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
-      // API statiques (Coran, WBW, Surah details)
-      {
-        source: '/api/quran/:path*',
-        headers: [
-          { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, stale-while-revalidate=86400' },
-        ],
-      },
-
       {
         source: '/api/surah-details',
         headers: [
