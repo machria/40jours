@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "وَٱلْفَجْرِ",
         "text_indopak": "وَالۡفَجۡرِۙ‏",
-        "translation": "By the dawn",
+        "translation": "À l'aube",
         "transliteration": "wal-fajri",
         "timestamp": {
           "from": 0,
@@ -38,7 +38,7 @@
         "char_type": "word",
         "text": "وَلَيَالٍ",
         "text_indopak": "وَلَيَالٍ",
-        "translation": "And the nights",
+        "translation": "Et les nuits",
         "transliteration": "walayālin",
         "timestamp": {
           "from": 0,
@@ -51,7 +51,7 @@
         "char_type": "word",
         "text": "عَشْرٍۢ",
         "text_indopak": "عَشۡرٍۙ‏",
-        "translation": "ten",
+        "translation": "dix",
         "transliteration": "ʿashrin",
         "timestamp": {
           "from": 735,
@@ -80,7 +80,7 @@
         "char_type": "word",
         "text": "وَٱلشَّفْعِ",
         "text_indopak": "وَّالشَّفۡعِ",
-        "translation": "And the even",
+        "translation": "Et le même",
         "transliteration": "wal-shafʿi",
         "timestamp": {
           "from": 0,
@@ -93,7 +93,7 @@
         "char_type": "word",
         "text": "وَٱلْوَتْرِ",
         "text_indopak": "وَالۡوَتۡرِۙ‏",
-        "translation": "and the odd",
+        "translation": "et les impairs",
         "transliteration": "wal-watri",
         "timestamp": {
           "from": 975,
@@ -122,7 +122,7 @@
         "char_type": "word",
         "text": "وَٱلَّيْلِ",
         "text_indopak": "وَالَّيۡلِ",
-        "translation": "And the night",
+        "translation": "Et la nuit",
         "transliteration": "wa-al-layli",
         "timestamp": {
           "from": 0,
@@ -135,7 +135,7 @@
         "char_type": "word",
         "text": "إِذَا",
         "text_indopak": "اِذَا",
-        "translation": "when",
+        "translation": "quand",
         "transliteration": "idhā",
         "timestamp": {
           "from": 1005,
@@ -148,7 +148,7 @@
         "char_type": "word",
         "text": "يَسْرِ",
         "text_indopak": "يَسۡرِ​ۚ‏",
-        "translation": "it passes",
+        "translation": "il est adopté",
         "transliteration": "yasri",
         "timestamp": {
           "from": 1655,
@@ -177,7 +177,7 @@
         "char_type": "word",
         "text": "هَلْ",
         "text_indopak": "هَلۡ",
-        "translation": "Is",
+        "translation": "Est",
         "transliteration": "hal",
         "timestamp": {
           "from": 0,
@@ -190,7 +190,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِىۡ",
-        "translation": "in",
+        "translation": "en",
         "transliteration": "fī",
         "timestamp": {
           "from": 345,
@@ -203,7 +203,7 @@
         "char_type": "word",
         "text": "ذَٰلِكَ",
         "text_indopak": "ذٰلِكَ",
-        "translation": "that",
+        "translation": "que",
         "transliteration": "dhālika",
         "timestamp": {
           "from": 875,
@@ -216,7 +216,7 @@
         "char_type": "word",
         "text": "قَسَمٌۭ",
         "text_indopak": "قَسَمٌ",
-        "translation": "(not) an oath",
+        "translation": "(pas) un serment",
         "transliteration": "qasamun",
         "timestamp": {
           "from": 1715,
@@ -229,7 +229,7 @@
         "char_type": "word",
         "text": "لِّذِى",
         "text_indopak": "لِّذِىۡ",
-        "translation": "for those",
+        "translation": "pour ceux qui",
         "transliteration": "lidhī",
         "timestamp": {
           "from": 2335,
@@ -242,7 +242,7 @@
         "char_type": "word",
         "text": "حِجْرٍ",
         "text_indopak": "حِجۡرٍؕ‏",
-        "translation": "who understand",
+        "translation": "qui comprennent",
         "transliteration": "ḥij'rin",
         "timestamp": {
           "from": 3215,
@@ -271,7 +271,7 @@
         "char_type": "word",
         "text": "أَلَمْ",
         "text_indopak": "اَلَمۡ",
-        "translation": "Did not",
+        "translation": "Ne l'a pas fait",
         "transliteration": "alam",
         "timestamp": {
           "from": 0,
@@ -284,7 +284,7 @@
         "char_type": "word",
         "text": "تَرَ",
         "text_indopak": "تَرَ",
-        "translation": "you see",
+        "translation": "vous voyez",
         "transliteration": "tara",
         "timestamp": {
           "from": 505,
@@ -297,7 +297,7 @@
         "char_type": "word",
         "text": "كَيْفَ",
         "text_indopak": "كَيۡفَ",
-        "translation": "how",
+        "translation": "comment",
         "transliteration": "kayfa",
         "timestamp": {
           "from": 925,
@@ -310,7 +310,7 @@
         "char_type": "word",
         "text": "فَعَلَ",
         "text_indopak": "فَعَلَ",
-        "translation": "dealt",
+        "translation": "traité",
         "transliteration": "faʿala",
         "timestamp": {
           "from": 1605,
@@ -323,7 +323,7 @@
         "char_type": "word",
         "text": "رَبُّكَ",
         "text_indopak": "رَبُّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbuka",
         "timestamp": {
           "from": 2335,
@@ -336,7 +336,7 @@
         "char_type": "word",
         "text": "بِعَادٍ",
         "text_indopak": "بِعَادٍۙ‏",
-        "translation": "with Aad",
+        "translation": "avec Aad",
         "transliteration": "biʿādin",
         "timestamp": {
           "from": 3095,
@@ -378,7 +378,7 @@
         "char_type": "word",
         "text": "ذَاتِ",
         "text_indopak": "ذَاتِ",
-        "translation": "possessors (of)",
+        "translation": "possesseurs (de)",
         "transliteration": "dhāti",
         "timestamp": {
           "from": 0,
@@ -391,7 +391,7 @@
         "char_type": "word",
         "text": "ٱلْعِمَادِ",
         "text_indopak": "الۡعِمَادِۙ‏",
-        "translation": "lofty pillars",
+        "translation": "piliers élevés",
         "transliteration": "l-ʿimādi",
         "timestamp": {
           "from": 575,
@@ -420,7 +420,7 @@
         "char_type": "word",
         "text": "ٱلَّتِى",
         "text_indopak": "الَّتِىۡ",
-        "translation": "Which",
+        "translation": "Qui",
         "transliteration": "allatī",
         "timestamp": {
           "from": 0,
@@ -433,7 +433,7 @@
         "char_type": "word",
         "text": "لَمْ",
         "text_indopak": "لَمۡ",
-        "translation": "not",
+        "translation": "pas",
         "transliteration": "lam",
         "timestamp": {
           "from": 895,
@@ -446,7 +446,7 @@
         "char_type": "word",
         "text": "يُخْلَقْ",
         "text_indopak": "يُخۡلَقۡ",
-        "translation": "had been created",
+        "translation": "avait été créée",
         "transliteration": "yukh'laq",
         "timestamp": {
           "from": 1295,
@@ -459,7 +459,7 @@
         "char_type": "word",
         "text": "مِثْلُهَا",
         "text_indopak": "مِثۡلُهَا",
-        "translation": "like them",
+        "translation": "les aimer",
         "transliteration": "mith'luhā",
         "timestamp": {
           "from": 2155,
@@ -472,7 +472,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِى",
-        "translation": "in",
+        "translation": "en",
         "transliteration": "fī",
         "timestamp": {
           "from": 3255,
@@ -485,7 +485,7 @@
         "char_type": "word",
         "text": "ٱلْبِلَـٰدِ",
         "text_indopak": "الۡبِلَادِۙ‏",
-        "translation": "the cities",
+        "translation": "les villes",
         "transliteration": "l-bilādi",
         "timestamp": {
           "from": 3485,
@@ -514,7 +514,7 @@
         "char_type": "word",
         "text": "وَثَمُودَ",
         "text_indopak": "وَثَمُوۡدَ",
-        "translation": "And Thamud",
+        "translation": "Et Thamud",
         "transliteration": "wathamūda",
         "timestamp": {
           "from": 0,
@@ -527,7 +527,7 @@
         "char_type": "word",
         "text": "ٱلَّذِينَ",
         "text_indopak": "الَّذِيۡنَ",
-        "translation": "who",
+        "translation": "qui",
         "transliteration": "alladhīna",
         "timestamp": {
           "from": 1055,
@@ -540,7 +540,7 @@
         "char_type": "word",
         "text": "جَابُوا۟",
         "text_indopak": "جَابُوا",
-        "translation": "carved out",
+        "translation": "découpé",
         "transliteration": "jābū",
         "timestamp": {
           "from": 2175,
@@ -553,7 +553,7 @@
         "char_type": "word",
         "text": "ٱلصَّخْرَ",
         "text_indopak": "الصَّخۡرَ",
-        "translation": "the rocks",
+        "translation": "les rochers",
         "transliteration": "l-ṣakhra",
         "timestamp": {
           "from": 2815,
@@ -566,7 +566,7 @@
         "char_type": "word",
         "text": "بِٱلْوَادِ",
         "text_indopak": "بِالۡوَادِۙ‏",
-        "translation": "in the valley",
+        "translation": "dans la vallée",
         "transliteration": "bil-wādi",
         "timestamp": {
           "from": 3715,
@@ -595,7 +595,7 @@
         "char_type": "word",
         "text": "وَفِرْعَوْنَ",
         "text_indopak": "وَفِرۡعَوۡنَ",
-        "translation": "And Firaun",
+        "translation": "Et Firaun",
         "transliteration": "wafir'ʿawna",
         "timestamp": {
           "from": 0,
@@ -608,7 +608,7 @@
         "char_type": "word",
         "text": "ذِى",
         "text_indopak": "ذِى",
-        "translation": "owner of",
+        "translation": "propriétaire de",
         "transliteration": "dhī",
         "timestamp": {
           "from": 1225,
@@ -621,7 +621,7 @@
         "char_type": "word",
         "text": "ٱلْأَوْتَادِ",
         "text_indopak": "الۡاَوۡتَادِۙ‏",
-        "translation": "stakes",
+        "translation": "enjeux",
         "transliteration": "l-awtādi",
         "timestamp": {
           "from": 1575,
@@ -650,7 +650,7 @@
         "char_type": "word",
         "text": "ٱلَّذِينَ",
         "text_indopak": "الَّذِيۡنَ",
-        "translation": "Who",
+        "translation": "Qui",
         "transliteration": "alladhīna",
         "timestamp": {
           "from": 0,
@@ -663,7 +663,7 @@
         "char_type": "word",
         "text": "طَغَوْا۟",
         "text_indopak": "طَغَوۡا",
-        "translation": "transgressed",
+        "translation": "transgressé",
         "transliteration": "ṭaghaw",
         "timestamp": {
           "from": 1105,
@@ -676,7 +676,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِى",
-        "translation": "in",
+        "translation": "en",
         "transliteration": "fī",
         "timestamp": {
           "from": 1735,
@@ -689,7 +689,7 @@
         "char_type": "word",
         "text": "ٱلْبِلَـٰدِ",
         "text_indopak": "الۡبِلَادِۙ‏",
-        "translation": "the lands",
+        "translation": "les terres",
         "transliteration": "l-bilādi",
         "timestamp": {
           "from": 1985,
@@ -718,7 +718,7 @@
         "char_type": "word",
         "text": "فَأَكْثَرُوا۟",
         "text_indopak": "فَاَكۡثَرُوۡا",
-        "translation": "And (made) much",
+        "translation": "Et (fait) beaucoup",
         "transliteration": "fa-aktharū",
         "timestamp": {
           "from": 0,
@@ -731,7 +731,7 @@
         "char_type": "word",
         "text": "فِيهَا",
         "text_indopak": "فِيۡهَا",
-        "translation": "therein",
+        "translation": "là",
         "transliteration": "fīhā",
         "timestamp": {
           "from": 1165,
@@ -773,7 +773,7 @@
         "char_type": "word",
         "text": "فَصَبَّ",
         "text_indopak": "فَصَبَّ",
-        "translation": "So poured",
+        "translation": "Ainsi versé",
         "transliteration": "faṣabba",
         "timestamp": {
           "from": 0,
@@ -786,7 +786,7 @@
         "char_type": "word",
         "text": "عَلَيْهِمْ",
         "text_indopak": "عَلَيۡهِمۡ",
-        "translation": "on them",
+        "translation": "sur eux",
         "transliteration": "ʿalayhim",
         "timestamp": {
           "from": 705,
@@ -799,7 +799,7 @@
         "char_type": "word",
         "text": "رَبُّكَ",
         "text_indopak": "رَبُّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbuka",
         "timestamp": {
           "from": 1735,
@@ -812,7 +812,7 @@
         "char_type": "word",
         "text": "سَوْطَ",
         "text_indopak": "سَوۡطَ",
-        "translation": "scourge",
+        "translation": "fléau",
         "transliteration": "sawṭa",
         "timestamp": {
           "from": 2595,
@@ -825,7 +825,7 @@
         "char_type": "word",
         "text": "عَذَابٍ",
         "text_indopak": "عَذَابٍ ۙۚ‏",
-        "translation": "(of) punishment",
+        "translation": "(de) punition",
         "transliteration": "ʿadhābin",
         "timestamp": {
           "from": 3225,
@@ -854,7 +854,7 @@
         "char_type": "word",
         "text": "إِنَّ",
         "text_indopak": "اِنَّ",
-        "translation": "Indeed",
+        "translation": "En effet",
         "transliteration": "inna",
         "timestamp": {
           "from": 0,
@@ -867,7 +867,7 @@
         "char_type": "word",
         "text": "رَبَّكَ",
         "text_indopak": "رَبَّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbaka",
         "timestamp": {
           "from": 1055,
@@ -880,7 +880,7 @@
         "char_type": "word",
         "text": "لَبِٱلْمِرْصَادِ",
         "text_indopak": "لَبِالۡمِرۡصَادِؕ‏",
-        "translation": "(is) surely Ever Watchful",
+        "translation": "(est) assurément toujours vigilant(e)",
         "transliteration": "labil-mir'ṣādi",
         "timestamp": {
           "from": 1835,
@@ -909,7 +909,7 @@
         "char_type": "word",
         "text": "فَأَمَّا",
         "text_indopak": "فَاَمَّا",
-        "translation": "And as for",
+        "translation": "Quant à",
         "transliteration": "fa-ammā",
         "timestamp": {
           "from": 0,
@@ -922,7 +922,7 @@
         "char_type": "word",
         "text": "ٱلْإِنسَـٰنُ",
         "text_indopak": "الۡاِنۡسَانُ",
-        "translation": "man",
+        "translation": "homme",
         "transliteration": "l-insānu",
         "timestamp": {
           "from": 1495,
@@ -935,7 +935,7 @@
         "char_type": "word",
         "text": "إِذَا",
         "text_indopak": "اِذَا",
-        "translation": "when",
+        "translation": "quand",
         "transliteration": "idhā",
         "timestamp": {
           "from": 3545,
@@ -948,7 +948,7 @@
         "char_type": "word",
         "text": "مَا",
         "text_indopak": "مَا",
-        "translation": "does",
+        "translation": "fait",
         "transliteration": "mā",
         "timestamp": {
           "from": 4195,
@@ -961,7 +961,7 @@
         "char_type": "word",
         "text": "ٱبْتَلَىٰهُ",
         "text_indopak": "ابۡتَلٰٮهُ",
-        "translation": "try him",
+        "translation": "l'essayer",
         "transliteration": "ib'talāhu",
         "timestamp": {
           "from": 4315,
@@ -974,7 +974,7 @@
         "char_type": "word",
         "text": "رَبُّهُۥ",
         "text_indopak": "رَبُّهٗ",
-        "translation": "his Lord",
+        "translation": "son Seigneur",
         "transliteration": "rabbuhu",
         "timestamp": {
           "from": 5495,
@@ -987,7 +987,7 @@
         "char_type": "word",
         "text": "فَأَكْرَمَهُۥ",
         "text_indopak": "فَاَكۡرَمَهٗ",
-        "translation": "and is generous to him",
+        "translation": "et est généreux avec lui",
         "transliteration": "fa-akramahu",
         "timestamp": {
           "from": 6505,
@@ -1000,7 +1000,7 @@
         "char_type": "word",
         "text": "وَنَعَّمَهُۥ",
         "text_indopak": "وَنَعَّمَهٗ  ۙ",
-        "translation": "and favors him",
+        "translation": "et le favorise",
         "transliteration": "wanaʿʿamahu",
         "timestamp": {
           "from": 8075,
@@ -1013,7 +1013,7 @@
         "char_type": "word",
         "text": "فَيَقُولُ",
         "text_indopak": "فَيَقُوۡلُ",
-        "translation": "he says",
+        "translation": "il dit",
         "transliteration": "fayaqūlu",
         "timestamp": {
           "from": 9455,
@@ -1026,7 +1026,7 @@
         "char_type": "word",
         "text": "رَبِّىٓ",
         "text_indopak": "رَبِّىۡۤ",
-        "translation": "My Lord",
+        "translation": "Mon Seigneur",
         "transliteration": "rabbī",
         "timestamp": {
           "from": 10595,
@@ -1039,7 +1039,7 @@
         "char_type": "word",
         "text": "أَكْرَمَنِ",
         "text_indopak": "اَكۡرَمَنِؕ‏",
-        "translation": "has honored me",
+        "translation": "m'a honoré",
         "transliteration": "akramani",
         "timestamp": {
           "from": 13135,
@@ -1068,7 +1068,7 @@
         "char_type": "word",
         "text": "وَأَمَّآ",
         "text_indopak": "وَاَمَّاۤ",
-        "translation": "But",
+        "translation": "Mais",
         "transliteration": "wa-ammā",
         "timestamp": {
           "from": 0,
@@ -1081,7 +1081,7 @@
         "char_type": "word",
         "text": "إِذَا",
         "text_indopak": "اِذَا",
-        "translation": "when",
+        "translation": "quand",
         "transliteration": "idhā",
         "timestamp": {
           "from": 3085,
@@ -1094,7 +1094,7 @@
         "char_type": "word",
         "text": "مَا",
         "text_indopak": "مَا",
-        "translation": "does",
+        "translation": "fait",
         "transliteration": "mā",
         "timestamp": {
           "from": 3695,
@@ -1107,7 +1107,7 @@
         "char_type": "word",
         "text": "ٱبْتَلَىٰهُ",
         "text_indopak": "ابۡتَلٰٮهُ",
-        "translation": "He try him",
+        "translation": "Il l'a essayé",
         "transliteration": "ib'talāhu",
         "timestamp": {
           "from": 3825,
@@ -1120,7 +1120,7 @@
         "char_type": "word",
         "text": "فَقَدَرَ",
         "text_indopak": "فَقَدَرَ",
-        "translation": "and restricts",
+        "translation": "et restreint",
         "transliteration": "faqadara",
         "timestamp": {
           "from": 4945,
@@ -1133,7 +1133,7 @@
         "char_type": "word",
         "text": "عَلَيْهِ",
         "text_indopak": "عَلَيۡهِ",
-        "translation": "for him",
+        "translation": "pour lui",
         "transliteration": "ʿalayhi",
         "timestamp": {
           "from": 5845,
@@ -1146,7 +1146,7 @@
         "char_type": "word",
         "text": "رِزْقَهُۥ",
         "text_indopak": "رِزۡقَهٗ ۙ",
-        "translation": "his provision",
+        "translation": "sa disposition",
         "transliteration": "riz'qahu",
         "timestamp": {
           "from": 6705,
@@ -1159,7 +1159,7 @@
         "char_type": "word",
         "text": "فَيَقُولُ",
         "text_indopak": "فَيَقُوۡلُ",
-        "translation": "then he says",
+        "translation": "puis il dit",
         "transliteration": "fayaqūlu",
         "timestamp": {
           "from": 7715,
@@ -1172,7 +1172,7 @@
         "char_type": "word",
         "text": "رَبِّىٓ",
         "text_indopak": "رَبِّىۡۤ",
-        "translation": "My Lord",
+        "translation": "Mon Seigneur",
         "transliteration": "rabbī",
         "timestamp": {
           "from": 8865,
@@ -1185,7 +1185,7 @@
         "char_type": "word",
         "text": "أَهَـٰنَنِ",
         "text_indopak": "اَهَانَنِ​ۚ‏",
-        "translation": "(has) humiliated me",
+        "translation": "(m'a) humilié",
         "transliteration": "ahānani",
         "timestamp": {
           "from": 10945,
@@ -1227,7 +1227,7 @@
         "char_type": "word",
         "text": "بَل",
         "text_indopak": "بَلۡ",
-        "translation": "But",
+        "translation": "Mais",
         "transliteration": "bal",
         "timestamp": {
           "from": 835,
@@ -1240,7 +1240,7 @@
         "char_type": "word",
         "text": "لَّا",
         "text_indopak": "لَّا",
-        "translation": "not",
+        "translation": "pas",
         "transliteration": "lā",
         "timestamp": {
           "from": 1385,
@@ -1253,7 +1253,7 @@
         "char_type": "word",
         "text": "تُكْرِمُونَ",
         "text_indopak": "تُكۡرِمُوۡنَ",
-        "translation": "you honor",
+        "translation": "vous honorez",
         "transliteration": "tuk'rimūna",
         "timestamp": {
           "from": 2005,
@@ -1266,7 +1266,7 @@
         "char_type": "word",
         "text": "ٱلْيَتِيمَ",
         "text_indopak": "الۡيَتِيۡمَۙ‏",
-        "translation": "the orphan",
+        "translation": "l'orphelin",
         "transliteration": "l-yatīma",
         "timestamp": {
           "from": 3285,
@@ -1295,7 +1295,7 @@
         "char_type": "word",
         "text": "وَلَا",
         "text_indopak": "وَلَا",
-        "translation": "And not",
+        "translation": "Et non",
         "transliteration": "walā",
         "timestamp": {
           "from": 0,
@@ -1308,7 +1308,7 @@
         "char_type": "word",
         "text": "تَحَـٰٓضُّونَ",
         "text_indopak": "تَحٰٓضُّوۡنَ",
-        "translation": "you feel the urge",
+        "translation": "vous ressentez l'envie",
         "transliteration": "taḥāḍḍūna",
         "timestamp": {
           "from": 575,
@@ -1321,7 +1321,7 @@
         "char_type": "word",
         "text": "عَلَىٰ",
         "text_indopak": "عَلٰى",
-        "translation": "to",
+        "translation": "à",
         "transliteration": "ʿalā",
         "timestamp": {
           "from": 4295,
@@ -1334,7 +1334,7 @@
         "char_type": "word",
         "text": "طَعَامِ",
         "text_indopak": "طَعَامِ",
-        "translation": "feed",
+        "translation": "alimentation",
         "transliteration": "ṭaʿāmi",
         "timestamp": {
           "from": 4925,
@@ -1347,7 +1347,7 @@
         "char_type": "word",
         "text": "ٱلْمِسْكِينِ",
         "text_indopak": "الۡمِسۡكِيۡنِۙ‏",
-        "translation": "the poor",
+        "translation": "les pauvres",
         "transliteration": "l-mis'kīni",
         "timestamp": {
           "from": 5835,
@@ -1376,7 +1376,7 @@
         "char_type": "word",
         "text": "وَتَأْكُلُونَ",
         "text_indopak": "وَتَاۡكُلُوۡنَ",
-        "translation": "And you consume",
+        "translation": "Et vous consommez",
         "transliteration": "watakulūna",
         "timestamp": {
           "from": 0,
@@ -1389,7 +1389,7 @@
         "char_type": "word",
         "text": "ٱلتُّرَاثَ",
         "text_indopak": "التُّرَاثَ",
-        "translation": "the inheritance",
+        "translation": "l'héritage",
         "transliteration": "l-turātha",
         "timestamp": {
           "from": 1375,
@@ -1402,7 +1402,7 @@
         "char_type": "word",
         "text": "أَكْلًۭا",
         "text_indopak": "اَكۡلًا",
-        "translation": "devouring",
+        "translation": "dévorant",
         "transliteration": "aklan",
         "timestamp": {
           "from": 2445,
@@ -1415,7 +1415,7 @@
         "char_type": "word",
         "text": "لَّمًّۭا",
         "text_indopak": "لَّـمًّا ۙ‏",
-        "translation": "altogether",
+        "translation": "au total",
         "transliteration": "lamman",
         "timestamp": {
           "from": 3145,
@@ -1444,7 +1444,7 @@
         "char_type": "word",
         "text": "وَتُحِبُّونَ",
         "text_indopak": "وَّتُحِبُّوۡنَ",
-        "translation": "And you love",
+        "translation": "Et vous aimez",
         "transliteration": "watuḥibbūna",
         "timestamp": {
           "from": 0,
@@ -1457,7 +1457,7 @@
         "char_type": "word",
         "text": "ٱلْمَالَ",
         "text_indopak": "الۡمَالَ",
-        "translation": "wealth",
+        "translation": "richesse",
         "transliteration": "l-māla",
         "timestamp": {
           "from": 1325,
@@ -1470,7 +1470,7 @@
         "char_type": "word",
         "text": "حُبًّۭا",
         "text_indopak": "حُبًّا",
-        "translation": "(with) love",
+        "translation": "(avec) amour",
         "transliteration": "ḥubban",
         "timestamp": {
           "from": 2235,
@@ -1525,7 +1525,7 @@
         "char_type": "word",
         "text": "إِذَا",
         "text_indopak": "اِذَا",
-        "translation": "When",
+        "translation": "Quand",
         "transliteration": "idhā",
         "timestamp": {
           "from": 345,
@@ -1538,7 +1538,7 @@
         "char_type": "word",
         "text": "دُكَّتِ",
         "text_indopak": "دُكَّتِ",
-        "translation": "is leveled",
+        "translation": "est nivelé",
         "transliteration": "dukkati",
         "timestamp": {
           "from": 1495,
@@ -1551,7 +1551,7 @@
         "char_type": "word",
         "text": "ٱلْأَرْضُ",
         "text_indopak": "الۡاَرۡضُ",
-        "translation": "the earth",
+        "translation": "la terre",
         "transliteration": "l-arḍu",
         "timestamp": {
           "from": 2365,
@@ -1564,7 +1564,7 @@
         "char_type": "word",
         "text": "دَكًّۭا",
         "text_indopak": "دَكًّا",
-        "translation": "pounded",
+        "translation": "battu",
         "transliteration": "dakkan",
         "timestamp": {
           "from": 3185,
@@ -1577,7 +1577,7 @@
         "char_type": "word",
         "text": "دَكًّۭا",
         "text_indopak": "دَكًّا ۙ‏",
-        "translation": "(and) crushed",
+        "translation": "(et) écrasé",
         "transliteration": "dakkan",
         "timestamp": {
           "from": 4805,
@@ -1606,7 +1606,7 @@
         "char_type": "word",
         "text": "وَجَآءَ",
         "text_indopak": "وَّجَآءَ",
-        "translation": "And comes",
+        "translation": "Et vient",
         "transliteration": "wajāa",
         "timestamp": {
           "from": 0,
@@ -1619,7 +1619,7 @@
         "char_type": "word",
         "text": "رَبُّكَ",
         "text_indopak": "رَبُّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbuka",
         "timestamp": {
           "from": 1965,
@@ -1632,7 +1632,7 @@
         "char_type": "word",
         "text": "وَٱلْمَلَكُ",
         "text_indopak": "وَالۡمَلَكُ",
-        "translation": "and the Angels",
+        "translation": "et les Anges",
         "transliteration": "wal-malaku",
         "timestamp": {
           "from": 2845,
@@ -1645,7 +1645,7 @@
         "char_type": "word",
         "text": "صَفًّۭا",
         "text_indopak": "صَفًّا",
-        "translation": "rank",
+        "translation": "rang",
         "transliteration": "ṣaffan",
         "timestamp": {
           "from": 3855,
@@ -1658,7 +1658,7 @@
         "char_type": "word",
         "text": "صَفًّۭا",
         "text_indopak": "صَفًّا ۚ‏",
-        "translation": "(upon) rank",
+        "translation": "(sur) le rang",
         "transliteration": "ṣaffan",
         "timestamp": {
           "from": 5525,
@@ -1687,7 +1687,7 @@
         "char_type": "word",
         "text": "وَجِا۟ىٓءَ",
         "text_indopak": "وَجِاىْٓءَ",
-        "translation": "And is brought",
+        "translation": "Et est amené",
         "transliteration": "wajīa",
         "timestamp": {
           "from": 0,
@@ -1700,7 +1700,7 @@
         "char_type": "word",
         "text": "يَوْمَئِذٍۭ",
         "text_indopak": "يَوۡمَٮِٕذٍۢ",
-        "translation": "that Day",
+        "translation": "ce jour-là",
         "transliteration": "yawma-idhin",
         "timestamp": {
           "from": 1845,
@@ -1713,7 +1713,7 @@
         "char_type": "word",
         "text": "بِجَهَنَّمَ ۚ",
         "text_indopak": "بِجَهَنَّمَ  ۙ​",
-        "translation": "Hell",
+        "translation": "L'enfer",
         "transliteration": "bijahannama",
         "timestamp": {
           "from": 3935,
@@ -1726,7 +1726,7 @@
         "char_type": "word",
         "text": "يَوْمَئِذٍۢ",
         "text_indopak": "يَوۡمَٮِٕذٍ",
-        "translation": "That Day",
+        "translation": "Ce jour-là",
         "transliteration": "yawma-idhin",
         "timestamp": {
           "from": 6325,
@@ -1739,7 +1739,7 @@
         "char_type": "word",
         "text": "يَتَذَكَّرُ",
         "text_indopak": "يَّتَذَكَّرُ",
-        "translation": "will remember",
+        "translation": "se souviendra",
         "transliteration": "yatadhakkaru",
         "timestamp": {
           "from": 8865,
@@ -1752,7 +1752,7 @@
         "char_type": "word",
         "text": "ٱلْإِنسَـٰنُ",
         "text_indopak": "الۡاِنۡسَانُ",
-        "translation": "man",
+        "translation": "homme",
         "transliteration": "l-insānu",
         "timestamp": {
           "from": 10025,
@@ -1765,7 +1765,7 @@
         "char_type": "word",
         "text": "وَأَنَّىٰ",
         "text_indopak": "وَاَنّٰى",
-        "translation": "but how",
+        "translation": "mais comment",
         "transliteration": "wa-annā",
         "timestamp": {
           "from": 12175,
@@ -1778,7 +1778,7 @@
         "char_type": "word",
         "text": "لَهُ",
         "text_indopak": "لَـهُ",
-        "translation": "(will be) for him",
+        "translation": "(sera) pour lui",
         "transliteration": "lahu",
         "timestamp": {
           "from": 13975,
@@ -1791,7 +1791,7 @@
         "char_type": "word",
         "text": "ٱلذِّكْرَىٰ",
         "text_indopak": "الذِّكۡرٰىؕ‏",
-        "translation": "the remembrance",
+        "translation": "le souvenir",
         "transliteration": "l-dhik'rā",
         "timestamp": {
           "from": 14385,
@@ -1820,7 +1820,7 @@
         "char_type": "word",
         "text": "يَقُولُ",
         "text_indopak": "يَقُوۡلُ",
-        "translation": "He will say",
+        "translation": "Il dira",
         "transliteration": "yaqūlu",
         "timestamp": {
           "from": 0,
@@ -1833,7 +1833,7 @@
         "char_type": "word",
         "text": "يَـٰلَيْتَنِى",
         "text_indopak": "يٰلَيۡتَنِىۡ",
-        "translation": "O I wish",
+        "translation": "O Je souhaite",
         "transliteration": "yālaytanī",
         "timestamp": {
           "from": 415,
@@ -1846,7 +1846,7 @@
         "char_type": "word",
         "text": "قَدَّمْتُ",
         "text_indopak": "قَدَّمۡتُ",
-        "translation": "I had sent forth",
+        "translation": "J'avais envoyé",
         "transliteration": "qaddamtu",
         "timestamp": {
           "from": 1915,
@@ -1859,7 +1859,7 @@
         "char_type": "word",
         "text": "لِحَيَاتِى",
         "text_indopak": "لِحَـيَاتِى​ۚ‏",
-        "translation": "for my life",
+        "translation": "pour ma vie",
         "transliteration": "liḥayātī",
         "timestamp": {
           "from": 2985,
@@ -1888,7 +1888,7 @@
         "char_type": "word",
         "text": "فَيَوْمَئِذٍۢ",
         "text_indopak": "فَيَوۡمَٮِٕذٍ",
-        "translation": "So that Day",
+        "translation": "Ce jour-là",
         "transliteration": "fayawma-idhin",
         "timestamp": {
           "from": 0,
@@ -1901,7 +1901,7 @@
         "char_type": "word",
         "text": "لَّا",
         "text_indopak": "لَّا",
-        "translation": "not",
+        "translation": "pas",
         "transliteration": "lā",
         "timestamp": {
           "from": 1245,
@@ -1914,7 +1914,7 @@
         "char_type": "word",
         "text": "يُعَذِّبُ",
         "text_indopak": "يُعَذِّبُ",
-        "translation": "will punish",
+        "translation": "punira",
         "transliteration": "yuʿadhibu",
         "timestamp": {
           "from": 1835,
@@ -1927,7 +1927,7 @@
         "char_type": "word",
         "text": "عَذَابَهُۥٓ",
         "text_indopak": "عَذَابَهٗۤ",
-        "translation": "(as) His punishment",
+        "translation": "(comme) Son châtiment",
         "transliteration": "ʿadhābahu",
         "timestamp": {
           "from": 2875,
@@ -1940,7 +1940,7 @@
         "char_type": "word",
         "text": "أَحَدٌۭ",
         "text_indopak": "اَحَدٌ ۙ‏",
-        "translation": "anyone",
+        "translation": "n'importe qui",
         "transliteration": "aḥadun",
         "timestamp": {
           "from": 5805,
@@ -1969,7 +1969,7 @@
         "char_type": "word",
         "text": "وَلَا",
         "text_indopak": "وَّلَا",
-        "translation": "And not",
+        "translation": "Et non",
         "transliteration": "walā",
         "timestamp": {
           "from": 0,
@@ -1982,7 +1982,7 @@
         "char_type": "word",
         "text": "يُوثِقُ",
         "text_indopak": "يُوۡثِقُ",
-        "translation": "will bind",
+        "translation": "liera",
         "transliteration": "yūthiqu",
         "timestamp": {
           "from": 565,
@@ -1995,7 +1995,7 @@
         "char_type": "word",
         "text": "وَثَاقَهُۥٓ",
         "text_indopak": "وَثَاقَهٗۤ",
-        "translation": "(as) His binding",
+        "translation": "(as) Son obligation",
         "transliteration": "wathāqahu",
         "timestamp": {
           "from": 1495,
@@ -2008,7 +2008,7 @@
         "char_type": "word",
         "text": "أَحَدٌۭ",
         "text_indopak": "اَحَدٌ ؕ‏",
-        "translation": "anyone",
+        "translation": "n'importe qui",
         "transliteration": "aḥadun",
         "timestamp": {
           "from": 4125,
@@ -2050,7 +2050,7 @@
         "char_type": "word",
         "text": "ٱلنَّفْسُ",
         "text_indopak": "النَّفۡسُ",
-        "translation": "soul",
+        "translation": "âme",
         "transliteration": "l-nafsu",
         "timestamp": {
           "from": 2985,
@@ -2063,7 +2063,7 @@
         "char_type": "word",
         "text": "ٱلْمُطْمَئِنَّةُ",
         "text_indopak": "الۡمُطۡمَٮِٕنَّةُ  ۖ‏",
-        "translation": "who is satisfied",
+        "translation": "qui est satisfait",
         "transliteration": "l-muṭ'ma-inatu",
         "timestamp": {
           "from": 4695,
@@ -2092,7 +2092,7 @@
         "char_type": "word",
         "text": "ٱرْجِعِىٓ",
         "text_indopak": "ارۡجِعِىۡۤ",
-        "translation": "Return",
+        "translation": "Retour",
         "transliteration": "ir'jiʿī",
         "timestamp": {
           "from": 0,
@@ -2105,7 +2105,7 @@
         "char_type": "word",
         "text": "إِلَىٰ",
         "text_indopak": "اِلٰى",
-        "translation": "to",
+        "translation": "à",
         "transliteration": "ilā",
         "timestamp": {
           "from": 2035,
@@ -2118,7 +2118,7 @@
         "char_type": "word",
         "text": "رَبِّكِ",
         "text_indopak": "رَبِّكِ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbiki",
         "timestamp": {
           "from": 2675,
@@ -2131,7 +2131,7 @@
         "char_type": "word",
         "text": "رَاضِيَةًۭ",
         "text_indopak": "رَاضِيَةً",
-        "translation": "well pleased",
+        "translation": "très satisfait",
         "transliteration": "rāḍiyatan",
         "timestamp": {
           "from": 3465,
@@ -2144,7 +2144,7 @@
         "char_type": "word",
         "text": "مَّرْضِيَّةًۭ",
         "text_indopak": "مَّرۡضِيَّةً​ ۚ‏",
-        "translation": "and pleasing",
+        "translation": "et agréable",
         "transliteration": "marḍiyyatan",
         "timestamp": {
           "from": 4655,
@@ -2173,7 +2173,7 @@
         "char_type": "word",
         "text": "فَٱدْخُلِى",
         "text_indopak": "فَادۡخُلِىۡ",
-        "translation": "So enter",
+        "translation": "Entrez donc",
         "transliteration": "fa-ud'khulī",
         "timestamp": {
           "from": 0,
@@ -2186,7 +2186,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِىۡ",
-        "translation": "among",
+        "translation": "parmi",
         "transliteration": "fī",
         "timestamp": {
           "from": 955,
@@ -2199,7 +2199,7 @@
         "char_type": "word",
         "text": "عِبَـٰدِى",
         "text_indopak": "عِبٰدِىۙ‏",
-        "translation": "My slaves",
+        "translation": "Mes esclaves",
         "transliteration": "ʿibādī",
         "timestamp": {
           "from": 1435,
@@ -2228,7 +2228,7 @@
         "char_type": "word",
         "text": "وَٱدْخُلِى",
         "text_indopak": "وَادۡخُلِىۡ",
-        "translation": "And enter",
+        "translation": "Et entrez",
         "transliteration": "wa-ud'khulī",
         "timestamp": {
           "from": 0,
@@ -2241,7 +2241,7 @@
         "char_type": "word",
         "text": "جَنَّتِى",
         "text_indopak": "جَنَّتِى‏",
-        "translation": "My Paradise",
+        "translation": "Mon paradis",
         "transliteration": "jannatī",
         "timestamp": {
           "from": 605,

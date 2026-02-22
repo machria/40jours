@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "أَلَمْ",
         "text_indopak": "اَلَمۡ",
-        "translation": "Have not",
+        "translation": "N'ont pas",
         "transliteration": "alam",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "تَرَ",
         "text_indopak": "تَرَ",
-        "translation": "you seen",
+        "translation": "vous avez vu",
         "transliteration": "tara",
         "timestamp": {
           "from": 550,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "كَيْفَ",
         "text_indopak": "كَيۡفَ",
-        "translation": "how",
+        "translation": "comment",
         "transliteration": "kayfa",
         "timestamp": {
           "from": 1120,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "فَعَلَ",
         "text_indopak": "فَعَلَ",
-        "translation": "dealt",
+        "translation": "traité",
         "transliteration": "faʿala",
         "timestamp": {
           "from": 1700,
@@ -61,7 +61,7 @@
         "char_type": "word",
         "text": "رَبُّكَ",
         "text_indopak": "رَبُّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbuka",
         "timestamp": {
           "from": 2420,
@@ -74,7 +74,7 @@
         "char_type": "word",
         "text": "بِأَصْحَـٰبِ",
         "text_indopak": "بِاَصۡحٰبِ",
-        "translation": "with (the) Companions",
+        "translation": "avec (les) compagnons",
         "transliteration": "bi-aṣḥābi",
         "timestamp": {
           "from": 3290,
@@ -87,7 +87,7 @@
         "char_type": "word",
         "text": "ٱلْفِيلِ",
         "text_indopak": "الۡفِيۡلِؕ‏",
-        "translation": "(of the) Elephant",
+        "translation": "(de l'éléphant)",
         "transliteration": "l-fīli",
         "timestamp": {
           "from": 4590,
@@ -116,7 +116,7 @@
         "char_type": "word",
         "text": "أَلَمْ",
         "text_indopak": "اَلَمۡ",
-        "translation": "Did not",
+        "translation": "Ne l'a pas fait",
         "transliteration": "alam",
         "timestamp": {
           "from": 0,
@@ -129,7 +129,7 @@
         "char_type": "word",
         "text": "يَجْعَلْ",
         "text_indopak": "يَجۡعَلۡ",
-        "translation": "He make",
+        "translation": "Il fait",
         "transliteration": "yajʿal",
         "timestamp": {
           "from": 615,
@@ -142,7 +142,7 @@
         "char_type": "word",
         "text": "كَيْدَهُمْ",
         "text_indopak": "كَيۡدَهُمۡ",
-        "translation": "their plan",
+        "translation": "leur plan",
         "transliteration": "kaydahum",
         "timestamp": {
           "from": 1425,
@@ -155,7 +155,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِىۡ",
-        "translation": "go",
+        "translation": "aller",
         "transliteration": "fī",
         "timestamp": {
           "from": 2505,
@@ -168,7 +168,7 @@
         "char_type": "word",
         "text": "تَضْلِيلٍۢ",
         "text_indopak": "تَضۡلِيۡلٍۙ‏",
-        "translation": "astray",
+        "translation": "égaré",
         "transliteration": "taḍlīlin",
         "timestamp": {
           "from": 2945,
@@ -197,7 +197,7 @@
         "char_type": "word",
         "text": "وَأَرْسَلَ",
         "text_indopak": "وَّاَرۡسَلَ",
-        "translation": "And He sent",
+        "translation": "Il envoya",
         "transliteration": "wa-arsala",
         "timestamp": {
           "from": 0,
@@ -210,7 +210,7 @@
         "char_type": "word",
         "text": "عَلَيْهِمْ",
         "text_indopak": "عَلَيۡهِمۡ",
-        "translation": "against them",
+        "translation": "contre eux",
         "transliteration": "ʿalayhim",
         "timestamp": {
           "from": 1035,
@@ -223,7 +223,7 @@
         "char_type": "word",
         "text": "طَيْرًا",
         "text_indopak": "طَيۡرًا",
-        "translation": "birds",
+        "translation": "oiseaux",
         "transliteration": "ṭayran",
         "timestamp": {
           "from": 2075,
@@ -236,7 +236,7 @@
         "char_type": "word",
         "text": "أَبَابِيلَ",
         "text_indopak": "اَبَابِيۡلَۙ‏",
-        "translation": "(in) flocks",
+        "translation": "(en) troupeaux",
         "transliteration": "abābīla",
         "timestamp": {
           "from": 2905,
@@ -265,7 +265,7 @@
         "char_type": "word",
         "text": "تَرْمِيهِم",
         "text_indopak": "تَرۡمِيۡهِمۡ",
-        "translation": "Striking them",
+        "translation": "Les frapper",
         "transliteration": "tarmīhim",
         "timestamp": {
           "from": 0,
@@ -278,7 +278,7 @@
         "char_type": "word",
         "text": "بِحِجَارَةٍۢ",
         "text_indopak": "بِحِجَارَةٍ",
-        "translation": "with stones",
+        "translation": "avec des pierres",
         "transliteration": "biḥijāratin",
         "timestamp": {
           "from": 615,
@@ -291,7 +291,7 @@
         "char_type": "word",
         "text": "مِّن",
         "text_indopak": "مِّنۡ",
-        "translation": "of",
+        "translation": "de",
         "transliteration": "min",
         "timestamp": {
           "from": 3245,
@@ -304,7 +304,7 @@
         "char_type": "word",
         "text": "سِجِّيلٍۢ",
         "text_indopak": "سِجِّيۡلٍۙ‏",
-        "translation": "baked clay",
+        "translation": "argile cuite",
         "transliteration": "sijjīlin",
         "timestamp": {
           "from": 4545,
@@ -333,7 +333,7 @@
         "char_type": "word",
         "text": "فَجَعَلَهُمْ",
         "text_indopak": "فَجَعَلَهُمۡ",
-        "translation": "Then He made them",
+        "translation": "Puis il les a fait",
         "transliteration": "fajaʿalahum",
         "timestamp": {
           "from": 0,
@@ -346,7 +346,7 @@
         "char_type": "word",
         "text": "كَعَصْفٍۢ",
         "text_indopak": "كَعَصۡفٍ",
-        "translation": "like straw",
+        "translation": "comme de la paille",
         "transliteration": "kaʿaṣfin",
         "timestamp": {
           "from": 1125,
@@ -359,7 +359,7 @@
         "char_type": "word",
         "text": "مَّأْكُولٍۭ",
         "text_indopak": "مَّاۡكُوۡلٍ‏",
-        "translation": "eaten up",
+        "translation": "mangé",
         "transliteration": "makūlin",
         "timestamp": {
           "from": 3405,

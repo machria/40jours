@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "أَلَمْ",
         "text_indopak": "اَلَمۡ",
-        "translation": "Have not",
+        "translation": "N'ont pas",
         "transliteration": "alam",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "نَشْرَحْ",
         "text_indopak": "نَشۡرَحۡ",
-        "translation": "We expanded",
+        "translation": "Nous avons élargi",
         "transliteration": "nashraḥ",
         "timestamp": {
           "from": 750,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "لَكَ",
         "text_indopak": "لَـكَ",
-        "translation": "for you",
+        "translation": "pour vous",
         "transliteration": "laka",
         "timestamp": {
           "from": 1500,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "صَدْرَكَ",
         "text_indopak": "صَدۡرَكَۙ‏",
-        "translation": "your breast",
+        "translation": "votre sein",
         "transliteration": "ṣadraka",
         "timestamp": {
           "from": 1960,
@@ -77,7 +77,7 @@
         "char_type": "word",
         "text": "وَوَضَعْنَا",
         "text_indopak": "وَوَضَعۡنَا",
-        "translation": "And We removed",
+        "translation": "Et nous avons supprimé",
         "transliteration": "wawaḍaʿnā",
         "timestamp": {
           "from": 0,
@@ -90,7 +90,7 @@
         "char_type": "word",
         "text": "عَنكَ",
         "text_indopak": "عَنۡكَ",
-        "translation": "from you",
+        "translation": "de votre part",
         "transliteration": "ʿanka",
         "timestamp": {
           "from": 1285,
@@ -103,7 +103,7 @@
         "char_type": "word",
         "text": "وِزْرَكَ",
         "text_indopak": "وِزۡرَكَۙ‏",
-        "translation": "your burden",
+        "translation": "votre fardeau",
         "transliteration": "wiz'raka",
         "timestamp": {
           "from": 2905,
@@ -132,7 +132,7 @@
         "char_type": "word",
         "text": "ٱلَّذِىٓ",
         "text_indopak": "الَّذِىۡۤ",
-        "translation": "Which",
+        "translation": "Qui",
         "transliteration": "alladhī",
         "timestamp": {
           "from": 0,
@@ -145,7 +145,7 @@
         "char_type": "word",
         "text": "أَنقَضَ",
         "text_indopak": "اَنۡقَضَ",
-        "translation": "weighed upon",
+        "translation": "pesé sur",
         "transliteration": "anqaḍa",
         "timestamp": {
           "from": 2625,
@@ -158,7 +158,7 @@
         "char_type": "word",
         "text": "ظَهْرَكَ",
         "text_indopak": "ظَهۡرَكَۙ‏",
-        "translation": "your back",
+        "translation": "votre dos",
         "transliteration": "ẓahraka",
         "timestamp": {
           "from": 4065,
@@ -187,7 +187,7 @@
         "char_type": "word",
         "text": "وَرَفَعْنَا",
         "text_indopak": "وَرَفَعۡنَا",
-        "translation": "And We raised high",
+        "translation": "Et nous avons élevé",
         "transliteration": "warafaʿnā",
         "timestamp": {
           "from": 0,
@@ -200,7 +200,7 @@
         "char_type": "word",
         "text": "لَكَ",
         "text_indopak": "لَـكَ",
-        "translation": "for you",
+        "translation": "pour vous",
         "transliteration": "laka",
         "timestamp": {
           "from": 1335,
@@ -213,7 +213,7 @@
         "char_type": "word",
         "text": "ذِكْرَكَ",
         "text_indopak": "ذِكۡرَكَؕ‏",
-        "translation": "your reputation",
+        "translation": "votre réputation",
         "transliteration": "dhik'raka",
         "timestamp": {
           "from": 1755,
@@ -242,7 +242,7 @@
         "char_type": "word",
         "text": "فَإِنَّ",
         "text_indopak": "فَاِنَّ",
-        "translation": "So indeed",
+        "translation": "En effet",
         "transliteration": "fa-inna",
         "timestamp": {
           "from": 0,
@@ -255,7 +255,7 @@
         "char_type": "word",
         "text": "مَعَ",
         "text_indopak": "مَعَ",
-        "translation": "with",
+        "translation": "avec",
         "transliteration": "maʿa",
         "timestamp": {
           "from": 1555,
@@ -268,7 +268,7 @@
         "char_type": "word",
         "text": "ٱلْعُسْرِ",
         "text_indopak": "الۡعُسۡرِ",
-        "translation": "the hardship",
+        "translation": "les difficultés",
         "transliteration": "l-ʿus'ri",
         "timestamp": {
           "from": 1925,
@@ -281,7 +281,7 @@
         "char_type": "word",
         "text": "يُسْرًا",
         "text_indopak": "يُسۡرًا ۙ‏",
-        "translation": "(is) ease",
+        "translation": "(est) facile",
         "transliteration": "yus'ran",
         "timestamp": {
           "from": 2765,
@@ -310,7 +310,7 @@
         "char_type": "word",
         "text": "إِنَّ",
         "text_indopak": "اِنَّ",
-        "translation": "Indeed",
+        "translation": "En effet",
         "transliteration": "inna",
         "timestamp": {
           "from": 0,
@@ -323,7 +323,7 @@
         "char_type": "word",
         "text": "مَعَ",
         "text_indopak": "مَعَ",
-        "translation": "with",
+        "translation": "avec",
         "transliteration": "maʿa",
         "timestamp": {
           "from": 1375,
@@ -336,7 +336,7 @@
         "char_type": "word",
         "text": "ٱلْعُسْرِ",
         "text_indopak": "الۡعُسۡرِ",
-        "translation": "the hardship",
+        "translation": "les difficultés",
         "transliteration": "l-ʿus'ri",
         "timestamp": {
           "from": 1755,
@@ -349,7 +349,7 @@
         "char_type": "word",
         "text": "يُسْرًۭا",
         "text_indopak": "يُسۡرًا ؕ‏",
-        "translation": "(is) ease",
+        "translation": "(est) facile",
         "transliteration": "yus'ran",
         "timestamp": {
           "from": 2625,
@@ -378,7 +378,7 @@
         "char_type": "word",
         "text": "فَإِذَا",
         "text_indopak": "فَاِذَا",
-        "translation": "So when",
+        "translation": "Ainsi, lorsque",
         "transliteration": "fa-idhā",
         "timestamp": {
           "from": 0,
@@ -391,7 +391,7 @@
         "char_type": "word",
         "text": "فَرَغْتَ",
         "text_indopak": "فَرَغۡتَ",
-        "translation": "you have finished",
+        "translation": "vous avez terminé",
         "transliteration": "faraghta",
         "timestamp": {
           "from": 825,
@@ -404,7 +404,7 @@
         "char_type": "word",
         "text": "فَٱنصَبْ",
         "text_indopak": "فَانۡصَبۡۙ‏",
-        "translation": "then labor hard",
+        "translation": "puis travailler dur",
         "transliteration": "fa-inṣab",
         "timestamp": {
           "from": 1705,
@@ -433,7 +433,7 @@
         "char_type": "word",
         "text": "وَإِلَىٰ",
         "text_indopak": "وَاِلٰى",
-        "translation": "And to",
+        "translation": "Et pour",
         "transliteration": "wa-ilā",
         "timestamp": {
           "from": 0,
@@ -446,7 +446,7 @@
         "char_type": "word",
         "text": "رَبِّكَ",
         "text_indopak": "رَبِّكَ",
-        "translation": "your Lord",
+        "translation": "votre Seigneur",
         "transliteration": "rabbika",
         "timestamp": {
           "from": 215,
@@ -459,7 +459,7 @@
         "char_type": "word",
         "text": "فَٱرْغَب",
         "text_indopak": "فَارۡغَب‏",
-        "translation": "turn your attention",
+        "translation": "porter son attention",
         "transliteration": "fa-ir'ghab",
         "timestamp": {
           "from": 1095,

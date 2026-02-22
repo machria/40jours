@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "قُلْ",
         "text_indopak": "قُلۡ",
-        "translation": "Say",
+        "translation": "Dites",
         "transliteration": "qul",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "هُوَ",
         "text_indopak": "هُوَ",
-        "translation": "He",
+        "translation": "Il",
         "transliteration": "huwa",
         "timestamp": {
           "from": 430,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "ٱللَّهُ",
         "text_indopak": "اللّٰهُ",
-        "translation": "(is) Allah",
+        "translation": "(est) Allah",
         "transliteration": "l-lahu",
         "timestamp": {
           "from": 700,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "أَحَدٌ",
         "text_indopak": "اَحَدٌ​ ۚ‏",
-        "translation": "the One",
+        "translation": "l'Unique",
         "transliteration": "aḥadun",
         "timestamp": {
           "from": 1680,
@@ -90,7 +90,7 @@
         "char_type": "word",
         "text": "ٱلصَّمَدُ",
         "text_indopak": "الصَّمَدُ​ ۚ‏",
-        "translation": "the Eternal, the Absolute",
+        "translation": "l'éternel, l'absolu",
         "transliteration": "l-ṣamadu",
         "timestamp": {
           "from": 985,
@@ -119,7 +119,7 @@
         "char_type": "word",
         "text": "لَمْ",
         "text_indopak": "لَمۡ",
-        "translation": "Not",
+        "translation": "Non",
         "transliteration": "lam",
         "timestamp": {
           "from": 0,
@@ -132,7 +132,7 @@
         "char_type": "word",
         "text": "يَلِدْ",
         "text_indopak": "يَلِدۡ   ۙ",
-        "translation": "He begets",
+        "translation": "Il engendre",
         "transliteration": "yalid",
         "timestamp": {
           "from": 385,
@@ -145,7 +145,7 @@
         "char_type": "word",
         "text": "وَلَمْ",
         "text_indopak": "وَلَمۡ",
-        "translation": "and not",
+        "translation": "et non",
         "transliteration": "walam",
         "timestamp": {
           "from": 1005,
@@ -158,7 +158,7 @@
         "char_type": "word",
         "text": "يُولَدْ",
         "text_indopak": "يُوۡلَدۡ ۙ‏",
-        "translation": "He is begotten",
+        "translation": "Il est engendré",
         "transliteration": "yūlad",
         "timestamp": {
           "from": 1695,
@@ -187,7 +187,7 @@
         "char_type": "word",
         "text": "وَلَمْ",
         "text_indopak": "وَلَمۡ",
-        "translation": "And not",
+        "translation": "Et non",
         "transliteration": "walam",
         "timestamp": {
           "from": 0,
@@ -200,7 +200,7 @@
         "char_type": "word",
         "text": "يَكُن",
         "text_indopak": "يَكُنۡ",
-        "translation": "is",
+        "translation": "est",
         "transliteration": "yakun",
         "timestamp": {
           "from": 465,
@@ -213,7 +213,7 @@
         "char_type": "word",
         "text": "لَّهُۥ",
         "text_indopak": "لَّهٗ",
-        "translation": "for Him",
+        "translation": "pour lui",
         "transliteration": "lahu",
         "timestamp": {
           "from": 1185,
@@ -226,7 +226,7 @@
         "char_type": "word",
         "text": "كُفُوًا",
         "text_indopak": "كُفُوًا",
-        "translation": "equivalent",
+        "translation": "équivalent",
         "transliteration": "kufuwan",
         "timestamp": {
           "from": 2015,
@@ -239,7 +239,7 @@
         "char_type": "word",
         "text": "أَحَدٌۢ",
         "text_indopak": "اَحَدٌ‏",
-        "translation": "any [one]",
+        "translation": "n'importe lequel [un]",
         "transliteration": "aḥadun",
         "timestamp": {
           "from": 2935,

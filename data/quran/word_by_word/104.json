@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "وَيْلٌۭ",
         "text_indopak": "وَيۡلٌ",
-        "translation": "Woe",
+        "translation": "Malheur",
         "transliteration": "waylun",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "لِّكُلِّ",
         "text_indopak": "لِّـكُلِّ",
-        "translation": "to every",
+        "translation": "à chaque",
         "transliteration": "likulli",
         "timestamp": {
           "from": 690,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "هُمَزَةٍۢ",
         "text_indopak": "هُمَزَةٍ",
-        "translation": "slanderer",
+        "translation": "calomniateur",
         "transliteration": "humazatin",
         "timestamp": {
           "from": 1860,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "لُّمَزَةٍ",
         "text_indopak": "لُّمَزَةِ ۙ‏",
-        "translation": "backbiter",
+        "translation": "rétroaction",
         "transliteration": "lumazatin",
         "timestamp": {
           "from": 2810,
@@ -77,7 +77,7 @@
         "char_type": "word",
         "text": "ٱلَّذِى",
         "text_indopak": "اۨلَّذِىۡ",
-        "translation": "The one who",
+        "translation": "Celui qui",
         "transliteration": "alladhī",
         "timestamp": {
           "from": 0,
@@ -90,7 +90,7 @@
         "char_type": "word",
         "text": "جَمَعَ",
         "text_indopak": "جَمَعَ",
-        "translation": "collects",
+        "translation": "collecte",
         "transliteration": "jamaʿa",
         "timestamp": {
           "from": 1055,
@@ -103,7 +103,7 @@
         "char_type": "word",
         "text": "مَالًۭا",
         "text_indopak": "مَالًا",
-        "translation": "wealth",
+        "translation": "richesse",
         "transliteration": "mālan",
         "timestamp": {
           "from": 1765,
@@ -116,7 +116,7 @@
         "char_type": "word",
         "text": "وَعَدَّدَهُۥ",
         "text_indopak": "وَّعَدَّدَهٗ ۙ‏",
-        "translation": "and counts it",
+        "translation": "et le compte",
         "transliteration": "waʿaddadahu",
         "timestamp": {
           "from": 2885,
@@ -145,7 +145,7 @@
         "char_type": "word",
         "text": "يَحْسَبُ",
         "text_indopak": "يَحۡسَبُ",
-        "translation": "Thinking",
+        "translation": "Réflexion",
         "transliteration": "yaḥsabu",
         "timestamp": {
           "from": 0,
@@ -158,7 +158,7 @@
         "char_type": "word",
         "text": "أَنَّ",
         "text_indopak": "اَنَّ",
-        "translation": "that",
+        "translation": "que",
         "transliteration": "anna",
         "timestamp": {
           "from": 835,
@@ -171,7 +171,7 @@
         "char_type": "word",
         "text": "مَالَهُۥٓ",
         "text_indopak": "مَالَهٗۤ",
-        "translation": "his wealth",
+        "translation": "sa richesse",
         "transliteration": "mālahu",
         "timestamp": {
           "from": 2335,
@@ -184,7 +184,7 @@
         "char_type": "word",
         "text": "أَخْلَدَهُۥ",
         "text_indopak": "اَخۡلَدَهٗ​ ۚ‏",
-        "translation": "will make him immortal",
+        "translation": "le rendra immortel",
         "transliteration": "akhladahu",
         "timestamp": {
           "from": 4815,
@@ -226,7 +226,7 @@
         "char_type": "word",
         "text": "لَيُنۢبَذَنَّ",
         "text_indopak": "لَيُنۡۢبَذَنَّ",
-        "translation": "Surely he will be thrown",
+        "translation": "Il sera certainement jeté",
         "transliteration": "layunbadhanna",
         "timestamp": {
           "from": 885,
@@ -239,7 +239,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِى",
-        "translation": "in",
+        "translation": "en",
         "transliteration": "fī",
         "timestamp": {
           "from": 4715,
@@ -252,7 +252,7 @@
         "char_type": "word",
         "text": "ٱلْحُطَمَةِ",
         "text_indopak": "الۡحُطَمَةِ  ۖ‏",
-        "translation": "the Crusher",
+        "translation": "le broyeur",
         "transliteration": "l-ḥuṭamati",
         "timestamp": {
           "from": 5005,
@@ -281,7 +281,7 @@
         "char_type": "word",
         "text": "وَمَآ",
         "text_indopak": "وَمَاۤ",
-        "translation": "And what",
+        "translation": "Et qu'est-ce que",
         "transliteration": "wamā",
         "timestamp": {
           "from": 0,
@@ -294,7 +294,7 @@
         "char_type": "word",
         "text": "أَدْرَىٰكَ",
         "text_indopak": "اَدۡرٰٮكَ",
-        "translation": "will make you know",
+        "translation": "vous fera connaître",
         "transliteration": "adrāka",
         "timestamp": {
           "from": 1915,
@@ -307,7 +307,7 @@
         "char_type": "word",
         "text": "مَا",
         "text_indopak": "مَا",
-        "translation": "what",
+        "translation": "ce que",
         "transliteration": "mā",
         "timestamp": {
           "from": 3045,
@@ -320,7 +320,7 @@
         "char_type": "word",
         "text": "ٱلْحُطَمَةُ",
         "text_indopak": "الۡحُطَمَةُ ؕ‏",
-        "translation": "the Crusher (is)",
+        "translation": "le broyeur (est)",
         "transliteration": "l-ḥuṭamatu",
         "timestamp": {
           "from": 3235,
@@ -349,7 +349,7 @@
         "char_type": "word",
         "text": "نَارُ",
         "text_indopak": "نَارُ",
-        "translation": "A Fire",
+        "translation": "Un incendie",
         "transliteration": "nāru",
         "timestamp": {
           "from": 0,
@@ -375,7 +375,7 @@
         "char_type": "word",
         "text": "ٱلْمُوقَدَةُ",
         "text_indopak": "الۡمُوۡقَدَةُ ۙ‏",
-        "translation": "kindled",
+        "translation": "enflammé",
         "transliteration": "l-mūqadatu",
         "timestamp": {
           "from": 1565,
@@ -404,7 +404,7 @@
         "char_type": "word",
         "text": "ٱلَّتِى",
         "text_indopak": "الَّتِىۡ",
-        "translation": "Which",
+        "translation": "Qui",
         "transliteration": "allatī",
         "timestamp": {
           "from": 0,
@@ -417,7 +417,7 @@
         "char_type": "word",
         "text": "تَطَّلِعُ",
         "text_indopak": "تَطَّلِعُ",
-        "translation": "mounts up",
+        "translation": "monte",
         "transliteration": "taṭṭaliʿu",
         "timestamp": {
           "from": 1025,
@@ -430,7 +430,7 @@
         "char_type": "word",
         "text": "عَلَى",
         "text_indopak": "عَلَى",
-        "translation": "to",
+        "translation": "à",
         "transliteration": "ʿalā",
         "timestamp": {
           "from": 2135,
@@ -443,7 +443,7 @@
         "char_type": "word",
         "text": "ٱلْأَفْـِٔدَةِ",
         "text_indopak": "الۡاَفۡـــِٕدَةِ ؕ‏",
-        "translation": "the hearts",
+        "translation": "les cœurs",
         "transliteration": "l-afidati",
         "timestamp": {
           "from": 2475,
@@ -472,7 +472,7 @@
         "char_type": "word",
         "text": "إِنَّهَا",
         "text_indopak": "اِنَّهَا",
-        "translation": "Indeed, it",
+        "translation": "En effet, il",
         "transliteration": "innahā",
         "timestamp": {
           "from": 0,
@@ -485,7 +485,7 @@
         "char_type": "word",
         "text": "عَلَيْهِم",
         "text_indopak": "عَلَيۡهِمۡ",
-        "translation": "(will be) upon them",
+        "translation": "(sera) sur eux",
         "transliteration": "ʿalayhim",
         "timestamp": {
           "from": 1725,
@@ -498,7 +498,7 @@
         "char_type": "word",
         "text": "مُّؤْصَدَةٌۭ",
         "text_indopak": "مُّؤۡصَدَةٌ ۙ‏",
-        "translation": "closed over",
+        "translation": "fermé sur",
         "transliteration": "mu'ṣadatun",
         "timestamp": {
           "from": 3165,
@@ -527,7 +527,7 @@
         "char_type": "word",
         "text": "فِى",
         "text_indopak": "فِىۡ",
-        "translation": "In",
+        "translation": "En",
         "transliteration": "fī",
         "timestamp": {
           "from": 0,
@@ -540,7 +540,7 @@
         "char_type": "word",
         "text": "عَمَدٍۢ",
         "text_indopak": "عَمَدٍ",
-        "translation": "columns",
+        "translation": "colonnes",
         "transliteration": "ʿamadin",
         "timestamp": {
           "from": 365,
@@ -553,7 +553,7 @@
         "char_type": "word",
         "text": "مُّمَدَّدَةٍۭ",
         "text_indopak": "مُّمَدَّدَةٍ‏",
-        "translation": "extended",
+        "translation": "étendu",
         "transliteration": "mumaddadatin",
         "timestamp": {
           "from": 1015,

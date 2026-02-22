@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "بِسْمِ",
         "text_indopak": "بِسۡمِ",
-        "translation": "In (the) name",
+        "translation": "Au nom de",
         "transliteration": "bis'mi",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "ٱللَّهِ",
         "text_indopak": "اللهِ",
-        "translation": "(of) Allah",
+        "translation": "(d'Allah",
         "transliteration": "l-lahi",
         "timestamp": {
           "from": 580,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "ٱلرَّحْمَـٰنِ",
         "text_indopak": "الرَّحۡمٰنِ",
-        "translation": "the Most Gracious",
+        "translation": "le Tout Miséricordieux",
         "transliteration": "l-raḥmāni",
         "timestamp": {
           "from": 1409,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "ٱلرَّحِيمِ",
         "text_indopak": "الرَّحِيۡمِ",
-        "translation": "the Most Merciful",
+        "translation": "le Très Miséricordieux",
         "transliteration": "l-raḥīmi",
         "timestamp": {
           "from": 2502,
@@ -77,7 +77,7 @@
         "char_type": "word",
         "text": "ٱلْحَمْدُ",
         "text_indopak": "اَلۡحَمۡدُ",
-        "translation": "All praises and thanks",
+        "translation": "Toutes les louanges et tous les remerciements",
         "transliteration": "al-ḥamdu",
         "timestamp": {
           "from": 0,
@@ -90,7 +90,7 @@
         "char_type": "word",
         "text": "لِلَّهِ",
         "text_indopak": "لِلّٰهِ",
-        "translation": "(be) to Allah",
+        "translation": "(à Allah",
         "transliteration": "lillahi",
         "timestamp": {
           "from": 935,
@@ -103,7 +103,7 @@
         "char_type": "word",
         "text": "رَبِّ",
         "text_indopak": "رَبِّ",
-        "translation": "the Lord",
+        "translation": "le Seigneur",
         "transliteration": "rabbi",
         "timestamp": {
           "from": 1795,
@@ -116,7 +116,7 @@
         "char_type": "word",
         "text": "ٱلْعَـٰلَمِينَ",
         "text_indopak": "الۡعٰلَمِيۡنَۙ‏",
-        "translation": "of the universe",
+        "translation": "de l'univers",
         "transliteration": "l-ʿālamīna",
         "timestamp": {
           "from": 2425,
@@ -145,7 +145,7 @@
         "char_type": "word",
         "text": "ٱلرَّحْمَـٰنِ",
         "text_indopak": "الرَّحۡمٰنِ",
-        "translation": "The Most Gracious",
+        "translation": "Le plus gracieux",
         "transliteration": "al-raḥmāni",
         "timestamp": {
           "from": 0,
@@ -158,7 +158,7 @@
         "char_type": "word",
         "text": "ٱلرَّحِيمِ",
         "text_indopak": "الرَّحِيۡمِۙ‏",
-        "translation": "the Most Merciful",
+        "translation": "le Très Miséricordieux",
         "transliteration": "l-raḥīmi",
         "timestamp": {
           "from": 1175,
@@ -187,7 +187,7 @@
         "char_type": "word",
         "text": "مَـٰلِكِ",
         "text_indopak": "مٰلِكِ",
-        "translation": "(The) Master",
+        "translation": "(Le) Maître",
         "transliteration": "māliki",
         "timestamp": {
           "from": 0,
@@ -200,7 +200,7 @@
         "char_type": "word",
         "text": "يَوْمِ",
         "text_indopak": "يَوۡمِ",
-        "translation": "(of the) Day",
+        "translation": "(du) jour",
         "transliteration": "yawmi",
         "timestamp": {
           "from": 765,
@@ -213,7 +213,7 @@
         "char_type": "word",
         "text": "ٱلدِّينِ",
         "text_indopak": "الدِّيۡنِؕ‏",
-        "translation": "(of the) Judgment",
+        "translation": "(de l'arrêt)",
         "transliteration": "l-dīni",
         "timestamp": {
           "from": 1365,
@@ -242,7 +242,7 @@
         "char_type": "word",
         "text": "إِيَّاكَ",
         "text_indopak": "اِيَّاكَ",
-        "translation": "You Alone",
+        "translation": "Toi seul",
         "transliteration": "iyyāka",
         "timestamp": {
           "from": 0,
@@ -255,7 +255,7 @@
         "char_type": "word",
         "text": "نَعْبُدُ",
         "text_indopak": "نَعۡبُدُ",
-        "translation": "we worship",
+        "translation": "nous adorons",
         "transliteration": "naʿbudu",
         "timestamp": {
           "from": 925,
@@ -268,7 +268,7 @@
         "char_type": "word",
         "text": "وَإِيَّاكَ",
         "text_indopak": "وَاِيَّاكَ",
-        "translation": "and You Alone",
+        "translation": "et vous seul",
         "transliteration": "wa-iyyāka",
         "timestamp": {
           "from": 1695,
@@ -281,7 +281,7 @@
         "char_type": "word",
         "text": "نَسْتَعِينُ",
         "text_indopak": "نَسۡتَعِيۡنُؕ‏",
-        "translation": "we ask for help",
+        "translation": "nous demandons de l'aide",
         "transliteration": "nastaʿīnu",
         "timestamp": {
           "from": 2815,
@@ -310,7 +310,7 @@
         "char_type": "word",
         "text": "ٱهْدِنَا",
         "text_indopak": "اِهۡدِنَا",
-        "translation": "Guide us",
+        "translation": "Guidez-nous",
         "transliteration": "ih'dinā",
         "timestamp": {
           "from": 0,
@@ -323,7 +323,7 @@
         "char_type": "word",
         "text": "ٱلصِّرَٰطَ",
         "text_indopak": "الصِّرَاطَ",
-        "translation": "(to) the path",
+        "translation": "(vers) le chemin",
         "transliteration": "l-ṣirāṭa",
         "timestamp": {
           "from": 665,
@@ -336,7 +336,7 @@
         "char_type": "word",
         "text": "ٱلْمُسْتَقِيمَ",
         "text_indopak": "الۡمُسۡتَقِيۡمَۙ‏",
-        "translation": "the straight",
+        "translation": "le droit",
         "transliteration": "l-mus'taqīma",
         "timestamp": {
           "from": 1565,
@@ -365,7 +365,7 @@
         "char_type": "word",
         "text": "صِرَٰطَ",
         "text_indopak": "صِرَاطَ",
-        "translation": "(The) path",
+        "translation": "(Le) chemin",
         "transliteration": "ṣirāṭa",
         "timestamp": {
           "from": 0,
@@ -378,7 +378,7 @@
         "char_type": "word",
         "text": "ٱلَّذِينَ",
         "text_indopak": "الَّذِيۡنَ",
-        "translation": "(of) those",
+        "translation": "(de) ceux",
         "transliteration": "alladhīna",
         "timestamp": {
           "from": 685,
@@ -391,7 +391,7 @@
         "char_type": "word",
         "text": "أَنْعَمْتَ",
         "text_indopak": "اَنۡعَمۡتَ",
-        "translation": "You have bestowed (Your) Favors",
+        "translation": "Vous avez accordé (vos) faveurs",
         "transliteration": "anʿamta",
         "timestamp": {
           "from": 1605,
@@ -404,7 +404,7 @@
         "char_type": "word",
         "text": "عَلَيْهِمْ",
         "text_indopak": "عَلَيۡهِمۡ ۙ‏",
-        "translation": "on them",
+        "translation": "sur eux",
         "transliteration": "ʿalayhim",
         "timestamp": {
           "from": 2625,
@@ -417,7 +417,7 @@
         "char_type": "word",
         "text": "غَيْرِ",
         "text_indopak": "غَيۡرِ",
-        "translation": "not (of)",
+        "translation": "pas (de)",
         "transliteration": "ghayri",
         "timestamp": {
           "from": 3555,
@@ -430,7 +430,7 @@
         "char_type": "word",
         "text": "ٱلْمَغْضُوبِ",
         "text_indopak": "الۡمَغۡضُوۡبِ",
-        "translation": "those who earned (Your) wrath",
+        "translation": "ceux qui ont mérité la colère",
         "transliteration": "l-maghḍūbi",
         "timestamp": {
           "from": 4145,
@@ -443,7 +443,7 @@
         "char_type": "word",
         "text": "عَلَيْهِمْ",
         "text_indopak": "عَلَيۡهِمۡ",
-        "translation": "on themselves",
+        "translation": "sur eux-mêmes",
         "transliteration": "ʿalayhim",
         "timestamp": {
           "from": 5315,
@@ -456,7 +456,7 @@
         "char_type": "word",
         "text": "وَلَا",
         "text_indopak": "وَلَا",
-        "translation": "and not",
+        "translation": "et non",
         "transliteration": "walā",
         "timestamp": {
           "from": 6315,
@@ -469,7 +469,7 @@
         "char_type": "word",
         "text": "ٱلضَّآلِّينَ",
         "text_indopak": "الضَّآلِّيۡنَ‏",
-        "translation": "(of) those who go astray",
+        "translation": "(de) ceux qui s'égarent",
         "transliteration": "l-ḍālīna",
         "timestamp": {
           "from": 6605,

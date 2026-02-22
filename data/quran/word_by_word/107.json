@@ -9,7 +9,7 @@
         "char_type": "word",
         "text": "أَرَءَيْتَ",
         "text_indopak": "اَرَءَيۡتَ",
-        "translation": "Have you seen",
+        "translation": "Avez-vous vu",
         "transliteration": "ara-ayta",
         "timestamp": {
           "from": 0,
@@ -22,7 +22,7 @@
         "char_type": "word",
         "text": "ٱلَّذِى",
         "text_indopak": "الَّذِىۡ",
-        "translation": "the one who",
+        "translation": "celui qui",
         "transliteration": "alladhī",
         "timestamp": {
           "from": 1010,
@@ -35,7 +35,7 @@
         "char_type": "word",
         "text": "يُكَذِّبُ",
         "text_indopak": "يُكَذِّبُ",
-        "translation": "denies",
+        "translation": "nie",
         "transliteration": "yukadhibu",
         "timestamp": {
           "from": 1670,
@@ -48,7 +48,7 @@
         "char_type": "word",
         "text": "بِٱلدِّينِ",
         "text_indopak": "بِالدِّيۡنِؕ‏",
-        "translation": "the Judgment",
+        "translation": "l'arrêt",
         "transliteration": "bil-dīni",
         "timestamp": {
           "from": 2990,
@@ -77,7 +77,7 @@
         "char_type": "word",
         "text": "فَذَٰلِكَ",
         "text_indopak": "فَذٰلِكَ",
-        "translation": "Then that",
+        "translation": "Ensuite, ce",
         "transliteration": "fadhālika",
         "timestamp": {
           "from": 0,
@@ -90,7 +90,7 @@
         "char_type": "word",
         "text": "ٱلَّذِى",
         "text_indopak": "الَّذِىۡ",
-        "translation": "(is) the one who",
+        "translation": "(est) celui qui",
         "transliteration": "alladhī",
         "timestamp": {
           "from": 1065,
@@ -103,7 +103,7 @@
         "char_type": "word",
         "text": "يَدُعُّ",
         "text_indopak": "يَدُعُّ",
-        "translation": "repulses",
+        "translation": "repousse",
         "transliteration": "yaduʿʿu",
         "timestamp": {
           "from": 1915,
@@ -116,7 +116,7 @@
         "char_type": "word",
         "text": "ٱلْيَتِيمَ",
         "text_indopak": "الۡيَتِيۡمَۙ‏",
-        "translation": "the orphan",
+        "translation": "l'orphelin",
         "transliteration": "l-yatīma",
         "timestamp": {
           "from": 2685,
@@ -145,7 +145,7 @@
         "char_type": "word",
         "text": "وَلَا",
         "text_indopak": "وَ",
-        "translation": "And (does) not",
+        "translation": "Et (ne) pas",
         "transliteration": "walā",
         "timestamp": {
           "from": 0,
@@ -158,7 +158,7 @@
         "char_type": "word",
         "text": "يَحُضُّ",
         "text_indopak": "لَا",
-        "translation": "feel the urge",
+        "translation": "avoir envie",
         "transliteration": "yaḥuḍḍu",
         "timestamp": {
           "from": 665,
@@ -171,7 +171,7 @@
         "char_type": "word",
         "text": "عَلَىٰ",
         "text_indopak": "يَحُضُّ",
-        "translation": "to",
+        "translation": "à",
         "transliteration": "ʿalā",
         "timestamp": {
           "from": 1635,
@@ -184,7 +184,7 @@
         "char_type": "word",
         "text": "طَعَامِ",
         "text_indopak": "عَلٰى",
-        "translation": "feed",
+        "translation": "alimentation",
         "transliteration": "ṭaʿāmi",
         "timestamp": {
           "from": 2145,
@@ -197,7 +197,7 @@
         "char_type": "word",
         "text": "ٱلْمِسْكِينِ",
         "text_indopak": "طَعَامِ الۡمِسۡكِيۡنِؕ‏",
-        "translation": "the poor",
+        "translation": "les pauvres",
         "transliteration": "l-mis'kīni",
         "timestamp": {
           "from": 3055,
@@ -226,7 +226,7 @@
         "char_type": "word",
         "text": "فَوَيْلٌۭ",
         "text_indopak": "فَوَيۡلٌ",
-        "translation": "So woe",
+        "translation": "Alors, malheur",
         "transliteration": "fawaylun",
         "timestamp": {
           "from": 0,
@@ -239,7 +239,7 @@
         "char_type": "word",
         "text": "لِّلْمُصَلِّينَ",
         "text_indopak": "لِّلۡمُصَلِّيۡنَۙ‏",
-        "translation": "to those who pray",
+        "translation": "à ceux qui prient",
         "transliteration": "lil'muṣallīna",
         "timestamp": {
           "from": 865,
@@ -268,7 +268,7 @@
         "char_type": "word",
         "text": "ٱلَّذِينَ",
         "text_indopak": "الَّذِيۡنَ",
-        "translation": "Those who",
+        "translation": "Ceux qui",
         "transliteration": "alladhīna",
         "timestamp": {
           "from": 0,
@@ -281,7 +281,7 @@
         "char_type": "word",
         "text": "هُمْ",
         "text_indopak": "هُمۡ",
-        "translation": "[they]",
+        "translation": "[ils]",
         "transliteration": "hum",
         "timestamp": {
           "from": 935,
@@ -294,7 +294,7 @@
         "char_type": "word",
         "text": "عَن",
         "text_indopak": "عَنۡ",
-        "translation": "about",
+        "translation": "à propos de",
         "transliteration": "ʿan",
         "timestamp": {
           "from": 1325,
@@ -307,7 +307,7 @@
         "char_type": "word",
         "text": "صَلَاتِهِمْ",
         "text_indopak": "صَلَاتِهِمۡ",
-        "translation": "their prayers",
+        "translation": "leurs prières",
         "transliteration": "ṣalātihim",
         "timestamp": {
           "from": 2075,
@@ -320,7 +320,7 @@
         "char_type": "word",
         "text": "سَاهُونَ",
         "text_indopak": "سَاهُوۡنَۙ‏",
-        "translation": "(are) neglectful",
+        "translation": "(sont) négligents",
         "transliteration": "sāhūna",
         "timestamp": {
           "from": 3735,
@@ -349,7 +349,7 @@
         "char_type": "word",
         "text": "ٱلَّذِينَ",
         "text_indopak": "الَّذِيۡنَ",
-        "translation": "Those who",
+        "translation": "Ceux qui",
         "transliteration": "alladhīna",
         "timestamp": {
           "from": 0,
@@ -362,7 +362,7 @@
         "char_type": "word",
         "text": "هُمْ",
         "text_indopak": "هُمۡ",
-        "translation": "[they]",
+        "translation": "[ils]",
         "transliteration": "hum",
         "timestamp": {
           "from": 1155,
@@ -375,7 +375,7 @@
         "char_type": "word",
         "text": "يُرَآءُونَ",
         "text_indopak": "يُرَآءُوۡنَۙ‏",
-        "translation": "make show",
+        "translation": "faire un spectacle",
         "transliteration": "yurāūna",
         "timestamp": {
           "from": 1615,
@@ -404,7 +404,7 @@
         "char_type": "word",
         "text": "وَيَمْنَعُونَ",
         "text_indopak": "وَيَمۡنَعُوۡنَ",
-        "translation": "And they deny",
+        "translation": "Et ils nient",
         "transliteration": "wayamnaʿūna",
         "timestamp": {
           "from": 0,
@@ -417,7 +417,7 @@
         "char_type": "word",
         "text": "ٱلْمَاعُونَ",
         "text_indopak": "الۡمَاعُوۡنَ‏",
-        "translation": "[the] small kindnesses",
+        "translation": "[les] petites attentions",
         "transliteration": "l-māʿūna",
         "timestamp": {
           "from": 1325,
