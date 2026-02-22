@@ -77,6 +77,8 @@ const nextConfig: NextConfig = {
 import createNextIntlPlugin from 'next-intl/plugin';
 import withPWAInit from "@ducanh2912/next-pwa";
 
+const audioCdnUrl = (process.env.NEXT_PUBLIC_AUDIO_CDN_URL ?? '').trim().replace(/\/$/, '');
+
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const withPWA = withPWAInit({
@@ -92,9 +94,11 @@ const withPWA = withPWAInit({
       /^manifest.*\.js$/
     ],
     runtimeCaching: [
-      // Cache Audio Files (CacheFirst) — local /audio/ ou CDN externe
+      // Cache Audio Files (CacheFirst) — local /audio/ ou CDN externe (R2)
       {
-        urlPattern: /\/audio\/.*\.mp3$/i,
+        urlPattern: ({ url }: { url: URL }) =>
+          (audioCdnUrl ? url.href.startsWith(audioCdnUrl) : false) ||
+          /\/audio\/.*\.mp3$/i.test(url.pathname),
         handler: "CacheFirst",
         options: {
           cacheName: "audio-cache",

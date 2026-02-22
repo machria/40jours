@@ -2,7 +2,7 @@
  * Audio URL utilities — supporte le CDN externe via NEXT_PUBLIC_AUDIO_CDN_URL.
  * Si la variable n'est pas définie, les fichiers sont servis depuis /audio/ (local).
  */
-const CDN = process.env.NEXT_PUBLIC_AUDIO_CDN_URL ?? '';
+const CDN = (process.env.NEXT_PUBLIC_AUDIO_CDN_URL ?? '').trim().replace(/\/$/, '');
 
 /** URL d'un verset coranique (ex: sourate 2, verset 10 → 002010.mp3) */
 export function getAyahAudioUrl(surah: number, ayah: number): string {
