@@ -2,6 +2,12 @@ import { Metadata } from 'next';
 import { plan40jours } from '@/data/plan40jours';
 import ReadingClient from './ReadingClient';
 
+export function generateStaticParams() {
+    return plan40jours.map(day => ({
+        id: day.jour.toString(),
+    }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
     const { id } = await params;
     const dayId = parseInt(id);

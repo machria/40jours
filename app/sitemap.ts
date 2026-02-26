@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { getCollectionsList, getCollectionMetadata } from '@/lib/hadith-api';
-// We cannot verify all imports in sitemap environments sometimes, so we use loose data logic where possible or robust imports
+
+// Régénère le sitemap toutes les 24h via ISR — évite un crawl bot = Lambda à chaque fois
+export const revalidate = 86400;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://coran40jours.com';

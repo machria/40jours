@@ -7,14 +7,19 @@ export interface TafsirEntry {
     tafsir: string;
 }
 
+// Module-level caches : chargés une seule fois par instance Lambda
+let surahsCache: any[] | null = null;
+let tafsirIndexCache: Record<string, number[]> | null = null;
+
 // Helper to get number of ayahs in a surah
-// Reads directly from public/surahs.json
 async function getSurahAyahCount(surah: number): Promise<number> {
     try {
-        const p = path.join(process.cwd(), 'public', 'surahs.json');
-        const file = await fs.readFile(p, 'utf-8');
-        const surahs = JSON.parse(file);
-        const s = surahs.find((x: any) => x.number === surah);
+        if (!surahsCache) {
+            const p = path.join(process.cwd(), 'public', 'surahs.json');
+            const file = await fs.readFile(p, 'utf-8');
+            surahsCache = JSON.parse(file);
+        }
+        const s = surahsCache!.find((x: any) => x.number === surah);
         return s ? s.numberOfAyahs : 300;
     } catch (e) {
         return 300;
@@ -22,13 +27,14 @@ async function getSurahAyahCount(surah: number): Promise<number> {
 }
 
 // Helper to get all available Tafsir files for a Surah
-// Reads directly from public/tafsir/index.json
 async function getAvailableTafsirAyahs(surah: number): Promise<number[]> {
     try {
-        const indexPath = path.join(process.cwd(), 'public', 'tafsir', 'index.json');
-        const indexContent = await fs.readFile(indexPath, 'utf-8');
-        const index = JSON.parse(indexContent);
-        return index[surah] || [];
+        if (!tafsirIndexCache) {
+            const indexPath = path.join(process.cwd(), 'public', 'tafsir', 'index.json');
+            const indexContent = await fs.readFile(indexPath, 'utf-8');
+            tafsirIndexCache = JSON.parse(indexContent);
+        }
+        return tafsirIndexCache![surah] || [];
     } catch (e) {
         console.error("Error reading tafsir index", e);
         return [];

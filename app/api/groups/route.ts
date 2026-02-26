@@ -82,7 +82,9 @@ export async function GET() {
             memberCount: g.members.length
         }));
 
-        return NextResponse.json(enhancedGroups);
+        return NextResponse.json(enhancedGroups, {
+            headers: { 'Cache-Control': 'private, no-store' }
+        });
 
     } catch (error) {
         console.error("List Groups Error:", error);

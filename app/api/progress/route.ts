@@ -40,6 +40,8 @@ export async function GET() {
             dailyProgress: dailyProgressObj,
             userName: user.name,
             completedJuzs: user.completedJuzs || []
+        }, {
+            headers: { 'Cache-Control': 'private, max-age=30, stale-while-revalidate=60' }
         });
 
     } catch (error) {

@@ -68,6 +68,8 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
                 isAdmin: group.admin.toString() === user._id.toString(),
             },
             leaderboard
+        }, {
+            headers: { 'Cache-Control': 'private, no-store' }
         });
 
     } catch (error) {

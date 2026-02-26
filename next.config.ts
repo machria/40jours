@@ -16,6 +16,22 @@ const nextConfig: NextConfig = {
   } as any,
   async headers() {
     return [
+      // JSON statiques publics — règle générale EN PREMIER (les règles suivantes l'écrasent)
+      {
+        source: '/:path*.json',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=604800' },
+        ],
+      },
+      // Sitemap : cache 24h pour éviter le re-crawl permanent par les bots
+      {
+        source: '/sitemap.xml',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+          { key: 'CDN-Cache-Control', value: 'public, max-age=86400' },
+        ],
+      },
       // Fichiers audio : cache navigateur + CDN Vercel (1 an, immuable)
       {
         source: '/audio/:path*',
@@ -24,7 +40,7 @@ const nextConfig: NextConfig = {
           { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
         ],
       },
-      // Fichiers statiques immuables (WBW + translittération + pages Coran)
+      // Fichiers statiques immuables (WBW + pages Coran)
       {
         source: '/quran/:path*',
         headers: [
@@ -37,14 +53,6 @@ const nextConfig: NextConfig = {
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
           { key: 'CDN-Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-      // JSON statiques publics (Coran, translittération, surahs…)
-      {
-        source: '/:path*.json',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
-          { key: 'CDN-Cache-Control', value: 'public, max-age=604800' },
         ],
       },
       // Pages statiques du Coran, Hisn, Hadith
