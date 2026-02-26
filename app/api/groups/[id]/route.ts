@@ -14,8 +14,6 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
         }
 
         await dbConnect();
-        console.log("DetailsAPI: DB Connected");
-
 
         // Verify user is in the group (security)
         const user = await User.findOne({ email: session.user.email });
@@ -27,7 +25,6 @@ export async function GET(req: Request, props: { params: Promise<{ id: string }>
                 select: 'name image dailyProgress completedJuzs streak activityHistory'
             })
             .lean();
-        console.log("DetailsAPI: Group found", group ? group.name : "null");
 
 
         if (!group) return NextResponse.json({ error: "Group not found" }, { status: 404 });

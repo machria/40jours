@@ -3,6 +3,9 @@ import path from 'path';
 import HisnClient from './HisnClient';
 import { Metadata } from 'next';
 
+// Contenu 100% statique — jamais revalidé, servi depuis le CDN
+export const revalidate = false;
+
 export const metadata: Metadata = {
     title: "Citadelle du Musulman (Hisn al-Muslim) - Invocations",
     description: "Recueil complet des invocations et prières (Du'a) authentiques de la Citadelle du Musulman en arabe, phonétique et français.",

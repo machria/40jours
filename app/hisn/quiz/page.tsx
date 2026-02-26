@@ -3,6 +3,9 @@ import path from 'path';
 import HisnQuizClient from './HisnQuizClient';
 import { Metadata } from 'next';
 
+// Contenu 100% statique — jamais revalidé, servi depuis le CDN
+export const revalidate = false;
+
 export const metadata: Metadata = {
     title: "Quiz Hisn al-Muslim - Testez vos connaissances",
     description: "Apprenez ludiquement les invocations de la Citadelle du Musulman en jouant à notre quiz interactif.",

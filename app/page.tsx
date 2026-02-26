@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Suspense } from 'react';
 import HomeProgress from '@/components/HomeProgress';
+import RamadanBanner from '@/components/RamadanBanner';
 
 // Page entièrement statique : le progrès utilisateur est chargé côté client
 export const dynamic = 'force-static';
@@ -35,6 +36,10 @@ export default function Home() {
       </header>
 
 
+
+      <div className="max-w-4xl mx-auto">
+        <RamadanBanner />
+      </div>
 
       <section className="max-w-4xl mx-auto mb-12">
         <Suspense fallback={<HomeProgressFallback />}>

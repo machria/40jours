@@ -3,6 +3,9 @@ import path from 'path';
 import FlashcardsClient from './FlashcardsClient';
 import { Metadata } from 'next';
 
+// Contenu 100% statique — jamais revalidé, servi depuis le CDN
+export const revalidate = false;
+
 export const metadata: Metadata = {
     title: "Flashcards Hisn al-Muslim - Apprentissage",
     description: "Révisez et mémorisez les invocations de la Citadelle du Musulman avec notre système de flashcards intelligent.",
