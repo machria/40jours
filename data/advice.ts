@@ -3437,7 +3437,7 @@ L'envie ne transfère rien. Celui que vous enviez ne perd pas sa grâce parce qu
         date: '2026-02-28',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
-        category: 'Spiritualité & Guérison',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Ibn al-Qayyim : Les niveaux du Sabr
 
@@ -3538,7 +3538,7 @@ Le Sabr selon Ibn al-Qayyim n'est pas une résignation triste. C'est une puissan
         date: '2026-02-28',
         author: 'Équipe Coran 40 Jours',
         readTime: '11 min',
-        category: 'Spiritualité & Guérison',
+        category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Ibn Rajab al-Hanbali : Rajaa et Khawf — Les deux ailes du cœur
 
