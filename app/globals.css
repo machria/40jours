@@ -25,6 +25,8 @@
 }
 
 @theme inline {
+  --font-quran: var(--font-quran);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   

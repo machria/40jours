@@ -78,7 +78,7 @@ export default function TafsirFullClient({ day, initialGroups }: { day: ReadingD
                                             </div>
                                         </div>
                                         <div className="text-right w-full">
-                                            <TajwidText text={ayah.text} className="text-2xl font-kufi leading-loose text-foreground" />
+                                            <TajwidText text={ayah.text} className="text-2xl font-quran leading-loose text-foreground" />
                                         </div>
                                         {ayah.translation && (
                                             <div className="text-left w-full mt-2">

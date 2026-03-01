@@ -73,8 +73,10 @@ export async function getQuranPage(pageNumber: number): Promise<QuranPageData> {
         const ayahs: Ayah[] = json.data.ayahs.map((raw: any) => {
             const isBismillah = (text: string) => text.startsWith("بِسْمِ ٱللَّهِ");
 
+            // Strip BOM (U+FEFF) that may be embedded in source data
+            let cleanText = raw.text.replace(/\ufeff/g, '');
+
             // Clean text (remove Bismillah from start of verse 1, except Surah 1)
-            let cleanText = raw.text;
             if (raw.surah !== 1 && raw.ayah === 1 && isBismillah(cleanText)) {
                 const bismillah = "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
                 cleanText = cleanText.replace(bismillah, "").trim();

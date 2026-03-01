@@ -330,7 +330,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
             {
                 viewMode === 'mushaf' ? (
                     <div className="bg-card border rounded-xl p-6 md:p-10 shadow-sm">
-                        <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
+                        <div className="text-justify font-quran text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                             {ayahs.map((ayah, i) => {
                                 // Check if this ayah starts a new Surah (simple heuristic: if surah num changed from prev)
                                 const prev = i > 0 ? ayahs[i - 1] : null;
@@ -420,7 +420,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                                         <div className="w-full bg-primary/5 dark:bg-primary/10 rounded-2xl p-4 md:p-8 border border-primary/10">
                                             <TajwidText
                                                 text={ayah.text}
-                                                className="font-kufi text-2xl md:text-3xl leading-[2.2] text-foreground"
+                                                className="font-quran text-2xl md:text-3xl leading-[2.2] text-foreground"
                                             />
                                         </div>
                                     </div>

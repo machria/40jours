@@ -46,7 +46,7 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                 {/* Content */}
                 <div className="flex-1 overflow-y-auto p-6 space-y-6">
                     <div className="bg-muted/20 p-4 rounded-lg border-r-4 border-primary">
-                        <TajwidText text={ayahText} className="font-kufi text-xl text-right dir-rtl leading-loose block" />
+                        <TajwidText text={ayahText} className="font-quran text-xl text-right dir-rtl leading-loose block" />
                         {translation && (
                             <p className="text-base text-muted-foreground mt-3 font-serif border-t border-border/50 pt-2">
                                 {translation}

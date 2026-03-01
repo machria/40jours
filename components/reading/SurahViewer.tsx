@@ -189,7 +189,7 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
 
             {viewMode === 'mushaf' ? (
                 <div className="bg-card border rounded-xl p-8 shadow-sm">
-                    <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
+                    <div className="text-justify font-quran text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                         {ayahs.map((ayah, i) => (
                             <span key={ayah.id}
                                 className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${isAyahPlaying(ayah.surah, ayah.ayah) ? 'bg-primary/20 text-primary' : ''}`}
@@ -267,7 +267,7 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
                                     >
                                         <TajwidText
                                             text={ayah.text}
-                                            className="font-kufi leading-[2.2] text-foreground"
+                                            className="font-quran leading-[2.2] text-foreground"
                                             style={{ fontSize: currentFontSize }}
                                         />
                                     </div>

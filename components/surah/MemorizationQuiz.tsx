@@ -125,7 +125,7 @@ export default function MemorizationQuiz({ ayahs, surahName, onClose }: Memoriza
                     <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
                         Verset actuel ({currentAyah.numberInSurah})
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-kufi leading-relaxed dir-rtl text-foreground px-4">
+                    <h2 className="text-3xl md:text-4xl font-quran leading-relaxed dir-rtl text-foreground px-4">
                         {currentAyah.text}
                     </h2>
                     {/* Only show translation if needed? Let's show it to help context */}
