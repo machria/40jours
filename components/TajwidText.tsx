@@ -17,90 +17,83 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
     const segments = useMemo(() => {
         if (!text) return [];
 
-        // If Tajwid is disabled, return single normal segment
         if (!tajwidEnabled) {
             return [{ text, type: 'normal' }];
         }
 
-        // Regex Groups:
-        // 1. Red (Madd Strong): Letter + Maddah (\u0653)
-        // 2. Green (Ghunnah): Nun/Mim + Shadda (\u0651)
-        // 3. Green (Ikhfa): Nun (Sakina) followed by Ikhfa letters [تثجدذزسشصضطظفقك]
-        // 4. Green (Ikhfa Tanween): Tanween followed by Ikhfa letters
-        // 5. Blue (Qalqalah): [قطبجد] + Sukun (\u0652)
-        // 6. Gray (Hamzatul Wasl): \u0671
-        // 7. Gray (Sun Lam): Lam (\u0644) followed by (Letter + Shadda \u0651)
-        // 8. Gray (Silent Vowels): Alif/Waw/Ya with Oval Zero (\u06df) or Rect Zero (\u06e0)
-        // 9. Orange (Dagger Alif): \u0670
-        // 10. Orange (Natural Alif): Alif (\u0627) preceded by Fatha (\u064E) - Relaxed
-        // 11. Orange (Natural Waw): Waw (\u0648) preceded by Damma (\u064F)
-        // 12. Orange (Natural Ya): Ya (\u064A) preceded by Kasra (\u0650)
+        // 15 lettres d'Ikhfa (prononciation cachée)
+        const ikhfaLetters = 'تثجدذزسشصضطظفقك';
+        const ikhfaGroup = `[${ikhfaLetters}]`;
 
-        const ikhfaLetters = 'تثجدذزسشصضطظفقك'; // 15 Letters
-        const ikhfaClassGroup = `[${ikhfaLetters}]`;
+        // Séquence de saut entre les mots : espaces + marques qurâniques (U+06D6–U+06ED)
+        // Ex : نْ ۚ ب → le ۚ ne doit pas bloquer la détection de l'Iqlab
+        const skip = `[\\s\\u06D6-\\u06ED]*`;
 
+        // ─────────────────────────────────────────────────────────────────
+        // Règles Tajwid Hafs — ordre important (plus spécifique d'abord)
+        //
+        // Groupe  1 : Madd Fort    — lettre + maddah (U+0653) OU آ (U+0622 précomposé)
+        // Groupe  2 : Ghunna       — Noon/Mim mushaddada (lettre + shadda U+0651)
+        // Groupe  3 : Iqlab        — Noon sakina ou Tanwin avant Ba (ب)
+        // Groupe  4 : Idgham bi gh — Noon sakina ou Tanwin avant ي ن م و
+        // Groupe  5 : Ikhfa        — Noon sakina ou Tanwin avant 15 lettres
+        // Groupe  6 : Qalqalah     — ق ط ب ج د + sukun (U+0652)
+        // Groupe  7 : Hamzatul Wasl— ٱ (U+0671)
+        // Groupe  8 : Lam Shamsiya — ل avant lettre mushaddada
+        // Groupe  9 : Voyelles sil.— Alif/Waw/Ya + zéro circulaire/rectangulaire
+        // Groupe 10 : Alef Dagger  — ٰ (U+0670)
+        // Groupe 11 : Madd Alif    — alif précédé d'une fatha
+        // Groupe 12 : Madd Waw     — waw précédé d'une damma
+        // Groupe 13 : Madd Ya      — ya précédé d'une kasra
+        // ─────────────────────────────────────────────────────────────────
         const regex = new RegExp(
-            `([\\u0600-\\u06FF]\\u0653)|` + // 1. Madd Strong
-            `([نم]\\u0651)|` + // 2. Ghunnah (Shadda)
-            `(\\u0646\\u0652?(?=\\s*${ikhfaClassGroup}))|` + // 3. Ikhfa (Nun)
-            `([\\u064B-\\u064D](?=\\s*${ikhfaClassGroup}))|` + // 4. Ikhfa (Tanween)
-            `([قطبجد]\\u0652)|` + // 5. Qalqalah
-            `(\\u0671)|` + // 6. Hamzatul Wasl
-            `(\\u0644(?=[\\u0600-\\u06FF]\\u0651))|` + // 7. Sun Lam
-            `([\\u0627\\u0648\\u064A][\\u06DF\\u06E0])|` + // 8. Silent Vowels (Zero marks)
-            `(\\u0670)|` + // 9. Dagger Alif
-            `((?<=[\\u0600-\\u06FF]\\u064E)\\u0627)|` + // 10. Natural Alif (Simple: Preceded by Fatha)
-            `((?<=[\\u0600-\\u06FF]\\u064F)\\u0648(?![\\u064B-\\u065F]))|` + // 11. Natural Waw
-            `((?<=[\\u0600-\\u06FF]\\u0650)\\u064A(?![\\u064B-\\u065F]))`, // 12. Natural Ya
+            `([\\u0600-\\u06FF]\\u0653|\\u0622)|` +                          // 1. Madd Fort
+            `([نم]\\u0651)|` +                                                // 2. Ghunna
+            `(\\u0646\\u0652(?=${skip}ب)|[\\u064B-\\u064D](?=${skip}ب))|` +  // 3. Iqlab
+            `(\\u0646\\u0652(?=${skip}[ينمو])|[\\u064B-\\u064D](?=${skip}[ينمو]))|` + // 4. Idgham bi gh.
+            `(\\u0646\\u0652(?=${skip}${ikhfaGroup})|[\\u064B-\\u064D](?=${skip}${ikhfaGroup}))|` + // 5. Ikhfa
+            `([قطبجد]\\u0652)|` +                                             // 6. Qalqalah
+            `(\\u0671)|` +                                                    // 7. Hamzatul Wasl
+            `(\\u0644(?=[\\u0600-\\u06FF]\\u0651))|` +                       // 8. Lam Shamsiya
+            `([\\u0627\\u0648\\u064A][\\u06DF\\u06E0])|` +                   // 9. Voyelles silencieuses
+            `(\\u0670)|` +                                                    // 10. Alef Dagger
+            `((?<=[\\u0600-\\u06FF]\\u064E)\\u0627)|` +                      // 11. Madd Alif
+            `((?<=[\\u0600-\\u06FF]\\u064F)\\u0648(?![\\u064B-\\u065F]))|`+  // 12. Madd Waw
+            `((?<=[\\u0600-\\u06FF]\\u0650)\\u064A(?![\\u064B-\\u065F]))`,   // 13. Madd Ya
             'g'
         );
 
-        const parts = [];
+        const parts: { text: string; type: string }[] = [];
         let lastIndex = 0;
         let match;
 
         while ((match = regex.exec(text)) !== null) {
-            // Add text before match
             if (match.index > lastIndex) {
-                parts.push({
-                    text: text.substring(lastIndex, match.index),
-                    type: 'normal'
-                });
+                parts.push({ text: text.substring(lastIndex, match.index), type: 'normal' });
             }
 
-            // Identify match type
             let type = 'normal';
-            if (match[1]) type = 'madd-strong'; // Red
-            else if (match[2]) type = 'ghunna'; // Green
-            else if (match[3] || match[4]) type = 'ikhfa'; // Green (Ikhfa)
-            else if (match[5]) type = 'qalqala'; // Blue
-            else if (match[6] || match[7] || match[8]) type = 'silent'; // Gray
-            else if (match[9] || match[10] || match[11] || match[12]) type = 'madd-natural'; // Orange
+            if      (match[1])                               type = 'madd-strong';
+            else if (match[2])                               type = 'ghunna';
+            else if (match[3])                               type = 'iqlab';
+            else if (match[4])                               type = 'idgham-ghunna';
+            else if (match[5])                               type = 'ikhfa';
+            else if (match[6])                               type = 'qalqala';
+            else if (match[7] || match[8] || match[9])       type = 'silent';
+            else if (match[10] || match[11] || match[12] || match[13]) type = 'madd-natural';
 
-            // For matching characters that were lookaheads/lookbehinds (not captured in group 0 sometimes?)
-            // Regex exec match[0] is the full match.
-            // For Ikhfa, we captured the Nun/Tanween. The lookahead part is NOT consumed. This is correct.
-
-            parts.push({
-                text: match[0],
-                type: type
-            });
-
+            parts.push({ text: match[0], type });
             lastIndex = regex.lastIndex;
         }
 
-        // Add remaining text
         if (lastIndex < text.length) {
-            parts.push({
-                text: text.substring(lastIndex),
-                type: 'normal'
-            });
+            parts.push({ text: text.substring(lastIndex), type: 'normal' });
         }
 
         return parts;
     }, [text, tajwidEnabled]);
 
-    // Group segments into words to prevent breaking inside a word (fixes ligature issues)
+    // Regroupe les segments en mots pour éviter de casser les ligatures arabes
     const words = useMemo(() => {
         type WordGroup = { isSpace: true; text: string } | { isSpace: false; segments: typeof segments };
         const groups: WordGroup[] = [];
@@ -115,11 +108,8 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
 
         segments.forEach(seg => {
             if (seg.type !== 'normal') {
-                // Colored segments are parts of a word
                 currentWord.push(seg);
             } else {
-                // Normal segments might contain spaces
-                // Split by whitespace but keep delimiters
                 const parts = seg.text.split(/(\s+)/);
                 parts.forEach(part => {
                     if (!part) return;
@@ -137,37 +127,37 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
     }, [segments]);
 
     return (
-        <span className={`${className} optimize-legibility`} style={{ ...style, overflowWrap: 'break-word', wordBreak: 'normal', textRendering: 'optimizeLegibility' }} dir="rtl">
+        <span
+            className={`${className} optimize-legibility`}
+            style={{ ...style, overflowWrap: 'break-word', wordBreak: 'normal', textRendering: 'optimizeLegibility' }}
+            dir="rtl"
+        >
             {words.map((group, i) => {
                 if (group.isSpace) {
                     return <span key={i}>{group.text}</span>;
                 }
                 return (
-                    <span
-                        key={i}
-                        style={{ whiteSpace: 'nowrap' }}
-                        dir="rtl"
-                    >
+                    <span key={i} style={{ whiteSpace: 'nowrap' }} dir="rtl">
                         {group.segments.map((seg, j) => {
-                            // Insert ZWJ (\u200D) between segments to force connection on iOS 12
-                            // We append ZWJ to all segments except the last one in the word.
-                            // This hints the browser that this segment should connect to the next one.
-                            const text = seg.text + (j < group.segments.length - 1 ? '\u200D' : '');
+                            // ZWJ entre segments pour forcer la connexion des ligatures (iOS 12+)
+                            const segText = seg.text + (j < group.segments.length - 1 ? '\u200D' : '');
 
                             switch (seg.type) {
-                                case 'qalqala':
-                                    return <span key={j} className="tajwid-blue">{text}</span>;
-                                case 'ghunna':
-                                case 'ikhfa':
-                                    return <span key={j} className="tajwid-green">{text}</span>;
                                 case 'madd-strong':
-                                    return <span key={j} className="tajwid-red">{text}</span>;
+                                    return <span key={j} className="tajwid-red">{segText}</span>;
+                                case 'ghunna':
+                                case 'iqlab':
+                                case 'idgham-ghunna':
+                                case 'ikhfa':
+                                    return <span key={j} className="tajwid-green">{segText}</span>;
+                                case 'qalqala':
+                                    return <span key={j} className="tajwid-blue">{segText}</span>;
                                 case 'madd-natural':
-                                    return <span key={j} className="tajwid-orange">{text}</span>;
+                                    return <span key={j} className="tajwid-orange">{segText}</span>;
                                 case 'silent':
-                                    return <span key={j} className="tajwid-gray">{text}</span>;
+                                    return <span key={j} className="tajwid-gray">{segText}</span>;
                                 default:
-                                    return <span key={j}>{text}</span>;
+                                    return <span key={j}>{segText}</span>;
                             }
                         })}
                     </span>
