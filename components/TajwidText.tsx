@@ -5,8 +5,10 @@ import React, { useMemo } from 'react';
 
 interface TajwidTextProps {
     text: string;
-    /** Texte pré-annoté Tajwid Hafs depuis l'API Quran.com.
-     *  Format : "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ ..."
+    /** Texte pré-annoté Tajwid Hafs (scholar-verified).
+     *  Formats acceptés :
+     *    "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ ..."  (API Quran.com)
+     *    "<rule class='ham_wasl'>ٱ</rule>للَّهِ ..."      (dataset GitHub)
      *  Quand fourni et que le tajwid est activé, remplace la détection regex. */
     tajweedText?: string;
     className?: string;
@@ -16,52 +18,62 @@ interface TajwidTextProps {
 import { useSettings } from '@/context/SettingsContext';
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Mapping des 15 classes API Quran.com → types internes
-// Source : api.quran.com/api/v4/quran/verses/uthmani_tajweed
+// Mapping classes Tajwid → types internes
+// Compatible avec deux sources :
+//   • api.quran.com (15 classes, balises <tajweed>)
+//   • ascorbic-acid/quran_data sur GitHub (classes étendues, balises <rule>)
 // Rivayat Hafs 'an 'Asim (Mushaf Dar al-Ma'rifa / Al-Azhar)
 // ─────────────────────────────────────────────────────────────────────────────
 const API_CLASS_TO_TYPE: Record<string, string> = {
-    // MADD — rouge foncé (6 harakat, مد لازم obligatoire)
-    'madda_necessary':   'madd-6',
-    // MADD — rouge (4-5 harakat, مد واجب متصل)
-    'madda_obligatory':  'madd-strong',
-    // MADD — orange (مد جائز منفصل 2/4/6 harakat)
-    'madda_permissible': 'madd-natural',
-    // MADD — orange (مد طبيعي 2 harakat)
-    'madda_normal':      'madd-natural',
-    // GHUNNA — vert (غنة, idghâm bi ghunna, ikhfâ, iqlab, ikhfâ shafawi, idghâm shafawi)
-    'ghunnah':           'ghunna',
-    'idgham_ghunnah':    'ghunna',
-    'idgham_shafawi':    'ghunna',
-    'ikhafa':            'ghunna',
-    'ikhafa_shafawi':    'ghunna',
-    'iqlab':             'ghunna',
-    // SILENCIEUX — gris (hamzat al-wasl, lam shamsiya, idghâm bila ghunna, lettres non prononcées)
-    'ham_wasl':          'silent',
-    'idgham_wo_ghunnah': 'silent',
-    'laam_shamsiyah':    'silent',
-    'slnt':              'silent',
-    // QALQALAH — bleu (قلقلة : ق ط ب ج د avec sukun)
-    'qalaqah':           'qalqala',
+    // ── MADD ──────────────────────────────────────────────────────────────────
+    // مد لازم — 6 harakat (rouge foncé) — حروف مقطعة et similaires
+    'madda_necessary':          'madd-6',
+    // مد واجب متصل — 4-5 harakat (rouge) — même mot
+    'madda_obligatory':         'madd-strong',
+    'madda_obligatory_mottasel':'madd-strong',
+    // مد جائز منفصل — 2/4/5 harakat (orange) — mot suivant commence par hamza
+    'madda_obligatory_monfasel':'madd-natural',
+    'madda_permissible':        'madd-natural',
+    // مد طبيعي — 2 harakat (orange)
+    'madda_normal':             'madd-natural',
+
+    // ── GHUNNA (toutes les règles nasales → vert) ─────────────────────────────
+    'ghunnah':           'ghunna',   // غنة (noon/mim mushaddad)
+    'idgham_ghunnah':    'ghunna',   // إدغام بغنة
+    'idgham_shafawi':    'ghunna',   // إدغام شفوي (mim sur mim)
+    'ikhafa':            'ghunna',   // إخفاء حقيقي
+    'ikhafa_shafawi':    'ghunna',   // إخفاء شفوي (mim avant ba)
+    'iqlab':             'ghunna',   // إقلاب (nun/tanwin avant ba)
+
+    // ── SILENCIEUX / ASSIMILÉS (→ gris) ──────────────────────────────────────
+    'ham_wasl':          'silent',   // همزة الوصل
+    'laam_shamsiyah':    'silent',   // لام شمسية (assimilée)
+    'idgham_wo_ghunnah': 'silent',   // إدغام بلا غنة (l, r)
+    'idgham_mutajanisayn':'silent',  // إدغام متجانسين (lettres similaires)
+    'idgham_mutaqaribayn':'silent',  // إدغام متقاربين (lettres proches)
+    'slnt':              'silent',   // حرف لا يُلفظ (lettre non prononcée)
+
+    // ── QALQALAH (→ bleu) ────────────────────────────────────────────────────
+    'qalaqah':           'qalqala',  // قلقلة : ق ط ب ج د avec sukun
 };
 
-/** Parse le texte annoté Tajwid (format Quran.com) en segments typés.
- *  Exemple d'entrée : "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ رَبِّ"
- *  Les attributs class peuvent être avec ou sans guillemets.
+/** Parse le texte annoté Tajwid en segments typés.
+ *  Compatible avec deux formats de balises :
+ *    <tajweed class=ham_wasl>ٱ</tajweed>   (API Quran.com)
+ *    <rule class='ham_wasl'>ٱ</rule>        (dataset GitHub ascorbic-acid)
+ *  Les guillemets autour de la valeur class sont optionnels.
  */
 function parseTajweedAnnotations(tajweedText: string): { text: string; type: string }[] {
     const segments: { text: string; type: string }[] = [];
-    // Regex alternante : tag tajweed OU texte brut entre tags
-    const regex = /<tajweed\s+class=["']?([^"'>\s]+)["']?>([^<]*)<\/tajweed>|([^<]+)/g;
+    // Accepte <tajweed ...> et <rule ...> (les deux sources connues)
+    const regex = /<(?:tajweed|rule)\s+class=["']?([^"'>\s]+)["']?>([^<]*)<\/(?:tajweed|rule)>|([^<]+)/g;
     let match: RegExpExecArray | null;
 
     while ((match = regex.exec(tajweedText)) !== null) {
         if (match[1] !== undefined) {
-            // Segment annoté avec une règle
             const type = API_CLASS_TO_TYPE[match[1]] ?? 'normal';
             if (match[2]) segments.push({ text: match[2], type });
         } else if (match[3]) {
-            // Texte non annoté (pas de règle Tajwid particulière)
             segments.push({ text: match[3], type: 'normal' });
         }
     }
