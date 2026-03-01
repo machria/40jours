@@ -5,13 +5,71 @@ import React, { useMemo } from 'react';
 
 interface TajwidTextProps {
     text: string;
+    /** Texte pré-annoté Tajwid Hafs depuis l'API Quran.com.
+     *  Format : "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ ..."
+     *  Quand fourni et que le tajwid est activé, remplace la détection regex. */
+    tajweedText?: string;
     className?: string;
     style?: React.CSSProperties;
 }
 
 import { useSettings } from '@/context/SettingsContext';
 
-export function TajwidText({ text, className = "", style }: TajwidTextProps) {
+// ─────────────────────────────────────────────────────────────────────────────
+// Mapping des 15 classes API Quran.com → types internes
+// Source : api.quran.com/api/v4/quran/verses/uthmani_tajweed
+// Rivayat Hafs 'an 'Asim (Mushaf Dar al-Ma'rifa / Al-Azhar)
+// ─────────────────────────────────────────────────────────────────────────────
+const API_CLASS_TO_TYPE: Record<string, string> = {
+    // MADD — rouge foncé (6 harakat, مد لازم obligatoire)
+    'madda_necessary':   'madd-6',
+    // MADD — rouge (4-5 harakat, مد واجب متصل)
+    'madda_obligatory':  'madd-strong',
+    // MADD — orange (مد جائز منفصل 2/4/6 harakat)
+    'madda_permissible': 'madd-natural',
+    // MADD — orange (مد طبيعي 2 harakat)
+    'madda_normal':      'madd-natural',
+    // GHUNNA — vert (غنة, idghâm bi ghunna, ikhfâ, iqlab, ikhfâ shafawi, idghâm shafawi)
+    'ghunnah':           'ghunna',
+    'idgham_ghunnah':    'ghunna',
+    'idgham_shafawi':    'ghunna',
+    'ikhafa':            'ghunna',
+    'ikhafa_shafawi':    'ghunna',
+    'iqlab':             'ghunna',
+    // SILENCIEUX — gris (hamzat al-wasl, lam shamsiya, idghâm bila ghunna, lettres non prononcées)
+    'ham_wasl':          'silent',
+    'idgham_wo_ghunnah': 'silent',
+    'laam_shamsiyah':    'silent',
+    'slnt':              'silent',
+    // QALQALAH — bleu (قلقلة : ق ط ب ج د avec sukun)
+    'qalaqah':           'qalqala',
+};
+
+/** Parse le texte annoté Tajwid (format Quran.com) en segments typés.
+ *  Exemple d'entrée : "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ رَبِّ"
+ *  Les attributs class peuvent être avec ou sans guillemets.
+ */
+function parseTajweedAnnotations(tajweedText: string): { text: string; type: string }[] {
+    const segments: { text: string; type: string }[] = [];
+    // Regex alternante : tag tajweed OU texte brut entre tags
+    const regex = /<tajweed\s+class=["']?([^"'>\s]+)["']?>([^<]*)<\/tajweed>|([^<]+)/g;
+    let match: RegExpExecArray | null;
+
+    while ((match = regex.exec(tajweedText)) !== null) {
+        if (match[1] !== undefined) {
+            // Segment annoté avec une règle
+            const type = API_CLASS_TO_TYPE[match[1]] ?? 'normal';
+            if (match[2]) segments.push({ text: match[2], type });
+        } else if (match[3]) {
+            // Texte non annoté (pas de règle Tajwid particulière)
+            segments.push({ text: match[3], type: 'normal' });
+        }
+    }
+
+    return segments;
+}
+
+export function TajwidText({ text, tajweedText, className = "", style }: TajwidTextProps) {
     const { tajwidEnabled } = useSettings();
 
     const segments = useMemo(() => {
@@ -21,19 +79,25 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
             return [{ text, type: 'normal' }];
         }
 
+        // ── Chemin 1 : données pré-annotées de l'API Quran.com (Hafs, validées) ──
+        if (tajweedText) {
+            return parseTajweedAnnotations(tajweedText);
+        }
+
+        // ── Chemin 2 : détection regex (fallback si données non téléchargées) ──
+
         // 15 lettres d'Ikhfa (prononciation cachée)
         const ikhfaLetters = 'تثجدذزسشصضطظفقك';
         const ikhfaGroup = `[${ikhfaLetters}]`;
 
         // Séquence de saut entre les mots : espaces + marques qurâniques (U+06D6–U+06ED)
-        // Ex : نْ ۚ ب → le ۚ ne doit pas bloquer la détection de l'Iqlab
         const skip = `[\\s\\u06D6-\\u06ED]*`;
 
         // ─────────────────────────────────────────────────────────────────
         // Règles Tajwid Hafs — ordre important (plus spécifique d'abord)
         //
         // Groupe  1 : Madd Fort    — lettre + maddah (U+0653) OU آ (U+0622 précomposé)
-        // Groupe  2 : Ghunna       — Noon/Mim mushaddada (lettre + shadda U+0651)
+        // Groupe  2 : Ghunna       — Noon/Mim mushaddada
         // Groupe  3 : Iqlab        — Noon sakina ou Tanwin avant Ba (ب)
         // Groupe  4 : Idgham bi gh — Noon sakina ou Tanwin avant ي ن م و
         // Groupe  5 : Ikhfa        — Noon sakina ou Tanwin avant 15 lettres
@@ -65,24 +129,24 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
 
         const parts: { text: string; type: string }[] = [];
         let lastIndex = 0;
-        let match;
+        let m;
 
-        while ((match = regex.exec(text)) !== null) {
-            if (match.index > lastIndex) {
-                parts.push({ text: text.substring(lastIndex, match.index), type: 'normal' });
+        while ((m = regex.exec(text)) !== null) {
+            if (m.index > lastIndex) {
+                parts.push({ text: text.substring(lastIndex, m.index), type: 'normal' });
             }
 
             let type = 'normal';
-            if      (match[1])                               type = 'madd-strong';
-            else if (match[2])                               type = 'ghunna';
-            else if (match[3])                               type = 'iqlab';
-            else if (match[4])                               type = 'idgham-ghunna';
-            else if (match[5])                               type = 'ikhfa';
-            else if (match[6])                               type = 'qalqala';
-            else if (match[7] || match[8] || match[9])       type = 'silent';
-            else if (match[10] || match[11] || match[12] || match[13]) type = 'madd-natural';
+            if      (m[1])                               type = 'madd-strong';
+            else if (m[2])                               type = 'ghunna';
+            else if (m[3])                               type = 'iqlab';
+            else if (m[4])                               type = 'idgham-ghunna';
+            else if (m[5])                               type = 'ikhfa';
+            else if (m[6])                               type = 'qalqala';
+            else if (m[7] || m[8] || m[9])               type = 'silent';
+            else if (m[10] || m[11] || m[12] || m[13])  type = 'madd-natural';
 
-            parts.push({ text: match[0], type });
+            parts.push({ text: m[0], type });
             lastIndex = regex.lastIndex;
         }
 
@@ -91,7 +155,7 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
         }
 
         return parts;
-    }, [text, tajwidEnabled]);
+    }, [text, tajweedText, tajwidEnabled]);
 
     // Regroupe les segments en mots pour éviter de casser les ligatures arabes
     const words = useMemo(() => {
@@ -143,17 +207,26 @@ export function TajwidText({ text, className = "", style }: TajwidTextProps) {
                             const segText = seg.text + (j < group.segments.length - 1 ? '\u200D' : '');
 
                             switch (seg.type) {
+                                // ── Madd (données API : 3 niveaux distincts) ──
+                                case 'madd-6':
+                                    // مد لازم — 6 harakat (rouge foncé)
+                                    return <span key={j} className="tajwid-red-dark">{segText}</span>;
                                 case 'madd-strong':
+                                    // مد واجب متصل — 4-5 harakat (rouge)
                                     return <span key={j} className="tajwid-red">{segText}</span>;
+                                case 'madd-natural':
+                                    // مد طبيعي / مد جائز — 2 harakat (orange)
+                                    return <span key={j} className="tajwid-orange">{segText}</span>;
+                                // ── Ghunna (toutes les règles nasales) ──
                                 case 'ghunna':
                                 case 'iqlab':
                                 case 'idgham-ghunna':
                                 case 'ikhfa':
                                     return <span key={j} className="tajwid-green">{segText}</span>;
+                                // ── Qalqalah ──
                                 case 'qalqala':
                                     return <span key={j} className="tajwid-blue">{segText}</span>;
-                                case 'madd-natural':
-                                    return <span key={j} className="tajwid-orange">{segText}</span>;
+                                // ── Lettres silencieuses / assimilées ──
                                 case 'silent':
                                     return <span key={j} className="tajwid-gray">{segText}</span>;
                                 default:
