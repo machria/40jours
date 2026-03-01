@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Play, BookOpen, Pause } from 'lucide-react';
 import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
@@ -28,6 +28,16 @@ interface SurahViewerProps {
 }
 
 export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode = false }: SurahViewerProps) {
+    // Annotations Tajwid pré-validées (Hafs) depuis l'API Quran.com
+    // Format : { "1:1": "<tajweed class=ham_wasl>ٱ</tajweed>للَّهِ ...", ... }
+    const [tajweedData, setTajweedData] = useState<Record<string, string>>({});
+    useEffect(() => {
+        fetch(`/quran/tajweed/${surahId}.json`)
+            .then(r => r.ok ? r.json() : Promise.reject())
+            .then(setTajweedData)
+            .catch(() => { /* Fallback silencieux → détection regex */ });
+    }, [surahId]);
+
     // Tafsir State
     const [tafsirState, setTafsirState] = useState<{
         isOpen: boolean;
@@ -189,13 +199,13 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
 
             {viewMode === 'mushaf' ? (
                 <div className="bg-card border rounded-xl p-8 shadow-sm">
-                    <div className="text-justify font-kufi text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
+                    <div className="text-justify font-quran text-2xl md:text-3xl leading-[2.8] dir-rtl" dir="rtl">
                         {ayahs.map((ayah, i) => (
                             <span key={ayah.id}
                                 className={`cursor-pointer hover:bg-primary/5 rounded transition-colors ${isAyahPlaying(ayah.surah, ayah.ayah) ? 'bg-primary/20 text-primary' : ''}`}
                                 onClick={() => handlePlayClick(ayah.surah, ayah.ayah)}
                             >
-                                <TajwidText text={ayah.text} className="inline" style={{ fontSize: currentFontSize }} />
+                                <TajwidText text={ayah.text} tajweedText={tajweedData[`${ayah.surah}:${ayah.ayah}`]} className="inline" style={{ fontSize: currentFontSize }} />
                                 <span className="inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle mx-1 bg-background select-none">
                                     {ayah.ayah}
                                 </span>
@@ -267,7 +277,8 @@ export default function SurahViewer({ ayahs, surahId, wbwData, isWordByWordMode 
                                     >
                                         <TajwidText
                                             text={ayah.text}
-                                            className="font-kufi leading-[2.2] text-foreground"
+                                            tajweedText={tajweedData[`${ayah.surah}:${ayah.ayah}`]}
+                                            className="font-quran leading-[2.2] text-foreground"
                                             style={{ fontSize: currentFontSize }}
                                         />
                                     </div>

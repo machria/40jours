@@ -101,7 +101,7 @@ export default function AyahWordByWord({
                                 >
                                     <TajwidText
                                         text={word.text}
-                                        className="font-kufi leading-[2.2]"
+                                        className="font-quran leading-[2.2]"
                                         style={{ fontSize: currentFontSize }}
                                     />
                                 </div>

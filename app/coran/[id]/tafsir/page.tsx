@@ -169,7 +169,7 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                                         */}
                                         <TajwidText
                                             text={item.text}
-                                            className="text-2xl md:text-3xl font-kufi text-right dir-rtl leading-[2.5] block text-foreground mb-4"
+                                            className="text-2xl md:text-3xl font-quran text-right dir-rtl leading-[2.5] block text-foreground mb-4"
                                         />
                                         <p className="text-lg text-muted-foreground mt-2 font-serif">
                                             {item.translation}

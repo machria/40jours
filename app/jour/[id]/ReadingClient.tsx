@@ -356,7 +356,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                         >
                                             {/* Arabic */}
                                             <div className="w-full">
-                                                <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
+                                                <p className="font-quran text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
                                                     <TajwidText text={ayah.text} className="inline" />
                                                     <span className="mr-2 inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle">
                                                         {ayah.numberInSurah}

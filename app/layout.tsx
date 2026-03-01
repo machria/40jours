@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Reem_Kufi } from "next/font/google";
+import { Inter, Reem_Kufi, Amiri } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";
 import Navigation from "@/components/layout/Navigation";
@@ -16,6 +16,14 @@ const kufi = Reem_Kufi({
   subsets: ["latin", "arabic"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-kufi",
+});
+
+// Police dédiée au texte coranique Hafs — supporte tous les caractères
+// Unicode étendus (U+06D0–U+06FF) : marques ghunna ۭ, petit waw ۥ, etc.
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-quran",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +44,7 @@ export default async function RootLayout({
     <html lang={locale} suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${kufi.variable} antialiased font-sans bg-background text-foreground`}
+        className={`${inter.variable} ${kufi.variable} ${amiri.variable} antialiased font-sans bg-background text-foreground`}
       >
         <NextIntlClientProvider messages={messages}>
           <Providers>
