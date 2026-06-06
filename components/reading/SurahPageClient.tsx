@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, BrainCircuit, Info } from 'lucide-react';
+import { ChevronLeft, BrainCircuit, Info, EyeOff } from 'lucide-react';
 import SurahViewer from '@/components/reading/SurahViewer';
 import MemorizationQuiz from '@/components/surah/MemorizationQuiz';
 import SurahInfoModal from '@/components/reading/SurahInfoModal';
@@ -17,6 +17,7 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
     const [isQuizOpen, setIsQuizOpen] = useState(false);
     const [isInfoOpen, setIsInfoOpen] = useState(false);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
+    const [isMaskMode, setIsMaskMode] = useState(false);
     const [wbwData, setWbwData] = useState<any[] | null>(null);
     const wbwLoaded = useRef(false);
 
@@ -78,6 +79,16 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                         </button>
 
                         <button
+                            onClick={() => setIsMaskMode(!isMaskMode)}
+                            className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors border ${isMaskMode ? 'bg-orange-500 hover:bg-orange-600 text-white border-orange-500' : 'bg-transparent text-orange-500 border-orange-500/20 hover:bg-orange-500/5'}`}
+                            title={isMaskMode ? "Désactiver le mode masquage" : "Activer le mode masquage"}
+                        >
+                            <EyeOff className="w-4 h-4" />
+                            <span className="hidden lg:inline">{isMaskMode ? "Lecture" : "Masquage"}</span>
+                            {!isMaskMode && <span className="lg:hidden">Masquage</span>}
+                        </button>
+
+                        <button
                             onClick={() => setIsWordByWordMode(!isWordByWordMode)}
                             className={`px-3 py-2 rounded-full text-sm font-semibold flex items-center gap-2 transition-colors border ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
                             title={isWordByWordMode ? "Désactiver le mode mot par mot" : "Activer le mode mot par mot"}
@@ -101,7 +112,13 @@ export default function SurahPageClient({ ayahs, meta, surahId }: SurahPageClien
                     </div>
                 )}
 
-                <SurahViewer ayahs={ayahs} surahId={surahId} wbwData={wbwData ?? undefined} isWordByWordMode={isWordByWordMode} />
+                <SurahViewer 
+                    ayahs={ayahs} 
+                    surahId={surahId} 
+                    wbwData={wbwData ?? undefined} 
+                    isWordByWordMode={isWordByWordMode} 
+                    isMaskMode={isMaskMode} 
+                />
             </main>
         </div>
     );

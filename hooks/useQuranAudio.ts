@@ -19,13 +19,36 @@ interface UseQuranAudioProps {
     playlist: AyahAudio[];
     onAyahChange?: (ayah: AyahAudio) => void;
     audioRef: MutableRefObject<HTMLAudioElement | null>;
+    startIndex?: number;
+    endIndex?: number;
+    pauseDuration?: number; // 0: none, -1: match verse duration, >0: fixed seconds
 }
 
-export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudioProps) {
+export function useQuranAudio({
+    playlist,
+    onAyahChange,
+    audioRef,
+    startIndex,
+    endIndex,
+    pauseDuration = 0
+}: UseQuranAudioProps) {
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentIndex, setCurrentIndex] = useState<number>(-1);
     const [repeatMode, setRepeatMode] = useState<AudioRepeatMode>('off');
     const [isLoading, setIsLoading] = useState(false);
+    const [isWaiting, setIsWaiting] = useState(false);
+
+    const playTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+    const startIndexRef = useRef(0);
+    const endIndexRef = useRef(playlist.length - 1);
+    const pauseDurationRef = useRef(0);
+
+    useEffect(() => {
+        startIndexRef.current = startIndex !== undefined ? startIndex : 0;
+        endIndexRef.current = endIndex !== undefined ? endIndex : playlist.length - 1;
+        pauseDurationRef.current = pauseDuration !== undefined ? pauseDuration : 0;
+    }, [startIndex, endIndex, pauseDuration, playlist.length]);
 
     const currentAyah = currentIndex >= 0 && currentIndex < playlist.length ? playlist[currentIndex] : null;
 
@@ -57,20 +80,21 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     const playAtIndex = useCallback(async (index: number) => {
         if (index < 0 || index >= playlist.length) return;
 
+        if (playTimeoutRef.current) {
+            clearTimeout(playTimeoutRef.current);
+            playTimeoutRef.current = null;
+        }
+        setIsWaiting(false);
+
         const audio = audioRef.current;
         if (!audio) return;
 
         const item = playlist[index];
-        // Only set src if it changed or if we are restarting?
-        // Actually, if we want to play a new item, we must set src.
-        // If we want to resume, we use `resume`.
 
         if (audio.src !== window.location.origin + item.url && audio.src !== item.url) {
             audio.src = item.url;
         }
 
-        // Setup event listeners
-        // We assign directly to onended property to avoid piling up listeners
         audio.onended = () => {
             handleEnded(index);
         };
@@ -81,6 +105,7 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
             console.error("Audio error", e);
             setIsLoading(false);
             setIsPlaying(false);
+            setIsWaiting(false);
         };
 
         setCurrentIndex(index);
@@ -101,7 +126,6 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
         }
     }, [playlist, onAyahChange]);
 
-    // Use a ref for repeatMode to access it inside the event listener without recreating the listener
     const repeatModeRef = useRef(repeatMode);
     useEffect(() => { repeatModeRef.current = repeatMode; }, [repeatMode]);
 
@@ -111,30 +135,52 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     const handleEnded = (endedIndex: number) => {
         const mode = repeatModeRef.current;
         const list = playlistRef.current;
+        const startIdx = startIndexRef.current;
+        const endIdx = endIndexRef.current;
+        const pauseDur = pauseDurationRef.current;
 
+        let nextIndex = -1;
         if (mode === 'single') {
-            // Replay same index
-            // We need to re-trigger play
-            if (audioRef.current) {
-                audioRef.current.currentTime = 0;
-                audioRef.current.play().catch(console.error);
+            nextIndex = endedIndex;
+        } else {
+            if (endedIndex < endIdx && endedIndex < list.length - 1) {
+                nextIndex = endedIndex + 1;
+            } else if (mode === 'all') {
+                nextIndex = startIdx;
+            }
+        }
+
+        if (nextIndex !== -1) {
+            if (pauseDur !== 0) {
+                let delayMs = 0;
+                if (pauseDur === -1) {
+                    const duration = audioRef.current?.duration || 4; // fallback to 4s
+                    delayMs = Math.round(duration * 1000);
+                } else if (pauseDur > 0) {
+                    delayMs = pauseDur * 1000;
+                }
+
+                if (playTimeoutRef.current) clearTimeout(playTimeoutRef.current);
+                setIsWaiting(true);
+                playTimeoutRef.current = setTimeout(() => {
+                    setIsWaiting(false);
+                    playAtIndex(nextIndex);
+                }, delayMs);
+            } else {
+                playAtIndex(nextIndex);
             }
         } else {
-            // Go to next
-            if (endedIndex < list.length - 1) {
-                playAtIndex(endedIndex + 1);
-            } else if (mode === 'all') {
-                // Loop back to start
-                playAtIndex(0);
-            } else {
-                // Stop
-                setIsPlaying(false);
-                setCurrentIndex(-1);
-            }
+            setIsPlaying(false);
+            setCurrentIndex(-1);
         }
     };
 
     const play = (ayah: AyahAudio) => {
+        if (playTimeoutRef.current) {
+            clearTimeout(playTimeoutRef.current);
+            playTimeoutRef.current = null;
+        }
+        setIsWaiting(false);
         const index = playlist.findIndex(a => a.surah === ayah.surah && a.ayah === ayah.ayah);
         if (index !== -1) {
             playAtIndex(index);
@@ -142,14 +188,24 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     };
 
     const resume = () => {
+        if (playTimeoutRef.current) {
+            clearTimeout(playTimeoutRef.current);
+            playTimeoutRef.current = null;
+        }
+        setIsWaiting(false);
         if (currentIndex !== -1 && audioRef.current) {
             audioRef.current.play().catch(console.error);
         } else if (playlist.length > 0) {
-            playAtIndex(0);
+            playAtIndex(startIndexRef.current);
         }
     };
 
     const pause = () => {
+        if (playTimeoutRef.current) {
+            clearTimeout(playTimeoutRef.current);
+            playTimeoutRef.current = null;
+        }
+        setIsWaiting(false);
         if (audioRef.current) {
             audioRef.current.pause();
         }
@@ -161,13 +217,15 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     };
 
     const playNext = () => {
-        if (currentIndex < playlist.length - 1) {
+        const endIdx = endIndexRef.current;
+        if (currentIndex < endIdx && currentIndex < playlist.length - 1) {
             playAtIndex(currentIndex + 1);
         }
     };
 
     const playPrevious = () => {
-        if (currentIndex > 0) {
+        const startIdx = startIndexRef.current;
+        if (currentIndex > startIdx) {
             playAtIndex(currentIndex - 1);
         }
     };
@@ -183,6 +241,9 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     // Cleanup
     useEffect(() => {
         return () => {
+            if (playTimeoutRef.current) {
+                clearTimeout(playTimeoutRef.current);
+            }
             if (audioRef.current) {
                 audioRef.current.pause();
             }
@@ -192,6 +253,7 @@ export function useQuranAudio({ playlist, onAyahChange, audioRef }: UseQuranAudi
     return {
         isPlaying,
         isLoading,
+        isWaiting,
         currentAyah,
         currentIndex,
         repeatMode,

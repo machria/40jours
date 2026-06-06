@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "npx tsx scripts/copy_to_public.ts && next dev",
-    "build": "npx tsx scripts/copy_to_public.ts && next build",
+    "build": "npx tsx scripts/copy_to_public.ts && next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
