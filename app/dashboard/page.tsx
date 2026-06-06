@@ -212,6 +212,14 @@ export default async function DashboardPage() {
                         <span className="font-bold text-primary">{user.arabicQuizBestScore || 0} pts</span>
                     </div>
 
+                    {/* Arabic Word Quiz */}
+                    <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
+                        <span className="font-medium text-sm flex items-center gap-2">
+                            🗣️ Reconnaissance Mots
+                        </span>
+                        <span className="font-bold text-primary">{user.quizScores?.arabic_word || 0} pts</span>
+                    </div>
+
                     {/* 99 Names Quiz */}
                     <div className="flex items-center justify-between p-4 rounded-lg bg-muted/30 border">
                         <span className="font-medium text-sm flex items-center gap-2">
@@ -231,7 +239,7 @@ export default async function DashboardPage() {
 
                 {(() => {
                     const memorizationScores = user.quizScores
-                        ? Object.entries(user.quizScores).filter(([key]) => key !== '99-names')
+                        ? Object.entries(user.quizScores).filter(([key]) => key !== '99-names' && key !== 'arabic_word')
                         : [];
 
                     if (memorizationScores.length === 0) return null;

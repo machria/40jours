@@ -17,6 +17,7 @@ interface AyahWordByWordProps {
     audioRef: React.RefObject<HTMLAudioElement | null>;
     showPhonetic: boolean;
     reversePhonetics?: boolean;
+    surahName?: string;
 }
 
 export default function AyahWordByWord({
@@ -29,7 +30,8 @@ export default function AyahWordByWord({
     onTafsirClick,
     audioRef,
     showPhonetic,
-    reversePhonetics = false
+    reversePhonetics = false,
+    surahName
 }: AyahWordByWordProps) {
     const { fontSize, fontSizes } = useSettings();
     const currentFontSize = fontSizes[fontSize];
@@ -43,7 +45,7 @@ export default function AyahWordByWord({
         >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b pb-4 border-border/50">
                 <span className={`w-fit text-xs font-mono px-2 py-1 rounded transition-colors ${isPlaying ? 'bg-primary text-primary-foreground' : 'text-muted-foreground bg-muted'}`}>
-                    {surah}:{ayah}
+                    Sourate {surah} {surahName ? `(${surahName})` : ''} : Verset {ayah}
                 </span>
                 <div className="flex gap-2 self-end sm:self-auto">
                     <button

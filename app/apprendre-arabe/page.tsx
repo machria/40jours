@@ -3,12 +3,13 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ChevronLeft, GraduationCap, LayoutGrid, BookOpen, BrainCircuit } from 'lucide-react';
+import { ChevronLeft, GraduationCap, LayoutGrid, BookOpen, BrainCircuit, Sparkles } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AlphabetGrid from '@/components/learn-arabe/AlphabetGrid';
 import LessonView from '@/components/learn-arabe/LessonView';
 import FlashcardGame from '@/components/learn-arabe/FlashcardGame';
 import QuizGame from '@/components/learn-arabe/QuizGame';
+import WordQuizGame from '@/components/learn-arabe/WordQuizGame';
 
 export default function LearnArabicPage() {
     return (
@@ -36,7 +37,7 @@ export default function LearnArabicPage() {
                 </div>
 
                 <Tabs defaultValue="alphabet" className="space-y-6">
-                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto p-1 bg-muted/50 rounded-2xl">
+                    <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 h-auto p-1 bg-muted/50 rounded-2xl">
                         <TabsTrigger value="alphabet" className="rounded-xl py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm">
                             <LayoutGrid className="w-4 h-4 mr-2" /> Alphabet
                         </TabsTrigger>
@@ -47,7 +48,10 @@ export default function LearnArabicPage() {
                             <BrainCircuit className="w-4 h-4 mr-2" /> Flashcards
                         </TabsTrigger>
                         <TabsTrigger value="quiz" className="rounded-xl py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm">
-                            <GraduationCap className="w-4 h-4 mr-2" /> Quiz
+                            <GraduationCap className="w-4 h-4 mr-2" /> Quiz Lettres
+                        </TabsTrigger>
+                        <TabsTrigger value="word-quiz" className="rounded-xl py-3 data-[state=active]:bg-background data-[state=active]:shadow-sm">
+                            <Sparkles className="w-4 h-4 mr-2" /> Quiz Mots
                         </TabsTrigger>
                     </TabsList>
 
@@ -76,10 +80,18 @@ export default function LearnArabicPage() {
 
                     <TabsContent value="quiz" className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
                         <div className="text-center mb-8">
-                            <h3 className="text-lg font-bold mb-2">Quiz Connaissances</h3>
-                            <p className="text-sm text-muted-foreground">Validez vos acquis avec ce petit quiz.</p>
+                            <h3 className="text-lg font-bold mb-2">Quiz Connaissances (Lettres)</h3>
+                            <p className="text-sm text-muted-foreground">Validez vos acquis de l'alphabet avec ce petit quiz.</p>
                         </div>
                         <QuizGame />
+                    </TabsContent>
+
+                    <TabsContent value="word-quiz" className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        <div className="text-center mb-8">
+                            <h3 className="text-lg font-bold mb-2">Quiz Mots Arabes</h3>
+                            <p className="text-sm text-muted-foreground">Reconnaissez les mots arabes à partir de leur translittération et inversement.</p>
+                        </div>
+                        <WordQuizGame />
                     </TabsContent>
                 </Tabs>
 

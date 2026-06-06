@@ -340,6 +340,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                                     audioRef={audioRef}
                                                     showPhonetic={showPhonetic}
                                                     reversePhonetics={reversePhonetics}
+                                                    surahName={ayah.surah?.englishName}
                                                 />
                                             </div>
                                         );
@@ -354,6 +355,11 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                                 : 'hover:bg-muted/5'
                                                 }`}
                                         >
+                                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-2 border-b pb-2 border-gray-100 dark:border-gray-800">
+                                                <span className="text-xs font-mono text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded w-fit">
+                                                    Sourate {ayah.surahNumber} {ayah.surah?.englishName ? `(${ayah.surah.englishName})` : ''} : Verset {ayah.numberInSurah}
+                                                </span>
+                                            </div>
                                             {/* Arabic */}
                                             <div className="w-full">
                                                 <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">

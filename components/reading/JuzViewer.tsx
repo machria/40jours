@@ -19,6 +19,13 @@ interface Ayah {
     translation: string;
     page: number;
     surahName?: string;
+    surah?: {
+        number: number;
+        name: string;
+        englishName: string;
+        englishNameTranslation: string;
+        revelationType: string;
+    };
 }
 
 import { useSession } from 'next-auth/react';
@@ -340,7 +347,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                                     <span key={`${ayah.surahNumber}:${ayah.numberInSurah}`}>
                                         {isNewSurah && (
                                             <div className="w-full my-8 text-center text-emerald-600 dark:text-emerald-400 font-sans text-lg border-y border-emerald-100 dark:border-emerald-800 py-2">
-                                                Sourate {ayah.surahNumber}
+                                                Sourate {ayah.surahNumber} {ayah.surah?.englishName ? `(${ayah.surah.englishName})` : ''}
                                             </div>
                                         )}
                                         <span
@@ -380,6 +387,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                                         audioRef={audioRef}
                                         showPhonetic={showPhonetic}
                                         reversePhonetics={reversePhonetics}
+                                        surahName={ayah.surah?.englishName}
                                     />
                                 );
                             }
@@ -392,7 +400,7 @@ export default function JuzViewer({ ayahs, juzId, theme, description }: JuzViewe
                                 >
                                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4 border-b pb-4 border-gray-100 dark:border-gray-700">
                                         <span className="text-xs font-mono text-gray-500 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded w-fit">
-                                            Sourate {ayah.surahNumber} : Verset {ayah.numberInSurah}
+                                            Sourate {ayah.surahNumber} {ayah.surah?.englishName ? `(${ayah.surah.englishName})` : ''} : Verset {ayah.numberInSurah}
                                         </span>
                                         <div className="flex gap-2 self-end sm:self-auto">
                                             <button
