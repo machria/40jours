@@ -422,6 +422,10 @@ export default function SurahViewer({
                                     audioRef={audioRef}
                                     showPhonetic={showPhonetic}
                                     reversePhonetics={reversePhonetics}
+                                    isMaskMode={isMaskMode}
+                                    maskTarget={maskTarget}
+                                    isMasked={isMasked}
+                                    toggleReveal={toggleReveal}
                                 />
                             );
                         }
