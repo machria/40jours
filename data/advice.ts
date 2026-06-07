@@ -6,7 +6,8 @@ export interface Article {
     date: string;
     author: string;
     readTime?: string;
-    coverImage?: string; // Optional for future
+    featured?: boolean;
+    coverImage?: string;
     category: 'Sagesse d\'Al-Ghazali' | 'Méthodologie Coranique' | 'Spiritualité & Guérison' | 'Vivre l\'Islam & Productivité' | 'Sciences & Compréhension';
 }
 
@@ -16,8 +17,9 @@ export const articles: Article[] = [
         title: "Ihya' Al-Ghazali (1/4) : Les Secrets des Adorations ('Ibadat)",
         excerpt: "Découvrez comment transformer vos rituels en expériences spirituelles vivantes. Ghazali nous enseigne que la prière, le jeûne et la Zakat ont une âme qui va bien au-delà des gestes.",
         date: '2026-02-02',
-        author: 'Imam Al-Ghazali (Extrait)',
+        author: 'Imam Al-Ghazali',
         readTime: '12 min',
+        featured: true,
         category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Les Secrets Spirituels des Adorations (Rub' al-Ibadat)
@@ -93,7 +95,7 @@ Le temps est votre capital le plus précieux. Chaque souffle est un joyau inesti
         title: "Ihya' Al-Ghazali (2/4) : Sanctifier le Quotidien (Adat)",
         excerpt: "Manger, dormir, travailler, se marier... Comment ces actes banals peuvent-ils devenir des actes d'adoration ? Ghazali nous montre la voie de l'intention.",
         date: '2026-02-02',
-        author: 'Imam Al-Ghazali (Extrait)',
+        author: 'Imam Al-Ghazali',
         readTime: '10 min',
         category: 'Sagesse d\'Al-Ghazali',
         content: `
@@ -177,8 +179,9 @@ Ce livre clôture le quart des Habitudes en présentant le modèle ultime : Muha
         title: "Ihya' Al-Ghazali (3/4) : Les Maladies du Cœur (Muhlikat)",
         excerpt: "L'ostentation, l'orgueil, l'envie... Ghazali, le médecin de l'âme, diagnostique ces maladies mortelles et prescrit leurs remèdes spirituels.",
         date: '2026-02-02',
-        author: 'Imam Al-Ghazali (Extrait)',
+        author: 'Imam Al-Ghazali',
         readTime: '14 min',
+        featured: true,
         category: 'Sagesse d\'Al-Ghazali',
         content: `
 # Les Périls du Cœur (Rub' al-Muhlikat)
@@ -249,7 +252,7 @@ C'est le livre qui clôt les maladies. Le *Ghurur*, c'est la fausse sécurité.
         title: "Ihya' Al-Ghazali (4/4) : Le Chemin du Salut (Munjiyat)",
         excerpt: "Après avoir nettoyé le cœur, il faut l'embellir. Le Repentir, la Patience, l'Espoir et l'Amour sont les stations vers la proximité divine.",
         date: '2026-02-02',
-        author: 'Imam Al-Ghazali (Extrait)',
+        author: 'Imam Al-Ghazali',
         readTime: '13 min',
         category: 'Sagesse d\'Al-Ghazali',
         content: `
@@ -320,6 +323,7 @@ C'est la conclusion nécessaire.
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '8 min',
+        featured: true,
         category: 'Méthodologie Coranique',
         content: `
 # Le Voyage vers le Coran : Comment devenir Hafiz
@@ -608,6 +612,7 @@ Faites de ces invocations une habitude non-négociable, comme le brossage des de
         date: '2026-01-31',
         author: 'Équipe Coran 40 Jours',
         readTime: '5 min',
+        featured: true,
         category: 'Vivre l\'Islam & Productivité',
         content: `
 # Réussir le Défi des 40 Jours
@@ -959,6 +964,7 @@ Le Hadith n'est pas de la culture générale. C'est de la lumière divine passé
         date: '2026-02-03',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
+        featured: true,
         category: 'Sciences & Compréhension',
         content: `
 # La Science du Tafsir : Au-delà de la Traduction
@@ -1093,6 +1099,7 @@ Commencez ce soir. Prenez un Nom. Étudiez-le. Et appelez votre Seigneur avec.
         date: '2026-02-05',
         author: 'Équipe Coran 40 Jours',
         readTime: '18 min',
+        featured: true,
         category: 'Vivre l\'Islam & Productivité',
         content: `
 # Pourquoi 40 Jours ? La Science derrière le Programme
@@ -4086,7 +4093,7 @@ Le Waqf et l'Ibtida transforment la lecture d'un simple exercice mécanique en u
         title: "L'Alchimie du Bonheur : Les 4 clés de la connaissance de soi selon Al-Ghazali",
         excerpt: "Comment l'Imam Al-Ghazali résume la voie spirituelle à travers la connaissance de soi, la connaissance de Dieu, la réalité de ce monde et celle de l'au-delà.",
         date: '2026-06-06',
-        author: 'Imam Al-Ghazali (Résumé)',
+        author: 'Imam Al-Ghazali',
         readTime: '10 min',
         category: "Sagesse d'Al-Ghazali",
         content: `
@@ -5594,7 +5601,7 @@ La science du Jarh wa al-Ta'dil nous laisse deux leçons majeures :
         title: "Le Riya' (Ostentation) : L'ennemi invisible qui dévore les bonnes actions",
         excerpt: "Le Prophète ﷺ l'a nommé 'le Shirk Caché'. Parmi toutes les maladies du cœur, le Riya' est la plus subtile : elle se glisse dans nos prières, nos aumônes, nos récitations — et les vide de leur récompense.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Spiritualité & Guérison',
         content: `
@@ -5799,7 +5806,7 @@ Ce chemin est exigeant. La *Nafs* résiste. Le Riya' revient par des portes qu'o
         title: "Usul al-Fiqh : Les Fondements de la Jurisprudence Islamique pour Tout Musulman",
         excerpt: "Pourquoi des musulmans sincères arrivent-ils à des règles différentes sur la même question ? La réponse tient en une science peu connue : l'Usul al-Fiqh — la méthode par laquelle l'Islam répond aux réalités de chaque époque.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Sciences & Compréhension',
         content: `
@@ -6020,8 +6027,9 @@ Comprendre ses fondements, c'est comprendre pourquoi le différend entre savants
         title: "Dhikr et Neurosciences : Quand la Science Confirme le Pouvoir du Rappel d'Allah",
         excerpt: "\"Certes, c'est par le dhikr d'Allah que les cœurs s'apaisent.\" Mille quatre cents ans après cette révélation, les neurosciences modernes confirment que la répétition consciente de formules sacrées reconfigure littéralement le cerveau. Exploration d'un dialogue fascinant entre foi et science.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
+        featured: true,
         category: 'Sciences & Compréhension',
         content: `
 # Dhikr et Neurosciences : Quand la Science Confirme le Pouvoir du Rappel d'Allah
@@ -6246,7 +6254,7 @@ Pour le croyant, la neuroscience n'est pas une validation de sa foi — sa foi n
         title: "Les Amthal du Coran : Quand Allah enseigne par l'Image et la Parabole",
         excerpt: "Le Coran contient quarante paraboles explicites et des dizaines d'images symboliques. L'araignée, l'arbre, la mouche, la lumière dans une niche... Allah utilise le monde sensible pour enseigner les vérités les plus profondes. Un voyage dans la pédagogie divine.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Méthodologie Coranique',
         content: `
@@ -6436,7 +6444,7 @@ La parabole n'est pas une concession à la simplification. C'est la voie royale 
         title: "Al-Mahabba : Aimer Allah — La Plus Haute Station du Cœur selon Al-Ghazali et Ibn al-Qayyim",
         excerpt: "\"L'amour d'Allah est la vie du cœur et la lumière de l'œil.\" Al-Ghazali y consacre un livre entier dans l'Ihya'. Ibn al-Qayyim identifie dix causes qui font naître cet amour. Et le Coran promet à celui qui le possède quelque chose que le monde entier ne peut donner.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Sagesse d\'Al-Ghazali',
         content: `
@@ -6625,7 +6633,7 @@ Commencer par une seule des dix causes suffit. Lire le Coran avec le cœur. Se l
         title: "Silat al-Rahim : Maintenir les Liens Familiaux — Entre Obligation Islamique et Source de Barakah",
         excerpt: "Le Prophète ﷺ a dit : 'Celui qui veut voir son Rizq augmenter et sa vie prolongée, qu'il maintienne les liens familiaux.' La Silat al-Rahim est bien plus qu'un devoir moral — c'est une clé concrète vers la baraka, longuement analysée par les savants.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Vivre l\'Islam & Productivité',
         content: `
@@ -6831,7 +6839,7 @@ Maintenir ces liens, même quand c'est difficile — surtout quand c'est diffici
         title: "L'Isra' et le Mi'raj : Ce que le Prophète ﷺ a Vu lors du Voyage Nocturne",
         excerpt: "En une nuit, le Prophète ﷺ fut transporté de La Mecque à Jérusalem, puis à travers les sept cieux jusqu'à une distance de deux arcs. Pourquoi ce voyage a-t-il eu lieu ? Qu'a-t-il vu ? Et quel cadeau en a-t-il ramené pour toute l'humanité ?",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Spiritualité & Guérison',
         content: `
@@ -7032,7 +7040,7 @@ Abu Bakr n'a pas demandé de preuve. Il a raisonné depuis sa foi. C'est cela le
         title: "Al-Barzakh : La Vie dans la Tombe — Ce que le Coran et la Sunnah Nous Révèlent",
         excerpt: "Entre la mort et la Résurrection existe un monde intermédiaire que le Coran appelle Al-Barzakh. Les anges qui questionnent, l'âme qui s'élève ou descend, la tombe qui se dilate ou se resserre — une exploration complète de ce qui nous attend tous.",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Spiritualité & Guérison',
         content: `
@@ -7229,7 +7237,7 @@ Le Barzakh n'est pas un sujet de terreur. C'est un sujet de *préparation*.
         title: "Ibn Khaldun et la Muqaddimah : Le Père de la Sociologie était Musulman",
         excerpt: "Au XIVe siècle, un savant tunisien écrit en cinq mois une œuvre qui révolutionne la compréhension de l'histoire humaine. Ibn Khaldun invente la sociologie, l'économie politique et la philosophie de l'histoire — 500 ans avant les Occidentaux. Qui était-il ?",
         date: '2026-06-07',
-        author: 'Rédaction IslamDev',
+        author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
         category: 'Sciences & Compréhension',
         content: `

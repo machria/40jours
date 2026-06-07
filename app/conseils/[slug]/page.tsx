@@ -1,7 +1,7 @@
 import { articles } from '@/data/advice';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Calendar, Clock, User, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Clock, Scroll, Users, ChevronLeft, ChevronRight } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -68,9 +68,12 @@ export default async function ArticlePage({ params }: PageProps) {
                     </h1>
 
                     <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground border-b pb-6">
-                        <div className="flex items-center gap-1.5">
-                            <User className="w-4 h-4" />
-                            <span className="font-medium text-foreground">{article.author}</span>
+                        <div className={`flex items-center gap-1.5 font-medium ${article.author === 'Imam Al-Ghazali' ? 'text-amber-600 dark:text-amber-400' : 'text-foreground'}`}>
+                            {article.author === 'Imam Al-Ghazali'
+                                ? <Scroll className="w-4 h-4" />
+                                : <Users className="w-4 h-4" />
+                            }
+                            <span>{article.author}</span>
                         </div>
                         <div className="flex items-center gap-1.5">
                             <Clock className="w-4 h-4" />
