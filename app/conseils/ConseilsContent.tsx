@@ -145,6 +145,12 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'amthal-paraboles-coran-pedagogie-divine':   ['savant', 'profond'],
     'mahabba-amour-allah-plus-haute-station':    ['profond', 'apaisant'],
     'silat-rahim-liens-familiaux-obligation-barakah': ['touchant', 'pratique'],
+    'laylat-al-qadr-guide-spirituel-complet':         ['profond', 'pratique'],
+    'ihsan-adorer-allah-comme-si-tu-le-voyais':       ['profond', 'motivant'],
+    'tafsir-al-fatiha-mere-du-coran':                 ['profond', 'savant'],
+    'al-janna-paradis-descriptions-coran-sunnah':     ['apaisant', 'profond'],
+    'salat-al-layl-tahajjud-priere-nuit-guide':        ['pratique', 'motivant'],
+    'istikharah-guide-complet-decisions-islam':        ['pratique', 'apaisant'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {
