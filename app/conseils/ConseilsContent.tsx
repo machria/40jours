@@ -151,6 +151,9 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'al-janna-paradis-descriptions-coran-sunnah':     ['apaisant', 'profond'],
     'salat-al-layl-tahajjud-priere-nuit-guide':        ['pratique', 'motivant'],
     'istikharah-guide-complet-decisions-islam':        ['pratique', 'apaisant'],
+    'dua-prophetes-coran-invocations-sacrees':         ['profond', 'touchant'],
+    'maqasid-shariah-sagesse-derriere-islam':          ['savant', 'surprenant'],
+    'ruya-salihah-science-prophetique-reves':          ['surprenant', 'profond'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {
@@ -176,6 +179,9 @@ const PROVOCATEUR_SLUGS = [
     'ibn-khaldun-muqaddimah-pere-sociologie',
     'mort-preparatifs-manuel-croyant',
     'dhikr-neurosciences-science-confirme-rappel-allah',
+    'dua-prophetes-coran-invocations-sacrees',
+    'maqasid-shariah-sagesse-derriere-islam',
+    'ruya-salihah-science-prophetique-reves',
 ];
 
 const SEARCH_SUGGESTIONS = ['Coran', 'Prière', 'Pardon', 'Cœur', 'Mort', 'Foi', 'Ghazali', 'Hadith'];
