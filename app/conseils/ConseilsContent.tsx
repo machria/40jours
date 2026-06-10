@@ -154,6 +154,9 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'dua-prophetes-coran-invocations-sacrees':         ['profond', 'touchant'],
     'maqasid-shariah-sagesse-derriere-islam':          ['savant', 'surprenant'],
     'ruya-salihah-science-prophetique-reves':          ['surprenant', 'profond'],
+    'sunan-al-fitra-pratiques-naturelles-prophete':    ['pratique', 'surprenant'],
+    'haqq-al-jar-droits-voisin-islam':                 ['pratique', 'touchant'],
+    'khulafa-rashidun-quatre-califes-bien-guides':     ['savant', 'motivant'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {
