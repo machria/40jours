@@ -157,6 +157,16 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'sunan-al-fitra-pratiques-naturelles-prophete':    ['pratique', 'surprenant'],
     'haqq-al-jar-droits-voisin-islam':                 ['pratique', 'touchant'],
     'khulafa-rashidun-quatre-califes-bien-guides':     ['savant', 'motivant'],
+    'al-ayn-mauvais-oeil-realite-protection':          ['surprenant', 'pratique'],
+    'sihr-sorcellerie-prophete-protection-islam':      ['surprenant', 'profond'],
+    'an-nar-enfer-description-coran-sunna-misericorde': ['profond', 'apaisant'],
+    'jour-jugement-etapes-nafkh-sur-mizan-sirat':       ['surprenant', 'profond'],
+    'ijaz-ilmi-versets-scientifiques-coran':            ['surprenant', 'savant'],
+    'prophecies-coran-realisees-rum-preservation':      ['surprenant', 'savant'],
+    'signes-fin-des-temps-hadith-jibril-eschatologie':  ['surprenant', 'profond'],
+    'symbolique-chiffre-40-islam-defi-spirituel':       ['motivant', 'surprenant'],
+    'al-kibr-orgueil-iblis-signes-caches-remede':       ['profond', 'surprenant'],
+    'recit-yusuf-ahsan-al-qasas-lecons-tafsir':         ['touchant', 'profond'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {
