@@ -1,10 +1,12 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { Play, Pause, BookOpen, EyeOff } from 'lucide-react';
+import { Play, Pause, BookOpen, EyeOff, Bookmark } from 'lucide-react';
 import { TajwidText } from '@/components/TajwidText';
 import { useWordByWordAudio, QuranWord } from '@/hooks/useWordByWordAudio';
 import { useSettings } from '@/context/SettingsContext';
+import { useSession } from 'next-auth/react';
+import { useBookmarks } from '@/hooks/useBookmarks';
 
 interface AyahWordByWordProps {
     surah: number;
@@ -44,6 +46,9 @@ export default function AyahWordByWord({
     const { fontSize, fontSizes } = useSettings();
     const currentFontSize = fontSizes[fontSize];
 
+    const { data: session } = useSession();
+    const { isBookmarked, toggleBookmark } = useBookmarks();
+
     const { activeWordIndices } = useWordByWordAudio(audioRef, words, isPlaying);
 
     return (
@@ -73,6 +78,20 @@ export default function AyahWordByWord({
                     >
                         <BookOpen className="w-3 h-3" />
                         Tafsir
+                    </button>
+
+                    <button
+                        onClick={() => toggleBookmark(surah, ayah)}
+                        disabled={!session?.user?.email}
+                        title={!session?.user?.email
+                            ? 'Connectez-vous pour ajouter aux favoris'
+                            : (isBookmarked(surah, ayah) ? 'Retirer des favoris' : 'Ajouter aux favoris')}
+                        className={`flex items-center justify-center text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isBookmarked(surah, ayah)
+                            ? 'text-amber-600 bg-amber-50 dark:bg-amber-950/30'
+                            : 'text-muted-foreground border border-border hover:bg-muted/50'
+                            } ${!session?.user?.email ? 'opacity-40 cursor-not-allowed' : ''}`}
+                    >
+                        <Bookmark className={`w-3 h-3 ${isBookmarked(surah, ayah) ? 'fill-current' : ''}`} />
                     </button>
                 </div>
             </div>

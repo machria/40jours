@@ -7,6 +7,7 @@ import { searchQuran, getAyahsData } from '@/app/search/actions';
 import { searchHadith } from '@/app/search/hadith-actions';
 import { TajwidText } from './TajwidText';
 import { useDebounce } from '@/hooks/useDebounce';
+import { QURAN_THEMES } from '@/data/quran-themes-taxonomy';
 
 type SearchScope = 'quran' | 'hadith';
 
@@ -14,6 +15,7 @@ export default function SearchInterface() {
     const [query, setQuery] = useState('');
     const debouncedQuery = useDebounce(query, 600);
     const [scope, setScope] = useState<SearchScope>('quran');
+    const [selectedTheme, setSelectedTheme] = useState<string | null>(null);
     const [isPending, startTransition] = useTransition();
 
     // Results
@@ -48,7 +50,7 @@ export default function SearchInterface() {
 
             setIsSearchingSuggestions(true);
             try {
-                const results = await searchQuran(debouncedQuery, 5);
+                const results = await searchQuran(debouncedQuery, 5, selectedTheme ?? undefined);
                 if (results.length > 0) {
                     const data = await getAyahsData(results.map(r => ({ surah: r.surah, ayah: r.ayah })));
                     const hydrated = results.map(r => {
@@ -68,11 +70,37 @@ export default function SearchInterface() {
         };
 
         fetchSuggestions();
-    }, [debouncedQuery, scope]);
+    }, [debouncedQuery, scope, selectedTheme]);
+
+    // Recherche Coran : texte + thème (ou thème seul si query vide)
+    const runQuranSearch = async (q: string, themeId?: string) => {
+        const results = await searchQuran(q, 50, themeId);
+        setQuranResults(results);
+        if (results.length > 0) {
+            const data = await getAyahsData(results.map((r: any) => ({ surah: r.surah, ayah: r.ayah })));
+            const map: Record<string, any> = {};
+            data.forEach((item: any) => { map[`${item.surah}:${item.ayah}`] = item; });
+            setAyahsData(map);
+        } else {
+            setAyahsData({});
+        }
+    };
+
+    // Parcours par thème seul (sans texte recherché)
+    useEffect(() => {
+        if (scope !== 'quran' || !selectedTheme || query.trim().length >= 2) return;
+
+        setShowSuggestions(false);
+        setHasSearched(true);
+        startTransition(async () => {
+            setHadithResults([]);
+            await runQuranSearch('', selectedTheme);
+        });
+    }, [selectedTheme, scope]);
 
     const handleSearch = (e: FormEvent) => {
         e.preventDefault();
-        if (!query.trim()) return;
+        if (!query.trim() && !selectedTheme) return;
 
         setShowSuggestions(false);
         setHasSearched(true);
@@ -82,16 +110,30 @@ export default function SearchInterface() {
             setAyahsData({});
 
             if (scope === 'quran') {
-                const results = await searchQuran(query, 50);
-                setQuranResults(results);
-                const data = await getAyahsData(results.map(r => ({ surah: r.surah, ayah: r.ayah })));
-                const map: Record<string, any> = {};
-                data.forEach((item: any) => { map[`${item.surah}:${item.ayah}`] = item; });
-                setAyahsData(map);
+                await runQuranSearch(query, selectedTheme ?? undefined);
             } else if (scope === 'hadith') {
                 const results = await searchHadith(query, 60);
                 setHadithResults(results);
             }
+        });
+    };
+
+    const toggleTheme = (themeId: string) => {
+        const next = selectedTheme === themeId ? null : themeId;
+        setSelectedTheme(next);
+        setShowSuggestions(false);
+
+        if (!next && !query.trim()) {
+            setHasSearched(false);
+            setQuranResults([]);
+            setAyahsData({});
+            return;
+        }
+
+        setHasSearched(true);
+        startTransition(async () => {
+            setHadithResults([]);
+            await runQuranSearch(query, next ?? undefined);
         });
     };
 
@@ -118,6 +160,7 @@ export default function SearchInterface() {
                             setHasSearched(false);
                             setQuery('');
                             setSuggestions([]);
+                            setSelectedTheme(null);
                         }}
                         className={`px-4 py-2 text-sm font-medium rounded-md transition-all capitalize ${scope === s ? 'bg-background shadow text-foreground' : 'text-muted-foreground hover:text-foreground'}`}
                     >
@@ -125,6 +168,24 @@ export default function SearchInterface() {
                     </button>
                 ))}
             </div>
+
+            {/* Theme Chips — Coran uniquement */}
+            {scope === 'quran' && (
+                <div className="flex gap-2 overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center">
+                    {QURAN_THEMES.map((theme) => (
+                        <button
+                            key={theme.id}
+                            onClick={() => toggleTheme(theme.id)}
+                            className={`flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full border transition-colors whitespace-nowrap ${selectedTheme === theme.id
+                                ? 'bg-primary text-primary-foreground border-primary'
+                                : 'bg-card text-muted-foreground border-border hover:border-primary/50 hover:text-foreground'
+                                }`}
+                        >
+                            {theme.label}
+                        </button>
+                    ))}
+                </div>
+            )}
 
             {/* Search Box */}
             <div className="relative z-20" ref={searchContainerRef}>
@@ -226,6 +287,22 @@ export default function SearchInterface() {
                                     <p className="text-muted-foreground text-sm line-clamp-2">
                                         {ayah.translation}
                                     </p>
+                                    {res.th && res.th.length > 0 && (
+                                        <div className="flex flex-wrap gap-1 pt-1">
+                                            {res.th.map((tid: string) => {
+                                                const theme = QURAN_THEMES.find(t => t.id === tid);
+                                                if (!theme) return null;
+                                                return (
+                                                    <span
+                                                        key={tid}
+                                                        className="text-[10px] px-2 py-0.5 rounded-full bg-primary/10 text-primary font-medium"
+                                                    >
+                                                        {theme.label}
+                                                    </span>
+                                                );
+                                            })}
+                                        </div>
+                                    )}
                                 </div>
                             </Link>
                         );
@@ -261,7 +338,11 @@ export default function SearchInterface() {
                     {((scope === 'quran' && quranResults.length === 0) ||
                         (scope === 'hadith' && hadithResults.length === 0)) && (
                             <div className="text-center py-12 text-muted-foreground">
-                                <p>Aucun résultat trouvé pour "{query}"</p>
+                                <p>
+                                    {query.trim()
+                                        ? `Aucun résultat trouvé pour "${query}"`
+                                        : 'Aucun résultat trouvé pour ce thème'}
+                                </p>
                             </div>
                         )}
                 </div>

@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { plan40jours } from "@/data/plan40jours";
-import { CheckCircle, BookOpen, Trophy, Flame, Users } from "lucide-react";
+import { CheckCircle, BookOpen, Trophy, Flame, Users, Bookmark } from "lucide-react";
 import Link from "next/link";
 import ActivityChart from "@/components/dashboard/ActivityChart";
 import BadgesList from "@/components/dashboard/BadgesList";
@@ -91,13 +91,22 @@ export default async function DashboardPage() {
                     <span className="text-sm text-muted-foreground">Programme 40 Jours</span>
                 </div>
             </div>
-            <Link href="/social" className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
-                <div className="p-3 bg-purple-500/10 rounded-full text-purple-600 group-hover:scale-110 transition-transform">
-                    <Users className="w-8 h-8" />
-                </div>
-                <span className="text-xl font-bold text-foreground text-center">Communauté</span>
-                <span className="text-sm text-muted-foreground text-center">Groupes & Classements</span>
-            </Link>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link href="/social" className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                    <div className="p-3 bg-purple-500/10 rounded-full text-purple-600 group-hover:scale-110 transition-transform">
+                        <Users className="w-8 h-8" />
+                    </div>
+                    <span className="text-xl font-bold text-foreground text-center">Communauté</span>
+                    <span className="text-sm text-muted-foreground text-center">Groupes & Classements</span>
+                </Link>
+                <Link href="/dashboard/favoris" className="bg-card border rounded-xl p-6 flex flex-col items-center justify-center space-y-2 shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
+                    <div className="p-3 bg-amber-500/10 rounded-full text-amber-600 group-hover:scale-110 transition-transform">
+                        <Bookmark className="w-8 h-8" />
+                    </div>
+                    <span className="text-xl font-bold text-foreground text-center">Favoris</span>
+                    <span className="text-sm text-muted-foreground text-center">Versets marqués</span>
+                </Link>
+            </div>
 
 
 

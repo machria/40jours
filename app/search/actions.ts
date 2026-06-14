@@ -10,6 +10,7 @@ interface SearchIndexItem {
     an: string; // ar_norm
     fn: string; // fr_norm
     tn: string; // tafsir_norm
+    th: string[]; // theme ids
     s: number;
     a: number;
 }
@@ -76,10 +77,18 @@ function getQuranData() {
     return quranData;
 }
 
-export async function searchQuran(query: string, limit: number = 50) {
-    if (!query || query.length < 2) return [];
-
+export async function searchQuran(query: string, limit: number = 50, themeId?: string) {
     const index = getQuranIndex();
+
+    // Mode "parcourir par th\u00E8me" : pas de texte recherch\u00E9 mais un th\u00E8me s\u00E9lectionn\u00E9
+    if (!query || query.length < 2) {
+        if (!themeId) return [];
+        return index
+            .filter(item => item.th?.includes(themeId))
+            .slice(0, limit)
+            .map(item => ({ surah: item.s, ayah: item.a, key: `${item.s}:${item.a}`, th: item.th || [] }));
+    }
+
     const isArabic = /[\u0600-\u06FF]/.test(query); // Determine language based on first char usually, or regex match
 
     // Multi-word support: Split query into terms
@@ -87,14 +96,16 @@ export async function searchQuran(query: string, limit: number = 50) {
     const terms = rawTerms.map(t => isArabic ? normalizeArabic(t) : normalizeFrench(t));
 
     const results = index.filter(item => {
-        if (isArabic) {
+        const textMatch = isArabic
             // Check if ALL terms are present in Arabic text
-            return terms.every(term => item.an.includes(term));
-        } else {
+            ? terms.every(term => item.an.includes(term))
             // Exclude Tafsir from main Quran search
             // Check if ALL terms are present in French text
-            return terms.every(term => item.fn.includes(term));
-        }
+            : terms.every(term => item.fn.includes(term));
+
+        if (!textMatch) return false;
+        if (themeId && !item.th?.includes(themeId)) return false;
+        return true;
     });
 
     // Limit results
@@ -104,7 +115,8 @@ export async function searchQuran(query: string, limit: number = 50) {
         return {
             surah: item.s,
             ayah: item.a,
-            key: `${item.s}:${item.a}`
+            key: `${item.s}:${item.a}`,
+            th: item.th || []
         };
     });
 

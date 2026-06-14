@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Play, BookOpen, Pause, EyeOff } from 'lucide-react';
+import { Play, BookOpen, Pause, EyeOff, Bookmark } from 'lucide-react';
 import Link from 'next/link';
 import { TajwidText } from '@/components/TajwidText';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { useQuranAudio } from '@/hooks/useQuranAudio';
 import { useSettings } from '@/context/SettingsContext';
+import { useSession } from 'next-auth/react';
+import { useBookmarks } from '@/hooks/useBookmarks';
 import AyahWordByWord from './AyahWordByWord';
 import { getAyahAudioUrl } from '@/lib/audioUrls';
 
@@ -47,6 +49,10 @@ export default function SurahViewer({
     // Settings
     const { fontSize, fontSizes, reversePhonetics, setReversePhonetics } = useSettings();
     const currentFontSize = fontSizes[fontSize];
+
+    // Bookmarks
+    const { data: session } = useSession();
+    const { isBookmarked, toggleBookmark } = useBookmarks();
 
     // View State
     const [viewMode, setViewMode] = useState<'list' | 'mushaf'>('list');
@@ -458,6 +464,20 @@ export default function SurahViewer({
                                         >
                                             <BookOpen className="w-3 h-3" />
                                             Tafsir
+                                        </button>
+
+                                        <button
+                                            onClick={() => toggleBookmark(ayah.surah, ayah.ayah)}
+                                            disabled={!session?.user?.email}
+                                            title={!session?.user?.email
+                                                ? 'Connectez-vous pour ajouter aux favoris'
+                                                : (isBookmarked(ayah.surah, ayah.ayah) ? 'Retirer des favoris' : 'Ajouter aux favoris')}
+                                            className={`flex items-center justify-center text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isBookmarked(ayah.surah, ayah.ayah)
+                                                ? 'text-amber-600 bg-amber-50 dark:bg-amber-950/30'
+                                                : 'text-muted-foreground border border-border hover:bg-muted/50'
+                                                } ${!session?.user?.email ? 'opacity-40 cursor-not-allowed' : ''}`}
+                                        >
+                                            <Bookmark className={`w-3 h-3 ${isBookmarked(ayah.surah, ayah.ayah) ? 'fill-current' : ''}`} />
                                         </button>
                                     </div>
                                 </div>

@@ -1,4 +1,4 @@
-
+// Run after scripts/generate-quran-themes.ts if the themes (data/quran-themes.json) have changed.
 import fs from 'fs';
 import path from 'path';
 
@@ -7,6 +7,7 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 const SEARCH_DIR = path.join(DATA_DIR, 'search');
 const QURAN_FILE = path.join(DATA_DIR, 'quran-data.json');
 const TAFSIR_FILE = path.join(DATA_DIR, 'tafsir-fr.json');
+const THEMES_FILE = path.join(DATA_DIR, 'quran-themes.json');
 const QURAN_INDEX_OUTPUT = path.join(SEARCH_DIR, 'quran-index.json');
 const TAFSIR_INDEX_OUTPUT = path.join(SEARCH_DIR, 'tafsir-index.json');
 
@@ -17,6 +18,7 @@ interface SearchIndexItem {
     ar_norm: string;
     fr_norm: string;
     tafsir_norm: string;
+    themes: string[];
 
     // Display metadata
     s: number; // Surah
@@ -83,6 +85,11 @@ async function buildIndex() {
         tafsirMap.set(`${t.surah}:${t.ayah}`, t.tafsir);
     });
 
+    // Load thematic tags (generated via scripts/generate-quran-themes.ts)
+    const themesMap: Record<string, string[]> = fs.existsSync(THEMES_FILE)
+        ? JSON.parse(fs.readFileSync(THEMES_FILE, 'utf-8'))
+        : {};
+
     const index: SearchIndexItem[] = [];
 
     // Iterate through pages -> ayahs
@@ -97,20 +104,22 @@ async function buildIndex() {
                 a: ayah.ayah,
                 ar_norm: normalizeArabic(ayah.text),
                 fr_norm: normalizeFrench(ayah.translation),
-                tafsir_norm: normalizeFrench(tafsirText)
+                tafsir_norm: normalizeFrench(tafsirText),
+                themes: themesMap[key] || []
             });
         });
     });
 
     // Write Optimized Index
-    // We can minimize keys to save space: "s", "a", "an" (ar_norm), "fn" (fr_norm), "tn" (tafsir_norm)
+    // We can minimize keys to save space: "s", "a", "an" (ar_norm), "fn" (fr_norm), "tn" (tafsir_norm), "th" (themes)
     const minimizedIndex = index.map(item => ({
         id: item.id,
         s: item.s,
         a: item.a,
         an: item.ar_norm,
         fn: item.fr_norm,
-        tn: item.tafsir_norm
+        tn: item.tafsir_norm,
+        th: item.themes
     }));
 
     if (!fs.existsSync(SEARCH_DIR)) {

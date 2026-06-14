@@ -21,6 +21,7 @@ export interface IUser extends Document {
     siraQuizBestScore?: number;
     badges: { id: string; unlockedAt: Date }[];
     activityHistory: Map<string, number>;
+    bookmarks: { surah: number; ayah: number; addedAt: Date }[];
 }
 
 const UserSchema: Schema = new Schema(
@@ -46,6 +47,11 @@ const UserSchema: Schema = new Schema(
             unlockedAt: { type: Date, default: Date.now }
         }],
         activityHistory: { type: Map, of: Number, default: {} }, // Key: "YYYY-MM-DD", Value: count
+        bookmarks: [{
+            surah: { type: Number, required: true },
+            ayah: { type: Number, required: true },
+            addedAt: { type: Date, default: Date.now }
+        }],
     },
     { timestamps: true }
 );
