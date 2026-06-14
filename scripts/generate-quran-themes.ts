@@ -11,6 +11,14 @@ const TAFSIR_DIR = path.join(process.cwd(), 'data', 'tafsir');
 const OUTPUT_FILE = path.join(process.cwd(), 'data', 'quran-themes.json');
 const MAX_THEMES_PER_AYAH = 5;
 
+// Versets composés uniquement de "lettres détachées" (Huruf Muqatta'at, ex: Alif Lam Mim)
+// sans contenu réel : le fallback Tafsir leur attribuerait des thèmes hors-sujet.
+const LETTERS_ONLY_AYAHS = new Set([
+    '2:1', '3:1', '7:1', '19:1', '20:1', '26:1', '28:1', '29:1', '30:1',
+    '31:1', '32:1', '36:1', '40:1', '41:1', '42:1', '42:2', '43:1', '44:1',
+    '45:1', '46:1',
+]);
+
 function normalizeFrench(text: string): string {
     if (!text) return "";
     return text
@@ -62,6 +70,8 @@ function generate() {
         page.forEach((ayah: any) => {
             total++;
             const key = `${ayah.surah}:${ayah.ayah}`;
+            if (LETTERS_ONLY_AYAHS.has(key)) return;
+
             let matches = matchThemes(normalizeFrench(ayah.translation), matchers);
 
             if (matches.length === 0) {

@@ -22,6 +22,15 @@ let searchIndex: SearchIndexItem[] | null = null;
 const QURAN_INDEX_PATH = path.join(process.cwd(), 'data', 'search', 'quran-index.json');
 const AYAH_LOCATION_PATH = path.join(process.cwd(), 'data', 'ayah-location.json');
 
+function shuffleArray<T>(arr: T[]): T[] {
+    const result = [...arr];
+    for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
+}
+
 function normalizeArabic(text: string): string {
     if (!text) return "";
     let norm = text;
@@ -81,10 +90,11 @@ export async function searchQuran(query: string, limit: number = 50, themeId?: s
     const index = getQuranIndex();
 
     // Mode "parcourir par th\u00E8me" : pas de texte recherch\u00E9 mais un th\u00E8me s\u00E9lectionn\u00E9
+    // Tirage al\u00E9atoire \u00E0 chaque appel pour donner une chance aux sourates de fin de Coran
+    // (sinon l'ordre de l'index, s\u00E9quentiel s:a, ne ferait jamais remonter au-del\u00E0 de la limite)
     if (!query || query.length < 2) {
         if (!themeId) return [];
-        return index
-            .filter(item => item.th?.includes(themeId))
+        return shuffleArray(index.filter(item => item.th?.includes(themeId)))
             .slice(0, limit)
             .map(item => ({ surah: item.s, ayah: item.a, key: `${item.s}:${item.a}`, th: item.th || [] }));
     }

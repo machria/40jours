@@ -18,11 +18,11 @@ export const QURAN_THEMES_TAXONOMY: QuranTheme[] = [
     { id: 'foi', label: 'Foi et croyance', keywords: ['croi', 'foi', 'croyant', 'mecreant', 'incroyant'] },
     { id: 'effort_spirituel', label: 'Effort et lutte spirituelle', keywords: ['lutt', 'combat', 'effort', 'epreuve'] },
     { id: 'justice', label: 'Justice et équité', keywords: ['juste', 'justice', 'injust', 'iniqu', 'oppress'] },
-    { id: 'gratitude', label: 'Gratitude et reconnaissance', keywords: ['gratitud', 'remerci', 'reconnaiss', 'louange', 'grace'] },
+    { id: 'gratitude', label: 'Gratitude et reconnaissance', keywords: ['gratitud', 'remerci', 'reconnaiss', 'louange', 'grace', 'bienfait'] },
     { id: 'humilite', label: 'Humilité et orgueil', keywords: ['humili', 'modest', 'orgueil', 'arrogan', 'vanit'] },
     { id: 'savoir', label: 'Savoir et réflexion', keywords: ['savoir', 'connaissance', 'science', 'sage', 'reflechi', 'mediter', 'comprendre'] },
     { id: 'creation', label: 'Création et signes', keywords: ['creation', 'cieux', 'terre', 'signe', 'etoile', 'soleil', 'lune', 'montagne', 'mer'] },
-    { id: 'prophetes', label: 'Prophètes et messagers', keywords: ['prophete', 'messager', 'moise', 'jesus', 'abraham', 'noe', 'joseph'] },
+    { id: 'prophetes', label: 'Prophètes et messagers', keywords: ['prophete', 'messager', 'moise', 'jesus', 'abraham', 'noe', 'joseph', 'salaire'] },
     { id: 'jour_dernier', label: 'Jour dernier et résurrection', keywords: ['resurrection', 'jugement', 'ressuscit', 'jour dernier', 'heure'] },
     { id: 'hypocrisie', label: 'Hypocrisie', keywords: ['hypocrit'] },
     { id: 'sincerite', label: 'Sincérité', keywords: ['sincer', 'loyal'] },
@@ -34,9 +34,11 @@ export const QURAN_THEMES_TAXONOMY: QuranTheme[] = [
     { id: 'tawhid', label: 'Unicité de Dieu', keywords: ['associe', 'idole', 'polytheis', 'seul dieu'] },
     { id: 'tentation', label: 'Satan et tentation', keywords: ['satan', 'diable', 'demon', 'tentation'] },
     { id: 'verite', label: 'Vérité et mensonge', keywords: ['mensong', 'verite', 'menteur', 'calomni', 'temoign'] },
-    { id: 'peuples_anciens', label: 'Peuples et châtiments anciens', keywords: ['pharaon', 'peuple de', 'deluge', 'sodome'] },
+    { id: 'peuples_anciens', label: 'Peuples et châtiments anciens', keywords: ['pharaon', 'peuple de', 'deluge', 'sodome', 'ancetre'] },
     { id: 'voyage_pelerinage', label: 'Voyage et pèlerinage', keywords: ['pelerinage', 'voyage', 'kaaba', 'mecque', 'caravane'] },
     { id: 'temps', label: 'Temps et impermanence', keywords: ['temps', 'eternel', 'ephemere', 'ici-bas'] },
+    { id: 'crainte_piete', label: 'Crainte d\'Allah et piété (Taqwa)', keywords: ['crain', 'redout', 'pieu', 'piete'] },
+    { id: 'adoration', label: 'Adoration et soumission à Allah', keywords: ['ador', 'culte', 'soumi', 'soumet'] },
 ];
 
 // Export léger pour l'UI (id + label uniquement)
