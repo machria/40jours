@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, RefreshCw, Trophy, AlertCircle, Shield, Sparkles, BookOpen, Eye, EyeOff, CheckCircle2, XCircle } from 'lucide-react';
+import { ArrowLeft, RefreshCw, Trophy, AlertCircle, Shield, Sparkles, Eye, EyeOff, CheckCircle2, XCircle } from 'lucide-react';
 import { cn } from '@/components/layout/Navigation';
 import { saveGenericQuizScore } from '@/actions/quiz-actions';
 import confetti from 'canvas-confetti';
@@ -27,7 +27,6 @@ type GameMode = 'practice' | 'challenge';
 interface Option {
     id: number;
     text: string;
-    subtext?: string;
     phonetic?: string;
 }
 
@@ -36,7 +35,6 @@ interface Question {
     content: string;
     correctAnswerId: number;
     options: Option[];
-    translation?: string;
     phonetic?: string;
 }
 
@@ -58,7 +56,6 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
     const [showResult, setShowResult] = useState(false);
     
     // Help Toggles
-    const [showFrench, setShowFrench] = useState(true);
     const [showPhonetic, setShowPhonetic] = useState(false);
 
     // Filter categories with valid Hadiths
@@ -108,7 +105,6 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
                     distractors.push({
                         id: distHadith.id,
                         text: distHadith.arabic,
-                        subtext: distHadith.french,
                         phonetic: distHadith.source
                     });
                 }
@@ -117,7 +113,6 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
             const correctOption: Option = {
                 id: targetHadith.id,
                 text: targetHadith.arabic,
-                subtext: targetHadith.french,
                 phonetic: targetHadith.source
             };
 
@@ -160,7 +155,6 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
                 content: targetHadith.arabic,
                 correctAnswerId: targetCategory.id,
                 options,
-                translation: targetHadith.french,
                 phonetic: targetHadith.source
             };
         }
@@ -411,30 +405,18 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
                 </button>
 
                 <div className="flex items-center gap-3">
-                    {/* Help toggles inside Situation -> Invocation (helpful for matching Arabic) */}
+                    {/* Help toggle inside Situation -> Invocation (helpful for matching Arabic) */}
                     {quizType === 'sit-to-inv' && (
-                        <>
-                            <button
-                                onClick={() => setShowFrench(!showFrench)}
-                                className={cn(
-                                    "p-2 rounded-xl border transition-all",
-                                    showFrench ? "bg-primary/10 border-primary/20 text-primary" : "text-muted-foreground bg-background"
-                                )}
-                                title={showFrench ? "Masquer la traduction" : "Afficher la traduction"}
-                            >
-                                <BookOpen className="w-4 h-4" />
-                            </button>
-                            <button
-                                onClick={() => setShowPhonetic(!showPhonetic)}
-                                className={cn(
-                                    "p-2 rounded-xl border transition-all",
-                                    showPhonetic ? "bg-accent/20 border-accent/30 text-accent-foreground" : "text-muted-foreground bg-background"
-                                )}
-                                title={showPhonetic ? "Masquer la phonétique" : "Afficher la phonétique"}
-                            >
-                                {showPhonetic ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-                            </button>
-                        </>
+                        <button
+                            onClick={() => setShowPhonetic(!showPhonetic)}
+                            className={cn(
+                                "p-2 rounded-xl border transition-all",
+                                showPhonetic ? "bg-accent/20 border-accent/30 text-accent-foreground" : "text-muted-foreground bg-background"
+                            )}
+                            title={showPhonetic ? "Masquer la phonétique" : "Afficher la phonétique"}
+                        >
+                            {showPhonetic ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+                        </button>
                     )}
 
                     <div className="h-6 w-px bg-border hidden sm:block" />
@@ -490,18 +472,11 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
                             </div>
 
                             {/* Additional metadata for Invocation -> Situation */}
-                            {quizType === 'inv-to-sit' && (
+                            {quizType === 'inv-to-sit' && currentQuestion.phonetic && (
                                 <div className="space-y-3 border-t border-border/40 pt-4 text-sm text-left font-medium">
-                                    {currentQuestion.phonetic && (
-                                        <p className="text-xs md:text-sm text-muted-foreground italic">
-                                            Phonétique : {currentQuestion.phonetic}
-                                        </p>
-                                    )}
-                                    {currentQuestion.translation && (
-                                        <p className="text-xs md:text-sm text-muted-foreground">
-                                            Traduction : <strong>{currentQuestion.translation}</strong>
-                                        </p>
-                                    )}
+                                    <p className="text-xs md:text-sm text-muted-foreground italic">
+                                        Phonétique : {currentQuestion.phonetic}
+                                    </p>
                                 </div>
                             )}
                         </div>
@@ -545,26 +520,14 @@ export default function HisnQuizClient({ initialData }: HisnQuizClientProps) {
                                         {option.text}
                                     </span>
                                     
-                                    {/* Sub-text for Situation -> Invocation */}
-                                    {quizType === 'sit-to-inv' && (
-                                        <div className="space-y-1">
-                                            {showPhonetic && option.phonetic && (
-                                                <span className={cn(
-                                                    "text-[11px] italic block",
-                                                    showCorrect || showWrong ? "text-white/80" : "text-muted-foreground"
-                                                )}>
-                                                    {option.phonetic}
-                                                </span>
-                                            )}
-                                            {showFrench && option.subtext && (
-                                                <span className={cn(
-                                                    "text-xs font-semibold block",
-                                                    showCorrect || showWrong ? "text-white/95" : "text-muted-foreground"
-                                                )}>
-                                                    {option.subtext}
-                                                </span>
-                                            )}
-                                        </div>
+                                    {/* Phonetic sub-text for Situation -> Invocation */}
+                                    {quizType === 'sit-to-inv' && showPhonetic && option.phonetic && (
+                                        <span className={cn(
+                                            "text-[11px] italic block",
+                                            showCorrect || showWrong ? "text-white/80" : "text-muted-foreground"
+                                        )}>
+                                            {option.phonetic}
+                                        </span>
                                     )}
 
                                     {/* Success/Error Icon indicators */}
