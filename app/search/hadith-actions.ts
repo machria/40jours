@@ -4,34 +4,30 @@
 import fs from 'fs';
 import path from 'path';
 
-// Types
+// Types (Mirrors indexer output)
 interface HadithIndexItem {
     id: string; // "collection:number"
     c: string; // collection
     n: string; // number
-    fn: string; // french normalized
+    fn: string; // french normalized (recherche)
+    t: string; // extrait texte français (affichage)
+    ar: string; // extrait texte arabe (affichage)
+    sec: string; // id de section
 }
 
 interface HadithSearchResult {
     collection: string;
     number: string;
-    text: string; // French snippet or full text
-    arabic: string; // Arabic snippet or full text
+    text: string; // French snippet
+    arabic: string; // Arabic snippet
     sectionId?: string; // The section/chapter ID
-    highlight?: boolean;
 }
 
 let hadithIndex: HadithIndexItem[] | null = null;
 const INDEX_PATH = path.join(process.cwd(), 'data', 'hadith-search-index.json');
-// Use public directory as the source of truth, matching hadith-api.ts
-const PUBLIC_DATA_DIR = path.join(process.cwd(), 'public', 'hadith');
 
-// Module-level caches to avoid repeated disk reads on warm instances
-const metaCache: Record<string, any> = {};
-const sectionCache: Record<string, any[]> = {};
-
-// Priority order for results
-const COLLECTION_ORDER = ['bukhari', 'muslim', 'nasai', 'tirmidhi', 'malik', 'ibnmajah', 'abudawud'];
+// Priority order for results — l'index ne couvre que Bukhari et Muslim
+const COLLECTION_ORDER = ['bukhari', 'muslim'];
 
 function getIndex(): HadithIndexItem[] {
     if (hadithIndex) return hadithIndex;
@@ -52,53 +48,7 @@ function normalizeFrench(text: string): string {
     return text
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-}
-
-// Helper to get full Hadith data including section info
-async function getHadithData(collection: string, number: string) {
-    const metadataPath = path.join(PUBLIC_DATA_DIR, collection, 'metadata.json');
-
-    if (!metaCache[collection]) {
-        if (!fs.existsSync(metadataPath)) return null;
-        try {
-            metaCache[collection] = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
-        } catch (e) {
-            console.error(`Failed to read metadata for ${collection}`, e);
-            return null;
-        }
-    }
-
-    const meta = metaCache[collection];
-    if (!meta?.section_details) return null;
-
-    const numericHadithNumber = parseFloat(number);
-    let sectionId = "unknown";
-
-    for (const [key, details] of Object.entries(meta.section_details as Record<string, any>)) {
-        if (numericHadithNumber >= details.hadithnumber_first && numericHadithNumber <= details.hadithnumber_last) {
-            sectionId = key;
-            break;
-        }
-    }
-
-    const cacheKey = `${collection}:${sectionId}`;
-    if (!sectionCache[cacheKey]) {
-        const sectionPath = path.join(PUBLIC_DATA_DIR, collection, `section-${sectionId}.json`);
-        if (!fs.existsSync(sectionPath)) return null;
-        try {
-            sectionCache[cacheKey] = JSON.parse(fs.readFileSync(sectionPath, 'utf-8'));
-        } catch (e) {
-            console.error(`Failed to read section ${sectionId} for ${collection}`, e);
-            return null;
-        }
-    }
-
-    const hadiths = sectionCache[cacheKey];
-    const hadith = hadiths.find((h: any) => h.hadithnumber == number || parseFloat(h.hadithnumber) == numericHadithNumber);
-    if (!hadith) return null;
-
-    return { ...hadith, sectionId };
+        .replace(/[̀-ͯ]/g, "");
 }
 
 export async function searchHadith(query: string, limit: number = 60) {
@@ -115,35 +65,42 @@ export async function searchHadith(query: string, limit: number = 60) {
         return terms.every(term => item.fn.includes(term));
     });
 
-    // 2. Sort by Collection Priority
-    results.sort((a, b) => {
-        const indexA = COLLECTION_ORDER.indexOf(a.c);
-        const indexB = COLLECTION_ORDER.indexOf(b.c);
-        // If both are in the list, sort by index
-        if (indexA !== -1 && indexB !== -1) return indexA - indexB;
-        // If only A is in list, A comes first
-        if (indexA !== -1) return -1;
-        // If only B is in list, B comes first
-        if (indexB !== -1) return 1;
-        // Otherwise keep original order (or alphabetical)
-        return a.c.localeCompare(b.c);
-    });
+    // 2. Group by collection (some queries match thousands of hadiths in Bukhari
+    // alone, which would otherwise crowd out every other collection from the
+    // limited result set)
+    const byCollection = new Map<string, HadithIndexItem[]>();
+    for (const item of results) {
+        const bucket = byCollection.get(item.c);
+        if (bucket) bucket.push(item);
+        else byCollection.set(item.c, [item]);
+    }
 
-    // 3. Limit to requested limit
-    const topResults = results.slice(0, limit);
+    const orderedCollections = [
+        ...COLLECTION_ORDER.filter(c => byCollection.has(c)),
+        ...[...byCollection.keys()].filter(c => !COLLECTION_ORDER.includes(c)),
+    ];
 
-    // 4. Hydrate
-    const hydrated = await Promise.all(topResults.map(async (item) => {
-        const data = await getHadithData(item.c, item.n);
-        if (!data) return null;
-        return {
-            collection: item.c,
-            number: item.n,
-            text: data.text || data.body, // Prioritize 'text'
-            arabic: data.arabic,
-            sectionId: data.sectionId
-        };
+    // 3. Round-robin across collections (in priority order) so the result set
+    // covers every collection that has matches, not just the largest ones.
+    const picked: HadithIndexItem[] = [];
+    for (let cursor = 0; picked.length < limit; cursor++) {
+        let addedAny = false;
+        for (const c of orderedCollections) {
+            const bucket = byCollection.get(c)!;
+            if (cursor < bucket.length) {
+                picked.push(bucket[cursor]);
+                addedAny = true;
+                if (picked.length >= limit) break;
+            }
+        }
+        if (!addedAny) break;
+    }
+
+    return picked.map((item): HadithSearchResult => ({
+        collection: item.c,
+        number: item.n,
+        text: item.t,
+        arabic: item.ar,
+        sectionId: item.sec,
     }));
-
-    return hydrated.filter(Boolean) as HadithSearchResult[];
 }

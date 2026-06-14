@@ -11,6 +11,21 @@ const nextConfig: NextConfig = {
   outputFileTracingExcludes: {
     '*': []
   },
+  // Server Actions de /search et /dashboard/favoris lisent ces fichiers via fs
+  // au runtime (chemins dynamiques non détectés par le file tracing par défaut).
+  outputFileTracingIncludes: {
+    '/search': [
+      './data/search/quran-index.json',
+      './data/search/tafsir-index.json',
+      './data/ayah-location.json',
+      './data/quran/pages/**/*.json',
+      './data/hadith-search-index.json',
+    ],
+    '/dashboard/favoris': [
+      './data/ayah-location.json',
+      './data/quran/pages/**/*.json',
+    ],
+  },
   experimental: {
     // other experimental options if needed
   } as any,
