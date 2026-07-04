@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, MapPin, BookOpen, Clock, AlignLeft } from 'lucide-react';
+import { ArrowLeft, Calendar, BookOpen, Clock, AlignLeft, Zap } from 'lucide-react';
 import Navigation from '@/components/layout/Navigation';
 import { cn } from '@/lib/utils'; // Updated import path to match project standard
 
@@ -354,8 +354,16 @@ export default function SeerahPage() {
                             </button>
                         </div>
                         <Link
+                            href="/sira/feed"
+                            className="px-3 py-1.5 rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap flex items-center gap-1.5"
+                            style={{ background: '#f59e0b', color: 'white' }}
+                        >
+                            <Zap className="w-3.5 h-3.5" />
+                            Feed
+                        </Link>
+                        <Link
                             href="/sira/quiz"
-                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap ml-2"
+                            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm whitespace-nowrap ml-1"
                         >
                             📝 Quiz
                         </Link>
