@@ -49,6 +49,8 @@ export default function FlashcardsClient({ initialPlaylist }: FlashcardsClientPr
     const [playingIndex, setPlayingIndex]   = useState<number | null>(null);
     const [showHint, setShowHint]           = useState(true);
     const [copied, setCopied]               = useState<number | null>(null);
+    const [showArabic, setShowArabic]       = useState(true);
+    const [showFrench, setShowFrench]       = useState(true);
 
     // Shuffle au montage côté client
     useEffect(() => {
@@ -197,27 +199,33 @@ export default function FlashcardsClient({ initialPlaylist }: FlashcardsClientPr
                             {/* Contenu central */}
                             <div className="relative z-20 flex-1 flex flex-col justify-center px-5 pt-28 pb-4 gap-6">
                                 {/* Texte arabe */}
-                                <div className="text-right" dir="rtl">
-                                    <p
-                                        className="font-kufi leading-loose text-white/95 drop-shadow"
-                                        style={{ fontSize: 'clamp(1.3rem, 4.5vw, 2rem)' }}
-                                    >
-                                        <TajwidText text={item.arabic} />
-                                    </p>
-                                </div>
+                                {showArabic && (
+                                    <div className="text-right" dir="rtl">
+                                        <p
+                                            className="font-kufi leading-loose text-white/95 drop-shadow"
+                                            style={{ fontSize: 'clamp(1.3rem, 4.5vw, 2rem)' }}
+                                        >
+                                            <TajwidText text={item.arabic} />
+                                        </p>
+                                    </div>
+                                )}
 
                                 {/* Séparateur accent */}
-                                <div className="flex justify-center">
-                                    <div className="h-px w-12 rounded-full" style={{ background: accent }} />
-                                </div>
+                                {showArabic && showFrench && (
+                                    <div className="flex justify-center">
+                                        <div className="h-px w-12 rounded-full" style={{ background: accent }} />
+                                    </div>
+                                )}
 
                                 {/* Traduction française */}
-                                <p
-                                    className="font-serif leading-relaxed text-white/80 text-center"
-                                    style={{ fontSize: 'clamp(0.9rem, 2.8vw, 1.1rem)' }}
-                                >
-                                    {item.french}
-                                </p>
+                                {showFrench && (
+                                    <p
+                                        className="font-serif leading-relaxed text-white/80 text-center"
+                                        style={{ fontSize: 'clamp(0.9rem, 2.8vw, 1.1rem)' }}
+                                    >
+                                        {item.french}
+                                    </p>
+                                )}
 
                                 {/* Badge répétition */}
                                 {item.repeat && item.repeat > 1 && (
@@ -272,6 +280,34 @@ export default function FlashcardsClient({ initialPlaylist }: FlashcardsClientPr
                                         style={{ width: `${((index + 1) / feed.length) * 100}%`, background: accent }}
                                     />
                                 </div>
+                            </div>
+
+                            {/* Language toggles — top right */}
+                            <div className="absolute right-3 top-[4.5rem] z-30 flex flex-col gap-2">
+                                <button
+                                    onClick={() => setShowArabic(v => !v)}
+                                    className="flex flex-col items-center gap-0.5"
+                                    aria-label="Afficher/masquer l'arabe"
+                                >
+                                    <div className={cn(
+                                        'w-9 h-9 rounded-full flex items-center justify-center font-kufi text-base font-bold transition-all',
+                                        showArabic ? 'bg-white/15 text-white' : 'bg-white/5 text-white/25'
+                                    )}>
+                                        ع
+                                    </div>
+                                </button>
+                                <button
+                                    onClick={() => setShowFrench(v => !v)}
+                                    className="flex flex-col items-center gap-0.5"
+                                    aria-label="Afficher/masquer le français"
+                                >
+                                    <div className={cn(
+                                        'w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all',
+                                        showFrench ? 'bg-white/15 text-white' : 'bg-white/5 text-white/25'
+                                    )}>
+                                        FR
+                                    </div>
+                                </button>
                             </div>
 
                             {/* Sidebar droite */}

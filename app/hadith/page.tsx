@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getCollectionsList } from '@/lib/hadith-api';
+import { Bookmark } from 'lucide-react';
 
 export const metadata = {
     title: 'Hadiths - Sahih Bukhari & Muslim',
@@ -72,6 +73,13 @@ export default function HadithPage() {
                 >
                     <span className="text-xl">🌍</span>
                     Univers Hadith
+                </Link>
+                <Link
+                    href="/hadith/favoris"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground font-bold rounded-full hover:bg-secondary/90 transition-all hover:scale-105 active:scale-95 border"
+                >
+                    <Bookmark className="w-5 h-5" />
+                    Mes favoris
                 </Link>
             </div>
 

@@ -1,5 +1,14 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+export interface ISavedHadith {
+    key: string;
+    text: string;
+    bookName: string;
+    hadithnumber: number;
+    collectionId: string;
+    savedAt: Date;
+}
+
 export interface IUser extends Document {
     email: string;
     password?: string;
@@ -22,6 +31,8 @@ export interface IUser extends Document {
     badges: { id: string; unlockedAt: Date }[];
     activityHistory: Map<string, number>;
     bookmarks: { surah: number; ayah: number; addedAt: Date }[];
+    likedHadiths: string[];
+    savedHadiths: ISavedHadith[];
 }
 
 const UserSchema: Schema = new Schema(
@@ -52,6 +63,19 @@ const UserSchema: Schema = new Schema(
             ayah: { type: Number, required: true },
             addedAt: { type: Date, default: Date.now }
         }],
+        likedHadiths: { type: [String], default: [] },
+        savedHadiths: {
+            type: [{
+                _id: false,
+                key:          { type: String, required: true },
+                text:         { type: String, default: '' },
+                bookName:     { type: String, default: '' },
+                hadithnumber: { type: Number, default: 0 },
+                collectionId: { type: String, default: '' },
+                savedAt:      { type: Date,   default: Date.now },
+            }],
+            default: [],
+        },
     },
     { timestamps: true }
 );

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Heart, Bookmark, Share2, ChevronDown } from 'lucide-react';
+import { useSession } from 'next-auth/react';
 import { cn } from '@/lib/utils';
 
 export type FeedHadith = {
@@ -43,12 +44,34 @@ function gradeChip(grade: string) {
   return { label: grade, cls: 'bg-white/10 text-white/60 border-white/10' };
 }
 
+function hadithKey(h: FeedHadith) {
+  return `${h.collectionId ?? 'default'}:${h.hadithnumber}`;
+}
+
 export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLabel, badgeEmoji }: HadithSwipeFeedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { data: session } = useSession();
+  const isLoggedIn = !!session?.user?.email;
+
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [liked, setLiked]         = useState<Set<number>>(new Set());
-  const [bookmarked, setBookmarked] = useState<Set<number>>(new Set());
+  const [liked, setLiked]         = useState<Set<string>>(new Set());
+  const [bookmarked, setBookmarked] = useState<Set<string>>(new Set());
   const [showHint, setShowHint]   = useState(true);
+  const [showArabic, setShowArabic] = useState(true);
+  const [showFrench, setShowFrench] = useState(true);
+
+  // Charger les favoris depuis l'API quand l'utilisateur est connecté
+  useEffect(() => {
+    if (!isLoggedIn) return;
+    fetch('/api/favorites')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data) return;
+        setLiked(new Set<string>(data.liked ?? []));
+        setBookmarked(new Set<string>((data.saved ?? []).map((s: { key: string }) => s.key)));
+      })
+      .catch(() => {});
+  }, [isLoggedIn]);
 
   // Track visible card via scroll position
   useEffect(() => {
@@ -81,21 +104,46 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
     return () => window.removeEventListener('keydown', onKey);
   }, [currentIndex, hadiths.length]);
 
-  const toggleLike = useCallback((idx: number) => {
+  const toggleLike = useCallback((hadith: FeedHadith) => {
+    const key = hadithKey(hadith);
     setLiked(prev => {
       const next = new Set(prev);
-      next.has(idx) ? next.delete(idx) : next.add(idx);
+      next.has(key) ? next.delete(key) : next.add(key);
       return next;
     });
-  }, []);
+    if (isLoggedIn) {
+      fetch('/api/favorites', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'like', key }),
+      }).catch(() => {});
+    }
+  }, [isLoggedIn]);
 
-  const toggleBookmark = useCallback((idx: number) => {
+  const toggleBookmark = useCallback((hadith: FeedHadith) => {
+    const key = hadithKey(hadith);
     setBookmarked(prev => {
       const next = new Set(prev);
-      next.has(idx) ? next.delete(idx) : next.add(idx);
+      next.has(key) ? next.delete(key) : next.add(key);
       return next;
     });
-  }, []);
+    if (isLoggedIn) {
+      fetch('/api/favorites', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'save',
+          key,
+          snapshot: {
+            text:         hadith.text.slice(0, 300),
+            bookName:     hadith.bookName ?? '',
+            hadithnumber: hadith.hadithnumber,
+            collectionId: hadith.collectionId ?? 'default',
+          },
+        }),
+      }).catch(() => {});
+    }
+  }, [isLoggedIn]);
 
   const handleShare = useCallback((hadith: FeedHadith) => {
     if (typeof navigator !== 'undefined' && navigator.share) {
@@ -154,8 +202,9 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
 
         {hadiths.map((hadith, index) => {
           const cfg    = COLLECTION_CONFIG[hadith.collectionId ?? 'default'] ?? COLLECTION_CONFIG.default;
-          const isLiked      = liked.has(index);
-          const isBookmarked = bookmarked.has(index);
+          const key          = hadithKey(hadith);
+          const isLiked      = liked.has(key);
+          const isBookmarked = bookmarked.has(key);
           const firstChar    = hadith.arabic?.trimStart().slice(0, 1) ?? '';
 
           return (
@@ -188,7 +237,7 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
               {/* Main content — vertically centered */}
               <div className="relative z-20 flex-1 flex flex-col justify-center px-6 pt-20 pb-4">
                 {/* Arabic */}
-                {hadith.arabic && (
+                {hadith.arabic && showArabic && (
                   <div className="mb-6 text-right" dir="rtl">
                     <p
                       className="font-kufi leading-loose text-white/95 drop-shadow"
@@ -200,24 +249,26 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
                 )}
 
                 {/* Accent divider */}
-                {hadith.arabic && (
+                {hadith.arabic && showArabic && showFrench && (
                   <div className="flex justify-center mb-6">
                     <div className="h-px w-16 rounded-full" style={{ background: cfg.accent }} />
                   </div>
                 )}
 
                 {/* French */}
-                <div className="text-left">
-                  <p
-                    className="font-serif leading-relaxed"
-                    style={{
-                      color: 'rgba(255,255,255,0.88)',
-                      fontSize: hadith.arabic ? 'clamp(1rem, 2.5vw, 1.2rem)' : 'clamp(1.2rem, 3vw, 1.6rem)',
-                    }}
-                  >
-                    {hadith.text}
-                  </p>
-                </div>
+                {showFrench && (
+                  <div className="text-left">
+                    <p
+                      className="font-serif leading-relaxed"
+                      style={{
+                        color: 'rgba(255,255,255,0.88)',
+                        fontSize: hadith.arabic && showArabic ? 'clamp(1rem, 2.5vw, 1.2rem)' : 'clamp(1.2rem, 3vw, 1.6rem)',
+                      }}
+                    >
+                      {hadith.text}
+                    </p>
+                  </div>
+                )}
               </div>
 
               {/* Bottom metadata overlay */}
@@ -259,11 +310,39 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
                 </div>
               </div>
 
+              {/* Language toggles — top right */}
+              <div className="absolute right-3 top-[4.5rem] z-30 flex flex-col gap-2">
+                <button
+                  onClick={() => setShowArabic(v => !v)}
+                  className="flex flex-col items-center gap-0.5 group"
+                  aria-label="Afficher/masquer l'arabe"
+                >
+                  <div className={cn(
+                    'w-9 h-9 rounded-full flex items-center justify-center font-kufi text-base font-bold transition-all',
+                    showArabic ? 'bg-white/15 text-white' : 'bg-white/5 text-white/25'
+                  )}>
+                    ع
+                  </div>
+                </button>
+                <button
+                  onClick={() => setShowFrench(v => !v)}
+                  className="flex flex-col items-center gap-0.5 group"
+                  aria-label="Afficher/masquer le français"
+                >
+                  <div className={cn(
+                    'w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold transition-all',
+                    showFrench ? 'bg-white/15 text-white' : 'bg-white/5 text-white/25'
+                  )}>
+                    FR
+                  </div>
+                </button>
+              </div>
+
               {/* Right action bar */}
               <div className="absolute right-4 bottom-24 z-30 flex flex-col items-center gap-5">
                 {/* Like */}
                 <button
-                  onClick={() => toggleLike(index)}
+                  onClick={() => toggleLike(hadith)}
                   className="flex flex-col items-center gap-1 group"
                   aria-label={isLiked ? 'Retirer le like' : 'Aimer ce hadith'}
                 >
@@ -280,7 +359,7 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
 
                 {/* Bookmark */}
                 <button
-                  onClick={() => toggleBookmark(index)}
+                  onClick={() => toggleBookmark(hadith)}
                   className="flex flex-col items-center gap-1 group"
                   aria-label={isBookmarked ? 'Retirer le signet' : 'Sauvegarder'}
                 >
