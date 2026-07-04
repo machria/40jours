@@ -1,54 +1,57 @@
 import { auth } from "@/auth";
 import { redirect } from "next/navigation";
-import Link from "next/link";
-import { ChevronLeft } from "lucide-react";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import { getAyahsData } from "@/app/search/actions";
-import FavorisClient, { HydratedBookmark } from "@/components/dashboard/FavorisClient";
+import FavorisUnified from "@/components/dashboard/FavorisUnified";
+import type { HydratedBookmark } from "@/components/dashboard/FavorisClient";
+import type { ISavedHadith, ISavedArticle } from "@/models/User";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Mes favoris" };
 
 export default async function FavorisPage() {
     const session = await auth();
-    if (!session?.user?.email) {
-        redirect("/login");
-    }
+    if (!session?.user?.email) redirect("/login");
 
     await dbConnect();
-    const user = await User.findOne({ email: session.user.email }).select('bookmarks').lean();
-    const bookmarks = (user?.bookmarks ?? []) as { surah: number; ayah: number; addedAt: Date }[];
+    const user = await User.findOne({ email: session.user.email })
+        .select("bookmarks savedHadiths savedArticles")
+        .lean();
 
-    const ayahsData = await getAyahsData(bookmarks.map(b => ({ surah: b.surah, ayah: b.ayah })));
+    // ── Versets ──────────────────────────────────────────────────────────────
+    const rawBookmarks = (user?.bookmarks ?? []) as { surah: number; ayah: number; addedAt: Date }[];
+    const ayahsData = rawBookmarks.length
+        ? await getAyahsData(rawBookmarks.map(b => ({ surah: b.surah, ayah: b.ayah })))
+        : [];
 
-    const hydrated: HydratedBookmark[] = bookmarks
+    const verses: HydratedBookmark[] = rawBookmarks
         .map((b): HydratedBookmark | null => {
-            const details = ayahsData.find((a: any) => a.surah === b.surah && a.ayah === b.ayah);
-            if (!details) return null;
+            const d = ayahsData.find((a: any) => a.surah === b.surah && a.ayah === b.ayah);
+            if (!d) return null;
             return {
                 surah: b.surah,
                 ayah: b.ayah,
-                text: details.text,
-                translation: details.translation,
-                surahName: details.surahName,
+                text: d.text,
+                translation: d.translation,
+                surahName: d.surahName,
                 addedAt: new Date(b.addedAt).toISOString(),
             };
         })
         .filter((b): b is HydratedBookmark => b !== null)
         .sort((a, b) => new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime());
 
-    return (
-        <div className="min-h-screen bg-background">
-            <header className="sticky top-0 z-10 bg-background/80 backdrop-blur-md border-b p-4">
-                <div className="max-w-2xl mx-auto flex items-center gap-4">
-                    <Link href="/dashboard" className="p-2 hover:bg-muted rounded-full">
-                        <ChevronLeft className="w-6 h-6" />
-                    </Link>
-                    <h1 className="text-xl font-bold">Mes favoris</h1>
-                </div>
-            </header>
+    // ── Hadiths ───────────────────────────────────────────────────────────────
+    const hadiths: ISavedHadith[] = ((user as any)?.savedHadiths ?? []) as ISavedHadith[];
 
-            <main className="p-4 md:p-8 max-w-2xl mx-auto">
-                <FavorisClient initialBookmarks={JSON.parse(JSON.stringify(hydrated))} />
-            </main>
-        </div>
+    // ── Articles ──────────────────────────────────────────────────────────────
+    const articles: ISavedArticle[] = ((user as any)?.savedArticles ?? []) as ISavedArticle[];
+
+    return (
+        <FavorisUnified
+            initialVerses={JSON.parse(JSON.stringify(verses))}
+            initialHadiths={JSON.parse(JSON.stringify(hadiths))}
+            initialArticles={JSON.parse(JSON.stringify(articles))}
+        />
     );
 }

@@ -40,7 +40,7 @@ export default function ConseilsPage() {
                             Découvrir
                         </Link>
                         <Link
-                            href="/conseils/favoris"
+                            href="/dashboard/favoris"
                             className="flex items-center gap-1.5 bg-card/80 border px-3 py-1.5 rounded-full hover:bg-card transition-all hover:scale-105 active:scale-95"
                         >
                             <Bookmark className="w-3.5 h-3.5" />
