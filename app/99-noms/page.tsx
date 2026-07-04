@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, HelpCircle, Trophy, ChevronRight, RefreshCw, Check, X } from 'lucide-react';
+import { ChevronLeft, HelpCircle, Trophy, ChevronRight, RefreshCw, Check, X, Layers } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { namesOfAllah, AllahName } from '@/data/names';
 import { saveGenericQuizScore } from '@/actions/quiz-actions';
@@ -96,7 +96,7 @@ export default function NamesPage() {
                         className={`p-2 rounded-full transition-all ${mode === 'learn' ? 'bg-background shadow text-primary' : 'text-muted-foreground hover:text-foreground'}`}
                         title="Mode Cartes"
                     >
-                        <RefreshCw className="w-4 h-4" /> {/* Using Refresh as placeholder for Cards/Cycle */}
+                        <RefreshCw className="w-4 h-4" />
                     </button>
                     <button
                         onClick={() => setMode('list')}
@@ -112,6 +112,13 @@ export default function NamesPage() {
                     >
                         <Trophy className="w-4 h-4" />
                     </button>
+                    <Link
+                        href="/99-noms/feed"
+                        className="p-2 rounded-full text-muted-foreground hover:text-foreground transition-all"
+                        title="Mode Immersif"
+                    >
+                        <Layers className="w-4 h-4" />
+                    </Link>
                 </div>
             </header>
 

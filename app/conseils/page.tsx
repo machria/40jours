@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import ConseilsContent from './ConseilsContent';
-import { BookOpen, Sparkles } from 'lucide-react';
+import { BookOpen, Sparkles, Zap } from 'lucide-react';
+import Link from 'next/link';
 import { articles } from '@/data/advice';
 
 export const revalidate = false;
@@ -31,6 +32,13 @@ export default function ConseilsPage() {
                             <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                             5 catégories
                         </div>
+                        <Link
+                            href="/conseils/decouvrir"
+                            className="flex items-center gap-1.5 bg-primary text-primary-foreground px-3 py-1.5 rounded-full hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 shadow-sm shadow-primary/30"
+                        >
+                            <Zap className="w-3.5 h-3.5" />
+                            Découvrir
+                        </Link>
                     </div>
                 </div>
             </header>
