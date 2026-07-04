@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Heart, Bookmark, Share2, ChevronDown } from 'lucide-react';
+import { ArrowLeft, Bookmark, Share2, ChevronDown } from 'lucide-react';
 import { useSession } from 'next-auth/react';
 import { cn } from '@/lib/utils';
 
@@ -54,7 +54,6 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
   const isLoggedIn = !!session?.user?.email;
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [liked, setLiked]         = useState<Set<string>>(new Set());
   const [bookmarked, setBookmarked] = useState<Set<string>>(new Set());
   const [showHint, setShowHint]   = useState(true);
   const [showArabic, setShowArabic] = useState(true);
@@ -67,7 +66,6 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (!data) return;
-        setLiked(new Set<string>(data.liked ?? []));
         setBookmarked(new Set<string>((data.saved ?? []).map((s: { key: string }) => s.key)));
       })
       .catch(() => {});
@@ -103,22 +101,6 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [currentIndex, hadiths.length]);
-
-  const toggleLike = useCallback((hadith: FeedHadith) => {
-    const key = hadithKey(hadith);
-    setLiked(prev => {
-      const next = new Set(prev);
-      next.has(key) ? next.delete(key) : next.add(key);
-      return next;
-    });
-    if (isLoggedIn) {
-      fetch('/api/favorites', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'like', key }),
-      }).catch(() => {});
-    }
-  }, [isLoggedIn]);
 
   const toggleBookmark = useCallback((hadith: FeedHadith) => {
     const key = hadithKey(hadith);
@@ -203,7 +185,6 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
         {hadiths.map((hadith, index) => {
           const cfg    = COLLECTION_CONFIG[hadith.collectionId ?? 'default'] ?? COLLECTION_CONFIG.default;
           const key          = hadithKey(hadith);
-          const isLiked      = liked.has(key);
           const isBookmarked = bookmarked.has(key);
           const firstChar    = hadith.arabic?.trimStart().slice(0, 1) ?? '';
 
@@ -340,28 +321,11 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
 
               {/* Right action bar */}
               <div className="absolute right-4 bottom-24 z-30 flex flex-col items-center gap-5">
-                {/* Like */}
-                <button
-                  onClick={() => toggleLike(hadith)}
-                  className="flex flex-col items-center gap-1 group"
-                  aria-label={isLiked ? 'Retirer le like' : 'Aimer ce hadith'}
-                >
-                  <div
-                    className={cn(
-                      'w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-200',
-                      isLiked ? 'bg-red-500/30 scale-110' : 'bg-white/10 group-hover:bg-white/20 group-hover:scale-105'
-                    )}
-                  >
-                    <Heart className={cn('w-5 h-5 transition-all', isLiked ? 'fill-red-400 text-red-400 scale-110' : 'text-white')} />
-                  </div>
-                  <span className="text-white/60 text-[10px] font-medium">{isLiked ? 'Aimé' : 'Aimer'}</span>
-                </button>
-
-                {/* Bookmark */}
+                {/* Bookmark → favoris */}
                 <button
                   onClick={() => toggleBookmark(hadith)}
                   className="flex flex-col items-center gap-1 group"
-                  aria-label={isBookmarked ? 'Retirer le signet' : 'Sauvegarder'}
+                  aria-label={isBookmarked ? 'Retirer des favoris' : 'Sauvegarder dans les favoris'}
                 >
                   <div
                     className={cn(
@@ -373,6 +337,18 @@ export default function HadithSwipeFeed({ hadiths, backHref, backLabel, badgeLab
                   </div>
                   <span className="text-white/60 text-[10px] font-medium">{isBookmarked ? 'Sauvé' : 'Sauver'}</span>
                 </button>
+
+                {/* Lien vers favoris */}
+                <Link
+                  href="/hadith/favoris"
+                  className="flex flex-col items-center gap-1 group"
+                  aria-label="Voir mes favoris"
+                >
+                  <div className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all group-hover:scale-105">
+                    <Bookmark className="w-5 h-5 text-white/50" strokeWidth={1.5} />
+                  </div>
+                  <span className="text-white/60 text-[10px] font-medium">Favoris</span>
+                </Link>
 
                 {/* Share */}
                 <button

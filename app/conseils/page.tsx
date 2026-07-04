@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import ConseilsContent from './ConseilsContent';
-import { BookOpen, Sparkles, Zap } from 'lucide-react';
+import { BookOpen, Sparkles, Zap, Bookmark } from 'lucide-react';
 import Link from 'next/link';
 import { articles } from '@/data/advice';
 
@@ -38,6 +38,13 @@ export default function ConseilsPage() {
                         >
                             <Zap className="w-3.5 h-3.5" />
                             Découvrir
+                        </Link>
+                        <Link
+                            href="/conseils/favoris"
+                            className="flex items-center gap-1.5 bg-card/80 border px-3 py-1.5 rounded-full hover:bg-card transition-all hover:scale-105 active:scale-95"
+                        >
+                            <Bookmark className="w-3.5 h-3.5" />
+                            Mes favoris
                         </Link>
                     </div>
                 </div>

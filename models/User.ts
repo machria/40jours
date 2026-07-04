@@ -9,6 +9,14 @@ export interface ISavedHadith {
     savedAt: Date;
 }
 
+export interface ISavedArticle {
+    slug: string;
+    title: string;
+    category: string;
+    excerpt: string;
+    savedAt: Date;
+}
+
 export interface IUser extends Document {
     email: string;
     password?: string;
@@ -33,6 +41,7 @@ export interface IUser extends Document {
     bookmarks: { surah: number; ayah: number; addedAt: Date }[];
     likedHadiths: string[];
     savedHadiths: ISavedHadith[];
+    savedArticles: ISavedArticle[];
 }
 
 const UserSchema: Schema = new Schema(
@@ -63,6 +72,17 @@ const UserSchema: Schema = new Schema(
             ayah: { type: Number, required: true },
             addedAt: { type: Date, default: Date.now }
         }],
+        savedArticles: {
+            type: [{
+                _id: false,
+                slug:     { type: String, required: true },
+                title:    { type: String, default: '' },
+                category: { type: String, default: '' },
+                excerpt:  { type: String, default: '' },
+                savedAt:  { type: Date,   default: Date.now },
+            }],
+            default: [],
+        },
         likedHadiths: { type: [String], default: [] },
         savedHadiths: {
             type: [{
