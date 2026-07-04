@@ -147,7 +147,11 @@ export default function FavorisUnified({ initialVerses, initialHadiths, initialA
                         hadiths.map((h, i) => {
                             const accent = HADITH_ACCENT[h.collectionId] ?? HADITH_ACCENT.default;
                             return (
-                                <div key={`${h.key}-${i}`} className="bg-card border rounded-xl p-4 space-y-2">
+                                <Link
+                                    key={`${h.key}-${i}`}
+                                    href={`/hadith/${h.collectionId}/hadith/${h.hadithnumber}`}
+                                    className="block bg-card border rounded-xl p-4 space-y-2 hover:border-primary/40 transition-colors group"
+                                >
                                     <div className="flex items-center gap-2">
                                         <Bookmark className="w-3.5 h-3.5 shrink-0" style={{ color: accent }} fill="currentColor" />
                                         <span className="text-xs font-bold" style={{ color: accent }}>
@@ -158,10 +162,15 @@ export default function FavorisUnified({ initialVerses, initialHadiths, initialA
                                     <p className="text-foreground/85 text-sm leading-relaxed line-clamp-4">
                                         {h.text}{h.text.length >= 300 && '…'}
                                     </p>
-                                    <p className="text-muted-foreground/60 text-[11px]">
-                                        {new Date(h.savedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
-                                    </p>
-                                </div>
+                                    <div className="flex items-center justify-between">
+                                        <p className="text-muted-foreground/60 text-[11px]">
+                                            {new Date(h.savedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
+                                        </p>
+                                        <span className="text-xs font-semibold flex items-center gap-1 group-hover:underline" style={{ color: accent }}>
+                                            Lire le hadith <ArrowRight className="w-3 h-3" />
+                                        </span>
+                                    </div>
+                                </Link>
                             );
                         })
                     )
