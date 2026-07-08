@@ -35,6 +35,7 @@ export default function Navigation() {
         { href: '/tajwid', label: 'Tajwid', icon: BookMarked },
         { href: '/vocabulaire', label: 'Vocabulaire', icon: Languages },
         { href: '/apprendre-arabe', label: 'Apprendre l\'Arabe', icon: GraduationCap },
+        { href: '/glossaire', label: 'Glossaire islamique', icon: BookMarked },
         { href: '/conseils', label: 'Conseils', icon: BookOpen },
         { href: '/settings', label: 'Paramètres', icon: Settings },
     ];
