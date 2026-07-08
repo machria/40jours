@@ -10583,5 +10583,102 @@ Il existe un document remarquable qui illustre, mieux que tout argument théoriq
 - **Abu Ja'far al-Tahawi**, *Al-'Aqida al-Tahawiyya* ; **Ibn Abi al-'Izz**, commentaire de la *Tahawiyya* — le texte de convergence des trois écoles.
 - En complément : nos articles *"Traduire le Coran, Comprendre Allah : Ash'arisme, Atharisme/Salafisme et la Différence Fondamentale avec les Madhabs"*, *"Comprendre les 4 Madhabs : Miséricorde, pas Division"* et *"Aqeedah pour débutants : Les 6 piliers de la foi expliqués"*.
 `
+    },
+    {
+        slug: 'baisse-de-foi-comment-la-surmonter',
+        title: "Baisse de foi : comment la surmonter ?",
+        excerpt: "Il arrive à tout croyant sincère de traverser des périodes où la prière devient mécanique et le cœur semble éteint. Ce phénomène — la fatarah — est reconnu par le Prophète ﷺ lui-même. Voici ses causes, ses remèdes prophétiques, et ce que le récit de Hanzala nous apprend sur la nature réelle de la foi.",
+        date: '2026-07-08',
+        author: 'Équipe 40 Jours',
+        readTime: '7 min',
+        category: 'Spiritualité & Guérison',
+        content: `
+# Baisse de foi : comment la surmonter ?
+
+Il arrive à tout croyant sincère de traverser des périodes où la foi semble s'éteindre à bas bruit : la prière devient mécanique, la récitation du Coran ne touche plus le cœur, les actes d'adoration se vident de leur substance intérieure, et une certaine torpeur spirituelle s'installe. Ce phénomène — que les savants nomment *fatarah* (الفترة), littéralement "la lassitude" ou "le ralentissement" — n'est pas une exception honteuse à dissimuler. C'est une réalité reconnue par le Prophète ﷺ lui-même, documentée dans les textes les plus authentiques de l'Islam, et pour laquelle la tradition islamique a élaboré des remèdes précis et éprouvés.
+
+Comprendre pourquoi la foi baisse, identifier ses causes, et connaître les remèdes que le Prophète ﷺ et les savants ont prescrits : voilà l'objet de cet article.
+
+## La baisse de foi : une réalité reconnue par le Prophète ﷺ
+
+### L'Iman monte et descend
+
+L'Islam ne présente pas la foi comme un état immuable, figé une fois pour toutes au jour de la *shahada*. Le Coran lui-même décrit la foi comme un état dynamique, susceptible d'augmenter et de diminuer. Allah dit : *"Les vrais croyants sont ceux dont les cœurs frémissent lorsqu'on mentionne Allah, et dont la foi augmente quand on leur récite Ses versets"* (Sourate Al-Anfal, 8:2). De même, le Prophète ﷺ a déclaré : *"La foi use dans votre sein comme use le vêtement. Priez donc Allah de renouveler la foi dans vos cœurs."* (rapporté par Al-Hakim, authentifié par Al-Albani).
+
+Les savants de l'*'aqida* sunnite — Ash'arites, Maturidites et Atharis — sont unanimes sur ce point fondamental : la foi (*iman*) augmente par l'obéissance et diminue par la désobéissance et la négligence. Ce n'est pas une faiblesse de la définition islamique de la foi — c'est au contraire l'une de ses forces : reconnaître honnêtement la réalité du cœur humain, au lieu d'imposer une fiction de constance que nul être humain, hormis les Prophètes, ne peut soutenir.
+
+### La confession de Hanzala : un exemple prophétique
+
+L'un des récits les plus touchants sur ce sujet se trouve dans *Sahih Muslim* (n°2750). Le compagnon **Hanzala al-Usayyidi** (رضي الله عنه), secrétaire du Prophète ﷺ, se rencontre un jour avec Abu Bakr (رضي الله عنه) et lui confesse sa détresse : *"Hanzala est devenu un hypocrite !"* Abu Bakr, saisi, lui demande d'expliquer. Hanzala répond : *"Quand nous sommes auprès du Messager d'Allah ﷺ, il nous évoque le Paradis et l'Enfer au point que nous les voyons de nos yeux. Mais quand nous rentrons à la maison et nous occupons de nos femmes, de nos enfants et de nos affaires mondaines, nous oublions beaucoup."*
+
+Ils se rendent tous deux chez le Prophète ﷺ et Hanzala lui répète ce qu'il a dit. Le Prophète ﷺ répond alors, avec une douceur qui demeure un remède pour toutes les générations : *"Par Celui qui tient mon âme en Sa main, si vous étiez continuellement dans l'état qui est le vôtre auprès de moi, les anges vous serreraient la main dans vos lits et dans vos rues. Mais, Hanzala, il y a un temps pour cela et un temps pour cela."* Et il dit cela **trois fois**.
+
+Cette réponse prophétique contient toute une pédagogie : la variation n'est pas la trahison. Le croyant n'est pas une machine ; il est un être humain soumis à des cycles, et la sagesse consiste à le comprendre, non à en désespérer.
+
+## Les causes de la baisse de foi
+
+Identifier les causes de la *fatarah* est la première étape pour y remédier. Les savants, notamment **Ibn al-Qayyim al-Jawziyya** dans son *Madarij al-Salikin* et **Ibn Rajab al-Hanbali** dans *Jami' al-'Ulum wal-Hikam*, ont identifié plusieurs causes majeures.
+
+### Les péchés et la noirceur du cœur
+
+Le Prophète ﷺ a déclaré : *"Lorsque le serviteur commet un péché, une tache noire apparaît sur son cœur. S'il se repent, abandonne le péché et demande pardon, son cœur est poli à nouveau. Mais s'il persiste, la tache s'élargit jusqu'à recouvrir tout son cœur."* (Al-Tirmidhi, n°3334 ; Ibn Majah, n°4244 — ce récit est l'explication que les exégètes donnent au verset coranique 83:14 : *"Bien au contraire ! Ce qu'ils ont accompli a rouillé leurs cœurs."*)
+
+Le **raan** (الرَّيْن) — cette rouille spirituelle — est la première cause de la torpeur du cœur. Les péchés ne sont pas seulement des actes interdits : ils obscurcissent progressivement la sensibilité spirituelle, au point que ce qui touchait le cœur auparavant ne l'atteint plus.
+
+### L'excès dans le monde et la ghaflah
+
+Le Prophète ﷺ a dit que *"l'amour excessif du monde et la crainte de la mort"* (*al-wahn*) constituent la maladie qui affaiblit les nations et les cœurs (Abu Dawud, n°4297). Lorsque les préoccupations mondaines envahissent le cœur — travail, réseaux sociaux, divertissements, soucis financiers — elles laissent de moins en moins de place à la *dhikr* (le souvenir d'Allah), au *tafakkur* (la réflexion spirituelle) et à la récitation du Coran. Cette *ghaflah* (غفلة), cette **inattention** progressive à Allah, est le terreau dans lequel la *fatarah* prospère.
+
+> *"Ne soyez pas de ceux dont le cœur s'est endurci à cause de l'oubli d'Allah — ceux-là sont dans un égarement manifeste."* (Sourate Az-Zumar, 39:22)
+
+### L'abandon des actes d'adoration et la mauvaise compagnie
+
+La foi est un feu qui a besoin d'être entretenu. Quand on cesse de la nourrir — en délaissant les prières surérogatoires, en réduisant la récitation du Coran à sa portion congrue, en s'éloignant des cercles de rappel — elle décline naturellement. La mauvaise compagnie amplifie ce déclin : *"L'homme suit la religion de son ami intime. Que chacun regarde donc qui il fréquente."* (Abu Dawud, n°4833 ; Al-Tirmidhi, n°2378, déclaré *hasan* par Al-Albani). Un entourage centré sur le monde et indifférent à Allah érode progressivement les résolutions les plus sincères.
+
+## Les remèdes prophétiques et pratiques
+
+La bonne nouvelle est que les textes islamiques ne se contentent pas de décrire la maladie : ils prescrivent des remèdes précis, hiérarchisés, adaptés à différents degrés de *fatarah*.
+
+### Le tawbah sincère et immédiat
+
+Le premier remède, le plus urgent, est le retour (*tawbah*) à Allah. Non pas un retour accompagné de honte paralysante, mais un retour confiant, fondé sur la connaissance de la miséricorde divine. Le Prophète ﷺ a dit : *"Allah est plus heureux du repentir de Son serviteur que l'un d'entre vous ne l'est de retrouver sa monture perdue dans le désert."* (Sahih al-Bukhari, n°6309 ; Sahih Muslim, n°2747). La *tawbah* nettoie le *raan* du cœur et lui redonne sa sensibilité. Elle ne demande ni conditions particulières ni intermédiaire : une intention sincère, la cessation du péché, et l'invocation directe d'Allah suffisent.
+
+### Revenir au Coran avec présence du cœur
+
+Ibn al-Qayyim écrit dans *Al-Fawa'id* : *"Il y a dans le Coran un remède complet à toutes les maladies du cœur et du corps. Mais tout le monde n'est pas guidé vers ce remède, ni apte à l'utiliser."* Lire quelques versets avec une vraie attention — s'arrêter, méditer, s'interroger sur ce qu'Allah dit et ce qu'Il attend de soi — vaut infiniment plus, pour la santé du cœur, que de terminer plusieurs parties du Coran en pilotage automatique. La quantité nourrit rarement là où la qualité guérit.
+
+### Multiplier le dhikr et se souvenir de la mort
+
+Les adhkar du matin et du soir jouent le rôle d'une protection quotidienne de la foi. Le Prophète ﷺ a dit : *"Renouvelez votre foi."* On lui demanda : "Comment renouvelons-nous notre foi ?" Il répondit : *"Dites souvent : La ilaha illallah."* (Ahmad, n°8695, authentifié par Al-Albani). Cette pratique simple — répéter la *shahada* avec conscience, y méditer — est le moyen le plus direct de renouveler intérieurement le sentiment de la présence divine.
+
+L'un des remèdes les plus puissants contre la *ghaflah* est le **dhikr al-mawt** — le souvenir fréquent de la mort. Le Prophète ﷺ a dit : *"Multipliez le souvenir du briseur des plaisirs"* — c'est-à-dire la mort (Al-Tirmidhi, n°2307 ; Ibn Majah, n°4258). Non pour tomber dans l'anxiété ou la mélancolie, mais pour retrouver le sens des priorités : ce qui paraît crucial dans la gestion quotidienne du monde retrouve sa juste proportion quand on se rappelle que l'on quittera tout cela.
+
+### Fréquenter les gens de bien et les cercles de rappel
+
+*"Aucun groupe ne s'assemble pour faire le dhikr d'Allah, sans que les anges les entourent, que la miséricorde les recouvre, que la sérénité descende sur eux, et qu'Allah les mentionne parmi ceux qui sont auprès de Lui."* (Sahih Muslim, n°2700). La fréquentation régulière de personnes sincèrement attachées à Allah — dans une mosquée, un cercle d'étude, ou simplement une amitié choisie avec soin — est un levier spirituel que ni les livres ni la solitude ne peuvent remplacer. Le cœur se contamine par la négligence de l'entourage ; il guérit aussi par la proximité des sincères.
+
+## Conclusion : la fatarah n'est pas une fin
+
+La baisse de foi n'est pas une condamnation. C'est un signal d'alarme bienveillant que le cœur envoie à celui qui l'habite : *"Reviens à moi, reviens à Allah."* Le Prophète ﷺ, le meilleur des croyants, a consolé Hanzala  en lui montrant que la variation est humaine, que l'exigence n'est pas la constance absolue — impossible à atteindre — mais le retour sincère chaque fois que l'on s'est éloigné. Celui qui traverse une *fatarah* honnêtement, avec *tawbah* et effort renouvelé, peut même en sortir plus profond qu'avant : car celui qui a ressenti l'éloignement d'Allah apprécie autrement la douceur du retour.
+
+---
+
+**Sources et bibliographie :**
+- **Sourate Al-Anfal**, 8:2 — la foi qui augmente à l'écoute des versets coraniques.
+- **Sourate Az-Zumar**, 39:22 — le cœur endurci par l'oubli d'Allah.
+- **Sourate Al-Mutaffifin**, 83:14 — le *raan* (rouille spirituelle) du cœur.
+- **Sahih Muslim**, n°2750 — le récit de Hanzala (رضي الله عنه) et la réponse prophétique sur la *fatarah*.
+- **Sahih al-Bukhari**, n°6309 ; **Sahih Muslim**, n°2747 — la joie d'Allah pour le repentir du croyant.
+- **Sahih Muslim**, n°2700 — les cercles de dhikr entourés par les anges.
+- **Al-Tirmidhi**, n°3334 ; **Ibn Majah**, n°4244 — la tache noire sur le cœur causée par les péchés.
+- **Al-Hakim** (authentifié par Al-Albani) — la foi use comme use le vêtement.
+- **Ahmad**, n°8695 (authentifié par Al-Albani) — renouveler la foi par la *shahada*.
+- **Abu Dawud**, n°4833 ; **Al-Tirmidhi**, n°2378 — l'homme suit la religion de son ami intime.
+- **Al-Tirmidhi**, n°2307 ; **Ibn Majah**, n°4258 — multiplier le souvenir de la mort.
+- **Abu Dawud**, n°4297 — le *wahn* : l'amour du monde et la crainte de la mort.
+- **Ibn al-Qayyim al-Jawziyya**, *Madarij al-Salikin* et *Al-Fawa'id* — les causes et remèdes de la torpeur spirituelle.
+- **Ibn Rajab al-Hanbali**, *Jami' al-'Ulum wal-Hikam* — commentaires sur les hadith de la foi.
+- En complément : nos articles *"Le Sabr : l'Art Islamique de la Patience"*, *"L'Amour d'Allah : le Fondement Oublié de la Foi"* et *"Aqeedah pour débutants : Les 6 piliers de la foi expliqués"*.
+`
     }
 ];
