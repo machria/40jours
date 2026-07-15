@@ -167,6 +167,11 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'symbolique-chiffre-40-islam-defi-spirituel':       ['motivant', 'surprenant'],
     'al-kibr-orgueil-iblis-signes-caches-remede':       ['profond', 'surprenant'],
     'recit-yusuf-ahsan-al-qasas-lecons-tafsir':         ['touchant', 'profond'],
+    'cinq-piliers-islam-fondations-vie-musulmane':      ['savant', 'pratique'],
+    'importance-shahada-declaration-foi':               ['profond', 'motivant'],
+    'importance-zakat-purification-richesse':           ['pratique', 'profond'],
+    'importance-jeune-ramadan-maitrise-de-soi':          ['pratique', 'motivant'],
+    'importance-hajj-voyage-d-une-vie':                  ['profond', 'touchant'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {

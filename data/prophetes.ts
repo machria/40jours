@@ -5,6 +5,11 @@ export interface QuizQuestion {
   explication: string;
 }
 
+export interface EtapeHistoire {
+  etape: string;
+  texte: string;
+}
+
 export interface Prophete {
   id: string;
   nom: string;
@@ -12,7 +17,7 @@ export interface Prophete {
   surnom?: string;
   periode?: string;
   resume: string;
-  histoire: string[];
+  histoire: (string | EtapeHistoire)[];
   traits: { label: string; emoji: string }[];
   morale: string;
   versetCle?: { ref: string; texte: string };
@@ -28,10 +33,34 @@ export const prophetes: Prophete[] = [
     periode: 'Origine des temps',
     resume: 'Adam est le premier homme et le premier prophète, créé par Allah de l\'argile. Il vécut au Paradis avant d\'en descendre sur Terre, inaugurant l\'histoire humaine par un acte de repentir.',
     histoire: [
-      'Allah créa Adam de Ses propres mains, à partir d\'argile, et lui insuffla Son souffle. Il lui enseigna les noms de toutes choses — la connaissance — avant de le présenter aux anges. Allah ordonna aux anges de se prosterner devant Adam en signe de respect, et ils obéirent tous, sauf Iblis, qui refusa par orgueil.',
-      'Allah installa Adam et son épouse Hawwa (Ève) dans le Jardin du Paradis, leur permettant de jouir de tout sauf d\'un arbre unique. Iblis les trompa progressivement jusqu\'à ce qu\'ils goûtent de cet arbre. Alors Allah les fit descendre sur Terre, commençant ainsi l\'histoire de l\'humanité.',
-      'Dès leur descente, Adam et Hawwa se repentirent sincèrement. Allah leur enseigna des paroles de repentir (Coran 7:23) et les accepta : "Allah Se tourna vers lui avec miséricorde, car Il est Celui qui revient sans cesse et le Très Miséricordieux" (Coran 2:37). Adam reçut la révélation et guida sa descendance vers le Tawhid.',
-      'Adam vécut mille ans selon certaines narrations, enseignant à ses enfants la foi en Allah unique. Son fils Habil (Abel) fut injustement tué par son frère Qabil (Caïn) — le premier meurtre de l\'histoire humaine, dont Allah dit qu\'il équivaut au meurtre de toute l\'humanité.',
+      {
+        etape: 'La création d\'Adam',
+        texte: 'Avant de créer Adam, Allah dit aux anges : "Je vais mettre sur terre un représentant (khalifa)." Surpris, les anges demandèrent s\'Il allait y mettre quelqu\'un qui ferait le mal et verserait le sang, alors qu\'eux Le glorifiaient sans arrêt. Allah répondit : "Je sais ce que vous ne savez pas" (Coran 2:30). Il façonna alors le corps d\'Adam avec de l\'argile — rouge, blanche et noire, ce qui explique la diversité des couleurs de peau chez les humains. Cette terre sécha longtemps, jusqu\'à sonner comme de la poterie. Ibn Kathir raconte qu\'Iblis passait devant ce corps sans vie et le frappait pour l\'entendre résonner, en se demandant ce qu\'Allah allait en faire.',
+      },
+      {
+        etape: 'Le souffle de vie',
+        texte: 'Quand Allah souffla la vie en lui, celle-ci se répandit peu à peu dans son corps. Dès qu\'elle atteignit sa tête, Adam éternua et dit : "Al-hamdu lillah" (louange à Allah). Allah lui répondit : "Yarhamuka Rabbuka" (que ton Seigneur te fasse miséricorde). Le Prophète ﷺ a enseigné que c\'est de là que vient l\'habitude, entre croyants, de se dire ces mots après un éternuement (Sahih al-Bukhari, n°3326 ; Sahih Muslim, n°2841).',
+      },
+      {
+        etape: 'L\'honneur accordé à Adam',
+        texte: 'Allah ordonna aux anges de se prosterner devant Adam, pour l\'honorer. Tous obéirent, sauf Iblis, qui refusa par orgueil : "Tu m\'as créé de feu, et lui de terre" (Coran 7:12), pensant être meilleur. C\'est la toute première erreur de raisonnement de l\'histoire : Iblis compare deux matières, sans comprendre que c\'est Allah qui décide qui Il honore. Allah montra ensuite qu\'Adam savait des choses que les anges eux-mêmes ignoraient : Il lui apprit le nom de toutes choses, que les anges furent incapables de dire (Coran 2:31-33).',
+      },
+      {
+        etape: 'La vie au Paradis',
+        texte: 'Allah installa Adam dans le Jardin du Paradis. Il pouvait y manger de tout, sauf d\'un seul arbre. Se sentant seul, Adam s\'endormit, et à son réveil, il découvrit Hawwa à ses côtés — créée pour qu\'il ne soit plus seul. Allah leur dit : "Ne vous approchez pas de cet arbre, sinon vous serez du nombre des injustes" (Coran 2:35).',
+      },
+      {
+        etape: 'La tentation et la chute',
+        texte: 'Iblis voulait se venger. Il chuchota le doute à Adam et Hawwa, allant même jusqu\'à jurer par Allah qu\'il leur voulait du bien : "Je suis pour vous deux un conseiller sincère" (Coran 7:21). Ils finirent par manger de l\'arbre interdit. Aussitôt, ils prirent conscience de leur nudité et se couvrirent avec des feuilles. Allah leur demanda : "Ne vous avais-Je pas interdit cet arbre... ?" (Coran 7:22)',
+      },
+      {
+        etape: 'Le repentir et la descente',
+        texte: 'Adam et Hawwa ne cherchèrent aucune excuse. Ils dirent à Allah : "Seigneur, nous nous sommes fait du tort à nous-mêmes ; si Tu ne nous pardonnes pas, nous serons perdus" (Coran 7:23). Allah leur pardonna, avant même qu\'ils ne descendent sur Terre. Cela montre que leur venue sur Terre n\'était pas une punition : c\'était le plan prévu depuis le début par Allah.',
+      },
+      {
+        etape: 'Habil et Qabil, et la fin de sa vie',
+        texte: 'Sur Terre, parmi les enfants d\'Adam, Habil et Qabil offrirent chacun un sacrifice à Allah. Celui de Habil fut accepté, celui de Qabil refusé. Jaloux, Qabil tua son frère : ce fut le premier meurtre de l\'histoire humaine. Ne sachant pas quoi faire du corps, il regarda un corbeau creuser la terre pour en enterrer un autre, et comprit ainsi comment enterrer son frère (Coran 5:27-31). Selon la tradition, Adam vécut mille ans et apprit à ses enfants à croire en un seul Dieu. Le Prophète ﷺ a dit qu\'Allah l\'avait créé très grand — soixante coudées de haut — une taille qui n\'a cessé de diminuer chez ses descendants depuis (Sahih al-Bukhari, n°3326 ; Sahih Muslim, n°2841).',
+      },
     ],
     traits: [
       { label: 'Repentir', emoji: '🌿' },
@@ -79,9 +108,22 @@ export const prophetes: Prophete[] = [
     periode: 'Avant le déluge',
     resume: 'Idris est le prophète de la sagesse et du savoir, premier homme à écrire avec un calame. Allah l\'éleva à un rang élevé et le Coran le cite parmi les patients et les vertueux.',
     histoire: [
-      'Idris fut envoyé à un peuple qui avait commencé à s\'éloigner de la voie d\'Adam. Il les appela au Tawhid et à la droiture. On lui attribue d\'avoir été le premier à écrire avec un calame et à confectionner des vêtements — des traditions rapportées par les exégètes.',
-      'Allah décrit Idris dans le Coran comme véridique (siddiq) et prophète. Il lui accorda une station élevée : "Et Nous l\'élevâmes à un rang élevé" (Coran 19:57). Selon certaines narrations, il fut enlevé vers les cieux sans mourir de la mort ordinaire.',
-      'L\'histoire d\'Idris nous rappelle que le savoir et la foi ne s\'opposent pas — ils se renforcent. Sa dévotion à l\'apprentissage et à l\'adoration d\'Allah en faisait un exemple unique dans l\'histoire des prophètes.',
+      {
+        etape: 'Un prophète après Adam',
+        texte: 'Idris vécut plusieurs générations après Adam, à une époque où certains hommes avaient commencé à s\'éloigner de la foi en un Dieu unique. Il appela son peuple à revenir à l\'adoration d\'Allah seul, comme Adam l\'avait fait avant lui.',
+      },
+      {
+        etape: 'Le premier savant',
+        texte: 'Selon la tradition, Idris fut le premier homme à écrire avec un calame et le premier à coudre des vêtements — avant lui, les hommes se couvraient de peaux d\'animaux. C\'est pour cela qu\'on le surnomme "Le Savant" : il aimait apprendre et enseigner, et sa sagesse marqua son peuple.',
+      },
+      {
+        etape: 'Véridique et prophète',
+        texte: 'Le Coran décrit Idris en des mots simples et forts : "C\'était un homme très véridique et un prophète" (Coran 19:56). Être "véridique" (*siddiq*) veut dire qu\'il ne mentait jamais et croyait sincèrement en ce qu\'Allah lui avait révélé.',
+      },
+      {
+        etape: 'Une station élevée',
+        texte: 'Allah dit à son sujet : "Et Nous l\'élevâmes à un rang élevé" (Coran 19:57). Les commentateurs expliquent ce verset de deux façons : certains y voient une grande élévation spirituelle ; d\'autres rappellent que, lors du Voyage Nocturne (Isra wal Mi\'raj), le Prophète ﷺ rencontra Idris au quatrième ciel — un lieu que peu d\'hommes ont jamais atteint (Sahih al-Bukhari, n°3887).',
+      },
     ],
     traits: [
       { label: 'Amour du savoir', emoji: '📖' },
@@ -113,6 +155,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Selon les exégètes, Idris fut le premier à écrire avec un calame et à confectionner des habits.',
       },
+      {
+        question: 'Lors du Voyage Nocturne (Isra wal Mi\'raj), à quel ciel le Prophète ﷺ rencontra-t-il Idris ?',
+        options: ['Premier ciel', 'Troisième ciel', 'Quatrième ciel', 'Septième ciel'],
+        correct: 2,
+        explication: 'Lors de l\'Isra wal Mi\'raj, le Prophète ﷺ rencontra Idris au quatrième ciel (Sahih al-Bukhari, n°3887).',
+      },
     ],
   },
   {
@@ -123,10 +171,34 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 3000 av. J.-C.',
     resume: 'Nuh prêcha son peuple pendant 950 ans sans se décourager. Face à leur rejet, il construisit l\'Arche par ordre divin, y embarqua les croyants et les animaux, et survécut au grand Déluge.',
     histoire: [
-      'Nuh fut envoyé à un peuple qui adorait des idoles nommées Wadd, Suwa, Yaghuth, Ya\'uq et Nasr — d\'anciens hommes vertueux que le peuple avait progressivement divinisés. Nuh les appela nuit et jour, en public et en privé, pendant neuf cent cinquante ans. Seule une poignée crut en lui.',
-      'Les chefs de son peuple le méprisèrent, disant que seuls les pauvres et les gens de bas rang le suivaient. Nuh leur répondit qu\'il ne rejetait personne : son rôle était de transmettre, non de juger. Face à leur entêtement, il invoqua Allah : "Seigneur, ne laisse sur la terre aucun des mécréants."',
-      'Allah ordonna à Nuh de construire une Arche. Le peuple se moquait de lui en le voyant construire un bateau loin de la mer. Quand le four (tannur) déborda d\'eau — signe prévu par Allah — Nuh embarqua un couple de chaque espèce animale et les croyants. La pluie et les sources de la terre jaillirent ensemble, inondant toute la Terre.',
-      'Son fils refusa d\'embarquer, convaincu de pouvoir se réfugier sur une montagne. Nuh l\'appela une dernière fois — mais les vagues l\'emportèrent. Nuh pleura son fils, et Allah lui dit doucement : "Il n\'est pas de ta famille — c\'était une œuvre mauvaise." L\'Arche s\'arrêta sur le mont Judi, et Nuh fut salué par Allah : "Descends avec notre paix."',
+      {
+        etape: 'Un peuple qui adorait des statues',
+        texte: 'Nuh vécut longtemps après Adam, à une époque où les hommes avaient commencé à adorer des statues. Ils avaient sculpté l\'image de cinq hommes vertueux — Wadd, Suwa\', Yaghuth, Ya\'uq et Nasr — pour se souvenir d\'eux. Au fil des générations, ils oublièrent que c\'étaient de simples hommes et se mirent à les adorer comme des dieux. Allah envoya Nuh pour ramener son peuple à l\'adoration d\'un Dieu unique.',
+      },
+      {
+        etape: '950 ans d\'appel, jour et nuit',
+        texte: 'Nuh appela son peuple sans relâche, de jour comme de nuit, en public comme en privé, pendant neuf cent cinquante ans (Coran 29:14). Il dit : "Seigneur, j\'ai appelé mon peuple nuit et jour, mais mon appel n\'a fait qu\'augmenter leur fuite" (Coran 71:5-6). Les chefs le méprisaient et disaient que seuls les pauvres et les gens de rang inférieur le suivaient. Nuh leur répondit qu\'il ne rejetait personne : son rôle était de transmettre le message, pas de juger les gens selon leur rang.',
+      },
+      {
+        etape: 'La dernière invocation',
+        texte: 'Voyant que son peuple resterait fermé à la vérité, et qu\'il ne donnerait naissance qu\'à d\'autres mécréants, Nuh invoqua Allah : "Seigneur, ne laisse sur la terre aucun des mécréants" (Coran 71:26-27).',
+      },
+      {
+        etape: 'La construction de l\'Arche',
+        texte: 'Allah ordonna à Nuh de construire une Arche, sous Son regard et selon Son inspiration (Coran 11:37). Le peuple se moquait de lui en le voyant fabriquer un immense bateau loin de toute mer. Allah lui donna un signe pour savoir quand embarquer : quand le four (*tannur*) déborderait d\'eau (Coran 11:40). Le jour venu, Nuh fit monter un couple de chaque espèce animale, sa famille, et les quelques croyants qui l\'avaient suivi.',
+      },
+      {
+        etape: 'Le Déluge',
+        texte: 'Le ciel se déversa en pluie battante et la terre elle-même se fendit, laissant jaillir des sources d\'eau de toutes parts. Les deux eaux se rejoignirent selon un ordre décrété par Allah, et le déluge recouvrit toute la terre (Coran 54:11-12).',
+      },
+      {
+        etape: 'Le fils qui refusa d\'embarquer',
+        texte: 'Le fils de Nuh refusa de monter dans l\'Arche, préférant se réfugier sur une montagne. Nuh l\'appela une dernière fois, mais les vagues l\'emportèrent. Bouleversé, Nuh invoqua Allah, disant que son fils faisait partie de sa famille. Allah lui répondit : "Il n\'est pas de ta famille, car son comportement était mauvais. Ne me demande pas ce que tu ne sais pas" (Coran 11:45-46). Nuh comprit alors que le vrai lien de famille se mesure à la foi et aux bonnes actions, pas seulement au sang.',
+      },
+      {
+        etape: 'L\'arrivée sur le mont Judi',
+        texte: 'L\'Arche s\'arrêta finalement sur le mont Judi (Coran 11:44). Allah ordonna à la terre d\'absorber ses eaux et au ciel de cesser de pleuvoir. Nuh fut accueilli par ces mots : "Descends avec Notre paix et Nos bénédictions" (Coran 11:48).',
+      },
     ],
     traits: [
       { label: 'Persévérance', emoji: '💪' },
@@ -209,6 +281,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Ils s\'enorgueillissaient de leur force physique et de leurs monuments, disant "Qui est plus fort que nous ?"',
       },
+      {
+        question: 'Dans quelle région vivait le peuple de \'Ad ?',
+        options: ['Al-Ahqaf, dans le sud de la péninsule arabique', 'L\'Égypte', 'La Perse', 'La Syrie'],
+        correct: 0,
+        explication: 'Le peuple de \'Ad habitait la région d\'Al-Ahqaf, dans le sud de la péninsule arabique, l\'actuel Yémen (Coran 46:21).',
+      },
     ],
   },
   {
@@ -252,6 +330,12 @@ export const prophetes: Prophete[] = [
         options: ['Par un déluge', 'Par un vent', 'Par un cri céleste (sayhah)', 'Par des pierres'],
         correct: 2,
         explication: 'Un cri fulgurant (sayhah) anéantit le peuple de Thamud au matin du quatrième jour.',
+      },
+      {
+        question: 'Où vivait le peuple de Thamud ?',
+        options: ['À Babylone', 'À Al-Hijr, dans le nord-ouest de l\'Arabie', 'En Égypte', 'Dans la vallée du Nil'],
+        correct: 1,
+        explication: 'Le peuple de Thamud habitait Al-Hijr — aujourd\'hui Madain Saleh, en Arabie Saoudite — où ils sculptaient leurs demeures dans la roche.',
       },
     ],
   },
@@ -349,6 +433,12 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'L\'épouse de Lut trahit les hôtes en informant le peuple de leur présence, et périt avec les coupables.',
       },
+      {
+        question: 'De quel prophète Lut était-il le neveu et le compagnon de migration ?',
+        options: ['Nuh', 'Ibrahim', 'Musa', 'Idris'],
+        correct: 1,
+        explication: 'Lut émigra avec son oncle Ibrahim avant d\'être envoyé comme prophète au peuple de Sodome.',
+      },
     ],
   },
   {
@@ -393,6 +483,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Ibrahim et Ismaïl élevèrent ensemble les fondations de la Kaaba (Coran 2:127).',
       },
+      {
+        question: 'Quelle langue Ismaïl apprit-il en grandissant près de Zamzam ?',
+        options: ['L\'hébreu', 'L\'araméen', 'L\'arabe', 'Le copte'],
+        correct: 2,
+        explication: 'Ismaïl grandit parmi les tribus arabes installées autour de Zamzam et apprit l\'arabe, devenant l\'ancêtre de la lignée arabe des prophètes, dont Muhammad ﷺ.',
+      },
     ],
   },
   {
@@ -405,6 +501,7 @@ export const prophetes: Prophete[] = [
     histoire: [
       'Quand les anges vinrent chez Ibrahim pour l\'informer de la destruction du peuple de Lut, ils lui annoncèrent également la naissance d\'un fils, Ishaq — et après lui, Yaqub. Sara, âgée et stérile, s\'étonna : "Malheur à moi ! Vais-je enfanter alors que je suis vieille et que mon époux est un vieillard ?" Les anges lui rappelèrent que c\'était le décret d\'Allah.',
       'Ishaq grandit dans la maison de la foi et de la prophétie. Il reçut la prophétie et perpétua le message du Tawhid. Son fils Yaqub eut douze enfants qui devinrent les ancêtres des douze tribus d\'Israël. Allah bénit Ibrahim et lui dit : "Je t\'ai donné Ishaq et Yaqub, et j\'ai placé la prophétie et le Livre dans ta descendance."',
+      'Ishaq et son demi-frère Ismaïl, bien que nés de mères différentes — Sara et Hajar —, partagent la même origine prophétique par leur père Ibrahim. C\'est de la descendance d\'Ishaq, à travers Yaqub, que naîtront la plupart des prophètes envoyés aux Bani Israël, tandis que la lignée d\'Ismaïl mènera, des siècles plus tard, au sceau des prophètes, Muhammad ﷺ.',
     ],
     traits: [
       { label: 'Piété', emoji: '🕌' },
@@ -428,6 +525,18 @@ export const prophetes: Prophete[] = [
         options: ['Ismaïl', 'Yusuf', 'Yaqub', 'Musa'],
         correct: 2,
         explication: 'Yaqub (Jacob) est le fils d\'Ishaq et le père des douze tribus d\'Israël.',
+      },
+      {
+        question: 'Quel est le lien de parenté entre Ishaq et Ismaïl ?',
+        options: ['Ils sont cousins', 'Ils sont demi-frères, tous deux fils d\'Ibrahim', 'Ils sont père et fils', 'Aucun lien'],
+        correct: 1,
+        explication: 'Ismaïl est né de Hajar et Ishaq de Sara, les deux épouses d\'Ibrahim — ils sont donc demi-frères.',
+      },
+      {
+        question: 'Dans quelle situation se trouvait Sara quand elle reçut l\'annonce de la naissance d\'Ishaq ?',
+        options: ['Elle était jeune et venait de se marier', 'Elle était âgée et stérile', 'Elle avait déjà eu cinq enfants', 'Son âge n\'est pas précisé'],
+        correct: 1,
+        explication: 'Sara était âgée et stérile depuis toujours ; elle s\'étonna de cette annonce miraculeuse (Coran 11:72).',
       },
     ],
   },
@@ -472,6 +581,12 @@ export const prophetes: Prophete[] = [
         options: ['Par une guérison miraculeuse', 'Par la chemise de Yusuf posée sur son visage', 'Par du Zamzam', 'Par une prière des anges'],
         correct: 1,
         explication: 'Yusuf envoya sa chemise et quand elle fut posée sur le visage de Yaqub, sa vue revint (Coran 12:96).',
+      },
+      {
+        question: 'Combien de fils Yaqub a-t-il eu, selon la tradition islamique ?',
+        options: ['Sept', 'Dix', 'Douze', 'Quinze'],
+        correct: 2,
+        explication: 'Yaqub eut douze fils, qui devinrent les ancêtres des douze tribus d\'Israël (Bani Israïl).',
       },
     ],
   },
@@ -574,6 +689,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Coran 21:83 : "Le mal m\'a touché et Tu es le plus Miséricordieux des miséricordieux."',
       },
+      {
+        question: 'Qui resta fidèlement aux côtés d\'Ayyub durant toute son épreuve ?',
+        options: ['Son fils aîné', 'Son épouse', 'Ses frères', 'Ses voisins'],
+        correct: 1,
+        explication: 'Seule son épouse resta à ses côtés, travaillant pour subvenir à ses besoins alors que ses proches s\'éloignaient de lui.',
+      },
     ],
   },
   {
@@ -611,6 +732,18 @@ export const prophetes: Prophete[] = [
         options: ['De le jeter dans le feu', 'De l\'expulser s\'il ne revenait pas à leurs pratiques', 'De l\'emprisonner', 'De le lapider'],
         correct: 1,
         explication: 'Les chefs lui dirent de les rejoindre dans leurs pratiques ou d\'être expulsé — Shu\'ayb refusa et plaça sa confiance en Allah.',
+      },
+      {
+        question: 'Pourquoi Shu\'ayb est-il traditionnellement surnommé "l\'Éloquent" ?',
+        options: ['Il parlait plusieurs langues', 'Pour la clarté et la force de sa prédication', 'Il était poète', 'Il chantait le Zabur'],
+        correct: 1,
+        explication: 'Shu\'ayb est surnommé "l\'Éloquent" (Khatib al-Anbiya) pour la clarté et la puissance de persuasion de sa prédication.',
+      },
+      {
+        question: 'Quel argument les chefs de Madyan opposèrent-ils à Shu\'ayb ?',
+        options: ['Qu\'il était trop jeune', 'Que la religion ne devait pas dicter leurs affaires commerciales', 'Qu\'il n\'était pas de leur tribu', 'Qu\'il n\'avait fait aucun miracle'],
+        correct: 1,
+        explication: 'Ils rétorquèrent : "Tes prières t\'ordonnent-elles que nous abandonnions ce qu\'adoraient nos ancêtres, ou de ne plus faire de nos biens ce que nous voulons ?" (Coran 11:87)',
       },
     ],
   },
@@ -702,6 +835,18 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Le Samiri fabriqua un veau d\'or et le peuple se mit à l\'adorer en l\'absence de Musa.',
       },
+      {
+        question: 'Que fit Musa, sous le coup de la colère, en retrouvant Harun au retour du Sinaï ?',
+        options: ['Il le chassa du camp', 'Il saisit sa barbe et sa tête', 'Il refusa de lui parler', 'Il le désigna comme seul coupable'],
+        correct: 1,
+        explication: 'Musa saisit la barbe et la tête de son frère sous le coup de la colère, avant que Harun ne s\'explique (Coran 20:94).',
+      },
+      {
+        question: 'Quelle qualité de Harun le Coran cite-t-il explicitement comme raison de son choix par Musa ?',
+        options: ['Sa force physique', 'Son éloquence', 'Sa richesse', 'Son âge'],
+        correct: 1,
+        explication: 'Musa dit à Allah : "Il est plus éloquent que moi dans le discours" (Coran 28:34).',
+      },
     ],
   },
   {
@@ -714,6 +859,7 @@ export const prophetes: Prophete[] = [
     histoire: [
       'Le Coran mentionne Dhul-Kifl aux côtés d\'Ismaïl et d\'Idris, parmi les hommes de patience et de vertu. Son identité exacte est débattue entre les exégètes — certains l\'identifient à Ezéchiel, d\'autres à un prophète distinct.',
       'Selon des narrations, Dhul-Kifl prit l\'engagement de prier cent fois par jour, de jeûner continuellement et de ne jamais se mettre en colère en jugeant entre les hommes. Il tint ses engagements jusqu\'à la fin de sa vie, ce qui lui valut le nom "Dhul-Kifl" — "Celui qui s\'engagea" ou "Celui de la double récompense".',
+      'Certains commentateurs, comme At-Tabari, rapportent qu\'un prophète vieillissant chercha un homme capable de tenir ces engagements exigeants avant de lui confier la charge de juge de son peuple, et que Dhul-Kifl fut le seul à accepter et à les tenir sans faillir. Sa constance lui valut cette place parmi les hommes cités comme modèles de patience, aux côtés d\'Ismaïl et d\'Idris.',
     ],
     traits: [
       { label: 'Fidélité aux engagements', emoji: '🤝' },
@@ -738,6 +884,18 @@ export const prophetes: Prophete[] = [
         options: ['Ibrahim et Musa', 'Ismaïl et Idris', 'Nuh et Hud', 'Dawud et Sulayman'],
         correct: 1,
         explication: 'Le verset 21:85 cite Ismaïl, Idris et Dhul-Kifl ensemble parmi les patients.',
+      },
+      {
+        question: 'Quel engagement Dhul-Kifl aurait-il pris, selon les narrations ?',
+        options: ['Ne jamais dormir', 'Prier cent fois par jour et ne jamais céder à la colère en jugeant', 'Jeûner uniquement le vendredi', 'Ne jamais parler'],
+        correct: 1,
+        explication: 'Selon des récits, Dhul-Kifl s\'engagea à prier cent fois par jour, à jeûner continuellement et à ne jamais céder à la colère en tant que juge.',
+      },
+      {
+        question: 'Dans quel autre verset le Coran mentionne-t-il Dhul-Kifl parmi les meilleurs serviteurs ?',
+        options: ['Coran 2:255', 'Coran 38:48', 'Coran 5:3', 'Coran 12:1'],
+        correct: 1,
+        explication: 'Coran 38:48 cite Ismaïl, Al-Yasa\' et Dhul-Kifl ensemble parmi les meilleurs (Akhyar).',
       },
     ],
   },
@@ -784,6 +942,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Allah ramollit le fer pour Dawud qui fabriquait des cottes de mailles (Coran 34:10).',
       },
+      {
+        question: 'Quel métier Dawud exerçait-il de ses propres mains malgré sa royauté ?',
+        options: ['Menuisier', 'Fabricant de cottes de mailles', 'Potier', 'Tisserand'],
+        correct: 1,
+        explication: 'Allah ramollit le fer pour Dawud, qui fabriquait des cottes de mailles et refusait de vivre aux dépens de ses sujets (Coran 34:10-11).',
+      },
     ],
   },
   {
@@ -828,6 +992,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Les termites rongèrent le bâton de Sulayman — quand il s\'effondra, les djinns surent qu\'il était mort (Coran 34:14).',
       },
+      {
+        question: 'Quel royaume la reine Bilqis dirigeait-elle avant sa conversion ?',
+        options: ['L\'Égypte', 'Saba, l\'actuel Yémen', 'Babylone', 'La Perse'],
+        correct: 1,
+        explication: 'Bilqis régnait sur le royaume de Saba, dans l\'actuel Yémen, avant de reconnaître la vérité du message de Sulayman (Coran 27:22-44).',
+      },
     ],
   },
   {
@@ -840,6 +1010,7 @@ export const prophetes: Prophete[] = [
     histoire: [
       'Ilyas fut envoyé aux habitants de Ba\'labakk (Liban actuel) et aux Bani Israël qui adoraient une idole nommée Ba\'l et avaient délaissé Allah. Il leur dit : "Adorez-vous Ba\'l et abandonnez-vous le meilleur des créateurs — Allah, votre Seigneur et le Seigneur de vos ancêtres ?"',
       'Son peuple le rejeta. Seule une petite poignée crut avec lui. Dans une épreuve semblable à celle d\'Ayyub, Ilyas se retrouva seul contre toute une nation. Il demeura ferme dans sa mission sans jamais fléchir. Allah le salua par les générations : "Paix sur Ilyas dans l\'univers entier !"',
+      'Certains récits, non confirmés explicitement par le Coran, rapprochent le destin d\'Ilyas de celui d\'Al-Khidr, évoquant une vie prolongée hors du cours ordinaire de la mort. Ces traditions témoignent en tout cas de la place particulière qu\'occupe Ilyas dans l\'imaginaire prophétique, comme symbole de la fermeté solitaire face à l\'égarement collectif.',
     ],
     traits: [
       { label: 'Fermeté solitaire', emoji: '🏔️' },
@@ -864,6 +1035,18 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Coran 37:130 : "Paix sur Il-Yasin (Ilyas) dans l\'univers entier."',
       },
+      {
+        question: 'Dans quelle région Ilyas exerça-t-il sa mission prophétique ?',
+        options: ['L\'Égypte', 'Ba\'labakk, dans l\'actuel Liban', 'La Perse', 'Le Yémen'],
+        correct: 1,
+        explication: 'Ilyas fut envoyé aux habitants de Ba\'labakk, dans l\'actuel Liban, et aux Bani Israël environnants.',
+      },
+      {
+        question: 'À quel autre prophète l\'épreuve d\'Ilyas — seul contre toute une nation — est-elle comparée dans son récit ?',
+        options: ['Yusuf', 'Ayyub', 'Musa', 'Sulayman'],
+        correct: 1,
+        explication: 'Comme Ayyub, qui endura seul une épreuve extrême, Ilyas se retrouva seul face au rejet de tout un peuple, sans jamais fléchir.',
+      },
     ],
   },
   {
@@ -876,6 +1059,7 @@ export const prophetes: Prophete[] = [
     histoire: [
       "Al-Yasa' fut le disciple et successeur d'Ilyas. Après le départ d'Ilyas, Al-Yasa' porta la prophétie aux Bani Israël, continuant à les appeler au culte exclusif d'Allah.",
       "Le Coran le mentionne deux fois (6:86 et 38:48) parmi les prophètes qu'Allah a guidés et préférés sur les mondes. Bien que son histoire soit peu développée dans le Coran, sa mention dans cette liste illustre qu'il fit partie des meilleurs serviteurs d'Allah.",
+      "Peu de détails narratifs sont rapportés sur la vie d'Al-Yasa' dans les sources islamiques, contrairement à d'autres prophètes dont le Coran développe longuement l'histoire. Cette sobriété n'enlève rien à sa valeur : le Coran le classe explicitement, aux côtés d'Ismaïl et de Dhul-Kifl, parmi les Akhyar — les meilleurs des hommes — un rappel que la reconnaissance d'Allah ne dépend pas de la place qu'on occupe dans le récit, mais de la sincérité du service rendu.",
     ],
     traits: [
       { label: 'Continuité', emoji: '🌿' },
@@ -893,6 +1077,24 @@ export const prophetes: Prophete[] = [
         options: ['Musa', 'Dawud', 'Ilyas', 'Ibrahim'],
         correct: 2,
         explication: "Al-Yasa' est traditionnellement considéré comme le disciple et successeur d'Ilyas dans sa mission.",
+      },
+      {
+        question: "Combien de fois le Coran mentionne-t-il Al-Yasa' ?",
+        options: ['Une fois', 'Deux fois', 'Cinq fois', 'Il n\'est jamais cité directement'],
+        correct: 1,
+        explication: "Al-Yasa' est cité deux fois dans le Coran, en 6:86 et 38:48.",
+      },
+      {
+        question: "Aux côtés de quels prophètes le Coran cite-t-il Al-Yasa' en 38:48 ?",
+        options: ['Musa et Harun', 'Ismaïl et Dhul-Kifl', 'Ibrahim et Ishaq', 'Dawud et Sulayman'],
+        correct: 1,
+        explication: "Coran 38:48 : \"Et rappelle-toi Ismaïl, Al-Yasa' et Dhul-Kifl — tous étaient parmi les meilleurs.\"",
+      },
+      {
+        question: "Quel qualificatif le Coran utilise-t-il pour décrire Al-Yasa' et les prophètes cités à ses côtés ?",
+        options: ['Les patients', 'Les meilleurs (Akhyar)', 'Les savants', 'Les rois'],
+        correct: 1,
+        explication: "Le Coran les décrit comme faisant partie des Akhyar — les meilleurs des serviteurs d'Allah.",
       },
     ],
   },
@@ -943,6 +1145,12 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Yunus fut envoyé vers cent mille personnes ou plus, et ils crurent tous — fait unique dans l\'histoire prophétique (Coran 37:147-148).',
       },
+      {
+        question: 'Quelle plante Allah fit-Il pousser pour ombrer Yunus après sa délivrance ?',
+        options: ['Un palmier', 'Une vigne', 'Un yaqtin (courge)', 'Un olivier'],
+        correct: 2,
+        explication: 'Allah fit pousser au-dessus de lui une plante de yaqtin pour l\'ombrer après qu\'il eut été recraché sur le rivage (Coran 37:146).',
+      },
     ],
   },
   {
@@ -987,6 +1195,12 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Zakariya trouvait toujours chez Maryam des provisions hors saison venant d\'Allah (Coran 3:37).',
       },
+      {
+        question: 'Dans quelle situation se trouvait Zakariya quand il demanda un fils à Allah ?',
+        options: ['Il était jeune et en bonne santé', 'Il était âgé, avec les os affaiblis et les cheveux blancs', 'Il avait 30 ans', 'Son âge n\'est pas mentionné'],
+        correct: 1,
+        explication: 'Zakariya dit : "Mes os sont devenus faibles et ma tête flamboie de cheveux blancs" (Coran 19:4).',
+      },
     ],
   },
   {
@@ -1024,6 +1238,18 @@ export const prophetes: Prophete[] = [
         options: ['C\'est un nom coranique', 'C\'est le plus beau prénom', 'Personne ne l\'avait porté avant lui', 'C\'est le nom d\'un ange'],
         correct: 2,
         explication: 'Allah dit à Zakariya : "Nous lui avons donné le nom de Yahya — Nous n\'avons donné ce nom à personne avant lui" (Coran 19:7).',
+      },
+      {
+        question: 'Comment Yahya vivait-il, selon la description coranique et les récits ?',
+        options: ['Dans le luxe du palais', 'Avec ascétisme et simplicité', 'En tant que guerrier', 'En reclus, sans jamais parler aux gens'],
+        correct: 1,
+        explication: 'Yahya vivait avec ascétisme, se nourrissant simplement et craignant Allah, loin du luxe.',
+      },
+      {
+        question: 'En quels moments Allah accorda-t-Il la paix à Yahya, selon le Coran ?',
+        options: ['Uniquement à sa mort', 'Sa naissance, sa mort et le jour de sa résurrection', 'Uniquement à sa naissance', 'Chaque vendredi'],
+        correct: 1,
+        explication: 'Coran 19:15 : "Paix sur lui le jour où il naquit, le jour où il mourra, et le jour où il sera ressuscité vivant."',
       },
     ],
   },
@@ -1129,5 +1355,105 @@ export const prophetes: Prophete[] = [
         explication: 'Lors de la conquête de La Mecque, le Prophète ﷺ dit à ses anciens tortionnaires : "Allez, vous êtes libres."',
       },
     ],
+  },
+];
+
+// Quiz général — questions transversales sur l'ensemble des 25 prophètes :
+// chronologie, liens de parenté, Livres révélés, titres honorifiques...
+export const quizGeneral: QuizQuestion[] = [
+  {
+    question: 'Combien de prophètes sont cités nommément dans le Coran ?',
+    options: ['19', '25', '30', '33'],
+    correct: 1,
+    explication: 'Le Coran nomme 25 prophètes, du premier homme Adam jusqu\'au dernier, Muhammad ﷺ.',
+  },
+  {
+    question: 'Qui est le premier prophète et premier homme de l\'humanité ?',
+    options: ['Nuh', 'Adam', 'Idris', 'Ibrahim'],
+    correct: 1,
+    explication: 'Adam est le premier homme et le premier prophète, créé par Allah de Ses propres mains.',
+  },
+  {
+    question: 'Qui est le dernier prophète, "Sceau des Prophètes" ?',
+    options: ['Isa', 'Musa', 'Ibrahim', 'Muhammad ﷺ'],
+    correct: 3,
+    explication: 'Muhammad ﷺ est le dernier et le sceau des prophètes — aucun prophète ne viendra après lui.',
+  },
+  {
+    question: 'Lesquels de ces prophètes forment les "Ulul Azm" (les plus déterminés), cités ensemble en Coran 33:7 ?',
+    options: [
+      'Adam, Idris, Nuh, Hud, Salih',
+      'Nuh, Ibrahim, Musa, Isa et Muhammad ﷺ',
+      'Musa, Harun, Dawud, Sulayman, Yunus',
+      'Yusuf, Yaqub, Ishaq, Ismaïl, Ibrahim',
+    ],
+    correct: 1,
+    explication: 'Coran 33:7 mentionne l\'alliance prise auprès de Nuh, Ibrahim, Musa, Isa et Muhammad ﷺ — les cinq prophètes "dotés d\'une ferme résolution" (Ulul Azm).',
+  },
+  {
+    question: 'Quel prophète est le père commun d\'Ismaïl et d\'Ishaq ?',
+    options: ['Nuh', 'Ibrahim', 'Yaqub', 'Dawud'],
+    correct: 1,
+    explication: 'Ibrahim est le père d\'Ismaïl (par Hajar) et d\'Ishaq (par Sara), ses deux fils prophètes.',
+  },
+  {
+    question: 'Quel prophète est le fils d\'Ishaq et le père de Yusuf ?',
+    options: ['Harun', 'Yaqub', 'Sulayman', 'Zakariya'],
+    correct: 1,
+    explication: 'Yaqub, aussi appelé Israël, est le fils d\'Ishaq et le père de Yusuf et de onze autres fils.',
+  },
+  {
+    question: 'Quel prophète reçut le Zabur (les Psaumes) ?',
+    options: ['Musa', 'Dawud', 'Sulayman', 'Isa'],
+    correct: 1,
+    explication: 'Allah révéla le Zabur à Dawud (Coran 4:163), qui le récitait d\'une voix si belle que les oiseaux et les montagnes glorifiaient Allah avec lui.',
+  },
+  {
+    question: 'Quel prophète reçut la Torah (Tawrat) sur le mont Sinaï ?',
+    options: ['Harun', 'Musa', 'Yusuf', 'Ibrahim'],
+    correct: 1,
+    explication: 'Musa passa quarante nuits sur le mont Sinaï où Allah lui donna les Tables de la Loi (Coran 7:142).',
+  },
+  {
+    question: 'Quel prophète est le père de Sulayman ?',
+    options: ['Dawud', 'Musa', 'Zakariya', 'Ibrahim'],
+    correct: 0,
+    explication: 'Sulayman hérita de la royauté et de la prophétie de son père Dawud.',
+  },
+  {
+    question: 'Quel prophète est le père de Yahya et le tuteur de Maryam ?',
+    options: ['Isa', 'Zakariya', 'Ilyas', 'Yunus'],
+    correct: 1,
+    explication: 'Zakariya, tuteur de Maryam au Temple, pria Allah pour un héritier et reçut Yahya comme un miracle dans sa vieillesse.',
+  },
+  {
+    question: 'À quels prophètes correspondent respectivement les titres Khalilullah, Kalimullah et Ruhullah ?',
+    options: ['Ibrahim, Musa, Isa', 'Musa, Ibrahim, Isa', 'Ibrahim, Isa, Musa', 'Adam, Nuh, Ibrahim'],
+    correct: 0,
+    explication: 'Ibrahim est Khalilullah (l\'Ami d\'Allah), Musa est Kalimullah (Celui à qui Allah a parlé), et Isa est Ruhullah (l\'Esprit d\'Allah).',
+  },
+  {
+    question: 'Quel prophète prêcha son peuple pendant 950 ans avant le Déluge ?',
+    options: ['Hud', 'Nuh', 'Salih', 'Idris'],
+    correct: 1,
+    explication: 'Le Coran (29:14) précise que Nuh resta parmi son peuple mille ans moins cinquante, soit 950 ans.',
+  },
+  {
+    question: 'Quel prophète fut avalé par un poisson après avoir quitté son peuple sans permission divine ?',
+    options: ['Musa', 'Yunus', 'Ayyub', 'Sulayman'],
+    correct: 1,
+    explication: 'Yunus quitta Ninive sans attendre l\'ordre d\'Allah et fut englouti par un grand poisson après avoir été jeté à la mer.',
+  },
+  {
+    question: 'Parmi ces duos, lequel correspond à un père et son fils, tous deux prophètes ?',
+    options: ['Musa et Harun', 'Dawud et Sulayman', 'Ilyas et Al-Yasa\'', 'Ayyub et Yunus'],
+    correct: 1,
+    explication: 'Dawud est le père de Sulayman. Musa et Harun sont frères, Ilyas et Al-Yasa\' sont maître et disciple, Ayyub et Yunus ne sont pas apparentés.',
+  },
+  {
+    question: 'Lequel de ces prophètes vécut chronologiquement le premier ?',
+    options: ['Ibrahim', 'Nuh', 'Musa', 'Isa'],
+    correct: 1,
+    explication: 'Nuh vécut bien avant Ibrahim, qui vécut lui-même des siècles avant Musa, puis Isa — dans cet ordre chronologique.',
   },
 ];

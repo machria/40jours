@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { BookOpen, Sparkles, Star } from 'lucide-react';
-import { prophetes } from '@/data/prophetes';
+import { prophetes, quizGeneral } from '@/data/prophetes';
+import GeneralQuiz from './GeneralQuiz';
 import type { Metadata } from 'next';
 
 export const revalidate = false;
@@ -43,6 +44,11 @@ export default function ProphetesPage() {
 
       {/* Grille */}
       <main className="container max-w-4xl mx-auto px-4 py-8">
+        {/* Quiz général */}
+        <div className="mb-8">
+          <GeneralQuiz questions={quizGeneral} />
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {prophetes.map((p, i) => (
             <Link

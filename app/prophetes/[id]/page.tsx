@@ -53,7 +53,12 @@ export default async function PropheteDetailPage({
           </Link>
           <div className="flex items-start gap-4">
             <div className="flex-1">
-              <h1 className="text-3xl font-black tracking-tight">{p.nom}</h1>
+              <h1 className="text-3xl font-black tracking-tight flex items-baseline gap-2 flex-wrap">
+                {p.nom}
+                <span className="font-kufi text-lg font-normal text-muted-foreground">
+                  {p.id === 'muhammad' ? 'ﷺ' : 'عليه السلام'}
+                </span>
+              </h1>
               <p className="font-kufi text-3xl text-primary mt-1">{p.arabe}</p>
               {p.surnom && (
                 <p className="text-sm text-amber-600 dark:text-amber-400 font-semibold mt-1 italic">
@@ -80,13 +85,41 @@ export default async function PropheteDetailPage({
           <h2 className="flex items-center gap-2 text-lg font-bold" style={{ marginBottom: '1.25rem' }}>
             <BookOpen className="w-5 h-5 text-amber-500" /> Son histoire
           </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-            {p.histoire.map((para, i) => (
-              <p key={i} className="text-sm text-foreground/90 leading-relaxed">
-                {para}
-              </p>
-            ))}
-          </div>
+          {p.histoire.some((item) => typeof item !== 'string') ? (
+            <ol>
+              {p.histoire.map((item, i) => {
+                const etape = typeof item === 'string' ? null : item.etape;
+                const texte = typeof item === 'string' ? item : item.texte;
+                const isLast = i === p.histoire.length - 1;
+                return (
+                  <li key={i} className="flex gap-4">
+                    <div className="flex flex-col items-center shrink-0 w-3">
+                      <span className="w-3 h-3 rounded-full bg-amber-500 shrink-0" />
+                      {!isLast && (
+                        <span className="w-0.5 flex-1 bg-amber-200 dark:bg-amber-800/40 my-1.5" />
+                      )}
+                    </div>
+                    <div className={isLast ? 'flex-1 min-w-0' : 'flex-1 min-w-0 pb-8'}>
+                      {etape && (
+                        <p className="text-xs font-bold uppercase tracking-wide text-amber-600 dark:text-amber-400 mb-1.5 -mt-0.5">
+                          {i + 1}. {etape}
+                        </p>
+                      )}
+                      <p className="text-sm text-foreground/90 leading-relaxed">{texte}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          ) : (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+              {p.histoire.map((item, i) => (
+                <p key={i} className="text-sm text-foreground/90 leading-relaxed">
+                  {typeof item === 'string' ? item : item.texte}
+                </p>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Verset clé */}
