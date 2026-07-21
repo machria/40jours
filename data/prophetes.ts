@@ -247,9 +247,30 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 2500 av. J.-C.',
     resume: 'Hud fut envoyé au peuple de \'Ad, une nation puissante et orgueilleuse qui bâtissait des monuments imposants. Ils rejetèrent son message et furent anéantis par un vent dévastateur de sept nuits et huit jours.',
     histoire: [
-      'Le peuple de \'Ad était une civilisation puissante dans le sud de la péninsule arabique (l\'actuel Yémen). Ils étaient fiers de leur force physique et de leurs constructions monumentales. Allah leur envoya Hud, l\'un d\'eux, pour les rappeler au Tawhid.',
-      'Hud les appela à délaisser leurs idoles et à craindre Allah. Les chefs répondirent avec arrogance : "Qui est plus fort que nous ?" (Coran 41:15). Ils accusèrent Hud de mensonge et l\'insultèrent, disant qu\'il était fou. Hud leur dit calmement qu\'il n\'avait besoin que du soutien d\'Allah.',
-      'Quand la punition divine arriva, elle prit la forme d\'un vent furieux et stérile (rih sarsar), envoyé pendant sept nuits et huit jours consécutifs. Ce vent dévasta tout, renversant les hommes comme des troncs de palmiers creux. Seul Hud et ceux qui croyaient avec lui furent sauvés.',
+      {
+        etape: 'Un peuple fier de sa force',
+        texte: 'Le peuple de \'Ad vivait après le déluge de Nuh, dans la région d\'Al-Ahqaf, au sud de la péninsule arabique (l\'actuel Yémen). Allah leur avait donné une force physique immense et une grande stature. Fiers de cette puissance, ils construisirent d\'immenses cités aux hautes colonnes, comme la légendaire Iram, "dont on n\'a jamais créé de pareille dans les pays" (Coran 89:7-8). Mais malgré tout ce qu\'Allah leur avait donné, ils adoraient des idoles au lieu de Lui. Allah leur envoya Hud, l\'un des leurs, pour les rappeler à la vérité.',
+      },
+      {
+        etape: 'L\'appel sincère de Hud',
+        texte: 'Hud leur dit : "Ô mon peuple, adorez Allah : vous n\'avez pas d\'autre divinité que Lui" (Coran 11:50). Il leur rappela qu\'Allah les avait fait succéder au peuple de Nuh et leur avait donné force et puissance, afin qu\'ils Lui en soient reconnaissants. Il ajouta qu\'il ne demandait aucune récompense pour son message : sa seule récompense viendrait d\'Allah (Coran 11:51).',
+      },
+      {
+        etape: 'Un refus plein d\'orgueil',
+        texte: 'Les chefs répondirent avec fierté : "Qui est plus fort que nous ?" (Coran 41:15). Ils refusèrent d\'abandonner les idoles de leurs ancêtres, traitèrent Hud de menteur et de fou, allant jusqu\'à dire que leurs dieux l\'avaient frappé de folie pour s\'être opposé à eux (Coran 11:54).',
+      },
+      {
+        etape: 'La confiance de Hud face à la menace',
+        texte: 'Sans peur, Hud leur répondit qu\'il prenait Allah à témoin de son innocence, et il les mit tous au défi de comploter contre lui sans attendre : "Je place ma confiance en Allah, mon Seigneur et le vôtre. Il n\'y a pas d\'être vivant qu\'Il ne tienne fermement" (Coran 11:54-56).',
+      },
+      {
+        etape: 'Un nuage pris pour de la pluie',
+        texte: 'Après une longue sécheresse, le peuple vit un jour un grand nuage sombre s\'approcher au-dessus de leurs vallées et se réjouit, pensant qu\'il allait enfin pleuvoir. Mais Hud leur dit : "Non, c\'est plutôt ce que vous cherchiez à hâter : un vent qui contient un châtiment douloureux" (Coran 46:24).',
+      },
+      {
+        etape: 'Le vent qui ne pardonna rien',
+        texte: 'La punition d\'Allah arriva sous la forme d\'un vent violent et glacé, envoyé pendant sept nuits et huit jours sans interruption (Coran 69:6-7). Ce vent détruisit tout sur son passage, laissant les hommes étendus au sol comme des troncs de palmiers creux. Seuls Hud et ceux qui avaient cru avec lui furent épargnés.',
+      },
     ],
     traits: [
       { label: 'Fermeté dans la vérité', emoji: '🏔️' },
@@ -297,9 +318,26 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 2000 av. J.-C.',
     resume: 'Salih fut envoyé au peuple de Thamud qui sculptait ses maisons dans les rochers. Allah leur accorda un signe miraculeux : une chamelle sacrée. Ils la tuèrent et furent anéantis trois jours après.',
     histoire: [
-      'Thamud était un peuple qui vivait dans la région d\'Al-Hijr (nord-ouest de la péninsule arabique, aujourd\'hui Madain Saleh en Arabie Saoudite). Ils sculptaient leurs demeures dans les montagnes rocheuses et étaient connus pour leur civilisation avancée. Allah leur envoya Salih, l\'un d\'eux.',
-      'Le peuple demanda à Salih un miracle pour prouver sa prophétie. Allah fit sortir une chamelle d\'une roche — signe extraordinaire. Salih leur dit : "Voici la chamelle d\'Allah, un signe pour vous. Laissez-la paître sur la terre d\'Allah et ne la touchez pas avec mal." La chamelle avait droit à un jour d\'eau et à son passage libre.',
-      'Malgré ce signe éclatant, les notables de Thamud complotèrent et envoyèrent un homme tuer la chamelle. Salih leur annonça : "Profitez de votre demeure encore trois jours, puis viendra le châtiment." Au matin du quatrième jour, un cri céleste (sayhah) foudroya le peuple entier. Seul Salih et les croyants furent sauvés.',
+      {
+        etape: 'Un peuple qui sculptait la roche',
+        texte: 'Le peuple de Thamud vivait à Al-Hijr, dans le nord-ouest de l\'Arabie — la région qu\'on appelle aujourd\'hui Madain Saleh. Ils étaient de grands bâtisseurs et sculptaient leurs maisons directement dans les montagnes rocheuses. Allah leur envoya Salih, l\'un des leurs, pour les appeler à adorer un seul Dieu.',
+      },
+      {
+        etape: 'La chamelle sortie d\'un rocher',
+        texte: 'Le peuple demanda à Salih un signe pour prouver qu\'il était vraiment prophète. Allah fit alors sortir une chamelle d\'un rocher — un signe extraordinaire. Salih leur dit : "Voici la chamelle d\'Allah, un signe pour vous. Laissez-la paître sur la terre d\'Allah et ne lui faites aucun mal, sinon un châtiment douloureux vous saisira" (Coran 11:64). Allah fixa un partage de l\'eau du puits entre elle et le village : "Elle boira un jour convenu et vous boirez un jour convenu, à tour de rôle" (Coran 26:155) — un jour entier pour la chamelle seule, puis le jour suivant réservé aux habitants.',
+      },
+      {
+        etape: 'Une chamelle, une épreuve',
+        texte: 'Cette chamelle était en réalité une épreuve pour le peuple de Thamud. Beaucoup trouvèrent ce partage pesant, et les notables se réunirent pour décider de s\'en débarrasser afin de garder l\'eau pour eux seuls. Ils égorgèrent la chamelle, désobéissant ouvertement à l\'ordre de leur Seigneur, et dirent avec défi : "Ô Salih, apporte-nous ce dont tu nous menaces, si tu es du nombre des envoyés" (Coran 7:77).',
+      },
+      {
+        etape: 'Trois jours de sursis',
+        texte: 'Salih leur répondit : "Jouissez encore trois jours dans vos demeures : c\'est une promesse qui ne sera pas démentie" (Coran 11:65). Selon la tradition, le visage des habitants changea de couleur chaque jour qui passait — jaune le premier jour, rouge le deuxième, puis noir le troisième — comme un signe annonçant le châtiment. Loin de se repentir, un groupe de neuf hommes complota même cette nuit-là pour tuer Salih et sa famille en secret, en jurant de nier ensuite toute implication (Coran 27:48-49). Mais Allah déjoua leur plan : ils périrent avec le reste de leur peuple (Coran 27:50-51).',
+      },
+      {
+        etape: 'Le cri qui foudroya Thamud',
+        texte: 'Au matin du quatrième jour, un cri terrible (*sayha*), accompagné d\'un violent tremblement, s\'abattit sur le peuple entier. Ils furent retrouvés inertes dans leurs maisons, comme s\'ils n\'y avaient jamais vécu (Coran 11:67-68). Par Sa miséricorde, Allah sauva Salih et ceux qui avaient cru avec lui (Coran 11:66) — un signe, dit le Coran, pour ceux qui savent réfléchir (Coran 26:158).',
+      },
     ],
     traits: [
       { label: 'Patience', emoji: '🌿' },
@@ -347,10 +385,30 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1800 av. J.-C.',
     resume: 'Ibrahim est le père des prophètes, l\'Ami d\'Allah. Il brisa les idoles, fut jeté dans le feu sans brûler, accepta de sacrifier son fils et bâtit la Kaaba avec Ismaïl. Sa vie est un modèle de foi absolue.',
     histoire: [
-      'Ibrahim grandit dans une société idolâtre où son propre père Azar fabriquait des idoles. Dès son jeune âge, Ibrahim observa les étoiles, la lune et le soleil pour démontrer par la raison que rien de périssable ne mérite d\'être adoré. "Je n\'aime pas ce qui se couche" — et il se tourna vers le Créateur des cieux et de la terre.',
-      'Ibrahim brisa les idoles du temple de son peuple, laissant la plus grande intacte avec la hache posée sur elle. Quand on l\'interrogea, il leur dit ironiquement de demander à la grande idole. Ils comprirent le piège de leur propre logique mais persistèrent dans leur erreur. Ils décidèrent de jeter Ibrahim dans un feu immense. Allah ordonna au feu : "Sois froid et sécurisant pour Ibrahim" — et il ne le brûla pas. Pour cette foi inébranlable, Allah lui accorda le titre de Khalilullah — l\'Ami d\'Allah — le plus grand honneur conféré à un prophète.',
-      'Allah mit Ibrahim à l\'épreuve plusieurs fois et il réussit chacune. La plus grande : l\'ordre de sacrifier son fils Ismaïl. Ibrahim en informa son fils, qui dit : "Père, fais ce qu\'on t\'a ordonné, tu me trouveras patient." Alors qu\'Ibrahim s\'apprêtait à exécuter l\'ordre, Allah l\'arrêta et remplaça Ismaïl par un bélier. Ce jour est commémoré par l\'Eid al-Adha.',
-      'Ibrahim et son fils Ismaïl élevèrent les fondations de la Kaaba à La Mecque, en suppliant : "Seigneur, accepte de nous." Il laissa son épouse Hajar et son nourrisson Ismaïl dans la vallée aride de La Mecque, plaçant sa confiance totale en Allah. De cette foi absolue jaillit le puits de Zamzam, et de cette vallée naquit la plus grande ville sainte de l\'islam.',
+      {
+        etape: 'L\'appel à son père',
+        texte: 'Ibrahim grandit dans une famille et une société qui adoraient des idoles. Son père se nommait (ou se surnommait) Azar, comme le rapporte le Coran : "Ibrahim dit à son père Azar : Prends-tu des idoles pour divinités ? Je te vois, toi et ton peuple, dans un égarement évident" (Coran 6:74). Azar fut ainsi la toute première personne qu\'Ibrahim appela à l\'adoration d\'un Dieu unique. Il s\'adressa à lui avec une grande douceur, répétant "Ô mon père" (Coran 19:42-45), le suppliant de ne pas suivre Shaytan et lui promettant de demander pardon pour lui. Mais son père le repoussa avec colère et le menaça de le lapider s\'il ne se taisait pas.',
+      },
+      {
+        etape: 'Le raisonnement des astres',
+        texte: 'Encore jeune, Ibrahim observa les étoiles, puis la lune, puis le soleil, en se demandant si l\'un d\'eux méritait d\'être adoré. Chaque fois, l\'astre finissait par disparaître, et Ibrahim disait : "Je n\'aime pas ce qui disparaît" (Coran 6:76-79). Il comprit ainsi qu\'aucune chose périssable ne peut être un dieu, et se tourna vers le seul Créateur des cieux et de la terre.',
+      },
+      {
+        etape: 'La ruse contre les idoles',
+        texte: 'Le jour où son peuple partait célébrer une grande fête hors de la ville, Ibrahim prétexta être malade pour ne pas y assister — "Je suis malade", leur dit-il (Coran 37:89) — et resta seul en ville. Une fois le temple vide, il brisa toutes les idoles à coups de hache, sauf la plus grande, sur laquelle il accrocha l\'outil : un piège pour que son peuple, à son retour, comprenne de lui-même l\'absurdité d\'adorer des statues sans vie (Coran 21:57-58). Quand on l\'interrogea, il répondit, avec ironie, de le demander à la grande idole elle-même. Le peuple comprit le piège logique — une idole ne peut ni parler ni agir — mais refusa quand même de changer d\'avis.',
+      },
+      {
+        etape: 'Jeté dans le feu',
+        texte: 'Furieux, son peuple décida : "Brûlez-le, et secourez vos dieux, si vous voulez agir !" (Coran 21:68). Ils amassèrent du bois pendant des jours et allumèrent un brasier si immense qu\'il fallut une catapulte pour y projeter Ibrahim, personne ne pouvant en approcher. Ligoté, il ne cessa de répéter : "Il n\'y a de divinité digne d\'adoration que Toi ! Gloire à Toi, Tu n\'as point d\'associé !" Selon la tradition, l\'ange Jibril vint alors lui demander s\'il avait besoin d\'aide ; Ibrahim répondit qu\'il n\'avait besoin de rien, sauf d\'Allah. Allah ordonna alors : "Ô feu, sois pour Ibrahim une fraîcheur salutaire !" (Coran 21:69) — froid, mais aussi sûr, car un froid sans mesure aurait pu lui être tout aussi fatal. Le feu ne lui fit aucun mal. C\'est pour cette foi inébranlable qu\'Allah lui donna le titre de *Khalilullah* — l\'Ami d\'Allah (Coran 4:125) — le plus grand honneur jamais accordé à un prophète.',
+      },
+      {
+        etape: 'L\'épreuve du sacrifice',
+        texte: 'Ibrahim avait longtemps prié pour un fils vertueux, et Allah lui annonça la naissance d\'un "garçon doux et patient" (Coran 37:101) : Ismaïl. Une fois celui-ci en âge de l\'accompagner dans ses activités, Ibrahim vit en songe qu\'il devait le sacrifier — une vision qui, pour un prophète, est une forme de révélation. Il en parla à son fils avec respect, lui demandant son avis : "Ô mon fils, je me vois en songe en train de t\'immoler. Qu\'en penses-tu ?" Ismaïl répondit : "Père, fais ce qu\'on t\'a ordonné, tu me trouveras, si Allah le veut, parmi les patients" (Coran 37:102). Tous deux se soumirent, et au moment où Ibrahim s\'apprêtait à obéir, Allah l\'appela : "Ô Ibrahim, tu as déjà réalisé la vision !" (Coran 37:104-105) — l\'épreuve était accomplie par la seule sincérité de leur intention. Allah remplaça alors Ismaïl par un immense bélier (Coran 37:107). C\'est ce jour que les musulmans célèbrent chaque année lors de l\'Aïd al-Adha.',
+      },
+      {
+        etape: 'La Kaaba et Zamzam',
+        texte: 'Sur ordre d\'Allah, Ibrahim conduisit Hajar et leur bébé Ismaïl dans la vallée aride de La Mecque, et les y laissa avec très peu de provisions. Quand Hajar lui demanda s\'il faisait cela sur ordre d\'Allah, et qu\'il répondit oui, elle dit : "Alors Il ne nous délaissera pas." Ibrahim s\'éloigna en priant : "Seigneur, j\'ai établi une partie de ma descendance dans une vallée sans culture, près de Ta Maison sacrée..." (Coran 14:37), Lui demandant de leur accorder subsistance et des cœurs bienveillants autour d\'eux. Des années plus tard, Ibrahim revint, et avec Ismaïl devenu grand, éleva les fondations de la Kaaba, en priant : "Seigneur, accepte cela de nous" (Coran 2:127). C\'est de la confiance de Hajar que jaillit la source de Zamzam, et de cette vallée que naquit la ville sainte de La Mecque.',
+      },
     ],
     traits: [
       { label: 'Foi absolue', emoji: '⭐' },
@@ -378,7 +436,7 @@ export const prophetes: Prophete[] = [
         explication: 'Allah dit au feu : "Sois froid et sécurisant pour Ibrahim" (Coran 21:69).',
       },
       {
-        question: 'Qui Ibrahim et son fils Ismaïl construisirent-ils ensemble ?',
+        question: 'Quel édifice sacré Ibrahim éleva-t-il avec son fils Ismaïl ?',
         options: ['La mosquée al-Aqsa', 'La Kaaba', 'La mosquée du Prophète', 'Le puits de Zamzam'],
         correct: 1,
         explication: 'Ibrahim et Ismaïl élevèrent ensemble les fondations de la Kaaba à La Mecque (Coran 2:127).',

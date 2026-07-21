@@ -1,9 +1,18 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight, BookOpen, Lightbulb, HelpCircle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { prophetes } from '@/data/prophetes';
 import ProphetQuiz from './ProphetQuiz';
 import type { Metadata } from 'next';
+
+function HistoireTexte({ texte }: { texte: string }) {
+  return (
+    <div className="text-sm text-foreground/90 leading-relaxed [&>p]:m-0">
+      <ReactMarkdown>{texte}</ReactMarkdown>
+    </div>
+  );
+}
 
 export const revalidate = false;
 
@@ -105,7 +114,7 @@ export default async function PropheteDetailPage({
                           {i + 1}. {etape}
                         </p>
                       )}
-                      <p className="text-sm text-foreground/90 leading-relaxed">{texte}</p>
+                      <HistoireTexte texte={texte} />
                     </div>
                   </li>
                 );
@@ -114,9 +123,7 @@ export default async function PropheteDetailPage({
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {p.histoire.map((item, i) => (
-                <p key={i} className="text-sm text-foreground/90 leading-relaxed">
-                  {typeof item === 'string' ? item : item.texte}
-                </p>
+                <HistoireTexte key={i} texte={typeof item === 'string' ? item : item.texte} />
               ))}
             </div>
           )}
