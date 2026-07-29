@@ -457,9 +457,30 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1800 av. J.-C.',
     resume: 'Lut fut envoyé au peuple de Sodome qui pratiquait l\'homosexualité et le brigandage. Il les appela au droit chemin pendant des années. Des anges vinrent le visiter et les villes furent renversées.',
     histoire: [
-      'Lut était le neveu d\'Ibrahim et crut en lui. Il émigra avec lui et fut envoyé comme prophète au peuple de Sodome (Lut) dans la région de la mer Morte. Ce peuple pratiquait une immoralité que nulle nation avant eux n\'avait commise — l\'homosexualité — en plus du vol et du brigandage.',
-      'Lut les appela inlassablement mais ils répondaient par le rejet et les menaces. Ils lui dirent même de chasser les croyants de la ville s\'il voulait rester parmi eux. Sa propre épouse trahit la confiance des hôtes — elle informait le peuple de l\'arrivée des visiteurs étrangers.',
-      'Trois anges, envoyés d\'abord chez Ibrahim pour lui annoncer un fils, descendirent ensuite chez Lut. Le peuple voulut s\'en prendre à eux. Les anges avertirent Lut : "Pars cette nuit avec ta famille, ne retourne pas en arrière — sauf ton épouse." Au matin, Allah renversa les villes à l\'envers et fit pleuvoir des pierres d\'argile cuite sur elles.',
+      {
+        etape: 'Le neveu qui crut en Ibrahim',
+        texte: 'Lut était le neveu d\'Ibrahim. Il crut en lui dès le début et émigra avec lui loin de leur pays natal. Allah l\'envoya ensuite comme prophète au peuple de Sodome, une ville près de la mer Morte.',
+      },
+      {
+        etape: 'Une immoralité inédite',
+        texte: 'Ce peuple commettait un acte qu\'aucune nation avant lui n\'avait osé faire : les hommes recherchaient les hommes au lieu des femmes. Ils attaquaient aussi les voyageurs sur les routes et se conduisaient mal dans leurs assemblées (Coran 29:29). Lut leur dit : "Vous, parmi les mondes, êtes les seuls à commettre pareille chose !" (Coran 7:80)',
+      },
+      {
+        etape: 'L\'appel rejeté',
+        texte: 'Lut les appela sans relâche à abandonner ce mal, mais ils répondaient par le rejet et les menaces. Ils allèrent jusqu\'à dire : "Chassez de votre cité la famille de Lut, ce sont des gens qui veulent se garder purs !" (Coran 7:82) — se moquant ainsi de leur propre vertu.',
+      },
+      {
+        etape: 'La visite des anges',
+        texte: 'Trois anges, sous l\'apparence de jeunes hommes, vinrent d\'abord annoncer à Ibrahim la naissance d\'un fils, puis se rendirent chez Lut. Inquiet pour leur sécurité, Lut leur dit : "Ô mon peuple, voici mes filles, elles sont plus pures pour vous. Craignez Allah et ne me déshonorez pas devant mes hôtes" (Coran 11:78), espérant détourner la foule de ses invités. Son propre peuple se pressa contre sa porte, et sa femme elle-même, qui ne croyait pas en son message, avait déjà trahi la confiance des invités en prévenant les habitants de leur arrivée.',
+      },
+      {
+        etape: 'Le départ et la destruction',
+        texte: 'Voyant la détresse de Lut, les anges se firent connaître et le rassurèrent : ils étaient des messagers d\'Allah, et le peuple ne pourrait jamais les atteindre. Ils lui ordonnèrent : "Pars avec ta famille dans la nuit, et que nul d\'entre vous ne se retourne — sauf ta femme, qui sera atteinte comme les autres" (Coran 11:81). Au matin, Allah renversa les cités sens dessus dessous et fit pleuvoir sur elles des pierres d\'argile cuite (Coran 11:82-83).',
+      },
+      {
+        etape: 'Le soutien puissant',
+        texte: 'Submergé par l\'ampleur du mal qui l\'entourait, Lut s\'était un jour exclamé : "Si seulement j\'avais la force de vous résister, ou un appui solide auprès de qui me réfugier !" (Coran 11:80) Des siècles plus tard, le Prophète ﷺ répondit à cette plainte : "Qu\'Allah fasse miséricorde à Lut : il s\'appuyait pourtant sur un soutien bien plus puissant" (Sahih al-Bukhari, n°3387) — Allah Lui-même. Ce soutien, Lut l\'a eu sans le savoir : lui et sa famille croyante furent sauvés, tandis que tout le reste fut anéanti.',
+      },
     ],
     traits: [
       { label: 'Fermeté morale', emoji: '🏛️' },
@@ -492,10 +513,15 @@ export const prophetes: Prophete[] = [
         explication: 'L\'épouse de Lut trahit les hôtes en informant le peuple de leur présence, et périt avec les coupables.',
       },
       {
-        question: 'De quel prophète Lut était-il le neveu et le compagnon de migration ?',
-        options: ['Nuh', 'Ibrahim', 'Musa', 'Idris'],
-        correct: 1,
-        explication: 'Lut émigra avec son oncle Ibrahim avant d\'être envoyé comme prophète au peuple de Sodome.',
+        question: 'Que répondit le Prophète ﷺ en repensant à la plainte de Lut, qui souhaitait un "appui solide" (Coran 11:80) ?',
+        options: [
+          'Que Lut manquait de foi',
+          'Que Lut aurait dû fuir plus tôt',
+          'Que Lut s\'appuyait pourtant sur un soutien bien plus puissant',
+          'Que Lut aurait dû combattre son peuple',
+        ],
+        correct: 2,
+        explication: 'Le Prophète ﷺ dit : "Qu\'Allah fasse miséricorde à Lut : il s\'appuyait pourtant sur un soutien bien plus puissant" — Allah Lui-même (Sahih al-Bukhari, n°3387).',
       },
     ],
   },
@@ -507,9 +533,26 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1750 av. J.-C.',
     resume: 'Ismaïl est le fils aîné d\'Ibrahim et l\'ancêtre de la lignée arabe des prophètes. Il co-construisit la Kaaba avec son père, accepta d\'être sacrifié avec une soumission totale et fut réputé pour sa sincérité dans ses promesses.',
     histoire: [
-      'Ismaïl naquit d\'Hajar, épouse d\'Ibrahim. Nourrisson, il fut laissé avec sa mère dans la vallée aride et sans eau de La Mecque. Quand l\'eau s\'épuisa, Hajar courut sept fois entre les collines de Safa et Marwa cherchant de l\'aide. Allah fit jaillir le puits de Zamzam sous les pieds du bébé Ismaïl — un puits qui coule encore aujourd\'hui.',
-      'Quand Ibrahim reçut en rêve l\'ordre de sacrifier son fils, il en informa Ismaïl. La réponse d\'Ismaïl est parmi les plus belles du Coran : "Père, fais ce qu\'on t\'a ordonné — tu me trouveras, si Allah le veut, parmi les patients." Ibrahim le coucha sur le front, prêt à exécuter l\'ordre, avant qu\'Allah ne le retienne et remplace Ismaïl par un bélier.',
-      'Ismaïl aida son père à bâtir la Kaaba, posant pierre après pierre en priant : "Seigneur, accepte de nous, Tu es Celui qui entend et qui sait." Il apprit l\'arabe auprès des tribus qui s\'installèrent autour de Zamzam, et de sa descendance naquit le Prophète Muhammad ﷺ des siècles plus tard.',
+      {
+        etape: 'Laissés dans le désert',
+        texte: 'Ismaïl naquit d\'Hajar, une Égyptienne copte, épouse d\'Ibrahim. Sur ordre d\'Allah, Ibrahim la conduisit avec son bébé dans la vallée aride de La Mecque, sans eau ni culture, puis les y laissa avec peu de provisions. Quand Hajar lui demanda si Allah le lui avait ordonné, et qu\'il répondit oui, elle dit : "Alors Il ne nous délaissera pas."',
+      },
+      {
+        etape: 'La quête d\'eau et la source de Zamzam',
+        texte: 'Quand l\'eau et les dattes s\'épuisèrent, Hajar, affolée pour son bébé, courut sept fois entre les collines de Safa et Marwa à la recherche d\'un secours — un geste que des millions de pèlerins refont encore aujourd\'hui pendant le Hajj et la Omra. En revenant vers Ismaïl, elle vit l\'eau jaillir sous ses petits pieds. Pour l\'empêcher de se répandre, elle répétait : "Zomzomi" (arrête-toi, contiens-toi) — c\'est de là que vient le nom de Zamzam. Le Prophète ﷺ dit plus tard : "Qu\'Allah fasse miséricorde à la mère d\'Ismaïl ! Si elle avait laissé Zamzam couler librement, ce serait aujourd\'hui une rivière" (Sahih al-Bukhari, n°3364).',
+      },
+      {
+        etape: 'La tribu qui s\'installa autour du puits',
+        texte: 'Des oiseaux, attirés par l\'eau, se mirent à tournoyer au-dessus de la vallée. Une tribu de passage, les Jurhum, remarqua ce signe et demanda la permission de s\'installer près du puits. Hajar accepta, à condition qu\'ils ne s\'approprient pas l\'eau. Ismaïl grandit ainsi au milieu d\'eux, apprenant leur langue jusqu\'à la parler couramment. C\'est de lui que descendra, bien des générations plus tard, toute la lignée arabe des prophètes — jusqu\'à Muhammad ﷺ lui-même.',
+      },
+      {
+        etape: 'L\'épreuve du sacrifice',
+        texte: 'Une fois Ismaïl en âge d\'accompagner son père dans ses activités, Ibrahim vit en songe qu\'il devait le sacrifier. Il lui en parla avec respect : "Ô mon fils, je vois en songe que je t\'immole. Qu\'en penses-tu ?" Ismaïl répondit, dans l\'une des plus belles réponses du Coran : "Père, fais ce qu\'on t\'ordonne. Tu me trouveras, si Allah le veut, parmi les patients" (Coran 37:102). Au moment où Ibrahim s\'apprêtait à obéir, Allah l\'arrêta et remplaça Ismaïl par un bélier.',
+      },
+      {
+        etape: 'La construction de la Kaaba',
+        texte: 'Ismaïl aida son père à élever les murs de la Kaaba, posant pierre après pierre en priant avec lui : "Seigneur, accepte cela de nous, Tu es Celui qui entend et qui sait" (Coran 2:127).',
+      },
     ],
     traits: [
       { label: 'Obéissance totale', emoji: '🌿' },
@@ -557,9 +600,18 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1750 av. J.-C.',
     resume: 'Ishaq naquit comme un miracle d\'Ibrahim et de sa femme Sara, tous deux âgés. Il devint prophète et père de Yaqub (Jacob), poursuivant la lignée prophétique qui mènerait aux prophètes des Enfants d\'Israël.',
     histoire: [
-      'Quand les anges vinrent chez Ibrahim pour l\'informer de la destruction du peuple de Lut, ils lui annoncèrent également la naissance d\'un fils, Ishaq — et après lui, Yaqub. Sara, âgée et stérile, s\'étonna : "Malheur à moi ! Vais-je enfanter alors que je suis vieille et que mon époux est un vieillard ?" Les anges lui rappelèrent que c\'était le décret d\'Allah.',
-      'Ishaq grandit dans la maison de la foi et de la prophétie. Il reçut la prophétie et perpétua le message du Tawhid. Son fils Yaqub eut douze enfants qui devinrent les ancêtres des douze tribus d\'Israël. Allah bénit Ibrahim et lui dit : "Je t\'ai donné Ishaq et Yaqub, et j\'ai placé la prophétie et le Livre dans ta descendance."',
-      'Ishaq et son demi-frère Ismaïl, bien que nés de mères différentes — Sara et Hajar —, partagent la même origine prophétique par leur père Ibrahim. C\'est de la descendance d\'Ishaq, à travers Yaqub, que naîtront la plupart des prophètes envoyés aux Bani Israël, tandis que la lignée d\'Ismaïl mènera, des siècles plus tard, au sceau des prophètes, Muhammad ﷺ.',
+      {
+        etape: 'L\'annonce inattendue',
+        texte: 'Des anges, envoyés vers le peuple de Lut, s\'arrêtèrent d\'abord chez Ibrahim sous l\'apparence d\'invités. Ils lui annoncèrent la naissance prochaine d\'un fils, Ishaq, puis d\'un petit-fils, Yaqub. Sara, sa femme, âgée et stérile depuis toujours, s\'exclama : "Malheur à moi ! Vais-je enfanter alors que je suis vieille et que mon époux est un vieillard ?" (Coran 11:72) Les anges lui répondirent : "T\'étonnes-tu de l\'ordre d\'Allah ?" (Coran 11:73) — rien n\'est impossible pour Celui qui décide de tout.',
+      },
+      {
+        etape: 'Une lignée bénie',
+        texte: 'Ishaq grandit dans une maison de foi et de prophétie, et devint à son tour prophète. Allah dit à son sujet : "Nous lui donnâmes Ishaq et Yaqub, et plaçâmes en sa descendance la prophétie et le Livre" (Coran 29:27). Son fils Yaqub allait donner naissance aux douze tribus d\'Israël, poursuivant ainsi la mission commencée par Ibrahim.',
+      },
+      {
+        etape: 'Deux frères, deux lignées',
+        texte: 'Ishaq et son demi-frère Ismaïl, nés de mères différentes — Sara et Hajar —, partageaient la même origine par leur père Ibrahim. Mais leurs descendances prirent deux chemins distincts : de celle d\'Ishaq, à travers Yaqub, naîtront la plupart des prophètes envoyés aux Bani Israël ; de celle d\'Ismaïl naîtra, des siècles plus tard, le dernier des prophètes, Muhammad ﷺ.',
+      },
     ],
     traits: [
       { label: 'Piété', emoji: '🕌' },
@@ -606,9 +658,26 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1700 av. J.-C.',
     resume: 'Yaqub, surnommé Israël, est le père des douze tribus. Il perdit son fils bien-aimé Yusuf pendant des années et pleura jusqu\'à perdre la vue, mais ne cessa jamais d\'espérer en la miséricorde d\'Allah.',
     histoire: [
-      'Yaqub était le fils d\'Ishaq et le petit-fils d\'Ibrahim. Il eut douze fils, dont son préféré était Yusuf, né de son épouse la plus aimée. Cette préférence suscita la jalousie des autres frères. Un jour, ils complotèrent de se débarrasser de Yusuf : ils le jetèrent dans un puits et rapportèrent à leur père qu\'un loup l\'avait dévoré, apportant sa chemise couverte de faux sang.',
-      'Yaqub reconnut l\'imposture mais garda sa peine en lui, disant : "La belle patience est la mienne." Il pleura Yusuf des années entières, au point de perdre la vue. Ses fils lui dirent : "Par Allah, tu ne cesseras de te souvenir de Yusuf jusqu\'à en tomber malade ou périr." Il répondit qu\'il se plaignait uniquement à Allah.',
-      'Quand finalement Yusuf fut retrouvé en Égypte devenu ministre, il envoya sa chemise à son père. Yaqub sentit l\'odeur de Yusuf de loin et dit : "Je perçois le parfum de Yusuf — ne me traitez pas de vieux radoteur." Quand la chemise fut posée sur son visage, sa vue revint. Il retrouva son fils et sa famille fut réunie à Jérusalem puis en Égypte.',
+      {
+        etape: 'Un père, douze fils, un songe à taire',
+        texte: 'Yaqub, fils d\'Ishaq et petit-fils d\'Ibrahim, eut douze fils. Le plus jeune, Yusuf, lui était particulièrement cher. Quand Yusuf raconta un songe où onze étoiles, le soleil et la lune se prosternaient devant lui, Yaqub, inquiet, le mit en garde : "Ô mon fils, ne raconte pas ton rêve à tes frères, sinon ils maniganceraient un complot contre toi" (Coran 12:5). Cette prévoyance ne suffit pas à empêcher la jalousie de grandir parmi ses fils.',
+      },
+      {
+        etape: 'La ruse des frères',
+        texte: 'Les frères convainquirent Yaqub de laisser Yusuf les accompagner, malgré sa crainte qu\'un loup ne le dévore. Ils le jetèrent dans un puits et revinrent en larmes, présentant à leur père une chemise tachée d\'un faux sang. Mais Yaqub comprit aussitôt la supercherie et dit : "Vos âmes vous ont embelli quelque chose... La belle patience est la mienne" (Coran 12:18).',
+      },
+      {
+        etape: 'Des années de larmes',
+        texte: 'Yaqub pleura Yusuf pendant de si longues années qu\'il en perdit la vue (Coran 12:84). Ses autres fils lui reprochèrent de se souvenir sans cesse de Yusuf au point d\'en tomber malade. Il leur répondit : "Je ne me plains de ma peine et de mon chagrin qu\'à Allah" (Coran 12:86) — refusant de perdre espoir, quoi qu\'il arrive.',
+      },
+      {
+        etape: 'Le parfum reconnu de loin',
+        texte: 'Des années plus tard, quand ses fils repartirent en Égypte avec la chemise de Yusuf devenu ministre, Yaqub sentit son parfum avant même leur arrivée : "Je perçois le parfum de Yusuf — ne me traitez pas de vieux radoteur" (Coran 12:94). Quand la chemise fut posée sur son visage, sa vue lui revint aussitôt.',
+      },
+      {
+        etape: 'Le songe accompli',
+        texte: 'Yaqub et toute sa famille rejoignirent alors Yusuf en Égypte. Là, il installa ses parents sur le trône, et tous — ses parents et ses onze frères — se prosternèrent devant lui (Coran 12:100). Le songe raconté des décennies plus tôt, que Yaqub avait pris tant de précautions à cacher, se réalisait enfin.',
+      },
     ],
     traits: [
       { label: 'Patience noble', emoji: '⏳' },
@@ -656,10 +725,34 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1650 av. J.-C.',
     resume: 'L\'histoire de Yusuf est appelée "la plus belle des histoires" dans le Coran. Jeté dans un puits par ses frères, vendu comme esclave, emprisonné injustement, il devint ministre d\'Égypte et pardonna à ceux qui lui firent du mal.',
     histoire: [
-      'Yusuf était le fils bien-aimé de Yaqub, doté d\'une beauté physique et spirituelle extraordinaire. Il eut un songe : onze étoiles, le soleil et la lune se prosternaient devant lui. Son père le mit en garde de ne pas en parler à ses frères. Mais la jalousie de ses frères grandit jusqu\'à ce qu\'ils le jettent dans un puits et le vendent à une caravane passante pour quelques pièces d\'argent.',
-      'En Égypte, Yusuf fut acheté par un haut fonctionnaire (Al-Aziz). L\'épouse de cet homme tenta de le séduire. Il résista fermement, disant : "Je cherche refuge en Allah." Il préféra la prison à la désobéissance. En prison, il interpréta les rêves de ses compagnons de cellule, puis le songe du roi d\'Égypte (sept vaches grasses dévorées par sept maigres).',
-      'Le roi convoqua Yusuf et lui proposa de le libérer. Yusuf demanda d\'abord la vérification de son innocence avant de sortir. Une fois innocenté publiquement, il fut nommé ministre des réserves et des greniers d\'Égypte — une position qu\'il demanda lui-même car il était "gardien compétent et savant".',
-      'Quand ses frères vinrent en Égypte chercher des vivres pendant la famine, il les reconnut mais ne se révéla pas immédiatement. Il les mit à l\'épreuve, les testa, jusqu\'au moment de la révélation : "Je suis Yusuf, et voici mon frère. Allah nous a comblés de bienfaits." Quand ils s\'excusèrent, il dit : "Pas de reproche contre vous aujourd\'hui. Allah vous pardonnera."',
+      {
+        etape: 'Un songe et une jalousie',
+        texte: 'Yusuf, fils préféré de Yaqub, eut un jour un songe : onze étoiles, le soleil et la lune se prosternaient devant lui (Coran 12:4). Son père, comprenant la portée de cette vision, le mit en garde de ne pas la raconter à ses frères, de peur qu\'ils ne complotent contre lui. Mais la préférence de Yaqub pour Yusuf nourrissait déjà leur jalousie.',
+      },
+      {
+        etape: 'Le puits et la caravane',
+        texte: 'Les frères complotèrent de se débarrasser de Yusuf. L\'un d\'eux proposa de ne pas le tuer, mais de le jeter au fond d\'un puits, où des voyageurs le recueilleraient (Coran 12:10). C\'est ce qu\'ils firent, avant de revenir vers leur père avec une fausse chemise ensanglantée. Une caravane de passage envoya un homme puiser de l\'eau ; il remonta Yusuf avec son seau et s\'écria : "Bonne nouvelle ! Voici un garçon !" (Coran 12:19) Ils le vendirent en Égypte pour quelques pièces d\'argent, sans grande valeur à leurs yeux.',
+      },
+      {
+        etape: 'La tentation et la preuve de son innocence',
+        texte: 'En Égypte, Yusuf fut acheté par un haut fonctionnaire, Al-Aziz. Devenu jeune homme d\'une grande beauté, il attira les avances de l\'épouse de son maître, qui ferma les portes et le pressa. Yusuf s\'enfuit vers la sortie ; elle le retint et déchira sa tunique par-derrière. Ils trouvèrent Al-Aziz à la porte, et elle l\'accusa. Mais un témoin de sa propre famille proposa une preuve simple : si la tunique était déchirée par-devant, elle disait vrai ; par-derrière, c\'était elle qui mentait (Coran 12:26-27). La tunique déchirée dans le dos prouva l\'innocence de Yusuf devant tous.',
+      },
+      {
+        etape: 'Les femmes de la ville',
+        texte: 'La rumeur de cette affaire se répandit, et les femmes de la ville se moquèrent de l\'épouse d\'Al-Aziz. Piquée, elle les invita et donna à chacune un couteau pour couper des fruits, puis fit entrer Yusuf. Frappées par sa beauté, les femmes se coupèrent les mains sans même s\'en apercevoir, en disant : "Ceci n\'est pas un être humain, ce ne peut être qu\'un ange noble !" (Coran 12:31) Yusuf préféra alors la prison plutôt que de céder à leurs avances.',
+      },
+      {
+        etape: 'Les songes en prison',
+        texte: 'En prison, deux compagnons lui racontèrent leurs rêves. Yusuf leur annonça que l\'un servirait de nouveau du vin à son roi, et que l\'autre serait exécuté (Coran 12:36-41) — tout se réalisa comme il l\'avait dit. Des années plus tard, le roi d\'Égypte lui-même vit en songe sept vaches grasses dévorées par sept maigres, et sept épis verts contre sept desséchés. Yusuf interpréta ce songe comme l\'annonce de sept années d\'abondance suivies de sept années de famine.',
+      },
+      {
+        etape: 'La libération et le pouvoir',
+        texte: 'Le roi voulut libérer Yusuf, mais celui-ci refusa de sortir avant que son innocence dans l\'affaire d\'Al-Aziz ne soit publiquement reconnue. Une fois lavé de tout soupçon, il fut nommé à la tête des réserves d\'Égypte — un poste qu\'il demanda lui-même, se disant "gardien compétent et savant" (Coran 12:55).',
+      },
+      {
+        etape: 'Les retrouvailles et le pardon',
+        texte: 'Des années plus tard, la famine poussa ses frères jusqu\'en Égypte pour chercher des vivres. Yusuf les reconnut sans se faire connaître, les mit à l\'épreuve, avant de finalement se révéler : "Je suis Yusuf, et voici mon frère. Allah nous a comblés de bienfaits" (Coran 12:90). À leurs excuses, il répondit : "Pas de reproche contre vous aujourd\'hui. Allah vous pardonnera" (Coran 12:92). Sa famille tout entière vint le rejoindre en Égypte, et devant lui, ses parents et ses onze frères se prosternèrent — le songe de son enfance s\'accomplissait enfin (Coran 12:100).',
+      },
     ],
     traits: [
       { label: 'Chasteté', emoji: '🌹' },

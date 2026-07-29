@@ -172,6 +172,9 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
     'importance-zakat-purification-richesse':           ['pratique', 'profond'],
     'importance-jeune-ramadan-maitrise-de-soi':          ['pratique', 'motivant'],
     'importance-hajj-voyage-d-une-vie':                  ['profond', 'touchant'],
+    'ibn-taymiyyah-ubudiyyah-liberte-esclave-allah':      ['profond', 'savant'],
+    'ibn-taymiyyah-lettres-prison-jannati-fi-sadri':      ['profond', 'touchant'],
+    'al-hikam-ibn-ataillah-aphorismes-guerir-ego':        ['savant', 'profond'],
 };
 
 function getArticleTags(article: Article): EmotionalTag[] {
