@@ -29,7 +29,7 @@ export async function generateMetadata({
   const p = prophetes.find((x) => x.id === id);
   if (!p) return {};
   return {
-    title: `${p.nom} (${p.arabe}) — Histoires des Prophètes`,
+    title: `${p.nom}${p.nomBiblique ? ` (${p.nomBiblique})` : ''} — Histoires des Prophètes`,
     description: p.resume,
   };
 }
@@ -64,6 +64,11 @@ export default async function PropheteDetailPage({
             <div className="flex-1">
               <h1 className="text-3xl font-black tracking-tight flex items-baseline gap-2 flex-wrap">
                 {p.nom}
+                {p.nomBiblique && (
+                  <span className="text-lg font-normal text-muted-foreground">
+                    ({p.nomBiblique})
+                  </span>
+                )}
                 <span className="font-kufi text-lg font-normal text-muted-foreground">
                   {p.id === 'muhammad' ? 'ﷺ' : 'عليه السلام'}
                 </span>

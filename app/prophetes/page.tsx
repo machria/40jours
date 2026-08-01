@@ -62,10 +62,13 @@ export default function ProphetesPage() {
               </span>
 
               <div className="flex-1 min-w-0">
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-baseline gap-2 flex-wrap">
                   <h2 className="font-bold text-foreground group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
                     {p.nom}
                   </h2>
+                  {p.nomBiblique && (
+                    <span className="text-sm text-muted-foreground">({p.nomBiblique})</span>
+                  )}
                   <span className="font-kufi text-primary text-lg">{p.arabe}</span>
                 </div>
                 {p.surnom && (

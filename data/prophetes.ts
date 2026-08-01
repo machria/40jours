@@ -13,6 +13,7 @@ export interface EtapeHistoire {
 export interface Prophete {
   id: string;
   nom: string;
+  nomBiblique?: string;
   arabe: string;
   surnom?: string;
   periode?: string;
@@ -98,11 +99,23 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Habil (Abel) fut tué par son frère Qabil (Caïn), premier meurtre de l\'histoire humaine.',
       },
+      {
+        question: 'Comment Qabil apprit-il à enterrer le corps de son frère ?',
+        options: [
+          'Un ange le lui montra',
+          'En observant un corbeau creuser la terre',
+          'Adam le lui enseigna',
+          'Il l\'apprit dans un rêve',
+        ],
+        correct: 1,
+        explication: 'Ne sachant que faire du corps, Qabil observa un corbeau creuser la terre pour en enterrer un autre, et comprit ainsi comment enterrer son frère (Coran 5:31).',
+      },
     ],
   },
   {
     id: 'idris',
     nom: 'Idris',
+    nomBiblique: 'Hénoch',
     arabe: 'إِدْرِيس',
     surnom: 'Le Savant',
     periode: 'Avant le déluge',
@@ -161,11 +174,18 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Lors de l\'Isra wal Mi\'raj, le Prophète ﷺ rencontra Idris au quatrième ciel (Sahih al-Bukhari, n°3887).',
       },
+      {
+        question: 'Que signifie le mot "siddiq" utilisé par le Coran pour décrire Idris ?',
+        options: ['Savant', 'Véridique, qui ne ment jamais', 'Riche', 'Voyageur'],
+        correct: 1,
+        explication: 'Coran 19:56 décrit Idris comme "siddiq" — un homme profondément véridique, qui ne mentait jamais et croyait sincèrement en la révélation.',
+      },
     ],
   },
   {
     id: 'nuh',
     nom: 'Nuh',
+    nomBiblique: 'Noé',
     arabe: 'نُوح',
     surnom: 'Le Reconnaissant',
     periode: 'Environ 3000 av. J.-C.',
@@ -236,6 +256,17 @@ export const prophetes: Prophete[] = [
         options: ['Car il n\'était pas son fils biologique', 'Car il avait commis un crime', 'Car il avait refusé de croire et ses actes étaient mauvais', 'Car il avait quitté le pays'],
         correct: 2,
         explication: 'Allah précise (11:46) que la vraie famille se définit par la foi et les bonnes actions, non par le lien de sang.',
+      },
+      {
+        question: 'Quelles étaient les cinq idoles adorées par le peuple de Nuh ?',
+        options: [
+          'Hubal, Al-Lat, Al-Uzza, Manat, Ba\'l',
+          'Wadd, Suwa\', Yaghuth, Ya\'uq, Nasr',
+          'Ra, Osiris, Isis, Horus, Seth',
+          'Bel, Ishtar, Marduk, Nabu, Sin',
+        ],
+        correct: 1,
+        explication: 'Le peuple de Nuh avait sculpté cinq hommes vertueux — Wadd, Suwa\', Yaghuth, Ya\'uq et Nasr — puis fini par les adorer comme des dieux.',
       },
     ],
   },
@@ -308,6 +339,12 @@ export const prophetes: Prophete[] = [
         correct: 0,
         explication: 'Le peuple de \'Ad habitait la région d\'Al-Ahqaf, dans le sud de la péninsule arabique, l\'actuel Yémen (Coran 46:21).',
       },
+      {
+        question: 'Comment s\'appelait la cité légendaire aux hautes colonnes bâtie par le peuple de \'Ad ?',
+        options: ['Babylone', 'Iram', 'Ninive', 'Pétra'],
+        correct: 1,
+        explication: 'Le Coran mentionne Iram, "dont on n\'a jamais créé de pareille dans les pays" (Coran 89:7-8), symbole de la fierté architecturale du peuple de \'Ad.',
+      },
     ],
   },
   {
@@ -375,11 +412,23 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Le peuple de Thamud habitait Al-Hijr — aujourd\'hui Madain Saleh, en Arabie Saoudite — où ils sculptaient leurs demeures dans la roche.',
       },
+      {
+        question: 'Que complota un groupe de neuf hommes la nuit précédant le châtiment ?',
+        options: [
+          'Fuir la cité',
+          'Tuer Salih et sa famille en secret',
+          'Reconstruire un temple',
+          'Offrir un sacrifice à Allah',
+        ],
+        correct: 1,
+        explication: 'Neuf hommes complotèrent pour tuer Salih et sa famille la nuit même, en jurant de nier toute implication — mais ils périrent avec le reste du peuple (Coran 27:48-51).',
+      },
     ],
   },
   {
     id: 'ibrahim',
     nom: 'Ibrahim',
+    nomBiblique: 'Abraham',
     arabe: 'إِبْرَاهِيم',
     surnom: 'Khalilullah — Ami d\'Allah',
     periode: 'Environ 1800 av. J.-C.',
@@ -447,11 +496,18 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Ibrahim observa les astres et conclut qu\'ils se couchent donc ne méritent pas l\'adoration (Coran 6:76-79).',
       },
+      {
+        question: 'Quel nom le Coran donne-t-il au père (ou tuteur) d\'Ibrahim, qu\'il appela à quitter l\'idolâtrie ?',
+        options: ['Tarikh', 'Azar', 'Nahor', 'Haran'],
+        correct: 1,
+        explication: 'Coran 6:74 : "Ibrahim dit à son père Azar : Prends-tu des idoles pour divinités ?" — la première personne qu\'Ibrahim appela au Tawhid.',
+      },
     ],
   },
   {
     id: 'lut',
     nom: 'Lut',
+    nomBiblique: 'Loth',
     arabe: 'لُوط',
     surnom: 'Neveu d\'Ibrahim',
     periode: 'Environ 1800 av. J.-C.',
@@ -523,11 +579,23 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Le Prophète ﷺ dit : "Qu\'Allah fasse miséricorde à Lut : il s\'appuyait pourtant sur un soutien bien plus puissant" — Allah Lui-même (Sahih al-Bukhari, n°3387).',
       },
+      {
+        question: 'Que proposa Lut à son peuple pour tenter de protéger ses hôtes (les anges) ?',
+        options: [
+          'De fuir avec lui dans la nuit',
+          'Ses filles, comme union plus pure',
+          'De l\'argent en échange',
+          'De combattre le peuple lui-même',
+        ],
+        correct: 1,
+        explication: 'Lut dit : "Voici mes filles, elles sont plus pures pour vous. Craignez Allah et ne me déshonorez pas devant mes hôtes" (Coran 11:78).',
+      },
     ],
   },
   {
     id: 'ismail',
     nom: 'Ismaïl',
+    nomBiblique: 'Ismaël',
     arabe: 'إِسْمَاعِيل',
     surnom: 'Père des Arabes',
     periode: 'Environ 1750 av. J.-C.',
@@ -590,11 +658,18 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Ismaïl grandit parmi les tribus arabes installées autour de Zamzam et apprit l\'arabe, devenant l\'ancêtre de la lignée arabe des prophètes, dont Muhammad ﷺ.',
       },
+      {
+        question: 'Quelle tribu s\'installa près du puits de Zamzam après avoir aperçu des oiseaux tournoyer ?',
+        options: ['Les Quraych', 'Les Jurhum', 'Les Thamud', 'Les Aws'],
+        correct: 1,
+        explication: 'La tribu des Jurhum, de passage, remarqua des oiseaux attirés par l\'eau et demanda à Hajar la permission de s\'installer près du puits.',
+      },
     ],
   },
   {
     id: 'ishaq',
     nom: 'Ishaq',
+    nomBiblique: 'Isaac',
     arabe: 'إِسْحَاق',
     surnom: 'Fils de la promesse',
     periode: 'Environ 1750 av. J.-C.',
@@ -648,11 +723,23 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Sara était âgée et stérile depuis toujours ; elle s\'étonna de cette annonce miraculeuse (Coran 11:72).',
       },
+      {
+        question: 'Vers quelles lignées se répartit la descendance d\'Ibrahim, à travers Ishaq et Ismaïl ?',
+        options: [
+          'Toutes deux menèrent aux prophètes arabes',
+          'Celle d\'Ishaq mena aux prophètes des Bani Israël, celle d\'Ismaïl à Muhammad ﷺ',
+          'Aucune des deux ne donna de prophète',
+          'Seule celle d\'Ismaïl donna des prophètes',
+        ],
+        correct: 1,
+        explication: 'De la descendance d\'Ishaq, par Yaqub, naquirent la plupart des prophètes envoyés aux Bani Israël ; de celle d\'Ismaïl naîtra, des siècles plus tard, Muhammad ﷺ.',
+      },
     ],
   },
   {
     id: 'yaqub',
     nom: 'Yaqub',
+    nomBiblique: 'Jacob',
     arabe: 'يَعْقُوب',
     surnom: 'Israël',
     periode: 'Environ 1700 av. J.-C.',
@@ -715,11 +802,23 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Yaqub eut douze fils, qui devinrent les ancêtres des douze tribus d\'Israël (Bani Israïl).',
       },
+      {
+        question: 'Pourquoi Yaqub mit-il son fils Yusuf en garde de ne pas raconter son songe à ses frères ?',
+        options: [
+          'Par crainte qu\'ils ne complotent contre lui par jalousie',
+          'Car les songes étaient interdits',
+          'Car Yusuf mentait souvent',
+          'Par superstition sans raison précise',
+        ],
+        correct: 0,
+        explication: 'Yaqub dit : "Ô mon fils, ne raconte pas ton rêve à tes frères, sinon ils maniganceraient un complot contre toi" (Coran 12:5).',
+      },
     ],
   },
   {
     id: 'yusuf',
     nom: 'Yusuf',
+    nomBiblique: 'Joseph',
     arabe: 'يُوسُف',
     surnom: 'Le Beau, le Patient',
     periode: 'Environ 1650 av. J.-C.',
@@ -791,19 +890,39 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Yusuf demanda lui-même à être placé sur les greniers d\'Égypte, car il était "gardien compétent et savant" (Coran 12:55).',
       },
+      {
+        question: 'Que craignait Yaqub s\'il arrivait malheur à Yusuf lors de sa sortie avec ses frères ?',
+        options: ['Qu\'il se perde', 'Qu\'un loup le dévore', 'Qu\'il tombe malade', 'Qu\'il soit capturé par des voleurs'],
+        correct: 1,
+        explication: 'Yaqub craignait qu\'un loup ne dévore Yusuf s\'il partait seul avec ses frères — une crainte que ceux-ci utilisèrent ensuite pour justifier la fausse chemise ensanglantée.',
+      },
     ],
   },
   {
     id: 'ayyub',
     nom: 'Ayyub',
+    nomBiblique: 'Job',
     arabe: 'أَيُّوب',
     surnom: 'Le Patient',
     periode: 'Environ 1500 av. J.-C.',
     resume: 'Ayyub perdit sa santé, ses biens et ses enfants pendant des années d\'épreuves. Il ne se plaignit qu\'à Allah par un du\'a sobre et magnifique, et Allah le guérit, lui restituant tout en double.',
     histoire: [
-      'Ayyub était un prophète béni d\'Allah : riche, en bonne santé, père de nombreux enfants. Puis les épreuves s\'abattirent — il perdit ses biens, ses enfants, puis sa santé. Sa maladie dura de longues années, à tel point que ses proches s\'éloignèrent de lui. Seule son épouse Rahma (ou Liya) resta à ses côtés, travaillant pour le nourrir.',
-      'Ayyub ne murmura pas. Ses lèvres ne prononcèrent ni plainte ni reproche envers Allah. Quand il atteignit le fond de l\'épreuve, il fit un du\'a parmi les plus sobres et les plus profonds du Coran : "Le mal m\'a touché et Tu es le plus Miséricordieux des miséricordieux." Pas de plainte — juste une constatation et un rappel de qui est Allah.',
-      'Allah répondit immédiatement : "Nous l\'avons exaucé, Nous avons écarté de lui le mal qu\'il avait." Allah lui ordonna de frapper le sol du pied — une source jaillit et il se lava et but, et fut guéri entièrement. Sa famille lui fut restituée et Allah lui accorda, en plus, leurs pareils — bénédiction sur bénédiction.',
+      {
+        etape: 'Un homme comblé, éprouvé dans ses biens et son corps',
+        texte: 'Ibn Kathir rapporte qu\'Ayyub, descendant d\'Ibrahim, vivait dans la région du Hauran, comblé de troupeaux, de terres et d\'enfants, tout en restant d\'une piété et d\'une générosité rares (Coran 6:84). Allah l\'éprouva par étapes : ses biens périrent, ses maisons s\'effondrèrent sur ses enfants, puis la maladie couvrit son corps de plaies au point que les gens de sa ville, effrayés, l\'éloignèrent. Seuls son cœur et sa langue restèrent intacts pour l\'évocation d\'Allah — jamais il ne prononça une parole de révolte.',
+      },
+      {
+        etape: 'La fidélité de son épouse',
+        texte: 'Pendant de très longues années, son épouse resta seule à ses côtés, travaillant pour le nourrir alors que tous l\'avaient abandonné. Un jour, à bout de force, elle fut approchée par Shaytan qui lui promit la guérison d\'Ayyub si elle acceptait, une seule fois, un geste contraire à l\'adoration exclusive d\'Allah. Elle faillit céder par désespoir. En l\'apprenant, Ayyub, peiné, jura que s\'il guérissait, il la frapperait de cent coups.',
+      },
+      {
+        etape: 'Le du\'a et la guérison',
+        texte: 'Après tant d\'années, Ayyub adressa à Allah son invocation la plus connue, sans une once de plainte : "Le mal m\'a touché, et Tu es le plus Miséricordieux des miséricordieux" (Coran 21:83). Allah répondit aussitôt et lui ordonna : "Frappe le sol de ton pied : voici une eau fraîche pour te laver et pour boire" (Coran 38:42). Une source jaillit ; il s\'y lava et en but, et sa maladie disparut entièrement.',
+      },
+      {
+        etape: 'La double bénédiction et le serment tenu',
+        texte: 'Allah lui rendit sa famille et y ajouta leurs pareils, "par miséricorde de Notre part" (Coran 21:84). Restait le serment envers son épouse, restée fidèle malgré son seul instant de faiblesse : Allah lui accorda un allègement plein de sagesse — "Prends dans ta main un faisceau de brindilles, frappe avec cela et ne viole pas ton serment" (Coran 38:44). Ayyub tint ainsi sa parole sans lui faire de mal.',
+      },
     ],
     traits: [
       { label: 'Patience absolue', emoji: '🏔️' },
@@ -846,19 +965,52 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Seule son épouse resta à ses côtés, travaillant pour subvenir à ses besoins alors que ses proches s\'éloignaient de lui.',
       },
+      {
+        question: 'Ayyub avait juré de frapper son épouse de cent coups. Comment Allah lui permit-Il de tenir ce serment sans lui faire de mal ?',
+        options: [
+          'En annulant simplement le serment',
+          'En lui ordonnant de la frapper avec un faisceau de brindilles',
+          'En demandant à un juge de trancher',
+          'En remplaçant les coups par un jeûne',
+        ],
+        correct: 1,
+        explication: 'Coran 38:44 : Allah ordonna à Ayyub de prendre un faisceau de brindilles et de frapper avec, afin qu\'il tienne son serment sans blesser son épouse fidèle.',
+      },
     ],
   },
   {
     id: 'shuayb',
     nom: 'Shu\'ayb',
+    nomBiblique: 'Jéthro',
     arabe: 'شُعَيْب',
     surnom: 'L\'Éloquent',
     periode: 'Environ 1500 av. J.-C.',
     resume: 'Shu\'ayb fut envoyé au peuple de Madyan qui trichait dans les balances et les mesures. Il les appela à l\'honnêteté commerciale et à la crainte d\'Allah. Rejetés, ils furent détruits par un cri foudroyant.',
     histoire: [
-      'Le peuple de Madyan vivait dans la région du nord-ouest de l\'Arabie actuelle. Leur vice principal était de tricher dans les mesures et les balances pour s\'enrichir au détriment des autres. Shu\'ayb, l\'un d\'eux, leur dit : "Donnez la pleine mesure et ne soyez pas parmi ceux qui font subir des pertes."',
-      'Les chefs de Madyan répondirent avec mépris. Ils utilisèrent même l\'argument de la liberté économique : "Nos prières nous ordonnent-elles d\'abandonner ce que nos pères adoraient ou de ne plus faire de notre bien ce que nous voulons ?" Shu\'ayb leur répliqua que la foi et l\'honnêteté sont inséparables.',
-      'Ils menacèrent Shu\'ayb de l\'expulser s\'il ne revenait pas à leurs pratiques. Il plaça sa confiance en Allah et refusa. Le châtiment vint : un cri (sayhah) accompagné d\'un nuage d\'ombre qui se referma sur eux comme une fournaise, les anéantissant en un instant.',
+      {
+        etape: 'Un carrefour commercial gagné par la fraude',
+        texte: 'Le peuple de Madyan vivait dans le nord-ouest de l\'Arabie, sur une route commerciale fréquentée entre le Sham et le Hijaz. Ibn Kathir rapporte qu\'à ce vice de la fraude s\'ajoutaient l\'adoration d\'idoles et le brigandage : les habitants guettaient les voyageurs sur les routes pour les détrousser et les détourner de la foi, comme le rappelle le Coran : "Ne vous embusquez pas sur chaque chemin, menaçant et détournant du sentier d\'Allah ceux qui croient en Lui" (Coran 7:86). Shu\'ayb, l\'un des leurs, fut envoyé pour les rappeler à Allah seul et à l\'intégrité dans leurs affaires.',
+      },
+      {
+        etape: 'L\'appel à l\'honnêteté et à la foi',
+        texte: 'Shu\'ayb leur dit : "Ô mon peuple, adorez Allah, vous n\'avez pas d\'autre divinité que Lui... Donnez la pleine mesure et le plein poids en toute équité, et ne lésez pas les gens dans leurs biens" (Coran 11:84-85). Il liait ainsi, dans un même appel, l\'adoration du Créateur et la droiture envers les créatures — refusant de séparer la foi du comportement quotidien.',
+      },
+      {
+        etape: 'Le mépris des notables',
+        texte: 'Les chefs de Madyan répondirent avec dédain : "Ô Shu\'ayb, ta prière t\'ordonne-t-elle que nous abandonnions ce qu\'adoraient nos ancêtres, ou de ne plus faire de nos biens ce que nous voulons ? Tu es assurément le tolérant, le droit raisonnable !" (Coran 11:87) — ironie amère envers celui qu\'ils jugeaient pourtant sincère. Ils allèrent jusqu\'à lui dire qu\'ils le considéraient comme faible parmi eux et que, sans le clan de sa famille, ils l\'auraient déjà lapidé (Coran 11:91).',
+      },
+      {
+        etape: 'Le défi et la menace d\'expulsion',
+        texte: 'Les notables menacèrent d\'expulser Shu\'ayb et les croyants de la cité s\'ils ne revenaient pas à leur religion (Coran 7:88). D\'autres, provocateurs, réclamèrent ouvertement le châtiment : "Fais tomber sur nous un morceau du ciel, si tu es du nombre des véridiques !" (Coran 26:187) Shu\'ayb leur répondit qu\'Allah seul savait ce qu\'ils faisaient, et plaça entièrement sa confiance en Lui : "Je place ma confiance en Allah, mon Seigneur et le vôtre" (Coran 11:88).',
+      },
+      {
+        etape: 'Le châtiment : le jour de l\'ombre',
+        texte: 'Le châtiment vint sous une forme redoutable : après une chaleur suffocante, un nuage apparut, apportant une ombre que le peuple accueillit avec soulagement — jusqu\'à ce qu\'il se referme sur eux et déverse un feu dévastateur, ce que le Coran appelle "le châtiment du jour de l\'Ombre" (Coran 26:189). D\'autres versets ajoutent qu\'un cri (sayhah) et un tremblement les saisirent, les laissant inertes dans leurs demeures (Coran 11:94 ; 29:37). Shu\'ayb et les croyants furent épargnés.',
+      },
+      {
+        etape: 'Un fil qui se poursuit avec Musa',
+        texte: 'Des siècles plus tard, c\'est chez un homme pieux de Madyan — que la tradition identifie souvent à Shu\'ayb ou à l\'un de ses descendants portant le même esprit de droiture — que Musa, fuyant l\'Égypte, trouvera refuge, épousera l\'une de ses filles et gardera ses troupeaux pendant plusieurs années (Coran 28:23-28), reliant ainsi l\'histoire de Shu\'ayb à celle du prochain grand prophète.',
+      },
     ],
     traits: [
       { label: 'Justice économique', emoji: '⚖️' },
@@ -896,20 +1048,64 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Ils rétorquèrent : "Tes prières t\'ordonnent-elles que nous abandonnions ce qu\'adoraient nos ancêtres, ou de ne plus faire de nos biens ce que nous voulons ?" (Coran 11:87)',
       },
+      {
+        question: 'Sous quelle forme le châtiment final s\'abattit-il sur le peuple de Madyan et les Compagnons du Bois ?',
+        options: [
+          'Un déluge soudain',
+          'Un nuage d\'ombre qui se referma en un feu dévastateur, accompagné d\'un cri',
+          'Une invasion de sauterelles',
+          'Une nuit sans fin',
+        ],
+        correct: 1,
+        explication: 'Le Coran (26:189) parle du "châtiment du jour de l\'Ombre" et (11:94) d\'un cri (sayhah) qui les laissa inertes dans leurs demeures.',
+      },
     ],
   },
   {
     id: 'musa',
     nom: 'Musa',
+    nomBiblique: 'Moïse',
     arabe: 'مُوسَى',
     surnom: 'Kalimullah — Celui à qui Allah a parlé',
     periode: 'Environ 1300 av. J.-C.',
     resume: 'Musa est le prophète le plus cité dans le Coran. Il confronta Pharaon avec le bâton et les miracles, libéra les Enfants d\'Israël, reçut la Torah sur le mont Sinaï et partagea la mer Rouge.',
     histoire: [
-      'Musa naquit à une époque où Pharaon faisait égorger tous les nouveau-nés mâles israélites par peur d\'une prophétie. Sa mère, guidée par Allah, le posa dans une nacelle sur le Nil. La nacelle fut recueillie par la famille de Pharaon lui-même. La sœur de Musa suivit la nacelle et proposa d\'amener une nourrice — sa propre mère. Ainsi Musa grandit dans le palais de Pharaon, allaitée par sa vraie mère, payée pour cela.',
-      'Adulte, Musa tua accidentellement un Égyptien en voulant défendre un Israélite. Il fuit vers Madyan où il vécut dix ans, gardant les troupeaux de Shu\'ayb et épousant sa fille. Sur le chemin du retour, il aperçut un feu et s\'en approcha. C\'était la révélation divine : Allah lui parla directement — c\'est pour cela que Musa reçut le titre de Kalimullah, Celui à qui Allah a parlé. Il lui assigna la mission de se rendre chez Pharaon avec son frère Harun.',
-      'Face à Pharaon, Musa accomplit les miracles — son bâton devint serpent et avala les cordes des magiciens, sa main devint lumineuse. Les magiciens de Pharaon reconnurent la vérité et se prosternèrent, disant qu\'ils croyaient au Seigneur de Musa et Harun. Pharaon infligea dix plaies à l\'Égypte avant de laisser partir les Israélites.',
-      'Quand Pharaon les poursuivit avec son armée jusqu\'à la mer, Musa frappa l\'eau de son bâton. La mer s\'ouvrit en douze chemins, un pour chaque tribu. Les Israélites traversèrent. Pharaon et son armée les suivirent — et la mer se referma sur eux. Musa reçut ensuite la Torah sur le mont Sinaï pendant quarante jours, pendant que son peuple retombait dans l\'idolâtrie du veau d\'or.',
+      {
+        etape: 'Une nacelle confiée au Nil',
+        texte: 'Pharaon, ayant vu en songe ou appris par ses devins qu\'un enfant des Bani Israël causerait sa chute, ordonna l\'égorgement de tous les nouveau-nés mâles israélites. Quand Musa naquit, Allah inspira à sa mère : "Allaite-le. Et quand tu craindras pour lui, jette-le dans le fleuve, sans crainte ni chagrin : Nous te le rendrons et ferons de lui un messager" (Coran 28:7). Le cœur déchiré, elle plaça son bébé dans une nacelle et le confia au Nil, tandis que sa fille suivait discrètement pour savoir ce qu\'il adviendrait de lui.',
+      },
+      {
+        etape: 'Recueilli dans le palais de son ennemi',
+        texte: 'La nacelle fut recueillie par les gens de Pharaon eux-mêmes. Aviser de bonté envers cet enfant, l\'épouse de Pharaon, Asiya, supplia son mari : "Une fraîcheur des yeux pour moi et pour toi. Ne le tuez pas, il pourrait nous être utile ou nous l\'adopterons comme fils" (Coran 28:9). Musa refusa toute nourrice, jusqu\'à ce que sa sœur, présente sur les lieux, propose une famille "qui s\'en occupera bien" — sa propre mère, qui put ainsi allaiter et élever son fils au cœur même du palais, rémunérée par Pharaon pour prendre soin de celui qu\'il avait juré de faire disparaître : "Ainsi Nous le rendîmes à sa mère, afin que son œil se réjouisse et qu\'elle ne s\'afflige plus, et pour qu\'elle sache que la promesse d\'Allah est vérité" (Coran 28:13).',
+      },
+      {
+        etape: 'Le meurtre accidentel et la fuite vers Madyan',
+        texte: 'Devenu adulte, Musa surprit un Égyptien en train de frapper un Israélite. Il intervint et lui donna un coup de poing qui, sans qu\'il l\'ait voulu, causa sa mort. Musa se repentit aussitôt : "Seigneur, j\'ai fait du tort à moi-même, pardonne-moi" (Coran 28:16). Averti qu\'on complotait pour le tuer, il s\'enfuit seul vers Madyan, invoquant Allah : "Peut-être mon Seigneur me guidera-t-Il sur le droit chemin" (Coran 28:22). Arrivé près d\'un puits, il aida deux jeunes femmes à faire boire leurs troupeaux ; leur père, un homme pieux de Madyan, l\'accueillit, lui donna l\'une de ses filles en mariage et l\'engagea pour dix années au service de ses troupeaux (Coran 28:27).',
+      },
+      {
+        etape: 'Le feu du mont Tuwa et l\'appel divin',
+        texte: 'Sur le chemin du retour vers l\'Égypte avec sa famille, Musa aperçut un feu au loin et s\'en approcha pour en ramener un tison. Dans la vallée bénie de Tuwa, Allah lui parla directement, sans intermédiaire — c\'est pour cet honneur unique que Musa reçut le titre de Kalimullah, Celui à qui Allah a parlé (Coran 4:164) : "Ôte tes sandales, car tu es dans la vallée sacrée de Tuwa" (Coran 20:12). Son bâton se changea en serpent et sa main, glissée sous son bras, ressortit blanche et lumineuse sans aucun mal (Coran 20:17-22) — deux signes qu\'il devrait montrer à Pharaon. Musa, conscient de sa gêne dans la parole depuis une brûlure d\'enfance, implora : "Seigneur, ouvre ma poitrine, facilite ma tâche, dénoue un nœud de ma langue... et donne-moi un ministre de ma famille, Harun mon frère" (Coran 20:25-30). Allah exauça sa demande.',
+      },
+      {
+        etape: 'Face à Pharaon : les miracles et les magiciens',
+        texte: 'Musa et Harun se présentèrent devant Pharaon avec un message d\'une clarté totale : "Envoie avec nous les Bani Israël" (Coran 20:47). Pharaon, qui se proclamait lui-même divinité suprême ("Je suis votre seigneur, le très-haut", Coran 79:24), rassembla ses plus grands magiciens pour discréditer Musa. Le jour de la fête, les magiciens jetèrent leurs cordes et bâtons qui semblèrent grouiller comme des serpents. Musa jeta le sien : il avala tout ce qu\'ils avaient produit. Les magiciens, hommes de l\'art, reconnurent aussitôt qu\'aucune magie humaine ne pouvait produire ce prodige et tombèrent en prosternation, s\'écriant : "Nous croyons au Seigneur des mondes, le Seigneur de Musa et Harun !" (Coran 26:47-48), bravant la menace de Pharaon de leur couper mains et pieds.',
+      },
+      {
+        etape: 'Les plaies d\'Égypte et la libération',
+        texte: 'Pharaon s\'entêta, malgré neuf signes clairs envoyés successivement — parmi eux le déluge, les sauterelles, les poux, les grenouilles et le sang (Coran 7:133) — chaque fois suivis d\'une promesse de croire, aussitôt trahie une fois le fléau levé. Allah ordonna finalement à Musa de partir de nuit avec les Bani Israël (Coran 20:77).',
+      },
+      {
+        etape: 'La traversée de la mer',
+        texte: 'Pharaon les poursuivit avec son armée. Acculés entre la mer et l\'ennemi, les Israélites paniquèrent : "Nous allons être rattrapés !" Musa répondit avec une confiance inébranlable : "Non ! Mon Seigneur est avec moi, Il me guidera" (Coran 26:61-62). Allah lui ordonna de frapper la mer de son bâton : elle s\'ouvrit en douze passages secs, "chaque partie comme une immense montagne" (Coran 26:63). Les Israélites traversèrent ; Pharaon et son armée s\'y engouffrèrent à leur tour, et les eaux se refermèrent sur eux. Au moment de se noyer, Pharaon proclama sa foi trop tard ; Allah préserva son corps comme signe pour la postérité (Coran 10:90-92).',
+      },
+      {
+        etape: 'Le Sinaï, la Torah et le veau d\'or',
+        texte: 'Allah donna rendez-vous à Musa sur le mont Sinaï pour quarante nuits et lui révéla la Torah, gravée sur des Tables, "un exposé complet de toute chose" (Coran 7:145). Pendant son absence, un homme du nom de Samiri façonna, à partir des bijoux du peuple, un veau d\'or qui semblait mugir, et le peuple s\'y adonna en idolâtrie malgré les mises en garde de Harun. De retour, Musa, bouleversé, saisit la tête et la barbe de son frère sous le coup de la colère avant d\'apprendre son innocence, puis jeta les Tables au sol (Coran 7:150). Il choisit ensuite soixante-dix hommes pour se repentir sur le Mont ; certains, non satisfaits, demandèrent à voir Allah directement et furent saisis par la foudre avant d\'être ressuscités (Coran 7:155).',
+      },
+      {
+        etape: 'La rencontre avec le sage Khidr',
+        texte: 'Après avoir affirmé être le plus savant des hommes, Musa fut renvoyé par Allah vers un serviteur détenteur d\'une science que lui-même ne possédait pas : Al-Khidr. Sourate Al-Kahf (18:60-82) relate leur voyage : Musa, malgré sa promesse de patience, s\'étonna à trois reprises des actes en apparence injustes de Khidr — un bateau endommagé, un jeune homme tué, un mur relevé sans salaire — avant d\'apprendre la sagesse cachée derrière chacun. Cet épisode enseigne à Musa, le plus grand des messagers face à Pharaon, une leçon d\'humilité devant l\'immensité du savoir d\'Allah.',
+      },
     ],
     traits: [
       { label: 'Courage devant les puissants', emoji: '🦁' },
@@ -948,19 +1144,48 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Allah envoya Harun, frère de Musa, comme soutien car il était plus éloquent (Coran 28:34).',
       },
+      {
+        question: 'Que rechercha Musa auprès du sage Al-Khidr (Coran 18:60-82) ?',
+        options: [
+          'De l\'or et des richesses',
+          'Une science qu\'Allah avait donnée à Khidr et que Musa ne possédait pas',
+          'Un remède pour Pharaon',
+          'Un chemin plus court vers Madyan',
+        ],
+        correct: 1,
+        explication: 'Musa partit en voyage pour apprendre de Khidr une science particulière qu\'Allah lui avait enseignée, et dut faire preuve de patience face à des actes en apparence injustifiés.',
+      },
     ],
   },
   {
     id: 'harun',
     nom: 'Harun',
+    nomBiblique: 'Aaron',
     arabe: 'هَارُون',
     surnom: 'Le Soutien de Musa',
     periode: 'Environ 1300 av. J.-C.',
     resume: 'Harun est le frère de Musa et son compagnon de prophétie. Allah l\'accorda à Musa comme ministre et porte-parole grâce à son éloquence. Il géra le peuple pendant l\'absence de Musa sur le Sinaï.',
     histoire: [
-      'Quand Musa reçut sa mission, il demanda à Allah un soutien. Sa première demande fut pour son frère Harun : "Accorde-moi un ministre de ma famille, Harun mon frère — renforce par lui mon dos et associe-le à ma mission." Allah accepta.',
-      'Harun était connu pour son éloquence, là où Musa avait une gêne dans la parole. Ensemble ils allèrent chez Pharaon. Harun était le porte-parole et le soutien moral de son frère tout au long de la mission.',
-      'Quand Musa monta sur le Sinaï pendant quarante jours, il confia son peuple à Harun. Le peuple tomba dans l\'adoration du veau d\'or, un piège tendu par le Samiri. Harun tenta de les en dissuader mais ils refusèrent d\'écouter. À son retour, Musa fut si en colère qu\'il saisit la barbe de Harun. Harun expliqua qu\'il avait tout fait pour les en empêcher.',
+      {
+        etape: 'La demande de Musa exaucée',
+        texte: 'Face à l\'ampleur de sa mission devant Pharaon, Musa implora Allah : "Seigneur, ouvre ma poitrine, facilite ma tâche, dénoue un nœud de ma langue afin qu\'ils comprennent mon discours. Et accorde-moi un ministre de ma famille, Harun mon frère. Renforce par lui mon dos et associe-le à ma mission" (Coran 20:25-32). Allah répondit : "Ta demande est exaucée, ô Musa" (Coran 20:36). Le Coran précise ailleurs qu\'Il fit de Harun un prophète "par un effet de Notre miséricorde" (Coran 19:53), et non un simple assistant : les deux frères reçurent ensemble le titre de messagers.',
+      },
+      {
+        etape: 'Ensemble devant Pharaon',
+        texte: 'Allah leur ordonna à tous deux d\'aller voir Pharaon, avec une consigne surprenante de douceur envers un tyran : "Parlez-lui avec des mots doux ; peut-être se souviendra-t-il ou craindra-t-il" (Coran 20:44). Harun, plus éloquent que son frère, portait la parole tandis que Musa affrontait Pharaon avec les signes. Ensemble ils demandaient : "Envoie avec nous les Bani Israël, et ne les châtie plus" (Coran 20:47).',
+      },
+      {
+        etape: 'Le gardien du peuple en l\'absence de Musa',
+        texte: 'Avant de monter au Sinaï, Musa confia sa communauté à Harun : "Remplace-moi auprès de mon peuple, agis avec droiture et ne suis pas la voie des corrupteurs" (Coran 7:142). Quand le Samiri façonna le veau d\'or et que le peuple s\'y adonna, Harun les avertit sans relâche : "Ô mon peuple, vous n\'êtes éprouvés que par cela. Votre Seigneur est le Tout Miséricordieux : suivez-moi et obéissez à mon ordre" (Coran 20:90). Mais le peuple, entêté, répondit qu\'il continuerait tant que Musa ne serait pas revenu (Coran 20:91).',
+      },
+      {
+        etape: 'La colère de Musa et l\'innocence de Harun',
+        texte: 'De retour et furieux devant l\'idolâtrie de son peuple, Musa saisit la tête et la barbe de son frère. Harun, avec une immense douceur malgré l\'injustice du geste, répondit : "Ô fils de ma mère, ne me saisis ni par la barbe ni par la tête ! Je craignais que tu dises : tu as créé la division parmi les Bani Israël et tu n\'as pas gardé mes paroles" (Coran 20:94). Musa comprit alors que son frère avait fait tout ce qui était en son pouvoir, et invoqua : "Seigneur, pardonne-moi et à mon frère, et fais-nous entrer dans Ta miséricorde" (Coran 7:151).',
+      },
+      {
+        etape: 'Une fraternité prophétique inséparable',
+        texte: 'Le Coran unit constamment les deux frères dans la mémoire des croyants : "Nous avons certes accordé une grâce à Musa et à Harun. Et Nous les sauvâmes, eux et leur peuple, de la grande détresse... Paix sur Musa et Harun !" (Coran 37:114-120). Selon la tradition, Harun mourut avant Musa, durant les années d\'errance des Bani Israël dans le désert du Tih — un frère resté fidèle jusqu\'au bout, dont le nom demeure indissociable de celui de Musa dans le Coran comme dans l\'histoire de la prophétie.',
+      },
     ],
     traits: [
       { label: 'Éloquence', emoji: '📣' },
@@ -998,6 +1223,17 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Musa dit à Allah : "Il est plus éloquent que moi dans le discours" (Coran 28:34).',
       },
+      {
+        question: 'Quelle consigne étonnante Allah donna-t-Il à Musa et Harun avant leur rencontre avec Pharaon ?',
+        options: [
+          'De se montrer menaçants',
+          'De lui parler avec des mots doux',
+          'De rester silencieux',
+          'De venir accompagnés d\'une armée',
+        ],
+        correct: 1,
+        explication: 'Coran 20:44 : Allah leur ordonna de parler à Pharaon "avec des mots doux ; peut-être se souviendra-t-il ou craindra-t-il".',
+      },
     ],
   },
   {
@@ -1008,9 +1244,22 @@ export const prophetes: Prophete[] = [
     periode: 'Environ 1300 av. J.-C.',
     resume: 'Dhul-Kifl est cité deux fois dans le Coran parmi les patients et les vertueux. Son nom signifie "Celui de la double récompense" ou "l\'Homme de l\'engagement". Il est reconnu pour sa fidélité à ses promesses.',
     histoire: [
-      'Le Coran mentionne Dhul-Kifl aux côtés d\'Ismaïl et d\'Idris, parmi les hommes de patience et de vertu. Son identité exacte est débattue entre les exégètes — certains l\'identifient à Ezéchiel, d\'autres à un prophète distinct.',
-      'Selon des narrations, Dhul-Kifl prit l\'engagement de prier cent fois par jour, de jeûner continuellement et de ne jamais se mettre en colère en jugeant entre les hommes. Il tint ses engagements jusqu\'à la fin de sa vie, ce qui lui valut le nom "Dhul-Kifl" — "Celui qui s\'engagea" ou "Celui de la double récompense".',
-      'Certains commentateurs, comme At-Tabari, rapportent qu\'un prophète vieillissant chercha un homme capable de tenir ces engagements exigeants avant de lui confier la charge de juge de son peuple, et que Dhul-Kifl fut le seul à accepter et à les tenir sans faillir. Sa constance lui valut cette place parmi les hommes cités comme modèles de patience, aux côtés d\'Ismaïl et d\'Idris.',
+      {
+        etape: 'Une identité débattue par les savants',
+        texte: 'Ibn Kathir consacre plusieurs pages à Dhul-Kifl dans ses "Qisas al-Anbiya", rappelant que son identité exacte fait débat parmi les exégètes : certains le considèrent comme un prophète à part entière, d\'autres pensent qu\'il s\'agit d\'un homme vertueux non-prophète, parfois identifié au fils d\'Ayyub. Ce qui reste certain, c\'est la place que le Coran lui accorde parmi les meilleurs serviteurs d\'Allah, aux côtés d\'Ismaïl et d\'Idris (Coran 21:85) puis d\'Ismaïl et d\'Al-Yasa\' (Coran 38:48).',
+      },
+      {
+        etape: 'Le vœu qui donna son nom',
+        texte: 'Selon un récit largement rapporté par les commentateurs, un prophète vieillissant du peuple des Bani Israël, cherchant qui pourrait lui succéder pour juger les gens, lança un défi : il donnerait la charge à quiconque s\'engagerait à jeûner le jour, prier la nuit, et ne jamais se mettre en colère en tranchant entre les hommes. Un jeune homme peu considéré par son entourage se présenta et accepta cet engagement (*kafala*), en échange de quoi le prophète lui garantit le Paradis. C\'est de cet engagement tenu qu\'il tira son nom : Dhul-Kifl, "Celui qui a pris la charge" ou "Celui de la garantie double".',
+      },
+      {
+        etape: 'Les épreuves de Shaytan',
+        texte: 'Ibn Kathir rapporte que Shaytan, furieux de cette promesse de Paradis, tenta à de nombreuses reprises de le faire sortir de sa colère ou de lui faire manquer sa séance de jugement quotidienne, se présentant sous les traits d\'un vieillard en détresse juste au moment de son repos, cherchant à provoquer son agacement. Chaque fois, Dhul-Kifl garda son calme et respecta scrupuleusement son engagement, jusqu\'à ce que Shaytan renonce, vaincu par sa constance.',
+      },
+      {
+        etape: 'Une place parmi les vertueux',
+        texte: 'Sa fidélité totale à sa parole, malgré toutes les tentatives de le faire vaciller, lui valut d\'être cité par le Coran parmi les patients (Coran 21:85) et parmi les meilleurs (*Akhyar*, Coran 38:48) — une reconnaissance divine accordée non pour un miracle spectaculaire, mais pour la constance silencieuse d\'un homme fidèle à son engagement jour après jour.',
+      },
     ],
     traits: [
       { label: 'Fidélité aux engagements', emoji: '🤝' },
@@ -1048,19 +1297,48 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Coran 38:48 cite Ismaïl, Al-Yasa\' et Dhul-Kifl ensemble parmi les meilleurs (Akhyar).',
       },
+      {
+        question: 'Comment Shaytan tenta-t-il de faire fléchir Dhul-Kifl dans son engagement, selon Ibn Kathir ?',
+        options: [
+          'En lui volant ses biens',
+          'En se présentant comme un vieillard en détresse juste avant son repos',
+          'En menaçant sa famille',
+          'En le calomniant publiquement',
+        ],
+        correct: 1,
+        explication: 'Ibn Kathir rapporte que Shaytan se présenta à plusieurs reprises sous les traits d\'un vieillard en détresse pour le faire sortir de son calme ou lui faire manquer sa séance de jugement — sans jamais y parvenir.',
+      },
     ],
   },
   {
     id: 'dawud',
     nom: 'Dawud',
+    nomBiblique: 'David',
     arabe: 'دَاوُد',
     surnom: 'Roi-Prophète',
     periode: 'Environ 1000 av. J.-C.',
     resume: 'Dawud était un jeune berger qui tua le géant Jalut (Goliath) avec une fronde. Devenu roi d\'Israël, il reçut les Psaumes (Zabur) et pouvait ramollir le fer de ses mains. Les oiseaux et les montagnes glorifiaient Allah avec lui.',
     histoire: [
-      'Dawud était un jeune homme dans l\'armée israélite face à l\'armée de Jalut (Goliath). L\'armée d\'Israël était terrifiée. Dawud, simple berger, s\'avança avec sa fronde et une pierre, invoquant Allah. La pierre atteignit Jalut et le tua. Cette victoire inattendue lui valut la gloire et finalement la royauté.',
-      'Allah lui accorda des dons extraordinaires : les oiseaux et les montagnes glorifiaient Allah avec lui, et sa voix était d\'une beauté surnaturelle pour la récitation du Zabur (les Psaumes), le livre saint qui lui fut révélé. Allah ramollit pour lui le fer sans feu — il fabriquait des cottes de mailles avec ses propres mains et vivait de son travail, refusant de vivre aux dépens de ses sujets.',
-      'Dawud était aussi un juge remarquable. Le Coran rappelle un épisode où deux hommes se disputèrent devant lui — une allusion à une épreuve qu\'il traversa. Il se repentit profondément et Allah le pardonna : "Nous lui avons pardonné et il a, auprès de Nous, une haute considération et une belle demeure."',
+      {
+        etape: 'Le jeune berger face au géant Jalut',
+        texte: 'Après que le prophète des Bani Israël leur eut désigné Talut (Saül) comme roi, confirmé par le signe d\'un coffre sacré (Tabut) porté par les anges (Coran 2:248), l\'armée israélite affronta celle du géant Jalut (Goliath). Beaucoup de soldats faiblirent en chemin, incapables de résister à la soif près de la rivière malgré l\'avertissement de Talut (Coran 2:249). Parmi les rares restés fermes se trouvait Dawud, simple jeune berger. Il s\'avança seul avec sa fronde, invoquant Allah, et abattit Jalut d\'une pierre. Le Coran résume : "Dawud tua Jalut, et Allah lui donna la royauté et la sagesse, et lui enseigna ce qu\'Il voulut" (Coran 2:251).',
+      },
+      {
+        etape: 'Un roi-prophète comblé de dons',
+        texte: 'Allah unit en Dawud la royauté et la prophétie, chose rare parmi les envoyés. Il lui révéla le Zabur (les Psaumes) et lui accorda une voix si belle que "Nous avons asservi les montagnes avec lui, chantant Nos louanges soir et matin, ainsi que les oiseaux rassemblés" (Coran 38:18-19). Le Coran ajoute : "Certes Nous avons donné à Dawud une grâce de Notre part : Ô montagnes, répétez avec lui Nos louanges ! Et vous aussi, oiseaux !" (Coran 34:10) — un accompagnement cosmique de sa glorification d\'Allah, unique dans le récit prophétique.',
+      },
+      {
+        etape: 'Le fer ramolli et le travail de ses mains',
+        texte: 'Allah ramollit le fer pour Dawud sans qu\'il ait besoin de feu, lui permettant de façonner des cottes de mailles : "Fabrique des cottes de mailles complètes et mesure bien les mailles. Et faites le bien, vous et lui, car Je vois parfaitement ce que vous œuvrez" (Coran 34:11). Un hadith rapporté par Al-Bukhari précise que Dawud ne mangeait que de ce que ses propres mains avaient gagné (Sahih al-Bukhari, n°2073) — un roi qui, malgré son immense pouvoir, refusait de vivre aux dépens de son peuple.',
+      },
+      {
+        etape: 'Les deux plaideurs et le repentir sincère',
+        texte: 'Le Coran relate qu\'un jour, deux hommes escaladèrent le mur de son lieu de prière privé (mihrab) pour lui soumettre un litige : l\'un accusait l\'autre de lui avoir injustement pris sa brebis unique en plus de ses quatre-vingt-dix-neuf (Coran 38:21-24). Dawud, sans entendre l\'autre partie, trancha rapidement — puis comprit qu\'il s\'agissait d\'une épreuve (fitna) pour tester la rigueur de son jugement. Il tomba aussitôt en prosternation, demandant pardon. Ibn Kathir insiste avec force sur ce point : il réfute explicitement les récits d\'origine israélite (Isra\'iliyyat) qui prêtent à Dawud une faute grave et indigne d\'un prophète, rappelant qu\'Allah préserve Ses messagers de tels péchés ; l\'erreur de Dawud ne fut qu\'une précipitation dans le jugement, aussitôt suivie d\'un repentir sincère. Allah lui pardonna : "Nous lui pardonnâmes cela. Il a, auprès de Nous, un rang élevé et un beau retour" (Coran 38:25).',
+      },
+      {
+        etape: 'Le jeûne et la prière de Dawud',
+        texte: 'Le Prophète ﷺ a cité l\'adoration de Dawud comme un modèle d\'équilibre : "Le jeûne le plus aimé d\'Allah est le jeûne de Dawud : il jeûnait un jour et rompait le jeûne le jour suivant. Et la prière la plus aimée d\'Allah est la prière de Dawud : il dormait la moitié de la nuit, en priait le tiers, puis dormait le sixième restant" (Sahih al-Bukhari, n°1131 ; Sahih Muslim, n°1159). Cette pratique, encore appelée aujourd\'hui "siyam Dawud", reste citée comme l\'idéal de la constance dans l\'adoration, ni excessive ni relâchée.',
+      },
     ],
     traits: [
       { label: 'Courage', emoji: '🦁' },
@@ -1099,19 +1377,60 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Allah ramollit le fer pour Dawud, qui fabriquait des cottes de mailles et refusait de vivre aux dépens de ses sujets (Coran 34:10-11).',
       },
+      {
+        question: 'Que dit le Prophète ﷺ à propos du jeûne de Dawud ?',
+        options: [
+          'Qu\'il jeûnait toute l\'année',
+          'Qu\'il jeûnait un jour sur deux — le jeûne le plus aimé d\'Allah',
+          'Qu\'il ne jeûnait jamais',
+          'Qu\'il jeûnait uniquement le mois sacré',
+        ],
+        correct: 1,
+        explication: 'Sahih al-Bukhari (n°1131) rapporte que le jeûne le plus aimé d\'Allah est celui de Dawud : un jour sur deux.',
+      },
     ],
   },
   {
     id: 'sulayman',
     nom: 'Sulayman',
+    nomBiblique: 'Salomon',
     arabe: 'سُلَيْمَان',
     surnom: 'Roi des rois',
     periode: 'Environ 950 av. J.-C.',
     resume: 'Sulayman, fils de Dawud, fut le roi le plus puissant de l\'histoire. Il comprenait le langage des animaux, commandait les djinns et le vent, et reçut la reine de Saba en convertissant son royaume à l\'islam.',
     histoire: [
-      'Sulayman hérita de la royauté et de la prophétie de son père Dawud. Allah lui accorda un règne sans précédent : les djinns, les humains et les oiseaux lui étaient soumis. Le vent lui obéissait — un mois pour aller, un mois pour revenir. Il pouvait comprendre le langage des animaux et des insectes : une fourmi prévint ses congénères quand l\'armée de Sulayman s\'approchait.',
-      'La reine de Saba (Bilqis), régnant sur le Yémen, lui envoya des cadeaux en signe de neutralité. Sulayman refusa : "Ce qu\'Allah m\'a donné est meilleur que ce que vous m\'avez offert." Il invita Bilqis à venir le rencontrer. Un djinn apporta son trône à Jérusalem avant qu\'elle ne puisse "cligner de l\'œil". La reine, face à ce prodige, embrassa l\'islam.',
-      'Sulayman ne fut jamais enivré par son pouvoir. Il dit constamment : "C\'est la faveur de mon Seigneur pour m\'éprouver — serai-je reconnaissant ou ingrat ?" Sa mort arriva alors qu\'il était appuyé sur son bâton, surveillant les djinns au travail. Les djinns ne surent qu\'il était mort que quand les termites rongèrent son bâton et qu\'il s\'effondra.',
+      {
+        etape: 'Un héritage royal et prophétique',
+        texte: 'Sulayman hérita de la royauté et de la prophétie de son père Dawud. Le Coran résume cet héritage par ces mots : "Sulayman hérita de Dawud et dit : Ô hommes, on nous a enseigné le langage des oiseaux et on nous a donné part de toutes choses. C\'est là, vraiment, la grâce évidente" (Coran 27:16). Allah lui soumit les djinns, les humains, les oiseaux, et le vent lui-même : "Nous avons soumis à Sulayman le vent qui, par son ordre, courait un mois le matin et un mois le soir" (Coran 34:12).',
+      },
+      {
+        etape: 'La vallée des fourmis',
+        texte: 'Passant avec son immense armée composée de djinns, d\'hommes et d\'oiseaux, Sulayman traversa une vallée de fourmis. L\'une d\'elles s\'écria : "Ô fourmis, entrez dans vos demeures, de peur que Sulayman et ses armées ne vous écrasent sans s\'en apercevoir !" Sulayman entendit ses paroles et sourit, amusé et reconnaissant, puis invoqua : "Seigneur, inspire-moi de Te remercier pour Ton bienfait... et de faire le bien que Tu agrées" (Coran 27:18-19) — preuve que sa science du langage animal servait avant tout à nourrir sa gratitude.',
+      },
+      {
+        etape: 'La huppe absente et le royaume de Saba',
+        texte: 'Passant en revue les oiseaux de son armée, Sulayman remarqua l\'absence de la huppe (hudhud) et menaça de la punir sévèrement si elle n\'avait pas d\'excuse valable (Coran 27:20-21). Elle revint avec une nouvelle capitale : elle avait découvert un royaume gouverné par une femme, Bilqis, disposant d\'un trône immense, mais dont le peuple se prosternait devant le soleil au lieu d\'Allah (Coran 27:22-24).',
+      },
+      {
+        etape: 'La lettre et le défi de Bilqis',
+        texte: 'Sulayman envoya à Bilqis une lettre l\'invitant, elle et son peuple, à se soumettre à Allah. Bilqis, prudente, lui envoya d\'abord de riches présents pour sonder ses intentions. Sulayman les refusa avec fermeté : "Est-ce par des biens que vous voulez m\'aider ? Ce qu\'Allah m\'a donné vaut mieux que ce qu\'Il vous a donné" (Coran 27:36), et exigea qu\'elle vienne se soumettre, faute de quoi son armée interviendrait.',
+      },
+      {
+        etape: 'Le trône apporté en un clin d\'œil',
+        texte: 'Avant l\'arrivée de Bilqis, Sulayman demanda qui pourrait lui apporter son trône. Un puissant djinn (ifrit) proposa de le faire avant qu\'il ne se lève de sa place ; mais un homme détenteur d\'une science du Livre déclara pouvoir l\'apporter en un instant, "avant même que ton regard ne revienne à toi" (Coran 27:40). Voyant le trône devant lui, Sulayman ne s\'enorgueillit pas, mais dit : "Ceci est de la faveur de mon Seigneur, pour m\'éprouver — serai-je reconnaissant ou ingrat ?"',
+      },
+      {
+        etape: 'La conversion de Bilqis',
+        texte: 'On modifia le trône de Bilqis pour tester sa perspicacité ; elle le reconnut malgré tout. On la fit ensuite entrer dans un palais au sol de verre poli sur de l\'eau : croyant marcher vers une mare, elle releva sa robe. Sulayman lui précisa qu\'il s\'agissait d\'un dallage de cristal (Coran 27:44). Face à ces prodiges, Bilqis reconnut son erreur passée et déclara : "Seigneur, je me suis fait du tort à moi-même, et je me soumets avec Sulayman à Allah, Seigneur des mondes" (Coran 27:44).',
+      },
+      {
+        etape: 'Les djinns à son service',
+        texte: 'Allah mit au service de Sulayman des djinns qui plongeaient dans la mer et accomplissaient d\'autres travaux, "et Nous les surveillions" (Coran 21:82). Ils lui construisirent "ce qu\'il voulait comme sanctuaires, statues, bassins grands comme des réservoirs et marmites fixées au sol" (Coran 34:13), tandis que d\'autres djinns rebelles étaient enchaînés (Coran 38:38).',
+      },
+      {
+        etape: 'La mort appuyée sur son bâton',
+        texte: 'Sulayman mourut debout, appuyé sur son bâton, alors qu\'il surveillait les djinns au travail. Ceux-ci continuèrent leur labeur, croyant qu\'il vivait encore, jusqu\'à ce qu\'un ver ronge le bâton et que le corps s\'effondre. Le Coran conclut : "Quand les djinns comprirent qu\'il était mort... si les djinns avaient connu l\'Inconnu, ils ne seraient pas restés dans le châtiment humiliant" du travail forcé, prouvant qu\'ils n\'avaient jamais eu accès au savoir caché (Coran 34:14).',
+      },
     ],
     traits: [
       { label: 'Gratitude', emoji: '🤲' },
@@ -1149,19 +1468,43 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Bilqis régnait sur le royaume de Saba, dans l\'actuel Yémen, avant de reconnaître la vérité du message de Sulayman (Coran 27:22-44).',
       },
+      {
+        question: 'Quel oiseau apporta à Sulayman la nouvelle du royaume de Saba ?',
+        options: ['Le corbeau', 'La huppe (hudhud)', 'L\'aigle', 'Le faucon'],
+        correct: 1,
+        explication: 'Absente puis de retour, la huppe rapporta à Sulayman l\'existence d\'un royaume gouverné par Bilqis dont le peuple adorait le soleil (Coran 27:20-24).',
+      },
     ],
   },
   {
     id: 'ilyas',
     nom: 'Ilyas',
+    nomBiblique: 'Élie',
     arabe: 'إِلْيَاس',
     surnom: 'Prophète de Ba\'labakk',
     periode: 'Environ 850 av. J.-C.',
     resume: 'Ilyas fut envoyé aux Bani Israël qui adoraient l\'idole Ba\'l. Il les affronta seul, fut chassé par son peuple, et Allah le salua jusqu\'au Jour dernier. Son nom signifie "Mon Dieu est Seigneur".',
     histoire: [
-      'Ilyas fut envoyé aux habitants de Ba\'labakk (Liban actuel) et aux Bani Israël qui adoraient une idole nommée Ba\'l et avaient délaissé Allah. Il leur dit : "Adorez-vous Ba\'l et abandonnez-vous le meilleur des créateurs — Allah, votre Seigneur et le Seigneur de vos ancêtres ?"',
-      'Son peuple le rejeta. Seule une petite poignée crut avec lui. Dans une épreuve semblable à celle d\'Ayyub, Ilyas se retrouva seul contre toute une nation. Il demeura ferme dans sa mission sans jamais fléchir. Allah le salua par les générations : "Paix sur Ilyas dans l\'univers entier !"',
-      'Certains récits, non confirmés explicitement par le Coran, rapprochent le destin d\'Ilyas de celui d\'Al-Khidr, évoquant une vie prolongée hors du cours ordinaire de la mort. Ces traditions témoignent en tout cas de la place particulière qu\'occupe Ilyas dans l\'imaginaire prophétique, comme symbole de la fermeté solitaire face à l\'égarement collectif.',
+      {
+        etape: 'Un peuple tombé dans l\'idolâtrie',
+        texte: 'Ibn Kathir situe Ilyas plusieurs générations après Musa, envoyé aux Bani Israël de Ba\'labakk (l\'actuelle Baalbek, au Liban). Ce peuple, pourtant héritier du monothéisme transmis par Musa et Harun, s\'était détourné d\'Allah pour adorer une idole appelée Ba\'l — selon les récits, une statue dorée de grande taille érigée dans leur cité.',
+      },
+      {
+        etape: 'L\'appel à l\'adoration exclusive d\'Allah',
+        texte: 'Ilyas les affronta avec des mots d\'une clarté totale : "Ne craignez-vous pas [Allah] ? Invoquez-vous Ba\'l et délaissez-vous le Meilleur des créateurs, Allah, votre Seigneur et le Seigneur de vos plus anciens ancêtres ?" (Coran 37:124-126). Il ne leur proposait rien de nouveau, seulement un retour à la foi de leurs propres pères.',
+      },
+      {
+        etape: 'Le rejet et la solitude du prophète',
+        texte: 'Le peuple le traita de menteur. Le Coran précise : "Ils le traitèrent de menteur. Ils seront tous emmenés [au châtiment], sauf les serviteurs élus d\'Allah" (Coran 37:127-128) — seule une poignée de croyants sincères échappa au sort commun. Comme Ayyub avant lui, Ilyas se retrouva pratiquement seul à défendre le Tawhid face à une nation entière, sans jamais fléchir dans sa mission.',
+      },
+      {
+        etape: 'Une salutation éternelle',
+        texte: 'Malgré ce rejet, Allah lui accorda un honneur rare, réservé à très peu de prophètes : être salué par les générations futures jusqu\'au Jour dernier. "Et Nous avons laissé sur lui [ce salut] parmi les générations ultérieures : Paix sur Ilyas ! (Ilyasin, selon une autre lecture) — c\'est ainsi que Nous récompensons les bienfaisants. Il était du nombre de Nos serviteurs croyants" (Coran 37:129-132).',
+      },
+      {
+        etape: 'La transmission à Al-Yasa\'',
+        texte: 'Selon la tradition, arrivé au terme de sa mission, Ilyas transmit le flambeau de la prophétie à son disciple Al-Yasa\', qui continua après lui à appeler les Bani Israël vers Allah — assurant que l\'appel à la vérité ne s\'éteint jamais avec un seul homme, mais se poursuit de génération en génération.',
+      },
     ],
     traits: [
       { label: 'Fermeté solitaire', emoji: '🏔️' },
@@ -1198,19 +1541,35 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Comme Ayyub, qui endura seul une épreuve extrême, Ilyas se retrouva seul face au rejet de tout un peuple, sans jamais fléchir.',
       },
+      {
+        question: 'À qui Ilyas transmit-il, selon la tradition, la mission prophétique auprès des Bani Israël ?',
+        options: ['À son fils', 'À son disciple Al-Yasa\'', 'À Dhul-Kifl', 'À Zakariya'],
+        correct: 1,
+        explication: 'Selon la tradition, Ilyas transmit le flambeau de la prophétie à son disciple Al-Yasa\', qui poursuivit l\'appel après lui.',
+      },
     ],
   },
   {
     id: 'al-yasa',
     nom: "Al-Yasa'",
+    nomBiblique: 'Élisée',
     arabe: 'الْيَسَع',
     surnom: 'Successeur d\'Ilyas',
     periode: 'Environ 850 av. J.-C.',
     resume: "Al-Yasa' est le successeur et disciple d'Ilyas. Le Coran le cite deux fois parmi les vertueux. Il continua la mission prophétique aux Bani Israël après Ilyas.",
     histoire: [
-      "Al-Yasa' fut le disciple et successeur d'Ilyas. Après le départ d'Ilyas, Al-Yasa' porta la prophétie aux Bani Israël, continuant à les appeler au culte exclusif d'Allah.",
-      "Le Coran le mentionne deux fois (6:86 et 38:48) parmi les prophètes qu'Allah a guidés et préférés sur les mondes. Bien que son histoire soit peu développée dans le Coran, sa mention dans cette liste illustre qu'il fit partie des meilleurs serviteurs d'Allah.",
-      "Peu de détails narratifs sont rapportés sur la vie d'Al-Yasa' dans les sources islamiques, contrairement à d'autres prophètes dont le Coran développe longuement l'histoire. Cette sobriété n'enlève rien à sa valeur : le Coran le classe explicitement, aux côtés d'Ismaïl et de Dhul-Kifl, parmi les Akhyar — les meilleurs des hommes — un rappel que la reconnaissance d'Allah ne dépend pas de la place qu'on occupe dans le récit, mais de la sincérité du service rendu.",
+      {
+        etape: 'Le disciple qui reprit le flambeau',
+        texte: "Ibn Kathir rapporte qu'Al-Yasa' fut le disciple le plus proche d'Ilyas, celui qui l'accompagna fidèlement durant sa mission. Lorsque celle-ci s'acheva, Al-Yasa' reprit la charge prophétique auprès des Bani Israël, poursuivant sans interruption l'appel à l'adoration exclusive d'Allah que son maître avait porté avant lui.",
+      },
+      {
+        etape: "Une mention discrète mais honorable",
+        texte: "Le Coran le cite deux fois, toujours aux côtés d'autres prophètes exemplaires : une première fois parmi ceux qu'Allah a guidés et \"préférés sur les mondes\" (Coran 6:86-87), une seconde fois aux côtés d'Ismaïl et de Dhul-Kifl parmi les Akhyar, les meilleurs des serviteurs (Coran 38:48). Contrairement à Musa ou Yusuf, aucun épisode détaillé de sa vie n'est développé dans le Coran ou dans les recueils authentiques de hadith.",
+      },
+      {
+        etape: "La valeur qui ne dépend pas du récit",
+        texte: "Cette sobriété narrative n'enlève rien à sa valeur devant Allah. Ibn Kathir souligne que la brièveté d'un récit prophétique dans le Coran n'indique jamais un rang inférieur : Al-Yasa' est explicitement classé parmi les meilleurs, un rappel que la reconnaissance d'Allah se mesure à la sincérité du service rendu, non à la place qu'on occupe dans le récit.",
+      },
     ],
     traits: [
       { label: 'Continuité', emoji: '🌿' },
@@ -1247,19 +1606,56 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: "Le Coran les décrit comme faisant partie des Akhyar — les meilleurs des serviteurs d'Allah.",
       },
+      {
+        question: "Que retenir de la brièveté du récit d'Al-Yasa' dans le Coran, selon Ibn Kathir ?",
+        options: [
+          "Qu'il fut un prophète de rang inférieur",
+          "Que la brièveté d'un récit n'indique jamais un rang inférieur devant Allah",
+          "Qu'il n'exerça jamais réellement sa mission",
+          "Que son histoire a été perdue",
+        ],
+        correct: 1,
+        explication: "Ibn Kathir souligne que la sobriété narrative d'un prophète ne diminue en rien sa valeur : Al-Yasa' est explicitement classé parmi les meilleurs.",
+      },
     ],
   },
   {
     id: 'yunus',
     nom: 'Yunus',
+    nomBiblique: 'Jonas',
     arabe: 'يُونُس',
     surnom: 'Dhul-Nun — l\'Homme du poisson',
     periode: 'Environ 800 av. J.-C.',
-    resume: 'Yunus quitta son peuple sans permission divine et fut avalé par un grand poisson. Dans les ténèbres, il fit un du\'a d\'une profondeur unique. Allah le délivra et son peuple tout entier crut.',
+    resume: 'Yunus quitta son peuple en colère, sans attendre l\'ordre d\'Allah, et fut avalé par un grand poisson. Dans les ténèbres, il fit un du\'a d\'une profondeur unique — et son peuple fut le seul, dans tout le Coran, à être épargné après avoir cru en voyant venir le châtiment.',
     histoire: [
-      'Yunus était le prophète de Ninive (Irak actuel). Face au rejet répété de son peuple, il s\'en alla de sa propre initiative, sans attendre l\'ordre d\'Allah. Cette décision — noble dans son intention mais prématurée — attira sur lui une épreuve extraordinaire.',
-      'Il monta sur un bateau qui fut pris dans une tempête violente. Le sort désigna Yunus comme celui qu\'il fallait jeter à la mer pour calmer la tempête. Il fut englouti par un grand poisson (hut). Dans les ténèbres superposées — nuit, fond de mer, ventre du poisson — il prononça l\'un des du\'as les plus puissants de l\'histoire : "Il n\'y a de divinité que Toi, gloire à Toi, j\'ai été parmi les injustes."',
-      'Allah dit : "Si ce n\'était qu\'il était parmi ceux qui glorifient Allah, il serait resté dans le ventre du poisson jusqu\'au Jour de la Résurrection." Allah le délivra — il fut recraché sur une rive nue, malade. Allah fit pousser au-dessus de lui une plante (yaqtina) pour l\'ombrer. Guéri, il retourna vers son peuple — et toute la ville de cent mille habitants crut.',
+      {
+        etape: 'Le prophète de Ninive et l\'annonce du châtiment',
+        texte: 'Yunus fut envoyé au peuple de Ninive, en Irak actuel. Après un long rejet de son message, il les avertit qu\'un châtiment s\'abattrait sur eux dans un délai fixé, puis quitta la ville, découragé, avant même que ce délai ne soit écoulé.',
+      },
+      {
+        etape: 'Le repentir in extremis du peuple',
+        texte: 'Ibn Kathir rapporte, en s\'appuyant sur Coran 10:98, un événement unique dans l\'histoire des nations châtiées : voyant approcher les signes annonciateurs du châtiment, le peuple de Ninive se repentit sincèrement avant qu\'il ne s\'abatte sur eux. Allah leur fit alors miséricorde et retira l\'épreuve : "Pourquoi n\'y a-t-il eu aucune cité qui ait cru et à qui sa foi ait profité, sinon le peuple de Yunus ? Quand ils crurent, Nous leur enlevâmes le châtiment d\'humiliation dans la vie présente" (Coran 10:98) — le seul peuple, parmi tous ceux mentionnés dans le Coran, à avoir été épargné après avoir vu le châtiment venir.',
+      },
+      {
+        etape: 'Un départ sans attendre l\'ordre d\'Allah',
+        texte: 'Ignorant ce repentir de dernière heure et pensant sa mission un échec, Yunus s\'en alla en colère, sans attendre la permission divine de quitter son peuple : "Souviens-toi de l\'homme au poisson (Dhul-Nun), quand il s\'en alla en colère" (Coran 21:87). Cette décision — compréhensible dans son découragement, mais prématurée — attira sur lui une épreuve extraordinaire.',
+      },
+      {
+        etape: 'Le tirage au sort et l\'engloutissement',
+        texte: 'Yunus monta sur un bateau surchargé, pris dans une tempête violente. Pour l\'alléger, l\'équipage tira au sort qui devrait être jeté à la mer, et le sort tomba trois fois sur Yunus (Coran 37:140-141). Une fois à l\'eau, un grand poisson (hut), envoyé par Allah, l\'avala entier sans le blesser : "Il se jeta à la mer alors qu\'il était blâmable. Un poisson l\'avala, car il était blâmable" (Coran 37:142).',
+      },
+      {
+        etape: 'Le du\'a dans les trois ténèbres',
+        texte: 'Enfermé dans les ténèbres superposées de la nuit, des profondeurs marines et du ventre du poisson, Yunus reconnut sa faute et se tourna entièrement vers Allah par l\'un des du\'as les plus puissants du Coran : "Il n\'y a de divinité que Toi ! Gloire à Toi ! J\'ai été vraiment du nombre des injustes" (Coran 21:87). Allah précise l\'importance de cette invocation : "Si ce n\'était qu\'il fut du nombre de ceux qui glorifient Allah, il serait resté dans son ventre jusqu\'au jour où l\'on sera ressuscité" (Coran 37:143-144).',
+      },
+      {
+        etape: 'La délivrance et la plante de yaqtin',
+        texte: 'Allah l\'exauça et le fit rejeter sur une rive nue et déserte, le corps affaibli par l\'épreuve. Par miséricorde, Il fit pousser au-dessus de lui une plante de courge (yaqtin), dont les larges feuilles l\'abritèrent du soleil pendant sa convalescence (Coran 37:145-146). Puis Allah le renvoya vers son peuple — celui-là même qui avait fini par croire — et le Coran conclut : "Nous l\'envoyâmes vers cent mille hommes ou plus ; ils crurent, et Nous leur accordâmes jouissance pour un temps" (Coran 37:147-148).',
+      },
+      {
+        etape: 'Un rappel d\'humilité pour tous',
+        texte: 'Malgré ce moment de faiblesse, la stature de Yunus reste immense devant Allah. Le Prophète ﷺ mit en garde contre toute parole qui rabaisserait ce prophète : "Il ne convient à personne de dire que je suis meilleur que Yunus fils de Matta" (Sahih al-Bukhari, n°3416) — un rappel que même l\'instant de découragement d\'un prophète ne diminue en rien son rang auprès d\'Allah, dès lors qu\'il revient sincèrement à Lui.',
+      },
     ],
     traits: [
       { label: 'Repentir', emoji: '🌿' },
@@ -1291,10 +1687,15 @@ export const prophetes: Prophete[] = [
         explication: 'Le du\'a de Yunus (Coran 21:87) est l\'un des plus puissants : "La ilaha illa Anta subhanaka inni kuntu min adh-dhalimin."',
       },
       {
-        question: 'Que fit le peuple de Yunus quand il revint vers eux ?',
-        options: ['Ils le rejetèrent à nouveau', 'La moitié crut', 'Toute la ville crut', 'Ils l\'arrêtèrent'],
-        correct: 2,
-        explication: 'Yunus fut envoyé vers cent mille personnes ou plus, et ils crurent tous — fait unique dans l\'histoire prophétique (Coran 37:147-148).',
+        question: 'Qu\'a d\'unique le peuple de Yunus parmi tous les peuples mentionnés dans le Coran ?',
+        options: [
+          'Ils furent le seul peuple à ne jamais recevoir de prophète',
+          'Ils crurent en voyant venir le châtiment et furent épargnés',
+          'Ils furent détruits malgré leur foi',
+          'Ils devinrent tous prophètes',
+        ],
+        correct: 1,
+        explication: 'Coran 10:98 : le peuple de Yunus est le seul cité dans le Coran à avoir cru en voyant approcher le châtiment, et à qui Allah retira l\'épreuve pour cette raison.',
       },
       {
         question: 'Quelle plante Allah fit-Il pousser pour ombrer Yunus après sa délivrance ?',
@@ -1302,19 +1703,44 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Allah fit pousser au-dessus de lui une plante de yaqtin pour l\'ombrer après qu\'il eut été recraché sur le rivage (Coran 37:146).',
       },
+      {
+        question: 'Que dit le Prophète ﷺ pour rappeler la haute stature de Yunus malgré son moment de découragement ?',
+        options: [
+          '"Yunus est le moindre des prophètes"',
+          '"Il ne convient à personne de dire que je suis meilleur que Yunus fils de Matta"',
+          '"Yunus n\'était pas un vrai prophète"',
+          '"Que personne ne prie pour Yunus"',
+        ],
+        correct: 1,
+        explication: 'Sahih al-Bukhari (n°3416) : le Prophète ﷺ rappela qu\'il ne sied à personne de se prétendre meilleur que Yunus fils de Matta.',
+      },
     ],
   },
   {
     id: 'zakariya',
     nom: 'Zakariya',
+    nomBiblique: 'Zacharie',
     arabe: 'زَكَرِيَّا',
     surnom: 'Gardien de Maryam',
     periode: 'Environ 1er siècle av. J.-C.',
     resume: 'Zakariya était le tuteur de la Vierge Maryam et un vieux prêtre du Temple. Vieux et sans enfant, il pria Allah pour un héritier qui perpétuerait la prophétie. Allah lui accorda Yahya comme un miracle.',
     histoire: [
-      'Zakariya était un prêtre du Temple de Jérusalem et tuteur de Maryam bint Imran. Chaque fois qu\'il entrait chez elle dans son mihrab (oratoire), il trouvait des provisions. Il dit : "Ô Maryam, d\'où te vient cela ?" Elle répondit : "Cela vient d\'Allah — Allah pourvoit à qui Il veut sans compter." Ce spectacle de la grâce divine embrasa la foi de Zakariya.',
-      'Zakariya était âgé, sa femme stérile depuis toujours. Mais inspiré par la grâce accordée à Maryam, il supplia Allah : "Seigneur, donne-moi une descendance bénie de Ta part — Tu es Celui qui entend les invocations." Allah l\'exauça avec Yahya — un nom qu\'aucun homme avant lui ne portait.',
-      'Allah lui donna un signe : il serait muet pendant trois jours bien qu\'en bonne santé. Ce signe de gratitude et de contemplation marqua les trois jours précédant la naissance de Yahya.',
+      {
+        etape: 'Le tuteur émerveillé par les provisions de Maryam',
+        texte: 'Zakariya était prêtre du Temple de Jérusalem et tuteur de Maryam bint Imran. Chaque fois qu\'il entrait chez elle dans son mihrab (oratoire), il y trouvait des provisions hors saison. Il demanda : "Ô Maryam, d\'où te vient cela ?" Elle répondit : "Cela vient d\'Allah — Allah pourvoit à qui Il veut sans compter" (Coran 3:37). Ce spectacle de la grâce divine ranima en Zakariya l\'espoir que rien n\'est impossible à Allah.',
+      },
+      {
+        etape: 'La crainte pour l\'héritage de la foi',
+        texte: 'Zakariya, âgé et à la santé déclinante, s\'inquiétait de laisser sa mission sans successeur : "Je crains [le comportement de] mes héritiers après moi, tandis que ma femme est stérile. Accorde-moi, de Ta part, un descendant qui hérite de moi et hérite de la famille de Yaqub" (Coran 19:5-6). Ibn Kathir précise que cet héritage réclamé n\'était pas matériel mais spirituel — la continuité de la guidance et de la prophétie —, conformément à la parole authentique du Prophète ﷺ : "Nous, la communauté des prophètes, ne laissons pas d\'héritage ; ce que nous laissons est une aumône" (Sahih al-Bukhari, n°6730).',
+      },
+      {
+        etape: 'La supplique secrète et la réponse',
+        texte: 'Zakariya invoqua Allah en secret, loin des regards : "Il invoqua son Seigneur d\'un appel secret. Il dit : Seigneur, mes os sont devenus faibles et ma tête s\'est enflammée de cheveux blancs, sans que je n\'aie jamais été malheureux dans mes invocations vers Toi" (Coran 19:3-4). Alors qu\'il priait dans le mihrab, les anges l\'appelèrent pour lui donner une nouvelle inespérée : "Allah t\'annonce la naissance de Yahya" (Coran 3:39), un fils qui allait confirmer une parole d\'Allah — "et Nous ne lui avions pas donné auparavant d\'homonyme" (Coran 19:7), car nul avant lui n\'avait porté ce nom.',
+      },
+      {
+        etape: 'Le signe du silence',
+        texte: 'Étonné, Zakariya demanda un signe confirmant cette annonce, lui si âgé et sa femme stérile. Allah lui répondit : "Ton signe est que tu ne pourras parler aux gens pendant trois jours, sinon par gestes" (Coran 19:10 ; 3:41), bien qu\'il fût en parfaite santé. Ces trois jours de silence devinrent pour lui une retraite de glorification intense, "matin et soir" (Coran 19:11), avant la naissance de Yahya.',
+      },
     ],
     traits: [
       { label: 'Espoir en Allah', emoji: '🌅' },
@@ -1352,19 +1778,48 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Zakariya dit : "Mes os sont devenus faibles et ma tête flamboie de cheveux blancs" (Coran 19:4).',
       },
+      {
+        question: 'Quel type d\'héritage Zakariya demandait-il réellement à Allah, selon la précision d\'Ibn Kathir ?',
+        options: [
+          'Un héritage matériel et financier',
+          'Un héritage spirituel : la continuité de la guidance et de la prophétie',
+          'Le trône du Temple',
+          'Les terres de sa famille',
+        ],
+        correct: 1,
+        explication: 'Le Prophète ﷺ a précisé : "Nous, la communauté des prophètes, ne laissons pas d\'héritage ; ce que nous laissons est une aumône" (Sahih al-Bukhari, n°6730) — la demande de Zakariya visait un héritier spirituel, non des biens.',
+      },
     ],
   },
   {
     id: 'yahya',
     nom: 'Yahya',
+    nomBiblique: 'Jean-Baptiste',
     arabe: 'يَحْيَى',
     surnom: 'Jean le Baptiste',
     periode: 'Environ 1er siècle av. J.-C.',
     resume: 'Yahya est le fils de Zakariya, né d\'un miracle. Il fut le premier à porter ce nom. Prophète de pureté et de compassion, il confirma la prophétie d\'Isa. Allah lui accorda le Hukm (la sagesse) dès l\'enfance.',
     histoire: [
-      'Yahya naquit du miracle accordé à Zakariya et à son épouse stérile. Allah l\'honora de trois façons uniques dans le Coran : Il lui donna un prénom que personne avant lui n\'avait porté, il lui accorda le Hukm (la sagesse du jugement) dès l\'enfance, et Allah lui dit : "Prends le Livre fermement" — signifiant la Torah.',
-      'Yahya était décrit comme pur, plein de compassion pour ses parents, craignant Allah, aimant la paix. Il vivait avec ascétisme et simplicité, se nourrissant de ce que la nature offrait, se vêtant modestement. Il confirmea la venue d\'Isa avant lui et l\'en informa.',
-      'Yahya fut martyrisé par un roi tyrannique qui céda à l\'influence d\'une femme immorale. Sa tête fut présentée comme cadeau. Allah lui accorda la paix dans les trois moments les plus redoutés de l\'homme : sa naissance, sa mort et le jour de sa résurrection.',
+      {
+        etape: 'Une naissance sans précédent',
+        texte: 'Yahya naquit du miracle accordé à Zakariya et à son épouse âgée et stérile, en réponse à une invocation secrète et sincère (Coran 19:2-9). Allah l\'honora d\'un prénom qu\'aucun homme avant lui n\'avait porté : "Ô Zakariya, Nous t\'annonçons la bonne nouvelle d\'un fils : son nom sera Yahya. Nous ne lui avons pas donné auparavant d\'homonyme" (Coran 19:7).',
+      },
+      {
+        etape: 'La sagesse et la pureté dès l\'enfance',
+        texte: 'Allah lui accorda un don rarissime, réservé à très peu de créatures : le Hukm — la sagesse et la fermeté dans la compréhension du Livre — alors qu\'il n\'était encore qu\'un enfant : "Ô Yahya, prends le Livre fermement ! Et Nous lui avons accordé la sagesse quand il était encore enfant, ainsi que la tendresse de Notre part et la pureté ; il craignait Allah" (Coran 19:12-13).',
+      },
+      {
+        etape: 'La maîtrise de soi et la compassion',
+        texte: 'Le Coran le décrit comme "un chef, un homme chaste maîtrisant ses passions, et un prophète du nombre des vertueux" (Coran 3:39). Il ajoute qu\'il fut "plein de bonté envers ses parents, et ne fut ni violent ni désobéissant" (Coran 19:14) — un équilibre rare entre rigueur spirituelle envers soi-même et douceur envers autrui.',
+      },
+      {
+        etape: 'Le confirmateur d\'Isa',
+        texte: 'Les anges annoncèrent à Zakariya que son fils viendrait "confirmer une parole d\'Allah" (Coran 3:39) — une allusion à Isa, appelé "une parole venant de Lui". Yahya et Isa, cousins selon la tradition, grandirent en confirmant mutuellement leurs missions respectives auprès des Bani Israël, tous deux messagers de la même vérité.',
+      },
+      {
+        etape: 'Une paix accordée trois fois',
+        texte: 'Selon les récits historiques rapportés notamment par Ibn Kathir, Yahya fut mis à mort sur ordre d\'un roi tyrannique de son époque, cédant à la demande d\'une femme de son entourage — un épisode transmis par la tradition historique plus que par le texte coranique lui-même. Le Coran, en revanche, affirme avec certitude la faveur qu\'Allah lui accorda : "Paix sur lui le jour où il naquit, le jour où il mourra, et le jour où il sera ressuscité vivant" (Coran 19:15) — une paix divine embrassant les trois moments les plus redoutés de toute vie humaine.',
+      },
     ],
     traits: [
       { label: 'Pureté', emoji: '🌸' },
@@ -1402,20 +1857,51 @@ export const prophetes: Prophete[] = [
         correct: 1,
         explication: 'Coran 19:15 : "Paix sur lui le jour où il naquit, le jour où il mourra, et le jour où il sera ressuscité vivant."',
       },
+      {
+        question: 'Quel prophète Yahya vint-il confirmer, selon Coran 3:39 ?',
+        options: ['Musa', 'Isa, "une parole venant d\'Allah"', 'Ibrahim', 'Zakariya lui-même'],
+        correct: 1,
+        explication: 'Les anges annoncèrent que Yahya viendrait "confirmer une parole d\'Allah" — une allusion à Isa, son cousin selon la tradition.',
+      },
     ],
   },
   {
     id: 'isa',
     nom: 'Isa',
+    nomBiblique: 'Jésus',
     arabe: 'عِيسَى',
     surnom: 'Ruhullah — Esprit d\'Allah / Al-Masih',
     periode: 'Environ 1er siècle',
     resume: 'Isa naquit sans père d\'une mère vierge, Maryam. Il parla dès le berceau pour défendre sa mère. Prophète de miséricorde, il guérit les aveugles, ressuscita des morts et annonça la venue de Muhammad ﷺ.',
     histoire: [
-      'Maryam reçut la visite de l\'ange Jibril qui lui annonça qu\'elle enfanterait un fils sans qu\'un homme l\'ait touchée. Elle dit : "Comment aurais-je un fils alors qu\'aucun homme ne m\'a touchée ?" L\'ange répondit : "C\'est ainsi — Allah crée ce qu\'Il veut. Quand Il décide une chose, Il dit seulement : \'Sois !\' et elle est." Maryam se retira seule et accoucha d\'Isa. Le Coran lui attribua deux titres uniques : Al-Masih (l\'Oint) et Ruhullah (l\'Esprit d\'Allah).',
-      'De retour chez son peuple avec le bébé, on l\'accusa. Elle pointa vers Isa. Isa parla depuis son berceau : "Je suis le serviteur d\'Allah. Il m\'a donné le Livre et fait de moi un prophète. Il m\'a fait béni où que je sois, m\'a enjoint la prière et la zakat tant que je vivrai." Cette parole fut sa première déclaration de prophétie.',
-      'Isa accomplit des miracles par la permission d\'Allah : il guérissait les aveugles de naissance et les lépreux, ressuscitait les morts, et façonnait des oiseaux d\'argile qui prenaient vie. Il révéla également ce que les gens cachaient et mangeaient chez eux. Il annonça explicitement la venue d\'un prophète après lui nommé Ahmad (Muhammad ﷺ).',
-      'Les Bani Israël complotèrent contre lui. Mais Allah le sauva : "Ils ne l\'ont ni tué ni crucifié — il en fut fait un semblant. Allah l\'éleva vers Lui." Isa reviendra à la fin des temps, descendra à Damas, brisera les croix, tuera le Dajjal et mourra une mort naturelle — la plus belle fin annoncée pour un prophète.',
+      {
+        etape: 'L\'annonciation à Maryam',
+        texte: 'L\'ange Jibril apparut à Maryam "sous la forme d\'un homme parfait" (Coran 19:17) et lui annonça qu\'elle enfanterait un fils pur, sans qu\'aucun homme ne l\'ait touchée. Bouleversée, elle demanda : "Comment aurais-je un fils, alors qu\'aucun homme ne m\'a touchée et que je ne suis pas prostituée ?" (Coran 19:20) Jibril répondit que la chose était aisée pour Allah : "Il en est ainsi ! Ton Seigneur a dit : Ceci M\'est facile... Quand Il décide une chose, Il dit seulement : Sois ! et elle est" (Coran 19:21 ; 3:47).',
+      },
+      {
+        etape: 'La naissance sous le palmier',
+        texte: 'Maryam se retira seule, loin des siens, dans un lieu éloigné. Les douleurs de l\'enfantement la surprirent près d\'un palmier sec ; désespérée, elle s\'écria qu\'elle aurait préféré mourir et être oubliée. Une voix — celle de l\'ange ou de l\'enfant lui-même — la réconforta : "Ne t\'afflige pas. Ton Seigneur a placé à tes pieds un ruisseau. Secoue vers toi le tronc du palmier : il fera tomber sur toi des dattes fraîches et mûres" (Coran 19:23-25), un double miracle de subsistance au cœur de sa détresse.',
+      },
+      {
+        etape: 'Le miracle du berceau',
+        texte: 'De retour vers les siens portant l\'enfant, elle fut accusée d\'un grand péché. Fidèle à son vœu de silence, elle désigna Isa du doigt. Le peuple s\'étonna : "Comment parlerions-nous à un bébé au berceau ?" Mais Isa parla, dévoilant sa mission dès ses premiers mots : "Je suis le serviteur d\'Allah. Il m\'a donné le Livre et a fait de moi un prophète... Il m\'a enjoint la prière et la zakat tant que je vivrai, et [m\'a rendu] bon envers ma mère" (Coran 19:30-32) — un miracle qui innocenta Maryam sur-le-champ.',
+      },
+      {
+        etape: 'Les miracles de sa mission',
+        texte: 'Devenu adulte, Isa annonça à son peuple des signes accordés "par la permission d\'Allah" — jamais de son propre pouvoir : il façonnait avec de l\'argile la forme d\'un oiseau qui, une fois soufflé, prenait vie ; il guérissait l\'aveugle-né et le lépreux ; il ressuscitait les morts ; il informait les gens de ce qu\'ils mangeaient et gardaient en réserve dans leurs maisons (Coran 3:49). Ses disciples, les Hawariyyun, lui demandèrent une table servie descendue du ciel comme signe pour affermir leur cœur ; Allah l\'exauça, en avertissant que quiconque mécroirait ensuite serait sévèrement châtié (Coran 5:112-115).',
+      },
+      {
+        etape: 'Le complot déjoué',
+        texte: 'Rejeté par une partie des Bani Israël qui complotèrent pour le faire tuer, Isa fut sauvé par Allah Lui-même : "Ils ne l\'ont ni tué ni crucifié, mais ce fut pour eux une chose semblable... Ils ne l\'ont certainement pas tué. Mais Allah l\'a élevé vers Lui" (Coran 4:157-158). Le Coran affirme ainsi avec une clarté totale qu\'Isa fut préservé, contrairement à ce qu\'ont cru ses ennemis.',
+      },
+      {
+        etape: 'L\'annonce du dernier prophète',
+        texte: 'Isa lui-même annonça la venue de celui qui viendrait clore la chaîne des messagers : "Ô fils d\'Israël, je suis le messager d\'Allah vers vous... annonçant un messager à venir après moi, dont le nom sera Ahmad" (Coran 61:6) — une préfiguration explicite de la mission de Muhammad ﷺ.',
+      },
+      {
+        etape: 'Le retour attendu',
+        texte: 'Le Prophète ﷺ a enseigné qu\'Isa n\'est pas mort mais reviendra à la fin des temps, descendant à l\'est de Damas, brisant les croix, abolissant l\'impôt injuste et rétablissant le culte exclusif d\'Allah, avant de vaincre le Dajjal et de connaître, cette fois, une mort naturelle (Sahih Muslim, n°2937). Cette fin paisible, après une vie entière consacrée au Tawhid, couronne le parcours de celui qui répéta sans relâche : "Adorez Allah, mon Seigneur et votre Seigneur" (Coran 5:117).',
+      },
     ],
     traits: [
       { label: 'Miséricorde', emoji: '❤️' },
@@ -1454,6 +1940,17 @@ export const prophetes: Prophete[] = [
         correct: 2,
         explication: 'Le Coran (4:157-158) affirme qu\'Isa ne fut ni tué ni crucifié et qu\'Allah l\'éleva vers Lui.',
       },
+      {
+        question: 'Que demandèrent les disciples (Hawariyyun) d\'Isa comme signe pour affermir leur foi ?',
+        options: [
+          'Un déluge',
+          'Une table servie descendue du ciel',
+          'La résurrection de leurs ancêtres',
+          'Un livre écrit sur pierre',
+        ],
+        correct: 1,
+        explication: 'Coran 5:112-115 : les disciples demandèrent une table (Al-Ma\'ida) descendue du ciel comme signe, et Allah l\'exauça en avertissant du châtiment pour quiconque mécroirait ensuite.',
+      },
     ],
   },
   {
@@ -1464,9 +1961,42 @@ export const prophetes: Prophete[] = [
     periode: '570 — 632 ap. J.-C.',
     resume: 'Muhammad ﷺ est le dernier et le sceau des prophètes, envoyé comme miséricorde pour les mondes. En 23 ans, il transforma une société tribale en une civilisation fondée sur le Tawhid, la justice et la miséricorde.',
     histoire: [
-      'Muhammad ﷺ naquit orphelin de père à La Mecque en 570. Il perdit sa mère à 6 ans, son grand-père à 8 ans. Connu parmi son peuple sous le titre d\'Al-Amin (le Trustworthy), il épousa Khadijah à 25 ans. À 40 ans, dans la grotte de Hira, il reçut la première révélation : "Lis au nom de ton Seigneur qui a créé." La mission prophétique avait commencé.',
-      'Pendant 23 ans, il reçut le Coran et transforma La Mecque puis l\'Arabie entière. Il endura les persécutions, l\'exil de ses proches, la mort de ses enfants, le boycott économique, la lapidation à Taïf — et ne cessa jamais de pardonner et de sourire. Lors de la conquête de La Mecque, il amnistia ses pires ennemis.',
-      'Son caractère était la mise en pratique du Coran. Sa femme Aïsha dit : "Son caractère était le Coran." Il était le plus généreux, le plus courageux, le plus souriant. Il réparait lui-même ses sandales, s\'occupait de ses tâches ménagères et traitait les pauvres comme les rois. Il quitta ce monde en 632 sans laisser aucune richesse matérielle.',
+      {
+        etape: 'Une enfance marquée par l\'épreuve',
+        texte: 'Muhammad ﷺ naquit à La Mecque en 570, l\'année dite "de l\'Éléphant", après l\'échec de l\'expédition d\'Abraha contre la Kaaba (Coran 105). Orphelin de père avant même sa naissance, il perdit sa mère Aminah à six ans, puis son grand-père Abdul-Muttalib à huit ans. Élevé ensuite par son oncle Abu Talib, il travailla très jeune comme berger, puis comme commerçant dans les caravanes, où sa droiture lui valut, bien avant la révélation, le surnom d\'Al-Amin — le Digne de confiance — reconnu par tout Quraych. À 25 ans, il épousa Khadijah bint Khuwaylid, une riche commerçante de quinze ans son aînée, qui devint son plus grand soutien.',
+      },
+      {
+        etape: 'La première révélation dans la grotte de Hira',
+        texte: 'À 40 ans, Muhammad ﷺ avait pris l\'habitude de se retirer en méditation dans la grotte de Hira, aux abords de La Mecque. C\'est là que l\'ange Jibril lui apparut et lui ordonna : "Lis !" Effrayé, il répondit qu\'il ne savait pas lire, jusqu\'à ce que Jibril lui révèle les premiers versets : "Lis, au nom de ton Seigneur qui a créé, qui a créé l\'homme d\'une adhérence. Lis ! Ton Seigneur est le Très Noble" (Coran 96:1-3). Bouleversé, il rentra tremblant chez Khadijah, qui le rassura avec des mots restés célèbres : "Allah ne t\'humiliera jamais, car tu es bon envers tes proches, tu aides les faibles, tu es généreux envers l\'hôte et tu soutiens les gens dans les épreuves du destin" (Sahih al-Bukhari, n°3).',
+      },
+      {
+        etape: 'La persécution et l\'année de la tristesse',
+        texte: 'La prédication, d\'abord secrète puis publique, se heurta au rejet violent des notables de Quraych, attachés à l\'idolâtrie et à leurs privilèges. Les premiers musulmans pauvres ou esclaves, comme Bilal ibn Rabah, furent torturés pour les forcer à renier leur foi. Le clan du Prophète ﷺ subit un boycott total pendant trois ans, privé de commerce et de mariage avec le reste de la tribu. En l\'an 10 de la mission, surnommée "l\'année de la tristesse", il perdit coup sur coup Khadijah, son épouse et soutien de toujours, et Abu Talib, son oncle protecteur. Il se rendit alors seul à Taïf pour y prêcher et y fut lapidé par la population, rentrant blessé et humilié — épisode où, selon la tradition, l\'ange des montagnes lui proposa d\'écraser la ville entre deux monts, et où le Prophète ﷺ répondit qu\'il espérait encore que leur descendance adore Allah seul (Sahih al-Bukhari, n°3231).',
+      },
+      {
+        etape: 'Al-Isra wal-Mi\'raj, le Voyage nocturne',
+        texte: 'Peu avant l\'émigration, Allah honora Son Messager d\'un voyage miraculeux en une seule nuit : de la Mecque à la mosquée Al-Aqsa de Jérusalem (Al-Isra, Coran 17:1), puis une ascension à travers les sept cieux (Al-Mi\'raj), où il rencontra plusieurs prophètes dont Adam, Idris, Musa et Ibrahim, avant de recevoir directement d\'Allah l\'ordre des cinq prières quotidiennes.',
+      },
+      {
+        etape: 'L\'Hégire vers Médine',
+        texte: 'Face à un complot mecquois visant à l\'assassiner, le Prophète ﷺ émigra vers Yathrib (Médine) avec Abu Bakr, se cachant trois jours dans la grotte de Thawr pendant que ses poursuivants les cherchaient — un moment d\'angoisse apaisé par ses mots à Abu Bakr : "Ne t\'afflige pas, Allah est avec nous" (Coran 9:40). À Médine, il scella une fraternité sans précédent entre les Muhajirun (émigrés mecquois) et les Ansar (habitants médinois), posant les bases de la première communauté musulmane organisée.',
+      },
+      {
+        etape: 'Les grandes batailles et le traité de Hudaybiyya',
+        texte: 'La jeune communauté dut ensuite défendre son existence : la victoire de Badr contre une armée mecquoise trois fois supérieure en nombre, l\'épreuve d\'Uhud où le Prophète ﷺ fut blessé, puis la bataille du Fossé (Al-Khandaq) où une tranchée creusée sur son conseil mit en échec le siège d\'une coalition de tribus. En l\'an 6 de l\'Hégire, le traité de Hudaybiyya, bien que perçu comme défavorable par plusieurs compagnons, ouvrit la voie à une paix qui permit à l\'islam de se répandre plus largement que par les armes.',
+      },
+      {
+        etape: 'La conquête de La Mecque et le pardon',
+        texte: 'En l\'an 8 de l\'Hégire, le Prophète ﷺ entra à La Mecque à la tête de dix mille compagnons, sans effusion de sang. Il purifia la Kaaba de ses trois-cent-soixante idoles et, devant ceux qui l\'avaient persécuté, exilé et combattu pendant des années, il déclara : "Allez, vous êtes libres" — reprenant les mots de Yusuf envers ses frères. Cette amnistie générale envers ses pires ennemis reste l\'un des sommets de son caractère miséricordieux.',
+      },
+      {
+        etape: 'Le pèlerinage d\'adieu et la fin de la mission',
+        texte: 'En l\'an 10 de l\'Hégire, il accomplit son unique et dernier pèlerinage, prononçant devant plus de cent mille compagnons un sermon d\'adieu fixant les principes intangibles de l\'islam : sacralité de la vie, des biens et de l\'honneur ; interdiction de l\'usure et de la vengeance tribale ; égalité entre les hommes "comme les dents d\'un peigne", "un Arabe n\'a aucune supériorité sur un non-Arabe, si ce n\'est par la piété" ; droits réciproques des époux. Il y reçut la révélation : "Aujourd\'hui, J\'ai parachevé pour vous votre religion, complété sur vous Mon bienfait, et agréé pour vous l\'islam comme religion" (Coran 5:3).',
+      },
+      {
+        etape: 'Un caractère qui était le Coran',
+        texte: 'Il quitta ce monde à Médine en 632, après 23 années de mission, sans laisser de richesse matérielle. Interrogée sur son caractère, son épouse Aïsha répondit simplement : "Son caractère était le Coran" (Sahih Muslim, n°746) — il réparait lui-même ses sandales, participait aux tâches domestiques, ne se vengeait jamais pour lui-même, et fut décrit par le Coran comme "envoyé en miséricorde pour les mondes" (Coran 21:107).',
+      },
     ],
     traits: [
       { label: 'Miséricorde pour les mondes', emoji: '❤️' },
@@ -1504,6 +2034,17 @@ export const prophetes: Prophete[] = [
         options: ['Il les fit emprisonner', 'Il les amnistia et pardonna', 'Il les bannit d\'Arabie', 'Il les soumit par la force'],
         correct: 1,
         explication: 'Lors de la conquête de La Mecque, le Prophète ﷺ dit à ses anciens tortionnaires : "Allez, vous êtes libres."',
+      },
+      {
+        question: 'Quel principe le Prophète ﷺ affirma-t-il lors de son sermon d\'adieu, pendant le pèlerinage d\'adieu ?',
+        options: [
+          'La supériorité de certaines tribus arabes',
+          'Qu\'un Arabe n\'a aucune supériorité sur un non-Arabe, si ce n\'est par la piété',
+          'L\'abolition de la prière',
+          'Le maintien de la vengeance tribale',
+        ],
+        correct: 1,
+        explication: 'Dans son sermon d\'adieu, le Prophète ﷺ proclama l\'égalité entre les hommes, "comme les dents d\'un peigne", sans distinction si ce n\'est par la piété.',
       },
     ],
   },
