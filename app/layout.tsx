@@ -6,6 +6,8 @@ import Navigation from "@/components/layout/Navigation";
 import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,6 +47,8 @@ export default async function RootLayout({
             <div className="md:pl-64 pb-16 md:pb-0">
               {children}
             </div>
+            <Analytics />
+            <SpeedInsights />
           </Providers>
         </NextIntlClientProvider>
       </body>
