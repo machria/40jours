@@ -127,6 +127,33 @@ async function main() {
         console.warn('Hadith split directory not found:', hadithSplitDir);
     }
 
+    // Handle Asbab Nuzul Data
+    console.log('Processing Asbab Nuzul data...');
+    const asbabFile = path.join(DATA_DIR, 'asbab_nuzul_fr.json');
+    const asbabPublicDir = path.join(PUBLIC_DIR, 'asbab');
+    
+    if (fs.existsSync(asbabFile)) {
+        if (!fs.existsSync(asbabPublicDir)) {
+            fs.mkdirSync(asbabPublicDir, { recursive: true });
+        }
+        try {
+            const asbabData = JSON.parse(fs.readFileSync(asbabFile, 'utf-8'));
+            let asbabCount = 0;
+            for (const [key, text] of Object.entries(asbabData)) {
+                fs.writeFileSync(
+                    path.join(asbabPublicDir, `${key}.json`),
+                    JSON.stringify({ text })
+                );
+                asbabCount++;
+            }
+            console.log(`Generated ${asbabCount} Asbab files in public/asbab`);
+        } catch (e) {
+            console.error('Error processing Asbab Nuzul:', e);
+        }
+    } else {
+        console.warn('Asbab Nuzul source file not found:', asbabFile);
+    }
+
     console.log('Copy complete.');
 }
 

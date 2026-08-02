@@ -2,18 +2,23 @@ import { getSurahTafsir } from '@/app/actions/tafsir';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, ExternalLink } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
 import { TajwidText } from '@/components/TajwidText';
+import TafsirSourceSelector from '@/components/TafsirSourceSelector';
 import fs from 'fs/promises';
 import path from 'path';
 import { Metadata } from 'next';
 
 async function getSurahMeta(surahId: number) {
     try {
-        const p = path.join(process.cwd(), 'public', 'surahs.json');
-        const file = await fs.readFile(p, 'utf-8');
-        const surahs = JSON.parse(file);
-        return surahs.find((s: any) => s.number === surahId);
+        const p = path.join(process.cwd(), 'data', 'surahs.json');
+        try {
+            const file = await fs.readFile(p, 'utf-8');
+            return JSON.parse(file).find((s: any) => s.number === surahId);
+        } catch {
+            const altP = path.join(process.cwd(), 'public', 'surahs.json');
+            const file = await fs.readFile(altP, 'utf-8');
+            return JSON.parse(file).find((s: any) => s.number === surahId);
+        }
     } catch (e) {
         return null;
     }
@@ -35,21 +40,23 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     }
 
     return {
-        title: `Tafsir Ibn Kathir - Sourate ${meta.englishName}`,
-        description: `Explication complète (Tafsir Ibn Kathir) de la Sourate ${meta.englishName} (${meta.englishNameTranslation}). Comprendre le sens des versets du Coran.`,
+        title: `Tafsir - Sourate ${meta.englishName}`,
+        description: `Explication complète et comparatif des 4 Tafsirs (Al-Mukhtasar, As-Sa'di, Al-Jalalayn, Ibn Kathir) pour la Sourate ${meta.englishName}.`,
     };
 }
 
-// Helper to get Ayahs for a Surah (Serverside)
 async function getAyahsForSurah(surahId: number) {
     try {
-        const indexPath = path.join(process.cwd(), 'public', 'ayah-location.json');
+        let indexPath = path.join(process.cwd(), 'data', 'ayah-location.json');
+        try {
+            await fs.access(indexPath);
+        } catch {
+            indexPath = path.join(process.cwd(), 'public', 'ayah-location.json');
+        }
         const indexContent = await fs.readFile(indexPath, 'utf-8');
         const index = JSON.parse(indexContent);
 
-        // Find pages for this surah
         const pages = new Set<number>();
-        // Optimization: Keys are "surah:ayah"
         for (const key in index) {
             if (key.startsWith(`${surahId}:`)) {
                 pages.add(index[key]);
@@ -57,15 +64,18 @@ async function getAyahsForSurah(surahId: number) {
         }
 
         const sortedPages = Array.from(pages).sort((a, b) => a - b);
-
         let surahAyahs: any[] = [];
 
         for (const pNum of sortedPages) {
-            const pPath = path.join(process.cwd(), 'public', 'quran', 'pages', `${pNum}.json`);
+            let pPath = path.join(process.cwd(), 'data', 'quran', 'pages', `${pNum}.json`);
+            try {
+                await fs.access(pPath);
+            } catch {
+                pPath = path.join(process.cwd(), 'public', 'quran', 'pages', `${pNum}.json`);
+            }
             try {
                 const pContent = await fs.readFile(pPath, 'utf-8');
                 const pageData = JSON.parse(pContent);
-                // Filter verses for this surah
                 const matches = pageData.filter((a: any) => a.surah === surahId);
                 surahAyahs.push(...matches);
             } catch (e) {
@@ -88,10 +98,10 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
         notFound();
     }
 
-    const tafsirList = await getSurahTafsir(surahId);
+    // Par défaut, charger Al-Mukhtasar (Direct & Concis) pour une UX fluide
+    const tafsirList = await getSurahTafsir(surahId, 'al_mukhtasar');
     const ayahs = await getAyahsForSurah(surahId);
 
-    // Merge them
     const combinedData = ayahs.map(ayah => {
         const tafsirEntry = tafsirList.find(t => t.ayah === ayah.ayah);
         return {
@@ -100,7 +110,6 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
         };
     });
 
-    // Group consecutive verses with same Tafsir
     const groupedData: { tafsir: string | undefined; ayahs: typeof combinedData }[] = [];
     let currentGroup: { tafsir: string | undefined; ayahs: typeof combinedData } | null = null;
 
@@ -111,7 +120,6 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                 ayahs: [item]
             };
         } else if (item.tafsir === currentGroup.tafsir && item.tafsir) {
-            // Only group if tafsir exists and is identical
             currentGroup.ayahs.push(item);
         } else {
             groupedData.push(currentGroup);
@@ -139,9 +147,9 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                     <div>
                         <h1 className="text-2xl font-bold font-kufi flex items-center gap-2">
                             <BookOpen className="w-6 h-6 text-primary" />
-                            Tafsir - Sourate {surahId}
+                            Exégèse & Tafsirs - Sourate {surahId}
                         </h1>
-                        <p className="text-muted-foreground">Explication complète de la sourate</p>
+                        <p className="text-muted-foreground">Changez de Tafsir en un clic sur chaque verset</p>
                     </div>
                 </div>
 
@@ -163,10 +171,6 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                                                 <ExternalLink className="w-3 h-3 opacity-50 group-hover:opacity-100" />
                                             </Link>
                                         </div>
-                                        {/* Use TajwidText if available, but for simplicity here we assume standard text provided by server loader. 
-                                            Wait, getAyahsForSurah returns structure from public json which matches needed structure. 
-                                            TajwidText component handles simple Arabic string. 
-                                        */}
                                         <TajwidText
                                             text={item.text}
                                             className="text-2xl md:text-3xl font-kufi text-right dir-rtl leading-[2.5] block text-foreground mb-4"
@@ -178,15 +182,14 @@ export default async function FullTafsirPage({ params }: { params: Promise<{ id:
                                 ))}
                             </div>
 
-                            {/* Tafsir Body (Shared) */}
+                            {/* Tafsir Body with Selector */}
                             <div className="bg-card p-6 md:p-8 rounded-b-xl border border-t-0 shadow-sm">
-                                <div className="prose dark:prose-invert max-w-none prose-lg">
-                                    {group.tafsir ? (
-                                        <ReactMarkdown>{group.tafsir}</ReactMarkdown>
-                                    ) : (
-                                        <p className="text-muted-foreground italic">Aucune explication disponible pour ce verset.</p>
-                                    )}
-                                </div>
+                                <TafsirSourceSelector
+                                    surah={surahId}
+                                    ayah={group.ayahs[0].ayah}
+                                    initialTafsir={group.tafsir || 'Aucune explication disponible.'}
+                                    initialSourceId="al_mukhtasar"
+                                />
                             </div>
 
                         </div>
