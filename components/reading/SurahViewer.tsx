@@ -548,6 +548,22 @@ export default function SurahViewer({
                 ayahNumber={tafsirState.ayahNumber}
                 ayahText={tafsirState.text}
                 translation={tafsirState.translation}
+                onNavigate={(dir) => {
+                    const currentIdx = ayahs.findIndex(a => a.ayah === tafsirState.ayahNumber);
+                    if (currentIdx === -1) return;
+                    const nextIdx = dir === 'next' ? currentIdx + 1 : currentIdx - 1;
+                    const targetAyah = ayahs[nextIdx];
+                    if (targetAyah) {
+                        setTafsirState({
+                            ...tafsirState,
+                            ayahNumber: targetAyah.ayah,
+                            text: targetAyah.text,
+                            translation: targetAyah.translation
+                        });
+                    }
+                }}
+                hasNext={ayahs.findIndex(a => a.ayah === tafsirState.ayahNumber) !== -1 && ayahs.findIndex(a => a.ayah === tafsirState.ayahNumber) < ayahs.length - 1}
+                hasPrev={ayahs.findIndex(a => a.ayah === tafsirState.ayahNumber) > 0}
             />
             <audio ref={audioRef} className="hidden" preload="none" playsInline />
         </>

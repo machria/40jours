@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, BookOpen, Sparkles, Feather, Compass, Loader2, Info } from 'lucide-react';
+import { X, BookOpen, Sparkles, Feather, Compass, Loader2, Info, ArrowLeft, ArrowRight } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { TafsirSourceId } from '@/lib/tafsir-data';
 import { TajwidText } from '@/components/TajwidText';
@@ -14,6 +14,9 @@ interface TafsirModalProps {
     ayahNumber: number;
     ayahText: string;
     translation?: string;
+    onNavigate?: (direction: 'next' | 'prev') => void;
+    hasNext?: boolean;
+    hasPrev?: boolean;
 }
 
 export const TAFSIR_SOURCES: { id: TafsirSourceId; label: string; badge: string; icon: any }[] = [
@@ -62,7 +65,7 @@ async function fetchStaticAsbab(surah: number, ayah: number): Promise<string | n
 
 type TabType = 'tafsir' | 'asbab';
 
-export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, ayahText, translation }: TafsirModalProps) {
+export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, ayahText, translation, onNavigate, hasNext, hasPrev }: TafsirModalProps) {
     const [selectedSource, setSelectedSource] = useState<TafsirSourceId>('al_mukhtasar');
     const [activeTab, setActiveTab] = useState<TabType>('tafsir');
 
@@ -85,6 +88,25 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
     const activeSourceInfo = TAFSIR_SOURCES.find(s => s.id === selectedSource);
     const hasAsbab = !!asbabNuzul;
 
+    const formatTafsirContent = (text: string | null) => {
+        if (!text) return '';
+        // Replace quotes « ... » with inline code syntax `« ... »` for specific Hadith highlighting
+        return text.replace(/«([^»]+)»/g, '`«$1»`');
+    };
+
+    const markdownComponents = {
+        code({node, inline, className, children, ...props}: any) {
+            if (inline) {
+                return (
+                    <span className="text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 px-1.5 py-0.5 rounded-md italic font-medium leading-relaxed shadow-sm" {...props}>
+                        {children}
+                    </span>
+                );
+            }
+            return <code className={className} {...props}>{children}</code>;
+        }
+    };
+
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md animate-in fade-in duration-300">
             <div className="bg-background/95 w-full max-w-3xl max-h-[90vh] sm:rounded-3xl rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-white/10 relative">
@@ -99,8 +121,30 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                             <BookOpen className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                            <h3 className="font-bold text-lg font-kufi">Étude du Verset</h3>
-                            <p className="text-xs text-muted-foreground font-medium">Sourate {surahNumber} • Verset {ayahNumber}</p>
+                            <div className="flex items-center gap-3">
+                                <h3 className="font-bold text-lg font-kufi">Étude du Verset</h3>
+                                {(hasPrev || hasNext) && (
+                                    <div className="flex bg-background/50 border border-border/50 rounded-lg shadow-sm">
+                                        <button 
+                                            onClick={() => onNavigate?.('prev')} 
+                                            disabled={!hasPrev}
+                                            className="px-2 py-1.5 hover:bg-muted/80 disabled:opacity-30 border-r border-border/50 rounded-l-lg transition-colors"
+                                            title="Verset précédent"
+                                        >
+                                            <ArrowLeft className="w-3.5 h-3.5" />
+                                        </button>
+                                        <button 
+                                            onClick={() => onNavigate?.('next')} 
+                                            disabled={!hasNext}
+                                            className="px-2 py-1.5 hover:bg-muted/80 disabled:opacity-30 rounded-r-lg transition-colors"
+                                            title="Verset suivant"
+                                        >
+                                            <ArrowRight className="w-3.5 h-3.5" />
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                            <p className="text-xs text-muted-foreground font-medium mt-0.5">Sourate {surahNumber} • Verset {ayahNumber}</p>
                         </div>
                     </div>
                     <button
@@ -189,7 +233,7 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                                 ) : (
                                     <div className="text-[15px] sm:text-base text-justify text-foreground/90 bg-card/30 p-5 rounded-2xl border border-white/5 shadow-sm">
                                         {tafsirContent ? (
-                                            <ReactMarkdown>{tafsirContent}</ReactMarkdown>
+                                            <ReactMarkdown components={markdownComponents}>{formatTafsirContent(tafsirContent)}</ReactMarkdown>
                                         ) : (
                                             "Aucune explication trouvée pour cette source."
                                         )}
@@ -208,7 +252,7 @@ export default function TafsirModal({ isOpen, onClose, surahNumber, ayahNumber, 
                                         <Info className="w-5 h-5" />
                                         Asbab al-Nuzul
                                     </h4>
-                                    <ReactMarkdown>{asbabNuzul}</ReactMarkdown>
+                                    <ReactMarkdown components={markdownComponents}>{formatTafsirContent(asbabNuzul)}</ReactMarkdown>
                                 </div>
                             </div>
                         </div>
