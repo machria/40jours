@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   title: "Coran 40 Jours - Défi Lecture & Tafsir",
   description: "Complétez la lecture du Coran en 40 jours avec Tafsir Ibn Kathir et 99 Noms d'Allah.",
   manifest: "/manifest.json",
+  // Sans icône Apple déclarée, Safari iOS demande /apple-touch-icon*.png à chaque visite (404)
+  icons: { apple: "/apple-touch-icon.png" },
 };
 
 // viewport-fit=cover active env(safe-area-inset-*) sur iPhone (utilisé par pb-safe)
