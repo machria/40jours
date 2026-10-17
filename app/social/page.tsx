@@ -1,9 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Plus, Users, ArrowRight, Trophy, Lock } from 'lucide-react';
+import { Plus, Users, ArrowRight, Trophy, Lock, LogIn } from 'lucide-react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 interface GroupSummary {
     _id: string;
@@ -14,13 +16,34 @@ interface GroupSummary {
 }
 
 export default function SocialPage() {
+    return (
+        <Suspense fallback={null}>
+            <SocialContent />
+        </Suspense>
+    );
+}
+
+function SocialContent() {
     const queryClient = useQueryClient();
+    const { status } = useSession();
+    const router = useRouter();
+
+    // Les actions de groupe nécessitent un compte : renvoyer au login puis revenir ici
+    const requireAuth = (returnTo: string) => {
+        if (status === 'authenticated') return true;
+        router.push(`/login?callbackUrl=${encodeURIComponent(returnTo)}`);
+        return false;
+    };
     const [isCreateOpen, setIsCreateOpen] = useState(false);
-    const [isJoinOpen, setIsJoinOpen] = useState(false);
+    // Lien d'invitation /social?code=XXXXXX : ouvre directement « Rejoindre » avec le code rempli
+    const inviteParam = useSearchParams().get('code');
+    const inviteCode = inviteParam && /^[A-Za-z0-9]{6}$/.test(inviteParam) ? inviteParam.toUpperCase() : null;
+    const [isJoinOpen, setIsJoinOpen] = useState(!!inviteCode);
 
     // Form States
     const [newGroupName, setNewGroupName] = useState('');
-    const [joinCode, setJoinCode] = useState('');
+    const [joinCode, setJoinCode] = useState(inviteCode ?? '');
+    const [joinError, setJoinError] = useState<string | null>(null);
 
     const { data: groups, isLoading } = useQuery<GroupSummary[]>({
         queryKey: ['groups'],
@@ -28,7 +51,8 @@ export default function SocialPage() {
             const res = await fetch('/api/groups');
             if (!res.ok) throw new Error('Failed to fetch groups');
             return res.json();
-        }
+        },
+        enabled: status === 'authenticated',
     });
 
     const createGroupMutation = useMutation({
@@ -61,9 +85,11 @@ export default function SocialPage() {
             queryClient.invalidateQueries({ queryKey: ['groups'] });
             setIsJoinOpen(false);
             setJoinCode('');
+            setJoinError(null);
+            window.history.replaceState(null, '', '/social');
         },
         onError: (err) => {
-            alert(err);
+            setJoinError(err instanceof Error && err.message !== 'Failed to join' ? err.message : 'Code invalide ou groupe introuvable.');
         }
     });
 
@@ -94,7 +120,19 @@ export default function SocialPage() {
                     <Trophy className="w-5 h-5 text-accent" /> Vos Groupes
                 </h2>
 
-                {isLoading && <div className="text-center py-8 text-muted-foreground">Chargement...</div>}
+                {status === 'unauthenticated' && (
+                    <div className="text-center py-10 bg-card rounded-xl border border-dashed border-border space-y-4">
+                        <p className="text-muted-foreground">Connectez-vous pour créer ou rejoindre un groupe.</p>
+                        <Link
+                            href={`/login?callbackUrl=${encodeURIComponent(joinCode ? `/social?code=${joinCode}` : '/social')}`}
+                            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 min-h-11 rounded-full font-semibold"
+                        >
+                            <LogIn className="w-4 h-4" /> Se connecter
+                        </Link>
+                    </div>
+                )}
+
+                {isLoading && status === 'authenticated' && <div className="text-center py-8 text-muted-foreground">Chargement...</div>}
 
                 {!isLoading && groups?.length === 0 && (
                     <div className="text-center py-12 bg-card rounded-xl border border-dashed border-border">
@@ -149,7 +187,7 @@ export default function SocialPage() {
                                 Annuler
                             </button>
                             <button
-                                onClick={() => createGroupMutation.mutate({ name: newGroupName })}
+                                onClick={() => requireAuth('/social') && createGroupMutation.mutate({ name: newGroupName })}
                                 disabled={!newGroupName || createGroupMutation.isPending}
                                 className="flex-1 py-2 bg-primary text-primary-foreground rounded-lg font-bold disabled:opacity-50"
                             >
@@ -174,9 +212,10 @@ export default function SocialPage() {
                                 className="w-full p-3 pl-10 rounded-lg border bg-muted/50 focus:ring-2 focus:ring-primary outline-none font-mono uppercase tracking-widest text-center text-lg"
                                 maxLength={6}
                                 value={joinCode}
-                                onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
+                                onChange={(e) => { setJoinCode(e.target.value.toUpperCase()); setJoinError(null); }}
                             />
                         </div>
+                        {joinError && <p role="alert" className="text-sm text-red-500 -mt-3 mb-4">{joinError}</p>}
                         <div className="flex gap-2">
                             <button
                                 onClick={() => setIsJoinOpen(false)}
@@ -185,7 +224,7 @@ export default function SocialPage() {
                                 Annuler
                             </button>
                             <button
-                                onClick={() => joinGroupMutation.mutate(joinCode)}
+                                onClick={() => requireAuth(`/social?code=${joinCode}`) && joinGroupMutation.mutate(joinCode)}
                                 disabled={joinCode.length < 6 || joinGroupMutation.isPending}
                                 className="flex-1 py-2 bg-primary text-primary-foreground rounded-lg font-bold disabled:opacity-50"
                             >

@@ -2,7 +2,9 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation'; // Correct import for App Router
-import { ChevronLeft, Copy, Share2, Medal, Flame } from 'lucide-react';
+import { ChevronLeft, Copy, Check, Medal, Flame } from 'lucide-react';
+import { useState } from 'react';
+import ShareAppButton from '@/components/ShareAppButton';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 // @ts-ignore
@@ -31,6 +33,8 @@ export default function GroupDetailsPage({ params }: { params: Promise<{ id: str
     // Unwrap params in React 19 / Next 15+ convention
     const { id } = use(params);
     const { data: session } = useSession();
+    const [codeCopied, setCodeCopied] = useState(false);
+    const [leaveError, setLeaveError] = useState<string | null>(null);
 
     const { data, isLoading, error } = useQuery<GroupDetails>({
         queryKey: ['group', id],
@@ -52,8 +56,10 @@ export default function GroupDetailsPage({ params }: { params: Promise<{ id: str
 
     const copyCode = () => {
         if (data?.group.code) {
-            navigator.clipboard.writeText(data.group.code);
-            alert('Code copié !');
+            navigator.clipboard?.writeText(data.group.code).then(() => {
+                setCodeCopied(true);
+                setTimeout(() => setCodeCopied(false), 2000);
+            }).catch(() => { /* presse-papiers indisponible */ });
         }
     };
 
@@ -69,11 +75,11 @@ export default function GroupDetailsPage({ params }: { params: Promise<{ id: str
                 // Force refresh or redirect
                 window.location.href = '/social';
             } else {
-                alert("Erreur lors de la tentative de quitter le groupe.");
+                setLeaveError("Erreur lors de la tentative de quitter le groupe.");
             }
         } catch (error) {
             console.error("Error leaving group:", error);
-            alert("Une erreur est survenue.");
+            setLeaveError("Une erreur est survenue.");
         }
     };
 
@@ -101,10 +107,22 @@ export default function GroupDetailsPage({ params }: { params: Promise<{ id: str
                             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
                                 <span className="text-xs font-semibold tracking-widest uppercase opacity-70">Code Groupe</span>
                                 <span className="font-mono text-lg font-bold tracking-widest">{group.code}</span>
-                                <button onClick={copyCode} className="ml-2 hover:bg-white/20 p-1 rounded transition">
-                                    <Copy className="w-4 h-4" />
+                                <button
+                                    onClick={copyCode}
+                                    aria-label={codeCopied ? 'Code copié' : 'Copier le code'}
+                                    className="ml-1 hover:bg-white/20 p-2 rounded transition"
+                                >
+                                    {codeCopied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                                 </button>
                             </div>
+
+                            <ShareAppButton
+                                source="group"
+                                label="Inviter des proches"
+                                path={`/social?code=${group.code}`}
+                                text={`Rejoins mon groupe « ${group.name} » pour lire le Coran en 40 jours ensemble !`}
+                                className="bg-white text-primary hover:bg-white/90 rounded-full font-semibold px-5"
+                            />
 
                             <button
                                 onClick={handleLeaveGroup}
@@ -112,6 +130,7 @@ export default function GroupDetailsPage({ params }: { params: Promise<{ id: str
                             >
                                 Quitter le groupe
                             </button>
+                            {leaveError && <p role="alert" className="text-xs text-red-100">{leaveError}</p>}
                         </div>
                     </div>
                 </div>

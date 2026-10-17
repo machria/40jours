@@ -4,6 +4,8 @@ import { ArrowRight } from 'lucide-react';
 import { Suspense } from 'react';
 import HomeProgress from '@/components/HomeProgress';
 import RamadanBanner from '@/components/RamadanBanner';
+import DayDoneBadge from '@/components/DayDoneBadge';
+import ShareAppButton from '@/components/ShareAppButton';
 
 // Page entièrement statique : le progrès utilisateur est chargé côté client
 export const dynamic = 'force-static';
@@ -31,6 +33,9 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8">
       <header className="mb-8 text-center space-y-2">
+        <div className="md:hidden flex justify-end -mt-2 -mb-2">
+          <ShareAppButton source="home" iconOnly className="px-3 text-muted-foreground" />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold font-kufi text-primary">Coran 40 Jours</h1>
         <p className="text-muted-foreground text-lg">Votre compagnon spirituel pour compléter le Coran.</p>
       </header>
@@ -151,9 +156,12 @@ export default function Home() {
                       Jour {day.jour}
                     </span>
                   </div>
-                  <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
-                    Pages {day.pages}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <DayDoneBadge dayId={day.jour} />
+                    <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                      Pages {day.pages}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="mt-2 mb-3">

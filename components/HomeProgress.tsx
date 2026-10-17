@@ -1,33 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-interface ProgressData {
-  progressPercent: number;
-  completedDays: number;
-  dailyProgress: Record<string, boolean>;
-}
+import { useProgress } from '@/hooks/useProgress';
 
 export default function HomeProgress() {
-  const [progress, setProgress] = useState<ProgressData | null>(null);
-  const [nextDay, setNextDay] = useState(1);
+  const { data: progress } = useProgress();
 
-  useEffect(() => {
-    fetch('/api/progress')
-      .then(res => (res.ok ? res.json() : null))
-      .then((data: ProgressData | null) => {
-        if (!data || (data as any).error) return;
-        setProgress(data);
-        for (let i = 1; i <= 40; i++) {
-          if (!data.dailyProgress[i.toString()]) {
-            setNextDay(i);
-            break;
-          }
-        }
-      })
-      .catch(() => {});
-  }, []);
+  let nextDay = 1;
+  if (progress) {
+    for (let i = 1; i <= 40; i++) {
+      if (!progress.dailyProgress[i.toString()]) {
+        nextDay = i;
+        break;
+      }
+    }
+  }
 
   return (
     <div className="bg-card border rounded-2xl p-6 shadow-sm flex flex-col items-center justify-center text-center space-y-4">

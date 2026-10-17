@@ -3,6 +3,18 @@
 import { useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 
+const DISMISS_KEY = 'pwaPromptDismissedAt';
+const DISMISS_DAYS = 30;
+
+function wasDismissedRecently() {
+    try {
+        const at = Number(localStorage.getItem(DISMISS_KEY));
+        return at > 0 && Date.now() - at < DISMISS_DAYS * 24 * 60 * 60 * 1000;
+    } catch {
+        return false;
+    }
+}
+
 export default function PWAInstallPrompt() {
     const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
     const [showPrompt, setShowPrompt] = useState(false);
@@ -13,9 +25,8 @@ export default function PWAInstallPrompt() {
             e.preventDefault();
             // Stash the event so it can be triggered later.
             setDeferredPrompt(e);
-            // Update UI notify the user they can install the PWA
-            // Only show if user hasn't dismissed it recently (could add local storage check here)
-            setShowPrompt(true);
+            // Ne pas réafficher si l'utilisateur l'a fermée récemment
+            if (!wasDismissedRecently()) setShowPrompt(true);
         };
 
         window.addEventListener('beforeinstallprompt', handler);
@@ -41,13 +52,14 @@ export default function PWAInstallPrompt() {
     };
 
     const handleDismiss = () => {
+        try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch { /* stockage indisponible */ }
         setShowPrompt(false);
     };
 
     if (!showPrompt) return null;
 
     return (
-        <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-80 bg-background border border-border p-4 rounded-lg shadow-lg z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
+        <div className="fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] left-4 right-4 md:bottom-4 md:left-auto md:right-4 md:w-80 bg-background border border-border p-4 rounded-lg shadow-lg z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
             <div className="flex items-start justify-between gap-4">
                 <div className="flex-1">
                     <h3 className="font-semibold text-sm mb-1">Installer l'application</h3>
@@ -64,7 +76,7 @@ export default function PWAInstallPrompt() {
                 </div>
                 <button
                     onClick={handleDismiss}
-                    className="text-muted-foreground hover:text-foreground transition-colors p-1"
+                    className="text-muted-foreground hover:text-foreground transition-colors p-2 -m-1"
                     aria-label="Fermer"
                 >
                     <X className="w-4 h-4" />

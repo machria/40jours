@@ -3,9 +3,12 @@
 import { plan40jours } from '@/data/plan40jours';
 import { useState, useEffect, useMemo, useRef } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search, Repeat, Repeat1 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { ChevronLeft, Play, Pause, CheckCircle, BookOpen, Search, Repeat, Repeat1, SlidersHorizontal, X } from 'lucide-react';
 import { useQueries } from '@tanstack/react-query';
-import { useSession, signIn } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
+import { useProgress, useSetDayCompleted } from '@/hooks/useProgress';
+import ShareAppButton from '@/components/ShareAppButton';
 import { getQuranPage, QuranPageData } from '@/lib/quranApi';
 import TafsirModal from '@/components/reading/TafsirModal';
 import { TajwidText } from '@/components/TajwidText';
@@ -18,6 +21,30 @@ import { getAyahAudioUrl } from '@/lib/audioUrls';
 
 interface ReadingClientProps {
     dayId: number;
+}
+
+// Jours où l'on propose d'inviter un proche après validation (éviter la lassitude)
+const SHARE_PROMPT_DAYS = [1, 7, 20, 40];
+
+// Petit carillon de réussite généré localement (pas de fichier audio tiers)
+function playSuccessChime() {
+    try {
+        const ctx = new AudioContext();
+        [523.25, 783.99].forEach((freq, i) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            const start = ctx.currentTime + i * 0.12;
+            osc.frequency.value = freq;
+            osc.type = 'sine';
+            gain.gain.setValueAtTime(0.0001, start);
+            gain.gain.exponentialRampToValueAtTime(0.2, start + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.4);
+            osc.connect(gain).connect(ctx.destination);
+            osc.start(start);
+            osc.stop(start + 0.45);
+        });
+        setTimeout(() => ctx.close(), 1000);
+    } catch { /* Web Audio indisponible */ }
 }
 
 export default function ReadingClient({ dayId }: ReadingClientProps) {
@@ -92,7 +119,8 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
     // Fetch WBW
     const [wbwData, setWbwData] = useState<any[]>([]);
     const [isWordByWordMode, setIsWordByWordMode] = useState(false);
-    const { reversePhonetics, setReversePhonetics } = useSettings();
+    const { reversePhonetics, setReversePhonetics, fontSize, setFontSize, fontSizes } = useSettings();
+    const baseFontSize = fontSizes[fontSize];
     const wbwLoaded = useRef(false);
 
     useEffect(() => {
@@ -149,15 +177,22 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         enabled: allPagesLoaded // Only start tracking/restoring when full layout is ready to avoid jumping
     });
 
-    const [isCompleted, setIsCompleted] = useState(false);
-    const { data: session } = useSession();
+    const router = useRouter();
+    const { status } = useSession();
+    const { data: progress, isFetched: progressFetched } = useProgress();
+    const setDayCompleted = useSetDayCompleted();
+    const isCompleted = !!progress?.dailyProgress[dayId.toString()];
+    const [isSaving, setIsSaving] = useState(false);
+    const [justCompleted, setJustCompleted] = useState(false);
+    const [toast, setToast] = useState<string | null>(null);
 
-    const handleCompletion = async () => {
-        if (!session) {
-            signIn();
-            return;
-        }
+    const showToast = (message: string) => {
+        setToast(message);
+        setTimeout(() => setToast(null), 4000);
+    };
 
+    const markCompleted = async () => {
+        setIsSaving(true);
         try {
             const res = await fetch('/api/progress', {
                 method: 'POST',
@@ -165,16 +200,43 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 body: JSON.stringify({ dayId, completed: true }),
             });
             if (res.ok) {
-                setIsCompleted(true);
+                setDayCompleted(dayId, true);
+                setJustCompleted(true);
                 triggerGamification();
             } else {
-                alert("Erreur lors de la sauvegarde. Veuillez réessayer.");
+                showToast("Erreur lors de la sauvegarde. Veuillez réessayer.");
             }
         } catch (e) {
             console.error("Failed to mark complete", e);
-            alert("Erreur de connexion.");
+            showToast("Erreur de connexion. Vérifiez votre réseau.");
+        } finally {
+            setIsSaving(false);
         }
     };
+
+    const handleCompletion = () => {
+        if (isCompleted || isSaving) return;
+        if (status !== 'authenticated') {
+            // Revenir sur ce jour après connexion et valider automatiquement
+            const callbackUrl = `/jour/${dayId}?validate=1`;
+            router.push(`/login?callbackUrl=${encodeURIComponent(callbackUrl)}`);
+            return;
+        }
+        markCompleted();
+    };
+
+    // Retour du login avec ?validate=1 : valider le jour puis nettoyer l'URL
+    const autoValidated = useRef(false);
+    useEffect(() => {
+        // attendre la progression pour ne pas re-valider un jour déjà terminé
+        if (status !== 'authenticated' || !progressFetched || autoValidated.current) return;
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('validate') !== '1') return;
+        autoValidated.current = true;
+        window.history.replaceState(null, '', window.location.pathname);
+        if (!isCompleted) markCompleted();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [status, progressFetched, isCompleted]);
 
     const triggerGamification = () => {
         confetti({
@@ -183,11 +245,33 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
             origin: { y: 0.6 },
             colors: ['#10B981', '#F59E0B', '#34D399']
         });
-
-        const successSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3');
-        successSound.volume = 0.5;
-        successSound.play().catch(() => { });
+        playSuccessChime();
     };
+
+    // En-tête masqué au défilement vers le bas + barre de progression de lecture
+    const [headerHidden, setHeaderHidden] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
+    const [optionsOpen, setOptionsOpen] = useState(false);
+    useEffect(() => {
+        let lastY = window.scrollY;
+        let ticking = false;
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const y = window.scrollY;
+                const max = document.documentElement.scrollHeight - window.innerHeight;
+                setScrollProgress(max > 0 ? Math.min(1, y / max) : 0);
+                if (Math.abs(y - lastY) > 8) {
+                    setHeaderHidden(y > lastY && y > 120);
+                    lastY = y;
+                }
+                ticking = false;
+            });
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     if (!dayPlan) {
         return <div className="p-8 text-center">Plan non trouvé pour le jour {dayId}</div>;
@@ -230,64 +314,122 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
         </div>
     );
 
+    const toggleClass = (active: boolean) =>
+        `flex items-center justify-between w-full min-h-12 px-4 rounded-xl border text-sm font-medium transition-colors ${active ? 'bg-primary/10 text-primary border-primary/30' : 'border-border hover:bg-muted'}`;
+
     return (
         <div className="min-h-screen bg-background pb-24">
-            {/* Sticky Header */}
-            <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b p-4 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-2">
-                    <Link href="/" className="p-2 hover:bg-muted rounded-full">
+            {/* En-tête compact (56 px), masqué au défilement vers le bas */}
+            <header
+                className={`sticky top-0 z-40 bg-background/95 backdrop-blur border-b shadow-sm transition-transform duration-300 ${headerHidden && !optionsOpen ? '-translate-y-full' : 'translate-y-0'}`}
+            >
+                <div className="h-14 px-2 flex items-center gap-1">
+                    <Link href="/" className="p-2.5 hover:bg-muted rounded-full shrink-0" aria-label="Retour à l'accueil">
                         <ChevronLeft className="w-6 h-6" />
                     </Link>
-                    <Link href="/search" className="p-2 hover:bg-muted rounded-full" title="Recherche">
-                        <Search className="w-5 h-5 text-muted-foreground" />
-                    </Link>
-                </div>
-                <div className="text-center">
-                    <h1 className="text-lg font-bold font-kufi text-primary">Jour {dayId}</h1>
-                    <div className="flex items-center gap-2 justify-center">
-                        <p className="text-xs text-muted-foreground">{dayPlan.sourates}</p>
-                        <span className="text-muted-foreground">•</span>
-                        <Link href={`/jour/${dayId}/tafsir`} className="text-xs text-accent hover:underline font-semibold flex items-center gap-1">
-                            <BookOpen className="w-3 h-3" />
-                            Tafsir Complet
-                        </Link>
-                        <span className="text-muted-foreground">•</span>
+                    <div className="flex-1 min-w-0 text-center">
+                        <h1 className="text-base font-bold font-kufi text-primary leading-tight">Jour {dayId}</h1>
+                        <p className="text-xs text-muted-foreground truncate" title={dayPlan.sourates}>{dayPlan.sourates}</p>
+                    </div>
+                    <div className="hidden lg:flex items-center gap-2 shrink-0">
                         <button
                             onClick={() => setShowPhonetic(!showPhonetic)}
-                            className={`text-xs font-semibold px-2 py-0.5 rounded border transition-colors ${showPhonetic ? 'bg-primary/10 text-primary border-primary/20' : 'text-muted-foreground border-border hover:text-foreground'}`}
+                            aria-pressed={showPhonetic}
+                            className={`text-xs font-semibold px-3 min-h-9 rounded-full border transition-colors ${showPhonetic ? 'bg-primary/10 text-primary border-primary/20' : 'text-muted-foreground border-border hover:text-foreground'}`}
                         >
                             Phonétique
                         </button>
+                        <button
+                            onClick={() => setIsWordByWordMode(!isWordByWordMode)}
+                            aria-pressed={isWordByWordMode}
+                            className={`text-xs font-semibold px-3 min-h-9 rounded-full border transition-colors ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'text-primary border-primary/20 hover:bg-primary/5'}`}
+                        >
+                            Mot par Mot
+                        </button>
                     </div>
-
-                    {(
-                        <div className="mt-2 flex justify-center gap-2 flex-wrap">
-                            <button
-                                onClick={() => setIsWordByWordMode(!isWordByWordMode)}
-                                className={`text-xs font-semibold px-3 py-1 rounded-full border transition-colors ${isWordByWordMode ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-primary border-primary/20 hover:bg-primary/5'}`}
-                            >
-                                {isWordByWordMode ? "Vue Normale" : "Mot par Mot"}
-                            </button>
-                            {isWordByWordMode && (
-                                <button
-                                    onClick={() => setReversePhonetics(!reversePhonetics)}
-                                    className={`flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full border transition-colors ${reversePhonetics ? 'bg-accent text-accent-foreground border-accent' : 'bg-transparent text-accent border-accent/20 hover:bg-accent/10'}`}
-                                    title="Inverser les lettres de la phonétique"
-                                >
-                                    Phonétique RTL
-                                </button>
-                            )}
-                        </div>
-                    )}
+                    <button
+                        onClick={() => setOptionsOpen(true)}
+                        className="p-2.5 hover:bg-muted rounded-full shrink-0"
+                        aria-label="Options de lecture"
+                        aria-haspopup="dialog"
+                    >
+                        <SlidersHorizontal className="w-5 h-5" />
+                    </button>
+                    <button
+                        className={`p-2.5 rounded-full transition-colors shrink-0 ${isCompleted ? 'text-green-600 bg-green-100 dark:bg-green-900/30' : 'text-primary hover:bg-primary/10'}`}
+                        onClick={handleCompletion}
+                        disabled={isCompleted || isSaving}
+                        aria-label={isCompleted ? 'Jour validé' : 'Marquer le jour comme terminé'}
+                        title={isCompleted ? 'Jour validé' : 'Marquer comme terminé'}
+                    >
+                        <CheckCircle className={`w-6 h-6 ${isCompleted ? 'fill-current' : ''}`} />
+                    </button>
                 </div>
-                <button
-                    className={`p-2 rounded-full transition-colors ${isCompleted ? 'text-green-600 bg-green-100' : 'text-primary hover:bg-primary/10'}`}
-                    onClick={handleCompletion}
-                    disabled={isCompleted}
-                >
-                    <CheckCircle className={`w-6 h-6 ${isCompleted ? 'fill-current' : ''}`} />
-                </button>
+                {/* Progression de lecture */}
+                <div className="h-0.5" aria-hidden="true">
+                    <div className="h-full bg-primary transition-[width] duration-150" style={{ width: `${scrollProgress * 100}%` }} />
+                </div>
             </header>
+
+            {/* Feuille « Options » */}
+            {optionsOpen && (
+                <div className="fixed inset-0 z-60 bg-black/50 flex items-end md:items-center justify-center" onClick={() => setOptionsOpen(false)}>
+                    <div
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="reading-options-title"
+                        className="bg-background w-full md:max-w-md rounded-t-2xl md:rounded-2xl border shadow-xl p-4 pb-[calc(1rem+env(safe-area-inset-bottom))] md:pb-4 space-y-3 max-h-[85vh] overflow-y-auto"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div className="flex items-center justify-between">
+                            <h2 id="reading-options-title" className="font-semibold text-lg">Options de lecture</h2>
+                            <button onClick={() => setOptionsOpen(false)} className="p-2.5 hover:bg-muted rounded-lg" aria-label="Fermer">
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+
+                        <button onClick={() => setShowPhonetic(!showPhonetic)} aria-pressed={showPhonetic} className={toggleClass(showPhonetic)}>
+                            Phonétique <span className="text-xs">{showPhonetic ? 'Activée' : 'Désactivée'}</span>
+                        </button>
+                        <button onClick={() => setIsWordByWordMode(!isWordByWordMode)} aria-pressed={isWordByWordMode} className={toggleClass(isWordByWordMode)}>
+                            Mot par mot <span className="text-xs">{isWordByWordMode ? 'Activé' : 'Désactivé'}</span>
+                        </button>
+                        {isWordByWordMode && (
+                            <button onClick={() => setReversePhonetics(!reversePhonetics)} aria-pressed={reversePhonetics} className={toggleClass(reversePhonetics)}>
+                                Phonétique RTL <span className="text-xs">{reversePhonetics ? 'Activée' : 'Désactivée'}</span>
+                            </button>
+                        )}
+
+                        <div className="space-y-2 pt-1">
+                            <p className="text-sm font-medium text-muted-foreground">Taille du texte</p>
+                            <div className="grid grid-cols-4 gap-2" role="radiogroup" aria-label="Taille du texte">
+                                {(Object.keys(fontSizes) as Array<keyof typeof fontSizes>).map((size, i) => (
+                                    <button
+                                        key={size}
+                                        role="radio"
+                                        aria-checked={fontSize === size}
+                                        aria-label={['Petite', 'Moyenne', 'Grande', 'Très grande'][i]}
+                                        onClick={() => setFontSize(size)}
+                                        className={`min-h-12 rounded-xl border font-semibold transition-colors ${fontSize === size ? 'bg-primary text-primary-foreground border-primary' : 'border-border hover:bg-muted'}`}
+                                        style={{ fontSize: `${14 + i * 3}px` }}
+                                    >
+                                        A
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-2 pt-1">
+                            <Link href={`/jour/${dayId}/tafsir`} className="flex items-center justify-center gap-2 min-h-12 rounded-xl border text-sm font-semibold text-accent hover:bg-accent/5">
+                                <BookOpen className="w-4 h-4" /> Tafsir complet
+                            </Link>
+                            <Link href="/search" className="flex items-center justify-center gap-2 min-h-12 rounded-xl border text-sm font-semibold hover:bg-muted">
+                                <Search className="w-4 h-4" /> Recherche
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* Main Content */}
             <main className="max-w-4xl mx-auto p-4 space-y-8">
@@ -362,7 +504,7 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                                             </div>
                                             {/* Arabic */}
                                             <div className="w-full">
-                                                <p className="font-kufi text-2xl md:text-3xl leading-[2.5] text-foreground" dir="rtl">
+                                                <p className="font-kufi leading-[2.5] text-foreground" dir="rtl" style={{ fontSize: `calc(${baseFontSize} * 1.25)` }}>
                                                     <TajwidText text={ayah.text} className="inline" />
                                                     <span className="mr-2 inline-flex items-center justify-center w-8 h-8 text-xs border rounded-full font-sans text-muted-foreground align-middle">
                                                         {ayah.numberInSurah}
@@ -379,27 +521,29 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
 
                                             {/* French Translation & Actions */}
                                             <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 pt-2 dir-ltr text-left">
-                                                <p className="text-muted-foreground/90 text-base md:text-lg leading-relaxed font-sans flex-1">
+                                                <p className="text-muted-foreground/90 leading-relaxed font-sans flex-1" style={{ fontSize: `calc(${baseFontSize} * 0.85)` }}>
                                                     {ayah.translation}
                                                 </p>
 
-                                                <div className="self-end md:self-start flex items-center gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                                                <div className="self-end md:self-start flex items-center gap-2">
                                                     <button
                                                         onClick={() => handlePlayAyah(ayah.surahNumber, ayah.numberInSurah)}
-                                                        className={`flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${isPlaying
+                                                        aria-label={`${isPlaying ? 'Mettre en pause' : 'Écouter'} le verset ${ayah.numberInSurah}`}
+                                                        className={`flex items-center gap-1.5 text-sm font-semibold px-4 min-h-11 rounded-full transition-colors ${isPlaying
                                                             ? 'text-primary bg-primary/10'
                                                             : 'text-primary hover:text-primary/80 border border-primary/20 hover:bg-primary/5'
                                                             }`}
                                                     >
-                                                        {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                                                        {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                                                         Écouter
                                                     </button>
 
                                                     <button
                                                         onClick={() => openTafsir(ayah.surahNumber, ayah.numberInSurah, ayah.text, ayah.translation!)}
-                                                        className="flex items-center gap-1 text-xs font-semibold text-accent hover:text-accent/80 border border-accent/20 hover:bg-accent/5 px-3 py-1.5 rounded-full"
+                                                        aria-label={`Tafsir du verset ${ayah.numberInSurah}`}
+                                                        className="flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent/80 border border-accent/20 hover:bg-accent/5 px-4 min-h-11 rounded-full"
                                                     >
-                                                        <BookOpen className="w-3 h-3" />
+                                                        <BookOpen className="w-4 h-4" />
                                                         Tafsir
                                                     </button>
                                                 </div>
@@ -439,29 +583,36 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                     </div>
                 )}
 
-                {/* Validation Button (Bottom) */}
+                {/* Validation du jour (fin de lecture) */}
                 {allPagesLoaded && (
-                    <div className="flex justify-center my-8">
+                    <div className="flex flex-col items-center gap-4 my-8">
                         <button
                             onClick={handleCompletion}
-                            disabled={isCompleted}
-                            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all shadow-md transform hover:scale-105 ${isCompleted
-                                ? 'bg-green-100 text-green-700 border-2 border-green-200 hover:bg-green-200'
-                                : 'bg-white text-gray-500 border-2 border-gray-200 hover:border-emerald-500 hover:text-emerald-600'
+                            disabled={isCompleted || isSaving}
+                            className={`flex items-center gap-2 px-6 min-h-12 rounded-full font-semibold transition-all shadow-md ${isCompleted
+                                ? 'bg-green-100 text-green-700 border-2 border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800'
+                                : 'bg-card text-foreground border-2 border-primary/40 hover:border-primary hover:text-primary active:scale-95'
                                 }`}
                         >
-                            {isCompleted ? (
-                                <>
-                                    <CheckCircle className="w-5 h-5" />
-                                    Jour Validé
-                                </>
-                            ) : (
-                                <>
-                                    <CheckCircle className="w-5 h-5 opacity-50" />
-                                    Marquer comme Terminé
-                                </>
-                            )}
+                            <CheckCircle className={`w-5 h-5 ${isCompleted ? 'fill-current' : ''}`} />
+                            {isCompleted ? 'Jour validé' : isSaving ? 'Enregistrement…' : status === 'authenticated' ? 'Marquer le jour comme terminé' : 'Se connecter pour valider ce jour'}
                         </button>
+
+                        {/* Invitation au partage aux moments forts */}
+                        {justCompleted && SHARE_PROMPT_DAYS.includes(dayId) && (
+                            <div className="w-full max-w-md bg-primary/5 border border-primary/20 rounded-2xl p-5 text-center space-y-3">
+                                <p className="font-semibold">
+                                    {dayId === 40 ? 'Défi terminé, Al-Hamdulillah !' : `Jour ${dayId} validé, bravo !`}
+                                </p>
+                                <p className="text-sm text-muted-foreground">Invitez un proche à faire le défi avec vous.</p>
+                                <ShareAppButton
+                                    source="day"
+                                    label="Inviter un proche"
+                                    text={`J'ai terminé le jour ${dayId} du défi « Coran en 40 jours ». Rejoins-moi !`}
+                                    className="mx-auto justify-center bg-primary text-primary-foreground hover:bg-primary/90 rounded-full font-semibold"
+                                />
+                            </div>
+                        )}
                     </div>
                 )}
 
@@ -482,39 +633,49 @@ export default function ReadingClient({ dayId }: ReadingClientProps) {
                 )}
             </main>
 
-            {/* Audio Footer */}
-            <div className="fixed bottom-0 left-0 right-0 bg-card/95 backdrop-blur border-t z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
-                <div className="container mx-auto p-3 md:p-4 flex items-center justify-between md:rounded-none">
-                    <div className="flex items-center gap-4 w-full justify-center md:justify-start">
-                        <button
-                            onClick={togglePlay}
-                            className={`size-12 rounded-full flex items-center justify-center transition-transform shadow-md ${!allPagesLoaded && playlist.length === 0 ? 'bg-muted text-muted-foreground cursor-not-allowed' : 'bg-primary text-primary-foreground hover:scale-105'}`}
-                        >
-                            {(!allPagesLoaded && playlist.length === 0) ?
-                                <div className="w-5 h-5 border-2 border-white/50 border-t-white rounded-full animate-spin" /> :
-                                (isPlaying ? <Pause className="fill-current w-5 h-5" /> : <Play className="fill-current ml-1 w-5 h-5" />)
-                            }
-                        </button>
+            {/* Mini-lecteur audio : au-dessus de la nav du bas (mobile), à droite de la sidebar (md+) */}
+            <div className="fixed left-0 right-0 bottom-[calc(4rem+env(safe-area-inset-bottom))] md:bottom-0 md:left-64 bg-card/95 backdrop-blur border-t z-45 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+                <div className="max-w-4xl mx-auto px-3 py-2 md:p-3 flex items-center gap-3">
+                    <button
+                        onClick={togglePlay}
+                        aria-label={isPlaying ? 'Mettre en pause' : 'Lancer la récitation'}
+                        className={`size-11 shrink-0 rounded-full flex items-center justify-center transition-transform shadow-md ${!allPagesLoaded && playlist.length === 0 ? 'bg-muted text-muted-foreground cursor-not-allowed' : 'bg-primary text-primary-foreground hover:scale-105'}`}
+                    >
+                        {(!allPagesLoaded && playlist.length === 0) ?
+                            <div className="w-5 h-5 border-2 border-white/50 border-t-white rounded-full animate-spin" /> :
+                            (isPlaying ? <Pause className="fill-current w-5 h-5" /> : <Play className="fill-current ml-1 w-5 h-5" />)
+                        }
+                    </button>
 
-                        <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold truncate">
-                                {currentAyah ? `Sourate ${currentAyah.surah} : Verset ${currentAyah.ayah}` : 'Mishary Rashid'}
-                            </p>
-                            <p className="text-xs text-muted-foreground truncate">
-                                {isPlaying ? "Lecture en cours..." : "Lecture audio"}
-                            </p>
-                        </div>
-
-                        <button
-                            onClick={toggleRepeat}
-                            className={`p-2 rounded-full transition-all ${repeatMode !== 'off' ? 'bg-accent/20 text-accent' : 'text-muted-foreground hover:bg-muted'}`}
-                            title="Répéter (Verset / Tout / Off)"
-                        >
-                            {repeatMode === 'single' ? <Repeat1 className="w-5 h-5" /> : <Repeat className="w-5 h-5" />}
-                        </button>
+                    <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold truncate">
+                            {currentAyah ? `Sourate ${currentAyah.surah} : Verset ${currentAyah.ayah}` : 'Mishary Rashid'}
+                        </p>
+                        <p className="text-xs text-muted-foreground truncate">
+                            {isPlaying ? "Lecture en cours..." : "Lecture audio"}
+                        </p>
                     </div>
+
+                    <button
+                        onClick={toggleRepeat}
+                        aria-label={`Répétition : ${repeatMode === 'single' ? 'verset' : repeatMode === 'off' ? 'désactivée' : 'tout'}`}
+                        className={`p-3 rounded-full transition-all ${repeatMode !== 'off' ? 'bg-accent/20 text-accent' : 'text-muted-foreground hover:bg-muted'}`}
+                        title="Répéter (Verset / Tout / Off)"
+                    >
+                        {repeatMode === 'single' ? <Repeat1 className="w-5 h-5" /> : <Repeat className="w-5 h-5" />}
+                    </button>
                 </div>
             </div>
+
+            {/* Toast (au-dessus du lecteur et de la nav) */}
+            {toast && (
+                <div
+                    role="alert"
+                    className="fixed left-4 right-4 md:left-auto md:right-6 md:w-96 bottom-[calc(8rem+env(safe-area-inset-bottom))] md:bottom-24 z-70 bg-foreground text-background text-sm px-4 py-3 rounded-xl shadow-lg animate-in fade-in slide-in-from-bottom-2"
+                >
+                    {toast}
+                </div>
+            )}
 
             <TafsirModal
                 isOpen={tafsirState.isOpen}

@@ -209,10 +209,10 @@ export default function SurahViewer({
     return (
         <>
             <div className="flex flex-col sm:flex-row justify-between items-center mb-6 bg-muted/30 p-2 rounded-lg gap-2 sticky top-[73px] z-10 backdrop-blur-md">
-                <div className="flex gap-2 w-full sm:w-auto">
+                <div className="flex flex-wrap gap-2 w-full sm:w-auto min-w-0">
                     <button
                         onClick={togglePlaySequence}
-                        className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-6 py-2 rounded-md text-sm font-bold transition-all shadow-sm ${isPlaying ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
+                        className={`flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 min-h-10 py-2 rounded-md text-sm font-bold transition-all shadow-sm ${isPlaying ? 'bg-red-100 text-red-600 hover:bg-red-200' : 'bg-primary text-primary-foreground hover:bg-primary/90'}`}
                     >
                         {isPlaying ? <Pause className="w-4 h-4 fill-current" /> : <Play className="w-4 h-4 fill-current" />}
                         {isPlaying ? "Pause" : "Tout écouter"}

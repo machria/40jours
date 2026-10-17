@@ -275,7 +275,8 @@ await dbConnect();
 
 **Système :** NextAuth.js v5 beta — Credentials provider uniquement (email + password)
 **Session :** JWT, durée 30 jours
-**Création auto :** Si l'email n'existe pas, un compte est créé automatiquement lors de la première connexion
+**Connexion / inscription séparées :** le credential `mode` vaut `login` (défaut, ne crée jamais de compte → code `no_account`) ou `register` (crée le compte, codes `email_taken` / `weak_password`). Les codes sont lus côté client via `res.code`.
+**Retour après login :** `/login?callbackUrl=/chemin` (chemins internes uniquement). La page du jour utilise `?validate=1` pour valider automatiquement au retour.
 **Protection des routes :** `/dashboard` nécessite une session valide (voir `auth.config.ts`)
 
 ```typescript
@@ -338,7 +339,9 @@ export const revalidate = false;
 ### Styles (TailwindCSS 4)
 
 - Utilitaire de merge : `cn()` depuis `@/lib/utils` (clsx + tailwind-merge)
-- Thème : géré par `SettingsContext` (light/dark + fontSize + tajwid + phonétique)
+- Thème : géré par `SettingsContext` (light/dark + fontSize + tajwid + phonétique). Les variantes `dark:` suivent la classe `.dark` (`@custom-variant dark` dans `globals.css`), pas le réglage de l'OS
+- Échelle de z-index : nav / en-têtes collants `z-40`, lecteur audio `z-45`, menu mobile et bannière PWA `z-50`, modales `z-60`, toasts `z-70`
+- Zone du bas mobile : tout élément fixe se pose au-dessus de la nav avec `bottom-[calc(4rem+env(safe-area-inset-bottom))]`
 - Polices : Inter (variable `--font-sans`) + Reem Kufi (arabe, variable `--font-kufi`)
 
 ---

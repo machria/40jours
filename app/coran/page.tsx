@@ -3,7 +3,6 @@ import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import { ChevronRight, Search, Sparkles } from 'lucide-react';
-import Navigation from '@/components/layout/Navigation';
 
 interface SurahMeta {
     number: number;
@@ -29,8 +28,7 @@ export default function CoranPage() {
     const surahs = getSurahs();
 
     return (
-        <div className="min-h-screen bg-background pb-20 md:pl-64">
-            <Navigation />
+        <div className="min-h-screen bg-background pb-20">
 
             <header className="sticky top-0 z-10 bg-background/80 backdrop-blur border-b p-4">
                 <div className="flex items-center justify-between">

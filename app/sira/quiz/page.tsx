@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Trophy, X, Check, BookOpen } from 'lucide-react';
-import Navigation from '@/components/layout/Navigation';
 import { saveGenericQuizScore } from '@/actions/quiz-actions';
 
 type Question = {
@@ -113,8 +112,7 @@ export default function SiraQuizPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-background pb-20 md:pl-64">
-                <Navigation />
+            <div className="min-h-screen bg-background pb-20">
                 <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
                     <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
                     <p className="text-muted-foreground animate-pulse">Chargement du quiz...</p>
@@ -126,8 +124,7 @@ export default function SiraQuizPage() {
     if (gameOver) {
         const isPerfect = score === questions.length;
         return (
-            <div className="min-h-screen bg-background pb-20 md:pl-64">
-                <Navigation />
+            <div className="min-h-screen bg-background pb-20">
 
                 <div className="p-4 max-w-2xl mx-auto">
                     <Link href="/sira" className="inline-flex items-center gap-2 text-primary hover:underline mb-6">
@@ -168,8 +165,7 @@ export default function SiraQuizPage() {
     const question = questions[currentQuestion];
 
     return (
-        <div className="min-h-screen bg-background pb-20 md:pl-64">
-            <Navigation />
+        <div className="min-h-screen bg-background pb-20">
 
             {/* Header */}
             <header className="sticky top-0 z-10 bg-background/80 backdrop-blur border-b p-4">

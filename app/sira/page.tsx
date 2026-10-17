@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calendar, BookOpen, Clock, AlignLeft, Zap } from 'lucide-react';
-import Navigation from '@/components/layout/Navigation';
 import { cn } from '@/lib/utils'; // Updated import path to match project standard
 
 type SeerahEvent = {
@@ -293,8 +292,7 @@ export default function SeerahPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-background pb-20 md:pl-64">
-                <Navigation />
+            <div className="min-h-screen bg-background pb-20">
                 <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4">
                     <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
                     <p className="text-muted-foreground animate-pulse">Chargement de la Sira...</p>
@@ -304,22 +302,23 @@ export default function SeerahPage() {
     }
 
     return (
-        <div className="min-h-screen bg-background pb-20 md:pl-64">
-            <Navigation />
+        <div className="min-h-screen bg-background pb-20">
 
             {/* Header */}
             <header className="sticky top-0 z-10 bg-background/80 backdrop-blur border-b p-4">
-                <div className="max-w-5xl mx-auto flex items-start justify-between gap-4">
-                    <div>
+                <div className="max-w-5xl mx-auto flex flex-wrap items-start justify-between gap-3">
+                    <div className="min-w-0">
                         <h1 className="text-2xl font-bold font-kufi text-primary">Sira du Prophète ﷺ</h1>
                         <p className="text-sm text-muted-foreground">Biographie du Prophète Muhammad ﷺ</p>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 shrink-0">
                         <div className="flex bg-muted/50 p-1 rounded-lg">
                             <button
                                 onClick={() => setViewMode('narrative')}
+                                aria-label="Récit"
+                                aria-pressed={viewMode === 'narrative'}
                                 className={cn(
-                                    "px-3 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2",
+                                    "px-3 min-h-9 rounded-md text-sm font-medium transition-all flex items-center gap-2",
                                     viewMode === 'narrative'
                                         ? "bg-background shadow text-primary"
                                         : "text-muted-foreground hover:text-foreground"
@@ -330,8 +329,10 @@ export default function SeerahPage() {
                             </button>
                             <button
                                 onClick={() => setViewMode('timeline')}
+                                aria-label="Timeline"
+                                aria-pressed={viewMode === 'timeline'}
                                 className={cn(
-                                    "px-3 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2",
+                                    "px-3 min-h-9 rounded-md text-sm font-medium transition-all flex items-center gap-2",
                                     viewMode === 'timeline'
                                         ? "bg-background shadow text-primary"
                                         : "text-muted-foreground hover:text-foreground"
@@ -342,8 +343,10 @@ export default function SeerahPage() {
                             </button>
                             <button
                                 onClick={() => setViewMode('list')}
+                                aria-label="Liste"
+                                aria-pressed={viewMode === 'list'}
                                 className={cn(
-                                    "px-3 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2",
+                                    "px-3 min-h-9 rounded-md text-sm font-medium transition-all flex items-center gap-2",
                                     viewMode === 'list'
                                         ? "bg-background shadow text-primary"
                                         : "text-muted-foreground hover:text-foreground"

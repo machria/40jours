@@ -1,9 +1,20 @@
-import NextAuth from "next-auth";
+import NextAuth, { CredentialsSignin } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import dbConnect from "@/lib/db";
 import User from "@/models/User";
 import bcrypt from "bcryptjs";
 import { authConfig } from "./auth.config";
+
+// Codes renvoyés au client (res.code) pour distinguer connexion et inscription
+class NoAccountError extends CredentialsSignin {
+    code = "no_account";
+}
+class EmailTakenError extends CredentialsSignin {
+    code = "email_taken";
+}
+class WeakPasswordError extends CredentialsSignin {
+    code = "weak_password";
+}
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     ...authConfig,
@@ -18,12 +29,18 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
                 try {
                     await dbConnect();
-                    const email = credentials.email as string;
+                    const email = (credentials.email as string).trim();
                     const password = credentials.password as string;
+
+                    // "register" crée le compte explicitement ; "login" (défaut) n'en crée jamais,
+                    // pour qu'une faute de frappe dans l'email ne crée pas un compte vide.
+                    const mode = credentials.mode === "register" ? "register" : "login";
 
                     let user = await User.findOne({ email }).select("+password");
 
-                    if (!user) {
+                    if (mode === "register") {
+                        if (user) throw new EmailTakenError();
+                        if (password.length < 6) throw new WeakPasswordError();
                         const hashedPassword = await bcrypt.hash(password, 10);
                         user = await User.create({
                             email,
@@ -33,6 +50,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                             createdAt: new Date(),
                             updatedAt: new Date(),
                         });
+                    } else if (!user) {
+                        throw new NoAccountError();
                     }
 
                     const passwordsMatch = await bcrypt.compare(password, user.password || "");
@@ -41,6 +60,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
                     return { id: user._id.toString(), email: user.email, name: user.name };
                 } catch (error) {
+                    if (error instanceof CredentialsSignin) throw error;
                     console.error("Auth error:", error);
                     return null;
                 }

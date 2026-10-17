@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Reem_Kufi } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers/Providers";
 import Navigation from "@/components/layout/Navigation";
 import PWAInstallPrompt from "@/components/PWAInstallPrompt";
+import WelcomeModal from "@/components/WelcomeModal";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { Analytics } from '@vercel/analytics/react';
@@ -26,6 +27,17 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
+// viewport-fit=cover active env(safe-area-inset-*) sur iPhone (utilisé par pb-safe)
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FDFBF7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F172A" },
+  ],
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -44,7 +56,8 @@ export default async function RootLayout({
           <Providers>
             <Navigation />
             <PWAInstallPrompt />
-            <div className="md:pl-64 pb-16 md:pb-0">
+            <WelcomeModal />
+            <div className="md:pl-64 pb-[calc(4rem+env(safe-area-inset-bottom))] md:pb-0">
               {children}
             </div>
             <Analytics />

@@ -2,6 +2,15 @@
 
 @plugin "tailwindcss-animate";
 
+/* Les variantes dark: suivent le thème de l'app (classe .dark posée par SettingsContext),
+   pas le réglage du système : évite le thème mixte texte clair / fond crème. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Safe-area iPhone (nécessite viewport-fit=cover, cf. app/layout.tsx) */
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 :root {
   --background: #FDFBF7; /* Cream light */
   --foreground: #1A1A1A;
@@ -73,6 +82,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+}
+
+/* iOS zoome au focus si un champ fait moins de 16px. Hors @layer : prime sur text-sm. */
+@media (max-width: 767px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
 
 .kufi-font {
