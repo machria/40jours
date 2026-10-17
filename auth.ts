@@ -1,8 +1,5 @@
 import NextAuth, { CredentialsSignin } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
-import dbConnect from "@/lib/db";
-import User from "@/models/User";
-import bcrypt from "bcryptjs";
 import { authConfig } from "./auth.config";
 
 // Codes renvoyés au client (res.code) pour distinguer connexion et inscription
@@ -28,6 +25,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 if (!credentials?.email || !credentials?.password) return null;
 
                 try {
+                    // Imports à la demande : /api/auth/session (appelé à chaque ouverture du site)
+                    // ne fait que lire le JWT et n'a pas à charger Mongoose ni bcrypt au démarrage à froid.
+                    const [{ default: dbConnect }, { default: User }, { default: bcrypt }] = await Promise.all([
+                        import("@/lib/db"),
+                        import("@/models/User"),
+                        import("bcryptjs"),
+                    ]);
                     await dbConnect();
                     const email = (credentials.email as string).trim();
                     const password = credentials.password as string;

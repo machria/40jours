@@ -10,7 +10,8 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     const [queryClient] = useState(() => new QueryClient());
 
     return (
-        <SessionProvider>
+        // Pas de re-fetch de /api/auth/session à chaque retour sur l'onglet (iOS en déclenche beaucoup)
+        <SessionProvider refetchOnWindowFocus={false}>
             <QueryClientProvider client={queryClient}>
                 <SettingsProvider>
                     {children}

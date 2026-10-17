@@ -106,6 +106,11 @@ import withPWAInit from "@ducanh2912/next-pwa";
 
 const audioCdnUrl = (process.env.NEXT_PUBLIC_AUDIO_CDN_URL ?? '').trim().replace(/\/$/, '');
 
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const audioCdnUrlPattern = audioCdnUrl
+  ? new RegExp(`^${escapeRegExp(audioCdnUrl)}/|/audio/.*\\.mp3$`, 'i')
+  : /\/audio\/.*\.mp3$/i;
+
 const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 const withPWA = withPWAInit({
@@ -123,9 +128,9 @@ const withPWA = withPWAInit({
     runtimeCaching: [
       // Cache Audio Files (CacheFirst) — local /audio/ ou CDN externe (R2)
       {
-        urlPattern: ({ url }: { url: URL }) =>
-          (audioCdnUrl ? url.href.startsWith(audioCdnUrl) : false) ||
-          /\/audio\/.*\.mp3$/i.test(url.pathname),
+        // RegExp construite ici : une fonction serait recopiée telle quelle dans sw.js,
+        // où la variable audioCdnUrl n'existe pas (ReferenceError sur chaque requête).
+        urlPattern: audioCdnUrlPattern,
         handler: "CacheFirst",
         options: {
           cacheName: "audio-cache",

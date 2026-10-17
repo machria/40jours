@@ -4,6 +4,7 @@ import { authConfig } from "./auth.config";
 export default NextAuth(authConfig).auth;
 
 export const config = {
-    // https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
-    matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"],
+    // Seules ces routes dépendent de la session (cf. authorized() dans auth.config.ts) :
+    // inutile de déchiffrer le JWT à chaque navigation sur les autres pages.
+    matcher: ["/dashboard/:path*", "/login"],
 };
