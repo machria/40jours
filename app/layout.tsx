@@ -40,6 +40,8 @@ export const viewport: Viewport = {
   ],
 };
 
+const THEME_INIT_SCRIPT = `try{var d=document.documentElement,t=localStorage.getItem('theme'),f=localStorage.getItem('fontSize');if(t){d.setAttribute('data-theme',t);if(t==='dark')d.classList.add('dark')}if(f)d.setAttribute('data-font-size',f)}catch(e){}`;
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -50,6 +52,11 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        {/* Applique thème et taille de police avant le premier rendu, sans attendre que le JS
+            de l'app soit chargé (SettingsContext ne le fait qu'après l'hydratation). */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body
         suppressHydrationWarning
         className={`${inter.variable} ${kufi.variable} antialiased font-sans bg-background text-foreground`}
