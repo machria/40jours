@@ -78,6 +78,9 @@ export default function Navigation() {
 
     const settingsItem: NavItem = { href: '/settings', label: 'Paramètres', icon: Settings };
 
+    // Dans le menu mobile, onClick ferme le menu ; on y coupe aussi le prefetch : à l'ouverture,
+    // ses ~16 liens deviennent visibles d'un coup et Next.js préchargeait toutes les pages
+    // (plusieurs centaines de Ko à analyser), ce qui figeait l'iPhone.
     const renderLink = (item: NavItem, onClick?: () => void) => {
         const Icon = item.icon;
         const isActive = pathname === item.href;
@@ -86,6 +89,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={onClick}
+                prefetch={onClick ? false : undefined}
                 aria-current={isActive ? 'page' : undefined}
                 className={cn(
                     "flex items-center gap-3 px-4 min-h-11 rounded-lg transition-colors",

@@ -116,6 +116,22 @@ const withNextIntl = createNextIntlPlugin('./i18n.ts');
 const withPWA = withPWAInit({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
+  // Fichiers de public/ à NE PAS précacher (workboxOptions.exclude ne concerne que le build).
+  // Sans ça le SW précachait ~12 000 fichiers (1,8 Go : audio, tafsir, hadith…) dès la
+  // première visite, saturant l'iPhone. Ces données sont mises en cache à la lecture (runtimeCaching).
+  publicExcludes: [
+    "!noprecache/**/*",
+    "!audio/**/*",
+    "!quran/**/*",
+    "!tafsir/**/*",
+    "!hadith/**/*",
+    "!hisn/**/*",
+    "!asbab/**/*",
+    "!data/**/*",
+    "!ayah-location.json",
+    "!quran-transliteration.json",
+    "!surahs.json",
+  ],
   workboxOptions: {
     // Exclude large files from precaching to allow instant install
     exclude: [
