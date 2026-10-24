@@ -240,52 +240,52 @@ export default function NamesPage() {
                             <NamesIntro onStartCards={() => setMode('learn')} onStartQuiz={() => setMode('quiz')} />
 
                             <div className="space-y-3">
-                            <div className="text-xs text-muted-foreground px-1 space-y-1">
-                                <p>Touchez un nom pour voir son verset et ses nuances.</p>
-                                <p>
-                                    <span className="text-amber-600 dark:text-amber-400 font-bold">*</span> Nom tiré du hadith d&apos;at-Tirmidhī, qui ne figure pas tel quel dans le Coran : le verset associé contient sa racine ou en illustre le sens.
-                                </p>
-                            </div>
-                            <div className="rounded-xl border bg-card overflow-hidden shadow-sm">
-                                <div className="overflow-x-auto">
-                                    <table className="w-full text-sm text-left">
-                                        <thead className="bg-muted/50 text-muted-foreground uppercase text-xs font-medium">
-                                            <tr>
-                                                <th className="px-4 py-3 text-center w-12">#</th>
-                                                <th className="px-4 py-3 font-kufi text-right">Arabe</th>
-                                                <th className="px-4 py-3">Translittération</th>
-                                                <th className="px-4 py-3">Français</th>
-                                                <th className="px-4 py-3 hidden md:table-cell">Signification</th>
-                                                <th className="px-4 py-3 hidden sm:table-cell">Verset</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y">
-                                            {namesOfAllah.map((name, i) => (
-                                                <tr
-                                                    key={name.Number}
-                                                    onClick={() => { setIndex(i); setMode('learn'); }}
-                                                    title="Voir le verset et les nuances"
-                                                    className="hover:bg-muted/30 transition-colors cursor-pointer"
-                                                >
-                                                    <td className="px-4 py-3 text-center text-muted-foreground font-mono text-xs">{name.Number}</td>
-                                                    <td className="px-4 py-3 font-kufi text-xl text-primary text-right">{name.arabe}</td>
-                                                    <td className="px-4 py-3 font-bold">
-                                                        {name.transliteration}
-                                                        {name.verset.source !== 'nom' && (
-                                                            <sup className="ml-0.5 text-amber-600 dark:text-amber-400" title="Nom tiré du hadith d'at-Tirmidhī, ne figurant pas tel quel dans le Coran">*</sup>
-                                                        )}
-                                                    </td>
-                                                    <td className="px-4 py-3">{name.francais}</td>
-                                                    <td className="px-4 py-3 text-muted-foreground italic hidden md:table-cell">{name.signification}</td>
-                                                    <td className="px-4 py-3 text-xs text-muted-foreground font-mono whitespace-nowrap hidden sm:table-cell">
-                                                        {name.verset.sourate}:{name.verset.ayah}
-                                                    </td>
-                                                </tr>
-                                            ))}
-                                        </tbody>
-                                    </table>
+                                <div className="text-xs text-muted-foreground px-1 space-y-1">
+                                    <p>Touchez un nom pour voir son verset et ses nuances.</p>
+                                    <p>
+                                        <span className="text-amber-600 dark:text-amber-400 font-bold">*</span> Nom tiré du hadith d&apos;at-Tirmidhī, qui ne figure pas tel quel dans le Coran : le verset associé contient sa racine ou en illustre le sens.
+                                    </p>
                                 </div>
-                            </div>
+                                <div className="rounded-xl border bg-card overflow-hidden shadow-sm">
+                                    <div className="overflow-x-auto">
+                                        <table className="w-full text-sm text-left">
+                                            <thead className="bg-muted/50 text-muted-foreground uppercase text-xs font-medium">
+                                                <tr>
+                                                    <th className="px-2 sm:px-4 py-3 text-center w-12">#</th>
+                                                    <th className="px-2 sm:px-4 py-3 font-kufi text-right">Arabe</th>
+                                                    <th className="px-2 sm:px-4 py-3">Translittération</th>
+                                                    <th className="px-2 sm:px-4 py-3">Français</th>
+                                                    <th className="px-2 sm:px-4 py-3 hidden md:table-cell">Signification</th>
+                                                    <th className="px-2 sm:px-4 py-3 hidden sm:table-cell">Verset</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="divide-y">
+                                                {namesOfAllah.map((name, i) => (
+                                                    <tr
+                                                        key={name.Number}
+                                                        onClick={() => { setIndex(i); setMode('learn'); }}
+                                                        title="Voir le verset et les nuances"
+                                                        className="hover:bg-muted/30 transition-colors cursor-pointer"
+                                                    >
+                                                        <td className="px-2 sm:px-4 py-3 text-center text-muted-foreground font-mono text-xs">{name.Number}</td>
+                                                        <td className="px-2 sm:px-4 py-3 font-kufi text-lg sm:text-xl text-primary text-right">{name.arabe}</td>
+                                                        <td className="px-2 sm:px-4 py-3 font-bold">
+                                                            {name.transliteration}
+                                                            {name.verset.source !== 'nom' && (
+                                                                <sup className="ml-0.5 text-amber-600 dark:text-amber-400" title="Nom tiré du hadith d'at-Tirmidhī, ne figurant pas tel quel dans le Coran">*</sup>
+                                                            )}
+                                                        </td>
+                                                        <td className="px-2 sm:px-4 py-3">{name.francais}</td>
+                                                        <td className="px-2 sm:px-4 py-3 text-muted-foreground italic hidden md:table-cell">{name.signification}</td>
+                                                        <td className="px-2 sm:px-4 py-3 text-xs text-muted-foreground font-mono whitespace-nowrap hidden sm:table-cell">
+                                                            {name.verset.sourate}:{name.verset.ayah}
+                                                        </td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     )}

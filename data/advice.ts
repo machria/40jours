@@ -12139,5 +12139,253 @@ Cette exigence d'équilibre traverse toute son œuvre, et notamment *Talbis Ibli
 - **Coran**, Sourate At-Talaq, 65:2-3.
 - En complément : nos articles [*"Al-Munqidh min ad-Dalal"*](/conseils/ghazali-munqidh-crise-doute-delivrance), [*"Ad-Da' wa ad-Dawa' : le remède aux péchés"*](/conseils/ibn-qayyim-ad-da-wa-ad-dawa-remede-peches) et [*"La Baraka du temps"*](/conseils/baraka-temps-organisation).
 `
+    },
+    {
+        slug: 'imam-bukhari-sahih-histoire-critiques',
+        title: "L'imam Al-Bukhari et son Sahih : la genèse d'un livre et douze siècles de critiques",
+        excerpt: "Seize ans de travail, des milliers de récits passés au crible, un livre considéré comme le plus authentique après le Coran. Mais le Sahih d'Al-Bukhari a aussi été discuté, corrigé et contesté, par des savants musulmans dès le IVe siècle de l'Hégire comme par des chercheurs modernes. Ce que l'on sait, ce qui a été critiqué, et comment lire les hadiths qui heurtent les sensibilités d'aujourd'hui.",
+        date: '2026-10-24',
+        author: 'Équipe 40 Jours',
+        readTime: '20 min',
+        category: 'Sciences & Compréhension',
+        content: `
+# L'imam Al-Bukhari et son Sahih : la genèse d'un livre et douze siècles de critiques
+
+Pour la grande majorité des musulmans sunnites, le *Sahih* d'Al-Bukhari est le livre le plus authentique après le Coran. Cette réputation est si forte qu'on oublie souvent deux choses : le livre a été construit selon une méthode précise, qu'on peut décrire, et il a été critiqué, parfois sévèrement, par des savants musulmans eux-mêmes, bien avant les débats d'aujourd'hui.
+
+Cet article retrace la vie de l'imam, la manière dont il a composé son recueil, puis les critiques qu'il a reçues : celles des spécialistes classiques du hadith, celles des chercheurs modernes, et celles qui portent sur des hadiths qui semblent en contradiction avec les valeurs de l'Occident contemporain.
+
+> **Note sur les références :** les numéros de hadiths de Bukhari suivent la numérotation courante de Muhammad Fu'ad 'Abd al-Baqi (de 1 à 7563), utilisée sur sunnah.com et dans notre section [Hadith](/hadith). Ceux de Muslim suivent la même numérotation.
+
+---
+
+## 1. Qui était Al-Bukhari ?
+
+**Abu 'Abd Allah Muhammad ibn Isma'il al-Bukhari** naît à Boukhara (dans l'actuel Ouzbékistan) le 13 Shawwal 194 H (juillet 810). Son père, Isma'il, lui-même transmetteur de hadiths, meurt alors qu'il est encore enfant ; c'est sa mère qui l'élève.
+
+Ses biographes, notamment al-Khatib al-Baghdadi (*Tarikh Baghdad*) et adh-Dhahabi (*Siyar A'lam an-Nubala'*), rapportent qu'il commence à apprendre les hadiths par cœur vers l'âge de dix ans, puis qu'il part en pèlerinage à La Mecque à seize ans avec sa mère et son frère. Il y reste pour étudier. Commence alors une vie de voyages : le Hijaz, Bassora, Koufa, Bagdad, la Syrie, l'Égypte. Parmi ses maîtres figurent **Ahmad ibn Hanbal**, **'Ali ibn al-Madini**, **Yahya ibn Ma'in** et **Ishaq ibn Rahwayh**, les plus grands spécialistes du hadith de leur époque.
+
+### L'épreuve de Bagdad
+
+Le récit le plus célèbre de sa vie est celui de l'examen de Bagdad. Selon Ibn 'Adi, repris par al-Khatib, dix savants préparèrent cent hadiths en mélangeant les chaînes de transmission et les textes, chaque texte étant attribué à la chaîne d'un autre. Ils les récitèrent devant lui en public. À chaque hadith, Al-Bukhari répondit : « Je ne le connais pas. » Puis il reprit les cent hadiths un par un, dans l'ordre, en rendant à chaque texte sa chaîne exacte.
+
+Il faut toutefois signaler qu'Ibn 'Adi rapporte cette histoire d'après « plusieurs maîtres » qu'il ne nomme pas. Certains chercheurs en ont donc discuté la solidité. L'histoire est révélatrice de la réputation de l'imam, mais elle ne doit pas être présentée comme un fait aussi établi qu'un hadith authentique.
+
+### Une fin de vie difficile
+
+Contrairement à l'image d'un savant entouré d'honneurs, les dernières années d'Al-Bukhari sont marquées par l'adversité. À Nishapur, il entre en conflit avec le savant Muhammad ibn Yahya adh-Dhuhli au sujet de la récitation du Coran. Al-Bukhari distinguait la Parole d'Allah, incréée, de l'acte humain de la réciter (la voix, le mouvement des lèvres), qui est un acte créé. Ses adversaires y virent une concession à la thèse du « Coran créé », et il dut quitter la ville.
+
+De retour à Boukhara, il refuse, selon ses biographes, d'aller enseigner en privé dans le palais du gouverneur Khalid ibn Ahmad adh-Dhuhli, estimant que la science doit être recherchée et non portée aux puissants. Il est expulsé de sa ville natale. Il meurt peu après à **Khartank**, un village près de Samarcande, la nuit de l'Aïd al-Fitr de l'an **256 H** (870).
+
+Outre le *Sahih*, il a laissé d'autres ouvrages importants, dont *At-Tarikh al-Kabir*, un dictionnaire des transmetteurs de hadiths, et *Al-Adab al-Mufrad*, un recueil consacré au comportement et aux bonnes manières. Parmi ses élèves figurent **Muslim ibn al-Hajjaj**, auteur de l'autre *Sahih*, et **at-Tirmidhi**.
+
+---
+
+## 2. Comment le Sahih a été composé
+
+### Un titre qui annonce le programme
+
+Le vrai nom du livre est *Al-Jami' al-Musnad as-Sahih al-Mukhtasar min Umur Rasul Allah ﷺ wa Sunanihi wa Ayyamihi*. Chaque mot compte :
+- ***Al-Jami'*** : un recueil « complet », qui couvre tous les domaines (croyance, adoration, transactions, morale, exégèse, biographie, fin des temps) ;
+- ***Al-Musnad*** : chaque hadith principal est rapporté avec une chaîne de transmission remontant au Prophète ﷺ ;
+- ***As-Sahih*** : seuls des récits authentiques y sont retenus ;
+- ***Al-Mukhtasar*** : « abrégé ». Al-Bukhari ne prétend pas réunir tous les hadiths authentiques. Ibn as-Salah rapporte qu'il disait n'y avoir fait entrer que ce qui était authentique, et en avoir laissé d'autres de côté pour ne pas allonger le livre.
+
+### Seize ans de travail
+
+Al-Khatib al-Baghdadi rapporte (dans *Tarikh Baghdad*) cette parole de l'imam : « J'ai composé mon livre *As-Sahih* en seize ans ; je l'ai extrait de six cent mille hadiths. » Ce chiffre surprend souvent. Il faut savoir que, dans le vocabulaire des spécialistes, un même texte rapporté par dix chaînes différentes compte pour dix « hadiths ». Les 600 000 désignent donc l'ensemble des chaînes et des versions qu'il avait recueillies, pas 600 000 paroles différentes du Prophète ﷺ.
+
+Son élève al-Firabri rapporte l'avoir entendu dire : « Je n'ai placé aucun hadith dans le livre du *Sahih* sans avoir fait auparavant une grande ablution (*ghusl*) et prié deux rak'a. » (cité par Ibn Hajar dans *Hady as-Sari*)
+
+### Combien de hadiths ?
+
+Les chiffres varient selon la manière de compter :
+- L'édition de **Fu'ad 'Abd al-Baqi**, la plus utilisée aujourd'hui, numérote **7 563** hadiths, répétitions comprises ;
+- **Ibn as-Salah**, dans sa *Muqaddima*, donnait **7 275** hadiths avec les répétitions et environ **4 000** sans ;
+- **Ibn Hajar al-'Asqalani**, dans *Hady as-Sari*, compte environ **2 602** hadiths sans répétition, auxquels s'ajoutent **1 341** récits *mu'allaq* (cités sans chaîne complète, souvent dans les titres de chapitres).
+
+Les répétitions ne sont pas des doublons inutiles : Al-Bukhari cite le même hadith dans plusieurs chapitres parce qu'il en tire à chaque fois une règle différente.
+
+### L'organisation : 97 livres et des titres qui parlent
+
+Le *Sahih* est divisé en 97 « livres » (*kutub*) et en plusieurs milliers de chapitres. Il s'ouvre sur le hadith de l'intention : *« Les actions ne valent que par les intentions »* (n°1), comme pour rappeler au lecteur de vérifier la sienne, un thème développé dans notre article sur [la Niyya](/conseils/niyya-intention-transformer-quotidien-adoration). Il se clôt sur le hadith des deux paroles « légères sur la langue et lourdes dans la balance » : *Subhan Allah wa bi-hamdihi, Subhan Allah al-'Azim* (n°7563).
+
+Les titres de chapitres (*tarajim*) sont souvent de véritables prises de position juridiques. D'où la formule répétée par les savants : « La jurisprudence d'Al-Bukhari se trouve dans ses titres de chapitres. » Une partie importante de *Fath al-Bari*, le commentaire d'Ibn Hajar, consiste à expliquer le lien entre un titre et les hadiths qu'il contient.
+
+### Les conditions de l'authenticité
+
+Al-Bukhari n'a pas écrit de préface exposant sa méthode ; les savants l'ont déduite du livre lui-même. Pour qu'un hadith principal soit retenu, il faut :
+1. Des transmetteurs **intègres** (*'adl*) et **précis** (*dabit*) ;
+2. Une chaîne **continue**, sans maillon manquant ;
+3. L'absence d'anomalie (*shudhudh*) et de défaut caché (*'illa*).
+
+À cela s'ajoute une exigence qu'al-Qadi 'Iyad (m. 544 H), dans *Ikmal al-Mu'lim*, est le premier à lui attribuer, ainsi qu'à son maître 'Ali ibn al-Madini : il ne lui suffisait pas que deux transmetteurs successifs aient vécu à la même époque ; il voulait qu'il soit établi qu'ils s'étaient **rencontrés** au moins une fois. Muslim, dans l'introduction de son *Sahih*, rejette explicitement cette exigence et se contente de la contemporanéité accompagnée de la possibilité de la rencontre. La plupart des savants après al-Qadi 'Iyad, dont Ibn Hajar, ont repris cette attribution, et elle explique en partie pourquoi la majorité place le *Sahih* d'Al-Bukhari au-dessus de celui de Muslim. Elle est toutefois discutée : le chercheur contemporain Hatim al-'Awni (*Ijma' al-Muhaddithin*, 1421 H) soutient qu'Al-Bukhari appliquait cette rigueur à son livre sans en faire une condition générale de l'authenticité. Notre article sur [l'Isnad](/conseils/isnad-transmission-unique-islam) détaille ce système de transmission.
+
+---
+
+## 3. Du manuscrit au livre imprimé
+
+Al-Bukhari a enseigné son *Sahih* à des milliers d'élèves. La transmission qui s'est imposée est celle de **Muhammad ibn Yusuf al-Firabri** (m. 320 H), dont dérivent toutes les éditions imprimées. Plus tard, le savant **Sharaf ad-Din al-Yunini** (originaire de Baalbek, m. 701 H) compare plusieurs de ces transmissions et note leurs différences dans les marges d'un manuscrit de référence. C'est sur cette version que repose l'édition dite **Sultaniyya**, imprimée à Bulaq (Le Caire) en 1311-1313 H (1893-1895) sur ordre du sultan ottoman Abdülhamid II, encore considérée comme une référence.
+
+Le livre a suscité des dizaines de commentaires, dont :
+- ***A'lam al-Hadith*** d'al-Khattabi (m. 388 H), l'un des plus anciens ;
+- ***Fath al-Bari*** d'Ibn Hajar al-'Asqalani (m. 852 H), le plus célèbre, précédé de son introduction *Hady as-Sari* ;
+- ***'Umdat al-Qari*** de Badr ad-Din al-'Ayni (m. 855 H), commentateur hanafite ;
+- ***Irshad as-Sari*** d'al-Qastallani (m. 923 H).
+
+---
+
+## 4. « Le livre le plus authentique après le Coran » : d'où vient cette formule ?
+
+La formule est souvent attribuée aux premiers imams, mais l'histoire est plus nuancée. L'imam **ash-Shafi'i** (m. 204 H) avait dit qu'il ne connaissait pas sur terre de livre plus authentique, après le Livre d'Allah, que le *Muwatta'* de l'imam Malik. Le *Sahih* d'Al-Bukhari n'existait pas encore.
+
+Ce n'est que progressivement que les deux *Sahih* ont acquis leur statut. L'historien Jonathan Brown, dans *The Canonization of al-Bukhari and Muslim* (Brill, 2007), montre que ce processus a pris environ deux siècles, et qu'al-Hakim an-Naysaburi (m. 405 H) y a joué un rôle central. Au VIIe siècle, **Ibn as-Salah** (m. 643 H) écrit dans sa célèbre *Muqaddima* que la communauté a reçu ces deux livres avec acceptation (*talaqqi bi-l-qabul*), et que ce sont les livres les plus authentiques après le Coran.
+
+Même ce consensus a ses nuances :
+- **Abu 'Ali an-Naysaburi** (m. 349 H), le maître d'al-Hakim, affirmait qu'il n'existait pas sous le ciel de livre plus authentique que celui de Muslim, et plusieurs savants du Maghreb l'ont suivi. Ibn as-Salah explique cette préférence par le fait que Muslim, après son introduction, ne mêle à ses hadiths ni commentaires ni récits sans chaîne complète, contrairement à Al-Bukhari dans ses titres de chapitres ;
+- **Ibn as-Salah** lui-même excepte de ce consensus « quelques passages » critiqués par des spécialistes comme ad-Daraqutni, et **an-Nawawi** reprend cette réserve.
+
+Autrement dit, les savants qui ont fixé le statut du *Sahih* reconnaissaient eux-mêmes que certains de ses passages avaient été discutés.
+
+---
+
+## 5. Les critiques classiques : quand les savants musulmans discutaient le Sahih
+
+### Avant même Al-Bukhari : les corrections de 'Aïsha
+
+L'idée qu'on puisse examiner le contenu d'un hadith, et pas seulement sa chaîne, est attestée dès l'époque des Compagnons, et Al-Bukhari lui-même en rapporte un exemple.
+
+Ibn 'Umar transmettait la parole : *« Le défunt est tourmenté par les pleurs de ses proches. »* Lorsqu'on rapporte cela à 'Aïsha, elle répond : « Qu'Allah fasse miséricorde à 'Umar. Par Allah, le Messager d'Allah ﷺ n'a pas dit que le croyant est tourmenté par les pleurs de ses proches », en précisant qu'il parlait d'un non-croyant. Elle ajoute : *« Le Coran vous suffit : Nul ne portera le fardeau d'autrui »* (Coran 35:18). (Sahih al-Bukhari, n°1288)
+
+Un autre exemple concerne le hadith du « mauvais présage » dans la femme, la maison et le cheval. Al-Bukhari le rapporte d'Ibn 'Umar sous une forme affirmative (n°5093 et n°5772), mais aussi, d'Ibn 'Umar et de Sahl ibn Sa'd, sous une forme conditionnelle : *« S'il y a un mauvais présage dans quelque chose, c'est dans la maison, la femme et le cheval »* (n°5094 et n°5095), qui n'affirme pas l'existence du présage. Or, selon un récit du *Musnad* de l'imam Ahmad, lorsqu'on rapporta à 'Aïsha qu'Abu Hurayra transmettait ce hadith sous sa forme affirmative, elle se mit en colère et expliqua que le Prophète ﷺ disait en réalité : *« Les gens de l'époque préislamique disaient : le mauvais présage est dans la femme, la monture et la maison. »* Shu'ayb al-Arna'ut, dans son édition annotée du *Musnad*, juge la chaîne de ce récit authentique selon les conditions de Muslim, et al-Albani l'a également authentifié (*Sahih al-Jami'*, n°4452).
+
+Au VIIIe siècle de l'Hégire, le savant shafi'ite **Badr ad-Din az-Zarkashi** a réuni ces corrections dans un livre entier : *Al-Ijaba li-Irad ma Istadrakathu 'A'isha 'ala as-Sahaba* (« La réponse : ce que 'Aïsha a corrigé chez les Compagnons »).
+
+### Ad-Daraqutni et la critique technique
+
+La critique la plus importante vient d'un des plus grands spécialistes du hadith, **ad-Daraqutni** (m. 385 H). Dans son ouvrage *Al-Ilzamat wa at-Tatabbu'*, il relève des hadiths des deux *Sahih* qu'il juge défectueux : environ **78 propres à Al-Bukhari**, **100 propres à Muslim** et **32 communs aux deux**.
+
+Il faut comprendre la nature de ces critiques. Dans leur grande majorité, elles ne disent pas « ce hadith est inventé ». Elles portent sur des points techniques de la chaîne : un transmetteur qui aurait omis un intermédiaire, une parole d'un Compagnon remontée par erreur jusqu'au Prophète ﷺ, une divergence entre élèves d'un même maître. Souvent, le texte lui-même est authentique par d'autres chaînes. Le débat s'est poursuivi après lui : **Abu Mas'ud ad-Dimashqi** (m. 401 H) a répondu à une partie des critiques d'ad-Daraqutni visant le *Sahih* de Muslim, et **Abu 'Ali al-Ghassani** (m. 498 H) a relevé, dans *At-Tanbih 'ala al-Awham al-Waqi'a fi as-Sahihayn*, des erreurs dans les chaînes et les noms de transmetteurs des deux recueils.
+
+Ibn Hajar a consacré une partie de *Hady as-Sari* à répondre à ces critiques une par une. Il en réfute la plupart, mais il ne prétend pas que toutes sont sans fondement, ce qui rejoint la réserve d'Ibn as-Salah mentionnée plus haut. Dans un autre chapitre, il examine les transmetteurs du *Sahih* qui ont été critiqués par d'autres spécialistes, et explique pourquoi Al-Bukhari les a retenus : souvent, il ne cite leurs récits qu'en appui à d'autres chaînes plus solides, ou seulement pour des maîtres dont ils étaient connus pour bien retenir les hadiths. Notre article sur [Al-Jarh wa at-Ta'dil](/conseils/jarh-tadil-critique-transmetteurs-hadith) explique comment les transmetteurs étaient évalués.
+
+### Un cas d'école : les singes de 'Amr ibn Maymun
+
+Le *Sahih* contient ce récit : *« À l'époque préislamique, j'ai vu une guenon entourée de singes qui la lapidaient parce qu'elle avait commis la fornication ; je l'ai lapidée avec eux. »* (Sahih al-Bukhari, n°3849)
+
+Ce passage est souvent cité pour discréditer le livre entier. Or les savants classiques l'avaient déjà discuté :
+- Ce n'est **pas une parole du Prophète ﷺ**, mais le témoignage d'un homme, 'Amr ibn Maymun, sur ce qu'il a vu avant l'Islam. Il illustre un point important : tout ce qui se trouve dans le *Sahih* n'est pas un hadith prophétique ;
+- **Al-Humaydi** (*Al-Jam' bayna as-Sahihayn*) signale que ce récit est absent de certaines transmissions anciennes du *Sahih* ;
+- **Ibn 'Abd al-Barr** (*Al-Isti'ab*) a critiqué la version détaillée de ce récit et rejeté l'idée d'attribuer la fornication et l'application de peines à des animaux ;
+- **Ibn Qutayba** (*Ta'wil Mukhtalif al-Hadith*) estime que 'Amr a vu des singes en lapider un autre et a lui-même supposé la raison.
+
+### Les objections des théologiens
+
+D'autres critiques sont venues des théologiens, au nom de la raison ou de l'infaillibilité des prophètes. L'exemple le plus connu est le hadith rapportant que le Prophète ﷺ fut atteint par la sorcellerie de Labid ibn al-A'sam, au point de croire avoir fait des choses qu'il n'avait pas faites (Sahih al-Bukhari, n°5763). Les Mu'tazilites et le juriste hanafite **al-Jassas** (*Ahkam al-Qur'an*) l'ont rejeté, estimant qu'il portait atteinte à la crédibilité de la révélation. La majorité des savants l'ont accepté en précisant que l'atteinte concernait le corps et les affaires du quotidien, jamais la transmission du message. Ibn Hajar rapporte ce débat dans *Fath al-Bari*, et notre article sur [le Sihr](/conseils/sihr-sorcellerie-prophete-protection-islam) le développe.
+
+---
+
+## 6. Les critiques modernes
+
+### Les orientalistes
+
+À la fin du XIXe siècle, **Ignaz Goldziher** (*Muhammedanische Studien*, 1890) défend l'idée que beaucoup de hadiths reflètent les débats politiques et religieux des premiers siècles plutôt que les paroles du Prophète ﷺ. En 1950, **Joseph Schacht** (*The Origins of Muhammadan Jurisprudence*) va plus loin : selon lui, les chaînes de transmission auraient été « allongées vers le passé » pour donner plus d'autorité à des opinions juridiques plus tardives.
+
+Ces thèses ont été vivement discutées. **Muhammad Mustafa al-A'zami** (*Studies in Early Hadith Literature*, 1968 ; *On Schacht's Origins of Muhammadan Jurisprudence*, 1985) a montré, manuscrits à l'appui, que l'écriture du hadith avait commencé bien plus tôt que ne le supposait Schacht. Le chercheur allemand **Harald Motzki** (*Die Anfänge der islamischen Jurisprudenz*, 1991), en étudiant un recueil antérieur à Al-Bukhari, le *Musannaf* de 'Abd ar-Razzaq, a conclu que de nombreuses traditions remontaient effectivement au Ier siècle de l'Hégire. Aujourd'hui, le scepticisme radical de Schacht n'est plus la position dominante chez les chercheurs occidentaux.
+
+### Les réformistes musulmans
+
+Au XXe siècle, des penseurs musulmans ont remis en question certains hadiths des deux *Sahih* sans rejeter la Sunna. **Rashid Rida**, dans sa revue *Al-Manar*, a exprimé des réserves sur certains hadiths transmis par une seule chaîne (*ahad*), notamment ceux qui concernent les phénomènes naturels. En 1989, le prédicateur égyptien **Muhammad al-Ghazali** publie *As-Sunna an-Nabawiyya bayna Ahl al-Fiqh wa Ahl al-Hadith*, où il soutient que certains hadiths, même dans les *Sahih*, doivent être écartés lorsque leur sens contredit le Coran. Le livre a provoqué une vague de réponses, beaucoup de spécialistes lui reprochant d'appliquer ce critère de façon subjective.
+
+### La contestation radicale
+
+Plus récemment, le Marocain **Rachid Aylal** a publié en 2017 *Sahih al-Bukhari, fin d'une légende*, qui remet en cause l'ensemble du livre, jusqu'à l'attribution du texte actuel à Al-Bukhari. En 2018, un tribunal de Marrakech en a ordonné l'interdiction au motif qu'il menaçait la « sécurité spirituelle » des citoyens. Des chercheurs ont répondu à l'ouvrage en relevant de nombreuses erreurs de méthode, notamment l'ignorance des règles établies par les spécialistes du hadith.
+
+---
+
+## 7. Des hadiths qui semblent en contradiction avec les valeurs occidentales
+
+C'est la question la plus délicate. Certains hadiths du *Sahih* heurtent les sensibilités contemporaines, en particulier en Europe. Plutôt que de les cacher, voici les principaux, avec les lectures qu'en proposent les savants, y compris quand ils ne sont pas d'accord entre eux.
+
+### L'âge de 'Aïsha au mariage
+
+**Le texte :** *« Le Prophète ﷺ l'a épousée alors qu'elle avait six ans et a consommé le mariage quand elle avait neuf ans. »* (Sahih al-Bukhari, n°5133, n°5134 et n°3896 ; Sahih Muslim, n°1422, qui précise qu'elle avait dix-huit ans à la mort du Prophète ﷺ)
+
+**La position classique :** les savants anciens ont accepté ces récits sans difficulté. Ils les replaçaient dans les normes de l'Arabie du VIIe siècle, et plus largement du monde pré-moderne, où le passage à l'âge adulte était lié à la puberté. An-Nawawi, dans son commentaire de Muslim, rapporte une divergence : Ahmad et Abu 'Ubayd fixaient un âge (neuf ans), tandis que Malik, ash-Shafi'i et Abu Hanifa liaient la consommation du mariage à la capacité physique de l'épouse, qui varie d'une femme à l'autre et ne dépend pas d'un âge ; an-Nawawi juge cette seconde position correcte. Dans *Misquoting Muhammad* (2014), Jonathan Brown défend lui aussi l'idée qu'on ne peut pas juger ce mariage selon les normes des XIXe et XXe siècles, tout en reconnaissant que la question est l'une des plus difficiles pour les musulmans d'aujourd'hui.
+
+**Les relectures modernes :** des auteurs contemporains soutiennent que 'Aïsha était plus âgée. Ils s'appuient notamment sur une information d'Ibn Abi az-Zinad, selon laquelle sa sœur Asma' avait dix ans de plus qu'elle, ce qui, croisé avec l'âge d'Asma' à sa mort, placerait 'Aïsha vers quatorze ou quinze ans au mariage. Ils soulignent aussi que le récit vient principalement de Hisham ibn 'Urwa, dont la mémoire aurait faibli à la fin de sa vie en Irak. D'autres chercheurs leur répondent que le récit est confirmé par plusieurs chaînes et que Hisham reste un transmetteur fiable. Le débat reste ouvert, mais la position majoritaire chez les spécialistes du hadith demeure celle du texte.
+
+**Ce qui n'est pas débattu :** aucun savant ne considère ce récit comme une obligation ou une recommandation à imiter. Le droit musulman a toujours laissé une place à l'intérêt de la personne et à la coutume, et la plupart des pays à majorité musulmane ont aujourd'hui fixé un âge minimum légal pour le mariage.
+
+### La peine de l'apostasie
+
+**Les textes :** Ibn 'Abbas cite la parole *« Celui qui change de religion, tuez-le »* pour critiquer 'Ali, qui avait fait brûler des hérétiques, car le Prophète ﷺ avait interdit de punir par le feu (Sahih al-Bukhari, n°3017 et n°6922). Un autre hadith mentionne, parmi les trois cas où le sang d'un musulman peut être versé, *« celui qui quitte sa religion et se sépare de la communauté »* (n°6878).
+
+**La position classique :** les quatre écoles juridiques ont retenu la peine de mort pour l'apostat, en général après une période où on lui demande de revenir. Les hanafites l'excluaient pour la femme.
+
+**Les lectures contemporaines :** de nombreux savants contemporains distinguent le changement de conviction, qui relève de la liberté de conscience (*« Nulle contrainte en religion »*, Coran 2:256), de la trahison politique ou militaire. Ils s'appuient notamment sur la formule *« et se sépare de la communauté »* du hadith n°6878 : dans le contexte du VIIe siècle, quitter l'Islam signifiait souvent rejoindre le camp ennemi. C'est la thèse développée par **Taha Jabir al-'Alwani** dans *Apostasy in Islam* (IIIT, 2011), qui affirme que ni le Coran ni la Sunna n'imposent la mort pour le simple changement de religion, en l'absence d'un autre crime. Cette lecture reste minoritaire dans la jurisprudence classique, mais elle est de plus en plus défendue.
+
+### Les femmes et le pouvoir
+
+**Le texte :** lorsque le Prophète ﷺ apprit que les Perses avaient porté sur le trône la fille de Khosro, il dit : *« Un peuple qui confie ses affaires à une femme ne réussira jamais. »* (Sahih al-Bukhari, n°4425)
+
+**Les lectures :** la majorité des savants en ont déduit que la direction suprême de l'État (le califat) est réservée aux hommes. Mais le contexte est précis : le hadith commente la situation de l'Empire perse, alors en pleine décomposition, et c'est Abu Bakra qui le rapporte des années plus tard, au moment de la bataille du Chameau, où 'Aïsha elle-même menait une armée. Surtout, les savants classiques n'en ont pas tous tiré une exclusion des femmes de toute responsabilité. Ibn Hajar, dans son commentaire de ce hadith (*Fath al-Bari*), rappelle que la majorité en déduit l'interdiction pour une femme d'être juge, mais il signale aussi qu'**Abu Hanifa** l'autorisait dans les domaines où le témoignage des femmes est admis, qu'une opinion en ce sens est rapportée de Malik, et que l'exégète **at-Tabari** l'autorisait. La portée de la position d'at-Tabari varie selon les sources : Ibn Hajar la limite aux affaires où le témoignage d'une femme est accepté, tandis qu'Ibn Rushd (*Bidayat al-Mujtahid*) la présente comme une autorisation sans restriction. Son attribution à at-Tabari est par ailleurs discutée, car on ne la trouve dans aucun de ses livres conservés.
+
+À l'époque moderne, la sociologue marocaine **Fatima Mernissi** (*Le Harem politique*, 1987) a mis en cause la fiabilité d'Abu Bakra, qui avait été condamné par 'Umar pour un faux témoignage d'adultère. Les spécialistes du hadith lui répondent que cette condamnation concernait un témoignage judiciaire, et non la transmission des hadiths, qui obéit à d'autres règles.
+
+### « Moins de raison et de religion »
+
+**Le texte :** lors d'une fête de l'Aïd, le Prophète ﷺ exhorte les femmes à faire l'aumône et dit avoir vu que la majorité des habitants de l'Enfer étaient des femmes, parce qu'elles « maudissent souvent et sont ingrates envers leurs maris ». Il ajoute : *« Je n'ai jamais vu de personnes avec moins de raison et de religion que vous. Un homme prudent peut se laisser tromper par certaines d'entre vous. »* Les femmes lui demandent pourquoi ; il cite le témoignage de deux femmes qui équivaut à celui d'un homme, et le fait qu'elles ne prient ni ne jeûnent pendant leurs règles. (Sahih al-Bukhari, n°304)
+
+**Les lectures :** les commentateurs soulignent plusieurs points :
+- Le « manque » est défini par le Prophète ﷺ lui-même, à travers deux règles précises : le témoignage dans certaines transactions (Coran 2:282) et la dispense de prière et de jeûne pendant les règles. Il ne s'agit pas d'une affirmation générale sur l'intelligence des femmes ;
+- Ce manque n'est pas un péché : la femme qui ne prie pas pendant ses règles obéit à une dispense voulue par Allah. Ibn Hajar, dans son commentaire de ce hadith (*Fath al-Bari*), cite an-Nawawi, pour qui le manque dans la religion ne se limite pas à ce qui entraîne un péché ;
+- Ibn Hajar ajoute que le but de cette mention n'est pas de blâmer les femmes, puisqu'il s'agit de leur nature, mais de mettre en garde les hommes contre le fait de se laisser séduire. Le reproche porte sur un comportement : l'ingratitude envers le conjoint, comme le précise une autre version (Sahih al-Bukhari, n°29) ;
+- Le contexte est une exhortation à l'aumône lors d'une fête, avec un dialogue où les femmes interrogent librement le Prophète ﷺ.
+
+Ces explications ne dissipent pas toutes les difficultés pour un lecteur d'aujourd'hui, mais elles montrent que le texte ne dit pas ce qu'on lui fait souvent dire.
+
+### Science et nature : la mouche et le soleil
+
+**La mouche :** *« Si une mouche tombe dans la boisson de l'un de vous, qu'il la plonge entièrement puis la retire, car l'une de ses ailes porte une maladie et l'autre le remède. »* (Sahih al-Bukhari, n°3320 et n°5782) Ce hadith a été critiqué au nom de l'hygiène moderne. Certains auteurs citent des études sur des substances antibactériennes produites par les mouches, mais elles ne permettent pas de conclure, et il vaut mieux ne pas en faire une « preuve scientifique ». D'autres savants rappellent un principe posé par le Prophète ﷺ lui-même : lorsqu'il donna un avis sur la pollinisation des palmiers et que la récolte diminua, il dit : *« Vous connaissez mieux les affaires de votre monde »* (Sahih Muslim, n°2363), et précisa qu'il n'était qu'un homme lorsqu'il donnait une simple opinion (n°2362). La question de savoir si le hadith de la mouche relève de ce cas ou de la révélation est débattue.
+
+**Le soleil :** le Prophète ﷺ demande à Abu Dharr où va le soleil lorsqu'il se couche, puis répond : *« Il va se prosterner sous le Trône »*, en citant le verset *« Et le soleil court vers un lieu de repos qui lui est assigné »* (Coran 36:38) (Sahih al-Bukhari, n°3199 et n°4802). Le hadith semble contredire l'astronomie, puisque le soleil ne « se couche » jamais réellement. Ibn Hajar, dans *Fath al-Bari*, évoque plusieurs lectures : la prosternation pourrait désigner un surcroît de soumission et d'obéissance à Allah, ou bien la prosternation des anges chargés du soleil. Aucune de ces lectures n'exige que le soleil s'arrête physiquement. Le Coran affirme d'ailleurs que *« le soleil, la lune, les étoiles, les montagnes, les arbres »* se prosternent devant Allah (Coran 22:18), sans que personne n'imagine qu'ils s'immobilisent.
+
+---
+
+## 8. Comment lire ces hadiths ?
+
+Ce parcours permet de dégager quelques principes, tous tirés de la tradition savante elle-même.
+
+1. **Authenticité ne veut pas dire évidence du sens.** Qu'un hadith soit authentique dit que le Prophète ﷺ a bien prononcé ces paroles ; cela ne dit pas comment les comprendre. Les savants ont écrit des livres entiers sur les hadiths qui semblent se contredire ou contredire la raison, comme *Ikhtilaf al-Hadith* d'ash-Shafi'i et *Ta'wil Mukhtalif al-Hadith* d'Ibn Qutayba.
+
+2. **Tout ce qui est dans le Sahih n'est pas une parole prophétique.** Le livre contient des paroles de Compagnons, des récits historiques et des titres de chapitres qui sont l'opinion d'Al-Bukhari.
+
+3. **Le Sahih n'a jamais été sacré au même titre que le Coran.** Depuis 'Aïsha jusqu'à ad-Daraqutni et Ibn Hajar, les savants ont examiné, discuté et parfois corrigé son contenu, en particulier ses chaînes. Ce travail se faisait selon des règles précises, et non selon le goût de chacun.
+
+4. **Le contexte compte.** Beaucoup des hadiths difficiles répondent à une situation précise (l'Empire perse, une fête de l'Aïd, les mœurs de l'Arabie du VIIe siècle) et les savants en ont toujours tenu compte.
+
+5. **Il existe une distance entre critique sérieuse et rejet global.** Les critiques classiques portaient sur quelques dizaines de passages, sur des milliers. Rejeter tout le livre à cause d'eux revient à ignorer le travail des critiques eux-mêmes.
+
+---
+
+## Conclusion
+
+Le *Sahih* d'Al-Bukhari est le fruit d'une vie entière : un orphelin de Boukhara, devenu le plus grand spécialiste du hadith de son temps, mort en exil après avoir refusé de plier la science devant un gouverneur. Son livre s'est imposé non par décret mais par l'examen de générations de savants, qui ont pesé chaque chaîne et discuté chaque passage douteux.
+
+Reconnaître que certains hadiths sont difficiles à lire aujourd'hui, ou que des savants ont émis des réserves sur certaines chaînes, n'enlève rien à la valeur du livre. C'est au contraire ce qu'ont fait les meilleurs connaisseurs du *Sahih*, de 'Aïsha à Ibn Hajar. Pour approfondir la manière d'évaluer un hadith, notre article sur [les hadiths populaires inauthentiques](/conseils/hadiths-populaires-inauthentiques-verifier-source) propose une méthode pratique.
+
+---
+
+**Sources et bibliographie :**
+- **Sahih al-Bukhari** (numérotation Fu'ad 'Abd al-Baqi) : n°1 (l'intention) ; n°29 et n°304 (les femmes et l'Enfer) ; n°1288 (correction de 'Aïsha) ; n°3017, n°6878 et n°6922 (apostasie) ; n°3199 et n°4802 (le soleil) ; n°3320 et n°5782 (la mouche) ; n°3849 ('Amr ibn Maymun) ; n°3896, n°5133 et n°5134 (âge de 'Aïsha) ; n°4425 (Abu Bakra) ; n°5093 à n°5095 (le mauvais présage) ; n°5763 (la sorcellerie) ; n°7563 (dernier hadith).
+- **Sahih Muslim** : n°1422 (âge de 'Aïsha) ; n°2362 et n°2363 (la pollinisation des palmiers).
+- **Musnad Ahmad** : récit de 'Aïsha sur le mauvais présage (chaîne jugée authentique selon les conditions de Muslim par Shu'ayb al-Arna'ut ; al-Albani, *Sahih al-Jami'*, n°4452). La numérotation du *Musnad* varie selon les éditions.
+- **Coran** : 2:256 ; 2:282 ; 22:18 ; 35:18 ; 36:38.
+- **Biographie** : al-Khatib al-Baghdadi, *Tarikh Baghdad* ; adh-Dhahabi, *Siyar A'lam an-Nubala'* ; Ibn Hajar, *Hady as-Sari*.
+- **Statut et critique classique** : Ibn as-Salah, *Muqaddima* ; al-Qadi 'Iyad, *Ikmal al-Mu'lim* ; ad-Daraqutni, *Al-Ilzamat wa at-Tatabbu'* ; Ibn Hajar, *Fath al-Bari* et *Hady as-Sari* ; az-Zarkashi, *Al-Ijaba li-Irad ma Istadrakathu 'A'isha 'ala as-Sahaba* ; al-Humaydi, *Al-Jam' bayna as-Sahihayn* ; Abu 'Ali al-Ghassani, *At-Tanbih 'ala al-Awham al-Waqi'a fi as-Sahihayn* ; Ibn 'Abd al-Barr, *Al-Isti'ab* ; Ibn Qutayba, *Ta'wil Mukhtalif al-Hadith* ; al-Jassas, *Ahkam al-Qur'an* ; an-Nawawi, *Sharh Sahih Muslim* ; Ibn Rushd, *Bidayat al-Mujtahid*.
+- **Études modernes** : I. Goldziher, *Muhammedanische Studien* (1890) ; J. Schacht, *The Origins of Muhammadan Jurisprudence* (1950) ; M. M. al-A'zami, *Studies in Early Hadith Literature* (1968) et *On Schacht's Origins of Muhammadan Jurisprudence* (1985) ; H. Motzki, *Die Anfänge der islamischen Jurisprudenz* (1991 ; trad. anglaise *The Origins of Islamic Jurisprudence*, 2002) ; H. al-'Awni, *Ijma' al-Muhaddithin* (1421 H) ; J. Brown, *The Canonization of al-Bukhari and Muslim* (Brill, 2007) et *Misquoting Muhammad* (2014) ; Muhammad al-Ghazali, *As-Sunna an-Nabawiyya bayna Ahl al-Fiqh wa Ahl al-Hadith* (1989) ; T. J. al-'Alwani, *Apostasy in Islam* (IIIT, 2011) ; F. Mernissi, *Le Harem politique* (1987) ; R. Aylal, *Sahih al-Bukhari, fin d'une légende* (2017).
+- En complément : nos articles [*"Les 6 Livres Mères du Hadith"*](/conseils/les-6-livres-hadith-sunnisme), [*"L'Isnad"*](/conseils/isnad-transmission-unique-islam), [*"Al-Jarh wa at-Ta'dil"*](/conseils/jarh-tadil-critique-transmetteurs-hadith) et [*"Les hadiths populaires inauthentiques"*](/conseils/hadiths-populaires-inauthentiques-verifier-source).
+`
     }
 ];
