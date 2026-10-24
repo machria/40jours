@@ -6,6 +6,11 @@ import { ChevronLeft, HelpCircle, Trophy, ChevronRight, RefreshCw, Check, X, Lay
 import { motion, AnimatePresence } from 'framer-motion';
 import { namesOfAllah, AllahName } from '@/data/names';
 import { saveGenericQuizScore } from '@/actions/quiz-actions';
+import NameVerse from '@/components/names/NameVerse';
+import PhoneticGuide from '@/components/PhoneticGuide';
+import NamesIntro from '@/components/names/NamesIntro';
+
+const nameByNumber = new Map(namesOfAllah.map((n, i) => [n.Number, { name: n, index: i }]));
 
 const generateQuizRound = (names: AllahName[]) => {
     const randomIndex = Math.floor(Math.random() * names.length);
@@ -15,16 +20,17 @@ const generateQuizRound = (names: AllahName[]) => {
     const types: ('arabe' | 'transliteration' | 'francais')[] = ['arabe', 'transliteration', 'francais'];
     const type = types[Math.floor(Math.random() * types.length)];
 
-    // Generate 3 distractors
-    const neighbors = [...names].sort(() => 0.5 - Math.random()).slice(0, 3);
-    // Ensure unique options
-    const options = [question, ...neighbors.filter(n => n.transliteration !== question.transliteration)].slice(0, 4).sort(() => 0.5 - Math.random());
+    // 3 distracteurs. Pour une question en français, on écarte les noms proches
+    // (ex. Al-Ghafur / Al-Ghaffar) : les deux réponses seraient défendables.
+    const excluded = new Set([question.Number, ...(type === 'francais' ? question.confusableWith ?? [] : [])]);
+    const neighbors = names.filter(n => !excluded.has(n.Number)).sort(() => 0.5 - Math.random()).slice(0, 3);
+    const options = [question, ...neighbors].sort(() => 0.5 - Math.random());
 
     return { question, type, options };
 };
 
 export default function NamesPage() {
-    const [mode, setMode] = useState<'learn' | 'quiz' | 'list'>('learn');
+    const [mode, setMode] = useState<'learn' | 'quiz' | 'list'>('list');
     const [index, setIndex] = useState(0);
 
     // Quiz State
@@ -136,6 +142,8 @@ export default function NamesPage() {
                     </p>
                 </div>
 
+                <PhoneticGuide />
+
                 <AnimatePresence mode="wait">
                     {mode === 'learn' && (
                         <motion.div
@@ -143,49 +151,80 @@ export default function NamesPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="w-full relative flex items-center justify-center"
+                            className="w-full space-y-4"
                         >
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, x: 50 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    exit={{ opacity: 0, x: -50 }}
-                                    transition={{ duration: 0.3 }}
-                                    className="w-full"
-                                >
-                                    <div className="px-4 py-2">
-                                        <div className="bg-card border-2 border-primary/10 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center space-y-8 aspect-[3/4] justify-center relative overflow-hidden group hover:border-accent/50 transition-colors bg-gradient-to-br from-card to-muted/20">
-                                            <div className="absolute top-4 right-4 text-xs font-mono text-muted-foreground/50">#{index + 1}</div>
+                            <div className="relative flex items-center justify-center">
+                                <AnimatePresence mode="wait">
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: 50 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: -50 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="w-full"
+                                    >
+                                        <div className="px-4 py-2">
+                                            <div className="bg-card border-2 border-primary/10 rounded-3xl p-8 shadow-xl flex flex-col items-center text-center space-y-8 aspect-[3/4] justify-center relative overflow-hidden group hover:border-accent/50 transition-colors bg-gradient-to-br from-card to-muted/20">
+                                                <div className="absolute top-4 right-4 text-xs font-mono text-muted-foreground/50">#{index + 1}</div>
 
-                                            {/* Calligraphy */}
-                                            <div className="flex-1 flex items-center justify-center w-full">
-                                                <h2 className="text-6xl md:text-8xl font-kufi text-primary group-hover:scale-110 transition-transform duration-500 drop-shadow-sm">
-                                                    {namesOfAllah[index].arabe}
-                                                </h2>
-                                            </div>
+                                                {/* Calligraphy */}
+                                                <div className="flex-1 flex items-center justify-center w-full">
+                                                    <h2 className="text-6xl md:text-8xl font-kufi text-primary group-hover:scale-110 transition-transform duration-500 drop-shadow-sm">
+                                                        {namesOfAllah[index].arabe}
+                                                    </h2>
+                                                </div>
 
-                                            <div className="space-y-2">
-                                                <h3 className="text-2xl font-bold text-foreground">{namesOfAllah[index].transliteration}</h3>
-                                                <p className="text-accent font-semibold text-lg">{namesOfAllah[index].francais}</p>
-                                            </div>
+                                                <div className="space-y-2">
+                                                    <h3 className="text-2xl font-bold text-foreground">{namesOfAllah[index].transliteration}</h3>
+                                                    <p className="text-accent font-semibold text-lg">{namesOfAllah[index].francais}</p>
+                                                </div>
 
-                                            <div className="bg-muted/50 p-4 rounded-xl w-full">
-                                                <p className="text-sm text-muted-foreground italic">&quot;{namesOfAllah[index].signification}&quot;</p>
+                                                <div className="bg-muted/50 p-4 rounded-xl w-full">
+                                                    <p className="text-sm text-muted-foreground italic">&quot;{namesOfAllah[index].signification}&quot;</p>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
+                                    </motion.div>
+                                </AnimatePresence>
 
-                            {/* Navigation Buttons overlay */}
-                            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none">
-                                <button onClick={prevCard} className="pointer-events-auto p-2 bg-background/50 rounded-full hover:bg-background shadow-sm backdrop-blur">
-                                    <ChevronLeft className="w-6 h-6" />
-                                </button>
-                                <button onClick={nextCard} className="pointer-events-auto p-2 bg-background/50 rounded-full hover:bg-background shadow-sm backdrop-blur">
-                                    <ChevronRight className="w-6 h-6" />
-                                </button>
+                                {/* Navigation Buttons overlay */}
+                                <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 pointer-events-none">
+                                    <button onClick={prevCard} className="pointer-events-auto p-2 bg-background/50 rounded-full hover:bg-background shadow-sm backdrop-blur">
+                                        <ChevronLeft className="w-6 h-6" />
+                                    </button>
+                                    <button onClick={nextCard} className="pointer-events-auto p-2 bg-background/50 rounded-full hover:bg-background shadow-sm backdrop-blur">
+                                        <ChevronRight className="w-6 h-6" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="px-4 space-y-4">
+                                <NameVerse verset={namesOfAllah[index].verset} />
+
+                                {namesOfAllah[index].distinction && (
+                                    <div className="rounded-xl border border-amber-200 dark:border-amber-800/40 bg-amber-50/60 dark:bg-amber-900/10 p-4 space-y-3 text-left">
+                                        <p className="text-xs font-semibold uppercase tracking-wider text-amber-800 dark:text-amber-300">
+                                            Ne pas confondre
+                                        </p>
+                                        <p className="text-sm leading-relaxed text-foreground/90">{namesOfAllah[index].distinction}</p>
+                                        <div className="flex flex-wrap gap-2">
+                                            {namesOfAllah[index].confusableWith?.map(num => {
+                                                const target = nameByNumber.get(num);
+                                                if (!target) return null;
+                                                return (
+                                                    <button
+                                                        key={num}
+                                                        onClick={() => setIndex(target.index)}
+                                                        className="text-xs px-3 py-1.5 rounded-full border bg-background hover:border-primary hover:text-primary transition-colors"
+                                                    >
+                                                        <span className="font-kufi mr-1">{target.name.arabe}</span>
+                                                        {target.name.transliteration} · {target.name.francais}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     )}
@@ -196,8 +235,17 @@ export default function NamesPage() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="w-full"
+                            className="w-full space-y-6"
                         >
+                            <NamesIntro onStartCards={() => setMode('learn')} onStartQuiz={() => setMode('quiz')} />
+
+                            <div className="space-y-3">
+                            <div className="text-xs text-muted-foreground px-1 space-y-1">
+                                <p>Touchez un nom pour voir son verset et ses nuances.</p>
+                                <p>
+                                    <span className="text-amber-600 dark:text-amber-400 font-bold">*</span> Nom tiré du hadith d&apos;at-Tirmidhī, qui ne figure pas tel quel dans le Coran : le verset associé contient sa racine ou en illustre le sens.
+                                </p>
+                            </div>
                             <div className="rounded-xl border bg-card overflow-hidden shadow-sm">
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-sm text-left">
@@ -208,21 +256,36 @@ export default function NamesPage() {
                                                 <th className="px-4 py-3">Translittération</th>
                                                 <th className="px-4 py-3">Français</th>
                                                 <th className="px-4 py-3 hidden md:table-cell">Signification</th>
+                                                <th className="px-4 py-3 hidden sm:table-cell">Verset</th>
                                             </tr>
                                         </thead>
                                         <tbody className="divide-y">
                                             {namesOfAllah.map((name, i) => (
-                                                <tr key={name.Number} className="hover:bg-muted/30 transition-colors">
+                                                <tr
+                                                    key={name.Number}
+                                                    onClick={() => { setIndex(i); setMode('learn'); }}
+                                                    title="Voir le verset et les nuances"
+                                                    className="hover:bg-muted/30 transition-colors cursor-pointer"
+                                                >
                                                     <td className="px-4 py-3 text-center text-muted-foreground font-mono text-xs">{name.Number}</td>
                                                     <td className="px-4 py-3 font-kufi text-xl text-primary text-right">{name.arabe}</td>
-                                                    <td className="px-4 py-3 font-bold">{name.transliteration}</td>
+                                                    <td className="px-4 py-3 font-bold">
+                                                        {name.transliteration}
+                                                        {name.verset.source !== 'nom' && (
+                                                            <sup className="ml-0.5 text-amber-600 dark:text-amber-400" title="Nom tiré du hadith d'at-Tirmidhī, ne figurant pas tel quel dans le Coran">*</sup>
+                                                        )}
+                                                    </td>
                                                     <td className="px-4 py-3">{name.francais}</td>
                                                     <td className="px-4 py-3 text-muted-foreground italic hidden md:table-cell">{name.signification}</td>
+                                                    <td className="px-4 py-3 text-xs text-muted-foreground font-mono whitespace-nowrap hidden sm:table-cell">
+                                                        {name.verset.sourate}:{name.verset.ayah}
+                                                    </td>
                                                 </tr>
                                             ))}
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
                             </div>
                         </motion.div>
                     )}
@@ -314,6 +377,9 @@ export default function NamesPage() {
                                     {isCorrect === false && (
                                         <div className="p-4 bg-red-50 text-red-800 rounded-xl text-center text-sm animate-in fade-in slide-in-from-bottom-2">
                                             Mauvaise réponse ! C&apos;était <strong>{quizQuestion.transliteration}</strong> ({quizQuestion.francais}).
+                                            {options.some(o => o.transliteration === selectedOption && quizQuestion.confusableWith?.includes(o.Number)) && (
+                                                <p className="mt-2 text-xs text-red-900/80 text-left">{quizQuestion.distinction}</p>
+                                            )}
                                         </div>
                                     )}
                                 </div>

@@ -28,6 +28,11 @@ function shuffleArray<T>(arr: T[]): T[] {
     return a;
 }
 
+function verseText({ verset }: AllahName): string {
+    if (!verset.arabe) return '';
+    return `\n\n${verset.arabe}\n« ${verset.francais} » (${verset.sourate}:${verset.ayah})`;
+}
+
 interface NomsFeedClientProps {
     names: AllahName[];
 }
@@ -77,7 +82,7 @@ export default function NomsFeedClient({ names }: NomsFeedClientProps) {
     }, [currentIndex, feed.length]);
 
     const handleCopy = useCallback((idx: number, name: AllahName) => {
-        const text = `${name.arabe} — ${name.transliteration}\n${name.francais}\n\n${name.signification}`;
+        const text = `${name.arabe} — ${name.transliteration}\n${name.francais}\n\n${name.signification}${verseText(name)}`;
         navigator.clipboard?.writeText(text).catch(() => {});
         setCopied(idx);
         setTimeout(() => setCopied(null), 1800);
@@ -87,7 +92,7 @@ export default function NomsFeedClient({ names }: NomsFeedClientProps) {
         if (typeof navigator !== 'undefined' && navigator.share) {
             navigator.share({
                 title: `${name.transliteration} — ${name.francais}`,
-                text: `${name.arabe}\n\n${name.francais}\n${name.signification}`,
+                text: `${name.arabe}\n\n${name.francais}\n${name.signification}${verseText(name)}`,
             }).catch(() => {});
         }
     }, []);
@@ -141,61 +146,84 @@ export default function NomsFeedClient({ names }: NomsFeedClientProps) {
                             {/* Vignette haut */}
                             <div className="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-10" />
 
-                            {/* Contenu central */}
-                            <div className="relative z-20 flex-1 flex flex-col items-center justify-center px-8 pt-20 pb-4 gap-6 text-center">
+                            {/* Contenu central — défile si le verset est long */}
+                            <div className="relative z-20 flex-1 min-h-0 overflow-y-auto px-6 md:px-8 pt-20 pb-4" style={{ scrollbarWidth: 'none' }}>
+                                <div className="min-h-full flex flex-col items-center justify-center gap-4 md:gap-6 text-center">
 
-                                {/* Nom arabe — étoile de la carte */}
-                                <h1
-                                    className="font-kufi text-white drop-shadow-lg leading-tight"
-                                    style={{ fontSize: 'clamp(3.5rem, 16vw, 7rem)' }}
-                                >
-                                    {name.arabe}
-                                </h1>
+                                    {/* Nom arabe — étoile de la carte */}
+                                    <h1
+                                        className="font-kufi text-white drop-shadow-lg leading-tight"
+                                        style={{ fontSize: 'clamp(3rem, 14vw, 7rem)' }}
+                                    >
+                                        {name.arabe}
+                                    </h1>
 
-                                {/* Séparateur lumineux */}
-                                <div
-                                    className="w-16 h-px rounded-full"
-                                    style={{ background: `linear-gradient(to right, transparent, ${accent}, transparent)` }}
-                                />
+                                    {/* Séparateur lumineux */}
+                                    <div
+                                        className="w-16 h-px rounded-full"
+                                        style={{ background: `linear-gradient(to right, transparent, ${accent}, transparent)` }}
+                                    />
 
-                                {/* Translitération */}
-                                <p
-                                    className="font-semibold tracking-widest uppercase text-sm"
-                                    style={{ color: accent }}
-                                >
-                                    {name.transliteration}
-                                </p>
+                                    {/* Translitération */}
+                                    <p
+                                        className="font-semibold tracking-widest uppercase text-sm"
+                                        style={{ color: accent }}
+                                    >
+                                        {name.transliteration}
+                                    </p>
 
-                                {/* Traduction française */}
-                                <p className="text-white font-bold text-2xl md:text-3xl leading-snug">
-                                    {name.francais}
-                                </p>
+                                    {/* Traduction française */}
+                                    <p className="text-white font-bold text-xl md:text-3xl leading-snug">
+                                        {name.francais}
+                                    </p>
 
-                                {/* Signification */}
-                                <p className="text-white/65 italic leading-relaxed max-w-sm" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                                    &laquo; {name.signification} &raquo;
-                                </p>
+                                    {/* Signification */}
+                                    <p className="text-white/65 italic leading-relaxed max-w-sm" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
+                                        &laquo; {name.signification} &raquo;
+                                    </p>
+
+                                    {/* Extrait coranique (texte complet) */}
+                                    {name.verset.arabe && (
+                                        <div className="max-w-sm space-y-2 rounded-xl px-4 py-3 bg-white/5">
+                                            <p dir="rtl" lang="ar" className="font-kufi text-white/85 text-lg leading-loose">
+                                                {name.verset.arabe}
+                                            </p>
+                                            {name.verset.francais && (
+                                                <p className="text-white/70 text-xs italic leading-relaxed">
+                                                    « {name.verset.francais} »
+                                                </p>
+                                            )}
+                                            {name.verset.note && (
+                                                <p className="text-white/50 text-[11px] leading-snug">
+                                                    {name.verset.note}
+                                                </p>
+                                            )}
+                                            <Link
+                                                href={`/coran/${name.verset.sourate}#ayah-${name.verset.ayah}`}
+                                                className="inline-block text-[11px] font-mono underline-offset-2 hover:underline"
+                                                style={{ color: accent }}
+                                            >
+                                                {name.verset.sourateNom} · {name.verset.sourate}:{name.verset.ayah}
+                                                {name.verset.source !== 'nom' && ' · racine / sens'}
+                                            </Link>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
 
-                            {/* Overlay bas */}
+                            {/* Barre du bas : progression + actions (hors de la zone de texte) */}
                             <div
-                                className="relative z-20 px-5 pb-6 pr-20"
-                                style={{
-                                    background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)',
-                                    paddingTop: '3rem',
-                                }}
+                                className="relative z-20 flex items-center gap-4 px-5 pt-3 pb-4"
+                                style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)' }}
                             >
                                 {/* Barre de progression */}
-                                <div className="h-0.5 rounded-full bg-white/10 overflow-hidden">
+                                <div className="flex-1 h-0.5 rounded-full bg-white/10 overflow-hidden">
                                     <div
                                         className="h-full rounded-full transition-all duration-300"
                                         style={{ width: `${((index + 1) / feed.length) * 100}%`, background: accent }}
                                     />
                                 </div>
-                            </div>
 
-                            {/* Sidebar droite */}
-                            <div className="absolute right-4 bottom-28 z-30 flex flex-col items-center gap-5">
                                 {/* Copy */}
                                 <button
                                     onClick={() => handleCopy(index, name)}
@@ -204,7 +232,7 @@ export default function NomsFeedClient({ names }: NomsFeedClientProps) {
                                 >
                                     <div
                                         className={cn(
-                                            'w-11 h-11 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-200',
+                                            'w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm transition-all duration-200',
                                             isCopied ? 'scale-110' : 'bg-white/10 group-hover:bg-white/20 group-hover:scale-105'
                                         )}
                                         style={isCopied ? { background: `${accent}30` } : {}}
@@ -225,7 +253,7 @@ export default function NomsFeedClient({ names }: NomsFeedClientProps) {
                                     className="flex flex-col items-center gap-1 group"
                                     aria-label="Partager"
                                 >
-                                    <div className="w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all group-hover:scale-105">
+                                    <div className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center backdrop-blur-sm transition-all group-hover:scale-105">
                                         <Share2 className="w-5 h-5 text-white" />
                                     </div>
                                     <span className="text-white/60 text-[10px] font-medium">Partager</span>
