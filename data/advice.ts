@@ -12385,7 +12385,277 @@ Reconnaître que certains hadiths sont difficiles à lire aujourd'hui, ou que de
 - **Biographie** : al-Khatib al-Baghdadi, *Tarikh Baghdad* ; adh-Dhahabi, *Siyar A'lam an-Nubala'* ; Ibn Hajar, *Hady as-Sari*.
 - **Statut et critique classique** : Ibn as-Salah, *Muqaddima* ; al-Qadi 'Iyad, *Ikmal al-Mu'lim* ; ad-Daraqutni, *Al-Ilzamat wa at-Tatabbu'* ; Ibn Hajar, *Fath al-Bari* et *Hady as-Sari* ; az-Zarkashi, *Al-Ijaba li-Irad ma Istadrakathu 'A'isha 'ala as-Sahaba* ; al-Humaydi, *Al-Jam' bayna as-Sahihayn* ; Abu 'Ali al-Ghassani, *At-Tanbih 'ala al-Awham al-Waqi'a fi as-Sahihayn* ; Ibn 'Abd al-Barr, *Al-Isti'ab* ; Ibn Qutayba, *Ta'wil Mukhtalif al-Hadith* ; al-Jassas, *Ahkam al-Qur'an* ; an-Nawawi, *Sharh Sahih Muslim* ; Ibn Rushd, *Bidayat al-Mujtahid*.
 - **Études modernes** : I. Goldziher, *Muhammedanische Studien* (1890) ; J. Schacht, *The Origins of Muhammadan Jurisprudence* (1950) ; M. M. al-A'zami, *Studies in Early Hadith Literature* (1968) et *On Schacht's Origins of Muhammadan Jurisprudence* (1985) ; H. Motzki, *Die Anfänge der islamischen Jurisprudenz* (1991 ; trad. anglaise *The Origins of Islamic Jurisprudence*, 2002) ; H. al-'Awni, *Ijma' al-Muhaddithin* (1421 H) ; J. Brown, *The Canonization of al-Bukhari and Muslim* (Brill, 2007) et *Misquoting Muhammad* (2014) ; Muhammad al-Ghazali, *As-Sunna an-Nabawiyya bayna Ahl al-Fiqh wa Ahl al-Hadith* (1989) ; T. J. al-'Alwani, *Apostasy in Islam* (IIIT, 2011) ; F. Mernissi, *Le Harem politique* (1987) ; R. Aylal, *Sahih al-Bukhari, fin d'une légende* (2017).
-- En complément : nos articles [*"Les 6 Livres Mères du Hadith"*](/conseils/les-6-livres-hadith-sunnisme), [*"L'Isnad"*](/conseils/isnad-transmission-unique-islam), [*"Al-Jarh wa at-Ta'dil"*](/conseils/jarh-tadil-critique-transmetteurs-hadith) et [*"Les hadiths populaires inauthentiques"*](/conseils/hadiths-populaires-inauthentiques-verifier-source).
+- En complément : nos articles [*"Les 6 Livres Mères du Hadith"*](/conseils/les-6-livres-hadith-sunnisme), [*"L'Isnad"*](/conseils/isnad-transmission-unique-islam), [*"Al-Jarh wa at-Ta'dil"*](/conseils/jarh-tadil-critique-transmetteurs-hadith), [*"Les hadiths populaires inauthentiques"*](/conseils/hadiths-populaires-inauthentiques-verifier-source) et [*"L'imam Muslim et son Sahih"*](/conseils/imam-muslim-sahih-histoire-critiques).
+`
+    },
+    {
+        slug: 'imam-muslim-sahih-histoire-critiques',
+        title: "L'imam Muslim et son Sahih : le livre le mieux construit du hadith face à ses critiques",
+        excerpt: "Quinze ans de travail, trois cent mille récits examinés, un recueil que certains savants plaçaient au-dessus de celui d'Al-Bukhari. Le Sahih de Muslim a pourtant été discuté dès sa parution, par Abu Zur'a ar-Razi, puis par ad-Daraqutni, Ibn Hazm ou Ibn Taymiyya, et aujourd'hui par des chercheurs et des polémistes occidentaux. Ce que disent les sources, ce qui a été critiqué, et comment les savants ont lu les hadiths de Muslim qui heurtent les sensibilités d'aujourd'hui.",
+        date: '2026-10-25',
+        author: 'Équipe 40 Jours',
+        readTime: '22 min',
+        category: 'Sciences & Compréhension',
+        content: `
+# L'imam Muslim et son Sahih : le livre le mieux construit du hadith face à ses critiques
+
+Après le *Sahih* d'Al-Bukhari, le livre de hadith le plus respecté chez les sunnites est celui de **Muslim ibn al-Hajjaj**. Les deux recueils sont si souvent cités ensemble (« rapporté par Bukhari et Muslim ») qu'on finit par les confondre. Ils ont pourtant chacun leur méthode, leur histoire et leurs critiques.
+
+Comme notre article sur [l'imam Al-Bukhari](/conseils/imam-bukhari-sahih-histoire-critiques), celui-ci retrace la vie de l'imam, la manière dont il a composé son livre, puis les critiques qu'il a reçues : celles des savants classiques, celles des chercheurs modernes, et celles qui visent des hadiths de Muslim régulièrement mis en avant en Occident pour attaquer l'Islam. Chaque affirmation renvoie à sa source.
+
+> **Note sur les références :** les numéros de hadiths de Muslim suivent la numérotation de Muhammad Fu'ad 'Abd al-Baqi, utilisée sur sunnah.com et dans notre section [Hadith](/hadith), qui va jusqu'au n°3033 ; les différentes chaînes d'un même texte y partagent le même numéro. Ceux de Bukhari suivent la numérotation du même éditeur. Pour le *Siyar A'lam an-Nubala'* d'adh-Dhahabi, les pages renvoient au volume 12 de l'édition reproduite sur islamweb.net. Pour *Al-Minhaj* d'an-Nawawi, elles renvoient à l'édition en 18 tomes de Dar Ihya' at-Turath al-'Arabi (Beyrouth, 2e éd., 1392 H).
+
+---
+
+## 1. Qui était Muslim ?
+
+**Abu al-Husayn Muslim ibn al-Hajjaj al-Qushayri an-Naysaburi** est né à Nishapur, dans le Khorassan (nord-est de l'Iran actuel). Adh-Dhahabi et Ibn Hajar donnent sa naissance en 204 H avec une réserve (« on dit… ») (*Siyar*, 12/558 ; Ibn Hajar, *Tahdhib at-Tahdhib*, notice de Muslim). Son nom le rattache à la tribu arabe des Banu Qushayr, mais adh-Dhahabi précise : « peut-être était-il un client (*mawla*) des Qushayr » (*Siyar*, 12/558).
+
+Selon adh-Dhahabi, il commence à écouter des hadiths en 218 H auprès de **Yahya ibn Yahya at-Tamimi**. Il fait le pèlerinage en 220 H, encore adolescent, et entend à La Mecque **al-Qa'nabi**, son plus ancien maître, puis à Koufa **Ahmad ibn Yunus**. Il repart en voyage avant 230 H et étudie en Irak, dans les deux villes saintes et en Égypte (*Siyar*, 12/558). Parmi ses maîtres figurent aussi **Ahmad ibn Hanbal**, **Ishaq ibn Rahwayh**, **Qutayba ibn Sa'id** et **Abu Bakr ibn Abi Shayba** (*Siyar*, 12/558-562). Son maître Muhammad ibn 'Abd al-Wahhab al-Farra' le décrit comme « l'un des savants des gens et l'un des réceptacles de la science », et précise qu'il était marchand d'étoffes (*bazzaz*) (Ibn Hajar, *Tahdhib*). Al-Hakim ajoute que son commerce se tenait au Khan Mahmash et qu'il vivait de ses terres d'Ustuwa (*Siyar*, 12/570).
+
+### Entre Al-Bukhari et adh-Dhuhli
+
+Lorsqu'Al-Bukhari s'installa à Nishapur, Muslim le fréquenta assidûment. Puis éclata la querelle entre Al-Bukhari et le grand savant de la ville, **Muhammad ibn Yahya adh-Dhuhli**, au sujet de la récitation du Coran (la « question du *lafz* »). Selon Ibn al-Akhram, rapporté par al-Hakim, presque tout le monde abandonna Al-Bukhari, sauf Muslim. Adh-Dhuhli déclara alors : « Que celui qui tient la thèse du *lafz* ne vienne plus à notre cours. » Muslim posa son manteau sur son turban, se leva devant tout le monde et sortit. Il renvoya ensuite à adh-Dhuhli, à dos de chameau, tout ce qu'il avait écrit sous sa dictée (*Siyar*, 12/572). Al-Khatib al-Baghdadi résume : « Muslim défendait Al-Bukhari, au point que ses relations avec Muhammad ibn Yahya en furent ruinées » (*Siyar*, 12/573).
+
+Mais adh-Dhahabi ajoute aussitôt une nuance importante : « Puis Muslim, à cause d'une certaine vivacité de caractère, s'écarta aussi d'Al-Bukhari. Il ne rapporte de lui aucun hadith et ne le nomme pas dans son *Sahih* ; il ouvre même son livre en critiquant ceux qui exigent la preuve de la rencontre entre transmetteurs. » Or, selon adh-Dhahabi, c'est précisément la position d'Al-Bukhari et de son maître 'Ali ibn al-Madini, qu'il juge « la plus juste et la plus forte » (*Siyar*, 12/573).
+
+### Une mort liée à la recherche
+
+Ahmad ibn Salama, compagnon de Muslim, raconte qu'au cours d'une séance d'étude, on évoqua devant lui un hadith qu'il ne connaissait pas. Rentré chez lui, il alluma une lampe et demanda qu'on ne le dérange pas. On lui signala qu'on avait reçu en cadeau un panier de dattes ; il le fit apporter, et se mit à chercher le hadith en prenant les dattes une à une. Au matin, le panier était vide et il avait trouvé le hadith. Al-Hakim, qui rapporte ce récit, ajoute : « Un homme fiable parmi nos compagnons m'a ajouté qu'il en mourut » (*Siyar*, 12/564 ; voir aussi Ibn Hajar, *Tahdhib*).
+
+Muslim meurt à Nishapur en **Rajab 261 H** (875), âgé d'un peu plus de cinquante ans (*Siyar*, 12/580) ; Muhammad ibn Ya'qub précise le 25 Rajab (Ibn Hajar, *Tahdhib*). Al-Hakim énumère ses ouvrages, dont *Al-Asami wa al-Kuna*, *At-Tamyiz*, *Al-'Ilal*, *Al-Wuhdan*, *Al-Afrad*, *Al-Aqran*, *Awham al-Muhaddithin* et *At-Tabaqat* (*Siyar*, 12/579). Parmi ses élèves figurent **at-Tirmidhi**, qui ne rapporte de lui qu'un seul hadith dans son *Jami'*, **Ibrahim ibn Muhammad ibn Sufyan**, transmetteur du *Sahih*, **Ibn Khuzayma**, **Abu 'Awana**, **Ibn Abi Hatim** et **Makki ibn 'Abdan** (*Siyar*, 12/562-563).
+
+---
+
+## 2. Comment le Sahih a été composé
+
+### « Le Musnad authentique »
+
+Muslim appelait lui-même son livre *Al-Musnad as-Sahih*, « le recueil authentique muni de chaînes ». Il disait : « J'ai composé ce *Musnad as-Sahih* à partir de trois cent mille hadiths entendus » (rapporté par al-Masarjisi, *Siyar*, 12/565). Comme pour les 600 000 hadiths d'Al-Bukhari, ce chiffre désigne l'ensemble des chaînes et des versions recueillies.
+
+Il n'a jamais prétendu réunir tous les hadiths authentiques. Interrogé sur un hadith d'Abu Hurayra qu'il jugeait authentique sans l'avoir retenu, il répondit : *« Je n'ai pas placé ici tout ce qui est authentique selon moi ; je n'ai placé ici que ce sur quoi ils se sont accordés »* (Sahih Muslim, après le n°404). Il disait aussi : « Je n'ai rien placé dans ce *Musnad* sans preuve, et je n'en ai rien retiré sans preuve » (rapporté par Ibn ash-Sharqi, *Siyar*, 12/580).
+
+### Quinze ans de travail, relus par Abu Zur'a
+
+Ahmad ibn Salama rapporte : « J'ai été avec Muslim pendant la composition de son *Sahih* pendant quinze ans ; il contient douze mille hadiths. » Adh-Dhahabi explique que ce chiffre compte chaque chaîne séparément : deux transmetteurs d'un même texte font deux hadiths (*Siyar*, 12/566). Abu Zur'a ar-Razi, de son côté, parlait de « quatre mille hadiths » (*Siyar*, 12/570-571), ce qu'Ibn as-Salah comprend comme les hadiths de base, sans les répétitions (*Siyanat Sahih Muslim*, chap. 9).
+
+Muslim a soumis son travail à ce grand critique. Selon Makki ibn 'Abdan, il disait : « J'ai présenté ce livre à Abu Zur'a. Tout ce qu'il m'a signalé comme ayant un défaut, je l'ai laissé ; tout ce qu'il a dit être authentique et sans défaut, je l'ai rapporté. » (*Siyar*, 12/568). Ibrahim ibn Sufyan précise que Muslim acheva la lecture du livre devant ses élèves en Ramadan 257 H (*Siyanat Sahih Muslim*, chap. 10).
+
+### L'introduction : un manifeste de méthode
+
+Muslim ouvre son livre par une longue introduction (*Muqaddima*), ce qu'Al-Bukhari n'a pas fait. Il y explique qu'on lui avait demandé un recueil des hadiths du Prophète ﷺ « sans trop de répétitions », et il y cite le hadith *« Mentir sur moi n'est pas comme mentir sur quelqu'un d'autre : celui qui ment sur moi délibérément, qu'il prenne sa place en Enfer »*. Il y rapporte aussi deux paroles devenues célèbres :
+- celle de Muhammad ibn Sirin : *« Cette science est une religion ; regardez donc de qui vous prenez votre religion »* ;
+- celle d'Abd Allah ibn al-Mubarak : *« L'isnad fait partie de la religion. Sans l'isnad, chacun dirait ce qu'il veut. »*
+
+Il y annonce un plan : d'abord les récits des transmetteurs « intègres et précis », puis ceux de transmetteurs moins précis mais connus pour leur honnêteté, comme 'Ata' ibn as-Sa'ib, Yazid ibn Abi Ziyad ou Layth ibn Abi Sulaym. Il exclut ceux qui sont accusés d'inventer des hadiths et ceux dont les récits sont le plus souvent contredits par les transmetteurs fiables (*Muqaddima* de Sahih Muslim).
+
+Les savants ont débattu de la manière dont il a appliqué ce plan. Ibn 'Asakir et al-Hakim pensaient que Muslim était mort avant de pouvoir traiter les catégories suivantes ; al-Qadi 'Iyad leur a répondu que Muslim les avait bien intégrées. Adh-Dhahabi tranche à sa manière : Muslim a retenu la première catégorie, la deuxième presque entièrement, et quelques récits de la troisième uniquement en appui d'autres chaînes (*Siyar*, 12/573-576).
+
+C'est aussi dans cette introduction que Muslim expose sa position sur la continuité de la chaîne. Selon lui, si deux transmetteurs fiables ont vécu à la même époque et ont pu se rencontrer, le récit est accepté, même si l'on n'a aucune trace de leur rencontre. Il attaque vivement, sans le nommer, un savant de son temps qui exigeait cette preuve (*Muqaddima*). Adh-Dhahabi estime que la position visée est celle d'Al-Bukhari et d'Ibn al-Madini, et qu'elle est la plus juste (*Siyar*, 12/573). Ibn Hajar conclut de son côté que la condition d'Al-Bukhari est « plus claire quant à la continuité » (*Hady as-Sari*, chap. 2). Notre article sur [l'Isnad](/conseils/isnad-transmission-unique-islam) détaille ce système.
+
+### L'organisation : tout un hadith au même endroit
+
+Après l'introduction, le livre s'ouvre sur le **hadith de Jibril** (n°8), qui définit l'Islam, la foi et l'excellence, un hadith développé dans notre article sur [les signes de la fin des temps](/conseils/signes-fin-des-temps-hadith-jibril-eschatologie). Il se clôt sur le serment d'Abu Dharr que le verset *« Voici deux groupes adverses qui disputaient au sujet de leur Seigneur »* (Coran 22:19) a été révélé au sujet des combattants de Badr (n°3033).
+
+Ibn Hajar explique la grande différence avec Al-Bukhari. Celui-ci tirait des règles juridiques des hadiths pour en faire des titres de chapitres, ce qui l'obligeait à découper un même hadith entre plusieurs chapitres. Muslim, lui, **« a réuni toutes les chaînes d'un hadith en un seul endroit »** et s'en est tenu aux paroles du Prophète ﷺ, en ne citant que rarement celles des Compagnons (*Hady as-Sari*, chap. 2). Dans sa notice biographique, Ibn Hajar loue chez lui « la collecte des chaînes, la qualité de la présentation et le respect des mots tels qu'ils ont été transmis, sans découpage ni paraphrase » (*Tahdhib at-Tahdhib*).
+
+Ibn as-Salah relève deux autres traits. Le premier est sa rigueur sur les termes de transmission : il distinguait *haddathana* (« il nous a raconté », pour ce qu'il avait entendu de la bouche du maître) et *akhbarana* (« il nous a informés », pour ce qui avait été lu devant le maître). Le second est son soin à signaler qui, de ses maîtres, avait employé la formulation qu'il cite (« le texte est celui d'Untel »). Ibn as-Salah ajoute que Muslim a bien classé son livre par thèmes, **mais sans donner de titres aux chapitres** (*Siyanat Sahih Muslim*, chap. 9).
+
+---
+
+## 3. Du manuscrit au livre imprimé
+
+Ibn as-Salah écrit que, malgré la célébrité du livre, sa transmission par une chaîne continue jusqu'à Muslim s'est limitée à **Ibrahim ibn Muhammad ibn Sufyan** (m. Rajab 308 H), un compagnon assidu de Muslim. Au Maghreb, on le transmettait aussi par **Abu Muhammad al-Qalanisi**, mais sans les trois dernières parties du livre, à partir du long hadith de la calomnie (*al-ifk*), que les Maghrébins prenaient par la transmission d'Ibn Sufyan. Parmi les transmetteurs d'Ibn Sufyan, la voie qui s'est imposée est celle d'**Abu Ahmad al-Juludi** (m. 368 H) ; al-Hakim affirmait qu'après sa mort, quiconque prétendait rapporter le livre d'Ibn Sufyan n'était pas fiable. Elle passe ensuite par 'Abd al-Ghafir al-Farisi (m. 448 H), qui l'entendit d'al-Juludi en 365 H, puis par al-Furawi (*Siyanat Sahih Muslim*, chap. 10). C'est la chaîne qu'adh-Dhahabi utilise lui-même pour citer Muslim (*Siyar*, 12/577).
+
+Le livre a suscité de nombreux commentaires, dont :
+- ***Al-Mu'lim bi-Fawa'id Muslim*** d'al-Mazari (m. 536 H) ;
+- ***Ikmal al-Mu'lim*** d'al-Qadi 'Iyad (m. 544 H) ;
+- ***Al-Mufhim*** d'Abu al-'Abbas al-Qurtubi (m. 656 H) ;
+- ***Al-Minhaj*** d'an-Nawawi (m. 676 H).
+
+Ibn as-Salah a par ailleurs consacré un livre à la préservation du texte, *Siyanat Sahih Muslim*. D'autres savants ont composé des *mustakhraj* : ils reprenaient les hadiths de Muslim par leurs propres chaînes, plus courtes. Adh-Dhahabi en cite plusieurs, dont ceux d'Abu 'Awana et d'Abu Nu'aym al-Isfahani (*Siyar*, 12/569-570), et Ibn Hajar dit en connaître plus de vingt (*Tahdhib at-Tahdhib*).
+
+---
+
+## 4. Muslim ou Al-Bukhari : lequel est le plus authentique ?
+
+Muslim avait conscience de la portée de son travail. Selon Makki ibn 'Abdan, il disait : « Si les spécialistes du hadith écrivaient des hadiths pendant deux cents ans, c'est encore sur ce *Musnad* qu'ils s'appuieraient » (*Siyar*, 12/568).
+
+- **Abu 'Ali an-Naysaburi** (m. 349 H), maître d'al-Hakim, affirmait : « Il n'y a pas sous le ciel de livre plus authentique que celui de Muslim » (*Siyar*, 12/567) ;
+- Ibn Hajar rapporte, d'après le catalogue d'al-Qasim at-Tujibi, que **Ibn Hazm** préférait le livre de Muslim, « parce qu'il n'y a après son introduction que des hadiths à la suite ». Il cite aussi l'historien andalou Maslama ibn Qasim : « Personne n'a composé un livre comme le sien » (*Hady as-Sari*, chap. 2) ;
+- **Ibn as-Salah** accepte cette préférence si elle signifie que le livre de Muslim ne mêle rien d'autre aux hadiths authentiques, contrairement aux titres de chapitres d'Al-Bukhari, mais la rejette si elle signifie que ses hadiths sont plus authentiques (*Muqaddima*, premier type). Ibn Hajar y voit une question de présentation : Muslim a composé son livre dans sa ville, avec ses notes sous la main et du vivant de beaucoup de ses maîtres. Il ajoute que beaucoup de savants du Maghreb s'appuyaient sur Muslim pour citer les textes complets des hadiths (*Hady as-Sari*, chap. 2) ;
+- La majorité place Al-Bukhari en premier. Ibn Hajar cite an-Nawawi : « La majorité s'accorde à dire que le *Sahih* d'Al-Bukhari est le plus authentique des deux et le plus riche en enseignements » (*Hady as-Sari*, chap. 2). Ad-Daraqutni allait jusqu'à dire : « Sans Al-Bukhari, Muslim ne serait ni allé ni venu » (*Siyar*, 12/570).
+
+Ibn 'Uqda, lui, reconnaissait à Muslim un avantage précis : il commettait rarement des erreurs dans l'analyse des défauts cachés, parce qu'il n'avait écrit que des hadiths munis de chaînes complètes, et non des paroles de Compagnons et de Successeurs ni des récits interrompus (*Siyar*, 12/565 ; voir aussi Ibn Hajar, *Tahdhib*). Pour l'histoire de la reconnaissance des deux livres, voir la partie 4 de notre article sur [Al-Bukhari](/conseils/imam-bukhari-sahih-histoire-critiques).
+
+---
+
+## 5. Les critiques classiques : quand les savants musulmans discutaient le Sahih de Muslim
+
+### Dans le livre lui-même : 'Umar et Fatima bint Qays
+
+Muslim ne s'est pas contenté de rapporter des hadiths : il a aussi conservé les désaccords des Compagnons à leur sujet. Fatima bint Qays rapportait que le Prophète ﷺ ne lui avait accordé ni logement ni pension après son divorce définitif. Dans une version du *Sahih*, al-Aswad rapporte la réaction de 'Umar : *« Nous ne laisserons pas le Livre d'Allah et la Sunna de notre Prophète pour la parole d'une femme dont nous ne savons pas si elle a retenu ou oublié »*, en citant le verset 65:1. Dans une autre version, c'est Fatima qui oppose ce même verset au gouverneur Marwan, qui refusait son récit (Sahih Muslim, n°1480). 'Aïsha disait de son côté : « Il n'y a rien de bon pour Fatima à rapporter cela » (n°1481).
+
+An-Nawawi rapporte qu'ad-Daraqutni jugeait les mots « et la Sunna de notre Prophète » mal transmis dans la parole de 'Umar. Il expose les trois positions des juristes : logement et pension pour 'Umar et Abu Hanifa ; ni l'un ni l'autre pour Ibn 'Abbas et Ahmad ; logement sans pension pour Malik et ash-Shafi'i (*Al-Minhaj*, 10/94-95).
+
+### Dès sa parution : la critique d'Abu Zur'a
+
+Le livre a été discuté du vivant de son auteur. Sa'id ibn 'Amr al-Barda'i rapporte qu'Abu Zur'a ar-Razi en blâmait la composition : « Ces gens ont voulu se mettre en avant avant l'heure. » Il lui reprochait :
+1. d'avoir rapporté de transmetteurs discutés, comme Asbat ibn Nasr, Qatan ibn Nusayr ou Ahmad ibn 'Isa al-Misri, en délaissant des transmetteurs comme Ibn 'Ajlan ;
+2. d'ouvrir une brèche aux innovateurs, qui pourraient rejeter un hadith en disant : « Il n'est pas dans le *Sahih* » (*Su'alat al-Barda'i*, 2/674-676 ; *Siyar*, 12/571).
+
+Muslim répondit qu'il n'avait pris de ces transmetteurs que des récits déjà connus par des transmetteurs fiables. Il les avait reçus de ces derniers par une chaîne plus longue, et des transmetteurs critiqués par une chaîne plus courte : il avait donc gardé la chaîne courte, « et l'origine du hadith est connue ». Plus tard, à Rayy, le savant Ibn Wara lui adressa le même reproche. Muslim répondit : *« J'ai seulement dit que ceci est authentique ; je n'ai pas dit que ce que je n'ai pas rapporté est faible »*, et Ibn Wara accepta son excuse (*Su'alat al-Barda'i*, 2/676-677 ; *Siyar*, 12/571).
+
+### Ibn 'Ammar ash-Shahid et ad-Daraqutni : la critique technique
+
+**Abu al-Fadl ibn 'Ammar ash-Shahid** (m. 317 H) a consacré un ouvrage aux défauts cachés de trente-six hadiths de Muslim, *'Ilal al-Ahadith fi Kitab as-Sahih li-Muslim*. Un siècle plus tard, **ad-Daraqutni** (m. 385 H) relève dans *Al-Ilzamat wa at-Tatabbu'* des hadiths défectueux dans les deux *Sahih*. Selon le décompte d'Ibn Hajar, les critiques adressées aux deux livres visent 210 hadiths, dont moins de quatre-vingts dans Al-Bukhari, le reste dans Muslim ; il en conclut que le livre le moins critiqué est le plus solide (*Hady as-Sari*, chap. 2 et 8). **Abu Mas'ud ad-Dimashqi** (m. 401 H) a répondu aux objections d'ad-Daraqutni dans *Kitab al-Ajwiba 'amma Ashkalahu ad-Daraqutni 'ala Sahih Muslim*. An-Nawawi estimait qu'on avait répondu à ces critiques « ou à la plupart d'entre elles », ce qu'Ibn Hajar juge exact, tout en reconnaissant que certaines réponses ne tiennent pas (*Hady as-Sari*, chap. 8).
+
+Ibn Taymiyya résume ainsi la différence : dans la plupart des cas où l'on a contesté Al-Bukhari, c'est Al-Bukhari qui avait raison ; Muslim, en revanche, a été contesté sur plusieurs hadiths où c'est son contradicteur qui avait raison. Il cite les versions de la prière de l'éclipse avec trois ou quatre inclinaisons par unité, alors que le Prophète ﷺ n'a prié l'éclipse qu'une fois, avec deux inclinaisons (*Majmu' al-Fatawa*, vol. 1, « Qa'ida fi at-tawassul »). Notre article sur [Al-Jarh wa at-Ta'dil](/conseils/jarh-tadil-critique-transmetteurs-hadith) explique comment les transmetteurs étaient évalués.
+
+### Un cas d'école : le hadith de la création en sept jours
+
+Muslim rapporte d'Abu Hurayra que le Prophète ﷺ lui prit la main et dit : *« Allah a créé l'argile le samedi, les montagnes le dimanche, les arbres le lundi… »*, jusqu'à la création d'Adam le vendredi après l'après-midi (Sahih Muslim, n°2789).
+
+Ce hadith a été contesté par les plus grands spécialistes, et d'abord par **Al-Bukhari lui-même**. Dans *At-Tarikh al-Kabir* (notice d'Ayyub ibn Khalid), il note que certains le rapportent d'Abu Hurayra d'après Ka'b al-Ahbar, et que « c'est plus juste ». Ibn Kathir écrit qu'il fait partie « des hadiths étranges du *Sahih* de Muslim ». Il ajoute que 'Ali ibn al-Madini, Al-Bukhari et d'autres spécialistes en ont fait une parole de Ka'b qu'Abu Hurayra avait entendue, attribuée par erreur au Prophète ﷺ, et qu'al-Bayhaqi l'a démontré (*Tafsir*, sur Coran 2:29). Ibn Taymiyya cite aussi Yahya ibn Ma'in parmi ses contradicteurs et souligne que ce récit étale la création sur sept jours, alors que le Coran parle de six (*Majmu' al-Fatawa*, vol. 1 et 18). L'éditeur du *Tafsir* d'Ibn Kathir signale qu'al-Mu'allimi a défendu ce hadith dans *Al-Anwar al-Kashifa* (p. 185-190).
+
+L'exemple montre qu'un hadith du *Sahih* de Muslim peut être critiqué, mais par des spécialistes et selon des règles : comparaison des chaînes, identification de la source réelle, confrontation au Coran.
+
+### Les objections historiques et théologiques
+
+**La demande d'Abu Sufyan :** Muslim rapporte qu'Abu Sufyan, après sa conversion, proposa au Prophète ﷺ d'épouser sa fille Umm Habiba (n°2501). Or, note an-Nawawi, Abu Sufyan ne s'est converti qu'à la conquête de La Mecque, en l'an 8, alors que le Prophète ﷺ avait épousé Umm Habiba bien avant. Al-Qadi 'Iyad trouvait ce récit « très étrange ». **Ibn Hazm** le jugeait erroné, et même inventé selon une autre citation, en accusant le transmetteur 'Ikrima ibn 'Ammar. Ibn as-Salah lui a vivement répondu : aucun spécialiste n'a accusé 'Ikrima d'inventer des hadiths, et Abu Sufyan a pu demander un renouvellement du contrat (*Al-Minhaj*, 16/62-63). Ibn Taymiyya, lui, range ce récit parmi les erreurs que « plusieurs spécialistes » ont relevées dans Muslim (*Majmu' al-Fatawa*, vol. 1 et 18).
+
+**Les parents du Prophète ﷺ :** Muslim rapporte qu'à un homme qui demandait où se trouvait son père défunt, le Prophète ﷺ répondit : *« Mon père et ton père sont en Enfer »* (n°203). Il rapporte aussi qu'il ne fut pas autorisé à demander le pardon pour sa mère (n°976). An-Nawawi en conclut que ceux qui sont morts avant l'Islam en adorant les idoles sont en Enfer, car l'appel d'Abraham leur était parvenu (*Al-Minhaj*, 3/78-79). As-Suyuti a soutenu au contraire, dans *Masalik al-Hunafa' fi Walidayy al-Mustafa*, que les parents du Prophète ﷺ sont sauvés. Il invoque notamment le verset *« Nous ne châtions pas avant d'avoir envoyé un messager »* (Coran 17:15), car ils sont morts avant toute révélation (cité par Akram Mazhar, *Masrawy*, 16 décembre 2016).
+
+---
+
+## 6. Les critiques modernes
+
+### Les orientalistes
+
+Les thèses de **Goldziher** et de **Schacht**, présentées dans notre article sur [Al-Bukhari](/conseils/imam-bukhari-sahih-histoire-critiques), visaient l'ensemble de la littérature du hadith. Pour Muslim, le chercheur néerlandais **G. H. A. Juynboll** a joué un rôle particulier. Il a traduit et annoté l'introduction du *Sahih* (« Muslim's introduction to his Ṣaḥīḥ », *Jerusalem Studies in Arabic and Islam*, vol. 5, 1984, p. 263 et suivantes). Il a aussi développé, notamment dans *Muslim Tradition: Studies in Chronology, Provenance and Authorship of Early Hadith*, la théorie du « lien commun » (*common link*) : lorsque toutes les chaînes d'un hadith convergent vers un même transmetteur, celui-ci en serait probablement l'auteur (voir la synthèse de ce débat dans la revue *Diroyah*, 2025).
+
+**Harald Motzki** a contesté cette lecture. Pour lui, le « lien commun » est plutôt le premier à avoir rassemblé et enseigné systématiquement le hadith, et la datation doit s'appuyer sur l'étude conjointe des chaînes et des textes (« Dating Muslim Traditions: A Survey », *Arabica*, 52/2, 2005, p. 204-253). Du côté musulman, **Muhammad Mustafa al-A'zami** a édité le *Kitab at-Tamyiz* de Muslim, à la suite de son étude *Manhaj an-Naqd 'inda al-Muhaddithin*. Ce texte montre concrètement comment Muslim comparait les versions d'un hadith pour en repérer les erreurs.
+
+### Les réformistes musulmans
+
+**Rashid Rida** a mis en doute le hadith de la *Jassasa*, que Muslim rapporte (n°2942). Tamim ad-Dari y raconte la rencontre de marins avec le Dajjal enchaîné sur une île. Selon Muhammad Abu Shahba, Rida ne déclarait pas le récit mensonger et n'accusait pas Tamim. Il soutenait que le silence du Prophète ﷺ en l'entendant ne prouvait pas que l'histoire fût vraie. Abu Shahba répond à un auteur contemporain qui avait repris ce doute, et note qu'il n'avait d'autre prédécesseur que Rida (*Difa' 'an as-Sunna wa Radd Shubah al-Mustashriqin*).
+
+### La contestation radicale
+
+En Égypte, le présentateur **Islam al-Buhayri**, qui mettait en cause dans son émission la crédibilité de certaines sources du hadith, a été condamné en 2015 pour outrage à la religion. Sa peine de cinq ans a été réduite à un an (*Ahram Online*, 29 décembre 2015), puis il a été gracié par décret présidentiel (*AsiaNews*). Ses critiques visaient les deux *Sahih* et les grands imams.
+
+---
+
+## 7. Des hadiths de Muslim que l'Occident attaque
+
+Plusieurs hadiths de Muslim reviennent régulièrement dans les débats publics occidentaux, dans des textes politiques ou polémiques. Certains ne se trouvent pas chez Al-Bukhari, ou pas sous cette forme. Voici les principaux, avec ce qu'en disent les commentateurs, y compris quand leurs positions sont dures ou divergent.
+
+### « Ne les saluez pas en premier »
+
+**Le texte :** *« Ne commencez pas les juifs et les chrétiens par le salut. Si vous rencontrez l'un d'eux sur un chemin, poussez-le vers le côté le plus étroit. »* (Sahih Muslim, n°2167) Muslim note que les versions divergent : « quand vous rencontrez les juifs » dans celle de Waki', « les gens du Livre » dans celle de Shu'ba (même numéro).
+
+**La critique :** ce hadith est cité comme preuve que l'Islam enseignerait le mépris des non-musulmans.
+
+**Les lectures :**
+- **Une consigne liée à une situation :** dans une version rapportée par 'Uqba ibn 'Amir, le Prophète ﷺ dit : *« Je pars demain chez les juifs : ne les saluez pas les premiers ; s'ils vous saluent, répondez : “Et sur vous” »* (Musnad Ahmad, n°17295, jugé authentique par Shu'ayb al-Arna'ut). Une version proche, d'Abu Basra al-Ghifari, a été authentifiée par al-Albani (*Irwa' al-Ghalil*, n°1275) ;
+- **Les avis sur le salut :** an-Nawawi tient l'interdiction pour la position de son école, de la majorité des savants et des anciens. Il rapporte toutefois qu'Ibn 'Abbas, Abu Umama et Ibn Abi Muhayriz autorisaient à saluer les premiers, ce qu'il rejette. Il cite aussi, d'après al-Qadi 'Iyad, 'Alqama et an-Nakha'i, qui l'autorisaient en cas de besoin. Tous s'accordent sur l'obligation de répondre au salut des gens du Livre (*Al-Minhaj*, 14/143-144 ; Sahih Muslim, n°2163) ;
+- **Le chemin étroit :** Abu al-'Abbas al-Qurtubi explique que l'interdiction de saluer les premiers vise à ne pas les honorer. Il précise que la phrase sur le chemin ne signifie pas qu'on doive, sur une route large, les pousser vers le bord pour les gêner, « car ce serait leur nuire sans raison, et il nous est interdit de leur nuire » ; il s'agit seulement de ne pas s'écarter devant eux en signe d'honneur (*Al-Mufhim*, 5/489) ;
+- **D'autres textes :** le Coran demande la bonté et la justice envers ceux qui ne combattent pas les musulmans (60:8), et le Prophète ﷺ rendit visite à un jeune garçon juif malade qui le servait (Sahih al-Bukhari, n°1356).
+
+### Expulser les juifs et les chrétiens de la péninsule arabique
+
+**Le texte :** 'Umar rapporte avoir entendu le Prophète ﷺ dire : *« Je ferai sortir les juifs et les chrétiens de la péninsule arabique, jusqu'à n'y laisser que des musulmans. »* (Sahih Muslim, n°1767) Al-Bukhari rapporte une consigne de sa dernière maladie : *« Faites sortir les polythéistes de la péninsule arabique »* (n°3053). Un transmetteur de ce dernier, al-Mughira ibn 'Abd ar-Rahman, définit la péninsule comme La Mecque, Médine, la Yamama et le Yémen (même numéro).
+
+**La critique :** on y voit une forme de « purification religieuse » d'un territoire.
+
+**Les lectures :** an-Nawawi rapporte que Malik et ash-Shafi'i ont appliqué ce hadith, en interdisant aux non-musulmans de résider dans la péninsule. Mais ash-Shafi'i limitait la règle au **Hijaz** : La Mecque, Médine, la Yamama et leurs environs, **à l'exclusion du Yémen**. Les savants autorisaient les non-musulmans à y circuler en voyageurs, sans y séjourner plus de trois jours. Seul le sanctuaire de La Mecque leur était interdit, selon ash-Shafi'i et la majorité, alors qu'Abu Hanifa l'autorisait (*Al-Minhaj*, 11/92-93). An-Nawawi ajoute que 'Umar, en exécutant cette consigne, déplaça les juifs vers Tayma' et Ariha, qui font partie de la péninsule mais pas du Hijaz. C'est, selon lui, la preuve que seul le Hijaz était visé (*Al-Minhaj*, 10/212).
+
+### La pierre et l'arbre
+
+**Le texte :** *« L'Heure ne viendra pas avant que les musulmans ne combattent les juifs […], si bien que le juif se cachera derrière la pierre et l'arbre, et la pierre ou l'arbre dira : Ô musulman, ô serviteur d'Allah, voici un juif derrière moi, viens le tuer. Sauf le gharqad, car c'est l'un des arbres des juifs. »* (Sahih Muslim, n°2922). Al-Bukhari en rapporte une version plus courte, sans le gharqad (n°2926).
+
+**La critique :** c'est sans doute le hadith le plus cité en Occident. Il figure à l'article 7 de la charte du Hamas du 18 août 1988, qui l'attribue à Bukhari et Muslim (texte publié par l'Avalon Project de l'université Yale). Il est présenté comme la preuve d'un antisémitisme inscrit dans les textes.
+
+**Les lectures :**
+- **Une annonce de la fin des temps :** le hadith fait partie du livre des épreuves et des signes de l'Heure (*Kitab al-Fitan*), avec lequel notre section [Hadith](/hadith) le regroupe. Il décrit un événement annoncé pour la fin des temps ;
+- **Un contexte précis :** an-Nawawi explique que le gharqad est un arbuste épineux connu dans la région de Jérusalem, « où aura lieu la mise à mort du Dajjal et des juifs » (*Al-Minhaj*, 18/44). Il situe donc l'événement au moment de la mise à mort du Dajjal. Muslim rapporte d'ailleurs que le Dajjal sera suivi par *« soixante-dix mille juifs d'Ispahan »* (n°2944) ;
+- **Les règles du combat :** Muslim rapporte aussi que le Prophète ﷺ, voyant une femme tuée lors d'une expédition, désapprouva le meurtre des femmes et des enfants (n°1744).
+
+### La lapidation : Ma'iz et la femme de Ghamid
+
+**Les textes :** Muslim rapporte en détail l'histoire de Ma'iz ibn Malik et d'une femme de la tribu de Ghamid. Chacun vint de lui-même avouer un adultère au Prophète ﷺ, et tous deux furent lapidés (n°1695). 'Umar affirme dans un discours que la lapidation était prescrite dans le Livre d'Allah (n°1691).
+
+**La critique :** la lapidation est présentée comme le symbole d'une législation cruelle et incompatible avec les droits humains.
+
+**Les lectures :**
+- **Le détail du récit :** le Prophète ﷺ renvoie Ma'iz à trois reprises en lui disant : « Retourne, demande pardon à Allah et repens-toi. » Il demande s'il est fou, puis fait vérifier à son haleine qu'il n'a pas bu. Il renvoie la femme de Ghamid jusqu'à son accouchement, puis jusqu'au sevrage de l'enfant. Lorsque Khalid ibn al-Walid l'insulte pendant la lapidation, il le reprend : *« Elle s'est repentie d'un repentir tel qu'un collecteur de taxes injuste serait pardonné s'il se repentait ainsi »*, puis il fait prier sur elle (n°1695). Dans une version d'Abu Dawud, Ma'iz s'enfuit sous les pierres et il est rattrapé ; le Prophète ﷺ dit alors : *« Pourquoi ne l'avez-vous pas laissé ? Peut-être se serait-il repenti et Allah lui aurait-Il pardonné »* (Sunan Abi Dawud, n°4419) ;
+- **La preuve :** le Coran punit celui qui accuse une femme d'adultère sans produire quatre témoins (24:4). Dans ce récit, la peine repose sur des aveux répétés ;
+- **Les débats :** an-Nawawi affirme le consensus des savants sur la lapidation de la personne mariée. Il précise que seuls les kharijites et certains mu'tazilites, comme an-Nazzam, la rejetaient (*Al-Minhaj*, 11/188). À l'époque moderne, Yusuf al-Qaradawi a raconté à la télévision que le juriste égyptien **Muhammad Abu Zahra** avait déclaré, lors d'une réunion, vouloir révéler une opinion qu'il gardait pour lui depuis vingt ans. Selon Abu Zahra, la lapidation était une loi de la Torah, appliquée au début puis abrogée par le verset de la flagellation (24:2). Il en voyait une preuve dans le verset qui donne aux esclaves « la moitié de la peine » des femmes libres (4:25), car une lapidation ne se divise pas. Al-Qaradawi a dit partager cet avis (émission *Muraja'at*, chaîne Al-Hiwar, rapportée par *Akhbarona*, 24 juin 2016). Cette position reste minoritaire face au consensus rapporté par an-Nawawi.
+
+### Les captives d'Awtas
+
+**Le texte :** Abu Sa'id al-Khudri rapporte qu'après la bataille de Hunayn, les musulmans firent des prisonnières à Awtas. Certains Compagnons hésitaient à avoir des relations avec elles parce qu'elles avaient des maris polythéistes. Allah révéla alors : *« (Vous sont interdites) les femmes mariées, sauf celles que vous possédez »* (Coran 4:24). (Sahih Muslim, n°1456)
+
+**La critique :** ce hadith est cité pour montrer que l'Islam autorise l'esclavage sexuel, d'autant que l'organisation « État islamique » a pris des femmes comme concubines, ce que lui reproche la lettre ouverte de 2014 citée plus bas.
+
+**Les lectures :**
+- **La position classique :** an-Nawawi explique que la capture dissout le mariage du mari non musulman. Il impose ensuite un délai pour s'assurer de l'absence de grossesse (*istibra'*) : jusqu'à l'accouchement pour la femme enceinte, une période de règles pour les autres. Il précise que, selon ash-Shafi'i et ceux qui le suivent, une captive idolâtre n'est pas permise tant qu'elle ne s'est pas convertie. Comme les captives d'Awtas étaient des Arabes idolâtres, le hadith doit être compris en ce sens qu'elles s'étaient converties (*Al-Minhaj*, 10/34-35). Les juristes anciens ont donc admis cette pratique dans le cadre de l'esclavage de leur époque ;
+- **Les textes sur l'affranchissement :** le Coran fait de l'affranchissement d'un esclave un acte méritoire (90:12-13) et demande d'accorder le rachat aux esclaves qui le demandent, si l'on reconnaît du bien en eux (24:33) ;
+- **Aujourd'hui :** en septembre 2014, une lettre ouverte signée par plus de cent vingt savants musulmans et adressée au chef de « l'État islamique » rappelait : « Le rétablissement de l'esclavage est interdit en Islam. Il a été aboli par un consensus universel » (*Lettre ouverte à Abu Bakr al-Baghdadi*, point 12). L'universitaire Jonathan Brown a consacré un livre entier à la façon dont les musulmans ont pensé, pratiqué puis aboli l'esclavage (*Slavery and Islam*, Oneworld, 2019).
+
+### « La femme, l'âne et le chien interrompent la prière »
+
+**Le texte :** Abu Dharr et Abu Hurayra rapportent que le passage d'un âne, d'une femme ou d'un chien noir devant une personne qui prie sans objet devant elle « interrompt » sa prière (Sahih Muslim, n°510 et n°511).
+
+**La critique :** le hadith est cité comme preuve que l'Islam met la femme sur le même plan que les animaux.
+
+**Les lectures :** la première objection vient de **'Aïsha** elle-même : *« Vous nous avez assimilées aux ânes et aux chiens ! Par Allah, j'ai vu le Prophète ﷺ prier alors que j'étais allongée sur le lit, entre lui et la qibla »* (Sahih al-Bukhari, n°514). Muslim rapporte son témoignage juste après ces hadiths (n°512). Les juristes en ont tenu compte. Selon an-Nawawi, Malik, Abu Hanifa, ash-Shafi'i et la majorité des savants considèrent que rien n'annule la prière : l'« interruption » désigne la diminution de la concentration. L'imam Ahmad ne retenait l'annulation que pour le chien noir, en disant avoir « un doute » sur l'âne et la femme, à cause notamment du hadith de 'Aïsha (*Al-Minhaj*, 4/226-227).
+
+### Science et nature : les fleuves du Paradis
+
+**Le texte :** *« Le Sayhan, le Jayhan, l'Euphrate et le Nil font partie des fleuves du Paradis. »* (Sahih Muslim, n°2839)
+
+**La critique :** ces fleuves ont des sources connues sur terre ; le hadith serait donc contraire à la géographie.
+
+**Les lectures :** an-Nawawi identifie d'abord les fleuves. Le Sayhan et le Jayhan sont deux fleuves du pays arménien, près de Massisa et d'Adana, à ne pas confondre avec le Syr-Daria et l'Amou-Daria. Puis il rapporte, d'après al-Qadi 'Iyad, deux interprétations. Selon la première, la foi s'est répandue dans les pays qu'ils arrosent, et les corps nourris de leur eau iront au Paradis. Selon la seconde, qu'an-Nawawi juge « la plus juste », le hadith doit être pris à la lettre : ces fleuves ont une origine dans le Paradis (*Al-Minhaj*, 17/175-176). Pour le hadith du soleil qui se prosterne sous le Trône, que Muslim rapporte aussi (n°159), voir notre article sur [Al-Bukhari](/conseils/imam-bukhari-sahih-histoire-critiques).
+
+---
+
+## 8. Comment lire ces hadiths ?
+
+Les exemples de cet article permettent de dégager quelques principes, tirés des textes et des commentateurs cités.
+
+1. **Muslim a conservé les désaccords.** 'Umar face à Fatima bint Qays (n°1480), 'Aïsha face au hadith de la prière interrompue (n°512) : en rassemblant toutes les versions d'un hadith, Muslim a aussi rassemblé les objections. Lire un hadith isolé, sans les versions et les réactions qui l'accompagnent, c'est le lire à moitié.
+
+2. **Les commentateurs précisent le cadre des textes.** An-Nawawi limite l'expulsion au Hijaz, al-Qurtubi interdit de nuire sur le chemin, an-Nawawi rattache le hadith de la pierre et de l'arbre à la bataille contre le Dajjal. Le sens d'un hadith ne se réduit pas à la phrase citée isolément.
+
+3. **Le titre « Sahih » n'a pas empêché la critique.** Abu Zur'a l'a discutée dès la parution du livre, Al-Bukhari a contesté le hadith de la création, ad-Daraqutni a relevé une centaine de hadiths propres à Muslim, et Ibn Taymiyya a reconnu que certaines de ces critiques étaient justes. Mais ces critiques suivaient des règles, et Muslim lui-même rappelait qu'il n'avait jamais prétendu tout réunir.
+
+4. **Les juristes ne se sont pas toujours accordés.** Sur la pension de la divorcée, sur la prière interrompue, sur le salut aux gens du Livre ou sur les parents du Prophète ﷺ, les savants ont défendu des positions différentes à partir des mêmes textes.
+
+5. **Ce que les anciens ont admis peut être réexaminé.** Les juristes classiques ont accepté l'esclavage de leur époque ; en 2014, plus de cent vingt savants ont affirmé que son rétablissement est interdit par consensus. Sur la lapidation, une voix comme celle d'Abu Zahra s'est écartée de la position majoritaire. Reconnaître ce que disaient les anciens est la condition pour en discuter honnêtement.
+
+---
+
+## Conclusion
+
+Le *Sahih* de Muslim est l'œuvre d'un marchand d'étoffes de Nishapur, qui quitta publiquement le cours du plus grand savant de sa ville pour ne pas abandonner Al-Bukhari, avant de s'écarter lui aussi de son maître. Selon le récit d'al-Hakim, on disait qu'il était mort après une nuit passée à chercher un hadith. Son livre est réputé pour sa construction : chaque récit y est présenté avec toutes ses versions, et les différences de mots y sont notées une à une, comme le soulignent Ibn as-Salah et Ibn Hajar.
+
+Cette construction en fait aussi un livre honnête. Celui qui le lit en entier y trouve les objections de 'Aïsha et de 'Umar, les variantes et les contextes. Ceux qui l'attaquent citent souvent un hadith isolé, sans ses versions ni ses commentaires. Ceux qui le défendent gagnent, eux, à savoir que des savants l'ont discuté, parfois sévèrement, depuis Abu Zur'a jusqu'à Ibn Taymiyya. Pour apprendre à évaluer un hadith, notre article sur [les hadiths populaires inauthentiques](/conseils/hadiths-populaires-inauthentiques-verifier-source) propose une méthode pratique.
+
+---
+
+**Sources et bibliographie :**
+- **Sahih Muslim** (numérotation Fu'ad 'Abd al-Baqi) : n°8 (hadith de Jibril) ; n°159 (le soleil) ; n°203 et n°976 (les parents du Prophète ﷺ) ; n°404 (« ce sur quoi ils se sont accordés ») ; n°510 à n°512 (la prière interrompue) ; n°1456 (Awtas) ; n°1480 et n°1481 (Fatima bint Qays) ; n°1691 et n°1695 (la lapidation) ; n°1744 (les femmes et les enfants à la guerre) ; n°1767 (la péninsule arabique) ; n°2163 et n°2167 (le salut) ; n°2501 (Abu Sufyan) ; n°2789 (la création) ; n°2839 (les fleuves) ; n°2922 et n°2944 (la pierre et l'arbre ; le Dajjal) ; n°2942 (la Jassasa) ; n°3033 (dernier hadith) ; *Muqaddima* (introduction).
+- **Sahih al-Bukhari** : n°514 (objection de 'Aïsha) ; n°1356 (le garçon juif) ; n°2926 (la pierre) ; n°3053 (les polythéistes de la péninsule).
+- **Autres recueils** : Sunan Abi Dawud, n°4419 (Ma'iz) ; Musnad Ahmad, n°17295 ('Uqba ibn 'Amir), avec le jugement de Shu'ayb al-Arna'ut ; al-Albani, *Irwa' al-Ghalil*, n°1275 (Abu Basra al-Ghifari).
+- **Coran** : 2:29 ; 4:24 ; 4:25 ; 17:15 ; 22:19 ; 24:2 ; 24:4 ; 24:33 ; 60:8 ; 65:1 ; 90:12-13.
+- **Biographie** : adh-Dhahabi, *Siyar A'lam an-Nubala'*, vol. 12, p. 557-580 (notice de Muslim) ; Ibn Hajar, *Tahdhib at-Tahdhib* (notice de Muslim).
+- **Méthode, transmission et rang du livre** : Ibn as-Salah, *Muqaddima* (premier type) et *Siyanat Sahih Muslim* (chap. 9 et 10) ; Ibn Hajar, *Hady as-Sari* (chap. 2 et 8) ; al-Barda'i, *Su'alat al-Barda'i li-Abi Zur'a*, 2/674-677.
+- **Critique classique** : Ibn 'Ammar ash-Shahid, *'Ilal al-Ahadith fi Kitab as-Sahih li-Muslim* ; ad-Daraqutni, *Al-Ilzamat wa at-Tatabbu'* ; Abu Mas'ud ad-Dimashqi, *Kitab al-Ajwiba 'amma Ashkalahu ad-Daraqutni 'ala Sahih Muslim* ; Al-Bukhari, *At-Tarikh al-Kabir* (notice d'Ayyub ibn Khalid) ; Ibn Kathir, *Tafsir* (sur 2:29) ; Ibn Taymiyya, *Majmu' al-Fatawa*, vol. 1 et 18 ; al-Mu'allimi, *Al-Anwar al-Kashifa* ; as-Suyuti, *Masalik al-Hunafa' fi Walidayy al-Mustafa*.
+- **Commentaires** : al-Mazari, *Al-Mu'lim bi-Fawa'id Muslim* ; al-Qadi 'Iyad, *Ikmal al-Mu'lim* ; Abu al-'Abbas al-Qurtubi, *Al-Mufhim* (5/489) ; an-Nawawi, *Al-Minhaj Sharh Sahih Muslim* (3/78-79 ; 4/226-227 ; 10/34-35, 94-95 et 212 ; 11/92-93 et 188 ; 14/143-144 ; 16/62-63 ; 17/175-176 ; 18/44).
+- **Études et documents modernes** : G. H. A. Juynboll, « Muslim's introduction to his Ṣaḥīḥ translated and annotated », *Jerusalem Studies in Arabic and Islam*, vol. 5 (1984), p. 263 et suivantes, et *Muslim Tradition* ; H. Motzki, « Dating Muslim Traditions: A Survey », *Arabica*, 52/2 (2005), p. 204-253 ; M. M. al-A'zami, *Manhaj an-Naqd 'inda al-Muhaddithin, wa yalihi Kitab at-Tamyiz* ; M. Abu Shahba, *Difa' 'an as-Sunna wa Radd Shubah al-Mustashriqin* ; J. Brown, *Slavery and Islam* (Oneworld, 2019) ; *Lettre ouverte à Abu Bakr al-Baghdadi* (septembre 2014) ; Charte du Hamas (18 août 1988), article 7 (Avalon Project, université Yale) ; *Akhbarona*, 24 juin 2016 (al-Qaradawi sur Abu Zahra) ; *Ahram Online*, 29 décembre 2015, et *AsiaNews* (Islam al-Buhayri) ; *Masrawy*, 16 décembre 2016 (as-Suyuti).
+- En complément : nos articles [*"L'imam Al-Bukhari et son Sahih"*](/conseils/imam-bukhari-sahih-histoire-critiques), [*"Les 6 Livres Mères du Hadith"*](/conseils/les-6-livres-hadith-sunnisme), [*"L'Isnad"*](/conseils/isnad-transmission-unique-islam), [*"Al-Jarh wa at-Ta'dil"*](/conseils/jarh-tadil-critique-transmetteurs-hadith) et [*"Les signes de la fin des temps"*](/conseils/signes-fin-des-temps-hadith-jibril-eschatologie).
 `
     }
 ];
