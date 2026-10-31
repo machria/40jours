@@ -14,7 +14,7 @@ const CATEGORY_CONFIG: Record<string, {
     accent: string;
     emoji: string;
 }> = {
-    "Sagesse d'Al-Ghazali": {
+    "Sagesse des Savants": {
         bg: 'linear-gradient(160deg, #3d2000 0%, #1f1000 50%, #0d0a07 100%)',
         accent: '#fbbf24',
         emoji: '📚',
@@ -87,7 +87,7 @@ const ARTICLE_TAGS: Record<string, EmotionalTag[]> = {
 };
 
 const CATEGORY_DEFAULT_TAGS: Record<string, EmotionalTag[]> = {
-    "Sagesse d'Al-Ghazali":        ['savant', 'profond'],
+    "Sagesse des Savants":        ['savant', 'profond'],
     'Méthodologie Coranique':       ['pratique'],
     'Spiritualité & Guérison':      ['apaisant'],
     "Vivre l'Islam & Productivité": ['pratique', 'motivant'],
@@ -427,7 +427,7 @@ export default function DecouvrirClient({ articles }: DecouvrirClientProps) {
                 }}
             >
                 {feed.map((article, index) => {
-                    const cfg          = CATEGORY_CONFIG[article.category] ?? CATEGORY_CONFIG["Sagesse d'Al-Ghazali"];
+                    const cfg          = CATEGORY_CONFIG[article.category] ?? CATEGORY_CONFIG["Sagesse des Savants"];
                     const tags         = getArticleTags(article);
                     const primaryTag   = tags[0];
                     const hook         = TAG_HOOKS[primaryTag];

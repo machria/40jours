@@ -17,11 +17,16 @@ const HADITH_ACCENT: Record<string, string> = {
 };
 
 const ARTICLE_ACCENT: Record<string, string> = {
-    "Sagesse d'Al-Ghazali":        '#fbbf24',
+    "Sagesse des Savants":        '#fbbf24',
     'Méthodologie Coranique':       '#60a5fa',
     'Spiritualité & Guérison':      '#c084fc',
     "Vivre l'Islam & Productivité": '#34d399',
     'Sciences & Compréhension':     '#2dd4bf',
+};
+
+// Les favoris enregistrés avant le renommage gardent l'ancien nom de catégorie en base
+const LEGACY_CATEGORY: Record<string, string> = {
+    "Sagesse d'Al-Ghazali": 'Sagesse des Savants',
 };
 
 type Tab = 'versets' | 'hadiths' | 'articles';
@@ -188,7 +193,8 @@ export default function FavorisUnified({ initialVerses, initialHadiths, initialA
                         />
                     ) : (
                         articles.map((a, i) => {
-                            const accent = ARTICLE_ACCENT[a.category] ?? '#94a3b8';
+                            const category = LEGACY_CATEGORY[a.category] ?? a.category;
+                            const accent = ARTICLE_ACCENT[category] ?? '#94a3b8';
                             return (
                                 <Link
                                     key={`${a.slug}-${i}`}
@@ -197,7 +203,7 @@ export default function FavorisUnified({ initialVerses, initialHadiths, initialA
                                 >
                                     <div className="flex items-center gap-2">
                                         <Bookmark className="w-3.5 h-3.5 shrink-0" style={{ color: accent }} fill="currentColor" />
-                                        <span className="text-xs font-bold truncate" style={{ color: accent }}>{a.category}</span>
+                                        <span className="text-xs font-bold truncate" style={{ color: accent }}>{category}</span>
                                         <span className="text-muted-foreground/60 text-[11px] ml-auto shrink-0">
                                             {new Date(a.savedAt).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })}
                                         </span>

@@ -8,7 +8,7 @@ export interface Article {
     readTime?: string;
     featured?: boolean;
     coverImage?: string;
-    category: 'Sagesse d\'Al-Ghazali' | 'Méthodologie Coranique' | 'Spiritualité & Guérison' | 'Vivre l\'Islam & Productivité' | 'Sciences & Compréhension';
+    category: 'Sagesse des Savants' | 'Méthodologie Coranique' | 'Spiritualité & Guérison' | 'Vivre l\'Islam & Productivité' | 'Sciences & Compréhension';
 }
 
 export const articles: Article[] = [
@@ -20,7 +20,7 @@ export const articles: Article[] = [
         author: 'Imam Al-Ghazali',
         readTime: '12 min',
         featured: true,
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Les Secrets Spirituels des Adorations (Rub' al-Ibadat)
 
@@ -97,7 +97,7 @@ Le temps est votre capital le plus précieux. Chaque souffle est un joyau inesti
         date: '2026-02-02',
         author: 'Imam Al-Ghazali',
         readTime: '10 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Sanctifier le Quotidien (Rub' al-Adat)
 
@@ -182,7 +182,7 @@ Ce livre clôture le quart des Habitudes en présentant le modèle ultime : Muha
         author: 'Imam Al-Ghazali',
         readTime: '14 min',
         featured: true,
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Les Périls du Cœur (Rub' al-Muhlikat)
 
@@ -254,7 +254,7 @@ C'est le livre qui clôt les maladies. Le *Ghurur*, c'est la fausse sécurité.
         date: '2026-02-02',
         author: 'Imam Al-Ghazali',
         readTime: '13 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Les Stations du Salut (Rub' al-Munjiyat)
 
@@ -3444,7 +3444,7 @@ L'envie ne transfère rien. Celui que vous enviez ne perd pas sa grâce parce qu
         date: '2026-02-28',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Ibn al-Qayyim : Les niveaux du Sabr
 
@@ -3545,7 +3545,7 @@ Le Sabr selon Ibn al-Qayyim n'est pas une résignation triste. C'est une puissan
         date: '2026-02-28',
         author: 'Équipe Coran 40 Jours',
         readTime: '11 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Ibn Rajab al-Hanbali : Rajaa et Khawf — Les deux ailes du cœur
 
@@ -4095,7 +4095,7 @@ Le Waqf et l'Ibtida transforment la lecture d'un simple exercice mécanique en u
         date: '2026-06-06',
         author: 'Imam Al-Ghazali',
         readTime: '10 min',
-        category: "Sagesse d'Al-Ghazali",
+        category: "Sagesse des Savants",
         content: `
 # L'Alchimie du Bonheur (Kimiya-yi Sa'adat) : Le Guide d'Al-Ghazali
 
@@ -4171,7 +4171,7 @@ L'Alchimie du Bonheur n'est pas une formule magique, c'est un travail quotidien 
         date: '2026-06-06',
         author: 'Imam Al-Ghazali',
         readTime: '9 min',
-        category: "Sagesse d'Al-Ghazali",
+        category: "Sagesse des Savants",
         content: `
 # Ayyuha-l-Walad (Lettre à un disciple) : De la Théorie à la Pratique
 
@@ -6446,7 +6446,7 @@ La parabole n'est pas une concession à la simplification. C'est la voie royale 
         date: '2026-06-07',
         author: 'Équipe Coran 40 Jours',
         readTime: '12 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Al-Mahabba : Aimer Allah — La Plus Haute Station du Cœur
 
@@ -9932,7 +9932,7 @@ Le chiffre 40, dans la tradition islamique, n'est donc pas un porte-bonheur ni u
         date: '2026-06-13',
         author: 'Équipe 40 Jours',
         readTime: '12 min',
-        category: "Sagesse d'Al-Ghazali",
+        category: "Sagesse des Savants",
         content: `
 # Al-Kibr : Le Péché Qui a Transformé un Ange en Démon (Et Comment le Détecter en Vous)
 
@@ -11240,7 +11240,7 @@ C'est peut-être pour cela que ce voyage, une fois dans une vie, laisse une trac
         date: '2026-07-21',
         author: 'Équipe Coran 40 Jours',
         readTime: '10 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Al-'Ubudiyyah d'Ibn Taymiyyah : Être l'Esclave d'Allah, la Plus Haute des Libertés
 
@@ -11338,7 +11338,7 @@ C'est cette instabilité qui distingue les deux servitudes : Allah ne change jam
         date: '2026-07-28',
         author: 'Équipe Coran 40 Jours',
         readTime: '9 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Les Lettres de Prison d'Ibn Taymiyyah : « Que Peuvent me Faire mes Ennemis ? »
 
@@ -11406,7 +11406,7 @@ Ibn Taymiyyah est mort en prison, séparé de sa liberté physique, de sa plume,
         date: '2026-07-29',
         author: 'Équipe Coran 40 Jours',
         readTime: '10 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Al-Hikam d'Ibn Ata'Illah : Les Aphorismes qui Guérissent l'Ego
 
@@ -11821,7 +11821,7 @@ Sourate Al-Kahf n'est pas une simple lecture de routine du vendredi. C'est un re
         date: '2026-10-20',
         author: 'Équipe 40 Jours',
         readTime: '11 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Al-Munqidh min ad-Dalal : la crise de doute d'Al-Ghazali et comment il en est sorti
 
@@ -11929,7 +11929,7 @@ Puis, à la demande du pouvoir et sur le conseil d'hommes de cœur, il reprend l
         date: '2026-10-20',
         author: 'Équipe 40 Jours',
         readTime: '12 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Ibn al-Qayyim, Ad-Da' wa ad-Dawa' : le remède aux péchés
 
@@ -12048,7 +12048,7 @@ Et pour celui qui est déjà tombé, la porte reste ouverte : *« Dis : Ô Mes s
         date: '2026-10-20',
         author: 'Équipe 40 Jours',
         readTime: '10 min',
-        category: 'Sagesse d\'Al-Ghazali',
+        category: 'Sagesse des Savants',
         content: `
 # Ibn al-Jawzi, Sayd al-Khatir : ses réflexions personnelles
 
@@ -12651,6 +12651,254 @@ Cette construction en fait aussi un livre honnête. Celui qui le lit en entier y
 - **Commentaires** : al-Mazari, *Al-Mu'lim bi-Fawa'id Muslim* ; al-Qadi 'Iyad, *Ikmal al-Mu'lim* ; Abu al-'Abbas al-Qurtubi, *Al-Mufhim* (5/489) ; an-Nawawi, *Al-Minhaj Sharh Sahih Muslim* (3/78-79 ; 4/226-227 ; 10/34-35, 94-95 et 212 ; 11/92-93 et 188 ; 14/143-144 ; 16/62-63 ; 17/175-176 ; 18/44).
 - **Études et documents modernes** : G. H. A. Juynboll, « Muslim's introduction to his Ṣaḥīḥ translated and annotated », *Jerusalem Studies in Arabic and Islam*, vol. 5 (1984), p. 263 et suivantes, et *Muslim Tradition* ; H. Motzki, « Dating Muslim Traditions: A Survey », *Arabica*, 52/2 (2005), p. 204-253 ; M. M. al-A'zami, *Manhaj an-Naqd 'inda al-Muhaddithin, wa yalihi Kitab at-Tamyiz* ; M. Abu Shahba, *Difa' 'an as-Sunna wa Radd Shubah al-Mustashriqin* ; J. Brown, *Slavery and Islam* (Oneworld, 2019) ; *Lettre ouverte à Abu Bakr al-Baghdadi* (septembre 2014) ; Charte du Hamas (18 août 1988), article 7 (Avalon Project, université Yale) ; *Akhbarona*, 24 juin 2016 (al-Qaradawi sur Abu Zahra) ; *Ahram Online*, 29 décembre 2015, et *AsiaNews* (Islam al-Buhayri) ; *Masrawy*, 16 décembre 2016 (as-Suyuti).
 - En complément : nos articles [*"L'imam Al-Bukhari et son Sahih"*](/conseils/imam-bukhari-sahih-histoire-critiques), [*"Les 6 Livres Mères du Hadith"*](/conseils/les-6-livres-hadith-sunnisme), [*"L'Isnad"*](/conseils/isnad-transmission-unique-islam), [*"Al-Jarh wa at-Ta'dil"*](/conseils/jarh-tadil-critique-transmetteurs-hadith) et [*"Les signes de la fin des temps"*](/conseils/signes-fin-des-temps-hadith-jibril-eschatologie).
+`
+    },
+    {
+        slug: 'rajab-ramadan-commencer-defi-40-jours',
+        title: "De Rajab à Ramadan : commencer son défi 40 jours au bon moment",
+        excerpt: "Commencer le Coran le premier jour de Ramadan, c'est s'imposer 20 pages par jour au moment où l'on dort le moins. Les anciens s'y prenaient autrement : Rajab pour semer, Sha'ban pour arroser, Ramadan pour récolter. Cette année, démarrer le plan 40 jours vers le 30 décembre permet de terminer le Coran la veille de Ramadan. Ce que le Prophète ﷺ faisait réellement en Sha'ban, ce qui est faible sur Rajab, et un calendrier semaine par semaine.",
+        date: '2026-10-31',
+        author: 'Équipe 40 Jours',
+        readTime: '14 min',
+        category: "Vivre l'Islam & Productivité",
+        content: `
+# De Rajab à Ramadan : commencer son défi 40 jours au bon moment
+
+Chaque année, c'est le même scénario. Ramadan arrive, on se promet de lire le Coran en entier, et au bout de dix jours l'élan retombe. Les nuits sont courtes, les journées longues, et le retard s'accumule jusqu'à devenir décourageant.
+
+Le problème vient rarement de la volonté. Il vient surtout du **moment où l'on commence**. Les pieux prédécesseurs n'abordaient pas Ramadan le premier soir du mois : ils s'y préparaient pendant des semaines, parfois des mois.
+
+Cette année, le calendrier offre une fenêtre idéale : **en commençant le plan 40 jours vers le 30 décembre 2026, vous terminez le Coran la veille du premier jour de Ramadan.**
+
+> **Note sur les dates :** le calendrier hégirien suit l'observation du croissant de lune. Les dates ci-dessous sont des estimations et peuvent varier d'un jour selon les pays et les instances (en France, le début du mois est annoncé par la Grande Mosquée de Paris et le CFCM). Le calendrier du défi, lui, ne bouge pas : si Ramadan commence un jour plus tôt ou plus tard, vous finirez simplement la veille ou le premier jour.
+
+| Repère | Date estimée |
+|---|---|
+| 1er Rajab 1448 | vers le vendredi 11 décembre 2026 |
+| **Jour 1 du défi** | **mercredi 30 décembre 2026** |
+| 1er Sha'ban 1448 | vers le samedi 9 janvier 2027 |
+| Milieu de Sha'ban | vers le samedi 23 janvier 2027 |
+| **Jour 40 du défi** | **dimanche 7 février 2027** |
+| 1er Ramadan 1448 | vers le lundi 8 février 2027 |
+
+---
+
+## 1. Pourquoi commencer avant Ramadan ?
+
+### Un simple calcul
+
+Le Coran compte 604 pages. Le lire en entier pendant Ramadan, c'est **20 pages par jour**, en plus du jeûne, des prières de *Tarawih*, des repas de rupture et du manque de sommeil. Le lire en 40 jours avant Ramadan, c'est **15 pages par jour**, à une période où votre rythme est normal.
+
+Surtout, vous n'arrivez pas en Ramadan avec une résolution, mais avec une **habitude déjà installée**. Passer de 15 pages à un Juz par jour (environ 20 pages) devient alors un petit pas, et non un saut dans le vide.
+
+### Semer, arroser, récolter
+
+Ibn Rajab al-Hanbali (m. 795 H) a consacré tout un livre aux saisons de l'adoration, *Lata'if al-Ma'arif*. Il y cite une parole d'Abu Bakr al-Balkhi devenue célèbre :
+
+> *« Rajab est le mois où l'on sème, Sha'ban le mois où l'on arrose les semis, et Ramadan le mois où l'on récolte. »*
+
+Ibn Rajab compare aussi le jeûne de Sha'ban aux prières surérogatoires qui précèdent la prière obligatoire : elles préparent le cœur à ce qui va suivre. Selon lui, jeûner en Sha'ban est **un entraînement**, pour ne pas entrer dans Ramadan avec peine et contrainte, mais en y étant déjà habitué. Ce qui vaut pour le jeûne vaut pour la lecture : celui qui a lu le Coran pendant quarante jours n'entre pas en Ramadan en débutant.
+
+Pour la symbolique du nombre 40 dans le Coran et la Sunnah, voir notre article [*« Pourquoi le chiffre 40 revient partout dans l'Islam »*](/conseils/symbolique-chiffre-40-islam-defi-spirituel).
+
+---
+
+## 2. Ce que le Prophète ﷺ faisait en Sha'ban
+
+Sur Sha'ban, nul besoin de récits douteux : les hadiths authentiques suffisent largement.
+
+### Le mois où il jeûnait le plus, en dehors de Ramadan
+
+Aisha (qu'Allah l'agrée) rapporte :
+
+> *« Je n'ai jamais vu le Messager d'Allah ﷺ jeûner un mois complet, sauf Ramadan, et je ne l'ai vu jeûner dans aucun mois plus qu'en Sha'ban. »* (Bukhari 1969 ; Muslim 1156)
+
+Dans une autre version, elle dit qu'il « jeûnait Sha'ban en entier », et dans celle de Muslim qu'il « jeûnait Sha'ban, sauf un peu ». Abd Allah ibn al-Mubarak expliquait déjà qu'en arabe, on peut dire de quelqu'un qu'il a jeûné tout un mois quand il en a jeûné la plus grande partie (cité par at-Tirmidhi, *Jami'*, après le n°736).
+
+La version d'Al-Bukhari se termine par une recommandation qui résume à elle seule l'esprit du défi :
+
+> *« Prenez des œuvres ce que vous êtes capables de supporter, car Allah ne se lasse pas tant que vous ne vous lassez pas. »* (Bukhari 1970)
+
+Quinze pages chaque jour valent mieux que soixante pages un dimanche, suivies d'une semaine sans rien.
+
+### Le mois que les gens négligent
+
+Usama ibn Zayd demanda au Prophète ﷺ pourquoi il jeûnait autant en Sha'ban. Il répondit :
+
+> *« C'est un mois que les gens négligent, entre Rajab et Ramadan. C'est un mois où les œuvres sont élevées vers le Seigneur des mondes, et j'aime que mes œuvres soient élevées alors que je jeûne. »* (an-Nasa'i 2357, jugé *hasan*)
+
+Deux enseignements en ressortent :
+- **Rajab attire l'attention** parce que c'est un mois sacré, Ramadan parce que c'est le mois du jeûne. Sha'ban, coincé entre les deux, passe inaperçu. Ibn Rajab en déduit que l'adoration a une valeur particulière dans les moments où les gens sont distraits.
+- **Les œuvres de l'année sont présentées à Allah en Sha'ban.** En suivant ce calendrier, une grande partie de votre défi tombera précisément dans ce mois-là.
+
+### Le mois des lecteurs du Coran
+
+Ibn Rajab rapporte dans *Lata'if al-Ma'arif* que des savants de la génération des *Tabi'un* faisaient de Sha'ban un mois de lecture. Habib ibn Abi Thabit disait à son arrivée : *« Voici le mois des lecteurs du Coran. »* Et 'Amr ibn Qays al-Mula'i, qui était commerçant, **fermait sa boutique** quand Sha'ban commençait, pour se consacrer à la lecture.
+
+Vous n'avez pas besoin de fermer votre boutique. Mais réserver chaque jour un créneau fixe au Coran, c'est déjà suivre leur exemple.
+
+### Rattraper ses jours manquants
+
+Aisha disait :
+
+> *« Il m'arrivait d'avoir des jours de Ramadan à rattraper, et je ne pouvais les rattraper qu'en Sha'ban. »* (Bukhari 1950 ; Muslim 1146)
+
+Si vous avez des jours de jeûne en retard, pour cause de maladie, de voyage, de grossesse ou de menstrues, **Sha'ban est la dernière limite** avant le Ramadan suivant. Fixez-les dès maintenant dans votre agenda.
+
+### Ne pas devancer Ramadan d'un ou deux jours
+
+Le Prophète ﷺ a dit :
+
+> *« Que nul d'entre vous ne devance Ramadan par un jeûne d'un jour ou de deux jours, sauf un homme qui avait l'habitude de jeûner ce jour-là : qu'il le jeûne. »* (Bukhari 1914 ; Muslim 1082)
+
+Concrètement, sauf habitude (lundi, jeudi…) ou jour à rattraper, on ne jeûne pas les 6 et 7 février 2027 « par précaution ».
+
+Un autre hadith interdit de jeûner après le milieu de Sha'ban (Abu Dawud 2337 ; at-Tirmidhi 738). Son authenticité est discutée : l'imam Ahmad le jugeait inacceptable (*munkar*), at-Tirmidhi le jugeait authentique. Ceux qui l'acceptent l'appliquent à celui qui **commence** à jeûner après le 15 Sha'ban sans en avoir l'habitude, et non à celui qui rattrape des jours ou poursuit un jeûne régulier.
+
+---
+
+## 3. Rajab : ce qui est authentique et ce qui ne l'est pas
+
+Rajab est entouré de nombreux récits qui circulent chaque année sur les réseaux sociaux. Il faut faire le tri.
+
+### Authentique : un mois sacré
+
+Allah dit :
+
+> *« Le nombre des mois, auprès d'Allah, est de douze, dans le Livre d'Allah, le jour où Il créa les cieux et la terre. Quatre d'entre eux sont sacrés. Telle est la religion droite. Ne vous faites donc pas de tort pendant ces mois. »* (Coran 9:36)
+
+Le Prophète ﷺ a précisé lesquels : *« trois consécutifs, Dhu al-Qa'da, Dhu al-Hijja et Muharram, et Rajab de Mudar, qui se situe entre Joumada et Sha'ban »* (Bukhari 3197 ; Muslim 1679).
+
+Dans son tafsir de ce verset, Ibn Kathir cite Qatada : l'injustice commise pendant les mois sacrés est plus grave que pendant les autres mois. Les savants en ont déduit que les bonnes actions y ont aussi plus de poids. Rajab est donc un excellent moment pour **la tawba** (le repentir) et pour prendre de bonnes résolutions.
+
+Jeûner en Rajab est permis, comme pendant n'importe quel mois. Interrogé sur le jeûne de Rajab, Sa'id ibn Jubayr rapporta qu'Ibn 'Abbas disait : *« Le Messager d'Allah ﷺ jeûnait au point qu'on se disait qu'il ne romprait plus, et rompait au point qu'on se disait qu'il ne jeûnerait plus. »* (Muslim 1157). Autrement dit, rien de spécifique à Rajab, mais rien d'interdit non plus.
+
+### Faible ou inventé
+
+Le grand spécialiste du hadith Ibn Hajar al-'Asqalani (m. 852 H) a écrit un livre entier sur la question, *Tabyin al-'Ajab bima warada fi fadl Rajab*. Sa conclusion : aucun hadith authentique, pouvant servir de preuve, n'a été rapporté sur un mérite particulier du mois de Rajab, de son jeûne, du jeûne d'un jour précis de ce mois, ni d'une prière de nuit qui lui serait propre.
+
+Voici les récits les plus répandus :
+
+| Ce qui circule | Statut |
+|---|---|
+| L'invocation *« Allahumma barik lana fi Rajab wa Sha'ban wa ballighna Ramadan »* | **Faible.** Rapportée par l'imam Ahmad, sa chaîne contient Za'ida ibn Abi ar-Ruqad, dont Al-Bukhari disait qu'il rapportait des récits inacceptables (*munkar al-hadith*). |
+| *« Rajab est le mois d'Allah, Sha'ban mon mois, et Ramadan le mois de ma communauté »* | **Inventé.** Classé parmi les faux hadiths par Ibn al-Jawzi (*Al-Mawdu'at*) et par Ibn Hajar. |
+| *« Au Paradis, il y a un fleuve appelé Rajab… »* | **Faible**, selon Ibn al-Jawzi et Ibn Hajar. |
+| La « prière des souhaits » (*Salat ar-Ragha'ib*), douze unités la nuit du premier vendredi de Rajab | **Hadith inventé**, et pratique qualifiée d'**innovation blâmable** (*bid'a munkara*) par an-Nawawi (*Sharh Sahih Muslim*, sous le n°1144). |
+| Le Voyage nocturne (*Isra' wal-Mi'raj*) aurait eu lieu le 27 Rajab | **Date non établie.** Les savants ont avancé plus d'une dizaine d'avis différents. Voir notre article sur [l'Isra' et le Mi'raj](/conseils/isra-miraj-voyage-nocturne-prophete). |
+
+**Et l'invocation pour atteindre Ramadan ?** Demander à Allah de nous faire atteindre Ramadan est une très belle demande. Vous pouvez la formuler avec vos propres mots, dans la langue que vous voulez. Ce qu'il faut éviter, c'est d'attribuer au Prophète ﷺ une formule qu'il n'a pas dite de façon établie.
+
+### Et la nuit du milieu de Sha'ban ?
+
+Deux hadiths sont souvent cités :
+- *« Lorsque vient la nuit du milieu de Sha'ban, priez sa nuit et jeûnez son jour… »* (Ibn Majah 1388) : **très faible**. Sa chaîne contient Abu Bakr ibn Abi Sabra, accusé d'inventer des hadiths.
+- *« Allah regarde Ses créatures la nuit du milieu de Sha'ban et pardonne à toutes, sauf à l'associateur et à celui qui garde de la rancune. »* (Ibn Majah 1390) : **discuté**. Beaucoup de savants anciens jugeaient faibles tous les récits sur cette nuit ; al-Albani a authentifié celui-ci par l'ensemble de ses chaînes (*Silsila as-Sahiha*, n°1144).
+
+Ce qui est certain : aucune prière spécifique n'a été établie pour cette nuit (la prière dite « des cent unités » est une innovation). Si vous priez déjà la nuit, rien n'empêche de le faire ce soir-là. Et si ce second hadith est authentique, il donne un conseil très concret : **purifier son cœur de la rancune** avant Ramadan.
+
+Pour reconnaître les récits douteux qui circulent toute l'année, voir notre article [*« Ces hadiths que tout le monde partage… et que le Prophète ﷺ n'a jamais dits »*](/conseils/hadiths-populaires-inauthentiques-verifier-source). La règle est simple : les textes authentiques suffisent, on n'a jamais besoin des récits faibles pour être motivé.
+
+---
+
+## 4. Le calendrier semaine par semaine
+
+Le plan 40 jours de l'application découpe le Coran en 40 portions d'environ 15 pages. Voici comment il s'aligne sur Rajab et Sha'ban cette année.
+
+### Avant le Jour 1 : la fin de Rajab (du 11 au 29 décembre)
+
+C'est la phase des semailles. On ne lit pas encore le plan, on prépare le terrain.
+
+- **Rattrapez vos jours de jeûne** ou, au moins, fixez-les dans votre agenda.
+- **Choisissez votre créneau.** Le meilleur est souvent juste après la prière de l'aube (voir [*La routine du Fajr*](/conseils/routine-fajr-succes)). Chronométrez-vous sur 15 pages : selon votre aisance, comptez entre 30 minutes et une heure.
+- **Installez les invocations du matin et du soir** de la [Citadelle du Musulman](/hisn/27) : elles prennent dix minutes et donnent un cadre à la journée.
+- **Faites le ménage dans le cœur.** Rajab est un mois sacré : c'est le moment d'une vraie tawba et de l'[Istighfar](/hisn/129). Voir aussi [*La puissance de l'Istighfar*](/conseils/puissance-istighfar-debloquer-destin).
+- **Créez votre compte et [rejoignez un groupe](/social)** pour suivre votre progression et lire à plusieurs. On abandonne beaucoup moins quand d'autres avancent avec nous.
+
+### Semaine 1 : du 30 décembre au 5 janvier (Jours 1 à 7)
+
+**Au programme :** Juz 1 à 5, d'Al-Fatiha au début d'Al-Ma'ida (pages 1 à 106).
+
+Commencez par le [Jour 1](/jour/1). Cette semaine, le seul objectif est la **régularité**. Al-Baqara est longue et dense : il est normal de la trouver lourde. Ne cherchez pas encore à tout comprendre, cherchez à être au rendez-vous chaque jour.
+
+Le 1er janvier tombe au Jour 3. Au lieu d'une résolution de Nouvel An, vous aurez déjà une habitude de trois jours.
+
+### Semaine 2 : du 6 au 12 janvier (Jours 8 à 14)
+
+**Au programme :** Juz 6 à 10, d'Al-Ma'ida à Yunus (pages 107 à 211).
+
+Sha'ban commence vers le 9 janvier. Le soir où le croissant est aperçu, dites l'[invocation à la vue du croissant de lune](/hisn/67). C'est aussi le bon moment pour **ajouter le jeûne du lundi et du jeudi**, si votre santé le permet : c'est le meilleur entraînement pour Ramadan.
+
+### Semaine 3 : du 13 au 19 janvier (Jours 15 à 21)
+
+**Au programme :** Juz 11 à 16, de Yunus à Ta-Ha (pages 212 à 317).
+
+Au Jour 20, vous aurez lu la moitié du Coran. Faites le point :
+- **Si vous êtes en retard**, rattrapez par 2 ou 3 pages supplémentaires chaque jour, plutôt qu'en un seul bloc épuisant.
+- **Si vous mémorisez en parallèle**, c'est le moment de mettre en place une révision régulière, pour ne pas perdre ce que vous avez appris. Voir [*La Muraja'ah : l'art de ne pas oublier*](/conseils/murajaah-art-ne-pas-oublier).
+
+Le Jour 21 contient la sourate Al-Kahf. Si vous ne la lisez pas encore chaque vendredi, voir [notre article sur Al-Kahf](/conseils/sourate-al-kahf-vendredi-quatre-epreuves).
+
+### Semaine 4 : du 20 au 26 janvier (Jours 22 à 28)
+
+**Au programme :** Juz 16 à 21, de Ta-Ha à Al-Ahzab (pages 318 à 423).
+
+Le 13, le 14 et le 15 Sha'ban (vers les 21, 22 et 23 janvier) sont les « jours blancs ». Abu Hurayra disait : *« Mon ami intime ﷺ m'a recommandé trois choses : jeûner trois jours chaque mois, prier les deux unités du Duha, et prier le Witr avant de dormir. »* (Bukhari 1981 ; Muslim 721).
+
+Le milieu de Sha'ban tombe en fin de semaine. Rappel de la section 3 : pas de prière spécifique, mais une excellente occasion de se réconcilier avec ceux que l'on a laissés de côté.
+
+### Semaine 5 : du 27 janvier au 2 février (Jours 29 à 35)
+
+**Au programme :** Juz 22 à 26, d'Al-Ahzab à Al-Qamar (pages 424 à 529).
+
+C'est souvent la semaine la plus difficile : l'enthousiasme du départ est retombé et la ligne d'arrivée semble encore loin. Tenez bon, il ne reste que dix jours.
+
+Profitez-en pour **préparer Ramadan concrètement** : organiser les repas et les horaires de la famille, repérer la mosquée où vous prierez les Tarawih, préparer une liste d'invocations pour les dix dernières nuits (voir [*Laylat al-Qadr : guide complet*](/conseils/laylat-al-qadr-guide-spirituel-complet)).
+
+### Semaine 6 : du 3 au 7 février (Jours 36 à 40)
+
+**Au programme :** Juz 27 à 30, d'Al-Qamar à An-Nas (pages 530 à 604).
+
+Les sourates deviennent courtes et rythmées. Le **dimanche 7 février**, vous terminez le Coran. Anas ibn Malik, quand il achevait sa lecture, réunissait sa famille et faisait des invocations (rapporté par ad-Darimi). Faites de même : c'est une belle façon de marquer la fin du défi et d'entrer dans Ramadan ensemble.
+
+Le soir même, guettez le croissant de Ramadan et dites l'[invocation à la vue du croissant](/hisn/67).
+
+---
+
+## 5. Et pendant Ramadan ?
+
+Vous arrivez avec une lecture complète derrière vous et une habitude solide. Deux options :
+
+- **Une deuxième lecture complète**, à raison d'un Juz par jour. Chaque nuit de Ramadan, l'ange Jibril retrouvait le Prophète ﷺ et révisait avec lui le Coran (Bukhari 6), et l'année de sa mort, il le révisa avec lui deux fois (Bukhari 4998).
+- **Une lecture plus lente et méditée**, avec le tafsir, en vous arrêtant sur les passages qui vous ont marqué pendant les 40 jours.
+
+Pour le sens profond du jeûne lui-même, voir [*L'importance du jeûne*](/conseils/importance-jeune-ramadan-maitrise-de-soi).
+
+---
+
+## Et si j'ai manqué le départ ?
+
+Commencez quand même. Si vous démarrez avec deux semaines de retard, vous finirez pendant les premiers jours de Ramadan, ce qui reste bien plus confortable que de partir de zéro le premier soir. Et si vous ratez un jour en route, ne recommencez pas tout : reprenez simplement là où vous en étiez. Voir [*Réussir son défi des 40 jours*](/conseils/reussir-defi-40-jours).
+
+---
+
+## En résumé
+
+- **Rajab (dès le 11 décembre) :** rattraper ses jeûnes, choisir son créneau, tawba et istighfar.
+- **30 décembre :** Jour 1 du plan, 15 pages par jour.
+- **Sha'ban (dès le 9 janvier) :** jeûne du lundi et du jeudi, jours blancs, lecture régulière.
+- **7 février :** fin du Coran, invocation en famille.
+- **8 février :** Ramadan commence, et vous êtes prêt(e).
+- Pour Rajab et Sha'ban, s'en tenir aux textes authentiques.
+
+---
+
+## Sources
+
+- **Coran :** sourate At-Tawba, verset 36.
+- **Hadiths :** Al-Bukhari n°6, 1914, 1950, 1969, 1970, 1981, 3197, 4998 ; Muslim n°721, 1082, 1144, 1146, 1156, 1157, 1679 ; an-Nasa'i n°2357 ; Abu Dawud n°2337 ; at-Tirmidhi n°736 et 738 ; Ibn Majah n°1388 et 1390. Numérotation de sunnah.com.
+- **Ouvrages :** Ibn Rajab al-Hanbali, *Lata'if al-Ma'arif* (chapitres sur Rajab et Sha'ban) ; Ibn Hajar al-'Asqalani, *Tabyin al-'Ajab bima warada fi fadl Rajab* ; Ibn al-Jawzi, *Al-Mawdu'at* ; an-Nawawi, *Al-Minhaj Sharh Sahih Muslim* ; Ibn Kathir, *Tafsir al-Qur'an al-'Azim* (9:36) ; al-Albani, *Silsilat al-Ahadith as-Sahiha* (n°1144).
+- **Pour aller plus loin :** [*Le Plan 40 Jours : architecture d'une transformation*](/conseils/plan-40-jours-transformation), [*Ibn Rajab : l'équilibre entre l'espoir et la crainte*](/conseils/ibn-rajab-espoir-crainte-rajaa-khawf).
 `
     }
 ];

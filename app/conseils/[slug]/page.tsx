@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 const CATEGORY_EMOJI: Record<string, string> = {
-    "Sagesse d'Al-Ghazali": '📚',
+    "Sagesse des Savants": '📚',
     'Méthodologie Coranique': '📖',
     'Spiritualité & Guérison': '💫',
     "Vivre l'Islam & Productivité": '⚡',

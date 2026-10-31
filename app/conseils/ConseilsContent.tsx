@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 // ─── Catégories ──────────────────────────────────────────────────────────────
 
 const CATEGORIES = [
-    "Sagesse d'Al-Ghazali",
+    "Sagesse des Savants",
     "Méthodologie Coranique",
     "Spiritualité & Guérison",
     "Vivre l'Islam & Productivité",
@@ -18,7 +18,7 @@ const CATEGORIES = [
 ] as const;
 
 const CATEGORY_EMOJI: Record<string, string> = {
-    "Sagesse d'Al-Ghazali": '📚',
+    "Sagesse des Savants": '📚',
     'Méthodologie Coranique': '📖',
     'Spiritualité & Guérison': '💫',
     "Vivre l'Islam & Productivité": '⚡',
@@ -26,7 +26,7 @@ const CATEGORY_EMOJI: Record<string, string> = {
 };
 
 const SHORT_LABELS: Record<string, string> = {
-    "Sagesse d'Al-Ghazali": 'Savant',
+    "Sagesse des Savants": 'Savant',
     'Méthodologie Coranique': 'Coran',
     'Spiritualité & Guérison': 'Spiritualité',
     "Vivre l'Islam & Productivité": 'Productivité',
@@ -34,7 +34,7 @@ const SHORT_LABELS: Record<string, string> = {
 };
 
 const CATEGORY_ACCENT: Record<string, { badge: string; border: string }> = {
-    "Sagesse d'Al-Ghazali":        { badge: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400', border: 'border-l-amber-400' },
+    "Sagesse des Savants":        { badge: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-400', border: 'border-l-amber-400' },
     'Méthodologie Coranique':       { badge: 'bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-400',   border: 'border-l-blue-400' },
     'Spiritualité & Guérison':      { badge: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-400', border: 'border-l-violet-400' },
     "Vivre l'Islam & Productivité": { badge: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400', border: 'border-l-emerald-400' },
@@ -56,7 +56,7 @@ const TAG_CONFIG: Record<EmotionalTag, { label: string; emoji: string; active: s
 };
 
 const CATEGORY_DEFAULT_TAGS: Record<string, EmotionalTag[]> = {
-    "Sagesse d'Al-Ghazali":        ['savant', 'profond'],
+    "Sagesse des Savants":        ['savant', 'profond'],
     'Méthodologie Coranique':       ['pratique'],
     'Spiritualité & Guérison':      ['apaisant'],
     "Vivre l'Islam & Productivité": ['pratique', 'motivant'],
@@ -520,7 +520,7 @@ function SpotlightCard({ article }: { article: Article }) {
             <article className="relative h-full flex flex-col overflow-hidden rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-xl transition-all duration-300">
                 <div className={cn(
                     "h-1 w-full",
-                    article.category === "Sagesse d'Al-Ghazali"        && 'bg-gradient-to-r from-amber-400 to-amber-300',
+                    article.category === "Sagesse des Savants"        && 'bg-gradient-to-r from-amber-400 to-amber-300',
                     article.category === 'Méthodologie Coranique'       && 'bg-gradient-to-r from-blue-500 to-blue-400',
                     article.category === 'Spiritualité & Guérison'      && 'bg-gradient-to-r from-violet-500 to-violet-400',
                     article.category === "Vivre l'Islam & Productivité" && 'bg-gradient-to-r from-emerald-500 to-emerald-400',
